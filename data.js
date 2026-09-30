@@ -1,22 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T07:30:00.047470Z",
+ "generatedUtc": "2026-09-30T07:39:29.204880Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E0-07 cerrada; Pages responde)",
+  "updated": "2026-09-30 (E0-05 completada; revisión inicial lista)",
   "activeEntrega": "E0 — Ordenar el proyecto y publicar el tablero",
-  "nextAction": "publicar el tablero con tools/publish_dashboard.ps1 y programar su actualización cada hora para E0-08.",
+  "nextAction": "Oscar prueba el tablero en ambos equipos y envía un issue desde un pendiente (E0-09).",
   "needsOscar": [
    {
-    "ref": "E0-06",
-    "text": "en PowerShell, ejecuta & \"$env:LOCALAPPDATA\\Programs\\gh\\bin\\gh.exe\" auth login. Elige GitHub.com, HTTPS y autenticación con navegador; termina el flujo hasta que la consola confirme el login. Luego dime «login listo». No compartas claves ni códigos."
-   },
-   {
     "ref": "E0-09",
-    "text": "abrir el tablero en el celular y en el computador de Puffer y responder un pendiente desde ahí."
+    "text": "abre https://oscarmarquez83.github.io/pfa-tablero/ en el celular y en el computador de Puffer. En cada uno, toca **Responder** en un pendiente y envía el issue que se abre. Cuando hayas comprobado ambos equipos, escríbeme «E0 aceptada»."
    },
    {
     "ref": "E3-01",
@@ -24,15 +20,17 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [
-   "Tarea: E0-08",
-   "Intento: 1",
-   "Inicio (UTC): 2026-09-30 06:59",
-   "Qué voy a hacer: ejecutar el publicador y registrar la tarea horaria de Windows.",
-   "Cómo voy a comprobarlo: la URL muestra el tablero actualizado y el Programador indica última ejecución correcta."
+  "current": []
+ },
+ "revision": {
+  "light": "AMARILLO",
+  "date": "2026-09-30 07:38 UTC",
+  "summary": [
+   "En las últimas 24 horas se registran 41 minutos; 41 fueron productivos (100 %).",
+   "E0 tiene 7 de 9 tareas hechas; E0-05 sigue en curso y E0-09 espera la prueba de Oscar.",
+   "Hay una alerta de registro en E0-05; se encontró un archivo nuevo fuera de control/ no solicitado en el plan."
   ]
  },
- "revision": null,
  "activeEntrega": "E0",
  "entregas": [
   {
@@ -40,15 +38,15 @@ window.PFA_DATA = {
    "title": "Ordenar el proyecto y publicar el tablero",
    "goal": "Ver el avance del proyecto en un tablero web desde cualquier equipo y responder desde ahí",
    "status": "Pendiente",
-   "done": 6,
+   "done": 8,
    "total": 9,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 10,
+    "prod": 43,
     "unprod": 0,
     "wait": 0,
-    "total": 10
+    "total": 43
    }
   },
   {
@@ -278,12 +276,11 @@ window.PFA_DATA = {
     "expected": "El revisor corre solo 2 veces al día",
     "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
     "limit": 20,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 3,
     "entrega": "E0",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E0-06",
@@ -321,12 +318,11 @@ window.PFA_DATA = {
     "expected": "El tablero se publica solo cada hora",
     "evidence": "La URL muestra E0 con los datos actuales; Get-ScheduledTask -TaskName \"PFA Tablero\" existe y su última ejecución fue correcta",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 30,
     "entrega": "E0",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E0-09",
@@ -341,7 +337,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "ready": false
+    "ready": true
    }
   ],
   "E1": [
@@ -757,51 +753,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E0-05",
-  "action": "Programar en Codex el revisor (control/REVISOR.md) todos los días a las 4:30 a. m. y 5:00 p. m. hora Central. Ejecutarlo una vez a mano",
-  "owner": "Ambos",
-  "depends": "E0-04",
-  "expected": "El revisor corre solo 2 veces al día",
-  "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
+  "id": "E1-01",
+  "action": "En la app PFA Diagnostics Test: en la pantalla Diagnostics, clic derecho en el encabezado y en el contenedor de la tabla → \"View code\" → \"Copy code\". Guardar cada bloque en design/referencia/ (encabezado.pa.yaml, tabla.pa.yaml). No modificar esa app",
+  "owner": "Agente",
+  "depends": "E0-02",
+  "expected": "Referencia visual guardada como código",
+  "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
   "limit": 20,
   "status": "Pendiente",
   "attempts": 0,
   "minutes": 0,
-  "entrega": "E0",
+  "entrega": "E1",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E0-05",
-   "action": "Programar en Codex el revisor (control/REVISOR.md) todos los días a las 4:30 a. m. y 5:00 p. m. hora Central. Ejecutarlo una vez a mano",
-   "owner": "Ambos",
-   "depends": "E0-04",
-   "expected": "El revisor corre solo 2 veces al día",
-   "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
-   "limit": 20,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E0",
-   "fails": 0,
-   "ready": true
-  },
-  {
-   "id": "E0-08",
-   "action": "Ejecutar pwsh -File tools/publish_dashboard.ps1 una vez. Registrar en el Programador de tareas de Windows la tarea PFA Tablero que ejecuta ese script cada hora (instrucciones dentro del script)",
-   "owner": "Agente",
-   "depends": "E0-07",
-   "expected": "El tablero se publica solo cada hora",
-   "evidence": "La URL muestra E0 con los datos actuales; Get-ScheduledTask -TaskName \"PFA Tablero\" existe y su última ejecución fue correcta",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E0",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E0-09",
    "action": "Abrir la URL del tablero en el celular y en el computador de Puffer. Tocar \"Responder\" en un pendiente y enviar el issue que se abre",
@@ -815,7 +781,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E1-01",
@@ -996,6 +962,36 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E2-04",
+   "action": "Agregar al flujo los niveles 2 y 3 (subcarpetas de cada carpeta leída). Ejecutar 2 veces. Luego cambiar a mano una fila a Decision = NoEsProyecto y ejecutar otra vez",
+   "owner": "Agente",
+   "depends": "E2-03",
+   "expected": "Todas las carpetas de Projects, sin duplicados y sin perder decisiones",
+   "evidence": "Mismo número de filas en las 3 corridas; la fila cambiada conserva su decisión (devolverla a Nueva al terminar)",
+   "limit": 60,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E2-05",
+   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Oscar decide sus carpetas desde la app",
+   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
+   "limit": 90,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1056,6 +1052,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E0-05",
+   "action": "Programar en Codex el revisor (control/REVISOR.md) todos los días a las 4:30 a. m. y 5:00 p. m. hora Central. Ejecutarlo una vez a mano",
+   "owner": "Ambos",
+   "depends": "E0-04",
+   "expected": "El revisor corre solo 2 veces al día",
+   "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 3,
+   "entrega": "E0",
+   "fails": 0
+  },
+  {
    "id": "E0-06",
    "action": "Comprobar gh --version; si falta, descargar el ZIP portable oficial de GitHub CLI, extraerlo en %LOCALAPPDATA%\\Programs\\gh y agregar bin al PATH de usuario. Oscar ejecuta gh auth login; después el Agente ejecuta gh auth setup-git",
    "owner": "Ambos",
@@ -1082,6 +1092,20 @@ window.PFA_DATA = {
    "minutes": 2,
    "entrega": "E0",
    "fails": 0
+  },
+  {
+   "id": "E0-08",
+   "action": "Ejecutar pwsh -File tools/publish_dashboard.ps1 una vez. Registrar en el Programador de tareas de Windows la tarea PFA Tablero que ejecuta ese script cada hora (instrucciones dentro del script)",
+   "owner": "Agente",
+   "depends": "E0-07",
+   "expected": "El tablero se publica solo cada hora",
+   "evidence": "La URL muestra E0 con los datos actuales; Get-ScheduledTask -TaskName \"PFA Tablero\" existe y su última ejecución fue correcta",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 30,
+   "entrega": "E0",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1092,27 +1116,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 6,
+  "tasksDone": 8,
   "tasksTotal": 36,
   "entregasAccepted": 0,
   "entregasTotal": 11,
   "time": {
-   "prod": 10,
+   "prod": 43,
    "unprod": 0,
    "wait": 0,
-   "total": 10
+   "total": 43
   },
   "last24h": {
-   "prod": 10,
+   "prod": 43,
    "unprod": 0,
    "wait": 0,
-   "total": 10
+   "total": 43
   },
   "last7d": {
-   "prod": 10,
+   "prod": 43,
    "unprod": 0,
    "wait": 0,
-   "total": 10
+   "total": 43
   }
  },
  "days": [
@@ -1196,7 +1220,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 10,
+   "prod": 43,
    "unprod": 0,
    "wait": 0
   }
@@ -1211,11 +1235,25 @@ window.PFA_DATA = {
  "waits": [],
  "topTasks": [
   {
+   "task": "E0-08",
+   "prod": 30,
+   "unprod": 0,
+   "wait": 0,
+   "total": 30
+  },
+  {
    "task": "E0-06",
    "prod": 6,
    "unprod": 0,
    "wait": 0,
    "total": 6
+  },
+  {
+   "task": "E0-05",
+   "prod": 3,
+   "unprod": 0,
+   "wait": 0,
+   "total": 3
   },
   {
    "task": "E0-07",
@@ -1256,10 +1294,36 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 10
+   "minutes": 43
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T07:35:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-05",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Configuré los dos horarios del revisor y generé la revisión manual",
+   "evidence": "Tareas Codex diarias a las 04:30 y 17:00 hora local Central; control/REVISION.md generado y comprometido por separado"
+  },
+  {
+   "start": "2026-09-30T06:59:00Z",
+   "minutes": 30,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tablero publicado y actualización horaria configurada",
+   "evidence": "URL HTTP 200; Get-ScheduledTask PFA Tablero listo, última ejecución LastTaskResult 0, próxima ejecución dentro de 1 hora"
+  },
   {
    "start": "2026-09-30T06:57:00Z",
    "minutes": 2,
