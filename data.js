@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T21:54:20.347062Z",
+ "generatedUtc": "2026-09-30T22:01:18.363805Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E1-08 reanudada tras inicio de sesión)",
+  "updated": "2026-09-30 (E1-08 pausada tras dos fallos de navegación en Edge)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "completar E1-08 en Power Apps: aplicar el ajuste de Configuration ya preparado, publicar y verificar los 7 botones del menú desde 2 pantallas en la app publicada. La sesión está activa.",
+  "nextAction": "recargar en Edge la app publicada de PFA_Pilot_App y avisarme cuando muestre My Day; continuaré las rutas del menú. No modificaré la galería de Configuration hasta E2.",
   "needsOscar": [
    {
     "ref": "E1-08",
-    "text": "iniciar sesión en Power Apps en Edge (la sesión expiró). En la pestaña Power Apps Studio | PFA_Pilot_App, pulsar **Sign in**, completar inicio de sesión y MFA, y responder aquí login listo. La vista previa sigue pendiente hasta el acceso."
+    "text": "en Edge, recarga la pestaña PFA_Pilot_App - Power Apps que muestra la app publicada. Espera a que aparezca My Day y escríbeme lista. Si la pestaña no responde, cierra y vuelve a abrir Edge; luego abre el tablero o la app publicada y dime lista. No hace falta que pruebes los botones."
    }
   ],
   "blockers": [],
@@ -55,10 +55,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 129,
+    "prod": 136,
     "unprod": 0,
     "wait": 4,
-    "total": 133
+    "total": 140
    }
   },
   {
@@ -458,9 +458,9 @@ window.PFA_DATA = {
     "expected": "Versión publicada y menú probado",
     "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 15,
+    "status": "Bloqueada",
+    "attempts": 2,
+    "minutes": 22,
     "entrega": "E1",
     "fails": 0,
     "ready": true
@@ -756,21 +756,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "E1-08",
-  "action": "Revisar las 7 pantallas en vista previa de escritorio y teléfono. Guardar y publicar. En la app publicada, tocar los 7 botones del menú desde 2 pantallas distintas",
-  "owner": "Agente",
-  "depends": "E1-07",
-  "expected": "Versión publicada y menú probado",
-  "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
-  "limit": 30,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 15,
-  "entrega": "E1",
-  "fails": 0,
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E1-08",
@@ -780,9 +766,9 @@ window.PFA_DATA = {
    "expected": "Versión publicada y menú probado",
    "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
    "limit": 30,
-   "status": "En curso",
-   "attempts": 1,
-   "minutes": 15,
+   "status": "Bloqueada",
+   "attempts": 2,
+   "minutes": 22,
    "entrega": "E1",
    "fails": 0,
    "ready": true
@@ -1224,29 +1210,35 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E1-08",
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
+  }
+ ],
  "kpi": {
   "tasksDone": 16,
   "tasksTotal": 36,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 191,
+   "prod": 198,
    "unprod": 0,
    "wait": 6,
-   "total": 197
+   "total": 204
   },
   "last24h": {
-   "prod": 191,
+   "prod": 198,
    "unprod": 0,
    "wait": 6,
-   "total": 197
+   "total": 204
   },
   "last7d": {
-   "prod": 191,
+   "prod": 198,
    "unprod": 0,
    "wait": 6,
-   "total": 197
+   "total": 204
   }
  },
  "days": [
@@ -1330,7 +1322,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 191,
+   "prod": 198,
    "unprod": 0,
    "wait": 6
   }
@@ -1375,18 +1367,18 @@ window.PFA_DATA = {
    "total": 29
   },
   {
+   "task": "E1-08",
+   "prod": 22,
+   "unprod": 0,
+   "wait": 4,
+   "total": 26
+  },
+  {
    "task": "E1-06",
    "prod": 24,
    "unprod": 0,
    "wait": 0,
    "total": 24
-  },
-  {
-   "task": "E1-08",
-   "prod": 15,
-   "unprod": 0,
-   "wait": 4,
-   "total": 19
   },
   {
    "task": "E1-04",
@@ -1427,10 +1419,36 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 197
+   "minutes": 204
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T22:00:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Interrumpí las pruebas al repetirse dos veces el error de nodo desconectado en navegación.",
+   "evidence": "Pestaña de la app publicada abierta; solicito recargarla en Edge y continuar cuando esté lista."
+  },
+  {
+   "start": "2026-09-30T21:53:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "La app publicada abrió y navegó por My Day, Projects, Tasks, Review y Configuration; dos interacciones devolvieron el nodo desconectado.",
+   "evidence": "La versión publicada está activa; falta completar las rutas y comprobar el resaltado del menú tras recuperar el navegador."
+  },
   {
    "start": "2026-09-30T19:34:00Z",
    "minutes": 2,
@@ -1599,32 +1617,6 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "Tema y navegación pegados en App.Formulas",
    "evidence": "Studio mostró No formula errors present y el guardado terminó"
-  },
-  {
-   "start": "2026-09-30T11:28:00Z",
-   "minutes": 6,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-02",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Tema y versiones alineados con la referencia",
-   "evidence": "Colores, tamaños y bordes actualizados; controles con versión documentados; diferencias entre botones separados de referencia y gallery de Nav registradas"
-  },
-  {
-   "start": "2026-09-30T11:18:00Z",
-   "minutes": 10,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-01",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Bloques de referencia copiados y versiones anotadas",
-   "evidence": "2 archivos guardados desde View code; 26 controles con versión identificados; anotaciones comprobadas"
   }
  ],
  "ideas": [
