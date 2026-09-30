@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T22:01:18.363805Z",
+ "generatedUtc": "2026-09-30T22:03:35.136309Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -1678,7 +1678,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "text": "La galería de carpetas de Configuration se modificó durante E1; detener cambios ahí hasta E2 y verificar preview sin errores",
+   "text": "La galería de carpetas de Configuration se modificó durante E1; en la app publicada, las etiquetas de sus botones quedan recortadas verticalmente. Detener cambios ahí hasta E2",
    "found": "Incidente INC-01",
    "target": "E2",
    "status": "Abierto"
