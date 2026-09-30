@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T18:39:20.189594Z",
+ "generatedUtc": "2026-09-30T19:24:19.998575Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -195,6 +195,22 @@ window.PFA_DATA = {
    "title": "",
    "goal": "Manejar etapas de proyecto, change orders y pre-buy",
    "status": "Sin detallar",
+   "done": 0,
+   "total": 0,
+   "detailed": false,
+   "active": false,
+   "time": {
+    "prod": 0,
+    "unprod": 0,
+    "wait": 0,
+    "total": 0
+   }
+  },
+  {
+   "id": "T",
+   "title": "",
+   "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
+   "status": "Continuo",
    "done": 0,
    "total": 0,
    "detailed": false,
@@ -1214,7 +1230,7 @@ window.PFA_DATA = {
   "tasksDone": 16,
   "tasksTotal": 36,
   "entregasAccepted": 1,
-  "entregasTotal": 11,
+  "entregasTotal": 12,
   "time": {
    "prod": 173,
    "unprod": 0,
@@ -1609,6 +1625,27 @@ window.PFA_DATA = {
   }
  ],
  "ideas": [
+  {
+   "date": "2026-09-30",
+   "text": "Publicar en el tablero el diagrama de flujos del proyecto",
+   "found": "Oscar",
+   "target": "T",
+   "status": "Abierto"
+  },
+  {
+   "date": "2026-09-30",
+   "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
+   "found": "E1-08",
+   "target": "E5",
+   "status": "Abierto"
+  },
+  {
+   "date": "2026-09-30",
+   "text": "La galería de carpetas de Configuration se modificó durante E1; detener cambios ahí hasta E2 y verificar preview sin errores",
+   "found": "Incidente INC-01",
+   "target": "E2",
+   "status": "Abierto"
+  },
   {
    "date": "2026-09-30",
    "text": "PFA_Messages exige 22 columnas obligatorias, 2 de ellas lookups; eso bloqueó la persistencia en el Bloque 2. Revisar cuáles vuelven a ser obligatorias cuando la carga sea automática",
