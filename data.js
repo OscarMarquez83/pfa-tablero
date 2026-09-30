@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T16:29:05.555696Z",
+ "generatedUtc": "2026-09-30T16:52:20.469841Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -529,7 +529,7 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-05",
-    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
     "owner": "Agente",
     "depends": "E2-04",
     "expected": "Oscar decide sus carpetas desde la app",
@@ -544,7 +544,7 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-06",
-    "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No)",
+    "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
     "owner": "Agente",
     "depends": "E2-05",
     "expected": "Oscar ve y ajusta sus proyectos",
@@ -849,7 +849,7 @@ window.PFA_DATA = {
   },
   {
    "id": "E2-05",
-   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
    "owner": "Agente",
    "depends": "E2-04",
    "expected": "Oscar decide sus carpetas desde la app",
@@ -864,7 +864,7 @@ window.PFA_DATA = {
   },
   {
    "id": "E2-06",
-   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No)",
+   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
    "owner": "Agente",
    "depends": "E2-05",
    "expected": "Oscar ve y ajusta sus proyectos",
@@ -1209,13 +1209,7 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: Proyectos con varios proyectos dentro: posible vista de \"programa\" que agrupe los subproye",
-   "level": "warning"
-  }
- ],
+ "alerts": [],
  "kpi": {
   "tasksDone": 16,
   "tasksTotal": 36,
@@ -1647,8 +1641,8 @@ window.PFA_DATA = {
    "date": "2026-09-30",
    "text": "Proyectos con varios proyectos dentro: posible vista de \"programa\" que agrupe los subproyectos",
    "found": "Oscar",
-   "target": "Por decidir",
-   "status": "Abierto"
+   "target": "E2",
+   "status": "Incorporado en E2-05 y E2-06"
   },
   {
    "date": "2026-09-30",
