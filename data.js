@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T07:39:29.204880Z",
+ "generatedUtc": "2026-09-30T07:41:13.945586Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -23,12 +23,12 @@ window.PFA_DATA = {
   "current": []
  },
  "revision": {
-  "light": "AMARILLO",
-  "date": "2026-09-30 07:38 UTC",
+  "light": "ROJO",
+  "date": "2026-09-30 07:41 UTC",
   "summary": [
-   "En las últimas 24 horas se registran 41 minutos; 41 fueron productivos (100 %).",
-   "E0 tiene 7 de 9 tareas hechas; E0-05 sigue en curso y E0-09 espera la prueba de Oscar.",
-   "Hay una alerta de registro en E0-05; se encontró un archivo nuevo fuera de control/ no solicitado en el plan."
+   "En las últimas 24 horas se registran 44 minutos; 44 fueron productivos (100 %).",
+   "E0 tiene 8 de 9 tareas hechas; E0-09 espera la prueba de Oscar en ambos equipos.",
+   "El historial registra un archivo auxiliar creado fuera de control/; ya se movió a control/."
   ]
  },
  "activeEntrega": "E0",
