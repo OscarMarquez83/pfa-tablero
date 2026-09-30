@@ -1,59 +1,54 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T10:29:05.099427Z",
+ "generatedUtc": "2026-09-30T10:59:11.453750Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E0-05 completada; revisión inicial lista)",
-  "activeEntrega": "E0 — Ordenar el proyecto y publicar el tablero",
-  "nextAction": "Oscar prueba el tablero en ambos equipos y envía un issue desde un pendiente (E0-09).",
-  "needsOscar": [
-   {
-    "ref": "E0-09",
-    "text": "abre https://oscarmarquez83.github.io/pfa-tablero/ en el celular y en el computador de Puffer. Comprueba que el tablero carga en ambos equipos. Después, en uno de ellos, toca **Responder** en un pendiente y envía el issue que se abre. Cuando hayas comprobado ambos equipos, escríbeme «E0 aceptada»."
-   }
-  ],
+  "updated": "2026-09-30 (E0 aceptada por Oscar)",
+  "activeEntrega": "E1 — Estándar visual de la app",
+  "nextAction": "iniciar E1-01 y obtener el YAML de referencia de Diagnostics, siguiendo control/PLAN.md.",
+  "needsOscar": [],
   "blockers": [],
   "current": []
  },
  "revision": {
   "light": "ROJO",
-  "date": "2026-09-30 09:30 UTC",
+  "date": "2026-09-30 10:59 UTC",
   "summary": [
-   "El worklog registra 43 minutos efectivos en 24 horas; 43 productivos (100 %), con 8 tareas hechas.",
-   "E0 lleva 8 / 9 tareas hechas; falta E0-09 y la aceptación de Oscar.",
-   "Hubo un archivo creado fuera de control/; la revisión de issues no pudo completarse."
+   "En las últimas 24 horas se registran 44 minutos; 44 fueron productivos (100 %).",
+   "E0 quedó aceptada, con 9 de 9 tareas hechas; E1 está activa, con 0 de 9 tareas hechas.",
+   "El issue #1 se registró y cerró; su título dice «E0 Aceptada», pero el campo «Mi respuesta» quedó vacío. Oscar confirmó la aceptación en el chat."
   ]
  },
- "activeEntrega": "E0",
+ "activeEntrega": "E1",
  "entregas": [
   {
    "id": "E0",
    "title": "Ordenar el proyecto y publicar el tablero",
    "goal": "Ver el avance del proyecto en un tablero web desde cualquier equipo y responder desde ahí",
-   "status": "Pendiente",
-   "done": 8,
+   "status": "Aceptada",
+   "done": 9,
    "total": 9,
    "detailed": true,
-   "active": true,
+   "active": false,
    "time": {
-    "prod": 43,
+    "prod": 44,
     "unprod": 0,
     "wait": 0,
-    "total": 43
+    "total": 44
    }
   },
   {
    "id": "E1",
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
-   "status": "Pendiente",
+   "status": "En curso",
    "done": 0,
    "total": 9,
    "detailed": true,
-   "active": false,
+   "active": true,
    "time": {
     "prod": 0,
     "unprod": 0,
@@ -328,12 +323,11 @@ window.PFA_DATA = {
     "expected": "Oscar ve el tablero y responde desde él",
     "evidence": "El agente procesa el issue en la sesión siguiente; Oscar escribe \"E0 aceptada\"",
     "limit": 0,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 1,
     "entrega": "E0",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    }
   ],
   "E1": [
@@ -765,21 +759,6 @@ window.PFA_DATA = {
  },
  "upcoming": [
   {
-   "id": "E0-09",
-   "action": "Abrir la URL del tablero en el celular y en el computador de Puffer. Tocar \"Responder\" en un pendiente y enviar el issue que se abre",
-   "owner": "Oscar",
-   "depends": "E0-08",
-   "expected": "Oscar ve el tablero y responde desde él",
-   "evidence": "El agente procesa el issue en la sesión siguiente; Oscar escribe \"E0 aceptada\"",
-   "limit": 0,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E0",
-   "fails": 0,
-   "ready": true
-  },
-  {
    "id": "E1-01",
    "action": "En la app PFA Diagnostics Test: en la pantalla Diagnostics, clic derecho en el encabezado y en el contenedor de la tabla → \"View code\" → \"Copy code\". Guardar cada bloque en design/referencia/ (encabezado.pa.yaml, tabla.pa.yaml). No modificar esa app",
    "owner": "Agente",
@@ -988,6 +967,21 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E2-06",
+   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No)",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar ve y ajusta sus proyectos",
+   "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
+   "limit": 60,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1102,6 +1096,20 @@ window.PFA_DATA = {
    "minutes": 30,
    "entrega": "E0",
    "fails": 0
+  },
+  {
+   "id": "E0-09",
+   "action": "Abrir la URL del tablero en el celular y en el computador de Puffer. Tocar \"Responder\" en un pendiente y enviar el issue que se abre",
+   "owner": "Oscar",
+   "depends": "E0-08",
+   "expected": "Oscar ve el tablero y responde desde él",
+   "evidence": "El agente procesa el issue en la sesión siguiente; Oscar escribe \"E0 aceptada\"",
+   "limit": 0,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 1,
+   "entrega": "E0",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1112,27 +1120,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 8,
+  "tasksDone": 9,
   "tasksTotal": 36,
-  "entregasAccepted": 0,
+  "entregasAccepted": 1,
   "entregasTotal": 11,
   "time": {
-   "prod": 43,
+   "prod": 44,
    "unprod": 0,
    "wait": 0,
-   "total": 43
+   "total": 44
   },
   "last24h": {
-   "prod": 43,
+   "prod": 44,
    "unprod": 0,
    "wait": 0,
-   "total": 43
+   "total": 44
   },
   "last7d": {
-   "prod": 43,
+   "prod": 44,
    "unprod": 0,
    "wait": 0,
-   "total": 43
+   "total": 44
   }
  },
  "days": [
@@ -1216,7 +1224,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 43,
+   "prod": 44,
    "unprod": 0,
    "wait": 0
   }
@@ -1273,6 +1281,13 @@ window.PFA_DATA = {
    "total": 1
   },
   {
+   "task": "E0-09",
+   "prod": 1,
+   "unprod": 0,
+   "wait": 0,
+   "total": 1
+  },
+  {
    "task": "E0-01",
    "prod": 0,
    "unprod": 0,
@@ -1290,10 +1305,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 43
+   "minutes": 44
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T10:56:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Issue de aceptación procesado; E0 aceptada",
+   "evidence": "Issue 1 confirmado por la cuenta autora; Oscar confirmó por chat la prueba en ambos equipos; decisión registrada y issue cerrado"
+  },
   {
    "start": "2026-09-30T07:35:00Z",
    "minutes": 3,
