@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T21:39:20.324434Z",
+ "generatedUtc": "2026-09-30T21:54:20.347062Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (T-03 completada; E1-08 pendiente de inicio de sesión)",
+  "updated": "2026-09-30 (E1-08 reanudada tras inicio de sesión)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "Oscar inicia sesión en Power Apps. Luego verificar en preview que Configuration abre sin errores; mantener la galería de carpetas sin cambios hasta E2.",
+  "nextAction": "completar E1-08 en Power Apps: aplicar el ajuste de Configuration ya preparado, publicar y verificar los 7 botones del menú desde 2 pantallas en la app publicada. La sesión está activa.",
   "needsOscar": [
    {
     "ref": "E1-08",
@@ -19,12 +19,12 @@ window.PFA_DATA = {
   "current": []
  },
  "revision": {
-  "light": "ROJO",
-  "date": "2026-09-30 17:34 UTC",
+  "light": "AMARILLO",
+  "date": "2026-09-30 21:53 UTC",
   "summary": [
-   "E0 aceptada: 9/9; E1: 7/9, con E1-08 pendiente de publicación por autenticación.",
-   "173 minutos efectivos registrados desde el 30 de septiembre; 100 % productivo; 4 minutos de espera AUTH.",
-   "Revisión documental completada; issues sin verificar y publicación omitida para cumplir la restricción de escritura."
+   "E0 aceptada: 9/9; E1: 7/9, sin nueva tarea funcional cerrada desde la revisión anterior.",
+   "191 minutos efectivos y 6 de espera; 100 % del tiempo efectivo registrado es HECHA o AVANCE.",
+   "Cuatro incidentes cerrados; INC-01 sigue abierto con respuesta y preview pendiente de login."
   ]
  },
  "activeEntrega": "E1",
