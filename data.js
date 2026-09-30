@@ -1,23 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T19:24:19.998575Z",
+ "generatedUtc": "2026-09-30T19:34:00.807537Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E1-08 en curso)",
+  "updated": "2026-09-30 (T-03 completada; E1-08 pendiente de inicio de sesión)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "Oscar inicia sesión de nuevo en Power Apps; después aplicar y verificar el ajuste de Configuration, guardar, publicar y probar el menú desde dos pantallas.",
-  "needsOscar": [],
+  "nextAction": "Oscar inicia sesión en Power Apps. Luego verificar en preview que Configuration abre sin errores; mantener la galería de carpetas sin cambios hasta E2.",
+  "needsOscar": [
+   {
+    "ref": "E1-08",
+    "text": "iniciar sesión en Power Apps en Edge (la sesión expiró). En la pestaña Power Apps Studio | PFA_Pilot_App, pulsar **Sign in**, completar inicio de sesión y MFA, y responder aquí login listo. La vista previa sigue pendiente hasta el acceso."
+   }
+  ],
   "blockers": [],
-  "current": [
-   "Tarea: E1-08",
-   "Intento: 1",
-   "Inicio (UTC): 2026-09-30 13:21",
-   "Qué voy a hacer: aplicar el ajuste pendiente de Configuration en Power Apps, verificar las vistas previa en escritorio y teléfono, guardar, publicar y probar los botones del menú desde dos pantallas.",
-   "Cómo comprobarlo: vistas previas correctas; versión publicada anotada; los 7 botones llevan a su pantalla y marcan el activo correcto desde dos orígenes."
-  ]
+  "current": []
  },
  "revision": {
   "light": "ROJO",
@@ -40,10 +39,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 44,
+    "prod": 3,
     "unprod": 0,
     "wait": 0,
-    "total": 44
+    "total": 3
    }
   },
   {
@@ -216,10 +215,10 @@ window.PFA_DATA = {
    "detailed": false,
    "active": false,
    "time": {
-    "prod": 0,
+    "prod": 57,
     "unprod": 0,
     "wait": 0,
-    "total": 0
+    "total": 57
    }
   }
  ],
@@ -291,7 +290,7 @@ window.PFA_DATA = {
     "limit": 20,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 3,
+    "minutes": 0,
     "entrega": "E0",
     "fails": 0
    },
@@ -305,9 +304,9 @@ window.PFA_DATA = {
     "limit": 20,
     "status": "Hecha",
     "attempts": 4,
-    "minutes": 6,
+    "minutes": 0,
     "entrega": "E0",
-    "fails": 1
+    "fails": 0
    },
    {
     "id": "E0-07",
@@ -319,7 +318,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 2,
+    "minutes": 0,
     "entrega": "E0",
     "fails": 0
    },
@@ -333,7 +332,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 30,
+    "minutes": 0,
     "entrega": "E0",
     "fails": 0
    },
@@ -1066,7 +1065,7 @@ window.PFA_DATA = {
    "limit": 20,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 3,
+   "minutes": 0,
    "entrega": "E0",
    "fails": 0
   },
@@ -1080,9 +1079,9 @@ window.PFA_DATA = {
    "limit": 20,
    "status": "Hecha",
    "attempts": 4,
-   "minutes": 6,
+   "minutes": 0,
    "entrega": "E0",
-   "fails": 1
+   "fails": 0
   },
   {
    "id": "E0-07",
@@ -1094,7 +1093,7 @@ window.PFA_DATA = {
    "limit": 30,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 2,
+   "minutes": 0,
    "entrega": "E0",
    "fails": 0
   },
@@ -1108,7 +1107,7 @@ window.PFA_DATA = {
    "limit": 30,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 30,
+   "minutes": 0,
    "entrega": "E0",
    "fails": 0
   },
@@ -1232,22 +1231,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 173,
+   "prod": 189,
    "unprod": 0,
    "wait": 4,
-   "total": 177
+   "total": 193
   },
   "last24h": {
-   "prod": 173,
+   "prod": 189,
    "unprod": 0,
    "wait": 4,
-   "total": 177
+   "total": 193
   },
   "last7d": {
-   "prod": 173,
+   "prod": 189,
    "unprod": 0,
    "wait": 4,
-   "total": 177
+   "total": 193
   }
  },
  "days": [
@@ -1331,7 +1330,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 173,
+   "prod": 189,
    "unprod": 0,
    "wait": 4
   }
@@ -1351,11 +1350,11 @@ window.PFA_DATA = {
  ],
  "topTasks": [
   {
-   "task": "E0-08",
-   "prod": 30,
+   "task": "T-01",
+   "prod": 41,
    "unprod": 0,
    "wait": 0,
-   "total": 30
+   "total": 41
   },
   {
    "task": "E1-05",
@@ -1400,11 +1399,18 @@ window.PFA_DATA = {
    "total": 10
   },
   {
-   "task": "E0-06",
-   "prod": 6,
+   "task": "T-03",
+   "prod": 9,
    "unprod": 0,
    "wait": 0,
-   "total": 6
+   "total": 9
+  },
+  {
+   "task": "T-02",
+   "prod": 7,
+   "unprod": 0,
+   "wait": 0,
+   "total": 7
   },
   {
    "task": "E1-02",
@@ -1412,22 +1418,41 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 6
-  },
-  {
-   "task": "E0-05",
-   "prod": 3,
-   "unprod": 0,
-   "wait": 0,
-   "total": 3
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 177
+   "minutes": 193
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T19:23:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Apliqué B y C: reglas, incidentes y lecciones; registré el inicio de sesión pendiente y preparé la publicación del tablero",
+   "evidence": "INC-01 a INC-05 registrados; KF-P01 a KF-P05 y KF-H01 documentados; STATUS contiene E1-08; preview pendiente de Oscar"
+  },
+  {
+   "start": "2026-09-30T19:16:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-02",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tarea Windows y página verificadas; concilié las dos publicaciones faltantes y registré que la pausa fue por la regla restrictiva del revisor",
+   "evidence": "LastTaskResult 0; ruta absoluta pwsh; commits ef94990 y 7f3c40b en origin/main; página HTTP 200; log conciliado"
+  },
   {
    "start": "2026-09-30T13:36:00Z",
    "minutes": 4,
@@ -1596,56 +1621,9 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Issue de aceptación procesado; E0 aceptada",
    "evidence": "Issue 1 confirmado por la cuenta autora; Oscar confirmó por chat la prueba en ambos equipos; decisión registrada y issue cerrado"
-  },
-  {
-   "start": "2026-09-30T07:35:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-05",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Configuré los dos horarios del revisor y generé la revisión manual",
-   "evidence": "Tareas Codex diarias a las 04:30 y 17:00 hora local Central; control/REVISION.md generado y comprometido por separado"
-  },
-  {
-   "start": "2026-09-30T06:59:00Z",
-   "minutes": 30,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-08",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Tablero publicado y actualización horaria configurada",
-   "evidence": "URL HTTP 200; Get-ScheduledTask PFA Tablero listo, última ejecución LastTaskResult 0, próxima ejecución dentro de 1 hora"
   }
  ],
  "ideas": [
-  {
-   "date": "2026-09-30",
-   "text": "Publicar en el tablero el diagrama de flujos del proyecto",
-   "found": "Oscar",
-   "target": "T",
-   "status": "Abierto"
-  },
-  {
-   "date": "2026-09-30",
-   "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
-   "found": "E1-08",
-   "target": "E5",
-   "status": "Abierto"
-  },
-  {
-   "date": "2026-09-30",
-   "text": "La galería de carpetas de Configuration se modificó durante E1; detener cambios ahí hasta E2 y verificar preview sin errores",
-   "found": "Incidente INC-01",
-   "target": "E2",
-   "status": "Abierto"
-  },
   {
    "date": "2026-09-30",
    "text": "PFA_Messages exige 22 columnas obligatorias, 2 de ellas lookups; eso bloqueó la persistencia en el Bloque 2. Revisar cuáles vuelven a ser obligatorias cuando la carga sea automática",
@@ -1690,9 +1668,23 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
+   "text": "Publicar en el tablero el diagrama de flujos del proyecto",
+   "found": "Oscar",
+   "target": "T",
+   "status": "Abierto"
+  },
+  {
+   "date": "2026-09-30",
    "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
    "found": "E1-08",
    "target": "E5",
+   "status": "Abierto"
+  },
+  {
+   "date": "2026-09-30",
+   "text": "La galería de carpetas de Configuration se modificó durante E1; detener cambios ahí hasta E2 y verificar preview sin errores",
+   "found": "Incidente INC-01",
+   "target": "E2",
    "status": "Abierto"
   }
  ]
