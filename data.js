@@ -1,22 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T12:29:05.883979Z",
+ "generatedUtc": "2026-09-30T13:29:06.247407Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E1-06 en curso)",
+  "updated": "2026-09-30 (E1-08 en curso)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "aplicar el encabezado y el título estándar a Projects, Tasks y Review; revisar las tres pantallas en vista previa.",
+  "nextAction": "revisar las 7 pantallas en vista previa de escritorio y teléfono; guardar, publicar y probar los 7 botones del menú desde 2 pantallas.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "Tarea: E1-06",
+   "Tarea: E1-08",
    "Intento: 1",
-   "Inicio (UTC): 2026-09-30 12:28",
-   "Qué voy a hacer: adaptar los bloques estándar a Projects, Tasks y Review, conservando las acciones y controles existentes.",
-   "Cómo comprobarlo: vista previa de las tres pantallas y ausencia de errores de fórmula."
+   "Inicio (UTC): 2026-09-30 13:21",
+   "Qué voy a hacer: revisar las 7 pantallas en vista previa de escritorio y teléfono, guardar, publicar y probar el menú desde 2 pantallas.",
+   "Cómo comprobarlo: vistas previas completas; versión publicada registrada; cada botón lleva a su pantalla y marca el activo correcto."
   ]
  },
  "revision": {
@@ -51,15 +51,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 5,
+   "done": 7,
    "total": 9,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 61,
+    "prod": 114,
     "unprod": 0,
     "wait": 0,
-    "total": 61
+    "total": 114
    }
   },
   {
@@ -415,12 +415,11 @@ window.PFA_DATA = {
     "expected": "5 pantallas con el estándar",
     "evidence": "Vista previa correcta",
     "limit": 60,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 24,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-07",
@@ -430,12 +429,11 @@ window.PFA_DATA = {
     "expected": "7 pantallas con el estándar",
     "evidence": "Vista previa correcta; scrPlantilla eliminada",
     "limit": 60,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 2,
+    "minutes": 29,
     "entrega": "E1",
-    "fails": 0,
-    "ready": false
+    "fails": 0
    },
    {
     "id": "E1-08",
@@ -445,12 +443,12 @@ window.PFA_DATA = {
     "expected": "Versión publicada y menú probado",
     "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "En curso",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E1-09",
@@ -744,13 +742,13 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-06",
-  "action": "Igual que E1-05 en Projects, Tasks y Review",
+  "id": "E1-08",
+  "action": "Revisar las 7 pantallas en vista previa de escritorio y teléfono. Guardar y publicar. En la app publicada, tocar los 7 botones del menú desde 2 pantallas distintas",
   "owner": "Agente",
-  "depends": "E1-05",
-  "expected": "5 pantallas con el estándar",
-  "evidence": "Vista previa correcta",
-  "limit": 60,
+  "depends": "E1-07",
+  "expected": "Versión publicada y menú probado",
+  "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
+  "limit": 30,
   "status": "En curso",
   "attempts": 1,
   "minutes": 0,
@@ -760,36 +758,6 @@ window.PFA_DATA = {
  },
  "upcoming": [
   {
-   "id": "E1-06",
-   "action": "Igual que E1-05 en Projects, Tasks y Review",
-   "owner": "Agente",
-   "depends": "E1-05",
-   "expected": "5 pantallas con el estándar",
-   "evidence": "Vista previa correcta",
-   "limit": 60,
-   "status": "En curso",
-   "attempts": 1,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
-  {
-   "id": "E1-07",
-   "action": "Igual que E1-05 en Historical Search y Configuration. Borrar scrPlantilla",
-   "owner": "Agente",
-   "depends": "E1-06",
-   "expected": "7 pantallas con el estándar",
-   "evidence": "Vista previa correcta; scrPlantilla eliminada",
-   "limit": 60,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": false
-  },
-  {
    "id": "E1-08",
    "action": "Revisar las 7 pantallas en vista previa de escritorio y teléfono. Guardar y publicar. En la app publicada, tocar los 7 botones del menú desde 2 pantallas distintas",
    "owner": "Agente",
@@ -797,12 +765,12 @@ window.PFA_DATA = {
    "expected": "Versión publicada y menú probado",
    "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
    "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
+   "status": "En curso",
+   "attempts": 1,
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E1-09",
@@ -977,6 +945,36 @@ window.PFA_DATA = {
    "expected": "Carpeta de prueba lista",
    "evidence": "Oscar confirma",
    "limit": 0,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-02",
+   "action": "En List settings de PFA_Messages: dejar como obligatorias solo InternetMessageId, OutlookMessageId, Subject, Sender, ReceivedSentUtc y FolderId. Anotar en worklog las columnas cambiadas",
+   "owner": "Agente",
+   "depends": "E2-10",
+   "expected": "La lista acepta un correo con 6 campos",
+   "evidence": "Columnas cambiadas anotadas en worklog",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-03",
+   "action": "Crear el flujo PFA_E3_CargarCorreos. Trigger manual con entrada opcional SoloCarpeta (texto). Pasos: Get items de PFA_MailFolders con Included = Sí (o solo la carpeta indicada) → por cada carpeta, Get emails (V3) de los últimos 30 días, Top 50, sin adjuntos → por cada correo, Get items en PFA_Messages por InternetMessageId → Create item o Update item. Llenar las 6 columnas obligatorias más OutlookWebLink y ObservedFolderPath. Ninguna acción que modifique el buzón (H-03)",
+   "owner": "Agente",
+   "depends": "E3-01, E3-02",
+   "expected": "Flujo guardado",
+   "evidence": "Flujo guardado; Flow Checker 0 errores",
+   "limit": 90,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1181,6 +1179,34 @@ window.PFA_DATA = {
    "minutes": 30,
    "entrega": "E1",
    "fails": 0
+  },
+  {
+   "id": "E1-06",
+   "action": "Igual que E1-05 en Projects, Tasks y Review",
+   "owner": "Agente",
+   "depends": "E1-05",
+   "expected": "5 pantallas con el estándar",
+   "evidence": "Vista previa correcta",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 24,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
+   "id": "E1-07",
+   "action": "Igual que E1-05 en Historical Search y Configuration. Borrar scrPlantilla",
+   "owner": "Agente",
+   "depends": "E1-06",
+   "expected": "7 pantallas con el estándar",
+   "evidence": "Vista previa correcta; scrPlantilla eliminada",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 29,
+   "entrega": "E1",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1191,27 +1217,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 14,
+  "tasksDone": 16,
   "tasksTotal": 36,
   "entregasAccepted": 1,
   "entregasTotal": 11,
   "time": {
-   "prod": 105,
+   "prod": 158,
    "unprod": 0,
    "wait": 0,
-   "total": 105
+   "total": 158
   },
   "last24h": {
-   "prod": 105,
+   "prod": 158,
    "unprod": 0,
    "wait": 0,
-   "total": 105
+   "total": 158
   },
   "last7d": {
-   "prod": 105,
+   "prod": 158,
    "unprod": 0,
    "wait": 0,
-   "total": 105
+   "total": 158
   }
  },
  "days": [
@@ -1295,7 +1321,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 105,
+   "prod": 158,
    "unprod": 0,
    "wait": 0
   }
@@ -1322,6 +1348,20 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 30
+  },
+  {
+   "task": "E1-07",
+   "prod": 29,
+   "unprod": 0,
+   "wait": 0,
+   "total": 29
+  },
+  {
+   "task": "E1-06",
+   "prod": 24,
+   "unprod": 0,
+   "wait": 0,
+   "total": 24
   },
   {
    "task": "E1-04",
@@ -1364,29 +1404,54 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 2
-  },
-  {
-   "task": "E1-03",
-   "prod": 2,
-   "unprod": 0,
-   "wait": 0,
-   "total": 2
-  },
-  {
-   "task": "E0-03",
-   "prod": 1,
-   "unprod": 0,
-   "wait": 0,
-   "total": 1
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 105
+   "minutes": 158
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T13:12:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-07",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Ajusté la galería móvil con botones apilados y revisé Historical Search y Configuration en teléfono y formato ancho",
+   "evidence": "Ambas vistas previas correctas; 7 pantallas sin scrPlantilla; nombres sin sufijo; sin errores de fórmula; app Saved (Unpublished)"
+  },
+  {
+   "start": "2026-09-30T12:52:00Z",
+   "minutes": 20,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-07",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Estandaricé el encabezado y título de Historical Search y Configuration; eliminé scrPlantilla y ajusté la galería de carpetas para móvil",
+   "evidence": "7 pantallas en el árbol; sin errores de fórmula; vista móvil de Configuration aún corta el botón Incremental; app guardada sin publicar"
+  },
+  {
+   "start": "2026-09-30T12:28:00Z",
+   "minutes": 24,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-06",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Apliqué encabezado y título estándar en Projects, Tasks y Review; moví lblTasksCount para separarlo del subtítulo y corregí el bloque YAML literal del texto",
+   "evidence": "Vista previa móvil de las 3 pantallas; sin errores de fórmula; app Saved (Unpublished)"
+  },
   {
    "start": "2026-09-30T12:11:00Z",
    "minutes": 17,
@@ -1542,45 +1607,6 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Autenticación de GitHub CLI guardada y Git configurado para usarla",
    "evidence": "gh auth status identifica una sesión activa en github.com; gh auth setup-git terminó correctamente"
-  },
-  {
-   "start": "2026-09-30T06:50:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-06",
-   "attempt": 3,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "AUTH",
-   "summary": "La sesión de GitHub CLI no quedó guardada para la cuenta de Oscar",
-   "evidence": "gh auth status informa que no hay sesión en hosts de GitHub; no se encontró configuración en las rutas estándar"
-  },
-  {
-   "start": "2026-09-30T06:41:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-06",
-   "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "GitHub CLI 2.102.0 descargado del release oficial, instalado en perfil de usuario y añadido al PATH; falta autenticación interactiva de Oscar",
-   "evidence": "gh --version devuelve 2.102.0; Get-Command gh resuelve C:\\Users\\oscar\\AppData\\Local\\Programs\\gh\\bin\\gh.exe; hash SHA256 AE64E556ECC240B200F7EBA60D550E4BB60D78E860E69DD88C449405B86067F4"
-  },
-  {
-   "start": "2026-09-30T06:40:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-04",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Import-Csv validó las tres filas E0-01 a E0-03 y las 11 columnas",
-   "evidence": "5 filas totales legibles; 3 tareas E0 verificadas con horas presentes"
   }
  ],
  "ideas": [
