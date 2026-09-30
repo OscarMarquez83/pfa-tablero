@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T13:29:06.247407Z",
+ "generatedUtc": "2026-09-30T14:29:05.599395Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,15 +8,15 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-09-30 (E1-08 en curso)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "revisar las 7 pantallas en vista previa de escritorio y teléfono; guardar, publicar y probar los 7 botones del menú desde 2 pantallas.",
+  "nextAction": "Oscar inicia sesión de nuevo en Power Apps; después aplicar y verificar el ajuste de Configuration, guardar, publicar y probar el menú desde dos pantallas.",
   "needsOscar": [],
   "blockers": [],
   "current": [
    "Tarea: E1-08",
    "Intento: 1",
    "Inicio (UTC): 2026-09-30 13:21",
-   "Qué voy a hacer: revisar las 7 pantallas en vista previa de escritorio y teléfono, guardar, publicar y probar el menú desde 2 pantallas.",
-   "Cómo comprobarlo: vistas previas completas; versión publicada registrada; cada botón lleva a su pantalla y marca el activo correcto."
+   "Qué voy a hacer: aplicar el ajuste pendiente de Configuration en Power Apps, verificar las vistas previa en escritorio y teléfono, guardar, publicar y probar los botones del menú desde dos pantallas.",
+   "Cómo comprobarlo: vistas previas correctas; versión publicada anotada; los 7 botones llevan a su pantalla y marcan el activo correcto desde dos orígenes."
   ]
  },
  "revision": {
@@ -56,10 +56,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 114,
+    "prod": 129,
     "unprod": 0,
-    "wait": 0,
-    "total": 114
+    "wait": 4,
+    "total": 133
    }
   },
   {
@@ -445,7 +445,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "En curso",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 15,
     "entrega": "E1",
     "fails": 0,
     "ready": true
@@ -751,7 +751,7 @@ window.PFA_DATA = {
   "limit": 30,
   "status": "En curso",
   "attempts": 1,
-  "minutes": 0,
+  "minutes": 15,
   "entrega": "E1",
   "fails": 0,
   "ready": true
@@ -767,7 +767,7 @@ window.PFA_DATA = {
    "limit": 30,
    "status": "En curso",
    "attempts": 1,
-   "minutes": 0,
+   "minutes": 15,
    "entrega": "E1",
    "fails": 0,
    "ready": true
@@ -1222,22 +1222,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 11,
   "time": {
-   "prod": 158,
+   "prod": 173,
    "unprod": 0,
-   "wait": 0,
-   "total": 158
+   "wait": 4,
+   "total": 177
   },
   "last24h": {
-   "prod": 158,
+   "prod": 173,
    "unprod": 0,
-   "wait": 0,
-   "total": 158
+   "wait": 4,
+   "total": 177
   },
   "last7d": {
-   "prod": 158,
+   "prod": 173,
    "unprod": 0,
-   "wait": 0,
-   "total": 158
+   "wait": 4,
+   "total": 177
   }
  },
  "days": [
@@ -1321,9 +1321,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 158,
+   "prod": 173,
    "unprod": 0,
-   "wait": 0
+   "wait": 4
   }
  ],
  "categories": [
@@ -1333,7 +1333,12 @@ window.PFA_DATA = {
    "attempts": 1
   }
  ],
- "waits": [],
+ "waits": [
+  {
+   "category": "AUTH",
+   "minutes": 4
+  }
+ ],
  "topTasks": [
   {
    "task": "E0-08",
@@ -1362,6 +1367,13 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 24
+  },
+  {
+   "task": "E1-08",
+   "prod": 15,
+   "unprod": 0,
+   "wait": 4,
+   "total": 19
   },
   {
    "task": "E1-04",
@@ -1397,22 +1409,41 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 3
-  },
-  {
-   "task": "E0-07",
-   "prod": 2,
-   "unprod": 0,
-   "wait": 0,
-   "total": 2
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 158
+   "minutes": 177
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T13:36:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Apps solicitó iniciar sesión por expiración de sesión; se pausa la edición hasta que Oscar complete el acceso",
+   "evidence": "AADSTS70044; botón Sign in visible en la pestaña PFA_Pilot_App"
+  },
+  {
+   "start": "2026-09-30T13:21:00Z",
+   "minutes": 15,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisé las 7 pantallas en vista previa de escritorio y teléfono y probé los 7 botones del menú desde Projects y My Day; preparé el ajuste de ancho de botones en Configuration",
+   "evidence": "Los 14 recorridos llegaron a la pantalla correcta y el activo se resaltó; Configuration conserva un recorte de texto en escritorio; app sin publicar; falta aplicar el ajuste preparado en Studio"
+  },
   {
    "start": "2026-09-30T13:12:00Z",
    "minutes": 9,
@@ -1581,32 +1612,6 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Tablero publicado y actualización horaria configurada",
    "evidence": "URL HTTP 200; Get-ScheduledTask PFA Tablero listo, última ejecución LastTaskResult 0, próxima ejecución dentro de 1 hora"
-  },
-  {
-   "start": "2026-09-30T06:57:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-07",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Repositorio público creado y Pages activado en main y raíz",
-   "evidence": "Repositorio público visible; clon local en la ruta configurada; GitHub Pages compilado y devuelve HTTP 200 en https://oscarmarquez83.github.io/pfa-tablero/"
-  },
-  {
-   "start": "2026-09-30T06:56:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-06",
-   "attempt": 4,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "AUTH",
-   "summary": "Autenticación de GitHub CLI guardada y Git configurado para usarla",
-   "evidence": "gh auth status identifica una sesión activa en github.com; gh auth setup-git terminó correctamente"
   }
  ],
  "ideas": [
@@ -1651,6 +1656,13 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "E1 en adelante",
    "status": "Incorporado en la regla D-013"
+  },
+  {
+   "date": "2026-09-30",
+   "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
+   "found": "E1-08",
+   "target": "E5",
+   "status": "Abierto"
   }
  ]
 };
