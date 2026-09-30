@@ -1,17 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T11:16:48.024370Z",
+ "generatedUtc": "2026-09-30T11:29:06.351314Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E0 aceptada por Oscar)",
+  "updated": "2026-09-30 (E1-01 completada)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "iniciar E1-01 y obtener el YAML de referencia de Diagnostics, siguiendo control/PLAN.md.",
+  "nextAction": "completar E1-02: comparar los YAML de referencia con design/DISENO.md y design/tema.fx, y alinear el tema.",
   "needsOscar": [],
   "blockers": [],
-  "current": []
+  "current": [
+   "Tarea: E1-02",
+   "Intento: 1",
+   "Inicio (UTC): 2026-09-30 11:28",
+   "Qué voy a hacer: comparar los dos YAML copiados con el tema y el estándar visual, y ajustar los valores que difieran.",
+   "Cómo voy a comprobarlo: tabla de versiones completa, tema alineado con la referencia y diferencias anotadas en worklog."
+  ]
  },
  "revision": {
   "light": "ROJO",
@@ -45,15 +51,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 0,
+   "done": 1,
    "total": 9,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 0,
+    "prod": 10,
     "unprod": 0,
     "wait": 0,
-    "total": 0
+    "total": 10
    }
   },
   {
@@ -339,12 +345,11 @@ window.PFA_DATA = {
     "expected": "Referencia visual guardada como código",
     "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
     "limit": 20,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 10,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-02",
@@ -359,7 +364,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E1-03",
@@ -743,13 +748,13 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-01",
-  "action": "En la app PFA Diagnostics Test: en la pantalla Diagnostics, clic derecho en el encabezado y en el contenedor de la tabla → \"View code\" → \"Copy code\". Guardar cada bloque en design/referencia/ (encabezado.pa.yaml, tabla.pa.yaml). No modificar esa app",
+  "id": "E1-02",
+  "action": "Comparar la referencia con design/DISENO.md y design/tema.fx. Ajustar los valores del tema (colores, tamaños, fuentes) a los reales de la referencia. Completar la sección \"Versiones de control\" de DISENO.md",
   "owner": "Agente",
-  "depends": "E0-02",
-  "expected": "Referencia visual guardada como código",
-  "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
-  "limit": 20,
+  "depends": "E1-01",
+  "expected": "Tema alineado con la referencia",
+  "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
+  "limit": 30,
   "status": "Pendiente",
   "attempts": 0,
   "minutes": 0,
@@ -758,21 +763,6 @@ window.PFA_DATA = {
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-01",
-   "action": "En la app PFA Diagnostics Test: en la pantalla Diagnostics, clic derecho en el encabezado y en el contenedor de la tabla → \"View code\" → \"Copy code\". Guardar cada bloque en design/referencia/ (encabezado.pa.yaml, tabla.pa.yaml). No modificar esa app",
-   "owner": "Agente",
-   "depends": "E0-02",
-   "expected": "Referencia visual guardada como código",
-   "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
-   "limit": 20,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E1-02",
    "action": "Comparar la referencia con design/DISENO.md y design/tema.fx. Ajustar los valores del tema (colores, tamaños, fuentes) a los reales de la referencia. Completar la sección \"Versiones de control\" de DISENO.md",
@@ -786,7 +776,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E1-03",
@@ -982,6 +972,21 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E2-07",
+   "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar se entera de carpetas nuevas",
+   "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1110,6 +1115,20 @@ window.PFA_DATA = {
    "minutes": 1,
    "entrega": "E0",
    "fails": 0
+  },
+  {
+   "id": "E1-01",
+   "action": "En la app PFA Diagnostics Test: en la pantalla Diagnostics, clic derecho en el encabezado y en el contenedor de la tabla → \"View code\" → \"Copy code\". Guardar cada bloque en design/referencia/ (encabezado.pa.yaml, tabla.pa.yaml). No modificar esa app",
+   "owner": "Agente",
+   "depends": "E0-02",
+   "expected": "Referencia visual guardada como código",
+   "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 10,
+   "entrega": "E1",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1120,27 +1139,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 9,
+  "tasksDone": 10,
   "tasksTotal": 36,
   "entregasAccepted": 1,
   "entregasTotal": 11,
   "time": {
-   "prod": 44,
+   "prod": 54,
    "unprod": 0,
    "wait": 0,
-   "total": 44
+   "total": 54
   },
   "last24h": {
-   "prod": 44,
+   "prod": 54,
    "unprod": 0,
    "wait": 0,
-   "total": 44
+   "total": 54
   },
   "last7d": {
-   "prod": 44,
+   "prod": 54,
    "unprod": 0,
    "wait": 0,
-   "total": 44
+   "total": 54
   }
  },
  "days": [
@@ -1224,7 +1243,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 44,
+   "prod": 54,
    "unprod": 0,
    "wait": 0
   }
@@ -1244,6 +1263,13 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 30
+  },
+  {
+   "task": "E1-01",
+   "prod": 10,
+   "unprod": 0,
+   "wait": 0,
+   "total": 10
   },
   {
    "task": "E0-06",
@@ -1305,10 +1331,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 44
+   "minutes": 54
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T11:18:00Z",
+   "minutes": 10,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-01",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Bloques de referencia copiados y versiones anotadas",
+   "evidence": "2 archivos guardados desde View code; 26 controles con versión identificados; anotaciones comprobadas"
+  },
   {
    "start": "2026-09-30T10:56:00Z",
    "minutes": 1,
