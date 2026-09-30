@@ -1,22 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T11:29:06.351314Z",
+ "generatedUtc": "2026-09-30T12:29:05.883979Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E1-01 completada)",
+  "updated": "2026-09-30 (E1-06 en curso)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "completar E1-02: comparar los YAML de referencia con design/DISENO.md y design/tema.fx, y alinear el tema.",
+  "nextAction": "aplicar el encabezado y el título estándar a Projects, Tasks y Review; revisar las tres pantallas en vista previa.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "Tarea: E1-02",
+   "Tarea: E1-06",
    "Intento: 1",
-   "Inicio (UTC): 2026-09-30 11:28",
-   "Qué voy a hacer: comparar los dos YAML copiados con el tema y el estándar visual, y ajustar los valores que difieran.",
-   "Cómo voy a comprobarlo: tabla de versiones completa, tema alineado con la referencia y diferencias anotadas en worklog."
+   "Inicio (UTC): 2026-09-30 12:28",
+   "Qué voy a hacer: adaptar los bloques estándar a Projects, Tasks y Review, conservando las acciones y controles existentes.",
+   "Cómo comprobarlo: vista previa de las tres pantallas y ausencia de errores de fórmula."
   ]
  },
  "revision": {
@@ -51,15 +51,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 1,
+   "done": 5,
    "total": 9,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 10,
+    "prod": 61,
     "unprod": 0,
     "wait": 0,
-    "total": 10
+    "total": 61
    }
   },
   {
@@ -359,12 +359,11 @@ window.PFA_DATA = {
     "expected": "Tema alineado con la referencia",
     "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 6,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-03",
@@ -374,12 +373,11 @@ window.PFA_DATA = {
     "expected": "Tema y menú disponibles en toda la app",
     "evidence": "\"No formula errors\"; app guardada",
     "limit": 20,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 2,
     "entrega": "E1",
-    "fails": 0,
-    "ready": false
+    "fails": 0
    },
    {
     "id": "E1-04",
@@ -389,12 +387,11 @@ window.PFA_DATA = {
     "expected": "Plantilla funcionando",
     "evidence": "Vista previa de scrPlantilla igual al estándar, en escritorio y teléfono",
     "limit": 90,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 13,
     "entrega": "E1",
-    "fails": 0,
-    "ready": false
+    "fails": 0
    },
    {
     "id": "E1-05",
@@ -404,12 +401,11 @@ window.PFA_DATA = {
     "expected": "2 pantallas con el estándar",
     "evidence": "Vista previa correcta; menú navega a las 7 pantallas",
     "limit": 60,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 3,
+    "minutes": 30,
     "entrega": "E1",
-    "fails": 0,
-    "ready": false
+    "fails": 0
    },
    {
     "id": "E1-06",
@@ -419,12 +415,12 @@ window.PFA_DATA = {
     "expected": "5 pantallas con el estándar",
     "evidence": "Vista previa correcta",
     "limit": 60,
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "En curso",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E1-07",
@@ -748,81 +744,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-02",
-  "action": "Comparar la referencia con design/DISENO.md y design/tema.fx. Ajustar los valores del tema (colores, tamaños, fuentes) a los reales de la referencia. Completar la sección \"Versiones de control\" de DISENO.md",
+  "id": "E1-06",
+  "action": "Igual que E1-05 en Projects, Tasks y Review",
   "owner": "Agente",
-  "depends": "E1-01",
-  "expected": "Tema alineado con la referencia",
-  "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
-  "limit": 30,
-  "status": "Pendiente",
-  "attempts": 0,
+  "depends": "E1-05",
+  "expected": "5 pantallas con el estándar",
+  "evidence": "Vista previa correcta",
+  "limit": 60,
+  "status": "En curso",
+  "attempts": 1,
   "minutes": 0,
   "entrega": "E1",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-02",
-   "action": "Comparar la referencia con design/DISENO.md y design/tema.fx. Ajustar los valores del tema (colores, tamaños, fuentes) a los reales de la referencia. Completar la sección \"Versiones de control\" de DISENO.md",
-   "owner": "Agente",
-   "depends": "E1-01",
-   "expected": "Tema alineado con la referencia",
-   "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
-  {
-   "id": "E1-03",
-   "action": "Pegar el contenido de design/tema.fx en la propiedad Formulas del objeto App de PFA_Pilot_App",
-   "owner": "Agente",
-   "depends": "E1-02",
-   "expected": "Tema y menú disponibles en toda la app",
-   "evidence": "\"No formula errors\"; app guardada",
-   "limit": 20,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": false
-  },
-  {
-   "id": "E1-04",
-   "action": "Escribir design/yaml/encabezado.pa.yaml y design/yaml/titulo-pagina.pa.yaml según DISENO.md (encabezado con gallery horizontal sobre Nav). Crear con ellos una pantalla de prueba scrPlantilla pegando un bloque Screens:",
-   "owner": "Agente",
-   "depends": "E1-03",
-   "expected": "Plantilla funcionando",
-   "evidence": "Vista previa de scrPlantilla igual al estándar, en escritorio y teléfono",
-   "limit": 90,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": false
-  },
-  {
-   "id": "E1-05",
-   "action": "En My Day y Diagnostics: borrar el encabezado y el título viejos, pegar los bloques nuevos",
-   "owner": "Agente",
-   "depends": "E1-04",
-   "expected": "2 pantallas con el estándar",
-   "evidence": "Vista previa correcta; menú navega a las 7 pantallas",
-   "limit": 60,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": false
-  },
   {
    "id": "E1-06",
    "action": "Igual que E1-05 en Projects, Tasks y Review",
@@ -831,12 +767,12 @@ window.PFA_DATA = {
    "expected": "5 pantallas con el estándar",
    "evidence": "Vista previa correcta",
    "limit": 60,
-   "status": "Pendiente",
-   "attempts": 0,
+   "status": "En curso",
+   "attempts": 1,
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E1-07",
@@ -987,6 +923,66 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E2-08",
+   "action": "Cambiar el trigger de PFA_E2_LeerCarpetas a Recurrence diaria a las 4:00 a. m., zona Central Standard Time, y encender el flujo",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Detección diaria de carpetas nuevas",
+   "evidence": "Flujo encendido; \"Next run\" muestra 4:00 a. m. Central",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E2-09",
+   "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
+   "owner": "Agente",
+   "depends": "E2-07, E2-08",
+   "expected": "Versión publicada y controles probados",
+   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E2-10",
+   "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
+   "owner": "Oscar",
+   "depends": "E2-09",
+   "expected": "Proyectos reales definidos",
+   "evidence": "Oscar escribe \"E2 aceptada\"",
+   "limit": 0,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-01",
+   "action": "Confirmar que la carpeta Projects/PFA-Prueba tiene 5 correos enviados por Oscar a sí mismo, sin datos de clientes, y que está marcada como proyecto en la app",
+   "owner": "Oscar",
+   "depends": "E2-10",
+   "expected": "Carpeta de prueba lista",
+   "evidence": "Oscar confirma",
+   "limit": 0,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1129,6 +1125,62 @@ window.PFA_DATA = {
    "minutes": 10,
    "entrega": "E1",
    "fails": 0
+  },
+  {
+   "id": "E1-02",
+   "action": "Comparar la referencia con design/DISENO.md y design/tema.fx. Ajustar los valores del tema (colores, tamaños, fuentes) a los reales de la referencia. Completar la sección \"Versiones de control\" de DISENO.md",
+   "owner": "Agente",
+   "depends": "E1-01",
+   "expected": "Tema alineado con la referencia",
+   "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 6,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
+   "id": "E1-03",
+   "action": "Pegar el contenido de design/tema.fx en la propiedad Formulas del objeto App de PFA_Pilot_App",
+   "owner": "Agente",
+   "depends": "E1-02",
+   "expected": "Tema y menú disponibles en toda la app",
+   "evidence": "\"No formula errors\"; app guardada",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 2,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
+   "id": "E1-04",
+   "action": "Escribir design/yaml/encabezado.pa.yaml y design/yaml/titulo-pagina.pa.yaml según DISENO.md (encabezado con gallery horizontal sobre Nav). Crear con ellos una pantalla de prueba scrPlantilla pegando un bloque Screens:",
+   "owner": "Agente",
+   "depends": "E1-03",
+   "expected": "Plantilla funcionando",
+   "evidence": "Vista previa de scrPlantilla igual al estándar, en escritorio y teléfono",
+   "limit": 90,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 13,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
+   "id": "E1-05",
+   "action": "En My Day y Diagnostics: borrar el encabezado y el título viejos, pegar los bloques nuevos",
+   "owner": "Agente",
+   "depends": "E1-04",
+   "expected": "2 pantallas con el estándar",
+   "evidence": "Vista previa correcta; menú navega a las 7 pantallas",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 30,
+   "entrega": "E1",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1139,27 +1191,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 10,
+  "tasksDone": 14,
   "tasksTotal": 36,
   "entregasAccepted": 1,
   "entregasTotal": 11,
   "time": {
-   "prod": 54,
+   "prod": 105,
    "unprod": 0,
    "wait": 0,
-   "total": 54
+   "total": 105
   },
   "last24h": {
-   "prod": 54,
+   "prod": 105,
    "unprod": 0,
    "wait": 0,
-   "total": 54
+   "total": 105
   },
   "last7d": {
-   "prod": 54,
+   "prod": 105,
    "unprod": 0,
    "wait": 0,
-   "total": 54
+   "total": 105
   }
  },
  "days": [
@@ -1243,7 +1295,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 54,
+   "prod": 105,
    "unprod": 0,
    "wait": 0
   }
@@ -1265,6 +1317,20 @@ window.PFA_DATA = {
    "total": 30
   },
   {
+   "task": "E1-05",
+   "prod": 30,
+   "unprod": 0,
+   "wait": 0,
+   "total": 30
+  },
+  {
+   "task": "E1-04",
+   "prod": 13,
+   "unprod": 0,
+   "wait": 0,
+   "total": 13
+  },
+  {
    "task": "E1-01",
    "prod": 10,
    "unprod": 0,
@@ -1273,6 +1339,13 @@ window.PFA_DATA = {
   },
   {
    "task": "E0-06",
+   "prod": 6,
+   "unprod": 0,
+   "wait": 0,
+   "total": 6
+  },
+  {
+   "task": "E1-02",
    "prod": 6,
    "unprod": 0,
    "wait": 0,
@@ -1293,48 +1366,105 @@ window.PFA_DATA = {
    "total": 2
   },
   {
+   "task": "E1-03",
+   "prod": 2,
+   "unprod": 0,
+   "wait": 0,
+   "total": 2
+  },
+  {
    "task": "E0-03",
    "prod": 1,
    "unprod": 0,
    "wait": 0,
    "total": 1
-  },
-  {
-   "task": "E0-04",
-   "prod": 1,
-   "unprod": 0,
-   "wait": 0,
-   "total": 1
-  },
-  {
-   "task": "E0-09",
-   "prod": 1,
-   "unprod": 0,
-   "wait": 0,
-   "total": 1
-  },
-  {
-   "task": "E0-01",
-   "prod": 0,
-   "unprod": 0,
-   "wait": 0,
-   "total": 0
-  },
-  {
-   "task": "E0-02",
-   "prod": 0,
-   "unprod": 0,
-   "wait": 0,
-   "total": 0
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 54
+   "minutes": 105
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T12:11:00Z",
+   "minutes": 17,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Apliqué el estándar a My Day y Diagnostics y conservé Refresh",
+   "evidence": "Vista previa móvil y tableta; Refresh terminó; navegación a las 7 pantallas comprobada; No formula errors; guardada sin publicar"
+  },
+  {
+   "start": "2026-09-30T11:59:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Preparé bloques estándar para encabezados y títulos de My Day y Diagnostics",
+   "evidence": "Dos bloques YAML locales; aún falta aplicarlos y comprobar la vista previa en Studio"
+  },
+  {
+   "start": "2026-09-30T11:55:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Inspeccioné la estructura de My Day antes de sustituir el encabezado",
+   "evidence": "Confirmé que RefreshDashboardButton actualiza las listas; conservarlo al aplicar el estándar"
+  },
+  {
+   "start": "2026-09-30T11:42:00Z",
+   "minutes": 13,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-04",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Creé scrPlantilla con header, título y tarjeta de muestra; amplié el menú para evitar cortes",
+   "evidence": "Vista previa correcta en escritorio y iPhone 390x844; sin errores de fórmula; app guardada sin publicar. Power Apps asignó sufijo a un control que colisiona con otra pantalla"
+  },
+  {
+   "start": "2026-09-30T11:40:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Tema y navegación pegados en App.Formulas",
+   "evidence": "Studio mostró No formula errors present y el guardado terminó"
+  },
+  {
+   "start": "2026-09-30T11:28:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-02",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tema y versiones alineados con la referencia",
+   "evidence": "Colores, tamaños y bordes actualizados; controles con versión documentados; diferencias entre botones separados de referencia y gallery de Nav registradas"
+  },
   {
    "start": "2026-09-30T11:18:00Z",
    "minutes": 10,
@@ -1451,71 +1581,6 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Import-Csv validó las tres filas E0-01 a E0-03 y las 11 columnas",
    "evidence": "5 filas totales legibles; 3 tareas E0 verificadas con horas presentes"
-  },
-  {
-   "start": "2026-09-30T06:25:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-06",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "GitHub CLI y WinGet/App Installer no están instalados; se solicitan instalación y autenticación supervisadas",
-   "evidence": "gh --version y winget no están disponibles; Get-AppxPackage confirmó que falta App Installer"
-  },
-  {
-   "start": "2026-09-30T06:23:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-04",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "CSV legible y con las tres tareas requeridas; Excel no pudo iniciarse desde esta sesión",
-   "evidence": "Import-Csv correcto; apertura automatizada de Excel falló; requiere confirmación en la aplicación"
-  },
-  {
-   "start": "2026-09-30T06:22:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-03",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Aviso de congelado agregado a los cuatro documentos",
-   "evidence": "Los cuatro empiezan con el texto aprobado"
-  },
-  {
-   "start": "2026-09-30T06:22:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-02",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Verificación de los archivos requeridos para E0",
-   "evidence": "AGENTS.md, control/, design/, dashboard/, build_dashboard.py y publish_dashboard.ps1 existen"
-  },
-  {
-   "start": "2026-09-30T06:21:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-01",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Commit local de línea base con el estado completo del repositorio",
-   "evidence": "79f0f54; 207 archivos; árbol limpio tras el commit"
   }
  ],
  "ideas": [
