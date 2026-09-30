@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T07:43:38.503793Z",
+ "generatedUtc": "2026-09-30T07:44:06.411151Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -12,7 +12,7 @@ window.PFA_DATA = {
   "needsOscar": [
    {
     "ref": "E0-09",
-    "text": "abre https://oscarmarquez83.github.io/pfa-tablero/ en el celular y en el computador de Puffer. En cada uno, toca **Responder** en un pendiente y envía el issue que se abre. Cuando hayas comprobado ambos equipos, escríbeme «E0 aceptada»."
+    "text": "abre https://oscarmarquez83.github.io/pfa-tablero/ en el celular y en el computador de Puffer. Comprueba que el tablero carga en ambos equipos. Después, en uno de ellos, toca **Responder** en un pendiente y envía el issue que se abre. Cuando hayas comprobado ambos equipos, escríbeme «E0 aceptada»."
    }
   ],
   "blockers": [],
