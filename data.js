@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T07:41:52.158561Z",
+ "generatedUtc": "2026-09-30T07:42:35.608549Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -13,10 +13,6 @@ window.PFA_DATA = {
    {
     "ref": "E0-09",
     "text": "abre https://oscarmarquez83.github.io/pfa-tablero/ en el celular y en el computador de Puffer. En cada uno, toca **Responder** en un pendiente y envía el issue que se abre. Cuando hayas comprobado ambos equipos, escríbeme «E0 aceptada»."
-   },
-   {
-    "ref": "E3-01",
-    "text": "confirmar que Projects/PFA-Prueba tiene 5 correos de prueba."
    }
   ],
   "blockers": [],
