@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T22:03:35.136309Z",
+ "generatedUtc": "2026-09-30T22:54:19.933269Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 (E1-08 pausada tras dos fallos de navegación en Edge)",
+  "updated": "2026-09-30 22:44 UTC (avance local de E1-05 y especificación del menú vertical)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "recargar en Edge la app publicada de PFA_Pilot_App y avisarme cuando muestre My Day; continuaré las rutas del menú. No modificaré la galería de Configuration hasta E2.",
+  "nextAction": "completar E1-05 en Power Apps Studio, sacar Refresh del encabezado de My Day, borrar cualquier encabezado duplicado, y aplicar E1-10. Tras dos intentos, la automatización no pudo leer el estado actual de Power Apps. Necesito que Oscar abra PFA_Pilot_App en Studio, seleccione My Day y escriba lista; no tiene que comprobar archivos ni probar propiedades. La publicación del tablero no quedó confirmada: el script falló al escribir su log; no lo reintenté.",
   "needsOscar": [
    {
-    "ref": "E1-08",
-    "text": "en Edge, recarga la pestaña PFA_Pilot_App - Power Apps que muestra la app publicada. Espera a que aparezca My Day y escríbeme lista. Si la pestaña no responde, cierra y vuelve a abrir Edge; luego abre el tablero o la app publicada y dime lista. No hace falta que pruebes los botones."
+    "ref": "E1-05",
+    "text": "abre Power Apps Studio, entra a PFA_Pilot_App, selecciona la pantalla My Day en el árbol y déjala visible. Escríbeme lista. No cambies controles ni revises archivos. Con la pestaña abierta podré inspeccionar y corregir el árbol desde aquí."
    }
   ],
   "blockers": [],
@@ -50,15 +50,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 7,
-   "total": 9,
+   "done": 6,
+   "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 136,
+    "prod": 140,
     "unprod": 0,
     "wait": 4,
-    "total": 140
+    "total": 144
    }
   },
   {
@@ -410,17 +410,18 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-05",
-    "action": "En My Day y Diagnostics: borrar el encabezado y el título viejos, pegar los bloques nuevos",
+    "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
     "owner": "Agente",
     "depends": "E1-04",
-    "expected": "2 pantallas con el estándar",
-    "evidence": "Vista previa correcta; menú navega a las 7 pantallas",
+    "expected": "2 pantallas con un solo encabezado estándar",
+    "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
     "limit": 60,
-    "status": "Hecha",
-    "attempts": 3,
-    "minutes": 30,
+    "status": "En curso",
+    "attempts": 4,
+    "minutes": 34,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "ready": true
    },
    {
     "id": "E1-06",
@@ -452,18 +453,18 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-08",
-    "action": "Revisar las 7 pantallas en vista previa de escritorio y teléfono. Guardar y publicar. En la app publicada, tocar los 7 botones del menú desde 2 pantallas distintas",
+    "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, tocar el menú desde 2 pantallas distintas",
     "owner": "Agente",
-    "depends": "E1-07",
+    "depends": "E1-05, E1-07, E1-10",
     "expected": "Versión publicada y menú probado",
-    "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
-    "limit": 30,
+    "evidence": "Número de versión en worklog; las 7 opciones navegan a su pantalla y marcan el activo correcto en cada formato",
+    "limit": 45,
     "status": "Bloqueada",
     "attempts": 2,
     "minutes": 22,
     "entrega": "E1",
     "fails": 0,
-    "ready": true
+    "ready": false
    },
    {
     "id": "E1-09",
@@ -479,6 +480,21 @@ window.PFA_DATA = {
     "entrega": "E1",
     "fails": 0,
     "ready": false
+   },
+   {
+    "id": "E1-10",
+    "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
+    "owner": "Agente",
+    "depends": "E1-07",
+    "expected": "Navegación usable sin barra horizontal en formato vertical",
+    "evidence": "YAML común aplicado en las 7 pantallas; vista previa confirma selector en vertical y botones en horizontal; las 7 opciones navegan",
+    "limit": 60,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E1",
+    "fails": 0,
+    "ready": true
    }
   ],
   "E2": [
@@ -756,22 +772,51 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "E1-05",
+  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
+  "owner": "Agente",
+  "depends": "E1-04",
+  "expected": "2 pantallas con un solo encabezado estándar",
+  "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
+  "limit": 60,
+  "status": "En curso",
+  "attempts": 4,
+  "minutes": 34,
+  "entrega": "E1",
+  "fails": 0,
+  "ready": true
+ },
  "upcoming": [
   {
-   "id": "E1-08",
-   "action": "Revisar las 7 pantallas en vista previa de escritorio y teléfono. Guardar y publicar. En la app publicada, tocar los 7 botones del menú desde 2 pantallas distintas",
+   "id": "E1-05",
+   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
    "owner": "Agente",
-   "depends": "E1-07",
+   "depends": "E1-04",
+   "expected": "2 pantallas con un solo encabezado estándar",
+   "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
+   "limit": 60,
+   "status": "En curso",
+   "attempts": 4,
+   "minutes": 34,
+   "entrega": "E1",
+   "fails": 0,
+   "ready": true
+  },
+  {
+   "id": "E1-08",
+   "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, tocar el menú desde 2 pantallas distintas",
+   "owner": "Agente",
+   "depends": "E1-05, E1-07, E1-10",
    "expected": "Versión publicada y menú probado",
-   "evidence": "Número de versión en worklog; los 7 botones navegan a su pantalla y marcan el activo correcto",
-   "limit": 30,
+   "evidence": "Número de versión en worklog; las 7 opciones navegan a su pantalla y marcan el activo correcto en cada formato",
+   "limit": 45,
    "status": "Bloqueada",
    "attempts": 2,
    "minutes": 22,
    "entrega": "E1",
    "fails": 0,
-   "ready": true
+   "ready": false
   },
   {
    "id": "E1-09",
@@ -787,6 +832,21 @@ window.PFA_DATA = {
    "entrega": "E1",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E1-10",
+   "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
+   "owner": "Agente",
+   "depends": "E1-07",
+   "expected": "Navegación usable sin barra horizontal en formato vertical",
+   "evidence": "YAML común aplicado en las 7 pantallas; vista previa confirma selector en vertical y botones en horizontal; las 7 opciones navegan",
+   "limit": 60,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E1",
+   "fails": 0,
+   "ready": true
   },
   {
    "id": "E2-01",
@@ -946,36 +1006,6 @@ window.PFA_DATA = {
    "expected": "Carpeta de prueba lista",
    "evidence": "Oscar confirma",
    "limit": 0,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E3",
-   "fails": 0,
-   "ready": false
-  },
-  {
-   "id": "E3-02",
-   "action": "En List settings de PFA_Messages: dejar como obligatorias solo InternetMessageId, OutlookMessageId, Subject, Sender, ReceivedSentUtc y FolderId. Anotar en worklog las columnas cambiadas",
-   "owner": "Agente",
-   "depends": "E2-10",
-   "expected": "La lista acepta un correo con 6 campos",
-   "evidence": "Columnas cambiadas anotadas en worklog",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E3",
-   "fails": 0,
-   "ready": false
-  },
-  {
-   "id": "E3-03",
-   "action": "Crear el flujo PFA_E3_CargarCorreos. Trigger manual con entrada opcional SoloCarpeta (texto). Pasos: Get items de PFA_MailFolders con Included = Sí (o solo la carpeta indicada) → por cada carpeta, Get emails (V3) de los últimos 30 días, Top 50, sin adjuntos → por cada correo, Get items en PFA_Messages por InternetMessageId → Create item o Update item. Llenar las 6 columnas obligatorias más OutlookWebLink y ObservedFolderPath. Ninguna acción que modifique el buzón (H-03)",
-   "owner": "Agente",
-   "depends": "E3-01, E3-02",
-   "expected": "Flujo guardado",
-   "evidence": "Flujo guardado; Flow Checker 0 errores",
-   "limit": 90,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1168,20 +1198,6 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
-   "id": "E1-05",
-   "action": "En My Day y Diagnostics: borrar el encabezado y el título viejos, pegar los bloques nuevos",
-   "owner": "Agente",
-   "depends": "E1-04",
-   "expected": "2 pantallas con el estándar",
-   "evidence": "Vista previa correcta; menú navega a las 7 pantallas",
-   "limit": 60,
-   "status": "Hecha",
-   "attempts": 3,
-   "minutes": 30,
-   "entrega": "E1",
-   "fails": 0
-  },
-  {
    "id": "E1-06",
    "action": "Igual que E1-05 en Projects, Tasks y Review",
    "owner": "Agente",
@@ -1218,27 +1234,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 16,
-  "tasksTotal": 36,
+  "tasksDone": 15,
+  "tasksTotal": 37,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 198,
+   "prod": 202,
    "unprod": 0,
    "wait": 6,
-   "total": 204
+   "total": 208
   },
   "last24h": {
-   "prod": 198,
+   "prod": 202,
    "unprod": 0,
    "wait": 6,
-   "total": 204
+   "total": 208
   },
   "last7d": {
-   "prod": 198,
+   "prod": 202,
    "unprod": 0,
    "wait": 6,
-   "total": 204
+   "total": 208
   }
  },
  "days": [
@@ -1322,7 +1338,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-09-30",
-   "prod": 198,
+   "prod": 202,
    "unprod": 0,
    "wait": 6
   }
@@ -1354,10 +1370,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E1-05",
-   "prod": 30,
+   "prod": 34,
    "unprod": 0,
    "wait": 0,
-   "total": 30
+   "total": 34
   },
   {
    "task": "E1-07",
@@ -1419,10 +1435,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 204
+   "minutes": 208
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T22:40:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Separé Refresh del encabezado y preparé el selector de navegación para formato vertical.",
+   "evidence": "Un encabezado y Refresh fuera de él en YAML; selector común y DISENO actualizados. Falta aplicar y validar en Studio; dos lecturas del navegador expiraron. La publicación del tablero falló al escribir el log y no se reintentó."
+  },
   {
    "start": "2026-09-30T22:00:00Z",
    "minutes": 0,
@@ -1604,19 +1633,6 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Creé scrPlantilla con header, título y tarjeta de muestra; amplié el menú para evitar cortes",
    "evidence": "Vista previa correcta en escritorio y iPhone 390x844; sin errores de fórmula; app guardada sin publicar. Power Apps asignó sufijo a un control que colisiona con otra pantalla"
-  },
-  {
-   "start": "2026-09-30T11:40:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-03",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "FORMULA_PA",
-   "summary": "Tema y navegación pegados en App.Formulas",
-   "evidence": "Studio mostró No formula errors present y el guardado terminó"
   }
  ],
  "ideas": [
@@ -1682,6 +1698,13 @@ window.PFA_DATA = {
    "found": "Incidente INC-01",
    "target": "E2",
    "status": "Abierto"
+  },
+  {
+   "date": "2026-09-30",
+   "text": "En teléfono e iPad vertical, reemplazar la navegación horizontal desplazable por un botón que abra una lista vertical seleccionable; mantener botones en formato horizontal",
+   "found": "Oscar",
+   "target": "E1-10",
+   "status": "Incorporado en E1-10"
   }
  ]
 };
