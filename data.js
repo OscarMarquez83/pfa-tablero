@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T19:35:52.749240Z",
+ "generatedUtc": "2026-09-30T19:37:54.901657Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -217,8 +217,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 59,
     "unprod": 0,
-    "wait": 0,
-    "total": 59
+    "wait": 2,
+    "total": 61
    }
   }
  ],
@@ -1233,20 +1233,20 @@ window.PFA_DATA = {
   "time": {
    "prod": 191,
    "unprod": 0,
-   "wait": 4,
-   "total": 195
+   "wait": 6,
+   "total": 197
   },
   "last24h": {
    "prod": 191,
    "unprod": 0,
-   "wait": 4,
-   "total": 195
+   "wait": 6,
+   "total": 197
   },
   "last7d": {
    "prod": 191,
    "unprod": 0,
-   "wait": 4,
-   "total": 195
+   "wait": 6,
+   "total": 197
   }
  },
  "days": [
@@ -1332,7 +1332,7 @@ window.PFA_DATA = {
    "date": "2026-09-30",
    "prod": 191,
    "unprod": 0,
-   "wait": 4
+   "wait": 6
   }
  ],
  "categories": [
@@ -1346,6 +1346,10 @@ window.PFA_DATA = {
   {
    "category": "AUTH",
    "minutes": 4
+  },
+  {
+   "category": "NAVEGADOR",
+   "minutes": 2
   }
  ],
  "topTasks": [
@@ -1395,8 +1399,8 @@ window.PFA_DATA = {
    "task": "T-03",
    "prod": 11,
    "unprod": 0,
-   "wait": 0,
-   "total": 11
+   "wait": 2,
+   "total": 13
   },
   {
    "task": "E1-01",
@@ -1423,10 +1427,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 195
+   "minutes": 197
   }
  ],
  "recent": [
+  {
+   "start": "2026-09-30T19:34:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-03",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Esperé a que GitHub Pages sirviera el último data.js después de que el build reportara estado built",
+   "evidence": "El data.js con T-03 de 11 min y el pendiente E1-08 respondió HTTP 200"
+  },
   {
    "start": "2026-09-30T19:23:00Z",
    "minutes": 11,
@@ -1608,19 +1625,6 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Bloques de referencia copiados y versiones anotadas",
    "evidence": "2 archivos guardados desde View code; 26 controles con versión identificados; anotaciones comprobadas"
-  },
-  {
-   "start": "2026-09-30T10:56:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E0",
-   "task": "E0-09",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Issue de aceptación procesado; E0 aceptada",
-   "evidence": "Issue 1 confirmado por la cuenta autora; Oscar confirmó por chat la prueba en ambos equipos; decisión registrada y issue cerrado"
   }
  ],
  "ideas": [
