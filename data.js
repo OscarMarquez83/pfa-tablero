@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-09-30T10:59:11.453750Z",
+ "generatedUtc": "2026-09-30T11:16:48.024370Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -15,11 +15,11 @@ window.PFA_DATA = {
  },
  "revision": {
   "light": "ROJO",
-  "date": "2026-09-30 10:59 UTC",
+  "date": "2026-09-30 11:16 UTC",
   "summary": [
    "En las últimas 24 horas se registran 44 minutos; 44 fueron productivos (100 %).",
-   "E0 quedó aceptada, con 9 de 9 tareas hechas; E1 está activa, con 0 de 9 tareas hechas.",
-   "El issue #1 se registró y cerró; su título dice «E0 Aceptada», pero el campo «Mi respuesta» quedó vacío. Oscar confirmó la aceptación en el chat."
+   "E0 quedó aceptada con 9 de 9 tareas hechas; E1 está activa con 0 de 9 tareas hechas.",
+   "El issue #1 se registró y cerró; el título dice «E0 Aceptada», el campo de respuesta quedó vacío y Oscar confirmó la aceptación en el chat."
   ]
  },
  "activeEntrega": "E1",
