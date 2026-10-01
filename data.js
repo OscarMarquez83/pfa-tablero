@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:22:13.792203Z",
+ "generatedUtc": "2026-10-01T15:28:13.826230Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:04 UTC",
+  "updated": "2026-10-01 15:27 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-02, intento 10: consultar Microsoft 365 Copilot Chat con la plantilla anti-bucle cuando la extensión Edge vuelva a estar disponible; luego corregir la referencia según la respuesta y Flow Checker.",
+  "nextAction": "E2-02, intento 10: revisar Edge y el navegador integrado de Codex, anotar ambos estados y consultar Microsoft 365 Copilot Chat antes de corregir la referencia.",
   "needsOscar": [
    {
     "ref": "T-14",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T15:04:21.748025Z"
+  "fileUtc": "2026-10-01T15:27:23.837986Z"
  },
  "revision": {
   "light": "ROJO",
@@ -358,10 +358,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 142,
+    "prod": 165,
     "unprod": 2,
     "wait": 8,
-    "total": 152
+    "total": 175
    }
   }
  ],
@@ -1729,22 +1729,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 429,
+   "prod": 452,
    "unprod": 18,
    "wait": 17,
-   "total": 464
+   "total": 487
   },
   "last24h": {
-   "prod": 256,
+   "prod": 279,
    "unprod": 18,
    "wait": 13,
-   "total": 287
+   "total": 310
   },
   "last7d": {
-   "prod": 429,
+   "prod": 452,
    "unprod": 18,
    "wait": 17,
-   "total": 464
+   "total": 487
   },
   "product": {
    "prod": 287,
@@ -1753,10 +1753,10 @@ window.PFA_DATA = {
    "total": 312
   },
   "support": {
-   "prod": 142,
+   "prod": 165,
    "unprod": 2,
    "wait": 8,
-   "total": 152
+   "total": 175
   }
  },
  "days": [
@@ -1840,7 +1840,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 227,
+   "prod": 250,
    "unprod": 18,
    "wait": 11
   }
@@ -1925,6 +1925,13 @@ window.PFA_DATA = {
    "total": 24
   },
   {
+   "task": "T-15",
+   "prod": 23,
+   "unprod": 0,
+   "wait": 0,
+   "total": 23
+  },
+  {
    "task": "T-04",
    "prod": 19,
    "unprod": 0,
@@ -1944,22 +1951,28 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 14
-  },
-  {
-   "task": "T-10",
-   "prod": 8,
-   "unprod": 0,
-   "wait": 6,
-   "total": 14
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 464
+   "minutes": 487
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T15:04:00Z",
+   "minutes": 23,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-15",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Registré huellas por línea, regla de recuperación de navegador y criterio de auditoría",
+   "evidence": "AGENTS.md completo: 23807 bytes; después de cambios y lectura completa: 4FD52CD8; STATUS con Desarrollo pendiente y Entorno 4FD52CD8; KF-11 y REVISOR verificados"
+  },
   {
    "start": "2026-10-01T14:58:00Z",
    "minutes": 6,
@@ -2076,22 +2089,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Comprobé la publicación después de seis minutos",
    "evidence": "Pág. publicada: Último reporte del agente hace 7 min; status.fileUtc=2026-10-01T11:23:36.314986Z"
-  },
-  {
-   "start": "2026-10-01T11:23:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-01",
-   "attempt": 3,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "ESQUEMA_LISTA",
-   "summary": "MailFolders: Title=text; OutlookFolderId=text; FolderName=text; DisplayedPath=text; ParentFolderId=text; FolderType=text; Included=text; ProjectId=text; LastEnumeratedUtc=text; LastSuccessfulWatermarkUtc=text; MailboxKey=text; ReviewStatus=Choice; ConsecutiveFailureCount=Number; LastAttemptedWatermarkUtc=DateTime; IncludeInInitialLoad=YesNo; IncludeInIncremental=YesNo; Decision=text; Modified=DateTime; Created=DateTime; CreatedBy=PersonGroup; ModifiedBy=PersonGroup. Projects: Title=text; OfficialName=text; ProjectId=text; PrimaryOutlookFolderId=text; PrimaryOutlookFolderPath=text; ShortDescription=MultipleLines; StartDate=DateTime; CloseDate=DateTime; SourceConfidence=Number; CreatedUtc=DateTime; ConfirmedUtc=DateTime; Status=text; CreatedBy=PersonGroup; ConfirmedBy=PersonGroup; Modified=DateTime; Created=DateTime; Created By=PersonGroup; Modified By=PersonGroup",
-   "evidence": "List settings muestran solo requeridas OutlookFolderId, FolderName, ProjectId y OfficialName; Decision es texto opcional con valor predeterminado Nueva; ParentFolderId y DisplayedPath existen"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T15:04:00Z",
+   "minutes": 23,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-15",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Registré huellas por línea, regla de recuperación de navegador y criterio de auditoría",
+   "evidence": "AGENTS.md completo: 23807 bytes; después de cambios y lectura completa: 4FD52CD8; STATUS con Desarrollo pendiente y Entorno 4FD52CD8; KF-11 y REVISOR verificados"
+  },
   {
    "start": "2026-10-01T14:58:00Z",
    "minutes": 6,
