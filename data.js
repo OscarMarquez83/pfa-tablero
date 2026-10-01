@@ -1,15 +1,19 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T19:13:15.126079Z",
+ "generatedUtc": "2026-10-01T19:20:42.565141Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 19:12 UTC",
+  "updated": "2026-10-01 19:20 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "descargar T-03-idea-SKILL.md, instalarla y aplicar los cambios aprobados.",
+  "nextAction": "esperar decisión de Oscar sobre HZ-11 antes de cambiar la navegación de E1.",
   "needsOscar": [
+   {
+    "ref": "HZ-11",
+    "text": "aprobar la mini-spec y decidir si se sustituye D-018 por menú vertical desplazable o se mantiene el selector desplegable aprobado."
+   },
    {
     "ref": "T-18",
     "text": "crea un issue de prueba desde el tablero; comprobaré que PFA Despertador lo registre, cierre y agregue al worklog dentro de 30 minutos."
@@ -25,15 +29,14 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-21, intento 1; inicio 2026-10-01 19:12 UTC. Instalar sin cambios el archivo de Drive, agregar las reglas pedidas y registrar el hallazgo del menú. Cierre: hash idéntico, .gitkeep y las 3 modificaciones verificadas.",
-   "El pedido la llama T-03, pero T-03 ya está Hecha; uso el siguiente ID libre T-21."
+   "T-21, intento 1: completada; skill instalada idéntica a Drive (SHA-256 4C7403D5…), tres reglas actualizadas, mini-spec y HZ-11 registrados. El ID T-03 ya estaba Hecha; se usó T-21. Publicador regeneró data.js pero falló al escribir publish.log (KF-H04); publicación remota sin confirmar."
   ],
-  "fileUtc": "2026-10-01T19:12:24.160721Z",
+  "fileUtc": "2026-10-01T19:20:25.808606Z",
   "ruleFootprints": {
-   "current": "7BD6C096",
+   "current": "A4E37120",
    "lines": {
     "Desarrollo": "4FD52CD8",
-    "Entorno": "7BD6C096"
+    "Entorno": "A4E37120"
    }
   }
  },
@@ -367,15 +370,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 17,
+   "done": 18,
    "total": 21,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 233,
+    "prod": 241,
     "unprod": 2,
     "wait": 8,
-    "total": 243
+    "total": 251
    }
   }
  ],
@@ -1269,16 +1272,15 @@ window.PFA_DATA = {
     "action": "Instalar la skill idea y registrar el uso en rediseños y hallazgos",
     "owner": "Agente",
     "depends": "—",
-    "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; HZ del menú registrado",
-    "evidence": "Hash del archivo coincide; control/specs/.gitkeep existe; tres líneas verificadas; HZ asignado a E1",
+    "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
+    "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E1",
     "limit": 20,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-01T19:20:00Z"
    }
   ]
  },
@@ -2095,6 +2097,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T18:59:00Z"
+  },
+  {
+   "id": "T-21",
+   "action": "Instalar la skill idea y registrar el uso en rediseños y hallazgos",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
+   "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E1",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 8,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T19:20:00Z"
   }
  ],
  "alerts": [
@@ -2102,30 +2119,35 @@ window.PFA_DATA = {
    "task": "E2-02",
    "reason": "Bloqueada: espera decisión de Oscar",
    "level": "critical"
+  },
+  {
+   "task": "Hallazgo",
+   "reason": "Sin entrega destino: Oscar reporta discrepancia: DISENO §4 menú desplazable frente a powerapps-yaml paso 5 desp",
+   "level": "warning"
   }
  ],
  "kpi": {
-  "tasksDone": 37,
+  "tasksDone": 38,
   "tasksTotal": 58,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 520,
+   "prod": 528,
    "unprod": 28,
    "wait": 17,
-   "total": 565
+   "total": 573
   },
   "last24h": {
-   "prod": 347,
+   "prod": 348,
    "unprod": 28,
    "wait": 13,
-   "total": 388
+   "total": 389
   },
   "last7d": {
-   "prod": 520,
+   "prod": 528,
    "unprod": 28,
    "wait": 17,
-   "total": 565
+   "total": 573
   },
   "product": {
    "prod": 287,
@@ -2134,10 +2156,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 233,
+   "prod": 241,
    "unprod": 2,
    "wait": 8,
-   "total": 243
+   "total": 251
   }
  },
  "days": [
@@ -2221,7 +2243,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 318,
+   "prod": 326,
    "unprod": 28,
    "wait": 11
   }
@@ -2337,7 +2359,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 545
+   "minutes": 553
   },
   {
    "account": "empresa",
@@ -2345,6 +2367,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T19:12:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-21",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Skill idea y regla HZ-11 instaladas",
+   "evidence": "Auditoría 5/5 OK; SHA-256 4C7403D5; gitkeep, HZ-11 y 3 reglas verificados"
+  },
   {
    "start": "2026-10-01T18:58:00Z",
    "minutes": 1,
@@ -2461,22 +2496,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Restauré URI completo y cambié referencia al nombre interno del paso; Checker mantiene referencia inválida; no pude consultar Copilot por extensión Edge inaccesible",
    "evidence": "Flow Checker: 1 error de referencia y advertencia de respuesta; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/power-automate/flows-designer"
-  },
-  {
-   "start": "2026-10-01T14:34:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 8,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Agregué respuesta de texto al flow; el diseñador no registra el URI dinámico como campo obligatorio aunque muestre el texto",
-   "evidence": "Flow Checker: 1 error Se requiere URI; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; salida foldersJson visible en diseñador"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T19:12:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-21",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Skill idea y regla HZ-11 instaladas",
+   "evidence": "Auditoría 5/5 OK; SHA-256 4C7403D5; gitkeep, HZ-11 y 3 reglas verificados"
+  },
   {
    "start": "2026-10-01T18:58:00Z",
    "minutes": 1,
@@ -3481,6 +3516,14 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "E1-10",
    "status": "Incorporado en E1-10"
+  },
+  {
+   "id": "HZ-11",
+   "date": "2026-10-01",
+   "text": "Oscar reporta discrepancia: DISENO §4 menú desplazable frente a powerapps-yaml paso 5 desplegable; copias locales y D-018 indican desplegable. Recomienda desplazable por D-012; mini-spec control/specs/HZ-11.md",
+   "found": "Oscar",
+   "target": "E1",
+   "status": "Por decidir"
   }
  ]
 };
