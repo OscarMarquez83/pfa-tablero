@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T04:31:59.457141Z",
+ "generatedUtc": "2026-10-01T04:32:55.040807Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 04:31 UTC",
+  "updated": "2026-10-01 04:32 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "E1-09: Oscar recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos. E1-05 ya figura Hecha.",
   "needsOscar": [
@@ -342,10 +342,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 97,
+    "prod": 98,
     "unprod": 2,
     "wait": 2,
-    "total": 101
+    "total": 102
    }
   }
  ],
@@ -1004,7 +1004,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 9,
+    "minutes": 10,
     "entrega": "T",
     "fails": 0
    }
@@ -1599,7 +1599,7 @@ window.PFA_DATA = {
    "limit": 30,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 9,
+   "minutes": 10,
    "entrega": "T",
    "fails": 0
   }
@@ -1611,22 +1611,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 270,
+   "prod": 271,
    "unprod": 2,
    "wait": 6,
-   "total": 278
+   "total": 279
   },
   "last24h": {
-   "prod": 270,
+   "prod": 271,
    "unprod": 2,
    "wait": 6,
-   "total": 278
+   "total": 279
   },
   "last7d": {
-   "prod": 270,
+   "prod": 271,
    "unprod": 2,
    "wait": 6,
-   "total": 278
+   "total": 279
   },
   "product": {
    "prod": 173,
@@ -1635,10 +1635,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 97,
+   "prod": 98,
    "unprod": 2,
    "wait": 2,
-   "total": 101
+   "total": 102
   }
  },
  "days": [
@@ -1722,7 +1722,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 68,
+   "prod": 69,
    "unprod": 2,
    "wait": 0
   }
@@ -1824,13 +1824,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 278
+   "minutes": 279
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T04:22:00Z",
-   "minutes": 9,
+   "minutes": 10,
    "account": "personal",
    "entrega": "T",
    "task": "T-08",
@@ -1962,7 +1962,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T04:22:00Z",
-   "minutes": 9,
+   "minutes": 10,
    "account": "personal",
    "entrega": "T",
    "task": "T-08",
