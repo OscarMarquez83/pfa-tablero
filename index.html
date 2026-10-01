@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PFA · Avance</title>
-<!-- Diseño base: Claude. Excepción D-029: cambios puntuales de T-16. Los datos vienen de data.js. -->
+<!-- Diseño base: Claude. Excepciones D-029 y D-030: ajustes acotados T-16/T-17. Los datos vienen de data.js. -->
 <style>
 :root {
   color-scheme: light;
@@ -91,7 +91,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 
 /* Ruta */
 .road { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; }
-.stage { border-radius: 10px; padding: 10px; background: var(--surface-2); cursor: pointer; border: 2px solid transparent; text-align: left; font: inherit; color: inherit; min-width: 0; }
+.stage { border-radius: 10px; padding: 10px; background: var(--surface-2); border: 2px solid transparent; text-align: left; font: inherit; color: inherit; min-width: 0; }
 .stage:hover { border-color: var(--ring); }
 .stage.sel { border-color: var(--accent); }
 .stage.active { background: var(--accent-soft); }
@@ -112,6 +112,10 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .task-scroll { max-width: 100%; overflow-x: hidden; }
 .task-closed { margin-top: 10px; border-top: 1px solid var(--grid); padding-top: 8px; }
 .task-closed > summary { color: var(--muted); font-size: 12px; cursor: pointer; }
+.task-delivery + .task-delivery { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--grid); }
+.task-delivery-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0 0 8px; }
+.task-delivery-head h3 { margin: 0; font-size: 14px; font-weight: 650; }
+.task-delivery-head .hint { flex: 0 0 auto; }
 .footprints { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 10px; padding: 7px 9px; border-radius: 8px; background: var(--surface-2); color: var(--ink-2); font-size: 11px; }
 .footprints b { font-variant-numeric: tabular-nums; }
 .footprints .match { color: var(--good-ink); }
@@ -289,7 +293,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   <section class="kpis" id="kpis"></section>
 
   <section class="card">
-    <h2>Ruta de entregas <span class="hint">Toca una entrega para ver sus tareas</span></h2>
+    <h2>Avance por entrega <span class="hint">Tareas E0–E10 y línea T visibles abajo</span></h2>
     <div class="road" id="road"></div>
   </section>
 
@@ -488,54 +492,33 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   });
 
   // ---------- Ruta ----------
-  var selected = active.id;
   $("road").style.setProperty("--n", D.entregas.length);
   function drawRoad() {
     $("road").innerHTML = D.entregas.map(function (e) {
       var accepted = /aceptada/i.test(e.status);
-      var cls = "stage" + (e.active ? " active" : "") + (e.id === selected ? " sel" : "") + (accepted ? " accepted" : "") + (!e.detailed ? " undetailed" : "");
+      var cls = "stage" + (e.active ? " active sel" : "") + (accepted ? " accepted" : "") + (!e.detailed ? " undetailed" : "");
       var p = accepted ? 100 : pct(e.done, e.total);
       var foot = accepted ? "Aceptada" : (e.detailed ? e.done + "/" + e.total + " · " + e.status : "Sin detallar");
-      return '<button type="button" class="' + cls + '" data-id="' + esc(e.id) + '"><div class="sid">' + esc(e.id) +
+      return '<div class="' + cls + '" data-id="' + esc(e.id) + '"><div class="sid">' + esc(e.id) +
         (e.active ? '<span class="tag-now">Ahora</span>' : (accepted ? '<span style="color:var(--good-ink)">✓</span>' : "")) +
-        '</div><div class="sgoal">' + esc(e.goal) + '</div><div class="meter"><i style="width:' + p + '%"></i></div><div class="sfoot">' + esc(foot) + "</div></button>";
+        '</div><div class="sgoal">' + esc(e.goal) + '</div><div class="meter"><i style="width:' + p + '%"></i></div><div class="sfoot">' + esc(foot) + "</div></div>";
     }).join("");
-    Array.prototype.forEach.call($("road").querySelectorAll(".stage"), function (b) {
-      b.onclick = function () { selected = b.getAttribute("data-id"); drawRoad(); drawTasks(); };
-    });
   }
 
   // ---------- Tareas ----------
   function drawTasks() {
-    var e = ENT[selected] || {};
-    var tasks = D.tasksByEntrega[selected] || [];
     var statusOrder = { "reabierta": 0, "en curso": 1, "bloqueada": 2, "por validar": 3, "pendiente": 4 };
     function idOrder(a, b) {
       var ma = String(a.id).match(/^(.*?)-(\d+)$/), mb = String(b.id).match(/^(.*?)-(\d+)$/);
       if (ma && mb && ma[1] === mb[1]) return Number(ma[2]) - Number(mb[2]);
       return String(a.id).localeCompare(String(b.id));
     }
-    var openTasks = tasks.filter(function (t) { return !/^(hecha|cancelada)$/i.test(t.status); }).sort(function (a, b) {
-      var sa = statusOrder[String(a.status).toLowerCase()], sb = statusOrder[String(b.status).toLowerCase()];
-      sa = sa == null ? 5 : sa; sb = sb == null ? 5 : sb;
-      return sa - sb || idOrder(a, b);
-    });
-    var closedTasks = tasks.filter(function (t) { return /^(hecha|cancelada)$/i.test(t.status); }).sort(function (a, b) {
-      var da = Date.parse(a.lastActivity || "") || 0, db = Date.parse(b.lastActivity || "") || 0;
-      return db - da || -idOrder(a, b);
-    });
-    $("tasks-title").textContent = (e.id || "") + (e.title ? " · " + e.title : "");
-    $("tasks-hint").textContent = tasks.length ? (e.done + " de " + e.total + " hechas") : "";
     var fp = D.status.ruleFootprints || { current: "", lines: {} }, fpHtml = '<div class="footprints" aria-label="Huellas de reglas">' +
       '<span>AGENTS.md actual: <b>' + esc(fp.current || "—") + '</b></span>' +
       Object.keys(fp.lines || {}).map(function (name) {
         var value = fp.lines[name], same = String(value).toUpperCase() === String(fp.current).toUpperCase();
         return '<span class="' + (same ? "match" : "mismatch") + '">' + esc(name) + ': <b>' + esc(value) + '</b> ' + (same ? "✓" : "✕") + "</span>";
       }).join("") + "</div>";
-    if (!tasks.length) {
-      $("tasks").innerHTML = fpHtml + '<div class="empty">Esta entrega todavía no está detallada. Se detalla siguiendo control/PLANIFICACION.md.</div><div class="next"><b>Objetivo:</b> ' + esc(e.goal || "") + "</div>";
-      return;
-    }
     function taskRows(list) { return list.map(function (t) {
       var first = firstSentence(t.action);
       var over = t.limit && t.minutes > t.limit;
@@ -548,8 +531,43 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
     function taskTable(list) {
       return '<div class="task-scroll"><table class="tasks"><thead><tr><th>Estado</th><th>ID</th><th>Acción</th><th>Resp.</th><th class="hide-sm">Intentos</th><th>Tiempo</th></tr></thead><tbody>' + taskRows(list) + "</tbody></table></div>";
     }
-    var html = fpHtml + (openTasks.length ? taskTable(openTasks) : '<div class="empty">No hay tareas abiertas.</div>');
-    if (closedTasks.length) html += '<details class="task-closed"><summary>Ver hechas (' + closedTasks.length + ")</summary>" + taskTable(closedTasks) + "</details>";
+
+    function taskOrder(a, b) {
+      var sa = statusOrder[String(a.status).toLowerCase()], sb = statusOrder[String(b.status).toLowerCase()];
+      sa = sa == null ? 5 : sa; sb = sb == null ? 5 : sb;
+      return sa - sb || idOrder(a, b);
+    }
+    function closedOrder(a, b) {
+      var da = Date.parse(a.lastActivity || "") || 0, db = Date.parse(b.lastActivity || "") || 0;
+      return db - da || -idOrder(a, b);
+    }
+    function splitTasks(tasks) {
+      return {
+        open: tasks.filter(function (t) { return !/^(hecha|cancelada)$/i.test(t.status); }).sort(taskOrder),
+        closed: tasks.filter(function (t) { return /^(hecha|cancelada)$/i.test(t.status); }).sort(closedOrder)
+      };
+    }
+    function head(e) {
+      return '<div class="task-delivery-head"><h3>' + esc(e.id || "") + (e.title ? " · " + esc(e.title) : "") +
+        '</h3><span class="hint">' + (e.detailed ? e.done + " de " + e.total + " hechas" : esc(e.status || "Sin detallar")) + "</span></div>";
+    }
+    function staticDelivery(e) {
+      var tasks = D.tasksByEntrega[e.id] || [];
+      var body = tasks.length ? taskTable(tasks) : '<div class="empty">Todavía no hay tareas detalladas.</div><div class="next"><b>Objetivo:</b> ' + esc(e.goal || "") + "</div>";
+      return '<section class="task-delivery">' + head(e) + body + "</section>";
+    }
+    function supportDelivery(e) {
+      var split = splitTasks(D.tasksByEntrega[e.id] || []), body =
+        (split.open.length ? taskTable(split.open) : '<div class="empty">No hay tareas abiertas.</div>');
+      if (split.closed.length) body += '<details class="task-closed"><summary>Ver hechas (' + split.closed.length + ")</summary>" + taskTable(split.closed) + "</details>";
+      return '<section class="task-delivery task-support">' + head(e) + fpHtml + body + "</section>";
+    }
+
+    $("tasks-title").textContent = "Tareas por entrega";
+    $("tasks-hint").textContent = "E0–E10 y T";
+    var html = D.entregas.filter(function (e) { return /^E(?:[0-9]|10)$/.test(e.id); }).map(staticDelivery).join("");
+    var support = ENT.T;
+    if (support) html += supportDelivery(support);
     $("tasks").innerHTML = html;
   }
 

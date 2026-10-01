@@ -1,18 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T17:07:14.087787Z",
+ "generatedUtc": "2026-10-01T17:13:14.180830Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 17:05 UTC",
+  "updated": "2026-10-01 17:11 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "comprobar que PFA Despertador inicia y procesa el issue de prueba de Oscar en menos de 30 minutos.",
+  "nextAction": "esperar el issue de prueba de Oscar y comprobar su cierre automático y nueva fila de worklog.",
   "needsOscar": [
    {
+    "ref": "T-18",
+    "text": "crea un issue de prueba desde el tablero; comprobaré que PFA Despertador lo registre, cierre y agregue al worklog dentro de 30 minutos."
+   },
+   {
     "ref": "E2-02",
-    "text": "elegir diseño. Recomiendo A: rehacer la segunda acción, alimentar Parse JSON con el cuerpo dinámico del primer HTTP y construir la llamada a subcarpetas con el id dinámico; la app seguirá recibiendo una sola respuesta JSON. B: dividir en llamadas: Power Apps obtiene primero las carpetas Projects y llama un flow estándar para cada folderId; elimina la referencia entre acciones, pero exige modificar la app y manejar más llamadas."
+    "text": "issue #6 de Oscar elige A, pero aclara ejecución diaria 4:00 a. m. y escritura en PFA_MailFolders; eso contradice D-028 (bajo demanda y sin SharePoint en el flow). Confirmar qué alcance rige antes de reabrir E2-02."
    },
    {
     "ref": "T-14",
@@ -21,12 +25,12 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T17:06:26.739461Z",
+  "fileUtc": "2026-10-01T17:11:52.790373Z",
   "ruleFootprints": {
-   "current": "4FD52CD8",
+   "current": "7BD6C096",
    "lines": {
     "Desarrollo": "4FD52CD8",
-    "Entorno": "4FD52CD8"
+    "Entorno": "7BD6C096"
    }
   }
  },
@@ -361,14 +365,14 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 14,
-   "total": 17,
+   "total": 18,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 211,
+    "prod": 212,
     "unprod": 2,
     "wait": 8,
-    "total": 221
+    "total": 222
    }
   }
  ],
@@ -1198,18 +1202,34 @@ window.PFA_DATA = {
    },
    {
     "id": "T-17",
-    "action": "Crear la automatización Codex PFA Despertador cada 15 minutos para procesar issues abiertos de Oscar cuando no haya una sesión activa",
+    "action": "Tablero: recuperar vista estática de entregas E0–E10 y mantener la línea T actual",
     "owner": "Agente",
     "depends": "—",
-    "expected": "Las respuestas de Oscar reactivan el trabajo desde el tablero sin otro mensaje en chat",
-    "evidence": "Automatización activa en este proyecto con el mensaje solicitado; issue de prueba de Oscar queda cerrado con “Registrado en [archivo]” y worklog registra el intento dentro de 30 minutos",
-    "limit": 30,
+    "expected": "Todas las tareas E0–E10 se ven sin expandir entregas; T conserva su presentación actual",
+    "evidence": "Pages muestra las tareas de E0–E10 desplegadas y T sin cambios, en escritorio y teléfono vertical",
+    "limit": 45,
     "status": "En curso",
     "attempts": 1,
     "minutes": 0,
     "entrega": "T",
     "fails": 0,
     "lastActivity": "",
+    "ready": true
+   },
+   {
+    "id": "T-18",
+    "action": "Crear la automatización Codex PFA Despertador cada 15 minutos para procesar issues abiertos de Oscar cuando no haya una sesión activa",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Las respuestas de Oscar reactivan el trabajo desde el tablero sin otro mensaje en chat",
+    "evidence": "Automatización activa en este proyecto con el mensaje solicitado; issue de prueba de Oscar queda cerrado con “Registrado en [archivo]” y worklog registra el intento dentro de 30 minutos",
+    "limit": 30,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 1,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T17:10:00Z",
     "ready": true
    }
   ]
@@ -1993,26 +2013,26 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 34,
-  "tasksTotal": 54,
+  "tasksTotal": 55,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 498,
+   "prod": 499,
    "unprod": 28,
    "wait": 17,
-   "total": 543
+   "total": 544
   },
   "last24h": {
-   "prod": 325,
+   "prod": 326,
    "unprod": 28,
    "wait": 13,
-   "total": 366
+   "total": 367
   },
   "last7d": {
-   "prod": 498,
+   "prod": 499,
    "unprod": 28,
    "wait": 17,
-   "total": 543
+   "total": 544
   },
   "product": {
    "prod": 287,
@@ -2021,10 +2041,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 211,
+   "prod": 212,
    "unprod": 2,
    "wait": 8,
-   "total": 221
+   "total": 222
   }
  },
  "days": [
@@ -2108,7 +2128,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 296,
+   "prod": 297,
    "unprod": 28,
    "wait": 11
   }
@@ -2224,10 +2244,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 543
+   "minutes": 544
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T17:10:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-18",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
+   "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
+  },
   {
    "start": "2026-10-01T15:58:00Z",
    "minutes": 46,
@@ -2344,22 +2377,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "La alternativa de acceso directo requiere conector HTTP con Microsoft Entra ID, clase Premium; los alcances pueden requerir consentimiento de administrador",
    "evidence": "Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/; no se cambió permiso ni ubicación; pendiente decisión de Oscar"
-  },
-  {
-   "start": "2026-10-01T11:42:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 5,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Se agregó Send an HTTP request a SharePoint desde el conector oficial; el mismo error rechaza la dirección del sitio personal",
-   "evidence": "La acción existe; el campo Site Address muestra No se encontró la dirección del sitio; no se ejecutó el flujo; learn.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/working-with-send-sp-http-request"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T17:10:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-18",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
+   "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
+  },
   {
    "start": "2026-10-01T15:58:00Z",
    "minutes": 46,
