@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:25:14.645141Z",
+ "generatedUtc": "2026-10-01T11:31:14.487159Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:23 UTC",
+  "updated": "2026-10-01 11:27 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar la revisión de los términos por Oscar; después completar E2-01.",
+  "nextAction": "completar E2-02 y continuar con E2-03.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-01, intento 2; inicio 2026-10-01 11:19 UTC. List settings siguen pendientes porque Microsoft muestra un acuerdo actualizado. No acepté términos ni ingresé credenciales. python tools/build_dashboard.py se ejecutó; el publicador falló al escribir %LOCALAPPDATA%\\PFA\\publish.log (acceso denegado)."
+   "E2-02, intento 1; inicio 2026-10-01 11:25 UTC. Crear PFA_E2_LeerCarpetas con trigger manual y la secuencia de nivel 1 indicada en PLAN. Comprobar guardado y Flow Checker sin errores. El publicador regeneró el tablero, pero falló al escribir %LOCALAPPDATA%\\PFA\\publish.log (acceso denegado)."
   ],
-  "fileUtc": "2026-10-01T11:23:36.314986Z"
+  "fileUtc": "2026-10-01T11:28:40.717662Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -199,15 +199,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Decidir en la app cuáles carpetas de Projects son proyectos; la app avisa cuando aparece una carpeta nueva",
    "status": "En curso",
-   "done": 0,
+   "done": 1,
    "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 0,
+    "prod": 2,
     "unprod": 0,
     "wait": 5,
-    "total": 5
+    "total": 7
    }
   },
   {
@@ -343,15 +343,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 9,
+   "done": 10,
    "total": 10,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 126,
+    "prod": 130,
     "unprod": 2,
-    "wait": 2,
-    "total": 130
+    "wait": 8,
+    "total": 140
    }
   }
  ],
@@ -635,12 +635,11 @@ window.PFA_DATA = {
     "expected": "Listas listas para carpetas y proyectos",
     "evidence": "Tabla de columnas y cambios en worklog",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 2,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 3,
+    "minutes": 2,
     "entrega": "E2",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E2-02",
@@ -650,12 +649,12 @@ window.PFA_DATA = {
     "expected": "Flujo de nivel 1 guardado",
     "evidence": "Flujo guardado; Flow Checker 0 errores",
     "limit": 90,
-    "status": "Pendiente",
+    "status": "En curso",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-03",
@@ -1035,46 +1034,30 @@ window.PFA_DATA = {
     "expected": "El tablero muestra la antigüedad del último reporte del agente",
     "evidence": "status.fileUtc; tarea con repetición PT3M; tablero publicado muestra “Último reporte del agente hace X min”",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 4,
+    "status": "Hecha",
+    "attempts": 3,
+    "minutes": 8,
     "entrega": "T",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    }
   ]
  },
  "nextTask": {
-  "id": "E2-01",
-  "action": "En List settings de PFA_MailFolders y PFA_Projects: anotar el tipo real de cada columna. Dejar obligatorias solo OutlookFolderId y FolderName (MailFolders) y ProjectId y OfficialName (Projects). Agregar a PFA_MailFolders la columna de texto Decision con valor por defecto Nueva. Confirmar que existen ParentFolderId y DisplayedPath. Anotar en worklog todo lo cambiado",
+  "id": "E2-02",
+  "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
   "owner": "Agente",
-  "depends": "E1-09",
-  "expected": "Listas listas para carpetas y proyectos",
-  "evidence": "Tabla de columnas y cambios en worklog",
-  "limit": 30,
+  "depends": "E2-01",
+  "expected": "Flujo de nivel 1 guardado",
+  "evidence": "Flujo guardado; Flow Checker 0 errores",
+  "limit": 90,
   "status": "En curso",
-  "attempts": 2,
+  "attempts": 0,
   "minutes": 0,
   "entrega": "E2",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E2-01",
-   "action": "En List settings de PFA_MailFolders y PFA_Projects: anotar el tipo real de cada columna. Dejar obligatorias solo OutlookFolderId y FolderName (MailFolders) y ProjectId y OfficialName (Projects). Agregar a PFA_MailFolders la columna de texto Decision con valor por defecto Nueva. Confirmar que existen ParentFolderId y DisplayedPath. Anotar en worklog todo lo cambiado",
-   "owner": "Agente",
-   "depends": "E1-09",
-   "expected": "Listas listas para carpetas y proyectos",
-   "evidence": "Tabla de columnas y cambios en worklog",
-   "limit": 30,
-   "status": "En curso",
-   "attempts": 2,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E2-02",
    "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
@@ -1083,12 +1066,12 @@ window.PFA_DATA = {
    "expected": "Flujo de nivel 1 guardado",
    "evidence": "Flujo guardado; Flow Checker 0 errores",
    "limit": 90,
-   "status": "Pendiente",
+   "status": "En curso",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-03",
@@ -1278,6 +1261,21 @@ window.PFA_DATA = {
    "expected": "Oscar ve los correos de cada proyecto",
    "evidence": "Los 5 correos visibles en PFA-Prueba",
    "limit": 90,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-06",
+   "action": "Ejecutar el flujo sin SoloCarpeta (todas las carpetas activas)",
+   "owner": "Agente",
+   "depends": "E3-05",
+   "expected": "Correos reales cargados",
+   "evidence": "Run Succeeded; conteo de correos por carpeta en worklog, con carpetas numeradas y sin nombres",
+   "limit": 30,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1554,6 +1552,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E2-01",
+   "action": "En List settings de PFA_MailFolders y PFA_Projects: anotar el tipo real de cada columna. Dejar obligatorias solo OutlookFolderId y FolderName (MailFolders) y ProjectId y OfficialName (Projects). Agregar a PFA_MailFolders la columna de texto Decision con valor por defecto Nueva. Confirmar que existen ParentFolderId y DisplayedPath. Anotar en worklog todo lo cambiado",
+   "owner": "Agente",
+   "depends": "E1-09",
+   "expected": "Listas listas para carpetas y proyectos",
+   "evidence": "Tabla de columnas y cambios en worklog",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 2,
+   "entrega": "E2",
+   "fails": 0
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -1678,43 +1690,57 @@ window.PFA_DATA = {
    "minutes": 4,
    "entrega": "T",
    "fails": 0
+  },
+  {
+   "id": "T-10",
+   "action": "Actualizar el tablero para mostrar la hora real de STATUS, ajustar la señal de vida y programar PFA Tablero cada 3 minutos",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El tablero muestra la antigüedad del último reporte del agente",
+   "evidence": "status.fileUtc; tarea con repetición PT3M; tablero publicado muestra “Último reporte del agente hace X min”",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 8,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 28,
+  "tasksDone": 30,
   "tasksTotal": 47,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 399,
+   "prod": 405,
    "unprod": 2,
-   "wait": 11,
-   "total": 412
+   "wait": 17,
+   "total": 424
   },
   "last24h": {
    "prod": 345,
    "unprod": 2,
-   "wait": 11,
-   "total": 358
+   "wait": 17,
+   "total": 364
   },
   "last7d": {
-   "prod": 399,
+   "prod": 405,
    "unprod": 2,
-   "wait": 11,
-   "total": 412
+   "wait": 17,
+   "total": 424
   },
   "product": {
-   "prod": 273,
+   "prod": 275,
    "unprod": 0,
    "wait": 9,
-   "total": 282
+   "total": 284
   },
   "support": {
-   "prod": 126,
+   "prod": 130,
    "unprod": 2,
-   "wait": 2,
-   "total": 130
+   "wait": 8,
+   "total": 140
   }
  },
  "days": [
@@ -1798,9 +1824,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 197,
+   "prod": 203,
    "unprod": 2,
-   "wait": 5
+   "wait": 11
   }
  ],
  "categories": [
@@ -1819,6 +1845,10 @@ window.PFA_DATA = {
   {
    "category": "AUTH",
    "minutes": 9
+  },
+  {
+   "category": "PERMISOS",
+   "minutes": 6
   },
   {
    "category": "NAVEGADOR",
@@ -1883,27 +1913,66 @@ window.PFA_DATA = {
    "total": 14
   },
   {
+   "task": "T-10",
+   "prod": 8,
+   "unprod": 0,
+   "wait": 6,
+   "total": 14
+  },
+  {
    "task": "E1-04",
    "prod": 13,
    "unprod": 0,
    "wait": 0,
-   "total": 13
-  },
-  {
-   "task": "T-03",
-   "prod": 11,
-   "unprod": 0,
-   "wait": 2,
    "total": 13
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 412
+   "minutes": 424
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:25:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Comprobé la publicación después de seis minutos",
+   "evidence": "Pág. publicada: Último reporte del agente hace 7 min; status.fileUtc=2026-10-01T11:23:36.314986Z"
+  },
+  {
+   "start": "2026-10-01T11:23:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "ESQUEMA_LISTA",
+   "summary": "MailFolders: Title=text; OutlookFolderId=text; FolderName=text; DisplayedPath=text; ParentFolderId=text; FolderType=text; Included=text; ProjectId=text; LastEnumeratedUtc=text; LastSuccessfulWatermarkUtc=text; MailboxKey=text; ReviewStatus=Choice; ConsecutiveFailureCount=Number; LastAttemptedWatermarkUtc=DateTime; IncludeInInitialLoad=YesNo; IncludeInIncremental=YesNo; Decision=text; Modified=DateTime; Created=DateTime; CreatedBy=PersonGroup; ModifiedBy=PersonGroup. Projects: Title=text; OfficialName=text; ProjectId=text; PrimaryOutlookFolderId=text; PrimaryOutlookFolderPath=text; ShortDescription=MultipleLines; StartDate=DateTime; CloseDate=DateTime; SourceConfidence=Number; CreatedUtc=DateTime; ConfirmedUtc=DateTime; Status=text; CreatedBy=PersonGroup; ConfirmedBy=PersonGroup; Modified=DateTime; Created=DateTime; Created By=PersonGroup; Modified By=PersonGroup",
+   "evidence": "List settings muestran solo requeridas OutlookFolderId, FolderName, ProjectId y OfficialName; Decision es texto opcional con valor predeterminado Nueva; ParentFolderId y DisplayedPath existen"
+  },
+  {
+   "start": "2026-10-01T11:19:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera de seis minutos tras configurar la repetición",
+   "evidence": "Publicador configurado PT3M; tablero publicado comprobado al finalizar la espera"
+  },
   {
    "start": "2026-10-01T11:19:00Z",
    "minutes": 4,
@@ -1929,6 +1998,19 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
    "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
+  },
+  {
+   "start": "2026-10-01T11:17:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Se configuró PFA Tablero con repetición de 3 minutos",
+   "evidence": "Set-ScheduledTask; (Get-ScheduledTask ...).Triggers.Repetition.Interval = PT3M; python tools/build_dashboard.py generó status.fileUtc; Pages mostró Último reporte del agente hace 7 min"
   },
   {
    "start": "2026-10-01T11:12:00Z",
@@ -1981,61 +2063,48 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
    "evidence": "https://github.com/OscarMarquez83/pfa-tablero/issues/4"
-  },
-  {
-   "start": "2026-10-01T05:22:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-10",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "PERMISOS",
-   "summary": "Build y publicación verificados; Windows denegó el trigger PT3M",
-   "evidence": "Auditoría 2/3 OK: data.js contiene status.fileUtc; Pages muestra Último reporte del agente hace 4 min; Get-ScheduledTaskTrigger Access denied"
-  },
-  {
-   "start": "2026-10-01T05:19:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-09",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Skills y cinco cambios instalados; conector no cargó en esta sesión",
-   "evidence": "Auditoría 4/5 OK: .agents/skills, AGENTS.md, INC-07/KF-P07; .codex/config.toml; búsqueda pendiente por carga de configuración"
-  },
-  {
-   "start": "2026-10-01T04:49:00Z",
-   "minutes": 100,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-05",
-   "attempt": 7,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Reapertura: encabezado de My Day igualado y selector con texto azul sobre fondo claro en siete pantallas; se superó el límite de 60 min por la auditoría 7x2",
-   "evidence": "Auditoría 14/14 OK en app publicada, preview 7/7, Refresh OK; tmp/evidencia/E1-05/actual; publicación confirmada por Power Apps; Learn responsive-layout y Copilot registrados en T-12"
-  },
-  {
-   "start": "2026-10-01T04:22:00Z",
-   "minutes": 10,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-08",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Registré T-08, verifiqué la raíz, corregí el destino del revisor y publiqué el tablero",
-   "evidence": "Commit 9d294bd; build 0; automatización activa con proyecto y carpeta PFA; publicación remota confirmada; el publicador falló dos veces al registrar publish.log; Microsoft Learn: Add-Content -Force omite solo el atributo read-only, no cambia permisos (https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.5)"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:25:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Comprobé la publicación después de seis minutos",
+   "evidence": "Pág. publicada: Último reporte del agente hace 7 min; status.fileUtc=2026-10-01T11:23:36.314986Z"
+  },
+  {
+   "start": "2026-10-01T11:23:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "ESQUEMA_LISTA",
+   "summary": "MailFolders: Title=text; OutlookFolderId=text; FolderName=text; DisplayedPath=text; ParentFolderId=text; FolderType=text; Included=text; ProjectId=text; LastEnumeratedUtc=text; LastSuccessfulWatermarkUtc=text; MailboxKey=text; ReviewStatus=Choice; ConsecutiveFailureCount=Number; LastAttemptedWatermarkUtc=DateTime; IncludeInInitialLoad=YesNo; IncludeInIncremental=YesNo; Decision=text; Modified=DateTime; Created=DateTime; CreatedBy=PersonGroup; ModifiedBy=PersonGroup. Projects: Title=text; OfficialName=text; ProjectId=text; PrimaryOutlookFolderId=text; PrimaryOutlookFolderPath=text; ShortDescription=MultipleLines; StartDate=DateTime; CloseDate=DateTime; SourceConfidence=Number; CreatedUtc=DateTime; ConfirmedUtc=DateTime; Status=text; CreatedBy=PersonGroup; ConfirmedBy=PersonGroup; Modified=DateTime; Created=DateTime; Created By=PersonGroup; Modified By=PersonGroup",
+   "evidence": "List settings muestran solo requeridas OutlookFolderId, FolderName, ProjectId y OfficialName; Decision es texto opcional con valor predeterminado Nueva; ParentFolderId y DisplayedPath existen"
+  },
+  {
+   "start": "2026-10-01T11:19:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera de seis minutos tras configurar la repetición",
+   "evidence": "Publicador configurado PT3M; tablero publicado comprobado al finalizar la espera"
+  },
   {
    "start": "2026-10-01T11:19:00Z",
    "minutes": 4,
@@ -2061,6 +2130,19 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
    "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
+  },
+  {
+   "start": "2026-10-01T11:17:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Se configuró PFA Tablero con repetición de 3 minutos",
+   "evidence": "Set-ScheduledTask; (Get-ScheduledTask ...).Triggers.Repetition.Interval = PT3M; python tools/build_dashboard.py generó status.fileUtc; Pages mostró Último reporte del agente hace 7 min"
   },
   {
    "start": "2026-10-01T11:12:00Z",
