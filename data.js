@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T04:32:55.040807Z",
+ "generatedUtc": "2026-10-01T05:03:38.897140Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,12 +8,8 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-10-01 04:32 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "E1-09: Oscar recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos. E1-05 ya figura Hecha.",
+  "nextAction": "E1-05: corregir el encabezado de My Day y el contraste del menú vertical; después repetir E1-09 en la app publicada.",
   "needsOscar": [
-   {
-    "ref": "E1-09",
-    "text": "recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos."
-   },
    {
     "ref": "T-08",
     "text": "recomiendo mantener superpowers desactivado (figura desactivado por administración) y retirar powerapps-yaml-edge de las skills locales del proyecto; no usé ninguna de las dos."
@@ -21,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "Ninguna. T-08 cerrada; E1-05 ya está Hecha según el plan y su evidencia de cierre."
+   "E1-05, intento 7, inicio 2026-10-01 04:49 UTC. Oscar reabrió la tarea porque el encabezado de My Day difiere del común y el selector vertical tiene texto ilegible. Corregiré el YAML y la app; comprobaré el encabezado, el menú abierto, la selección activa, la navegación y la versión publicada."
   ]
  },
  "revision": {
@@ -177,7 +173,7 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 9,
+   "done": 8,
    "total": 10,
    "detailed": true,
    "active": true,
@@ -537,17 +533,18 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-05",
-    "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
+    "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
     "owner": "Agente",
     "depends": "E1-04",
-    "expected": "2 pantallas con un solo encabezado estándar",
-    "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
+    "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
+    "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
     "limit": 60,
-    "status": "Hecha",
+    "status": "En curso",
     "attempts": 6,
     "minutes": 43,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "ready": true
    },
    {
     "id": "E1-06",
@@ -1010,8 +1007,37 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "E1-05",
+  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
+  "owner": "Agente",
+  "depends": "E1-04",
+  "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
+  "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
+  "limit": 60,
+  "status": "En curso",
+  "attempts": 6,
+  "minutes": 43,
+  "entrega": "E1",
+  "fails": 0,
+  "ready": true
+ },
  "upcoming": [
+  {
+   "id": "E1-05",
+   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
+   "owner": "Agente",
+   "depends": "E1-04",
+   "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
+   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
+   "limit": 60,
+   "status": "En curso",
+   "attempts": 6,
+   "minutes": 43,
+   "entrega": "E1",
+   "fails": 0,
+   "ready": true
+  },
   {
    "id": "E1-09",
    "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
@@ -1221,21 +1247,6 @@ window.PFA_DATA = {
    "entrega": "E3",
    "fails": 0,
    "ready": false
-  },
-  {
-   "id": "E3-04",
-   "action": "Ejecutar el flujo con SoloCarpeta = PFA-Prueba, dos veces",
-   "owner": "Agente",
-   "depends": "E3-03",
-   "expected": "5 correos sin duplicados",
-   "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E3",
-   "fails": 0,
-   "ready": false
   }
  ],
  "doneTasks": [
@@ -1422,20 +1433,6 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
-   "id": "E1-05",
-   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
-   "owner": "Agente",
-   "depends": "E1-04",
-   "expected": "2 pantallas con un solo encabezado estándar",
-   "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
-   "limit": 60,
-   "status": "Hecha",
-   "attempts": 6,
-   "minutes": 43,
-   "entrega": "E1",
-   "fails": 0
-  },
-  {
    "id": "E1-06",
    "action": "Igual que E1-05 en Projects, Tasks y Review",
    "owner": "Agente",
@@ -1606,7 +1603,7 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 26,
+  "tasksDone": 25,
   "tasksTotal": 45,
   "entregasAccepted": 1,
   "entregasTotal": 12,
