@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T17:43:14.407901Z",
+ "generatedUtc": "2026-10-01T17:54:36.744068Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 17:22 UTC",
+  "updated": "2026-10-01 17:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "continuar T-18; espera el issue de prueba de Oscar.",
+  "nextAction": "aplicar el parche de Claude para navegación interactiva del tablero; verificar E0, E3 y T en Pages.",
   "needsOscar": [
    {
     "ref": "T-18",
@@ -25,10 +25,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "Sin tarea en curso. T-17 quedó Hecha en intento 1. Pages confirmó E0–E10 y T sin interacción en 1366 px y 390 px; T mantiene 3 tareas abiertas, 15 hechas y el desplegable abre/cierra. Capturas en tmp/evidencia/T-17.",
-   "git log --follow -- dashboard/index.html no contiene una versión estática anterior; el commit base disponible 79f0f54 también selecciona una entrega. Implementé el alcance escrito por Oscar."
+   "T-19, intento 1; inicio 2026-10-01 17:54 UTC. Descargar a tmp y aplicar solo T-tablero-entregas.patch; publicar. Verificación: E0 (9), E3 (8), T y diseño responsivo en Pages."
   ],
-  "fileUtc": "2026-10-01T17:22:37.086612Z",
+  "fileUtc": "2026-10-01T17:54:28.292877Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -368,7 +367,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 15,
-   "total": 18,
+   "total": 19,
    "detailed": true,
    "active": false,
    "time": {
@@ -1233,6 +1232,22 @@ window.PFA_DATA = {
     "fails": 0,
     "lastActivity": "2026-10-01T17:10:00Z",
     "ready": true
+   },
+   {
+    "id": "T-19",
+    "action": "Aplicar el parche aprobado de Claude para recuperar la navegación interactiva por entregas en el tablero",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "E0 y E3 expanden sus tareas al tocarse; T muestra abiertas arriba y Ver hechas abajo",
+    "evidence": "Pages prueba E0 (9 tareas), E3 (8 tareas) y T en escritorio y teléfono vertical",
+    "limit": 20,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
@@ -2030,7 +2045,7 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 35,
-  "tasksTotal": 55,
+  "tasksTotal": 56,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
