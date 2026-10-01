@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T20:43:14.596395Z",
+ "generatedUtc": "2026-10-01T20:55:13.851445Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 20:23 UTC",
+  "updated": "2026-10-01 20:53 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Oscar inicia sesión en Power Automate; después completar el intento 11 de E2-02 con salida dinámica/Parse JSON.",
   "needsOscar": [
@@ -16,7 +16,7 @@ window.PFA_DATA = {
    },
    {
     "ref": "E2-02",
-    "text": "inicia sesión en Power Automate (https://make.powerautomate.com) en la pestaña de Edge que quedó abierta; después veré el inicio de Power Automate."
+    "text": "en la pestaña de Power Automate de Edge, pulsa “Sign in” e inicia sesión; debe abrirse Home y permitir navegar a “My flows”."
    },
    {
     "ref": "T-14",
@@ -25,9 +25,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan vuelve a describir el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. Power Automate pide iniciar sesión (AADSTS160021); no se modificó el flow. Learn consultado: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow. Acumulado E2-02: 82/90 min efectivos."
+   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. Home mostró “Hello, Oscar”, pero al navegar volvió “Sign in required” (AADSTS160021); no se modificó el flow. Learn consultado: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow. Acumulado E2-02: 82/90 min efectivos."
   ],
-  "fileUtc": "2026-10-01T20:24:39.067826Z",
+  "fileUtc": "2026-10-01T20:53:36.320744Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -229,8 +229,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 58,
     "unprod": 26,
-    "wait": 6,
-    "total": 90
+    "wait": 7,
+    "total": 91
    }
   },
   {
@@ -697,7 +697,7 @@ window.PFA_DATA = {
     "minutes": 82,
     "entrega": "E2",
     "fails": 4,
-    "lastActivity": "2026-10-01T20:22:00Z",
+    "lastActivity": "2026-10-01T20:53:00Z",
     "ready": true
    },
    {
@@ -1292,7 +1292,7 @@ window.PFA_DATA = {
   "minutes": 82,
   "entrega": "E2",
   "fails": 4,
-  "lastActivity": "2026-10-01T20:22:00Z",
+  "lastActivity": "2026-10-01T20:53:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1309,7 +1309,7 @@ window.PFA_DATA = {
    "minutes": 82,
    "entrega": "E2",
    "fails": 4,
-   "lastActivity": "2026-10-01T20:22:00Z",
+   "lastActivity": "2026-10-01T20:53:00Z",
    "ready": true
   },
   {
@@ -2129,26 +2129,26 @@ window.PFA_DATA = {
   "time": {
    "prod": 572,
    "unprod": 28,
-   "wait": 18,
-   "total": 618
+   "wait": 19,
+   "total": 619
   },
   "last24h": {
    "prod": 381,
    "unprod": 28,
-   "wait": 12,
-   "total": 421
+   "wait": 13,
+   "total": 422
   },
   "last7d": {
    "prod": 572,
    "unprod": 28,
-   "wait": 18,
-   "total": 618
+   "wait": 19,
+   "total": 619
   },
   "product": {
    "prod": 331,
    "unprod": 26,
-   "wait": 10,
-   "total": 367
+   "wait": 11,
+   "total": 368
   },
   "support": {
    "prod": 241,
@@ -2240,7 +2240,7 @@ window.PFA_DATA = {
    "date": "2026-10-01",
    "prod": 370,
    "unprod": 28,
-   "wait": 12
+   "wait": 13
   }
  ],
  "categories": [
@@ -2268,7 +2268,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "AUTH",
-   "minutes": 10
+   "minutes": 11
   },
   {
    "category": "PERMISOS",
@@ -2291,8 +2291,8 @@ window.PFA_DATA = {
    "task": "E2-02",
    "prod": 56,
    "unprod": 26,
-   "wait": 1,
-   "total": 83
+   "wait": 2,
+   "total": 84
   },
   {
    "task": "T-16",
@@ -2354,7 +2354,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 598
+   "minutes": 599
   },
   {
    "account": "empresa",
@@ -2362,6 +2362,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T20:52:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Automate vuelve a pedir inicio de sesión al navegar",
+   "evidence": "Home mostró Hello, Oscar; al usar navegación apareció Sign in required / AADSTS160021; flow intacto"
+  },
   {
    "start": "2026-10-01T20:21:00Z",
    "minutes": 1,
@@ -2478,22 +2491,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Intento final: corregí URI duplicado usando referencia interna localizada; Flow Checker conservó error de referencia. Copilot: Graph childFolders es compatible; reconstruir paso y usar salida dinámica/Parse JSON. Consulté plantilla con nueve enfoques agrupados",
    "evidence": "Peek code exacto: Send_an_HTTP_request; Flow Checker posterior al guardado: Corrija esto para incluir una referencia válida a \\Send_an_HTTP_request\\\" para los parámetros de entrada de la acción \\\"Enviar_una_solicitud_HTTP_2\\\"; sin respuesta probada por error. Learn: https://learn.microsoft.com/en-us/connectors/office365/ y https://learn.microsoft.com/en-us/power-automate/use-expressions-in-conditions\""
-  },
-  {
-   "start": "2026-10-01T15:04:00Z",
-   "minutes": 23,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-15",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Registré huellas por línea, regla de recuperación de navegador y criterio de auditoría",
-   "evidence": "AGENTS.md completo: 23807 bytes; después de cambios y lectura completa: 4FD52CD8; STATUS con Desarrollo pendiente y Entorno 4FD52CD8; KF-11 y REVISOR verificados"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T20:52:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Automate vuelve a pedir inicio de sesión al navegar",
+   "evidence": "Home mostró Hello, Oscar; al usar navegación apareció Sign in required / AADSTS160021; flow intacto"
+  },
   {
    "start": "2026-10-01T20:21:00Z",
    "minutes": 1,
