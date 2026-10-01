@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T00:54:20.560999Z",
+ "generatedUtc": "2026-10-01T00:57:11.511541Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 00:51 UTC",
+  "updated": "2026-10-01 00:56 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar autoriza tomar el control de edición de Power Apps; después terminar E1-05, ejecutar E1-08, aplicar E1-10 y pedir la aceptación final E1-09. E1-08 está pendiente y depende de E1-05; no espera una decisión de Oscar.",
   "needsOscar": [
@@ -18,7 +18,7 @@ window.PFA_DATA = {
   "blockers": [],
   "current": [
    "Tarea: ninguna. T-04 cerrada; E1-05 conserva 4 intentos y 34 min. El intento 5 no empieza hasta resolver el control de edición.",
-   "Último intento: T-04, intento 1, 2026-10-01 00:37–00:51 UTC.",
+   "Último intento: T-04, intento 1, 2026-10-01 00:37–00:56 UTC.",
    "Qué haré al reanudar: aplicar el YAML corregido de My Day en Power Apps y verificarlo en preview y publicado.",
    "Cómo comprobaré el resultado: un solo encabezado; Refresh conserva su acción fuera del encabezado; revisar después E1-08 y E1-10 según sus evidencias."
   ]
@@ -335,10 +335,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 73,
+    "prod": 78,
     "unprod": 0,
     "wait": 2,
-    "total": 75
+    "total": 80
    }
   }
  ],
@@ -944,7 +944,7 @@ window.PFA_DATA = {
     "limit": 90,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 14,
+    "minutes": 19,
     "entrega": "T",
     "fails": 0
    }
@@ -1455,7 +1455,7 @@ window.PFA_DATA = {
    "limit": 90,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 14,
+   "minutes": 19,
    "entrega": "T",
    "fails": 0
   }
@@ -1467,22 +1467,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 216,
+   "prod": 221,
    "unprod": 0,
    "wait": 6,
-   "total": 222
+   "total": 227
   },
   "last24h": {
-   "prod": 216,
+   "prod": 221,
    "unprod": 0,
    "wait": 6,
-   "total": 222
+   "total": 227
   },
   "last7d": {
-   "prod": 216,
+   "prod": 221,
    "unprod": 0,
    "wait": 6,
-   "total": 222
+   "total": 227
   },
   "product": {
    "prod": 143,
@@ -1491,10 +1491,10 @@ window.PFA_DATA = {
    "total": 147
   },
   "support": {
-   "prod": 73,
+   "prod": 78,
    "unprod": 0,
    "wait": 2,
-   "total": 75
+   "total": 80
   }
  },
  "days": [
@@ -1578,7 +1578,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 14,
+   "prod": 19,
    "unprod": 0,
    "wait": 0
   }
@@ -1638,10 +1638,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-04",
-   "prod": 14,
+   "prod": 19,
    "unprod": 0,
    "wait": 0,
-   "total": 14
+   "total": 19
   },
   {
    "task": "E1-04",
@@ -1675,13 +1675,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 222
+   "minutes": 227
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T00:37:00Z",
-   "minutes": 14,
+   "minutes": 19,
    "account": "personal",
    "entrega": "T",
    "task": "T-04",
@@ -1690,7 +1690,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
-   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; publicación confirmada en GitHub; escritura del log local denegada"
+   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; index.html y data.js confirmados en main; escritura del log local denegada"
   },
   {
    "start": "2026-09-30T22:40:00Z",
@@ -1813,7 +1813,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T00:37:00Z",
-   "minutes": 14,
+   "minutes": 19,
    "account": "personal",
    "entrega": "T",
    "task": "T-04",
@@ -1822,7 +1822,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
-   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; publicación confirmada en GitHub; escritura del log local denegada"
+   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; index.html y data.js confirmados en main; escritura del log local denegada"
   },
   {
    "start": "2026-09-30T22:40:00Z",
