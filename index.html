@@ -127,6 +127,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .st-encurso { background: var(--accent-soft); color: var(--accent); } .st-encurso .ic { background: var(--accent); }
 .st-porvalidar { background: var(--warning-soft); color: var(--warning-ink); } .st-porvalidar .ic { background: var(--warning); color: #3d2a00; }
 .st-bloqueada { background: var(--critical-soft); color: var(--critical-ink); } .st-bloqueada .ic { background: var(--critical); }
+.st-reabierta { background: var(--warning-soft); color: var(--warning-ink); } .st-reabierta .ic { background: var(--critical); }
 .st-pendiente, .st-cancelada { background: var(--surface-2); color: var(--ink-2); } .st-pendiente .ic, .st-cancelada .ic { background: transparent; border: 1.5px solid var(--muted); color: var(--muted); }
 .tmeter { width: 110px; }
 .tmeter .meter { margin-top: 5px; height: 5px; }
@@ -353,7 +354,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   function dur(min) { return min >= 60 ? hours(min) + " h" : min + " min"; }
   function pct(a, b) { return b ? Math.round(a * 100 / b) : 0; }
   function stateKey(s) { return (s || "").toLowerCase().replace(/\s+/g, "").normalize("NFD").replace(/[̀-ͯ]/g, ""); }
-  var ICON = { hecha: "✓", encurso: "●", porvalidar: "…", bloqueada: "✕", pendiente: "", cancelada: "–" };
+  var ICON = { hecha: "✓", encurso: "●", porvalidar: "…", bloqueada: "✕", reabierta: "↺", pendiente: "", cancelada: "–" };
   function chip(s) { var k = stateKey(s); return '<span class="chip st-' + k + '"><span class="ic">' + (ICON[k] || "") + "</span>" + esc(s) + "</span>"; }
   function firstSentence(s) { var m = String(s || "").match(/^(.+?\.)(\s|$)/); return m ? m[1] : s; }
 
@@ -572,8 +573,26 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   // ---------- Oscar ----------
   $("oscar-n").textContent = D.status.needsOscar.length ? D.status.needsOscar.length + " pendientes" : "";
   $("oscar").innerHTML = D.status.needsOscar.length ? D.status.needsOscar.map(function (n) {
-    return '<li class="oscar"><span class="ico">→</span><span style="flex:1">' + (n.ref ? "<b>" + esc(n.ref) + ":</b> " : "") + esc(n.text) + replyButtons(n) + "</span></li>";
+    return '<li class="oscar" data-ref="' + esc(n.ref || "General") + '"><span class="ico">→</span><span style="flex:1">' + (n.ref ? "<b>" + esc(n.ref) + ":</b> " : "") + esc(n.text) + replyButtons(n) + "</span></li>";
   }).join("") : '<li style="background:none;padding:0"><div class="empty"><span class="ok">✓</span>Nada pendiente</div></li>';
+  // Respuestas ya enviadas: issues abiertos de Oscar que el agente todavía no registró.
+  if (canReply && D.status.needsOscar.length && window.fetch) {
+    fetch("https://api.github.com/repos/" + encodeURIComponent(C.owner) + "/" + encodeURIComponent(C.repo) + "/issues?state=open&per_page=50")
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (issues) {
+        var mine = (issues || []).filter(function (i) { return !i.pull_request && i.user && i.user.login.toLowerCase() === String(C.owner).toLowerCase() && /^\[PFA\]/.test(i.title); });
+        Array.prototype.forEach.call(document.querySelectorAll("#oscar li.oscar[data-ref]"), function (li) {
+          var ref = li.getAttribute("data-ref");
+          var hit = mine.filter(function (i) { return i.title.slice(-(ref.length + 2)) === ": " + ref; })[0];
+          if (!hit) return;
+          var act = li.querySelector(".actions");
+          var note = '<div class="actions"><a class="btn-s" target="_blank" rel="noopener" href="' + esc(hit.html_url) + '">✓ Respondido (#' + hit.number + ")</a>" +
+            '<span class="sub" style="margin-left:8px">El agente lo registra al empezar su siguiente intento.</span></div>';
+          if (act) act.outerHTML = note; else li.lastChild.insertAdjacentHTML("beforeend", note);
+          li.style.opacity = "0.75";
+        });
+      }).catch(function () {});
+  }
 
   // ---------- Alertas ----------
   var AICON = { critical: "✕", serious: "!", warning: "!" };

@@ -1,29 +1,37 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T05:45:23.755602Z",
+ "generatedUtc": "2026-10-01T06:00:00.691230Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 05:26 UTC",
+  "updated": "2026-10-01 05:59 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "E1-05: corregir el encabezado de My Day y el contraste del menú vertical; después repetir E1-09 en la app publicada.",
+  "nextAction": "Oscar revisa el análisis de reapertura de E1-05; luego medir App.Width/App.Height en producción antes de cualquier edición.",
   "needsOscar": [
-   {
-    "ref": "T-08",
-    "text": "recomiendo mantener superpowers desactivado (figura desactivado por administración) y retirar powerapps-yaml-edge de las skills locales del proyecto; no usé ninguna de las dos."
-   },
    {
     "ref": "T-09",
     "text": "reiniciar Codex para cargar las skills locales y la configuración del conector Microsoft Learn; codex mcp add no pudo cargar la configuración porque este proceso no encuentra el directorio de usuario."
+   },
+   {
+    "ref": "T-12",
+    "text": "revisar el análisis de reapertura de E1-05 antes de cualquier cambio en la app."
    }
   ],
   "blockers": [],
   "current": [
-   "E1-05, reabierta, intento 7, inicio 2026-10-01 04:49 UTC. Avance previo: Refresh quedó fuera del encabezado de My Day y funcionando; el encabezado común quedó aplicado en My Day y Diagnostics. INC-07 registra el doble encabezado que Oscar encontró al probar; KF-P07 exige comparar las 7 pantallas. La app publicada muestra menú horizontal desplazable a 390 px. No apliqué aún Tema.TamMenu = 13 en App.Formulas. Falta publicar la corrección y auditar las 7 pantallas a 1366 px y 390 px. T-09: skills/configuración y cambios aplicados; Microsoft Learn no cargó. T-10: tablero actualizado y visible; Get-ScheduledTask sigue en Access denied, no pude cambiar la repetición a 3 minutos."
+   "T-12, intento 1, inicio 2026-10-01 05:47 UTC: skill y procedimiento instalados; no se editó la app. Microsoft Learn consultado en web oficial y Copilot consultado; el conector MCP sigue pendiente de reinicio.",
+   "E1-05, Reabierta, 6 intentos previos; el intento 7 no empieza hasta que Oscar revise este análisis.",
+   "Defecto actual: a 390 px la app publicada muestra la galería horizontal desplazable; captura: tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg. INC-07 ya registra el doble encabezado señalado por Oscar.",
+   "Intentos previos: (1) inspección de My Day; (2) preparación de bloques estándar; (3) aplicación y preview; (4) separar Refresh y preparar selector sin Studio; (5) revisión local del YAML sin Studio; (6) mover Refresh, guardar/publicar y probar navegación parcial.",
+   "Por qué se dio por terminada: preview y comprobaciones puntuales de My Day/Diagnostics parecían correctas; faltó comparar en paralelo las 7 pantallas publicadas en ambos tamaños.",
+   "Causa probable: se evalúa orientación (App.Width < App.Height) donde el requisito es ancho; la app publicada podría conservar ancho mínimo/Scale to fit y mostrar otra galería o encabezado duplicado. Falta verificarlo en runtime.",
+   "Qué haré distinto: medir App.Width/App.Height en la app publicada y etiquetar temporalmente qué control está visible; revisar el árbol de Studio en las 7 pantallas antes de cambiar controles.",
+   "Criterio nuevo: un encabezado; menú desplegable legible a 390 px; menú horizontal sin desbordamiento a 1366 px; capturas comparadas de las 7 pantallas en ambos tamaños; Refresh funcional.",
+   "Consulta oficial: [Create responsive layouts in canvas apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout): revisar Scale to fit, dimensiones reales y breakpoints. Copilot recomendó medir App.Width/App.Height, comprobar instancias duplicadas y probar en la app publicada; sugirió ancho < 768 como candidato, aún sin validar."
   ],
-  "fileUtc": "2026-10-01T05:45:22.232247Z"
+  "fileUtc": "2026-10-01T05:59:52.026306Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -357,10 +365,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 105,
+    "prod": 119,
     "unprod": 2,
     "wait": 2,
-    "total": 109
+    "total": 123
    }
   }
  ],
@@ -558,8 +566,8 @@ window.PFA_DATA = {
     "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
     "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
     "limit": 60,
-    "status": "En curso",
-    "attempts": 7,
+    "status": "Reabierta",
+    "attempts": 6,
     "minutes": 43,
     "entrega": "E1",
     "fails": 0,
@@ -1064,8 +1072,8 @@ window.PFA_DATA = {
   "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
   "limit": 60,
-  "status": "En curso",
-  "attempts": 7,
+  "status": "Reabierta",
+  "attempts": 6,
   "minutes": 43,
   "entrega": "E1",
   "fails": 0,
@@ -1080,8 +1088,8 @@ window.PFA_DATA = {
    "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
    "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
    "limit": 60,
-   "status": "En curso",
-   "attempts": 7,
+   "status": "Reabierta",
+   "attempts": 6,
    "minutes": 43,
    "entrega": "E1",
    "fails": 0,
@@ -1650,29 +1658,35 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E1-05",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (6 intentos previos)",
+   "level": "serious"
+  }
+ ],
  "kpi": {
   "tasksDone": 25,
   "tasksTotal": 47,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 278,
+   "prod": 292,
    "unprod": 2,
    "wait": 6,
-   "total": 286
+   "total": 300
   },
   "last24h": {
-   "prod": 278,
+   "prod": 292,
    "unprod": 2,
    "wait": 6,
-   "total": 286
+   "total": 300
   },
   "last7d": {
-   "prod": 278,
+   "prod": 292,
    "unprod": 2,
    "wait": 6,
-   "total": 286
+   "total": 300
   },
   "product": {
    "prod": 173,
@@ -1681,10 +1695,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 105,
+   "prod": 119,
    "unprod": 2,
    "wait": 2,
-   "total": 109
+   "total": 123
   }
  },
  "days": [
@@ -1768,7 +1782,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 76,
+   "prod": 90,
    "unprod": 2,
    "wait": 0
   }
@@ -1860,20 +1874,46 @@ window.PFA_DATA = {
    "total": 13
   },
   {
-   "task": "E1-01",
-   "prod": 10,
+   "task": "T-12",
+   "prod": 12,
    "unprod": 0,
    "wait": 0,
-   "total": 10
+   "total": 12
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 286
+   "minutes": 300
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T05:47:00Z",
+   "minutes": 12,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-12",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Skill/procedimiento aplicados; análisis E1-05 listo, espera revisión antes de editar la app",
+   "evidence": "Captura tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg; https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout"
+  },
+  {
+   "start": "2026-10-01T05:45:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-11",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
+   "evidence": "https://github.com/OscarMarquez83/pfa-tablero/issues/4"
+  },
   {
    "start": "2026-10-01T05:22:00Z",
    "minutes": 4,
@@ -1977,35 +2017,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Revisé por qué el publicador no sincronizó el tablero",
    "evidence": "git pull falla: git-remote-https no se encuentra; el script ocultó el error al no poder escribir publish.log"
-  },
-  {
-   "start": "2026-10-01T01:25:00Z",
-   "minutes": 14,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-10",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Apliqué el selector vertical y el encabezado común en las 7 pantallas; guardé y publiqué la app",
-   "evidence": "Preview: las 7 opciones aparecen y navegan en teléfono e iPad vertical; iPad horizontal mantiene botones; app publicada: My Day → Projects → Diagnostics; Refresh fuera del encabezado. Tablero: push e2451a4; escritura de publish.log denegada"
-  },
-  {
-   "start": "2026-10-01T01:17:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-08",
-   "attempt": 3,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Revisé las 7 pantallas en desktop, teléfono vertical e iPad horizontal; guardé y publiqué la versión 154",
-   "evidence": "Preview: las 7 pantallas cargan y seleccionan la navegación; el menú se recorta en vertical (E1-10); app publicada v154 Live; navegación desde My Day a Projects y desde Projects a Diagnostics confirmada"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T05:47:00Z",
+   "minutes": 12,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-12",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Skill/procedimiento aplicados; análisis E1-05 listo, espera revisión antes de editar la app",
+   "evidence": "Captura tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg; https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout"
+  },
+  {
+   "start": "2026-10-01T05:45:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-11",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
+   "evidence": "https://github.com/OscarMarquez83/pfa-tablero/issues/4"
+  },
   {
    "start": "2026-10-01T05:22:00Z",
    "minutes": 4,
