@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:48:07.118035Z",
+ "generatedUtc": "2026-10-01T01:48:19.947932Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:43 UTC",
+  "updated": "2026-10-01 01:47 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "cerrar T-06: corregir el PATH de Git del publicador, publicar el estado y comprobar GitHub Pages. Después, E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
+  "nextAction": "E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
   "needsOscar": [
    {
     "ref": "E1-09",
@@ -17,8 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-06, intento 3, iniciado 2026-10-01 01:43 UTC. Configurar GIT_EXEC_PATH para que Git encuentre git-remote-https; los intentos anteriores confirmaron que añadirlo solo al PATH no basta. Verificar el push y el data.js publicado.",
-   "T-07, intento 1, iniciado 2026-10-01 01:44 UTC. Mover la aprobación histórica del STATUS a DECISIONS.md y publicar el tablero con solo solicitudes vigentes para Oscar."
+   "T-06 sigue en curso. En el intento 3, Git encontró git-remote-https, pero git pull falló porque no hay credenciales disponibles en esta sesión. El tablero se publicó mediante GitHub y Pages ya sirve los datos corregidos."
   ]
  },
  "revision": {
@@ -334,15 +333,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 5,
+   "done": 6,
    "total": 7,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 82,
-    "unprod": 0,
+    "prod": 85,
+    "unprod": 2,
     "wait": 2,
-    "total": 84
+    "total": 89
    }
   }
  ],
@@ -973,9 +972,9 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "En curso",
     "attempts": 3,
-    "minutes": 0,
+    "minutes": 2,
     "entrega": "T",
-    "fails": 2,
+    "fails": 3,
     "ready": true
    },
    {
@@ -986,12 +985,11 @@ window.PFA_DATA = {
     "expected": "STATUS solo presenta solicitudes de Oscar que sigan pendientes",
     "evidence": "Aprobaciones registradas en DECISIONS.md; tablero publicado y needsOscar coincide con STATUS",
     "limit": 10,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 3,
     "entrega": "T",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    }
   ]
  },
@@ -1005,9 +1003,9 @@ window.PFA_DATA = {
   "limit": 30,
   "status": "En curso",
   "attempts": 3,
-  "minutes": 0,
+  "minutes": 2,
   "entrega": "T",
-  "fails": 2,
+  "fails": 3,
   "ready": true
  },
  "upcoming": [
@@ -1559,37 +1557,51 @@ window.PFA_DATA = {
    "minutes": 4,
    "entrega": "T",
    "fails": 0
+  },
+  {
+   "id": "T-07",
+   "action": "Quitar las notas de aprobación de STATUS y publicarlas solo en DECISIONS.md",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "STATUS solo presenta solicitudes de Oscar que sigan pendientes",
+   "evidence": "Aprobaciones registradas en DECISIONS.md; tablero publicado y needsOscar coincide con STATUS",
+   "limit": 10,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 3,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [
   {
    "task": "T-06",
-   "reason": "2 intentos sin avance: toca revisar documentación",
-   "level": "warning"
+   "reason": "3 intentos sin avance",
+   "level": "serious"
   }
  ],
  "kpi": {
-  "tasksDone": 23,
+  "tasksDone": 24,
   "tasksTotal": 44,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 255,
-   "unprod": 0,
+   "prod": 258,
+   "unprod": 2,
    "wait": 6,
-   "total": 261
+   "total": 266
   },
   "last24h": {
-   "prod": 255,
-   "unprod": 0,
+   "prod": 258,
+   "unprod": 2,
    "wait": 6,
-   "total": 261
+   "total": 266
   },
   "last7d": {
-   "prod": 255,
-   "unprod": 0,
+   "prod": 258,
+   "unprod": 2,
    "wait": 6,
-   "total": 261
+   "total": 266
   },
   "product": {
    "prod": 173,
@@ -1598,10 +1610,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 82,
-   "unprod": 0,
+   "prod": 85,
+   "unprod": 2,
    "wait": 2,
-   "total": 84
+   "total": 89
   }
  },
  "days": [
@@ -1685,16 +1697,16 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 53,
-   "unprod": 0,
+   "prod": 56,
+   "unprod": 2,
    "wait": 0
   }
  ],
  "categories": [
   {
    "category": "AUTH",
-   "minutes": 0,
-   "attempts": 1
+   "minutes": 2,
+   "attempts": 2
   },
   {
    "category": "OTRO",
@@ -1787,10 +1799,36 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 261
+   "minutes": 266
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T01:44:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-07",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Moví la aprobación histórica de STATUS a DECISIONS.md y publiqué el tablero corregido",
+   "evidence": "D-019 registra la aprobación; GitHub Pages sirve data.js sin la nota de aprobación y con E1-09 como único pendiente"
+  },
+  {
+   "start": "2026-10-01T01:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 3,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "AUTH",
+   "summary": "Configuré GIT_EXEC_PATH y probé git pull",
+   "evidence": "Git encontró git-remote-https, pero falló con SEC_E_NO_CREDENTIALS; el tablero se publicó usando GitHub"
+  },
   {
    "start": "2026-10-01T01:43:00Z",
    "minutes": 0,
@@ -1894,35 +1932,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
    "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; index.html y data.js confirmados en main; escritura del log local denegada"
-  },
-  {
-   "start": "2026-09-30T22:40:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-05",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Separé Refresh del encabezado y preparé el selector de navegación para formato vertical.",
-   "evidence": "Un encabezado y Refresh fuera de él en YAML; selector común y DISENO actualizados. Falta aplicar y validar en Studio; dos lecturas del navegador expiraron. La publicación del tablero falló al escribir el log y no se reintentó."
-  },
-  {
-   "start": "2026-09-30T22:00:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-08",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Interrumpí las pruebas al repetirse dos veces el error de nodo desconectado en navegación.",
-   "evidence": "Pestaña de la app publicada abierta; solicito recargarla en Edge y continuar cuando esté lista."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T01:44:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-07",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Moví la aprobación histórica de STATUS a DECISIONS.md y publiqué el tablero corregido",
+   "evidence": "D-019 registra la aprobación; GitHub Pages sirve data.js sin la nota de aprobación y con E1-09 como único pendiente"
+  },
+  {
+   "start": "2026-10-01T01:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 3,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "AUTH",
+   "summary": "Configuré GIT_EXEC_PATH y probé git pull",
+   "evidence": "Git encontró git-remote-https, pero falló con SEC_E_NO_CREDENTIALS; el tablero se publicó usando GitHub"
+  },
   {
    "start": "2026-10-01T01:43:00Z",
    "minutes": 0,
@@ -2514,3 +2552,4 @@ window.PFA_DATA = {
   }
  ]
 };
+
