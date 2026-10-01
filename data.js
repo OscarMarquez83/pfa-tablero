@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T12:25:14.526717Z",
+ "generatedUtc": "2026-10-01T12:31:14.395341Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 12:23 UTC",
+  "updated": "2026-10-01 12:27 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "terminar E2-02 con el origen de datos y la conexión exactos de la app; si falla, aplicar la alternativa estándar ya aprobada por Oscar.",
+  "nextAction": "continuar E2-02: extraer los GUID de las listas desde los orígenes de Power Apps y validar Get items con la conexión de la app; si falla, aplicar la alternativa estándar aprobada.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-02, intento 7; inicio 2026-10-01 12:23 UTC. Reabierta por decisión expresa de Oscar. Defecto: Get items y Send an HTTP request to SharePoint rechazaron la dirección personalizada del sitio actual; el Flow Checker quedó con un error tras retirar Get items. Intentos 1–6: probar direcciones y conexiones; consultar Microsoft Learn y Copilot; insertar la acción HTTP oficial; documentar la alternativa Premium (ahora prohibida). Enfoque distinto: copiar en Power Apps Studio los datos exactos del origen de datos de ambas listas, usar la misma conexión, dirección sin sufijo de lista ni barra final y GUID de lista en Get items. Si falla, aplicar el rediseño estándar autorizado: Outlook lee; Respond to a PowerApp or flow devuelve carpetas; la app compara y crea filas con Patch. Evidencia: Get items con GUID y Flow Checker 0 errores, o ejecución del flujo de lectura y Patch de filas nuevas sin conector Premium."
+   "E2-02, intento 7; inicio 2026-10-01 12:23 UTC. Reabierta por decisión expresa de Oscar. Defecto: Get items y Send an HTTP request to SharePoint rechazaron la dirección personalizada del sitio actual; el Flow Checker quedó con un error tras retirar Get items. Intentos 1–6: probar direcciones y conexiones; consultar Microsoft Learn y Copilot; insertar la acción HTTP oficial; documentar la alternativa Premium (ahora prohibida). Enfoque 7: el flujo existente mostró error por barra final; al quitarla, desapareció “No se encontró la dirección del sitio”. Falta obtener los GUID de los orígenes de la app y comprobar Get items con la misma conexión. Si Get items falla, aplicar la alternativa estándar preaprobada: Outlook lee; Respond to a PowerApp or flow devuelve carpetas; la app compara y crea filas con Patch. Evidencia pendiente: Get items configurado por GUID y Flow Checker 0, o el rediseño ejecutado con filas nuevas creadas desde la app. No usar Premium ni solicitar permisos/consentimientos/cambios de tenant."
   ],
-  "fileUtc": "2026-10-01T12:23:41.512479Z"
+  "fileUtc": "2026-10-01T12:28:00.556384Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -204,10 +204,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 2,
+    "prod": 5,
     "unprod": 16,
     "wait": 5,
-    "total": 23
+    "total": 26
    }
   },
   {
@@ -643,15 +643,15 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-02",
-    "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
+    "action": "Crear PFA_E2_LeerCarpetas con trigger manual. La lectura de Outlook identifica carpetas de Projects. En el intento 7, quitar la barra final de la dirección de SharePoint hizo desaparecer el error de sitio en el diseñador; resta extraer los GUID desde los orígenes de la app y validar Get items con la misma conexión. Si la validación falla, aplicar el diseño alternativo estándar ya autorizado: el flujo solo lee Outlook y responde a la app; Configuration compara con PFA_MailFolders y hace Patch de filas nuevas al abrirse o con Scan folders",
     "owner": "Agente",
     "depends": "E2-01",
-    "expected": "Flujo de nivel 1 guardado",
-    "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
+    "expected": "Carpetas nuevas detectadas y disponibles para decisión",
+    "evidence": "Flujo manual guardado; si SharePoint funciona: Get items por GUID, conexión igual a la app, Flow Checker 0. Si falla: rediseño autorizado sin SharePoint en el flujo; responder carpetas a la app para comparar y agregar filas nuevas con Patch",
     "limit": 90,
     "status": "Reabierta",
-    "attempts": 6,
-    "minutes": 16,
+    "attempts": 7,
+    "minutes": 19,
     "entrega": "E2",
     "fails": 3,
     "ready": true
@@ -1044,15 +1044,15 @@ window.PFA_DATA = {
  },
  "nextTask": {
   "id": "E2-02",
-  "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
+  "action": "Crear PFA_E2_LeerCarpetas con trigger manual. La lectura de Outlook identifica carpetas de Projects. En el intento 7, quitar la barra final de la dirección de SharePoint hizo desaparecer el error de sitio en el diseñador; resta extraer los GUID desde los orígenes de la app y validar Get items con la misma conexión. Si la validación falla, aplicar el diseño alternativo estándar ya autorizado: el flujo solo lee Outlook y responde a la app; Configuration compara con PFA_MailFolders y hace Patch de filas nuevas al abrirse o con Scan folders",
   "owner": "Agente",
   "depends": "E2-01",
-  "expected": "Flujo de nivel 1 guardado",
-  "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
+  "expected": "Carpetas nuevas detectadas y disponibles para decisión",
+  "evidence": "Flujo manual guardado; si SharePoint funciona: Get items por GUID, conexión igual a la app, Flow Checker 0. Si falla: rediseño autorizado sin SharePoint en el flujo; responder carpetas a la app para comparar y agregar filas nuevas con Patch",
   "limit": 90,
   "status": "Reabierta",
-  "attempts": 6,
-  "minutes": 16,
+  "attempts": 7,
+  "minutes": 19,
   "entrega": "E2",
   "fails": 3,
   "ready": true
@@ -1060,15 +1060,15 @@ window.PFA_DATA = {
  "upcoming": [
   {
    "id": "E2-02",
-   "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
+   "action": "Crear PFA_E2_LeerCarpetas con trigger manual. La lectura de Outlook identifica carpetas de Projects. En el intento 7, quitar la barra final de la dirección de SharePoint hizo desaparecer el error de sitio en el diseñador; resta extraer los GUID desde los orígenes de la app y validar Get items con la misma conexión. Si la validación falla, aplicar el diseño alternativo estándar ya autorizado: el flujo solo lee Outlook y responde a la app; Configuration compara con PFA_MailFolders y hace Patch de filas nuevas al abrirse o con Scan folders",
    "owner": "Agente",
    "depends": "E2-01",
-   "expected": "Flujo de nivel 1 guardado",
-   "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
+   "expected": "Carpetas nuevas detectadas y disponibles para decisión",
+   "evidence": "Flujo manual guardado; si SharePoint funciona: Get items por GUID, conexión igual a la app, Flow Checker 0. Si falla: rediseño autorizado sin SharePoint en el flujo; responder carpetas a la app para comparar y agregar filas nuevas con Patch",
    "limit": 90,
    "status": "Reabierta",
-   "attempts": 6,
-   "minutes": 16,
+   "attempts": 7,
+   "minutes": 19,
    "entrega": "E2",
    "fails": 3,
    "ready": true
@@ -1709,7 +1709,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (6 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (7 intentos previos)",
    "level": "serious"
   }
  ],
@@ -1719,28 +1719,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 411,
+   "prod": 414,
    "unprod": 18,
    "wait": 17,
-   "total": 446
+   "total": 449
   },
   "last24h": {
-   "prod": 306,
+   "prod": 285,
    "unprod": 18,
    "wait": 17,
-   "total": 341
+   "total": 320
   },
   "last7d": {
-   "prod": 411,
+   "prod": 414,
    "unprod": 18,
    "wait": 17,
-   "total": 446
+   "total": 449
   },
   "product": {
-   "prod": 275,
+   "prod": 278,
    "unprod": 16,
    "wait": 9,
-   "total": 300
+   "total": 303
   },
   "support": {
    "prod": 136,
@@ -1830,7 +1830,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 209,
+   "prod": 212,
    "unprod": 18,
    "wait": 11
   }
@@ -1915,18 +1915,18 @@ window.PFA_DATA = {
    "total": 19
   },
   {
+   "task": "E2-02",
+   "prod": 3,
+   "unprod": 16,
+   "wait": 0,
+   "total": 19
+  },
+  {
    "task": "T-12",
    "prod": 18,
    "unprod": 0,
    "wait": 0,
    "total": 18
-  },
-  {
-   "task": "E2-02",
-   "prod": 0,
-   "unprod": 16,
-   "wait": 0,
-   "total": 16
   },
   {
    "task": "E1-10",
@@ -1946,10 +1946,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 446
+   "minutes": 449
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T12:23:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 7,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Reapertura: corregí la dirección del sitio eliminando la barra final; desapareció el error de sitio. Falta GUID de lista para Get items",
+   "evidence": "Power Automate muestra dirección personalizada válida sin el error; falta GUID y Flow Checker 0; app confirma conexión SharePoint de las listas"
+  },
   {
    "start": "2026-10-01T11:45:00Z",
    "minutes": 6,
@@ -2066,22 +2079,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
    "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
-  },
-  {
-   "start": "2026-10-01T11:17:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-10",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Se configuró PFA Tablero con repetición de 3 minutos",
-   "evidence": "Set-ScheduledTask; (Get-ScheduledTask ...).Triggers.Repetition.Interval = PT3M; python tools/build_dashboard.py generó status.fileUtc; Pages mostró Último reporte del agente hace 7 min"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T12:23:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 7,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Reapertura: corregí la dirección del sitio eliminando la barra final; desapareció el error de sitio. Falta GUID de lista para Get items",
+   "evidence": "Power Automate muestra dirección personalizada válida sin el error; falta GUID y Flow Checker 0; app confirma conexión SharePoint de las listas"
+  },
   {
    "start": "2026-10-01T11:45:00Z",
    "minutes": 6,
