@@ -101,6 +101,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .stage .sfoot { font-size: 11px; color: var(--muted); margin-top: 6px; }
 .stage.accepted .meter > i { background: var(--good); }
 .stage.undetailed { opacity: .7; }
+.stage[data-id="T"] { background: var(--surface); outline: 1px dashed var(--axis); outline-offset: -1px; }
 .tag-now { font-size: 10px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
 
 .grid-main { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 16px; margin-top: 16px; }
@@ -201,6 +202,16 @@ footer { color: var(--muted); font-size: 12px; margin-top: 24px; text-align: cen
   .chip .ic { width: 16px; height: 16px; font-size: 10px; }
 }
 /* v2 */
+button.light { border: 0; cursor: pointer; font: inherit; font-size: 12px; font-weight: 600; }
+button.light:hover { filter: brightness(0.97); }
+.revlink { background: none; border: 0; color: var(--accent); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; padding: 6px 0 0; }
+.livehead { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 16px 0 6px; padding-top: 12px; border-top: 1px solid var(--grid); }
+.revbody p { margin: 6px 0; color: var(--ink-2); font-size: 13px; }
+.revbody ul { margin: 6px 0; padding-left: 18px; color: var(--ink-2); font-size: 13px; }
+.reason { border-radius: 10px; padding: 10px 12px; margin-bottom: 6px; font-size: 13px; }
+.reason.ROJO { background: var(--critical-soft); color: var(--critical-ink); }
+.reason.AMARILLO { background: var(--warning-soft); color: var(--warning-ink); }
+.reason.VERDE { background: var(--good-soft); color: var(--good-ink); }
 :root { --s3: #b4b2a9; }
 @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --s3: #6b6a65; } }
 :root[data-theme="dark"] { --s3: #6b6a65; }
@@ -246,7 +257,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
       </div>
     </div>
     <div class="top-right">
-      <span id="light" class="light NONE"><span class="dot">?</span><span>Sin revisión</span></span>
+      <button type="button" id="light" class="light NONE" title="Ver la revisión completa"><span class="dot">?</span><span>Sin revisión</span></button>
       <a class="btn" id="instr" href="#" target="_blank" rel="noopener" style="display:none;text-decoration:none">Enviar instrucción</a>
       <button class="btn" id="theme" type="button" aria-label="Cambiar tema">Tema</button>
     </div>
@@ -297,16 +308,18 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
 
   <div class="charts">
     <section class="card">
-      <h2>Actividad reciente <span class="hint">cada intento registrado</span></h2>
+      <h2>Actividad reciente <span class="hint">últimos 10 intentos</span></h2>
       <ul class="feed" id="feed"></ul>
+      <button type="button" class="revlink" id="feedall">Ver historial completo →</button>
     </section>
     <section class="card">
-      <h2>Ideas y hallazgos <span class="hint">a qué entrega se heredan</span></h2>
+      <h2>Ideas y hallazgos <span class="hint">solo los que esperan decisión</span></h2>
       <ul class="list ideas" id="ideas"></ul>
+      <div class="sub" id="ideas-foot" style="margin-top:10px"></div>
     </section>
   </div>
 
-  <footer>Fuente: carpeta control/ del repositorio. Se regenera cada hora con <code>tools/publish_dashboard.ps1</code>.</footer>
+  <footer>Fuente: carpeta control/ del repositorio. Se publica cada 15 minutos si hay cambios y al cerrar cada intento del agente.</footer>
 </div>
 <div class="tip" id="tip"></div>
 <dialog id="dlg"><div class="dlg-head"><h3 id="dlg-title"></h3><button class="x" id="dlg-x" type="button" aria-label="Cerrar">✕</button></div><div class="dlg-body" id="dlg-body"></div></dialog>
@@ -407,6 +420,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
     hours: function () {
       var T = D.kpi.time;
       var html = stackBar(T) + '<p class="sub">' + dur(T.total) + " en total · " + dur(T.prod) + " con avance · " + dur(T.unprod) + " sin avance · " + dur(T.wait) + " en espera</p>";
+      if (D.kpi.product && D.kpi.support) html += "<h4>Producto vs. soporte</h4><table class='mini'><tr><td><b>Producto</b> (entregas E0–E10)</td><td style='width:45%'>" + stackBar(D.kpi.product) + "</td><td class='n'>" + dur(D.kpi.product.total) + "</td></tr><tr><td><b>Soporte</b> (T: tablero, herramientas, pedidos fuera del plan)</td><td style='width:45%'>" + stackBar(D.kpi.support) + "</td><td class='n'>" + dur(D.kpi.support.total) + "</td></tr></table>";
       html += "<h4>Por entrega</h4><table class='mini'>" + D.entregas.filter(function (e) { return e.time.total; }).map(function (e) { return "<tr><td><b>" + esc(e.id) + "</b></td><td style='width:45%'>" + stackBar(e.time) + "</td><td class='n'>" + dur(e.time.total) + "</td></tr>"; }).join("") + "</table>";
       html += "<h4>Tareas con más tiempo</h4><table class='mini'>" + D.topTasks.map(function (t) { return "<tr><td><b>" + esc(t.task) + "</b></td><td style='width:45%'>" + stackBar(t) + "</td><td class='n'>" + dur(t.total) + "</td></tr>"; }).join("") + "</table>";
       if (D.waits.length) html += "<h4>Tiempo en espera</h4><table class='mini'>" + D.waits.map(function (w) { return "<tr><td>" + esc(CAT_NAME[w.category] || w.category) + "</td><td class='n'>" + dur(w.minutes) + "</td></tr>"; }).join("") + "</table>";
@@ -436,7 +450,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   var kpis = [
     { k: "active", label: "Entrega activa", value: esc(active.id || "—"), foot: esc(active.title || active.goal || "") },
     { k: "tasks", label: "Tareas hechas", value: K.tasksDone + " <small>/ " + K.tasksTotal + "</small>", meter: pct(K.tasksDone, K.tasksTotal), foot: D.nextTask ? "sigue " + esc(D.nextTask.id) : "de las entregas detalladas" },
-    { k: "hours", label: "Horas del agente", value: hours(K.time.total) + " <small>h</small>", foot: hours(K.last24h.total) + " h en las últimas 24 h" },
+    { k: "hours", label: "Horas del agente", value: hours(K.time.total) + " <small>h</small>", foot: (K.support && K.support.total ? hours(K.product.total) + " h producto · " + hours(K.support.total) + " h soporte" : hours(K.last24h.total) + " h en las últimas 24 h") },
     { k: "prod", label: "Tiempo con avance", value: w7 ? pct(d7.prod, w7) + " <small>%</small>" : "—", foot: "últimos 7 días", warn: w7 && pct(d7.prod, w7) < 50 },
     { k: "oscar", label: "Pendientes de Oscar", value: D.status.needsOscar.length, foot: D.status.needsOscar.length ? "toca para responder" : "nada pendiente", warn: D.status.needsOscar.length > 0 },
     { k: "alerts", label: "Alertas", value: alertsAll.length, foot: alertsAll.length ? "tareas o hallazgos en problemas" : "sin alertas", warn: alertsAll.length > 0 }
@@ -491,16 +505,60 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   }
 
   // ---------- Revisión ----------
+  function revWhen() {
+    if (!rv) return "";
+    if (rv.dateIso) {
+      var h = Math.floor((Date.now() - new Date(rv.dateIso).getTime()) / 3600000);
+      return fmtDate(rv.dateIso, { dateStyle: "medium", timeStyle: "short" }) + " (hora Central) · " + (h >= 1 ? "hace " + h + " h" : "hace menos de 1 h");
+    }
+    return rv.date || "";
+  }
+  function mdBlock(lines) {
+    var out = "", i = 0;
+    while (i < lines.length) {
+      var l = lines[i];
+      if (/^\s*\|/.test(l)) {
+        var rows = [];
+        while (i < lines.length && /^\s*\|/.test(lines[i])) { if (!/^\s*\|[\s:\-|]+\|\s*$/.test(lines[i])) rows.push(lines[i]); i++; }
+        out += "<table class='mini'>" + rows.map(function (r, j) {
+          var cells = r.trim().replace(/^\||\|$/g, "").split("|");
+          return "<tr>" + cells.map(function (c) { return (j === 0 ? "<th>" : "<td>") + esc(c.trim().replace(/`/g, "")) + (j === 0 ? "</th>" : "</td>"); }).join("") + "</tr>";
+        }).join("") + "</table>";
+        continue;
+      }
+      if (/^\s*[-*] /.test(l)) {
+        var items = [];
+        while (i < lines.length && /^\s*[-*] /.test(lines[i])) { items.push(lines[i].replace(/^\s*[-*] /, "")); i++; }
+        out += "<ul>" + items.map(function (x) { return "<li>" + esc(x.replace(/`/g, "")) + "</li>"; }).join("") + "</ul>";
+        continue;
+      }
+      out += "<p>" + esc(l.replace(/`/g, "")) + "</p>"; i++;
+    }
+    return out;
+  }
+  function openRevision() {
+    if (!rv) { openDlg("Revisión del agente revisor", '<div class="empty">Todavía no hay revisión.</div>'); return; }
+    var txt = { VERDE: "En verde", AMARILLO: "Atención", ROJO: "En rojo" }[rv.light] || "Sin semáforo";
+    var html = '<p class="sub">' + esc(revWhen()) + "</p>";
+    html += '<div class="reason ' + esc(rv.light) + '"><b>' + txt + ".</b> " + esc(rv.reason || "Esta revisión no indica el motivo del semáforo. Las próximas lo incluyen en la línea «Motivo del semáforo».") + "</div>";
+    html += '<div class="revbody">' + (rv.sections || []).map(function (s) { return "<h4>" + esc(s.title) + "</h4>" + mdBlock(s.lines); }).join("") + "</div>";
+    html += '<p class="sub" style="margin-top:14px">El semáforo se mantiene hasta la siguiente revisión (cada 4 horas). Si el agente avanzó después, puede estar desactualizado.</p>';
+    openDlg("Revisión del agente revisor", html);
+  }
+  $("light").onclick = openRevision;
   (function () {
     var html = "";
     if (rv && rv.summary && rv.summary.length) {
+      $("rev-date").textContent = revWhen();
       html += '<ul class="revsum">' + rv.summary.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>";
-      $("rev-date").textContent = rv.date || "";
-    } else html += '<div class="empty">Todavía no hay revisión. El revisor corre a las 4:30 a. m. y 5:00 p. m.</div>';
-    if (D.nextTask) html += '<div class="next"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
-    else if (D.status.nextAction) html += '<div class="next"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
+      html += '<button type="button" class="revlink" id="revmore">Ver revisión completa y motivo del semáforo →</button>';
+    } else html += '<div class="empty">Todavía no hay revisión. El revisor corre cada 4 horas.</div>';
+    html += '<div class="livehead">Ahora mismo · agente constructor (se actualiza con cada publicación)</div>';
+    if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
+    else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
     if (D.status.current && D.status.current.length) html += '<div class="next" style="background:var(--surface-2)"><b style="color:var(--ink)">En curso:</b> ' + D.status.current.map(esc).join(" · ") + "</div>";
     $("rev").innerHTML = html;
+    if ($("revmore")) $("revmore").onclick = openRevision;
   })();
 
   // ---------- Oscar ----------
@@ -518,18 +576,38 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   $("alerts").innerHTML = alertItems();
 
   // ---------- Ideas ----------
-  var openIdeas = D.ideas.filter(function (i) { return /^abierto/i.test(i.status); });
-  $("ideas").innerHTML = D.ideas.length ? D.ideas.map(function (i) {
-    var pd = /por decidir/i.test(i.target);
-    var done = !/^abierto/i.test(i.status);
-    return '<li' + (done ? ' style="opacity:.6"' : "") + '><span class="tgt' + (pd ? " pd" : "") + '">' + esc(i.target || "—") + '</span><span style="flex:1">' + esc(i.text) + '<div class="sub" style="font-size:12px">' + esc(i.status) + (i.found ? " · " + esc(i.found) : "") + "</div></span></li>";
-  }).join("") : '<li style="background:none;padding:0"><div class="empty">Sin hallazgos registrados.</div></li>';
+  function ideaKind(i) {
+    var st = (i.status || "").toLowerCase(), tg = (i.target || "").toLowerCase();
+    if (/^(incorporado|descartado|cerrado)/.test(st)) return "closed";
+    if (!tg || /por decidir/.test(tg) || /por decidir/.test(st)) return "pending";
+    return "assigned";
+  }
+  function ideaItem(i) {
+    var k = ideaKind(i);
+    return '<li' + (k === "closed" ? ' style="opacity:.65"' : "") + '><span class="tgt' + (k === "pending" ? " pd" : "") + '">' + esc(k === "pending" ? "Por decidir" : (i.target || "—")) + '</span><span style="flex:1">' + (i.id ? "<b>" + esc(i.id) + "</b> · " : "") + esc(i.text) + '<div class="sub" style="font-size:12px">' + esc(i.status) + (i.found ? " · " + esc(i.found) : "") + (i.date ? " · " + esc(i.date) : "") + "</div></span></li>";
+  }
+  var IDEAS = { pending: [], assigned: [], closed: [] };
+  D.ideas.forEach(function (i) { IDEAS[ideaKind(i)].push(i); });
+  $("ideas").innerHTML = IDEAS.pending.length ? IDEAS.pending.map(ideaItem).join("") : '<li style="background:none;padding:0"><div class="empty"><span class="ok">✓</span>Nada esperando decisión</div></li>';
+  $("ideas-foot").innerHTML = IDEAS.assigned.length + " asignados a una entrega (se incorporan al planearla) · " + IDEAS.closed.length + " cerrados · " + '<button type="button" class="revlink" id="ideasall" style="padding:0">Ver todos →</button>';
+  $("ideasall").onclick = function () {
+    openDlg("Ideas y hallazgos", "<h4>Esperan decisión (" + IDEAS.pending.length + ")</h4>" + (IDEAS.pending.length ? '<ul class="list ideas">' + IDEAS.pending.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>') +
+      "<h4>Asignados a una entrega (" + IDEAS.assigned.length + ")</h4>" + (IDEAS.assigned.length ? '<ul class="list ideas">' + IDEAS.assigned.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>') +
+      "<h4>Cerrados: incorporados o descartados (" + IDEAS.closed.length + ")</h4>" + (IDEAS.closed.length ? '<ul class="list ideas">' + IDEAS.closed.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>'));
+  };
 
   // ---------- Actividad ----------
-  $("feed").innerHTML = D.recent.length ? D.recent.map(function (r) {
+  function feedItem(r) {
     return '<li><div class="when">' + fmtDate(r.start, { day: "numeric", month: "short" }) + "<br>" + fmtDate(r.start, { hour: "numeric", minute: "2-digit" }) +
       '</div><div class="what"><div class="row1"><b>' + esc(r.task) + '</b><span class="res ' + esc(r.result) + '">' + esc(r.result.replace("_", " ")) + '</span><span class="num" style="color:var(--muted);font-size:12px">' + r.minutes + " min · intento " + r.attempt + (r.kind !== "prod" ? " · " + esc(r.category) : "") + '</span></div><div class="sum">' + esc(r.summary) + "</div></div></li>";
-  }).join("") : '<li style="display:block"><div class="empty">Sin registros todavía. El agente agrega una línea a control/worklog.csv al cerrar cada intento.</div></li>';
+  }
+  $("feed").innerHTML = D.recent.length ? D.recent.map(feedItem).join("") : '<li style="display:block"><div class="empty">Sin registros todavía. El agente agrega una línea a control/worklog.csv al cerrar cada intento.</div></li>';
+  $("feedall").onclick = function () {
+    var H = D.history || D.recent, groups = {}, order = [];
+    H.forEach(function (r) { var d = fmtDate(r.start, { weekday: "long", day: "numeric", month: "long" }); if (!groups[d]) { groups[d] = []; order.push(d); } groups[d].push(r); });
+    openDlg("Historial de intentos", '<p class="sub">' + H.length + " intentos registrados" + (H.length >= 300 ? " (últimos 300)" : "") + ", del más reciente al más antiguo.</p>" +
+      order.map(function (d) { var mins = groups[d].reduce(function (s, r) { return s + r.minutes; }, 0); return "<h4>" + esc(d) + " · " + dur(mins) + "</h4><ul class='feed'>" + groups[d].map(feedItem).join("") + "</ul>"; }).join(""));
+  };
 
   // ---------- Gráficas ----------
   var tip = $("tip");
@@ -600,7 +678,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   function drawCharts() { drawDays(); drawCats(); }
   drawRoad(); drawTasks(); drawCharts();
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawCharts, 120); });
-  setTimeout(function () { if (!dlg.open) location.reload(); }, 10 * 60 * 1000);
+  setTimeout(function () { if (!dlg.open) location.reload(); }, 5 * 60 * 1000);
 })();
 </script>
 </body>

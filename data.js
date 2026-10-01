@@ -1,30 +1,151 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T00:09:20.963005Z",
+ "generatedUtc": "2026-10-01T00:39:22.914272Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-09-30 22:44 UTC (avance local de E1-05 y especificación del menú vertical)",
+  "updated": "2026-10-01 00:37 UTC (inicio de T-04 según el nuevo pedido de Oscar)",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "completar E1-05 en Power Apps Studio, sacar Refresh del encabezado de My Day, borrar cualquier encabezado duplicado, y aplicar E1-10. Tras dos intentos, la automatización no pudo leer el estado actual de Power Apps. Necesito que Oscar abra PFA_Pilot_App en Studio, seleccione My Day y escriba lista; no tiene que comprobar archivos ni probar propiedades. La publicación del tablero no quedó confirmada: el script falló al escribir su log; no lo reintenté.",
+  "nextAction": "cerrar T-04, luego terminar E1-05 en Power Apps, ejecutar E1-08 y aplicar E1-10 en ese orden. Oscar ya inició sesión. Intentaré recuperar Power Apps desde Edge y el navegador integrado sin pedirle pasos operativos.",
   "needsOscar": [
    {
-    "ref": "E1-05",
-    "text": "abre Power Apps Studio, entra a PFA_Pilot_App, selecciona la pantalla My Day en el árbol y déjala visible. Escríbeme lista. No cambies controles ni revises archivos. Con la pestaña abierta podré inspeccionar y corregir el árbol desde aquí."
+    "ref": "",
+    "text": "Vacío. Solo pediré a Oscar aprobar, decidir, iniciar sesión o probar la app como usuario, según la sección 10 de AGENTS.md."
    }
   ],
   "blockers": [],
-  "current": []
+  "current": [
+   "Tarea: T-04 — En curso",
+   "Intento: 1",
+   "Inicio (UTC): 2026-10-01 00:37",
+   "Qué haré: integrar las reglas y cambios de tablero solicitados, registrar la aprobación de E1-10 y reordenar E1-08.",
+   "Cómo comprobaré el resultado: buscar cada texto solicitado, validar clasificación y filtros del tablero, confirmar E1-08 Pendiente con dependencia E1-05, y revisar la pestaña Power Apps en Edge."
+  ]
  },
  "revision": {
   "light": "AMARILLO",
+  "reason": "T-01 acumula 41 minutos sobre un límite de 30; E1-08 espera autenticación y INC-01 tiene verificación pendiente. No se detectan incumplimientos nuevos desde la revisión anterior.",
   "date": "2026-09-30 21:53 UTC",
+  "dateIso": "2026-09-30T21:53:00Z",
   "summary": [
    "E0 aceptada: 9/9; E1: 7/9, sin nueva tarea funcional cerrada desde la revisión anterior.",
    "191 minutos efectivos y 6 de espera; 100 % del tiempo efectivo registrado es HECHA o AVANCE.",
    "Cuatro incidentes cerrados; INC-01 sigue abierto con respuesta y preview pendiente de login."
+  ],
+  "sections": [
+   {
+    "title": "Resumen en 3 líneas",
+    "lines": [
+     "E0 aceptada: 9/9; E1: 7/9, sin nueva tarea funcional cerrada desde la revisión anterior.",
+     "191 minutos efectivos y 6 de espera; 100 % del tiempo efectivo registrado es HECHA o AVANCE.",
+     "Cuatro incidentes cerrados; INC-01 sigue abierto con respuesta y preview pendiente de login."
+    ]
+   },
+   {
+    "title": "Tiempo",
+    "lines": [
+     "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
+     "|---|---|---|---|",
+     "| Últimas 24 horas | 3,283333 (197 min, incluye espera) | 96,954315 | 0 |",
+     "| Desde 2026-09-30 | 3,283333 (197 min, incluye espera) | 96,954315 | 0 |",
+     "28 filas en ambos periodos. Trabajo efectivo: 191 min (3,183333 h); HECHA/AVANCE: 191 min. Productivo sobre total incluyendo ESPERA: 191/197. Sobre tiempo efectivo: 100 %. Se usa la columna minutos; no se inventa tiempo entre registros.",
+     "| Entrega | Minutos efectivos, 24 h y acumulado |",
+     "|---|---|",
+     "| E0 | 3 |",
+     "| E1 | 129 |",
+     "| T | 59 |",
+     "| E2–E10 | 0 |",
+     "| Tarea | Minutos efectivos, 24 h y acumulado | Límite (min) |",
+     "|---|---|---|",
+     "| E0-01 | 0 | 15 |",
+     "| E0-02 | 0 | 10 |",
+     "| E0-03 | 1 | 10 |",
+     "| E0-04 | 1 | 10 |",
+     "| E0-05 a E0-08 | 0 (reatribuidos a T-01) | 20 / 20 / 30 / 30 |",
+     "| E0-09 | 1 | — |",
+     "| E1-01 | 10 | 20 |",
+     "| E1-02 | 6 | 30 |",
+     "| E1-03 | 2 | 20 |",
+     "| E1-04 | 13 | 90 |",
+     "| E1-05 | 30 | 60 |",
+     "| E1-06 | 24 | 60 |",
+     "| E1-07 | 29 | 60 |",
+     "| E1-08 | 15 | 30 |",
+     "| T-01 | 41 | 30 |",
+     "| T-02 | 7 | 30 |",
+     "| T-03 | 11 | 90 |",
+     "Espera en 24 h: AUTH 4 min (1 fila); NAVEGADOR 2 min (1 fila). Último registro: 2:36 p. m. Central. El intervalo posterior sin registro no cuenta como espera."
+    ]
+   },
+   {
+    "title": "Avance por entrega",
+    "lines": [
+     "| Entrega | Hechas / total |",
+     "|---|---|",
+     "| E0 | 9 / 9 |",
+     "| E1 | 7 / 9 |",
+     "| E2 | 0 / 10 |",
+     "| E3 | 0 / 8 |",
+     "| T | 3 / 3 |",
+     "| E4–E10 | Sin detallar |",
+     "T-02 y T-03 se cerraron desde la revisión anterior. E1-08 no acredita versión publicada ni prueba en la app publicada; permanece En curso. La evidencia funcional se toma del worklog, sin comprobación en vivo."
+    ]
+   },
+   {
+    "title": "Tareas en alerta",
+    "lines": [
+     "| Tarea | Motivo | Intentos | Minutos / límite |",
+     "|---|---|---|---|",
+     "| T-01 | Supera el límite por 11 min; tarea retrospectiva Hecha, con tiempo reatribuido | 7 (1 SIN_AVANCE) | 41 / 30 |",
+     "| E1-08 | Espera login; falta preview de Configuration, publicación y prueba publicada | 1 efectivo y 1 fila ESPERA | 15 / 30 |",
+     "E1-08 tiene su última fila a las 8:40 a. m. Central: aún no cumple 12 horas sin registro. Ninguna tarea suma 3 SIN_AVANCE ni permanece Bloqueada/Por validar más de 24 horas."
+    ]
+   },
+   {
+    "title": "Problemas más frecuentes (sin avance, por categoría)",
+    "lines": [
+     "| Categoría | Minutos | Intentos |",
+     "|---|---|---|",
+     "| AUTH | 0 | 1 |"
+    ]
+   },
+   {
+    "title": "Incumplimientos de AGENTS.md",
+    "lines": [
+     "### Nuevos",
+     "Ninguno confirmado desde la revisión anterior. El soporte posterior está registrado en T-02/T-03. El exceso retrospectivo de T-01 se informa como alerta; no demuestra un intento nuevo que continuara tras superar el límite.",
+     "### Atendidos",
+     "INC-02, INC-03, INC-04 e INC-05 figuran Cerrado. INC-02 está justificado como reubicación del historial existente. INC-03 fue reemplazado por la revisión del revisor. INC-04 está en control/KNOWN-FIXES.md. INC-05 cerró con Import-Csv. Se conservan sus IDs; no se cuentan otra vez.",
+     "INC-01 figura Abierto, pero tiene respuesta en T-03, KF-P02 y HZ-09: se detuvieron cambios de la galería hasta E2. Falta verificar Configuration en preview tras el login. No está listo para cerrar. La pausa no es un incumplimiento sin respuesta.",
+     "### Sin respuesta",
+     "Ninguno. No hay cambios nuevos en documentos congelados después del aviso E0-03. Los archivos de la línea base E0-01 estaban autorizados. Los cambios visuales registrados tienen YAML. No se detectan datos reales de clientes, asuntos o remitentes en PLAN, STATUS ni worklog; PFA-Prueba es una carpeta de prueba aprobada.",
+     "Los resúmenes no muestran 3 fallos repetidos sin documentación/Copilot ni validación local después de editar solo control. Los cierres recientes tienen commits; el último es 3fc63c8. dashboard/data.js ya estaba modificado al iniciar y no se incluye en el commit de esta revisión."
+    ]
+   },
+   {
+    "title": "Hallazgos sin heredar",
+    "lines": [
+     "0 hallazgos Por decidir; ninguno supera 48 horas. HZ-09 está Abierto con destino E2 aprobado: debe convertirse en tarea o proponerse para descarte al retomar E2. HZ-07 está Abierto con destino T y todavía no tiene tarea propia. HZ-01/HZ-08 esperan E5, HZ-03 E6 y HZ-04 E7. HZ-02/HZ-05 están incorporados en E2 y HZ-06 en D-013."
+    ]
+   },
+   {
+    "title": "Oscar tiene que decidir o hacer",
+    "lines": [
+     "- E1-08: en Edge, pestaña Power Apps Studio de PFA_Pilot_App, pulsar Sign in, completar el acceso y MFA y responder «login listo». Es el único pedido vigente de STATUS.",
+     "- E1-09: recorrer las 7 pantallas cuando E1-08 haya publicado y comprobado la app; todavía no está lista para aceptación.",
+     "Issues: no verificados en esta corrida.",
+     "GitHub CLI devolvió Access is denied. El agente constructor procesa los issues al empezar su sesión."
+    ]
+   },
+   {
+    "title": "Límites de esta revisión",
+    "lines": [
+     "Se leyeron archivos y el historial Git de 36 horas. No se abrieron Power Automate, Power Apps ni SharePoint. No se hicieron correcciones ni se ejecutó validación local.",
+     "Publicación: se ejecutó pwsh -NoProfile -File tools/publish_dashboard.ps1 una sola vez. Regeneró dashboard/data.js, pero terminó con código 1 por permisos: Access to the path 'C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log' is denied. El fallo al escribir el log impide confirmar el error previo o la publicación. No se reintentó; Windows lo publicará en máximo 15 minutos."
+    ]
+   }
   ]
  },
  "activeEntrega": "E1",
@@ -207,12 +328,12 @@ window.PFA_DATA = {
   },
   {
    "id": "T",
-   "title": "",
+   "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 0,
-   "total": 0,
-   "detailed": false,
+   "done": 3,
+   "total": 4,
+   "detailed": true,
    "active": false,
    "time": {
     "prod": 59,
@@ -770,6 +891,65 @@ window.PFA_DATA = {
     "fails": 0,
     "ready": false
    }
+  ],
+  "T": [
+   {
+    "id": "T-01",
+    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El trabajo previo queda atribuido a T sin duplicar horas históricas",
+    "evidence": "7 filas del worklog reatribuidas desde E0-05–E0-08 a T-01; se conservan horas, resultados y resúmenes",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 7,
+    "minutes": 41,
+    "entrega": "T",
+    "fails": 1
+   },
+   {
+    "id": "T-02",
+    "action": "Revisar la publicación cada 15 minutos, reconciliar el hueco del log y dejar registrada la causa",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El registro de publicaciones concuerda con los commits del tablero",
+    "evidence": "Publicaciones 12:39 y 13:39 Central verificadas contra el clon y el sitio; causa documentada en KNOWN-FIXES.md",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 7,
+    "entrega": "T",
+    "fails": 0
+   },
+   {
+    "id": "T-03",
+    "action": "Aplicar los puntos B y C del pedido de Oscar: reglas, incidentes, lecciones, pendientes y publicación",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Los cinco incidentes quedan registrados y el tablero muestra el pendiente de E1-08",
+    "evidence": "Archivos de control actualizados, automatizaciones alineadas, preview comprobado o bloqueo de login registrado, y tablero publicado",
+    "limit": 90,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 11,
+    "entrega": "T",
+    "fails": 0
+   },
+   {
+    "id": "T-04",
+    "action": "Integrar la skill planear y los cambios de procedimiento pedidos: rol de Oscar, recuperación del navegador, clasificación de hallazgos, política del tablero y estado/decisión de E1",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Reglas coherentes, tablero genera solo pendientes de Oscar y E1 continúa en el orden pedido",
+    "evidence": "Skill y configuración presentes; reglas, incidentes y hallazgos actualizados; $heartbeatMinutes = 15; E1-08 Pendiente depende de E1-05; decisión de E1-10 registrada; tablero y commit actualizados",
+    "limit": 90,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "ready": true
+   }
   ]
  },
  "nextTask": {
@@ -1224,6 +1404,48 @@ window.PFA_DATA = {
    "minutes": 29,
    "entrega": "E1",
    "fails": 0
+  },
+  {
+   "id": "T-01",
+   "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El trabajo previo queda atribuido a T sin duplicar horas históricas",
+   "evidence": "7 filas del worklog reatribuidas desde E0-05–E0-08 a T-01; se conservan horas, resultados y resúmenes",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 7,
+   "minutes": 41,
+   "entrega": "T",
+   "fails": 1
+  },
+  {
+   "id": "T-02",
+   "action": "Revisar la publicación cada 15 minutos, reconciliar el hueco del log y dejar registrada la causa",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El registro de publicaciones concuerda con los commits del tablero",
+   "evidence": "Publicaciones 12:39 y 13:39 Central verificadas contra el clon y el sitio; causa documentada en KNOWN-FIXES.md",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 7,
+   "entrega": "T",
+   "fails": 0
+  },
+  {
+   "id": "T-03",
+   "action": "Aplicar los puntos B y C del pedido de Oscar: reglas, incidentes, lecciones, pendientes y publicación",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Los cinco incidentes quedan registrados y el tablero muestra el pendiente de E1-08",
+   "evidence": "Archivos de control actualizados, automatizaciones alineadas, preview comprobado o bloqueo de login registrado, y tablero publicado",
+   "limit": 90,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 11,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [
@@ -1234,8 +1456,8 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 15,
-  "tasksTotal": 37,
+  "tasksDone": 18,
+  "tasksTotal": 41,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
@@ -1255,6 +1477,18 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 6,
    "total": 208
+  },
+  "product": {
+   "prod": 143,
+   "unprod": 0,
+   "wait": 4,
+   "total": 147
+  },
+  "support": {
+   "prod": 59,
+   "unprod": 0,
+   "wait": 2,
+   "total": 61
   }
  },
  "days": [
@@ -1568,6 +1802,138 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Estandaricé el encabezado y título de Historical Search y Configuration; eliminé scrPlantilla y ajusté la galería de carpetas para móvil",
    "evidence": "7 pantallas en el árbol; sin errores de fórmula; vista móvil de Configuration aún corta el botón Incremental; app guardada sin publicar"
+  }
+ ],
+ "history": [
+  {
+   "start": "2026-09-30T22:40:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Separé Refresh del encabezado y preparé el selector de navegación para formato vertical.",
+   "evidence": "Un encabezado y Refresh fuera de él en YAML; selector común y DISENO actualizados. Falta aplicar y validar en Studio; dos lecturas del navegador expiraron. La publicación del tablero falló al escribir el log y no se reintentó."
+  },
+  {
+   "start": "2026-09-30T22:00:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Interrumpí las pruebas al repetirse dos veces el error de nodo desconectado en navegación.",
+   "evidence": "Pestaña de la app publicada abierta; solicito recargarla en Edge y continuar cuando esté lista."
+  },
+  {
+   "start": "2026-09-30T21:53:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "La app publicada abrió y navegó por My Day, Projects, Tasks, Review y Configuration; dos interacciones devolvieron el nodo desconectado.",
+   "evidence": "La versión publicada está activa; falta completar las rutas y comprobar el resaltado del menú tras recuperar el navegador."
+  },
+  {
+   "start": "2026-09-30T19:34:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-03",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Esperé a que GitHub Pages sirviera el último data.js después de que el build reportara estado built",
+   "evidence": "El data.js con T-03 de 11 min y el pendiente E1-08 respondió HTTP 200"
+  },
+  {
+   "start": "2026-09-30T19:23:00Z",
+   "minutes": 11,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Apliqué B y C: reglas, incidentes y lecciones; registré el inicio de sesión pendiente y publiqué el tablero",
+   "evidence": "INC-01 a INC-05 registrados; KF-P01 a KF-P05 y KF-H01 documentados; STATUS contiene E1-08; preview pendiente de Oscar; página HTTP 200"
+  },
+  {
+   "start": "2026-09-30T19:16:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-02",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tarea Windows y página verificadas; concilié las dos publicaciones faltantes y registré que la pausa fue por la regla restrictiva del revisor",
+   "evidence": "LastTaskResult 0; ruta absoluta pwsh; commits ef94990 y 7f3c40b en origin/main; página HTTP 200; log conciliado"
+  },
+  {
+   "start": "2026-09-30T13:36:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Apps solicitó iniciar sesión por expiración de sesión; se pausa la edición hasta que Oscar complete el acceso",
+   "evidence": "AADSTS70044; botón Sign in visible en la pestaña PFA_Pilot_App"
+  },
+  {
+   "start": "2026-09-30T13:21:00Z",
+   "minutes": 15,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisé las 7 pantallas en vista previa de escritorio y teléfono y probé los 7 botones del menú desde Projects y My Day; preparé el ajuste de ancho de botones en Configuration",
+   "evidence": "Los 14 recorridos llegaron a la pantalla correcta y el activo se resaltó; Configuration conserva un recorte de texto en escritorio; app sin publicar; falta aplicar el ajuste preparado en Studio"
+  },
+  {
+   "start": "2026-09-30T13:12:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-07",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Ajusté la galería móvil con botones apilados y revisé Historical Search y Configuration en teléfono y formato ancho",
+   "evidence": "Ambas vistas previas correctas; 7 pantallas sin scrPlantilla; nombres sin sufijo; sin errores de fórmula; app Saved (Unpublished)"
+  },
+  {
+   "start": "2026-09-30T12:52:00Z",
+   "minutes": 20,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-07",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Estandaricé el encabezado y título de Historical Search y Configuration; eliminé scrPlantilla y ajusté la galería de carpetas para móvil",
+   "evidence": "7 pantallas en el árbol; sin errores de fórmula; vista móvil de Configuration aún corta el botón Incremental; app guardada sin publicar"
   },
   {
    "start": "2026-09-30T12:28:00Z",
@@ -1633,10 +1999,219 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Creé scrPlantilla con header, título y tarjeta de muestra; amplié el menú para evitar cortes",
    "evidence": "Vista previa correcta en escritorio y iPhone 390x844; sin errores de fórmula; app guardada sin publicar. Power Apps asignó sufijo a un control que colisiona con otra pantalla"
+  },
+  {
+   "start": "2026-09-30T11:40:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Tema y navegación pegados en App.Formulas",
+   "evidence": "Studio mostró No formula errors present y el guardado terminó"
+  },
+  {
+   "start": "2026-09-30T11:28:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-02",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tema y versiones alineados con la referencia",
+   "evidence": "Colores, tamaños y bordes actualizados; controles con versión documentados; diferencias entre botones separados de referencia y gallery de Nav registradas"
+  },
+  {
+   "start": "2026-09-30T11:18:00Z",
+   "minutes": 10,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-01",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Bloques de referencia copiados y versiones anotadas",
+   "evidence": "2 archivos guardados desde View code; 26 controles con versión identificados; anotaciones comprobadas"
+  },
+  {
+   "start": "2026-09-30T10:56:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Issue de aceptación procesado; E0 aceptada",
+   "evidence": "Issue 1 confirmado por la cuenta autora; Oscar confirmó por chat la prueba en ambos equipos; decisión registrada y issue cerrado"
+  },
+  {
+   "start": "2026-09-30T07:35:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 7,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Configuré los dos horarios del revisor y generé la revisión manual",
+   "evidence": "Tareas Codex diarias a las 04:30 y 17:00 hora local Central; control/REVISION.md generado y comprometido por separado"
+  },
+  {
+   "start": "2026-09-30T06:59:00Z",
+   "minutes": 30,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 6,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tablero publicado y actualización horaria configurada",
+   "evidence": "URL HTTP 200; Get-ScheduledTask PFA Tablero listo, última ejecución LastTaskResult 0, próxima ejecución dentro de 1 hora"
+  },
+  {
+   "start": "2026-09-30T06:57:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 5,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Repositorio público creado y Pages activado en main y raíz",
+   "evidence": "Repositorio público visible; clon local en la ruta configurada; GitHub Pages compilado y devuelve HTTP 200 en https://oscarmarquez83.github.io/pfa-tablero/"
+  },
+  {
+   "start": "2026-09-30T06:56:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 4,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "AUTH",
+   "summary": "Autenticación de GitHub CLI guardada y Git configurado para usarla",
+   "evidence": "gh auth status identifica una sesión activa en github.com; gh auth setup-git terminó correctamente"
+  },
+  {
+   "start": "2026-09-30T06:50:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 3,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "AUTH",
+   "summary": "La sesión de GitHub CLI no quedó guardada para la cuenta de Oscar",
+   "evidence": "gh auth status informa que no hay sesión en hosts de GitHub; no se encontró configuración en las rutas estándar"
+  },
+  {
+   "start": "2026-09-30T06:41:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "GitHub CLI 2.102.0 descargado del release oficial, instalado en perfil de usuario y añadido al PATH; falta autenticación interactiva de Oscar",
+   "evidence": "gh --version devuelve 2.102.0; Get-Command gh resuelve C:\\Users\\oscar\\AppData\\Local\\Programs\\gh\\bin\\gh.exe; hash SHA256 AE64E556ECC240B200F7EBA60D550E4BB60D78E860E69DD88C449405B86067F4"
+  },
+  {
+   "start": "2026-09-30T06:40:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-04",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Import-Csv validó las tres filas E0-01 a E0-03 y las 11 columnas",
+   "evidence": "5 filas totales legibles; 3 tareas E0 verificadas con horas presentes"
+  },
+  {
+   "start": "2026-09-30T06:25:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-01",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "GitHub CLI y WinGet/App Installer no están instalados; se solicitan instalación y autenticación supervisadas",
+   "evidence": "gh --version y winget no están disponibles; Get-AppxPackage confirmó que falta App Installer"
+  },
+  {
+   "start": "2026-09-30T06:23:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-04",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "CSV legible y con las tres tareas requeridas; Excel no pudo iniciarse desde esta sesión",
+   "evidence": "Import-Csv correcto; apertura automatizada de Excel falló; requiere confirmación en la aplicación"
+  },
+  {
+   "start": "2026-09-30T06:22:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Aviso de congelado agregado a los cuatro documentos",
+   "evidence": "Los cuatro empiezan con el texto aprobado"
+  },
+  {
+   "start": "2026-09-30T06:22:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-02",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Verificación de los archivos requeridos para E0",
+   "evidence": "AGENTS.md, control/, design/, dashboard/, build_dashboard.py y publish_dashboard.ps1 existen"
+  },
+  {
+   "start": "2026-09-30T06:21:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E0",
+   "task": "E0-01",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Commit local de línea base con el estado completo del repositorio",
+   "evidence": "79f0f54; 207 archivos; árbol limpio tras el commit"
   }
  ],
  "ideas": [
   {
+   "id": "HZ-01",
    "date": "2026-09-30",
    "text": "PFA_Messages exige 22 columnas obligatorias, 2 de ellas lookups; eso bloqueó la persistencia en el Bloque 2. Revisar cuáles vuelven a ser obligatorias cuando la carga sea automática",
    "found": "Revisión de Claude",
@@ -1644,6 +2219,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-02",
    "date": "2026-09-30",
    "text": "El flujo antiguo PFA_InventoryMailFolders no lee Outlook: solo cuenta filas de PFA_MailFolders",
    "found": "Revisión de Claude",
@@ -1651,6 +2227,7 @@ window.PFA_DATA = {
    "status": "Incorporado en E2-02 (flujo nuevo)"
   },
   {
+   "id": "HZ-03",
    "date": "2026-09-30",
    "text": "Los 14 flujos antiguos siguen en la solución. Decidir si se eliminan o se archivan",
    "found": "Revisión de Claude",
@@ -1658,6 +2235,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-04",
    "date": "2026-09-30",
    "text": "Correos que llegan al Inbox y todavía no se movieron a una carpeta de proyecto",
    "found": "Oscar",
@@ -1665,6 +2243,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-05",
    "date": "2026-09-30",
    "text": "Proyectos con varios proyectos dentro: posible vista de \"programa\" que agrupe los subproyectos",
    "found": "Oscar",
@@ -1672,6 +2251,7 @@ window.PFA_DATA = {
    "status": "Incorporado en E2-05 y E2-06"
   },
   {
+   "id": "HZ-06",
    "date": "2026-09-30",
    "text": "El contenido interno de las pantallas no sigue un estándar. Cada entrega rehace con el estándar la parte que usa",
    "found": "Oscar",
@@ -1679,6 +2259,7 @@ window.PFA_DATA = {
    "status": "Incorporado en la regla D-013"
   },
   {
+   "id": "HZ-07",
    "date": "2026-09-30",
    "text": "Publicar en el tablero el diagrama de flujos del proyecto",
    "found": "Oscar",
@@ -1686,6 +2267,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-08",
    "date": "2026-09-30",
    "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
    "found": "E1-08",
@@ -1693,6 +2275,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-09",
    "date": "2026-09-30",
    "text": "La galería de carpetas de Configuration se modificó durante E1; en la app publicada, las etiquetas de sus botones quedan recortadas verticalmente. Detener cambios ahí hasta E2",
    "found": "Incidente INC-01",
@@ -1700,6 +2283,7 @@ window.PFA_DATA = {
    "status": "Abierto"
   },
   {
+   "id": "HZ-10",
    "date": "2026-09-30",
    "text": "En teléfono e iPad vertical, reemplazar la navegación horizontal desplazable por un botón que abra una lista vertical seleccionable; mantener botones en formato horizontal",
    "found": "Oscar",
