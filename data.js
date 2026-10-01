@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:50:09.660997Z",
+ "generatedUtc": "2026-10-01T01:52:11.438513Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:50 UTC",
+  "updated": "2026-10-01 01:51 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "resolver la autenticación HTTPS de T-06 para reactivar el publicador automático; después, E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
+  "nextAction": "E1-09: Oscar recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos.",
   "needsOscar": [
    {
     "ref": "E1-09",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-06 sigue en curso. En el intento 3, Git encontró git-remote-https, pero git pull falló porque no hay credenciales disponibles en esta sesión. El tablero se publicó mediante GitHub y Pages ya sirve los datos corregidos."
+   "Ninguna. E1-10 y T-06 cerradas; la app y el data.js publicado están al día."
   ]
  },
  "revision": {
@@ -333,15 +333,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 6,
+   "done": 7,
    "total": 7,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 85,
+    "prod": 88,
     "unprod": 2,
     "wait": 2,
-    "total": 89
+    "total": 92
    }
   }
  ],
@@ -970,12 +970,11 @@ window.PFA_DATA = {
     "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
     "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 3,
-    "minutes": 2,
+    "status": "Hecha",
+    "attempts": 4,
+    "minutes": 5,
     "entrega": "T",
-    "fails": 3,
-    "ready": true
+    "fails": 3
    },
    {
     "id": "T-07",
@@ -993,21 +992,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "T-06",
-  "action": "Completar la configuración de Git del publicador para que encuentre el helper HTTPS y funcione pull/push",
-  "owner": "Agente",
-  "depends": "—",
-  "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
-  "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
-  "limit": 30,
-  "status": "En curso",
-  "attempts": 3,
-  "minutes": 2,
-  "entrega": "T",
-  "fails": 3,
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E1-09",
@@ -1559,6 +1544,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "T-06",
+   "action": "Completar la configuración de Git del publicador para que encuentre el helper HTTPS y funcione pull/push",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
+   "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 4,
+   "minutes": 5,
+   "entrega": "T",
+   "fails": 3
+  },
+  {
    "id": "T-07",
    "action": "Quitar las notas de aprobación de STATUS y publicarlas solo en DECISIONS.md",
    "owner": "Agente",
@@ -1573,35 +1572,29 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [
-  {
-   "task": "T-06",
-   "reason": "3 intentos sin avance",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 24,
+  "tasksDone": 25,
   "tasksTotal": 44,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 258,
+   "prod": 261,
    "unprod": 2,
    "wait": 6,
-   "total": 266
+   "total": 269
   },
   "last24h": {
-   "prod": 258,
+   "prod": 261,
    "unprod": 2,
    "wait": 6,
-   "total": 266
+   "total": 269
   },
   "last7d": {
-   "prod": 258,
+   "prod": 261,
    "unprod": 2,
    "wait": 6,
-   "total": 266
+   "total": 269
   },
   "product": {
    "prod": 173,
@@ -1610,10 +1603,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 85,
+   "prod": 88,
    "unprod": 2,
    "wait": 2,
-   "total": 89
+   "total": 92
   }
  },
  "days": [
@@ -1697,7 +1690,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 56,
+   "prod": 59,
    "unprod": 2,
    "wait": 0
   }
@@ -1799,10 +1792,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 266
+   "minutes": 269
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T01:45:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 4,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Conecté la sesión existente de GitHub CLI con Git y ejecuté el publicador",
+   "evidence": "Publicador terminó con código 0; commit 7ee8fd9; GitHub Pages devuelve data.js actualizado con HTTP 200 y generatedUtc 2026-10-01T01:50:09Z"
+  },
   {
    "start": "2026-10-01T01:44:00Z",
    "minutes": 3,
@@ -1919,22 +1925,22 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Comprobé el YAML local de My Day después de mover Refresh fuera del encabezado común",
    "evidence": "Un btnDashboardRefresh con la acción intacta y sin Y duplicada; Studio sigue en solo lectura por otra sesión, así que falta aplicar y probar"
-  },
-  {
-   "start": "2026-10-01T00:37:00Z",
-   "minutes": 19,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-04",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
-   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; index.html y data.js confirmados en main; escritura del log local denegada"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T01:45:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 4,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Conecté la sesión existente de GitHub CLI con Git y ejecuté el publicador",
+   "evidence": "Publicador terminó con código 0; commit 7ee8fd9; GitHub Pages devuelve data.js actualizado con HTTP 200 y generatedUtc 2026-10-01T01:50:09Z"
+  },
   {
    "start": "2026-10-01T01:44:00Z",
    "minutes": 3,
@@ -2552,4 +2558,3 @@ window.PFA_DATA = {
   }
  ]
 };
-
