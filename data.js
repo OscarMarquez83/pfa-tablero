@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T06:05:32.331588Z",
+ "generatedUtc": "2026-10-01T06:07:12.051192Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 06:03 UTC",
+  "updated": "2026-10-01 06:05 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar revisa el análisis de reapertura de E1-05; luego medir App.Width/App.Height en producción antes de cualquier edición.",
   "needsOscar": [
@@ -31,7 +31,7 @@ window.PFA_DATA = {
    "Criterio nuevo: un encabezado; menú desplegable legible a 390 px; menú horizontal sin desbordamiento a 1366 px; capturas comparadas de las 7 pantallas en ambos tamaños; Refresh funcional.",
    "Consulta oficial: [Create responsive layouts in canvas apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout): revisar Scale to fit, dimensiones reales y breakpoints. Copilot recomendó medir App.Width/App.Height, comprobar instancias duplicadas y probar en la app publicada; sugirió ancho < 768 como candidato, aún sin validar."
   ],
-  "fileUtc": "2026-10-01T06:05:20.055770Z"
+  "fileUtc": "2026-10-01T06:07:00.725637Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -365,10 +365,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 123,
+    "prod": 125,
     "unprod": 2,
     "wait": 2,
-    "total": 127
+    "total": 129
    }
   }
  ],
@@ -1671,22 +1671,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 296,
+   "prod": 298,
    "unprod": 2,
    "wait": 6,
-   "total": 304
+   "total": 306
   },
   "last24h": {
-   "prod": 296,
+   "prod": 298,
    "unprod": 2,
    "wait": 6,
-   "total": 304
+   "total": 306
   },
   "last7d": {
-   "prod": 296,
+   "prod": 298,
    "unprod": 2,
    "wait": 6,
-   "total": 304
+   "total": 306
   },
   "product": {
    "prod": 173,
@@ -1695,10 +1695,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 123,
+   "prod": 125,
    "unprod": 2,
    "wait": 2,
-   "total": 127
+   "total": 129
   }
  },
  "days": [
@@ -1782,7 +1782,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 94,
+   "prod": 96,
    "unprod": 2,
    "wait": 0
   }
@@ -1854,10 +1854,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-12",
-   "prod": 16,
+   "prod": 18,
    "unprod": 0,
    "wait": 0,
-   "total": 16
+   "total": 18
   },
   {
    "task": "E1-10",
@@ -1884,13 +1884,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 304
+   "minutes": 306
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T05:47:00Z",
-   "minutes": 16,
+   "minutes": 18,
    "account": "personal",
    "entrega": "T",
    "task": "T-12",
@@ -2022,7 +2022,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T05:47:00Z",
-   "minutes": 16,
+   "minutes": 18,
    "account": "personal",
    "entrega": "T",
    "task": "T-12",
