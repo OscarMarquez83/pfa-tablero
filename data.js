@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T06:00:00.691230Z",
+ "generatedUtc": "2026-10-01T06:05:32.331588Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 05:59 UTC",
+  "updated": "2026-10-01 06:03 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar revisa el análisis de reapertura de E1-05; luego medir App.Width/App.Height en producción antes de cualquier edición.",
   "needsOscar": [
@@ -21,17 +21,17 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-12, intento 1, inicio 2026-10-01 05:47 UTC: skill y procedimiento instalados; no se editó la app. Microsoft Learn consultado en web oficial y Copilot consultado; el conector MCP sigue pendiente de reinicio.",
+   "T-12, intento 1, inicio 2026-10-01 05:47 UTC: skill y procedimiento instalados; no se editó la app. Microsoft Learn consultado en web oficial y Copilot consultado; el conector MCP sigue pendiente de reinicio. GitHub confirmó data.js nuevo en e02c1ab, pero Pages aún muestra el estado de las 05:45 UTC. tools/publish_dashboard.ps1 volvió a fallar al escribir publish.log; el build local sí terminó.",
    "E1-05, Reabierta, 6 intentos previos; el intento 7 no empieza hasta que Oscar revise este análisis.",
    "Defecto actual: a 390 px la app publicada muestra la galería horizontal desplazable; captura: tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg. INC-07 ya registra el doble encabezado señalado por Oscar.",
    "Intentos previos: (1) inspección de My Day; (2) preparación de bloques estándar; (3) aplicación y preview; (4) separar Refresh y preparar selector sin Studio; (5) revisión local del YAML sin Studio; (6) mover Refresh, guardar/publicar y probar navegación parcial.",
    "Por qué se dio por terminada: preview y comprobaciones puntuales de My Day/Diagnostics parecían correctas; faltó comparar en paralelo las 7 pantallas publicadas en ambos tamaños.",
-   "Causa probable: se evalúa orientación (App.Width < App.Height) donde el requisito es ancho; la app publicada podría conservar ancho mínimo/Scale to fit y mostrar otra galería o encabezado duplicado. Falta verificarlo en runtime.",
+   "Causa probable: desconocida. La condición por orientación y un ancho mínimo/Scale to fit son hipótesis; falta medir dimensiones y controles visibles en runtime.",
    "Qué haré distinto: medir App.Width/App.Height en la app publicada y etiquetar temporalmente qué control está visible; revisar el árbol de Studio en las 7 pantallas antes de cambiar controles.",
    "Criterio nuevo: un encabezado; menú desplegable legible a 390 px; menú horizontal sin desbordamiento a 1366 px; capturas comparadas de las 7 pantallas en ambos tamaños; Refresh funcional.",
    "Consulta oficial: [Create responsive layouts in canvas apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout): revisar Scale to fit, dimensiones reales y breakpoints. Copilot recomendó medir App.Width/App.Height, comprobar instancias duplicadas y probar en la app publicada; sugirió ancho < 768 como candidato, aún sin validar."
   ],
-  "fileUtc": "2026-10-01T05:59:52.026306Z"
+  "fileUtc": "2026-10-01T06:05:20.055770Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -365,10 +365,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 119,
+    "prod": 123,
     "unprod": 2,
     "wait": 2,
-    "total": 123
+    "total": 127
    }
   }
  ],
@@ -1671,22 +1671,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 292,
+   "prod": 296,
    "unprod": 2,
    "wait": 6,
-   "total": 300
+   "total": 304
   },
   "last24h": {
-   "prod": 292,
+   "prod": 296,
    "unprod": 2,
    "wait": 6,
-   "total": 300
+   "total": 304
   },
   "last7d": {
-   "prod": 292,
+   "prod": 296,
    "unprod": 2,
    "wait": 6,
-   "total": 300
+   "total": 304
   },
   "product": {
    "prod": 173,
@@ -1695,10 +1695,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 119,
+   "prod": 123,
    "unprod": 2,
    "wait": 2,
-   "total": 123
+   "total": 127
   }
  },
  "days": [
@@ -1782,7 +1782,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 90,
+   "prod": 94,
    "unprod": 2,
    "wait": 0
   }
@@ -1853,6 +1853,13 @@ window.PFA_DATA = {
    "total": 19
   },
   {
+   "task": "T-12",
+   "prod": 16,
+   "unprod": 0,
+   "wait": 0,
+   "total": 16
+  },
+  {
    "task": "E1-10",
    "prod": 14,
    "unprod": 0,
@@ -1872,25 +1879,18 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 2,
    "total": 13
-  },
-  {
-   "task": "T-12",
-   "prod": 12,
-   "unprod": 0,
-   "wait": 0,
-   "total": 12
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 300
+   "minutes": 304
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T05:47:00Z",
-   "minutes": 12,
+   "minutes": 16,
    "account": "personal",
    "entrega": "T",
    "task": "T-12",
@@ -1908,7 +1908,7 @@ window.PFA_DATA = {
    "entrega": "T",
    "task": "T-11",
    "attempt": 1,
-   "result": "HECHA",
+   "result": "AVANCE",
    "kind": "prod",
    "category": "OTRO",
    "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
@@ -2022,7 +2022,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T05:47:00Z",
-   "minutes": 12,
+   "minutes": 16,
    "account": "personal",
    "entrega": "T",
    "task": "T-12",
@@ -2040,7 +2040,7 @@ window.PFA_DATA = {
    "entrega": "T",
    "task": "T-11",
    "attempt": 1,
-   "result": "HECHA",
+   "result": "AVANCE",
    "kind": "prod",
    "category": "OTRO",
    "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
