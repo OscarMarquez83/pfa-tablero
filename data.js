@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:02:39.059763Z",
+ "generatedUtc": "2026-10-01T01:04:09.368476Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 00:58 UTC",
+  "updated": "2026-10-01 01:03 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar autoriza tomar el control de edición de Power Apps; después terminar E1-05, ejecutar E1-08, aplicar E1-10 y pedir la aceptación final E1-09. E1-08 está pendiente y depende de E1-05; no espera una decisión de Oscar.",
   "needsOscar": [
@@ -18,8 +18,8 @@ window.PFA_DATA = {
   "blockers": [],
   "current": [
    "No hay un intento activo. E1-05 sigue En curso; el intento 5 cerró con avance local y requiere autorización para editar la app.",
-   "Último intento: E1-05, intento 5, 2026-10-01 00:58 UTC.",
-   "Próximo paso: aplicar el bloque corregido en Studio cuando la sesión permita editar y comprobar preview."
+   "Último intento: T-05, intento 1, 2026-10-01 00:59–01:03 UTC.",
+   "Próximo paso: Oscar autoriza tomar el control de edición; luego aplicar el bloque corregido y comprobar preview."
   ]
  },
  "revision": {
@@ -329,15 +329,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 4,
-   "total": 4,
+   "done": 5,
+   "total": 5,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 78,
+    "prod": 82,
     "unprod": 0,
     "wait": 2,
-    "total": 80
+    "total": 84
    }
   }
  ],
@@ -946,6 +946,20 @@ window.PFA_DATA = {
     "minutes": 19,
     "entrega": "T",
     "fails": 0
+   },
+   {
+    "id": "T-05",
+    "action": "Alinear el horario del revisor en AGENTS.md y volver a registrar la tarea de Windows PFA Tablero",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Revisor cada 4 horas y publicador cada 15 minutos",
+    "evidence": "Dos automatizaciones Codex y REVISOR.md coinciden con D-015; Get-ScheduledTaskInfo muestra intervalo PT15M, IgnoreNew, límite PT5M y LastTaskResult 0",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 4,
+    "entrega": "T",
+    "fails": 0
    }
   ]
  },
@@ -1457,31 +1471,45 @@ window.PFA_DATA = {
    "minutes": 19,
    "entrega": "T",
    "fails": 0
+  },
+  {
+   "id": "T-05",
+   "action": "Alinear el horario del revisor en AGENTS.md y volver a registrar la tarea de Windows PFA Tablero",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Revisor cada 4 horas y publicador cada 15 minutos",
+   "evidence": "Dos automatizaciones Codex y REVISOR.md coinciden con D-015; Get-ScheduledTaskInfo muestra intervalo PT15M, IgnoreNew, límite PT5M y LastTaskResult 0",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 4,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 19,
-  "tasksTotal": 41,
+  "tasksDone": 20,
+  "tasksTotal": 42,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 221,
+   "prod": 225,
    "unprod": 0,
    "wait": 6,
-   "total": 227
+   "total": 231
   },
   "last24h": {
-   "prod": 221,
+   "prod": 225,
    "unprod": 0,
    "wait": 6,
-   "total": 227
+   "total": 231
   },
   "last7d": {
-   "prod": 221,
+   "prod": 225,
    "unprod": 0,
    "wait": 6,
-   "total": 227
+   "total": 231
   },
   "product": {
    "prod": 143,
@@ -1490,10 +1518,10 @@ window.PFA_DATA = {
    "total": 147
   },
   "support": {
-   "prod": 78,
+   "prod": 82,
    "unprod": 0,
    "wait": 2,
-   "total": 80
+   "total": 84
   }
  },
  "days": [
@@ -1577,7 +1605,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 19,
+   "prod": 23,
    "unprod": 0,
    "wait": 0
   }
@@ -1674,10 +1702,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 227
+   "minutes": 231
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T00:59:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-05",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Alineé los horarios del revisor y re-registré PFA Tablero cada 15 minutos",
+   "evidence": "Dos automatizaciones Codex, REVISOR.md y D-015 coinciden; LastTaskResult 0, intervalo PT15M, IgnoreNew, límite PT5M"
+  },
   {
    "start": "2026-10-01T00:58:00Z",
    "minutes": 0,
@@ -1794,22 +1835,22 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Power Apps solicitó iniciar sesión por expiración de sesión; se pausa la edición hasta que Oscar complete el acceso",
    "evidence": "AADSTS70044; botón Sign in visible en la pestaña PFA_Pilot_App"
-  },
-  {
-   "start": "2026-09-30T13:21:00Z",
-   "minutes": 15,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-08",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Revisé las 7 pantallas en vista previa de escritorio y teléfono y probé los 7 botones del menú desde Projects y My Day; preparé el ajuste de ancho de botones en Configuration",
-   "evidence": "Los 14 recorridos llegaron a la pantalla correcta y el activo se resaltó; Configuration conserva un recorte de texto en escritorio; app sin publicar; falta aplicar el ajuste preparado en Studio"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T00:59:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-05",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Alineé los horarios del revisor y re-registré PFA Tablero cada 15 minutos",
+   "evidence": "Dos automatizaciones Codex, REVISOR.md y D-015 coinciden; LastTaskResult 0, intervalo PT15M, IgnoreNew, límite PT5M"
+  },
   {
    "start": "2026-10-01T00:58:00Z",
    "minutes": 0,
