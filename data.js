@@ -1,27 +1,30 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:28:13.826230Z",
+ "generatedUtc": "2026-10-01T15:37:13.881115Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:27 UTC",
+  "updated": "2026-10-01 15:36 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-02, intento 10: revisar Edge y el navegador integrado de Codex, anotar ambos estados y consultar Microsoft 365 Copilot Chat antes de corregir la referencia.",
+  "nextAction": "completar el preflight de E2-02; consultar Copilot por el protocolo antes del último intento 10.",
   "needsOscar": [
    {
     "ref": "T-14",
     "text": "reinicia Codex para cargar el servidor Context7 recién instalado en la lista de tools."
-   },
-   {
-    "ref": "E2-02",
-    "text": "vuelve a conectar la extensión de Edge; necesito consultar Microsoft 365 Copilot Chat antes del intento 10."
    }
   ],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-01T15:27:23.837986Z"
+  "current": [
+   "E2-02, intento 10 (final); inicio 2026-10-01 15:36 UTC. Revisión de Oscar: 9 intentos sin Copilot en el 3, sin bloqueo en el 4 y sobre el límite de 90 min; lo registro como incidente y mantengo un último intento por instrucción expresa de Oscar.",
+   "Regla anti-bucle: tras 2 fallos detengo variantes, reviso KNOWN-FIXES y Microsoft Learn y registro URL; tras el 3.º consulto Copilot con la plantilla y uso su respuesta en el 4.º; si falla el 4.º o se excede el límite, bloqueo la tarea y paso a otra independiente.",
+   "Antes de pedir algo por navegador, aplico KF-11: recargo la pestaña, abro Power Apps en pestaña nueva y entro desde la lista de apps, pruebo Edge y Codex integrado, y registro qué muestra cada uno.",
+   "A Oscar solo puedo pedir iniciar sesión/MFA, decidir, aprobar o probar como usuario; no pedirle abrir/navegar apps, seleccionar controles ni revisar/cambiar archivos. Solo pedir reconexión si la extensión está desconectada y el navegador integrado tampoco sirve.",
+   "E2-02 está en intento 10 de 10; antes de cambiar el flow reviso Peek code, KF-01 y KF-02, consulto Copilot con los 9 enfoques agrupados y registro respuesta/documentación.",
+   "Comprobaré Flow Checker y la referencia exacta. Si falla este último intento, marcaré E2-02 Bloqueada y propondré 2 diseños distintos con recomendación."
+  ],
+  "fileUtc": "2026-10-01T15:36:59.330795Z"
  },
  "revision": {
   "light": "ROJO",
