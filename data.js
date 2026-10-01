@@ -1,25 +1,27 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:01:13.863461Z",
+ "generatedUtc": "2026-10-01T15:07:13.724364Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 14:58 UTC",
+  "updated": "2026-10-01 15:04 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "T-14, intento 1: instalar Context7 en Codex, consultar documentación de una dependencia del tablero, registrar el ámbito y verificar la consulta.",
+  "nextAction": "E2-02, intento 10: consultar Microsoft 365 Copilot Chat con la plantilla anti-bucle cuando la extensión Edge vuelva a estar disponible; luego corregir la referencia según la respuesta y Flow Checker.",
   "needsOscar": [
+   {
+    "ref": "T-14",
+    "text": "reinicia Codex para cargar el servidor Context7 recién instalado en la lista de tools."
+   },
    {
     "ref": "E2-02",
     "text": "vuelve a conectar la extensión de Edge; necesito consultar Microsoft 365 Copilot Chat antes del intento 10."
    }
   ],
   "blockers": [],
-  "current": [
-   "T-14, intento 1; inicio 2026-10-01 14:58 UTC. Instalar y probar Context7 con una librería usada en dashboard/ o tools/, limitar su uso en AGENTS.md y comprobar codex mcp list más documentación devuelta."
-  ],
-  "fileUtc": "2026-10-01T14:59:53.069358Z"
+  "current": [],
+  "fileUtc": "2026-10-01T15:04:21.748025Z"
  },
  "revision": {
   "light": "ROJO",
@@ -356,10 +358,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 136,
+    "prod": 142,
     "unprod": 2,
     "wait": 8,
-    "total": 146
+    "total": 152
    }
   }
  ],
@@ -1727,22 +1729,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 423,
+   "prod": 429,
    "unprod": 18,
    "wait": 17,
-   "total": 458
+   "total": 464
   },
   "last24h": {
-   "prod": 250,
+   "prod": 256,
    "unprod": 18,
    "wait": 13,
-   "total": 281
+   "total": 287
   },
   "last7d": {
-   "prod": 423,
+   "prod": 429,
    "unprod": 18,
    "wait": 17,
-   "total": 458
+   "total": 464
   },
   "product": {
    "prod": 287,
@@ -1751,10 +1753,10 @@ window.PFA_DATA = {
    "total": 312
   },
   "support": {
-   "prod": 136,
+   "prod": 142,
    "unprod": 2,
    "wait": 8,
-   "total": 146
+   "total": 152
   }
  },
  "days": [
@@ -1838,7 +1840,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 221,
+   "prod": 227,
    "unprod": 18,
    "wait": 11
   }
@@ -1954,10 +1956,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 458
+   "minutes": 464
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T14:58:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-14",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Instalé Context7 MCP y limité su uso a dashboard/tools",
+   "evidence": "codex mcp list: context7 enabled; MCP initialize/tools/list OK; consulta Python /python/cpython devolvió documentación json.dumps/json.loads; AGENTS.md §5 y KNOWN-FIXES KF-H03 verificados"
+  },
   {
    "start": "2026-10-01T14:43:00Z",
    "minutes": 2,
@@ -2074,22 +2089,22 @@ window.PFA_DATA = {
    "category": "ESQUEMA_LISTA",
    "summary": "MailFolders: Title=text; OutlookFolderId=text; FolderName=text; DisplayedPath=text; ParentFolderId=text; FolderType=text; Included=text; ProjectId=text; LastEnumeratedUtc=text; LastSuccessfulWatermarkUtc=text; MailboxKey=text; ReviewStatus=Choice; ConsecutiveFailureCount=Number; LastAttemptedWatermarkUtc=DateTime; IncludeInInitialLoad=YesNo; IncludeInIncremental=YesNo; Decision=text; Modified=DateTime; Created=DateTime; CreatedBy=PersonGroup; ModifiedBy=PersonGroup. Projects: Title=text; OfficialName=text; ProjectId=text; PrimaryOutlookFolderId=text; PrimaryOutlookFolderPath=text; ShortDescription=MultipleLines; StartDate=DateTime; CloseDate=DateTime; SourceConfidence=Number; CreatedUtc=DateTime; ConfirmedUtc=DateTime; Status=text; CreatedBy=PersonGroup; ConfirmedBy=PersonGroup; Modified=DateTime; Created=DateTime; Created By=PersonGroup; Modified By=PersonGroup",
    "evidence": "List settings muestran solo requeridas OutlookFolderId, FolderName, ProjectId y OfficialName; Decision es texto opcional con valor predeterminado Nueva; ParentFolderId y DisplayedPath existen"
-  },
-  {
-   "start": "2026-10-01T11:19:00Z",
-   "minutes": 6,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-10",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "PERMISOS",
-   "summary": "Espera de seis minutos tras configurar la repetición",
-   "evidence": "Publicador configurado PT3M; tablero publicado comprobado al finalizar la espera"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T14:58:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-14",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Instalé Context7 MCP y limité su uso a dashboard/tools",
+   "evidence": "codex mcp list: context7 enabled; MCP initialize/tools/list OK; consulta Python /python/cpython devolvió documentación json.dumps/json.loads; AGENTS.md §5 y KNOWN-FIXES KF-H03 verificados"
+  },
   {
    "start": "2026-10-01T14:43:00Z",
    "minutes": 2,
