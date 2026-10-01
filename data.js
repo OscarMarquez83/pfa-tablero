@@ -1,25 +1,26 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:10:22.242417Z",
+ "generatedUtc": "2026-10-01T11:19:13.354638Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:07 UTC",
+  "updated": "2026-10-01 11:19 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "iniciar E2-01 y confirmar los tipos de columna en las listas indicadas por PLAN.md.",
+  "nextAction": "E2-01 sigue en espera; iniciar sesión en Microsoft 365 y verificar las dos listas.",
   "needsOscar": [
    {
-    "ref": "T-09",
-    "text": "reiniciar Codex para cargar las skills locales y la configuración del conector Microsoft Learn; codex mcp add no pudo cargar la configuración porque este proceso no encuentra el directorio de usuario."
+    "ref": "E2-01",
+    "text": "iniciar sesión en Microsoft 365 desde la pestaña de Edge abierta; después continuaré con la configuración de PFA_MailFolders y PFA_Projects."
    }
   ],
   "blockers": [],
   "current": [
-   "Ninguna. Oscar revisó las siete pantallas publicadas y aceptó E1; D-025 registra la decisión."
+   "T-10, intento 2. Inicio: 2026-10-01 11:17 UTC. El trigger de “PFA Tablero” quedó en PT3M fuera del sandbox; esperar seis minutos y verificar en Pages la antigüedad del último reporte. El publicador regeneró data.js, pero falló al escribir publish.log por acceso denegado.",
+   "Publicación del tablero: el script regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado), tanto al inicio como al cierre."
   ],
-  "fileUtc": "2026-10-01T11:08:53.362985Z"
+  "fileUtc": "2026-10-01T11:18:43.598184Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -211,8 +212,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 0,
     "unprod": 0,
-    "wait": 0,
-    "total": 0
+    "wait": 1,
+    "total": 1
    }
   },
   {
@@ -640,8 +641,8 @@ window.PFA_DATA = {
     "expected": "Listas listas para carpetas y proyectos",
     "evidence": "Tabla de columnas y cambios en worklog",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "En curso",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
@@ -1058,8 +1059,8 @@ window.PFA_DATA = {
   "expected": "Listas listas para carpetas y proyectos",
   "evidence": "Tabla de columnas y cambios en worklog",
   "limit": 30,
-  "status": "Pendiente",
-  "attempts": 0,
+  "status": "En curso",
+  "attempts": 1,
   "minutes": 0,
   "entrega": "E2",
   "fails": 0,
@@ -1074,8 +1075,8 @@ window.PFA_DATA = {
    "expected": "Listas listas para carpetas y proyectos",
    "evidence": "Tabla de columnas y cambios en worklog",
    "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
+   "status": "En curso",
+   "attempts": 1,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
@@ -1681,26 +1682,26 @@ window.PFA_DATA = {
   "time": {
    "prod": 398,
    "unprod": 2,
-   "wait": 6,
-   "total": 406
+   "wait": 7,
+   "total": 407
   },
   "last24h": {
-   "prod": 354,
+   "prod": 344,
    "unprod": 2,
-   "wait": 6,
-   "total": 362
+   "wait": 7,
+   "total": 353
   },
   "last7d": {
    "prod": 398,
    "unprod": 2,
-   "wait": 6,
-   "total": 406
+   "wait": 7,
+   "total": 407
   },
   "product": {
    "prod": 273,
    "unprod": 0,
-   "wait": 4,
-   "total": 277
+   "wait": 5,
+   "total": 278
   },
   "support": {
    "prod": 125,
@@ -1792,7 +1793,7 @@ window.PFA_DATA = {
    "date": "2026-10-01",
    "prod": 196,
    "unprod": 2,
-   "wait": 0
+   "wait": 1
   }
  ],
  "categories": [
@@ -1810,7 +1811,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "AUTH",
-   "minutes": 4
+   "minutes": 5
   },
   {
    "category": "NAVEGADOR",
@@ -1892,10 +1893,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 406
+   "minutes": 407
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:12:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Microsoft 365 pidió iniciar sesión al abrir la administración de listas; no se ingresaron credenciales",
+   "evidence": "List settings inaccesibles; esquema local consultado en referencia/list-schemas; el intento queda pendiente de autenticación"
+  },
   {
    "start": "2026-10-01T11:07:00Z",
    "minutes": 0,
@@ -2012,22 +2026,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Moví la aprobación histórica de STATUS a DECISIONS.md y publiqué el tablero corregido",
    "evidence": "D-019 registra la aprobación; GitHub Pages sirve data.js sin la nota de aprobación y con E1-09 como único pendiente"
-  },
-  {
-   "start": "2026-10-01T01:43:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-06",
-   "attempt": 3,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "AUTH",
-   "summary": "Configuré GIT_EXEC_PATH y probé git pull",
-   "evidence": "Git encontró git-remote-https, pero falló con SEC_E_NO_CREDENTIALS; el tablero se publicó usando GitHub"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:12:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 1,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Microsoft 365 pidió iniciar sesión al abrir la administración de listas; no se ingresaron credenciales",
+   "evidence": "List settings inaccesibles; esquema local consultado en referencia/list-schemas; el intento queda pendiente de autenticación"
+  },
   {
    "start": "2026-10-01T11:07:00Z",
    "minutes": 0,
