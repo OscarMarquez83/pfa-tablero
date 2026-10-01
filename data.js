@@ -1,26 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T00:57:11.511541Z",
+ "generatedUtc": "2026-10-01T00:59:28.099007Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 00:56 UTC",
+  "updated": "2026-10-01 00:58 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar autoriza tomar el control de edición de Power Apps; después terminar E1-05, ejecutar E1-08, aplicar E1-10 y pedir la aceptación final E1-09. E1-08 está pendiente y depende de E1-05; no espera una decisión de Oscar.",
   "needsOscar": [
    {
     "ref": "E1-05",
-    "text": "autoriza que tome el control de edición de PFA_Pilot_App con «Invalidar». Power Apps indica que otra sesión tiene el control; podría haber cambios sin guardar en esa sesión y no puedo inspeccionarlos."
+    "text": "responde Autorizo tomar control de edición. Power Apps indica que otra sesión controla PFA_Pilot_App; tendría que pulsar «Invalidar» y no puedo inspeccionar si hay cambios sin guardar en esa sesión."
    }
   ],
   "blockers": [],
   "current": [
-   "Tarea: ninguna. T-04 cerrada; E1-05 conserva 4 intentos y 34 min. El intento 5 no empieza hasta resolver el control de edición.",
-   "Último intento: T-04, intento 1, 2026-10-01 00:37–00:56 UTC.",
-   "Qué haré al reanudar: aplicar el YAML corregido de My Day en Power Apps y verificarlo en preview y publicado.",
-   "Cómo comprobaré el resultado: un solo encabezado; Refresh conserva su acción fuera del encabezado; revisar después E1-08 y E1-10 según sus evidencias."
+   "No hay un intento activo. E1-05 sigue En curso; el intento 5 cerró con avance local y requiere autorización para editar la app.",
+   "Último intento: E1-05, intento 5, 2026-10-01 00:58 UTC.",
+   "Próximo paso: aplicar el bloque corregido en Studio cuando la sesión permita editar y comprobar preview."
   ]
  },
  "revision": {
@@ -537,7 +536,7 @@ window.PFA_DATA = {
     "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
     "limit": 60,
     "status": "En curso",
-    "attempts": 4,
+    "attempts": 5,
     "minutes": 34,
     "entrega": "E1",
     "fails": 0,
@@ -959,7 +958,7 @@ window.PFA_DATA = {
   "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
   "limit": 60,
   "status": "En curso",
-  "attempts": 4,
+  "attempts": 5,
   "minutes": 34,
   "entrega": "E1",
   "fails": 0,
@@ -975,7 +974,7 @@ window.PFA_DATA = {
    "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
    "limit": 60,
    "status": "En curso",
-   "attempts": 4,
+   "attempts": 5,
    "minutes": 34,
    "entrega": "E1",
    "fails": 0,
@@ -1680,6 +1679,19 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
+   "start": "2026-10-01T00:58:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Comprobé el YAML local de My Day después de mover Refresh fuera del encabezado común",
+   "evidence": "Un btnDashboardRefresh con la acción intacta y sin Y duplicada; Studio sigue en solo lectura por otra sesión, así que falta aplicar y probar"
+  },
+  {
    "start": "2026-10-01T00:37:00Z",
    "minutes": 19,
    "account": "personal",
@@ -1795,22 +1807,22 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Revisé las 7 pantallas en vista previa de escritorio y teléfono y probé los 7 botones del menú desde Projects y My Day; preparé el ajuste de ancho de botones en Configuration",
    "evidence": "Los 14 recorridos llegaron a la pantalla correcta y el activo se resaltó; Configuration conserva un recorte de texto en escritorio; app sin publicar; falta aplicar el ajuste preparado en Studio"
-  },
-  {
-   "start": "2026-09-30T13:12:00Z",
-   "minutes": 9,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-07",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Ajusté la galería móvil con botones apilados y revisé Historical Search y Configuration en teléfono y formato ancho",
-   "evidence": "Ambas vistas previas correctas; 7 pantallas sin scrPlantilla; nombres sin sufijo; sin errores de fórmula; app Saved (Unpublished)"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T00:58:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Comprobé el YAML local de My Day después de mover Refresh fuera del encabezado común",
+   "evidence": "Un btnDashboardRefresh con la acción intacta y sin Y duplicada; Studio sigue en solo lectura por otra sesión, así que falta aplicar y probar"
+  },
   {
    "start": "2026-10-01T00:37:00Z",
    "minutes": 19,
