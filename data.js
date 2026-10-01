@@ -1,20 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:31:14.487159Z",
+ "generatedUtc": "2026-10-01T11:40:14.347064Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:27 UTC",
+  "updated": "2026-10-01 11:39 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "completar E2-02 y continuar con E2-03.",
-  "needsOscar": [],
+  "nextAction": "esperar la decisión de Oscar para alojar las listas en un sitio SharePoint compatible o elegir otra vía de acceso; después replanear E2-02.",
+  "needsOscar": [
+   {
+    "ref": "E2-02",
+    "text": "decidir entre (A) mover o recrear las listas en un sitio SharePoint estándar que el conector resuelva —recomendado por ser la ruta más sencilla— o (B) autorizar el diseño de una vía distinta para consultar las listas personales. No haré cambios de ubicación ni permisos antes de tu decisión. La dirección personalizada del sitio personal falla con No se encontró la dirección del sitio en Get items. Se probaron la URL con y sin barra final y dos conexiones existentes; Microsoft Learn documenta el parámetro Site Address, pero no confirma soporte de este caso. Copilot recomendó la solicitud HTTP de SharePoint; el diseñador no permitió encontrar esa acción con su búsqueda. Referencias: https://learn.microsoft.com/en-us/connectors/sharepoint/ y https://learn.microsoft.com/en-us/sharepoint/list-onedrive-urls."
+   }
+  ],
   "blockers": [],
   "current": [
-   "E2-02, intento 1; inicio 2026-10-01 11:25 UTC. Crear PFA_E2_LeerCarpetas con trigger manual y la secuencia de nivel 1 indicada en PLAN. Comprobar guardado y Flow Checker sin errores. El publicador regeneró el tablero, pero falló al escribir %LOCALAPPDATA%\\PFA\\publish.log (acceso denegado)."
+   "Ninguna. E2-02 está Bloqueada tras 4 intentos. Copilot sugirió Send an HTTP request to SharePoint, pero no se pudo localizar/configurar esa acción en el diseñador. Al retirar Get items, Flow Checker reporta un error: el bucle ya no tiene salida. No se ejecutó el flujo."
   ],
-  "fileUtc": "2026-10-01T11:28:40.717662Z"
+  "fileUtc": "2026-10-01T11:39:57.362861Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -205,9 +210,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 2,
-    "unprod": 0,
+    "unprod": 14,
     "wait": 5,
-    "total": 7
+    "total": 21
    }
   },
   {
@@ -649,11 +654,11 @@ window.PFA_DATA = {
     "expected": "Flujo de nivel 1 guardado",
     "evidence": "Flujo guardado; Flow Checker 0 errores",
     "limit": 90,
-    "status": "En curso",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Bloqueada",
+    "attempts": 4,
+    "minutes": 14,
     "entrega": "E2",
-    "fails": 0,
+    "fails": 1,
     "ready": true
    },
    {
@@ -1042,21 +1047,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "E2-02",
-  "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
-  "owner": "Agente",
-  "depends": "E2-01",
-  "expected": "Flujo de nivel 1 guardado",
-  "evidence": "Flujo guardado; Flow Checker 0 errores",
-  "limit": 90,
-  "status": "En curso",
-  "attempts": 0,
-  "minutes": 0,
-  "entrega": "E2",
-  "fails": 0,
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E2-02",
@@ -1066,11 +1057,11 @@ window.PFA_DATA = {
    "expected": "Flujo de nivel 1 guardado",
    "evidence": "Flujo guardado; Flow Checker 0 errores",
    "limit": 90,
-   "status": "En curso",
-   "attempts": 0,
-   "minutes": 0,
+   "status": "Bloqueada",
+   "attempts": 4,
+   "minutes": 14,
    "entrega": "E2",
-   "fails": 0,
+   "fails": 1,
    "ready": true
   },
   {
@@ -1706,7 +1697,13 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E2-02",
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
+  }
+ ],
  "kpi": {
   "tasksDone": 30,
   "tasksTotal": 47,
@@ -1714,27 +1711,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 405,
-   "unprod": 2,
+   "unprod": 16,
    "wait": 17,
-   "total": 424
+   "total": 438
   },
   "last24h": {
-   "prod": 345,
-   "unprod": 2,
+   "prod": 343,
+   "unprod": 16,
    "wait": 17,
-   "total": 364
+   "total": 376
   },
   "last7d": {
    "prod": 405,
-   "unprod": 2,
+   "unprod": 16,
    "wait": 17,
-   "total": 424
+   "total": 438
   },
   "product": {
    "prod": 275,
-   "unprod": 0,
+   "unprod": 14,
    "wait": 9,
-   "total": 284
+   "total": 298
   },
   "support": {
    "prod": 130,
@@ -1825,11 +1822,16 @@ window.PFA_DATA = {
   {
    "date": "2026-10-01",
    "prod": 203,
-   "unprod": 2,
+   "unprod": 16,
    "wait": 11
   }
  ],
  "categories": [
+  {
+   "category": "CONECTOR",
+   "minutes": 14,
+   "attempts": 1
+  },
   {
    "category": "AUTH",
    "minutes": 2,
@@ -1920,20 +1922,33 @@ window.PFA_DATA = {
    "total": 14
   },
   {
-   "task": "E1-04",
-   "prod": 13,
-   "unprod": 0,
+   "task": "E2-02",
+   "prod": 0,
+   "unprod": 14,
    "wait": 0,
-   "total": 13
+   "total": 14
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 424
+   "minutes": 438
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:25:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 4,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "El conector no resuelve el sitio personal; la alternativa sugerida por Copilot no se pudo localizar en el diseñador",
+   "evidence": "4 intentos; documentación Microsoft Learn y Copilot consultados; Flow Checker 1 error por salida faltante del bucle; flujo no ejecutado"
+  },
   {
    "start": "2026-10-01T11:25:00Z",
    "minutes": 2,
@@ -2050,22 +2065,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Skill/procedimiento aplicados; análisis E1-05 listo, espera revisión antes de editar la app",
    "evidence": "Captura tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg; https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout"
-  },
-  {
-   "start": "2026-10-01T05:45:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-11",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Aprobación T-08 registrada como D-022; issue #4 comentado y cerrado",
-   "evidence": "https://github.com/OscarMarquez83/pfa-tablero/issues/4"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:25:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 4,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "El conector no resuelve el sitio personal; la alternativa sugerida por Copilot no se pudo localizar en el diseñador",
+   "evidence": "4 intentos; documentación Microsoft Learn y Copilot consultados; Flow Checker 1 error por salida faltante del bucle; flujo no ejecutado"
+  },
   {
    "start": "2026-10-01T11:25:00Z",
    "minutes": 2,
