@@ -1,25 +1,29 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T05:23:27.690683Z",
+ "generatedUtc": "2026-10-01T05:28:32.446280Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 05:22 UTC",
+  "updated": "2026-10-01 05:26 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "E1-05: corregir el encabezado de My Day y el contraste del menú vertical; después repetir E1-09 en la app publicada.",
   "needsOscar": [
    {
     "ref": "T-08",
     "text": "recomiendo mantener superpowers desactivado (figura desactivado por administración) y retirar powerapps-yaml-edge de las skills locales del proyecto; no usé ninguna de las dos."
+   },
+   {
+    "ref": "T-09",
+    "text": "reiniciar Codex para cargar las skills locales y la configuración del conector Microsoft Learn; codex mcp add no pudo cargar la configuración porque este proceso no encuentra el directorio de usuario."
    }
   ],
   "blockers": [],
   "current": [
-   "T-10, intento 1, inicio 2026-10-01 05:22 UTC. Apliqué el parche del tablero; comprobaré el campo status.fileUtc, el temporizador de 3 minutos, el texto de antigüedad en la página publicada y el estado de la tarea programada."
+   "E1-05, reabierta, intento 7, inicio 2026-10-01 04:49 UTC. Avance previo: Refresh quedó fuera del encabezado de My Day y funcionando; el encabezado común quedó aplicado en My Day y Diagnostics. INC-07 registra el doble encabezado que Oscar encontró al probar; KF-P07 exige comparar las 7 pantallas. Falta corregir My Day y auditar las 7 pantallas publicadas a 1366 px y 390 px."
   ],
-  "fileUtc": "2026-10-01T05:22:45.531302Z"
+  "fileUtc": "2026-10-01T05:28:20.379039Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -339,10 +343,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 98,
+    "prod": 105,
     "unprod": 2,
     "wait": 2,
-    "total": 102
+    "total": 109
    }
   }
  ],
@@ -1016,7 +1020,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "En curso",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 3,
     "entrega": "T",
     "fails": 0,
     "ready": true
@@ -1031,7 +1035,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "En curso",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 4,
     "entrega": "T",
     "fails": 0,
     "ready": true
@@ -1639,22 +1643,22 @@ window.PFA_DATA = {
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 271,
+   "prod": 278,
    "unprod": 2,
    "wait": 6,
-   "total": 279
+   "total": 286
   },
   "last24h": {
-   "prod": 271,
+   "prod": 278,
    "unprod": 2,
    "wait": 6,
-   "total": 279
+   "total": 286
   },
   "last7d": {
-   "prod": 271,
+   "prod": 278,
    "unprod": 2,
    "wait": 6,
-   "total": 279
+   "total": 286
   },
   "product": {
    "prod": 173,
@@ -1663,10 +1667,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 98,
+   "prod": 105,
    "unprod": 2,
    "wait": 2,
-   "total": 102
+   "total": 109
   }
  },
  "days": [
@@ -1750,7 +1754,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 69,
+   "prod": 76,
    "unprod": 2,
    "wait": 0
   }
@@ -1852,10 +1856,36 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 279
+   "minutes": 286
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T05:22:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "PERMISOS",
+   "summary": "Build y publicación verificados; Windows denegó el trigger PT3M",
+   "evidence": "Auditoría 2/3 OK: data.js contiene status.fileUtc; Pages muestra Último reporte del agente hace 4 min; Get-ScheduledTaskTrigger Access denied"
+  },
+  {
+   "start": "2026-10-01T05:19:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-09",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Skills y cinco cambios instalados; conector no cargó en esta sesión",
+   "evidence": "Auditoría 4/5 OK: .agents/skills, AGENTS.md, INC-07/KF-P07; .codex/config.toml; búsqueda pendiente por carga de configuración"
+  },
   {
    "start": "2026-10-01T04:22:00Z",
    "minutes": 10,
@@ -1959,35 +1989,35 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Revisé las 7 pantallas en desktop, teléfono vertical e iPad horizontal; guardé y publiqué la versión 154",
    "evidence": "Preview: las 7 pantallas cargan y seleccionan la navegación; el menú se recorta en vertical (E1-10); app publicada v154 Live; navegación desde My Day a Projects y desde Projects a Diagnostics confirmada"
-  },
-  {
-   "start": "2026-10-01T01:05:00Z",
-   "minutes": 9,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-05",
-   "attempt": 6,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Moví Refresh fuera del encabezado azul de My Day y publiqué la corrección",
-   "evidence": "Studio guardó sin errores; preview y app publicada muestran Refresh junto al título; el botón responde; navegación de 7 opciones y Diagnostics con encabezado único"
-  },
-  {
-   "start": "2026-10-01T00:59:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-05",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Alineé los horarios del revisor y re-registré PFA Tablero cada 15 minutos",
-   "evidence": "Dos automatizaciones Codex, REVISOR.md y D-015 coinciden; LastTaskResult 0, intervalo PT15M, IgnoreNew, límite PT5M"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T05:22:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-10",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "PERMISOS",
+   "summary": "Build y publicación verificados; Windows denegó el trigger PT3M",
+   "evidence": "Auditoría 2/3 OK: data.js contiene status.fileUtc; Pages muestra Último reporte del agente hace 4 min; Get-ScheduledTaskTrigger Access denied"
+  },
+  {
+   "start": "2026-10-01T05:19:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-09",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Skills y cinco cambios instalados; conector no cargó en esta sesión",
+   "evidence": "Auditoría 4/5 OK: .agents/skills, AGENTS.md, INC-07/KF-P07; .codex/config.toml; búsqueda pendiente por carga de configuración"
+  },
   {
    "start": "2026-10-01T04:22:00Z",
    "minutes": 10,
