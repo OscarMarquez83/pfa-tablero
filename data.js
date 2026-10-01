@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T05:28:32.446280Z",
+ "generatedUtc": "2026-10-01T05:45:23.755602Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -21,27 +21,27 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E1-05, reabierta, intento 7, inicio 2026-10-01 04:49 UTC. Avance previo: Refresh quedó fuera del encabezado de My Day y funcionando; el encabezado común quedó aplicado en My Day y Diagnostics. INC-07 registra el doble encabezado que Oscar encontró al probar; KF-P07 exige comparar las 7 pantallas. Falta corregir My Day y auditar las 7 pantallas publicadas a 1366 px y 390 px."
+   "E1-05, reabierta, intento 7, inicio 2026-10-01 04:49 UTC. Avance previo: Refresh quedó fuera del encabezado de My Day y funcionando; el encabezado común quedó aplicado en My Day y Diagnostics. INC-07 registra el doble encabezado que Oscar encontró al probar; KF-P07 exige comparar las 7 pantallas. La app publicada muestra menú horizontal desplazable a 390 px. No apliqué aún Tema.TamMenu = 13 en App.Formulas. Falta publicar la corrección y auditar las 7 pantallas a 1366 px y 390 px. T-09: skills/configuración y cambios aplicados; Microsoft Learn no cargó. T-10: tablero actualizado y visible; Get-ScheduledTask sigue en Access denied, no pude cambiar la repetición a 3 minutos."
   ],
-  "fileUtc": "2026-10-01T05:28:20.379039Z"
+  "fileUtc": "2026-10-01T05:45:22.232247Z"
  },
  "revision": {
   "light": "AMARILLO",
-  "reason": "T-01 acumula 41 minutos frente a un límite de 30; excede el límite por 11 minutos.",
-  "date": "2026-10-01 01:36 UTC",
-  "dateIso": "2026-10-01T01:36:00Z",
+  "reason": "T-01 supera su límite por 11 minutos; T-06 registra 3 intentos SIN_AVANCE, aunque terminó Hecha. E1-05 está reabierta y los conteos de STATUS no coinciden con PLAN.",
+  "date": "2026-10-01 05:32 UTC",
+  "dateIso": "2026-10-01T05:32:00Z",
   "summary": [
-   "E0: 9/9; E1: 8/10; E1-10 está en curso desde 2026-10-01 01:25 UTC.",
-   "En las últimas 24 h y desde 2026-09-30 hay 247 minutos registrados: 241 productivos (97.57 %) y 6 de espera.",
-   "INC-01 está listo para cerrar; los issues de GitHub no se pudieron verificar por un error SSL."
+   "PLAN: E0 9/9; E1 8/10; T 8/10. E1-05 sigue En curso por el doble encabezado y el contraste del menú vertical.",
+   "Últimas 24 horas: 286 minutos registrados, 278 productivos, 2 sin avance y 6 de espera; productividad 97,202797 %.",
+   "INC-07 está Atendido; INC-01 sigue listo para cerrar. No hay incumplimientos nuevos confirmados."
   ],
   "sections": [
    {
     "title": "Resumen en 3 líneas",
     "lines": [
-     "E0: 9/9; E1: 8/10; E1-10 está en curso desde 2026-10-01 01:25 UTC.",
-     "En las últimas 24 h y desde 2026-09-30 hay 247 minutos registrados: 241 productivos (97.57 %) y 6 de espera.",
-     "INC-01 está listo para cerrar; los issues de GitHub no se pudieron verificar por un error SSL."
+     "PLAN: E0 9/9; E1 8/10; T 8/10. E1-05 sigue En curso por el doble encabezado y el contraste del menú vertical.",
+     "Últimas 24 horas: 286 minutos registrados, 278 productivos, 2 sin avance y 6 de espera; productividad 97,202797 %.",
+     "INC-07 está Atendido; INC-01 sigue listo para cerrar. No hay incumplimientos nuevos confirmados."
     ]
    },
    {
@@ -49,39 +49,45 @@ window.PFA_DATA = {
     "lines": [
      "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
      "|---|---:|---:|---:|",
-     "| Últimas 24 horas | 4.1167 (247 min; incluye espera) | 97.57 % | 0 |",
-     "| Desde 2026-09-30 | 4.1167 (247 min; incluye espera) | 97.57 % | 0 |",
-     "HECHA y AVANCE suman 241 minutos. ESPERA suma 6 minutos. SIN_AVANCE/BLOQUEADA suma 0 minutos. Los 36 registros caen en ambos periodos. Las horas se muestran con 4 decimales; los porcentajes, con 2.",
-     "### Minutos efectivos por entrega",
-     "| Entrega | Últimas 24 h | Acumulado |",
+     "| Últimas 24 horas | 4,766667 (286 min) | 97,202797 | 0,033333 (2 min) |",
+     "| Desde 2026-09-30 | 4,766667 (286 min) | 97,202797 | 0,033333 (2 min) |",
+     "Los 45 registros caen en ambos periodos. Total incluye ESPERA. Tiempo efectivo: 280 minutos; HECHA/AVANCE: 278; SIN_AVANCE/BLOQUEADA: 2. Horas y porcentaje redondeados a 6 decimales; minutos exactos.",
+     "### Tiempo por entrega",
+     "| Entrega | Total 24 h / acumulado (min) | Efectivo 24 h / acumulado (min) |",
      "|---|---:|---:|",
-     "| E0 | 3 | 3 |",
-     "| E1 | 156 | 156 |",
-     "| T | 82 | 82 |",
-     "| E2–E10 | 0 | 0 |",
-     "### Minutos efectivos por tarea",
-     "| Tarea | Minutos |",
-     "|---|---:|",
-     "| E0-01 | 0 |",
-     "| E0-02 | 0 |",
-     "| E0-03 | 1 |",
-     "| E0-04 | 1 |",
-     "| E0-09 | 1 |",
-     "| E1-01 | 10 |",
-     "| E1-02 | 6 |",
-     "| E1-03 | 2 |",
-     "| E1-04 | 13 |",
-     "| E1-05 | 43 |",
-     "| E1-06 | 24 |",
-     "| E1-07 | 29 |",
-     "| E1-08 | 29 |",
-     "| E1-10 | 0 (intento en curso; aún sin fila de cierre) |",
-     "| T-01 | 41 |",
-     "| T-02 | 7 |",
-     "| T-03 | 11 |",
-     "| T-04 | 19 |",
-     "| T-05 | 4 |",
-     "E2–E3 no tienen tiempo registrado. E4–E10 no están detalladas."
+     "| E0 | 3 / 3 | 3 / 3 |",
+     "| E1 | 174 / 174 | 170 / 170 |",
+     "| T | 109 / 109 | 107 / 107 |",
+     "| E2–E10 | 0 / 0 | 0 / 0 |",
+     "### Tiempo por tarea",
+     "Los valores son iguales en las últimas 24 horas y en el acumulado.",
+     "| Tarea | Total (min) | Efectivo (min) |",
+     "|---|---:|---:|",
+     "| E0-01 | 0 | 0 |",
+     "| E0-02 | 0 | 0 |",
+     "| E0-03 | 1 | 1 |",
+     "| E0-04 | 1 | 1 |",
+     "| E0-09 | 1 | 1 |",
+     "| E1-01 | 10 | 10 |",
+     "| E1-02 | 6 | 6 |",
+     "| E1-03 | 2 | 2 |",
+     "| E1-04 | 13 | 13 |",
+     "| E1-05 | 43 | 43 |",
+     "| E1-06 | 24 | 24 |",
+     "| E1-07 | 29 | 29 |",
+     "| E1-08 | 33 | 29 |",
+     "| E1-10 | 14 | 14 |",
+     "| T-01 | 41 | 41 |",
+     "| T-02 | 7 | 7 |",
+     "| T-03 | 13 | 11 |",
+     "| T-04 | 19 | 19 |",
+     "| T-05 | 4 | 4 |",
+     "| T-06 | 5 | 5 |",
+     "| T-07 | 3 | 3 |",
+     "| T-08 | 10 | 10 |",
+     "| T-09 | 3 | 3 |",
+     "| T-10 | 4 | 4 |",
+     "E0-05 a E0-08 tienen 0 minutos por la reatribución histórica a T-01. E1-09 y E2–E10 no tienen tiempo registrado. El intento 7 abierto de E1-05 aún no tiene fila de cierre; su tiempo no se estima."
     ]
    },
    {
@@ -93,8 +99,9 @@ window.PFA_DATA = {
      "| E1 | 8 / 10 |",
      "| E2 | 0 / 10 |",
      "| E3 | 0 / 8 |",
-     "| T | 5 / 5 |",
-     "| E4–E10 | Sin detallar |"
+     "| T | 8 / 10 |",
+     "| E4–E10 | Sin detallar |",
+     "STATUS aún muestra E1 9/10 y T 8/8. PLAN registra E1-05 reabierta, T-09 y T-10 En curso. Se informa la diferencia sin corregirla."
     ]
    },
    {
@@ -102,8 +109,10 @@ window.PFA_DATA = {
     "lines": [
      "| Tarea | Motivo | Intentos | Minutos / límite |",
      "|---|---|---:|---:|",
-     "| T-01 | Tiempo acumulado supera el límite por 11 minutos. La tarea ya está Hecha. | 7 (1 SIN_AVANCE) | 41 / 30 |",
-     "Ninguna tarea tiene 3 intentos SIN_AVANCE. E1-10 lleva 11 minutos en curso según STATUS; no alcanza el umbral de 12 horas sin avance. No hay tareas Bloqueada o Por validar desde hace más de 24 horas."
+     "| T-01 | Hecha; supera el límite por 11 minutos | 7; 1 SIN_AVANCE | 41 / 30 |",
+     "| T-06 | Hecha; 3 intentos SIN_AVANCE antes del cierre | 4; 3 SIN_AVANCE | 5 / 30 |",
+     "T-06 pasó de helper HTTPS ausente a credenciales TLS ausentes; el registro cita documentación en el intento 2. Son síntomas distintos; no se confirma una infracción por faltar Copilot tras 3 fallos del mismo problema.",
+     "E1-05, T-09 y T-10 están En curso y tienen actividad en las últimas 12 horas. No hay tareas Bloqueada o Por validar con antigüedad mayor de 24 horas. E1-05 necesita completar su auditoría de las 7 pantallas publicadas a 1366 px y 390 px antes de repetir E1-09."
     ]
    },
    {
@@ -111,46 +120,51 @@ window.PFA_DATA = {
     "lines": [
      "| Categoría | Minutos | Intentos |",
      "|---|---:|---:|",
-     "| AUTH | 0 | 1 |",
-     "El único intento SIN_AVANCE fue T-01, categoría AUTH, de 0 minutos.",
+     "| AUTH | 2 | 2 |",
+     "| OTRO | 0 | 2 |",
      "### Tiempo de espera en 24 horas",
-     "| Categoría | Minutos | Intentos |",
+     "| Categoría | Minutos | Registros |",
      "|---|---:|---:|",
      "| AUTH | 4 | 1 |",
-     "| NAVEGADOR | 2 | 2 |"
+     "| NAVEGADOR | 2 | 3 |"
     ]
    },
    {
     "title": "Incumplimientos de AGENTS.md",
     "lines": [
      "### Nuevos",
-     "Ninguno confirmado desde la revisión anterior. T-04 incorporó la skill solicitada en .agents/skills/planear/; los archivos nuevos corresponden a la tarea T-04. El historial de 36 horas no muestra cambios en documentos congelados. Los cambios visuales registrados tienen YAML asociado. No se detectaron nombres de clientes, proyectos reales, asuntos o remitentes en PLAN, STATUS ni worklog. No se ejecutó validación local después de editar solo control.",
+     "Ninguno confirmado desde la revisión anterior disponible en REVISION.md. INC-07 ya está registrado y Atendido: no se cuenta otra vez como nuevo.",
+     "T-08 documenta la reorganización de la raíz. El commit 9d294bd traslada los documentos a archivo/ y referencia/ conservando su contenido; no se detectan ediciones posteriores del historial congelado. Los archivos nuevos de skills/configuración corresponden a T-04 y T-09; el nuevo YAML corresponde a E1-05. Los cambios del tablero están registrados en T-04 y T-10.",
+     "No se detectó contenido de correos reales en worklog, PLAN o STATUS. Las filas de trabajo corresponden a E1 o a tareas de soporte T. No hay evidencia documental de ejecución de la suite antigua después de cambios exclusivos de control.",
+     "Hay cambios del constructor sin commit, incluidos T-09 y T-10 y YAML de E1-05. E1-05 figura en curso; no se puede concluir que la sesión haya terminado sin commit. El historial Git no permite comprobar archivos creados fuera del repositorio ni verificar por sí solo las pruebas visuales declaradas.",
      "### Atendidos",
-     "INC-06 se registró y cerró en T-04: se añadió la regla que impide pedirle a Oscar acciones operativas en la interfaz.",
-     "INC-01: listo para cerrar. La corrección pidió detener cambios a la galería hasta E2, registrar HZ-09 para E2 y confirmar que Configuration abre en preview. HZ-09 está asignado a E2; E1-08 documenta que las siete pantallas cargaron en preview y que la aplicación publicada v154 funciona. Los cambios posteriores visibles en el historial corresponden al encabezado de My Day y a la navegación de E1-10, no a la galería de Configuration. El constructor puede cerrar INC-01.",
-     "INC-02 a INC-05 siguen Cerrado. INC-01 e INC-06 no generan un incumplimiento nuevo sin respuesta.",
+     "INC-07: Atendido. E1-05 se reabrió y KF-P07 exige comparar las 7 pantallas. Falta ejecutar y registrar esa auditoría; aún no está listo para cerrar.",
+     "INC-01: listo para cerrar. HZ-09 conserva el cambio de galería con destino E2. E1-08 registra que Configuration cargó en preview; no se detectan nuevos cambios de la galería. El constructor debe actualizar el estado, que aún figura Abierto.",
+     "INC-02 a INC-06: Cerrado.",
      "### Sin respuesta",
-     "Ninguno confirmado en el periodo. No hay cambios recientes a documentos congelados ni archivos imprevistos fuera de control; .agents/skills/planear/ forma parte de T-04."
+     "Ninguno confirmado. INC-01 tiene acción correctiva y evidencia de comprobación; INC-07 tiene respuesta registrada."
     ]
    },
    {
     "title": "Hallazgos sin heredar",
     "lines": [
-     "No hay hallazgos Por decidir que superen 48 horas. HZ-09 sigue Abierto y asignado a E2, cuyo checkpoint está aprobado; debe incorporarse o proponerse para descarte al detallar E2. HZ-07 sigue asignado a T sin tarea de incorporación registrada. Los demás hallazgos abiertos tienen destino en entregas aún sin detallar."
+     "No hay filas Por decidir con más de 48 horas. HZ-09 sigue Asignado a E2, entrega aprobada y detallada, sin tarea explícita que incorpore el recorte de botones; el constructor debe resolver su incorporación o propuesta de descarte. HZ-07 sigue Asignado a T sin tarea que incorpore el diagrama. HZ-02 y HZ-05 están incorporados en E2; HZ-10, en E1-10."
     ]
    },
    {
     "title": "Oscar tiene que decidir o hacer",
     "lines": [
-     "- E1-09: cuando E1-10 esté terminada, recorrer las 7 pantallas en la app publicada y aceptar E1 o pedir cambios concretos.",
-     "- Issues: no verificados en esta corrida."
+     "- T-08: decidir sobre la recomendación de mantener superpowers desactivado y retirar powerapps-yaml-edge de las skills locales del proyecto.",
+     "- T-09: reiniciar Codex para cargar las skills y la configuración de Microsoft Learn, según STATUS.",
+     "- E1-09: probar las 7 pantallas y aceptar E1 o pedir cambios concretos cuando el constructor termine la corrección E1-05. Todavía no corresponde pedir aceptación.",
+     "Issues: no verificados en esta corrida. El agente constructor procesa los issues al empezar su sesión."
     ]
    },
    {
     "title": "Límites de esta revisión",
     "lines": [
-     "Se leyeron REVISOR, worklog, PLAN, STATUS, DECISIONS, AGENTS, INCIDENTES y el historial Git de 36 horas. No se abrió Power Automate, Power Apps ni SharePoint. No se hicieron correcciones ni se ejecutó validación local. El intento de consultar issues abiertos falló: la API de GitHub devolvió “The SSL connection could not be established”. No se afirma que no haya issues.",
-     "Publicación: se ejecutó pwsh -NoProfile -File tools/publish_dashboard.ps1 una vez. Regeneró dashboard/data.js, pero terminó con código 1 al escribir C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log: Access denied. No se reintentó; Windows publicará dentro de 15 minutos."
+     "Revisión documental de worklog, PLAN, STATUS, DECISIONS, INCIDENTES, REVISOR y el historial Git de 36 horas, incluyendo cambios pendientes. No se abrió Power Automate, Power Apps ni SharePoint. GitHub CLI no pudo iniciarse: Access is denied. No se afirma que no haya issues. Solo se reemplaza REVISION.md y se hace commit de ese archivo.",
+     "Publicación: el publicador se ejecutó una vez y regeneró dashboard/data.js. Terminó con código 1: Access denied al escribir C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. No se reintentó; Windows lo publicará en máximo 15 minutos. No se confirmó publicación remota en esta corrida."
     ]
    }
   ]
