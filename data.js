@@ -1,29 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:03:39.928200Z",
+ "generatedUtc": "2026-10-01T11:10:22.242417Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 06:33 UTC",
-  "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "Oscar prueba E1-09 en la app publicada y responde «E1 aceptada» o describe un defecto concreto.",
+  "updated": "2026-10-01 11:07 UTC",
+  "activeEntrega": "E2 — Decisión de carpetas de proyectos",
+  "nextAction": "iniciar E2-01 y confirmar los tipos de columna en las listas indicadas por PLAN.md.",
   "needsOscar": [
    {
     "ref": "T-09",
     "text": "reiniciar Codex para cargar las skills locales y la configuración del conector Microsoft Learn; codex mcp add no pudo cargar la configuración porque este proceso no encuentra el directorio de usuario."
-   },
-   {
-    "ref": "E1-09",
-    "text": "prueba My Day y otra pantalla en el teléfono; abre el menú y comprueba que se lean las opciones y el nombre seleccionado, que My Day tenga el mismo encabezado y que Refresh responda. Escribe «E1 aceptada» o indica el defecto concreto."
    }
   ],
   "blockers": [],
   "current": [
-   "Ninguna. E1-05 se corrigió y publicó tras la decisión de Oscar de ejecutar la corrección. E1-09 espera su prueba de usuario."
+   "Ninguna. Oscar revisó las siete pantallas publicadas y aceptó E1; D-025 registra la decisión."
   ],
-  "fileUtc": "2026-10-01T06:33:19.553744Z"
+  "fileUtc": "2026-10-01T11:08:53.362985Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -169,7 +165,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "activeEntrega": "E1",
+ "activeEntrega": "E2",
  "entregas": [
   {
    "id": "E0",
@@ -191,11 +187,11 @@ window.PFA_DATA = {
    "id": "E1",
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
-   "status": "En curso",
-   "done": 9,
+   "status": "Aceptada",
+   "done": 10,
    "total": 10,
    "detailed": true,
-   "active": true,
+   "active": false,
    "time": {
     "prod": 270,
     "unprod": 0,
@@ -207,11 +203,11 @@ window.PFA_DATA = {
    "id": "E2",
    "title": "Carpetas de proyecto",
    "goal": "Decidir en la app cuáles carpetas de Projects son proyectos; la app avisa cuando aparece una carpeta nueva",
-   "status": "Pendiente",
+   "status": "En curso",
    "done": 0,
    "total": 10,
    "detailed": true,
-   "active": false,
+   "active": true,
    "time": {
     "prod": 0,
     "unprod": 0,
@@ -612,14 +608,13 @@ window.PFA_DATA = {
     "owner": "Oscar",
     "depends": "E1-10",
     "expected": "Oscar acepta el estándar visual y la navegación vertical",
-    "evidence": "Oscar escribe \"E1 aceptada\" o pide cambios concretos",
+    "evidence": "Oscar confirma que revisó las 7 pantallas y acepta E1",
     "limit": 0,
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "Hecha",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-10",
@@ -650,7 +645,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-02",
@@ -1056,36 +1051,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "T-09",
-  "action": "Instalar las skills cerrar-intento y powerapps-yaml y la configuración de Microsoft Learn; aplicar los cinco cambios aprobados a AGENTS.md; registrar el incidente del doble encabezado",
+  "id": "E2-01",
+  "action": "En List settings de PFA_MailFolders y PFA_Projects: anotar el tipo real de cada columna. Dejar obligatorias solo OutlookFolderId y FolderName (MailFolders) y ProjectId y OfficialName (Projects). Agregar a PFA_MailFolders la columna de texto Decision con valor por defecto Nueva. Confirmar que existen ParentFolderId y DisplayedPath. Anotar en worklog todo lo cambiado",
   "owner": "Agente",
-  "depends": "—",
-  "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
-  "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
+  "depends": "E1-09",
+  "expected": "Listas listas para carpetas y proyectos",
+  "evidence": "Tabla de columnas y cambios en worklog",
   "limit": 30,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 3,
-  "entrega": "T",
+  "status": "Pendiente",
+  "attempts": 0,
+  "minutes": 0,
+  "entrega": "E2",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-09",
-   "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
-   "owner": "Oscar",
-   "depends": "E1-10",
-   "expected": "Oscar acepta el estándar visual y la navegación vertical",
-   "evidence": "Oscar escribe \"E1 aceptada\" o pide cambios concretos",
-   "limit": 0,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E2-01",
    "action": "En List settings de PFA_MailFolders y PFA_Projects: anotar el tipo real de cada columna. Dejar obligatorias solo OutlookFolderId y FolderName (MailFolders) y ProjectId y OfficialName (Projects). Agregar a PFA_MailFolders la columna de texto Decision con valor por defecto Nueva. Confirmar que existen ParentFolderId y DisplayedPath. Anotar en worklog todo lo cambiado",
@@ -1099,7 +1079,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-02",
@@ -1289,6 +1269,21 @@ window.PFA_DATA = {
    "expected": "5 correos sin duplicados",
    "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
    "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-05",
+   "action": "Pantalla Projects (YAML): al seleccionar un proyecto, gallery con los correos de todas sus carpetas (propia y ParteDelSuperior), con asunto, remitente y fecha, ordenados por fecha descendente. Al tocar un correo, abrir OutlookWebLink con Launch()",
+   "owner": "Agente",
+   "depends": "E3-04",
+   "expected": "Oscar ve los correos de cada proyecto",
+   "evidence": "Los 5 correos visibles en PFA-Prueba",
+   "limit": 90,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1537,6 +1532,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E1-09",
+   "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
+   "owner": "Oscar",
+   "depends": "E1-10",
+   "expected": "Oscar acepta el estándar visual y la navegación vertical",
+   "evidence": "Oscar confirma que revisó las 7 pantallas y acepta E1",
+   "limit": 0,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 0,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
    "id": "E1-10",
    "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
    "owner": "Agente",
@@ -1665,9 +1674,9 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 26,
+  "tasksDone": 27,
   "tasksTotal": 47,
-  "entregasAccepted": 1,
+  "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
    "prod": 398,
@@ -1888,6 +1897,19 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
+   "start": "2026-10-01T11:07:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Oscar recorrió las siete pantallas publicadas y aceptó E1",
+   "evidence": "Confirmación explícita de Oscar en chat; D-025; E1 pasa a Aceptada"
+  },
+  {
    "start": "2026-10-01T05:47:00Z",
    "minutes": 18,
    "account": "personal",
@@ -2003,22 +2025,22 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Configuré GIT_EXEC_PATH y probé git pull",
    "evidence": "Git encontró git-remote-https, pero falló con SEC_E_NO_CREDENTIALS; el tablero se publicó usando GitHub"
-  },
-  {
-   "start": "2026-10-01T01:43:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-06",
-   "attempt": 2,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "OTRO",
-   "summary": "Añadí el directorio mingw64/bin al PATH del publicador",
-   "evidence": "El helper existe allí, pero Git sigue sin encontrarlo; la documentación indica que debe ubicarse en GIT_EXEC_PATH (https://git-scm.com/docs/gitremote-helpers)"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:07:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Oscar recorrió las siete pantallas publicadas y aceptó E1",
+   "evidence": "Confirmación explícita de Oscar en chat; D-025; E1 pasa a Aceptada"
+  },
   {
    "start": "2026-10-01T05:47:00Z",
    "minutes": 18,
