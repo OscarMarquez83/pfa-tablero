@@ -1,25 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:40:14.347064Z",
+ "generatedUtc": "2026-10-01T11:46:14.374953Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:39 UTC",
+  "updated": "2026-10-01 11:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar la decisión de Oscar para alojar las listas en un sitio SharePoint compatible o elegir otra vía de acceso; después replanear E2-02.",
+  "nextAction": "esperar la decisión de Oscar sobre la ubicación de las listas o una vía alternativa que cambie el acceso; después reabrir E2-02.",
   "needsOscar": [
    {
     "ref": "E2-02",
-    "text": "decidir entre (A) mover o recrear las listas en un sitio SharePoint estándar que el conector resuelva —recomendado por ser la ruta más sencilla— o (B) autorizar el diseño de una vía distinta para consultar las listas personales. No haré cambios de ubicación ni permisos antes de tu decisión. La dirección personalizada del sitio personal falla con No se encontró la dirección del sitio en Get items. Se probaron la URL con y sin barra final y dos conexiones existentes; Microsoft Learn documenta el parámetro Site Address, pero no confirma soporte de este caso. Copilot recomendó la solicitud HTTP de SharePoint; el diseñador no permitió encontrar esa acción con su búsqueda. Referencias: https://learn.microsoft.com/en-us/connectors/sharepoint/ y https://learn.microsoft.com/en-us/sharepoint/list-onedrive-urls."
+    "text": "elige una opción. A) recrear/migrar PFA_MailFolders y PFA_Projects a un sitio SharePoint estándar y actualizar la app (recomendado; requiere mover datos y cambiar referencias). B) mantenerlas en el sitio personal y usar HTTP with Microsoft Entra ID (Premium); según la versión, puede requerir consentimiento de administrador para los alcances de SharePoint. El conector SharePoint estándar, tanto Get items como Send an HTTP request to SharePoint, rechaza la dirección del sitio personal. No cambiaré ubicación ni permisos sin tu decisión. Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/"
    }
   ],
   "blockers": [],
   "current": [
-   "Ninguna. E2-02 está Bloqueada tras 4 intentos. Copilot sugirió Send an HTTP request to SharePoint, pero no se pudo localizar/configurar esa acción en el diseñador. Al retirar Get items, Flow Checker reporta un error: el bucle ya no tiene salida. No se ejecutó el flujo."
+   "T-13, intento 1, inicio 2026-10-01 11:45 UTC. Agregar y registrar la regla de anuncio de skills; comprobar el texto exacto en la sección 10 y D-026 en DECISIONS.md. E2-02 permanece Bloqueada hasta una decisión de Oscar."
   ],
-  "fileUtc": "2026-10-01T11:39:57.362861Z"
+  "fileUtc": "2026-10-01T11:45:57.534605Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -210,9 +210,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 2,
-    "unprod": 14,
+    "unprod": 16,
     "wait": 5,
-    "total": 21
+    "total": 23
    }
   },
   {
@@ -655,10 +655,10 @@ window.PFA_DATA = {
     "evidence": "Flujo guardado; Flow Checker 0 errores",
     "limit": 90,
     "status": "Bloqueada",
-    "attempts": 4,
-    "minutes": 14,
+    "attempts": 6,
+    "minutes": 16,
     "entrega": "E2",
-    "fails": 1,
+    "fails": 3,
     "ready": true
    },
    {
@@ -1058,10 +1058,10 @@ window.PFA_DATA = {
    "evidence": "Flujo guardado; Flow Checker 0 errores",
    "limit": 90,
    "status": "Bloqueada",
-   "attempts": 4,
-   "minutes": 14,
+   "attempts": 6,
+   "minutes": 16,
    "entrega": "E2",
-   "fails": 1,
+   "fails": 3,
    "ready": true
   },
   {
@@ -1711,27 +1711,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 405,
-   "unprod": 16,
+   "unprod": 18,
    "wait": 17,
-   "total": 438
+   "total": 440
   },
   "last24h": {
-   "prod": 343,
-   "unprod": 16,
+   "prod": 330,
+   "unprod": 18,
    "wait": 17,
-   "total": 376
+   "total": 365
   },
   "last7d": {
    "prod": 405,
-   "unprod": 16,
+   "unprod": 18,
    "wait": 17,
-   "total": 438
+   "total": 440
   },
   "product": {
    "prod": 275,
-   "unprod": 14,
+   "unprod": 16,
    "wait": 9,
-   "total": 298
+   "total": 300
   },
   "support": {
    "prod": 130,
@@ -1822,20 +1822,25 @@ window.PFA_DATA = {
   {
    "date": "2026-10-01",
    "prod": 203,
-   "unprod": 16,
+   "unprod": 18,
    "wait": 11
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 14,
-   "attempts": 1
+   "minutes": 15,
+   "attempts": 2
   },
   {
    "category": "AUTH",
    "minutes": 2,
    "attempts": 2
+  },
+  {
+   "category": "DOCUMENTACION",
+   "minutes": 1,
+   "attempts": 1
   },
   {
    "category": "OTRO",
@@ -1908,6 +1913,13 @@ window.PFA_DATA = {
    "total": 18
   },
   {
+   "task": "E2-02",
+   "prod": 0,
+   "unprod": 16,
+   "wait": 0,
+   "total": 16
+  },
+  {
    "task": "E1-10",
    "prod": 14,
    "unprod": 0,
@@ -1920,22 +1932,41 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 6,
    "total": 14
-  },
-  {
-   "task": "E2-02",
-   "prod": 0,
-   "unprod": 14,
-   "wait": 0,
-   "total": 14
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 438
+   "minutes": 440
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:43:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 6,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "DOCUMENTACION",
+   "summary": "La alternativa de acceso directo requiere conector HTTP con Microsoft Entra ID, clase Premium; los alcances pueden requerir consentimiento de administrador",
+   "evidence": "Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/; no se cambió permiso ni ubicación; pendiente decisión de Oscar"
+  },
+  {
+   "start": "2026-10-01T11:42:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 5,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Se agregó Send an HTTP request a SharePoint desde el conector oficial; el mismo error rechaza la dirección del sitio personal",
+   "evidence": "La acción existe; el campo Site Address muestra No se encontró la dirección del sitio; no se ejecutó el flujo; learn.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/working-with-send-sp-http-request"
+  },
   {
    "start": "2026-10-01T11:25:00Z",
    "minutes": 14,
@@ -2039,35 +2070,35 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Microsoft 365 pidió iniciar sesión al abrir la administración de listas; no se ingresaron credenciales",
    "evidence": "List settings inaccesibles; esquema local consultado en referencia/list-schemas; el intento queda pendiente de autenticación"
-  },
-  {
-   "start": "2026-10-01T11:07:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-09",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Oscar recorrió las siete pantallas publicadas y aceptó E1",
-   "evidence": "Confirmación explícita de Oscar en chat; D-025; E1 pasa a Aceptada"
-  },
-  {
-   "start": "2026-10-01T05:47:00Z",
-   "minutes": 18,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-12",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Skill/procedimiento aplicados; análisis E1-05 listo, espera revisión antes de editar la app",
-   "evidence": "Captura tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg; https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:43:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 6,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "DOCUMENTACION",
+   "summary": "La alternativa de acceso directo requiere conector HTTP con Microsoft Entra ID, clase Premium; los alcances pueden requerir consentimiento de administrador",
+   "evidence": "Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/; no se cambió permiso ni ubicación; pendiente decisión de Oscar"
+  },
+  {
+   "start": "2026-10-01T11:42:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 5,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Se agregó Send an HTTP request a SharePoint desde el conector oficial; el mismo error rechaza la dirección del sitio personal",
+   "evidence": "La acción existe; el campo Site Address muestra No se encontró la dirección del sitio; no se ejecutó el flujo; learn.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/working-with-send-sp-http-request"
+  },
   {
    "start": "2026-10-01T11:25:00Z",
    "minutes": 14,
