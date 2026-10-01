@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T16:50:10.018814Z",
+ "generatedUtc": "2026-10-01T16:56:21.028327Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T16:45:04.249150Z",
+  "fileUtc": "2026-10-01T16:52:09.947773Z",
   "ruleFootprints": {
    "current": "4FD52CD8",
    "lines": {
@@ -2223,7 +2223,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
-   "evidence": "Pages: T 3 abiertas/13 hechas de 16 según PLAN; contador 13 de 16; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
+   "evidence": "Pages antes del cierre de T-16: 3 abiertas/13 hechas; auditoría final: 2 abiertas/14 hechas, 14 de 16 según PLAN; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
   },
   {
    "start": "2026-10-01T15:36:00Z",
@@ -2355,7 +2355,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
-   "evidence": "Pages: T 3 abiertas/13 hechas de 16 según PLAN; contador 13 de 16; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
+   "evidence": "Pages antes del cierre de T-16: 3 abiertas/13 hechas; auditoría final: 2 abiertas/14 hechas, 14 de 16 según PLAN; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
   },
   {
    "start": "2026-10-01T15:36:00Z",
