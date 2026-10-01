@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:46:14.374953Z",
+ "generatedUtc": "2026-10-01T11:49:14.275358Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:45 UTC",
+  "updated": "2026-10-01 11:48 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "esperar la decisión de Oscar sobre la ubicación de las listas o una vía alternativa que cambie el acceso; después reabrir E2-02.",
   "needsOscar": [
@@ -17,9 +17,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-13, intento 1, inicio 2026-10-01 11:45 UTC. Agregar y registrar la regla de anuncio de skills; comprobar el texto exacto en la sección 10 y D-026 en DECISIONS.md. E2-02 permanece Bloqueada hasta una decisión de Oscar."
+   "Ninguna. E2-02 permanece Bloqueada y espera la decisión de Oscar sobre la ubicación de las listas o una vía alternativa."
   ],
-  "fileUtc": "2026-10-01T11:45:57.534605Z"
+  "fileUtc": "2026-10-01T11:48:21.428748Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -353,10 +353,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 130,
+    "prod": 133,
     "unprod": 2,
     "wait": 8,
-    "total": 140
+    "total": 143
    }
   }
  ],
@@ -1710,22 +1710,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 405,
+   "prod": 408,
    "unprod": 18,
    "wait": 17,
-   "total": 440
+   "total": 443
   },
   "last24h": {
-   "prod": 330,
+   "prod": 333,
    "unprod": 18,
    "wait": 17,
-   "total": 365
+   "total": 368
   },
   "last7d": {
-   "prod": 405,
+   "prod": 408,
    "unprod": 18,
    "wait": 17,
-   "total": 440
+   "total": 443
   },
   "product": {
    "prod": 275,
@@ -1734,10 +1734,10 @@ window.PFA_DATA = {
    "total": 300
   },
   "support": {
-   "prod": 130,
+   "prod": 133,
    "unprod": 2,
    "wait": 8,
-   "total": 140
+   "total": 143
   }
  },
  "days": [
@@ -1821,7 +1821,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 203,
+   "prod": 206,
    "unprod": 18,
    "wait": 11
   }
@@ -1937,10 +1937,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 440
+   "minutes": 443
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:45:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-13",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Añadí y registré el anuncio obligatorio de cada skill",
+   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación verificada en data.js remoto"
+  },
   {
    "start": "2026-10-01T11:43:00Z",
    "minutes": 1,
@@ -2057,22 +2070,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Se configuró PFA Tablero con repetición de 3 minutos",
    "evidence": "Set-ScheduledTask; (Get-ScheduledTask ...).Triggers.Repetition.Interval = PT3M; python tools/build_dashboard.py generó status.fileUtc; Pages mostró Último reporte del agente hace 7 min"
-  },
-  {
-   "start": "2026-10-01T11:12:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-01",
-   "attempt": 1,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Microsoft 365 pidió iniciar sesión al abrir la administración de listas; no se ingresaron credenciales",
-   "evidence": "List settings inaccesibles; esquema local consultado en referencia/list-schemas; el intento queda pendiente de autenticación"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:45:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-13",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Añadí y registré el anuncio obligatorio de cada skill",
+   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación verificada en data.js remoto"
+  },
   {
    "start": "2026-10-01T11:43:00Z",
    "minutes": 1,
@@ -2924,3 +2937,4 @@ window.PFA_DATA = {
   }
  ]
 };
+
