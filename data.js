@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T16:31:14.061704Z",
+ "generatedUtc": "2026-10-01T16:37:40.285538Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 16:22 UTC",
+  "updated": "2026-10-01 16:34 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Oscar debe elegir una de las dos opciones para E2-02; después la tarea se retoma como un nuevo diseño aprobado.",
+  "nextAction": "Oscar elige una de las dos opciones para E2-02; después se retoma con un diseño aprobado.",
   "needsOscar": [
    {
     "ref": "E2-02",
@@ -20,17 +20,8 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [
-   "T-16, intento 1; inicio 2026-10-01 15:58 UTC. Diagnosticar el parseo de tareas y actualizar dashboard/index.html + tools/build_dashboard.py según D-029. Comprobar build, conteos PLAN/Pages, orden y desplegable, huellas y capturas a 1366 px y 390 px.",
-   "Publicación inicial regeneró dashboard/data.js; falló al escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado (KF-H04).",
-   "E2-02, intento 10 (final); inicio 2026-10-01 15:36 UTC. Oscar reportó 9 intentos sin Copilot en el 3, sin bloqueo en el 4 y más de 90 min; lo registré y ejecuté el intento 10 autorizado.",
-   "Regla anti-bucle: tras 2 fallos detengo variantes, reviso KNOWN-FIXES y Microsoft Learn y registro URL; tras el 3.º consulto Copilot con la plantilla y uso su respuesta en el 4.º; si falla el 4.º o se excede el límite, bloqueo la tarea y paso a otra independiente.",
-   "Antes de pedir algo por navegador, aplico KF-11: recargo la pestaña, abro Power Apps en pestaña nueva y entro desde la lista de apps, pruebo Edge y Codex integrado, y registro qué muestra cada uno.",
-   "A Oscar solo puedo pedir iniciar sesión/MFA, decidir, aprobar o probar como usuario; no pedirle abrir/navegar apps, seleccionar controles ni revisar/cambiar archivos. Solo pedir reconexión si la extensión está desconectada y el navegador integrado tampoco sirve.",
-   "Revisé Peek code: Send_an_HTTP_request; respuesta foldersJson era texto literal. No hay Apply to each; KF-02 no aplica. Copilot consultado con los 9 enfoques agrupados y la respuesta quedó registrada.",
-   "Flow Checker posterior al guardado conserva 1 error de referencia; E2-02 queda Bloqueada. En Necesito de Oscar están las opciones A/B y mi recomendación."
-  ],
-  "fileUtc": "2026-10-01T16:27:06.605307Z",
+  "current": [],
+  "fileUtc": "2026-10-01T16:35:01.958126Z",
   "ruleFootprints": {
    "current": "4FD52CD8",
    "lines": {
@@ -369,15 +360,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 13,
+   "done": 14,
    "total": 16,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 165,
+    "prod": 201,
     "unprod": 2,
     "wait": 8,
-    "total": 175
+    "total": 211
    }
   }
  ],
@@ -1198,13 +1189,12 @@ window.PFA_DATA = {
     "expected": "El tablero presenta el universo de tareas de cada entrega y línea T, y avisa si las huellas de reglas no coinciden",
     "evidence": "Pages muestra abiertas sin límite ordenadas por estado e ID, hechas/canceladas en desplegable cerrado por defecto, contadores por sección, huellas verdes 4FD52CD8 para ambas líneas y capturas desktop/390 px sin desbordamiento horizontal ni texto cortado",
     "limit": 60,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 36,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-01T16:34:00Z"
    }
   ]
  },
@@ -1961,6 +1951,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T15:27:00Z"
+  },
+  {
+   "id": "T-16",
+   "action": "Tablero: mostrar todas las tareas abiertas, hechas en desplegable y huellas",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El tablero presenta el universo de tareas de cada entrega y línea T, y avisa si las huellas de reglas no coinciden",
+   "evidence": "Pages muestra abiertas sin límite ordenadas por estado e ID, hechas/canceladas en desplegable cerrado por defecto, contadores por sección, huellas verdes 4FD52CD8 para ambas líneas y capturas desktop/390 px sin desbordamiento horizontal ni texto cortado",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 36,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T16:34:00Z"
   }
  ],
  "alerts": [
@@ -1971,27 +1976,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 33,
+  "tasksDone": 34,
   "tasksTotal": 53,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 452,
+   "prod": 488,
    "unprod": 28,
    "wait": 17,
-   "total": 497
+   "total": 533
   },
   "last24h": {
-   "prod": 279,
+   "prod": 315,
    "unprod": 28,
    "wait": 13,
-   "total": 320
+   "total": 356
   },
   "last7d": {
-   "prod": 452,
+   "prod": 488,
    "unprod": 28,
    "wait": 17,
-   "total": 497
+   "total": 533
   },
   "product": {
    "prod": 287,
@@ -2000,10 +2005,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 165,
+   "prod": 201,
    "unprod": 2,
    "wait": 8,
-   "total": 175
+   "total": 211
   }
  },
  "days": [
@@ -2087,7 +2092,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 250,
+   "prod": 286,
    "unprod": 28,
    "wait": 11
   }
@@ -2151,6 +2156,13 @@ window.PFA_DATA = {
    "total": 38
   },
   {
+   "task": "T-16",
+   "prod": 36,
+   "unprod": 0,
+   "wait": 0,
+   "total": 36
+  },
+  {
    "task": "E1-08",
    "prod": 29,
    "unprod": 0,
@@ -2191,22 +2203,28 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 18
-  },
-  {
-   "task": "E1-10",
-   "prod": 14,
-   "unprod": 0,
-   "wait": 0,
-   "total": 14
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 497
+   "minutes": 533
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T15:58:00Z",
+   "minutes": 36,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-16",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
+   "evidence": "Pages: T 3 abiertas/13 hechas de 16 según PLAN; contador 13 de 16; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
+  },
   {
    "start": "2026-10-01T15:36:00Z",
    "minutes": 10,
@@ -2323,22 +2341,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Se agregó Send an HTTP request a SharePoint desde el conector oficial; el mismo error rechaza la dirección del sitio personal",
    "evidence": "La acción existe; el campo Site Address muestra No se encontró la dirección del sitio; no se ejecutó el flujo; learn.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/working-with-send-sp-http-request"
-  },
-  {
-   "start": "2026-10-01T11:25:00Z",
-   "minutes": 14,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 4,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "El conector no resuelve el sitio personal; la alternativa sugerida por Copilot no se pudo localizar en el diseñador",
-   "evidence": "4 intentos; documentación Microsoft Learn y Copilot consultados; Flow Checker 1 error por salida faltante del bucle; flujo no ejecutado"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T15:58:00Z",
+   "minutes": 36,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-16",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
+   "evidence": "Pages: T 3 abiertas/13 hechas de 16 según PLAN; contador 13 de 16; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
+  },
   {
    "start": "2026-10-01T15:36:00Z",
    "minutes": 10,
