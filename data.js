@@ -1,26 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:19:13.354638Z",
+ "generatedUtc": "2026-10-01T11:25:14.645141Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:19 UTC",
+  "updated": "2026-10-01 11:23 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-01 sigue en espera; iniciar sesión en Microsoft 365 y verificar las dos listas.",
-  "needsOscar": [
-   {
-    "ref": "E2-01",
-    "text": "iniciar sesión en Microsoft 365 desde la pestaña de Edge abierta; después continuaré con la configuración de PFA_MailFolders y PFA_Projects."
-   }
-  ],
+  "nextAction": "esperar la revisión de los términos por Oscar; después completar E2-01.",
+  "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-10, intento 2. Inicio: 2026-10-01 11:17 UTC. El trigger de “PFA Tablero” quedó en PT3M fuera del sandbox; esperar seis minutos y verificar en Pages la antigüedad del último reporte. El publicador regeneró data.js, pero falló al escribir publish.log por acceso denegado.",
-   "Publicación del tablero: el script regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado), tanto al inicio como al cierre."
+   "E2-01, intento 2; inicio 2026-10-01 11:19 UTC. List settings siguen pendientes porque Microsoft muestra un acuerdo actualizado. No acepté términos ni ingresé credenciales. python tools/build_dashboard.py se ejecutó; el publicador falló al escribir %LOCALAPPDATA%\\PFA\\publish.log (acceso denegado)."
   ],
-  "fileUtc": "2026-10-01T11:18:43.598184Z"
+  "fileUtc": "2026-10-01T11:23:36.314986Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -212,8 +206,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 0,
     "unprod": 0,
-    "wait": 1,
-    "total": 1
+    "wait": 5,
+    "total": 5
    }
   },
   {
@@ -349,15 +343,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 8,
+   "done": 9,
    "total": 10,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 125,
+    "prod": 126,
     "unprod": 2,
     "wait": 2,
-    "total": 129
+    "total": 130
    }
   }
  ],
@@ -642,7 +636,7 @@ window.PFA_DATA = {
     "evidence": "Tabla de columnas y cambios en worklog",
     "limit": 30,
     "status": "En curso",
-    "attempts": 1,
+    "attempts": 2,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
@@ -1027,12 +1021,11 @@ window.PFA_DATA = {
     "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
     "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 3,
+    "status": "Hecha",
+    "attempts": 2,
+    "minutes": 4,
     "entrega": "T",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "T-10",
@@ -1060,7 +1053,7 @@ window.PFA_DATA = {
   "evidence": "Tabla de columnas y cambios en worklog",
   "limit": 30,
   "status": "En curso",
-  "attempts": 1,
+  "attempts": 2,
   "minutes": 0,
   "entrega": "E2",
   "fails": 0,
@@ -1076,7 +1069,7 @@ window.PFA_DATA = {
    "evidence": "Tabla de columnas y cambios en worklog",
    "limit": 30,
    "status": "En curso",
-   "attempts": 1,
+   "attempts": 2,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
@@ -1671,43 +1664,57 @@ window.PFA_DATA = {
    "minutes": 10,
    "entrega": "T",
    "fails": 0
+  },
+  {
+   "id": "T-09",
+   "action": "Instalar las skills cerrar-intento y powerapps-yaml y la configuración de Microsoft Learn; aplicar los cinco cambios aprobados a AGENTS.md; registrar el incidente del doble encabezado",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
+   "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 4,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 27,
+  "tasksDone": 28,
   "tasksTotal": 47,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 398,
+   "prod": 399,
    "unprod": 2,
-   "wait": 7,
-   "total": 407
+   "wait": 11,
+   "total": 412
   },
   "last24h": {
-   "prod": 344,
+   "prod": 345,
    "unprod": 2,
-   "wait": 7,
-   "total": 353
+   "wait": 11,
+   "total": 358
   },
   "last7d": {
-   "prod": 398,
+   "prod": 399,
    "unprod": 2,
-   "wait": 7,
-   "total": 407
+   "wait": 11,
+   "total": 412
   },
   "product": {
    "prod": 273,
    "unprod": 0,
-   "wait": 5,
-   "total": 278
+   "wait": 9,
+   "total": 282
   },
   "support": {
-   "prod": 125,
+   "prod": 126,
    "unprod": 2,
    "wait": 2,
-   "total": 129
+   "total": 130
   }
  },
  "days": [
@@ -1791,9 +1798,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 196,
+   "prod": 197,
    "unprod": 2,
-   "wait": 1
+   "wait": 5
   }
  ],
  "categories": [
@@ -1811,7 +1818,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "AUTH",
-   "minutes": 5
+   "minutes": 9
   },
   {
    "category": "NAVEGADOR",
@@ -1893,10 +1900,36 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 407
+   "minutes": 412
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T11:19:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "La página de Microsoft pidió revisar términos actualizados antes de abrir Lists; no acepté ni ingresé credenciales",
+   "evidence": "Edge muestra Microsoft Services Agreement actualizado; List settings siguen pendientes de esa acción"
+  },
+  {
+   "start": "2026-10-01T11:18:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-09",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
+   "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
+  },
   {
    "start": "2026-10-01T11:12:00Z",
    "minutes": 1,
@@ -2000,35 +2033,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Registré T-08, verifiqué la raíz, corregí el destino del revisor y publiqué el tablero",
    "evidence": "Commit 9d294bd; build 0; automatización activa con proyecto y carpeta PFA; publicación remota confirmada; el publicador falló dos veces al registrar publish.log; Microsoft Learn: Add-Content -Force omite solo el atributo read-only, no cambia permisos (https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.5)"
-  },
-  {
-   "start": "2026-10-01T01:45:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-06",
-   "attempt": 4,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Conecté la sesión existente de GitHub CLI con Git y ejecuté el publicador",
-   "evidence": "Publicador terminó con código 0; commit 7ee8fd9; GitHub Pages devuelve data.js actualizado con HTTP 200 y generatedUtc 2026-10-01T01:50:09Z"
-  },
-  {
-   "start": "2026-10-01T01:44:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-07",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Moví la aprobación histórica de STATUS a DECISIONS.md y publiqué el tablero corregido",
-   "evidence": "D-019 registra la aprobación; GitHub Pages sirve data.js sin la nota de aprobación y con E1-09 como único pendiente"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T11:19:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-01",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "La página de Microsoft pidió revisar términos actualizados antes de abrir Lists; no acepté ni ingresé credenciales",
+   "evidence": "Edge muestra Microsoft Services Agreement actualizado; List settings siguen pendientes de esa acción"
+  },
+  {
+   "start": "2026-10-01T11:18:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-09",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
+   "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
+  },
   {
    "start": "2026-10-01T11:12:00Z",
    "minutes": 1,
