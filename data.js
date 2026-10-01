@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:18:39.112094Z",
+ "generatedUtc": "2026-10-01T01:33:39.954008Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:17 UTC",
+  "updated": "2026-10-01 01:25 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "completar el intento 3 de E1-08, revisar las 7 pantallas en escritorio, teléfono vertical e iPad horizontal, y probar la navegación en la app publicada. Luego ejecutar E1-10 y pedir la aceptación final E1-09.",
+  "nextAction": "completar E1-10: en teléfono e iPad vertical, abrir una lista seleccionable desde un botón; conservar la navegación por botones en horizontal. Probar todas las opciones en preview y en la app publicada; luego pedir a Oscar la aceptación final E1-09.",
   "needsOscar": [
    {
     "ref": "",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E1-08, intento 3, iniciado 2026-10-01 01:17 UTC. Revisar todas las pantallas en los 3 formatos, guardar y publicar; comprobar las 7 opciones en la app publicada en horizontal."
+   "E1-10, intento 1, iniciado 2026-10-01 01:25 UTC. Ajustar el encabezado común de las 7 pantallas: selector vertical y botones horizontales. Evidencia: las 7 opciones navegan, la activa queda marcada y la versión publicada funciona."
   ]
  },
  "revision": {
@@ -167,15 +167,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 7,
+   "done": 8,
    "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 149,
+    "prod": 156,
     "unprod": 0,
     "wait": 4,
-    "total": 153
+    "total": 160
    }
   },
   {
@@ -575,12 +575,11 @@ window.PFA_DATA = {
     "expected": "Versión publicada y pantallas adaptadas",
     "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
     "limit": 45,
-    "status": "Pendiente",
-    "attempts": 2,
-    "minutes": 22,
+    "status": "Hecha",
+    "attempts": 3,
+    "minutes": 29,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-09",
@@ -610,7 +609,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    }
   ],
   "E2": [
@@ -961,36 +960,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-08",
-  "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
+  "id": "E1-10",
+  "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
   "owner": "Agente",
-  "depends": "E1-05",
-  "expected": "Versión publicada y pantallas adaptadas",
-  "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
-  "limit": 45,
+  "depends": "E1-08",
+  "expected": "Navegación usable sin barra horizontal en formato vertical",
+  "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
+  "limit": 60,
   "status": "Pendiente",
-  "attempts": 2,
-  "minutes": 22,
+  "attempts": 0,
+  "minutes": 0,
   "entrega": "E1",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-08",
-   "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
-   "owner": "Agente",
-   "depends": "E1-05",
-   "expected": "Versión publicada y pantallas adaptadas",
-   "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
-   "limit": 45,
-   "status": "Pendiente",
-   "attempts": 2,
-   "minutes": 22,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E1-09",
    "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
@@ -1019,7 +1003,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-01",
@@ -1194,6 +1178,21 @@ window.PFA_DATA = {
    "expected": "La lista acepta un correo con 6 campos",
    "evidence": "Columnas cambiadas anotadas en worklog",
    "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-03",
+   "action": "Crear el flujo PFA_E3_CargarCorreos. Trigger manual con entrada opcional SoloCarpeta (texto). Pasos: Get items de PFA_MailFolders con Included = Sí (o solo la carpeta indicada) → por cada carpeta, Get emails (V3) de los últimos 30 días, Top 50, sin adjuntos → por cada correo, Get items en PFA_Messages por InternetMessageId → Create item o Update item. Llenar las 6 columnas obligatorias más OutlookWebLink y ObservedFolderPath. Ninguna acción que modifique el buzón (H-03)",
+   "owner": "Agente",
+   "depends": "E3-01, E3-02",
+   "expected": "Flujo guardado",
+   "evidence": "Flujo guardado; Flow Checker 0 errores",
+   "limit": 90,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1428,6 +1427,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E1-08",
+   "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
+   "owner": "Agente",
+   "depends": "E1-05",
+   "expected": "Versión publicada y pantallas adaptadas",
+   "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
+   "limit": 45,
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 29,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -1500,33 +1513,33 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 21,
+  "tasksDone": 22,
   "tasksTotal": 42,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 234,
+   "prod": 241,
    "unprod": 0,
    "wait": 6,
-   "total": 240
+   "total": 247
   },
   "last24h": {
-   "prod": 234,
+   "prod": 241,
    "unprod": 0,
    "wait": 6,
-   "total": 240
+   "total": 247
   },
   "last7d": {
-   "prod": 234,
+   "prod": 241,
    "unprod": 0,
    "wait": 6,
-   "total": 240
+   "total": 247
   },
   "product": {
-   "prod": 152,
+   "prod": 159,
    "unprod": 0,
    "wait": 4,
-   "total": 156
+   "total": 163
   },
   "support": {
    "prod": 82,
@@ -1616,7 +1629,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 32,
+   "prod": 39,
    "unprod": 0,
    "wait": 0
   }
@@ -1654,18 +1667,18 @@ window.PFA_DATA = {
    "total": 41
   },
   {
+   "task": "E1-08",
+   "prod": 29,
+   "unprod": 0,
+   "wait": 4,
+   "total": 33
+  },
+  {
    "task": "E1-07",
    "prod": 29,
    "unprod": 0,
    "wait": 0,
    "total": 29
-  },
-  {
-   "task": "E1-08",
-   "prod": 22,
-   "unprod": 0,
-   "wait": 4,
-   "total": 26
   },
   {
    "task": "E1-06",
@@ -1713,10 +1726,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 240
+   "minutes": 247
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T01:17:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisé las 7 pantallas en desktop, teléfono vertical e iPad horizontal; guardé y publiqué la versión 154",
+   "evidence": "Preview: las 7 pantallas cargan y seleccionan la navegación; el menú se recorta en vertical (E1-10); app publicada v154 Live; navegación desde My Day a Projects y desde Projects a Diagnostics confirmada"
+  },
   {
    "start": "2026-10-01T01:05:00Z",
    "minutes": 9,
@@ -1833,22 +1859,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Apliqué B y C: reglas, incidentes y lecciones; registré el inicio de sesión pendiente y publiqué el tablero",
    "evidence": "INC-01 a INC-05 registrados; KF-P01 a KF-P05 y KF-H01 documentados; STATUS contiene E1-08; preview pendiente de Oscar; página HTTP 200"
-  },
-  {
-   "start": "2026-09-30T19:16:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-02",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Tarea Windows y página verificadas; concilié las dos publicaciones faltantes y registré que la pausa fue por la regla restrictiva del revisor",
-   "evidence": "LastTaskResult 0; ruta absoluta pwsh; commits ef94990 y 7f3c40b en origin/main; página HTTP 200; log conciliado"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T01:17:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-08",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisé las 7 pantallas en desktop, teléfono vertical e iPad horizontal; guardé y publiqué la versión 154",
+   "evidence": "Preview: las 7 pantallas cargan y seleccionan la navegación; el menú se recorta en vertical (E1-10); app publicada v154 Live; navegación desde My Day a Projects y desde Projects a Diagnostics confirmada"
+  },
   {
    "start": "2026-10-01T01:05:00Z",
    "minutes": 9,
