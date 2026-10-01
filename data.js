@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T19:20:42.565141Z",
+ "generatedUtc": "2026-10-01T19:28:14.889628Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -1171,7 +1171,7 @@ window.PFA_DATA = {
     "limit": 20,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 6,
+    "minutes": 8,
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T15:04:00Z"
@@ -2018,7 +2018,7 @@ window.PFA_DATA = {
    "limit": 20,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 6,
+   "minutes": 8,
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T15:04:00Z"
@@ -2138,10 +2138,10 @@ window.PFA_DATA = {
    "total": 573
   },
   "last24h": {
-   "prod": 348,
+   "prod": 337,
    "unprod": 28,
    "wait": 13,
-   "total": 389
+   "total": 378
   },
   "last7d": {
    "prod": 528,
