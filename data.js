@@ -1,22 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T20:10:15.003410Z",
+ "generatedUtc": "2026-10-01T20:25:14.672337Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 19:37 UTC",
+  "updated": "2026-10-01 20:23 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "completar E2-02 con salida dinámica/Parse JSON en la segunda acción HTTP; después comprobar Flow Checker y run con JSON.",
+  "nextAction": "Oscar inicia sesión en Power Automate; después completar el intento 11 de E2-02 con salida dinámica/Parse JSON.",
   "needsOscar": [
    {
     "ref": "HZ-11",
     "text": "aprobar la mini-spec y decidir si se sustituye D-018 por menú vertical desplazable o se mantiene el selector desplegable aprobado."
    },
    {
-    "ref": "T-18",
-    "text": "respuesta del issue #7 registrada en D-034 y PLAN; no requiere prueba del despertador."
+    "ref": "E2-02",
+    "text": "inicia sesión en Power Automate (https://make.powerautomate.com) en la pestaña de Edge que quedó abierta; después veré el inicio de Power Automate."
    },
    {
     "ref": "T-14",
@@ -25,9 +25,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 11/12: inicio 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. Enfoque: reconstruir la segunda acción HTTP usando solo contenido dinámico o Parse JSON; antes de cambiar el flow, comprobar en Peek code el nombre interno exacto de la acción HTTP inicial. Cierre: Flow Checker 0 y run Succeeded con JSON de carpetas visible en el historial. Máximo 2 intentos con este enfoque."
+   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan vuelve a describir el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. Power Automate pide iniciar sesión (AADSTS160021); no se modificó el flow. Learn consultado: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow. Acumulado E2-02: 82/90 min efectivos."
   ],
-  "fileUtc": "2026-10-01T19:39:18.608460Z",
+  "fileUtc": "2026-10-01T20:24:39.067826Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -227,10 +227,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 14,
+    "prod": 58,
     "unprod": 26,
-    "wait": 5,
-    "total": 45
+    "wait": 6,
+    "total": 90
    }
   },
   {
@@ -694,10 +694,10 @@ window.PFA_DATA = {
     "limit": 90,
     "status": "Reabierta",
     "attempts": 11,
-    "minutes": 38,
+    "minutes": 82,
     "entrega": "E2",
     "fails": 4,
-    "lastActivity": "2026-10-01T15:46:00Z",
+    "lastActivity": "2026-10-01T20:22:00Z",
     "ready": true
    },
    {
@@ -1289,10 +1289,10 @@ window.PFA_DATA = {
   "limit": 90,
   "status": "Reabierta",
   "attempts": 11,
-  "minutes": 38,
+  "minutes": 82,
   "entrega": "E2",
   "fails": 4,
-  "lastActivity": "2026-10-01T15:46:00Z",
+  "lastActivity": "2026-10-01T20:22:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1306,10 +1306,10 @@ window.PFA_DATA = {
    "limit": 90,
    "status": "Reabierta",
    "attempts": 11,
-   "minutes": 38,
+   "minutes": 82,
    "entrega": "E2",
    "fails": 4,
-   "lastActivity": "2026-10-01T15:46:00Z",
+   "lastActivity": "2026-10-01T20:22:00Z",
    "ready": true
   },
   {
@@ -2127,28 +2127,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 528,
+   "prod": 572,
    "unprod": 28,
-   "wait": 17,
-   "total": 573
+   "wait": 18,
+   "total": 618
   },
   "last24h": {
-   "prod": 337,
+   "prod": 381,
    "unprod": 28,
-   "wait": 11,
-   "total": 376
+   "wait": 12,
+   "total": 421
   },
   "last7d": {
-   "prod": 528,
+   "prod": 572,
    "unprod": 28,
-   "wait": 17,
-   "total": 573
+   "wait": 18,
+   "total": 618
   },
   "product": {
-   "prod": 287,
+   "prod": 331,
    "unprod": 26,
-   "wait": 9,
-   "total": 322
+   "wait": 10,
+   "total": 367
   },
   "support": {
    "prod": 241,
@@ -2238,9 +2238,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 326,
+   "prod": 370,
    "unprod": 28,
-   "wait": 11
+   "wait": 12
   }
  ],
  "categories": [
@@ -2268,7 +2268,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "AUTH",
-   "minutes": 9
+   "minutes": 10
   },
   {
    "category": "PERMISOS",
@@ -2288,6 +2288,13 @@ window.PFA_DATA = {
    "total": 143
   },
   {
+   "task": "E2-02",
+   "prod": 56,
+   "unprod": 26,
+   "wait": 1,
+   "total": 83
+  },
+  {
    "task": "T-16",
    "prod": 46,
    "unprod": 0,
@@ -2300,13 +2307,6 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 41
-  },
-  {
-   "task": "E2-02",
-   "prod": 12,
-   "unprod": 26,
-   "wait": 0,
-   "total": 38
   },
   {
    "task": "E1-08",
@@ -2354,7 +2354,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 553
+   "minutes": 598
   },
   {
    "account": "empresa",
@@ -2362,6 +2362,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T20:21:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Automate requiere iniciar sesión",
+   "evidence": "Edge muestra Sign in required / AADSTS160021; flow sin cambios"
+  },
+  {
+   "start": "2026-10-01T19:37:00Z",
+   "minutes": 44,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Reconcilié el alcance de E2 con D-028; revisé la guía de integración de flows con Power Apps",
+   "evidence": "D-033; control/PLAN.md actualizado; Learn https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow; flow sin cambios"
+  },
   {
    "start": "2026-10-01T19:12:00Z",
    "minutes": 8,
@@ -2465,35 +2491,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Registré huellas por línea, regla de recuperación de navegador y criterio de auditoría",
    "evidence": "AGENTS.md completo: 23807 bytes; después de cambios y lectura completa: 4FD52CD8; STATUS con Desarrollo pendiente y Entorno 4FD52CD8; KF-11 y REVISOR verificados"
-  },
-  {
-   "start": "2026-10-01T14:58:00Z",
-   "minutes": 6,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-14",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Instalé Context7 MCP y limité su uso a dashboard/tools",
-   "evidence": "codex mcp list: context7 enabled; MCP initialize/tools/list OK; consulta Python /python/cpython devolvió documentación json.dumps/json.loads; AGENTS.md §5 y KNOWN-FIXES KF-H03 verificados"
-  },
-  {
-   "start": "2026-10-01T14:43:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 9,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Restauré URI completo y cambié referencia al nombre interno del paso; Checker mantiene referencia inválida; no pude consultar Copilot por extensión Edge inaccesible",
-   "evidence": "Flow Checker: 1 error de referencia y advertencia de respuesta; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/power-automate/flows-designer"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T20:21:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Power Automate requiere iniciar sesión",
+   "evidence": "Edge muestra Sign in required / AADSTS160021; flow sin cambios"
+  },
+  {
+   "start": "2026-10-01T19:37:00Z",
+   "minutes": 44,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Reconcilié el alcance de E2 con D-028; revisé la guía de integración de flows con Power Apps",
+   "evidence": "D-033; control/PLAN.md actualizado; Learn https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow; flow sin cambios"
+  },
   {
    "start": "2026-10-01T19:12:00Z",
    "minutes": 8,
