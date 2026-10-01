@@ -1,23 +1,27 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T04:18:38.444897Z",
+ "generatedUtc": "2026-10-01T04:31:59.457141Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:51 UTC",
+  "updated": "2026-10-01 04:31 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "E1-09: Oscar recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos.",
+  "nextAction": "E1-09: Oscar recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos. E1-05 ya figura Hecha.",
   "needsOscar": [
    {
     "ref": "E1-09",
     "text": "recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos."
+   },
+   {
+    "ref": "T-08",
+    "text": "recomiendo mantener superpowers desactivado (figura desactivado por administración) y retirar powerapps-yaml-edge de las skills locales del proyecto; no usé ninguna de las dos."
    }
   ],
   "blockers": [],
   "current": [
-   "Ninguna. E1-10 y T-06 cerradas; la app y el data.js publicado están al día."
+   "Ninguna. T-08 cerrada; E1-05 ya está Hecha según el plan y su evidencia de cierre."
   ]
  },
  "revision": {
@@ -333,15 +337,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 7,
-   "total": 7,
+   "done": 8,
+   "total": 8,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 88,
+    "prod": 97,
     "unprod": 2,
     "wait": 2,
-    "total": 92
+    "total": 101
    }
   }
  ],
@@ -989,6 +993,20 @@ window.PFA_DATA = {
     "minutes": 3,
     "entrega": "T",
     "fails": 0
+   },
+   {
+    "id": "T-08",
+    "action": "Reorganizar la raíz del repositorio en referencia/ y archivo/; verificar el tablero y asociar el revisor a esta carpeta",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "La raíz sigue AGENTS.md y el revisor trabaja desde el repositorio correcto",
+    "evidence": "Commit 9d294bd; carpetas verificadas; build del tablero con código 0; automatización activa con proyecto y carpeta PFA; data.js publicado",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 9,
+    "entrega": "T",
+    "fails": 0
    }
   ]
  },
@@ -1570,31 +1588,45 @@ window.PFA_DATA = {
    "minutes": 3,
    "entrega": "T",
    "fails": 0
+  },
+  {
+   "id": "T-08",
+   "action": "Reorganizar la raíz del repositorio en referencia/ y archivo/; verificar el tablero y asociar el revisor a esta carpeta",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "La raíz sigue AGENTS.md y el revisor trabaja desde el repositorio correcto",
+   "evidence": "Commit 9d294bd; carpetas verificadas; build del tablero con código 0; automatización activa con proyecto y carpeta PFA; data.js publicado",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 9,
+   "entrega": "T",
+   "fails": 0
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 25,
-  "tasksTotal": 44,
+  "tasksDone": 26,
+  "tasksTotal": 45,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 261,
+   "prod": 270,
    "unprod": 2,
    "wait": 6,
-   "total": 269
+   "total": 278
   },
   "last24h": {
-   "prod": 261,
+   "prod": 270,
    "unprod": 2,
    "wait": 6,
-   "total": 269
+   "total": 278
   },
   "last7d": {
-   "prod": 261,
+   "prod": 270,
    "unprod": 2,
    "wait": 6,
-   "total": 269
+   "total": 278
   },
   "product": {
    "prod": 173,
@@ -1603,10 +1635,10 @@ window.PFA_DATA = {
    "total": 177
   },
   "support": {
-   "prod": 88,
+   "prod": 97,
    "unprod": 2,
    "wait": 2,
-   "total": 92
+   "total": 101
   }
  },
  "days": [
@@ -1690,7 +1722,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 59,
+   "prod": 68,
    "unprod": 2,
    "wait": 0
   }
@@ -1792,10 +1824,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 269
+   "minutes": 278
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T04:22:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Registré T-08, verifiqué la raíz, corregí el destino del revisor y publiqué el tablero",
+   "evidence": "Commit 9d294bd; build 0; automatización activa con proyecto y carpeta PFA; publicación remota confirmada; el publicador falló dos veces al registrar publish.log; Microsoft Learn: Add-Content -Force omite solo el atributo read-only, no cambia permisos (https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.5)"
+  },
   {
    "start": "2026-10-01T01:45:00Z",
    "minutes": 3,
@@ -1912,22 +1957,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Alineé los horarios del revisor y re-registré PFA Tablero cada 15 minutos",
    "evidence": "Dos automatizaciones Codex, REVISOR.md y D-015 coinciden; LastTaskResult 0, intervalo PT15M, IgnoreNew, límite PT5M"
-  },
-  {
-   "start": "2026-10-01T00:58:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-05",
-   "attempt": 5,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Comprobé el YAML local de My Day después de mover Refresh fuera del encabezado común",
-   "evidence": "Un btnDashboardRefresh con la acción intacta y sin Y duplicada; Studio sigue en solo lectura por otra sesión, así que falta aplicar y probar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T04:22:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Registré T-08, verifiqué la raíz, corregí el destino del revisor y publiqué el tablero",
+   "evidence": "Commit 9d294bd; build 0; automatización activa con proyecto y carpeta PFA; publicación remota confirmada; el publicador falló dos veces al registrar publish.log; Microsoft Learn: Add-Content -Force omite solo el atributo read-only, no cambia permisos (https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.5)"
+  },
   {
    "start": "2026-10-01T01:45:00Z",
    "minutes": 3,
