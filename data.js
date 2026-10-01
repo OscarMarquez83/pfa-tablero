@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T16:56:21.028327Z",
+ "generatedUtc": "2026-10-01T17:07:14.087787Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 16:44 UTC",
+  "updated": "2026-10-01 17:05 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Oscar elige una de las dos opciones para E2-02; después se retoma con un diseño aprobado.",
+  "nextAction": "comprobar que PFA Despertador inicia y procesa el issue de prueba de Oscar en menos de 30 minutos.",
   "needsOscar": [
    {
     "ref": "E2-02",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T16:52:09.947773Z",
+  "fileUtc": "2026-10-01T17:06:26.739461Z",
   "ruleFootprints": {
    "current": "4FD52CD8",
    "lines": {
@@ -361,7 +361,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 14,
-   "total": 16,
+   "total": 17,
    "detailed": true,
    "active": false,
    "time": {
@@ -1195,6 +1195,22 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T16:44:00Z"
+   },
+   {
+    "id": "T-17",
+    "action": "Crear la automatización Codex PFA Despertador cada 15 minutos para procesar issues abiertos de Oscar cuando no haya una sesión activa",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Las respuestas de Oscar reactivan el trabajo desde el tablero sin otro mensaje en chat",
+    "evidence": "Automatización activa en este proyecto con el mensaje solicitado; issue de prueba de Oscar queda cerrado con “Registrado en [archivo]” y worklog registra el intento dentro de 30 minutos",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
@@ -1977,7 +1993,7 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 34,
-  "tasksTotal": 53,
+  "tasksTotal": 54,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
