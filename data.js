@@ -1,145 +1,152 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:33:39.954008Z",
+ "generatedUtc": "2026-10-01T01:45:46.574078Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:25 UTC",
+  "updated": "2026-10-01 01:43 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "completar E1-10: en teléfono e iPad vertical, abrir una lista seleccionable desde un botón; conservar la navegación por botones en horizontal. Probar todas las opciones en preview y en la app publicada; luego pedir a Oscar la aceptación final E1-09.",
+  "nextAction": "cerrar T-06: corregir el PATH de Git del publicador, publicar el estado y comprobar GitHub Pages. Después, E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
   "needsOscar": [
    {
-    "ref": "",
-    "text": "Vacío. Oscar aprobó tomar el control de edición en el issue #3."
+    "ref": "E1-09",
+    "text": "recorre las 7 pantallas de la app publicada y escribe «E1 aceptada» o indica cambios concretos."
    }
   ],
   "blockers": [],
   "current": [
-   "E1-10, intento 1, iniciado 2026-10-01 01:25 UTC. Ajustar el encabezado común de las 7 pantallas: selector vertical y botones horizontales. Evidencia: las 7 opciones navegan, la activa queda marcada y la versión publicada funciona."
+   "T-06, intento 3, iniciado 2026-10-01 01:43 UTC. Configurar GIT_EXEC_PATH para que Git encuentre git-remote-https; los intentos anteriores confirmaron que añadirlo solo al PATH no basta. Verificar el push y el data.js publicado.",
+   "T-07, intento 1, iniciado 2026-10-01 01:44 UTC. Mover la aprobación histórica del STATUS a DECISIONS.md y publicar el tablero con solo solicitudes vigentes para Oscar."
   ]
  },
  "revision": {
   "light": "AMARILLO",
-  "reason": "T-01 acumula 41 minutos sobre un límite de 30; E1-08 espera autenticación y INC-01 tiene verificación pendiente. No se detectan incumplimientos nuevos desde la revisión anterior.",
-  "date": "2026-09-30 21:53 UTC",
-  "dateIso": "2026-09-30T21:53:00Z",
+  "reason": "T-01 acumula 41 minutos frente a un límite de 30; excede el límite por 11 minutos.",
+  "date": "2026-10-01 01:36 UTC",
+  "dateIso": "2026-10-01T01:36:00Z",
   "summary": [
-   "E0 aceptada: 9/9; E1: 7/9, sin nueva tarea funcional cerrada desde la revisión anterior.",
-   "191 minutos efectivos y 6 de espera; 100 % del tiempo efectivo registrado es HECHA o AVANCE.",
-   "Cuatro incidentes cerrados; INC-01 sigue abierto con respuesta y preview pendiente de login."
+   "E0: 9/9; E1: 8/10; E1-10 está en curso desde 2026-10-01 01:25 UTC.",
+   "En las últimas 24 h y desde 2026-09-30 hay 247 minutos registrados: 241 productivos (97.57 %) y 6 de espera.",
+   "INC-01 está listo para cerrar; los issues de GitHub no se pudieron verificar por un error SSL."
   ],
   "sections": [
    {
     "title": "Resumen en 3 líneas",
     "lines": [
-     "E0 aceptada: 9/9; E1: 7/9, sin nueva tarea funcional cerrada desde la revisión anterior.",
-     "191 minutos efectivos y 6 de espera; 100 % del tiempo efectivo registrado es HECHA o AVANCE.",
-     "Cuatro incidentes cerrados; INC-01 sigue abierto con respuesta y preview pendiente de login."
+     "E0: 9/9; E1: 8/10; E1-10 está en curso desde 2026-10-01 01:25 UTC.",
+     "En las últimas 24 h y desde 2026-09-30 hay 247 minutos registrados: 241 productivos (97.57 %) y 6 de espera.",
+     "INC-01 está listo para cerrar; los issues de GitHub no se pudieron verificar por un error SSL."
     ]
    },
    {
     "title": "Tiempo",
     "lines": [
      "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
-     "|---|---|---|---|",
-     "| Últimas 24 horas | 3,283333 (197 min, incluye espera) | 96,954315 | 0 |",
-     "| Desde 2026-09-30 | 3,283333 (197 min, incluye espera) | 96,954315 | 0 |",
-     "28 filas en ambos periodos. Trabajo efectivo: 191 min (3,183333 h); HECHA/AVANCE: 191 min. Productivo sobre total incluyendo ESPERA: 191/197. Sobre tiempo efectivo: 100 %. Se usa la columna minutos; no se inventa tiempo entre registros.",
-     "| Entrega | Minutos efectivos, 24 h y acumulado |",
-     "|---|---|",
-     "| E0 | 3 |",
-     "| E1 | 129 |",
-     "| T | 59 |",
-     "| E2–E10 | 0 |",
-     "| Tarea | Minutos efectivos, 24 h y acumulado | Límite (min) |",
-     "|---|---|---|",
-     "| E0-01 | 0 | 15 |",
-     "| E0-02 | 0 | 10 |",
-     "| E0-03 | 1 | 10 |",
-     "| E0-04 | 1 | 10 |",
-     "| E0-05 a E0-08 | 0 (reatribuidos a T-01) | 20 / 20 / 30 / 30 |",
-     "| E0-09 | 1 | — |",
-     "| E1-01 | 10 | 20 |",
-     "| E1-02 | 6 | 30 |",
-     "| E1-03 | 2 | 20 |",
-     "| E1-04 | 13 | 90 |",
-     "| E1-05 | 30 | 60 |",
-     "| E1-06 | 24 | 60 |",
-     "| E1-07 | 29 | 60 |",
-     "| E1-08 | 15 | 30 |",
-     "| T-01 | 41 | 30 |",
-     "| T-02 | 7 | 30 |",
-     "| T-03 | 11 | 90 |",
-     "Espera en 24 h: AUTH 4 min (1 fila); NAVEGADOR 2 min (1 fila). Último registro: 2:36 p. m. Central. El intervalo posterior sin registro no cuenta como espera."
+     "|---|---:|---:|---:|",
+     "| Últimas 24 horas | 4.1167 (247 min; incluye espera) | 97.57 % | 0 |",
+     "| Desde 2026-09-30 | 4.1167 (247 min; incluye espera) | 97.57 % | 0 |",
+     "HECHA y AVANCE suman 241 minutos. ESPERA suma 6 minutos. SIN_AVANCE/BLOQUEADA suma 0 minutos. Los 36 registros caen en ambos periodos. Las horas se muestran con 4 decimales; los porcentajes, con 2.",
+     "### Minutos efectivos por entrega",
+     "| Entrega | Últimas 24 h | Acumulado |",
+     "|---|---:|---:|",
+     "| E0 | 3 | 3 |",
+     "| E1 | 156 | 156 |",
+     "| T | 82 | 82 |",
+     "| E2–E10 | 0 | 0 |",
+     "### Minutos efectivos por tarea",
+     "| Tarea | Minutos |",
+     "|---|---:|",
+     "| E0-01 | 0 |",
+     "| E0-02 | 0 |",
+     "| E0-03 | 1 |",
+     "| E0-04 | 1 |",
+     "| E0-09 | 1 |",
+     "| E1-01 | 10 |",
+     "| E1-02 | 6 |",
+     "| E1-03 | 2 |",
+     "| E1-04 | 13 |",
+     "| E1-05 | 43 |",
+     "| E1-06 | 24 |",
+     "| E1-07 | 29 |",
+     "| E1-08 | 29 |",
+     "| E1-10 | 0 (intento en curso; aún sin fila de cierre) |",
+     "| T-01 | 41 |",
+     "| T-02 | 7 |",
+     "| T-03 | 11 |",
+     "| T-04 | 19 |",
+     "| T-05 | 4 |",
+     "E2–E3 no tienen tiempo registrado. E4–E10 no están detalladas."
     ]
    },
    {
     "title": "Avance por entrega",
     "lines": [
      "| Entrega | Hechas / total |",
-     "|---|---|",
+     "|---|---:|",
      "| E0 | 9 / 9 |",
-     "| E1 | 7 / 9 |",
+     "| E1 | 8 / 10 |",
      "| E2 | 0 / 10 |",
      "| E3 | 0 / 8 |",
-     "| T | 3 / 3 |",
-     "| E4–E10 | Sin detallar |",
-     "T-02 y T-03 se cerraron desde la revisión anterior. E1-08 no acredita versión publicada ni prueba en la app publicada; permanece En curso. La evidencia funcional se toma del worklog, sin comprobación en vivo."
+     "| T | 5 / 5 |",
+     "| E4–E10 | Sin detallar |"
     ]
    },
    {
     "title": "Tareas en alerta",
     "lines": [
      "| Tarea | Motivo | Intentos | Minutos / límite |",
-     "|---|---|---|---|",
-     "| T-01 | Supera el límite por 11 min; tarea retrospectiva Hecha, con tiempo reatribuido | 7 (1 SIN_AVANCE) | 41 / 30 |",
-     "| E1-08 | Espera login; falta preview de Configuration, publicación y prueba publicada | 1 efectivo y 1 fila ESPERA | 15 / 30 |",
-     "E1-08 tiene su última fila a las 8:40 a. m. Central: aún no cumple 12 horas sin registro. Ninguna tarea suma 3 SIN_AVANCE ni permanece Bloqueada/Por validar más de 24 horas."
+     "|---|---|---:|---:|",
+     "| T-01 | Tiempo acumulado supera el límite por 11 minutos. La tarea ya está Hecha. | 7 (1 SIN_AVANCE) | 41 / 30 |",
+     "Ninguna tarea tiene 3 intentos SIN_AVANCE. E1-10 lleva 11 minutos en curso según STATUS; no alcanza el umbral de 12 horas sin avance. No hay tareas Bloqueada o Por validar desde hace más de 24 horas."
     ]
    },
    {
     "title": "Problemas más frecuentes (sin avance, por categoría)",
     "lines": [
      "| Categoría | Minutos | Intentos |",
-     "|---|---|---|",
-     "| AUTH | 0 | 1 |"
+     "|---|---:|---:|",
+     "| AUTH | 0 | 1 |",
+     "El único intento SIN_AVANCE fue T-01, categoría AUTH, de 0 minutos.",
+     "### Tiempo de espera en 24 horas",
+     "| Categoría | Minutos | Intentos |",
+     "|---|---:|---:|",
+     "| AUTH | 4 | 1 |",
+     "| NAVEGADOR | 2 | 2 |"
     ]
    },
    {
     "title": "Incumplimientos de AGENTS.md",
     "lines": [
      "### Nuevos",
-     "Ninguno confirmado desde la revisión anterior. El soporte posterior está registrado en T-02/T-03. El exceso retrospectivo de T-01 se informa como alerta; no demuestra un intento nuevo que continuara tras superar el límite.",
+     "Ninguno confirmado desde la revisión anterior. T-04 incorporó la skill solicitada en .agents/skills/planear/; los archivos nuevos corresponden a la tarea T-04. El historial de 36 horas no muestra cambios en documentos congelados. Los cambios visuales registrados tienen YAML asociado. No se detectaron nombres de clientes, proyectos reales, asuntos o remitentes en PLAN, STATUS ni worklog. No se ejecutó validación local después de editar solo control.",
      "### Atendidos",
-     "INC-02, INC-03, INC-04 e INC-05 figuran Cerrado. INC-02 está justificado como reubicación del historial existente. INC-03 fue reemplazado por la revisión del revisor. INC-04 está en control/KNOWN-FIXES.md. INC-05 cerró con Import-Csv. Se conservan sus IDs; no se cuentan otra vez.",
-     "INC-01 figura Abierto, pero tiene respuesta en T-03, KF-P02 y HZ-09: se detuvieron cambios de la galería hasta E2. Falta verificar Configuration en preview tras el login. No está listo para cerrar. La pausa no es un incumplimiento sin respuesta.",
+     "INC-06 se registró y cerró en T-04: se añadió la regla que impide pedirle a Oscar acciones operativas en la interfaz.",
+     "INC-01: listo para cerrar. La corrección pidió detener cambios a la galería hasta E2, registrar HZ-09 para E2 y confirmar que Configuration abre en preview. HZ-09 está asignado a E2; E1-08 documenta que las siete pantallas cargaron en preview y que la aplicación publicada v154 funciona. Los cambios posteriores visibles en el historial corresponden al encabezado de My Day y a la navegación de E1-10, no a la galería de Configuration. El constructor puede cerrar INC-01.",
+     "INC-02 a INC-05 siguen Cerrado. INC-01 e INC-06 no generan un incumplimiento nuevo sin respuesta.",
      "### Sin respuesta",
-     "Ninguno. No hay cambios nuevos en documentos congelados después del aviso E0-03. Los archivos de la línea base E0-01 estaban autorizados. Los cambios visuales registrados tienen YAML. No se detectan datos reales de clientes, asuntos o remitentes en PLAN, STATUS ni worklog; PFA-Prueba es una carpeta de prueba aprobada.",
-     "Los resúmenes no muestran 3 fallos repetidos sin documentación/Copilot ni validación local después de editar solo control. Los cierres recientes tienen commits; el último es 3fc63c8. dashboard/data.js ya estaba modificado al iniciar y no se incluye en el commit de esta revisión."
+     "Ninguno confirmado en el periodo. No hay cambios recientes a documentos congelados ni archivos imprevistos fuera de control; .agents/skills/planear/ forma parte de T-04."
     ]
    },
    {
     "title": "Hallazgos sin heredar",
     "lines": [
-     "0 hallazgos Por decidir; ninguno supera 48 horas. HZ-09 está Abierto con destino E2 aprobado: debe convertirse en tarea o proponerse para descarte al retomar E2. HZ-07 está Abierto con destino T y todavía no tiene tarea propia. HZ-01/HZ-08 esperan E5, HZ-03 E6 y HZ-04 E7. HZ-02/HZ-05 están incorporados en E2 y HZ-06 en D-013."
+     "No hay hallazgos Por decidir que superen 48 horas. HZ-09 sigue Abierto y asignado a E2, cuyo checkpoint está aprobado; debe incorporarse o proponerse para descarte al detallar E2. HZ-07 sigue asignado a T sin tarea de incorporación registrada. Los demás hallazgos abiertos tienen destino en entregas aún sin detallar."
     ]
    },
    {
     "title": "Oscar tiene que decidir o hacer",
     "lines": [
-     "- E1-08: en Edge, pestaña Power Apps Studio de PFA_Pilot_App, pulsar Sign in, completar el acceso y MFA y responder «login listo». Es el único pedido vigente de STATUS.",
-     "- E1-09: recorrer las 7 pantallas cuando E1-08 haya publicado y comprobado la app; todavía no está lista para aceptación.",
-     "Issues: no verificados en esta corrida.",
-     "GitHub CLI devolvió Access is denied. El agente constructor procesa los issues al empezar su sesión."
+     "- E1-09: cuando E1-10 esté terminada, recorrer las 7 pantallas en la app publicada y aceptar E1 o pedir cambios concretos.",
+     "- Issues: no verificados en esta corrida."
     ]
    },
    {
     "title": "Límites de esta revisión",
     "lines": [
-     "Se leyeron archivos y el historial Git de 36 horas. No se abrieron Power Automate, Power Apps ni SharePoint. No se hicieron correcciones ni se ejecutó validación local.",
-     "Publicación: se ejecutó pwsh -NoProfile -File tools/publish_dashboard.ps1 una sola vez. Regeneró dashboard/data.js, pero terminó con código 1 por permisos: Access to the path 'C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log' is denied. El fallo al escribir el log impide confirmar el error previo o la publicación. No se reintentó; Windows lo publicará en máximo 15 minutos."
+     "Se leyeron REVISOR, worklog, PLAN, STATUS, DECISIONS, AGENTS, INCIDENTES y el historial Git de 36 horas. No se abrió Power Automate, Power Apps ni SharePoint. No se hicieron correcciones ni se ejecutó validación local. El intento de consultar issues abiertos falló: la API de GitHub devolvió “The SSL connection could not be established”. No se afirma que no haya issues.",
+     "Publicación: se ejecutó pwsh -NoProfile -File tools/publish_dashboard.ps1 una vez. Regeneró dashboard/data.js, pero terminó con código 1 al escribir C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log: Access denied. No se reintentó; Windows publicará dentro de 15 minutos."
     ]
    }
   ]
@@ -167,15 +174,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 8,
+   "done": 9,
    "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 156,
+    "prod": 170,
     "unprod": 0,
     "wait": 4,
-    "total": 160
+    "total": 174
    }
   },
   {
@@ -328,7 +335,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 5,
-   "total": 5,
+   "total": 7,
    "detailed": true,
    "active": false,
    "time": {
@@ -594,7 +601,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E1-10",
@@ -604,12 +611,11 @@ window.PFA_DATA = {
     "expected": "Navegación usable sin barra horizontal en formato vertical",
     "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
     "limit": 60,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 14,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    }
   ],
   "E2": [
@@ -956,22 +962,52 @@ window.PFA_DATA = {
     "minutes": 4,
     "entrega": "T",
     "fails": 0
+   },
+   {
+    "id": "T-06",
+    "action": "Completar la configuración de Git del publicador para que encuentre el helper HTTPS y funcione pull/push",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
+    "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 3,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 2,
+    "ready": true
+   },
+   {
+    "id": "T-07",
+    "action": "Quitar las notas de aprobación de STATUS y publicarlas solo en DECISIONS.md",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "STATUS solo presenta solicitudes de Oscar que sigan pendientes",
+    "evidence": "Aprobaciones registradas en DECISIONS.md; tablero publicado y needsOscar coincide con STATUS",
+    "limit": 10,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "ready": true
    }
   ]
  },
  "nextTask": {
-  "id": "E1-10",
-  "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
+  "id": "T-06",
+  "action": "Completar la configuración de Git del publicador para que encuentre el helper HTTPS y funcione pull/push",
   "owner": "Agente",
-  "depends": "E1-08",
-  "expected": "Navegación usable sin barra horizontal en formato vertical",
-  "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
-  "limit": 60,
-  "status": "Pendiente",
-  "attempts": 0,
+  "depends": "—",
+  "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
+  "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
+  "limit": 30,
+  "status": "En curso",
+  "attempts": 3,
   "minutes": 0,
-  "entrega": "E1",
-  "fails": 0,
+  "entrega": "T",
+  "fails": 2,
   "ready": true
  },
  "upcoming": [
@@ -983,21 +1019,6 @@ window.PFA_DATA = {
    "expected": "Oscar acepta el estándar visual y la navegación vertical",
    "evidence": "Oscar escribe \"E1 aceptada\" o pide cambios concretos",
    "limit": 0,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": false
-  },
-  {
-   "id": "E1-10",
-   "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
-   "owner": "Agente",
-   "depends": "E1-08",
-   "expected": "Navegación usable sin barra horizontal en formato vertical",
-   "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
-   "limit": 60,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1193,6 +1214,21 @@ window.PFA_DATA = {
    "expected": "Flujo guardado",
    "evidence": "Flujo guardado; Flow Checker 0 errores",
    "limit": 90,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
+  },
+  {
+   "id": "E3-04",
+   "action": "Ejecutar el flujo con SoloCarpeta = PFA-Prueba, dos veces",
+   "owner": "Agente",
+   "depends": "E3-03",
+   "expected": "5 correos sin duplicados",
+   "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
+   "limit": 30,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1441,6 +1477,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E1-10",
+   "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
+   "owner": "Agente",
+   "depends": "E1-08",
+   "expected": "Navegación usable sin barra horizontal en formato vertical",
+   "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 14,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -1511,35 +1561,41 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "T-06",
+   "reason": "2 intentos sin avance: toca revisar documentación",
+   "level": "warning"
+  }
+ ],
  "kpi": {
-  "tasksDone": 22,
-  "tasksTotal": 42,
+  "tasksDone": 23,
+  "tasksTotal": 44,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 241,
+   "prod": 255,
    "unprod": 0,
    "wait": 6,
-   "total": 247
+   "total": 261
   },
   "last24h": {
-   "prod": 241,
+   "prod": 255,
    "unprod": 0,
    "wait": 6,
-   "total": 247
+   "total": 261
   },
   "last7d": {
-   "prod": 241,
+   "prod": 255,
    "unprod": 0,
    "wait": 6,
-   "total": 247
+   "total": 261
   },
   "product": {
-   "prod": 159,
+   "prod": 173,
    "unprod": 0,
    "wait": 4,
-   "total": 163
+   "total": 177
   },
   "support": {
    "prod": 82,
@@ -1629,7 +1685,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 39,
+   "prod": 53,
    "unprod": 0,
    "wait": 0
   }
@@ -1639,6 +1695,11 @@ window.PFA_DATA = {
    "category": "AUTH",
    "minutes": 0,
    "attempts": 1
+  },
+  {
+   "category": "OTRO",
+   "minutes": 0,
+   "attempts": 2
   }
  ],
  "waits": [
@@ -1695,6 +1756,13 @@ window.PFA_DATA = {
    "total": 19
   },
   {
+   "task": "E1-10",
+   "prod": 14,
+   "unprod": 0,
+   "wait": 0,
+   "total": 14
+  },
+  {
    "task": "E1-04",
    "prod": 13,
    "unprod": 0,
@@ -1714,22 +1782,54 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 10
-  },
-  {
-   "task": "T-02",
-   "prod": 7,
-   "unprod": 0,
-   "wait": 0,
-   "total": 7
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 247
+   "minutes": 261
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T01:43:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 2,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Añadí el directorio mingw64/bin al PATH del publicador",
+   "evidence": "El helper existe allí, pero Git sigue sin encontrarlo; la documentación indica que debe ubicarse en GIT_EXEC_PATH (https://git-scm.com/docs/gitremote-helpers)"
+  },
+  {
+   "start": "2026-10-01T01:42:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 1,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Revisé por qué el publicador no sincronizó el tablero",
+   "evidence": "git pull falla: git-remote-https no se encuentra; el script ocultó el error al no poder escribir publish.log"
+  },
+  {
+   "start": "2026-10-01T01:25:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-10",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Apliqué el selector vertical y el encabezado común en las 7 pantallas; guardé y publiqué la app",
+   "evidence": "Preview: las 7 opciones aparecen y navegan en teléfono e iPad vertical; iPad horizontal mantiene botones; app publicada: My Day → Projects → Diagnostics; Refresh fuera del encabezado. Tablero: push e2451a4; escritura de publish.log denegada"
+  },
   {
    "start": "2026-10-01T01:17:00Z",
    "minutes": 7,
@@ -1820,48 +1920,48 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Interrumpí las pruebas al repetirse dos veces el error de nodo desconectado en navegación.",
    "evidence": "Pestaña de la app publicada abierta; solicito recargarla en Edge y continuar cuando esté lista."
-  },
-  {
-   "start": "2026-09-30T21:53:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-08",
-   "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "La app publicada abrió y navegó por My Day, Projects, Tasks, Review y Configuration; dos interacciones devolvieron el nodo desconectado.",
-   "evidence": "La versión publicada está activa; falta completar las rutas y comprobar el resaltado del menú tras recuperar el navegador."
-  },
-  {
-   "start": "2026-09-30T19:34:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-03",
-   "attempt": 1,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Esperé a que GitHub Pages sirviera el último data.js después de que el build reportara estado built",
-   "evidence": "El data.js con T-03 de 11 min y el pendiente E1-08 respondió HTTP 200"
-  },
-  {
-   "start": "2026-09-30T19:23:00Z",
-   "minutes": 11,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-03",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Apliqué B y C: reglas, incidentes y lecciones; registré el inicio de sesión pendiente y publiqué el tablero",
-   "evidence": "INC-01 a INC-05 registrados; KF-P01 a KF-P05 y KF-H01 documentados; STATUS contiene E1-08; preview pendiente de Oscar; página HTTP 200"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T01:43:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 2,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Añadí el directorio mingw64/bin al PATH del publicador",
+   "evidence": "El helper existe allí, pero Git sigue sin encontrarlo; la documentación indica que debe ubicarse en GIT_EXEC_PATH (https://git-scm.com/docs/gitremote-helpers)"
+  },
+  {
+   "start": "2026-10-01T01:42:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-06",
+   "attempt": 1,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Revisé por qué el publicador no sincronizó el tablero",
+   "evidence": "git pull falla: git-remote-https no se encuentra; el script ocultó el error al no poder escribir publish.log"
+  },
+  {
+   "start": "2026-10-01T01:25:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-10",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Apliqué el selector vertical y el encabezado común en las 7 pantallas; guardé y publiqué la app",
+   "evidence": "Preview: las 7 opciones aparecen y navegan en teléfono e iPad vertical; iPad horizontal mantiene botones; app publicada: My Day → Projects → Diagnostics; Refresh fuera del encabezado. Tablero: push e2451a4; escritura de publish.log denegada"
+  },
   {
    "start": "2026-10-01T01:17:00Z",
    "minutes": 7,
@@ -2414,3 +2514,4 @@ window.PFA_DATA = {
   }
  ]
 };
+
