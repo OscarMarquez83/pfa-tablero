@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T18:58:14.588619Z",
+ "generatedUtc": "2026-10-01T19:07:14.953109Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 18:08 UTC",
+  "updated": "2026-10-01 18:59 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "T-18 espera el issue de prueba de Oscar; continúa cuando llegue.",
   "needsOscar": [
@@ -25,7 +25,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T18:08:38.197692Z",
+  "fileUtc": "2026-10-01T18:59:46.830002Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -364,15 +364,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 16,
-   "total": 19,
+   "done": 17,
+   "total": 20,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 232,
+    "prod": 233,
     "unprod": 2,
     "wait": 8,
-    "total": 242
+    "total": 243
    }
   }
  ],
@@ -1245,6 +1245,21 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T18:03:00Z"
+   },
+   {
+    "id": "T-20",
+    "action": "Subir control/DECISIONS.md a la carpeta PFA - Compartido con Codex en Drive",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Copia Markdown actual disponible en la carpeta compartida",
+    "evidence": "Drive lista DECISIONS.md en la carpeta indicada con el tamaño del archivo local",
+    "limit": 10,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 1,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T18:59:00Z"
    }
   ]
  },
@@ -2046,6 +2061,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T18:03:00Z"
+  },
+  {
+   "id": "T-20",
+   "action": "Subir control/DECISIONS.md a la carpeta PFA - Compartido con Codex en Drive",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Copia Markdown actual disponible en la carpeta compartida",
+   "evidence": "Drive lista DECISIONS.md en la carpeta indicada con el tamaño del archivo local",
+   "limit": 10,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 1,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T18:59:00Z"
   }
  ],
  "alerts": [
@@ -2056,27 +2086,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 36,
-  "tasksTotal": 56,
+  "tasksDone": 37,
+  "tasksTotal": 57,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 519,
+   "prod": 520,
    "unprod": 28,
    "wait": 17,
-   "total": 564
+   "total": 565
   },
   "last24h": {
-   "prod": 346,
+   "prod": 347,
    "unprod": 28,
    "wait": 13,
-   "total": 387
+   "total": 388
   },
   "last7d": {
-   "prod": 519,
+   "prod": 520,
    "unprod": 28,
    "wait": 17,
-   "total": 564
+   "total": 565
   },
   "product": {
    "prod": 287,
@@ -2085,10 +2115,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 232,
+   "prod": 233,
    "unprod": 2,
    "wait": 8,
-   "total": 242
+   "total": 243
   }
  },
  "days": [
@@ -2172,7 +2202,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 317,
+   "prod": 318,
    "unprod": 28,
    "wait": 11
   }
@@ -2288,7 +2318,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 544
+   "minutes": 545
   },
   {
    "account": "empresa",
@@ -2296,6 +2326,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T18:58:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-20",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "DECISIONS.md subido a la carpeta compartida de Drive",
+   "evidence": "Auditoría 1/1 OK; listado Drive confirma nombre y 9573 bytes"
+  },
   {
    "start": "2026-10-01T17:54:00Z",
    "minutes": 9,
@@ -2412,22 +2455,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Agregué respuesta de texto al flow; el diseñador no registra el URI dinámico como campo obligatorio aunque muestre el texto",
    "evidence": "Flow Checker: 1 error Se requiere URI; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; salida foldersJson visible en diseñador"
-  },
-  {
-   "start": "2026-10-01T12:23:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 7,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Reapertura: corregí la dirección del sitio eliminando la barra final; desapareció el error de sitio. Falta GUID de lista para Get items",
-   "evidence": "Power Automate muestra dirección personalizada válida sin el error; falta GUID y Flow Checker 0; app confirma conexión SharePoint de las listas"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T18:58:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-20",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "DECISIONS.md subido a la carpeta compartida de Drive",
+   "evidence": "Auditoría 1/1 OK; listado Drive confirma nombre y 9573 bytes"
+  },
   {
    "start": "2026-10-01T17:54:00Z",
    "minutes": 9,
