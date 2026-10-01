@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T18:01:04.887569Z",
+ "generatedUtc": "2026-10-01T18:07:14.265745Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 17:54 UTC",
+  "updated": "2026-10-01 18:03 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "aplicar el parche de Claude para navegación interactiva del tablero; verificar E0, E3 y T en Pages.",
+  "nextAction": "T-18 espera el issue de prueba de Oscar; continúa cuando llegue.",
   "needsOscar": [
    {
     "ref": "T-18",
@@ -24,10 +24,8 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [
-   "T-19, intento 1; inicio 2026-10-01 17:54 UTC. Descargar a tmp y aplicar solo T-tablero-entregas.patch; publicar. Verificación: E0 (9), E3 (8), T y diseño responsivo en Pages."
-  ],
-  "fileUtc": "2026-10-01T17:54:28.292877Z",
+  "current": [],
+  "fileUtc": "2026-10-01T18:03:25.269292Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -366,15 +364,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 15,
+   "done": 16,
    "total": 19,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 223,
+    "prod": 232,
     "unprod": 2,
     "wait": 8,
-    "total": 233
+    "total": 242
    }
   }
  ],
@@ -1241,13 +1239,12 @@ window.PFA_DATA = {
     "expected": "E0 y E3 expanden sus tareas al tocarse; T muestra abiertas arriba y Ver hechas abajo",
     "evidence": "Pages prueba E0 (9 tareas), E3 (8 tareas) y T en escritorio y teléfono vertical",
     "limit": 20,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 9,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-01T18:03:00Z"
    }
   ]
  },
@@ -2034,6 +2031,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T17:18:00Z"
+  },
+  {
+   "id": "T-19",
+   "action": "Aplicar el parche aprobado de Claude para recuperar la navegación interactiva por entregas en el tablero",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "E0 y E3 expanden sus tareas al tocarse; T muestra abiertas arriba y Ver hechas abajo",
+   "evidence": "Pages prueba E0 (9 tareas), E3 (8 tareas) y T en escritorio y teléfono vertical",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 9,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T18:03:00Z"
   }
  ],
  "alerts": [
@@ -2044,27 +2056,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 35,
+  "tasksDone": 36,
   "tasksTotal": 56,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 510,
+   "prod": 519,
    "unprod": 28,
    "wait": 17,
-   "total": 555
+   "total": 564
   },
   "last24h": {
-   "prod": 337,
+   "prod": 346,
    "unprod": 28,
    "wait": 13,
-   "total": 378
+   "total": 387
   },
   "last7d": {
-   "prod": 510,
+   "prod": 519,
    "unprod": 28,
    "wait": 17,
-   "total": 555
+   "total": 564
   },
   "product": {
    "prod": 287,
@@ -2073,10 +2085,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 223,
+   "prod": 232,
    "unprod": 2,
    "wait": 8,
-   "total": 233
+   "total": 242
   }
  },
  "days": [
@@ -2160,7 +2172,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 308,
+   "prod": 317,
    "unprod": 28,
    "wait": 11
   }
@@ -2280,10 +2292,23 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 11
+   "minutes": 20
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T17:54:00Z",
+   "minutes": 9,
+   "account": "empresa",
+   "entrega": "T",
+   "task": "T-19",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Parche de Claude para selección de entregas y vista de T",
+   "evidence": "Pages: E0 9; E3 8; T 4 abiertas/15 hechas y desplegable probado; desktop 1366 y móvil 390 sin overflow ni texto cortado; tmp/evidencia/T-19"
+  },
   {
    "start": "2026-10-01T17:10:00Z",
    "minutes": 1,
@@ -2400,22 +2425,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Reapertura: corregí la dirección del sitio eliminando la barra final; desapareció el error de sitio. Falta GUID de lista para Get items",
    "evidence": "Power Automate muestra dirección personalizada válida sin el error; falta GUID y Flow Checker 0; app confirma conexión SharePoint de las listas"
-  },
+  }
+ ],
+ "history": [
   {
-   "start": "2026-10-01T11:45:00Z",
-   "minutes": 6,
-   "account": "personal",
+   "start": "2026-10-01T17:54:00Z",
+   "minutes": 9,
+   "account": "empresa",
    "entrega": "T",
-   "task": "T-13",
+   "task": "T-19",
    "attempt": 1,
    "result": "HECHA",
    "kind": "prod",
    "category": "OTRO",
-   "summary": "Añadí y registré el anuncio obligatorio de cada skill",
-   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación remota verificada por GitHub"
-  }
- ],
- "history": [
+   "summary": "Parche de Claude para selección de entregas y vista de T",
+   "evidence": "Pages: E0 9; E3 8; T 4 abiertas/15 hechas y desplegable probado; desktop 1366 y móvil 390 sin overflow ni texto cortado; tmp/evidencia/T-19"
+  },
   {
    "start": "2026-10-01T17:10:00Z",
    "minutes": 1,
