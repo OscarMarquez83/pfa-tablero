@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T19:34:14.633457Z",
+ "generatedUtc": "2026-10-01T19:40:14.546272Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 19:20 UTC",
+  "updated": "2026-10-01 19:37 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar decisión de Oscar sobre HZ-11 antes de cambiar la navegación de E1.",
+  "nextAction": "completar E2-02 con salida dinámica/Parse JSON en la segunda acción HTTP; después comprobar Flow Checker y run con JSON.",
   "needsOscar": [
    {
     "ref": "HZ-11",
@@ -16,11 +16,7 @@ window.PFA_DATA = {
    },
    {
     "ref": "T-18",
-    "text": "crea un issue de prueba desde el tablero; comprobaré que PFA Despertador lo registre, cierre y agregue al worklog dentro de 30 minutos."
-   },
-   {
-    "ref": "E2-02",
-    "text": "issue #6 de Oscar elige A, pero aclara ejecución diaria 4:00 a. m. y escritura en PFA_MailFolders; eso contradice D-028 (bajo demanda y sin SharePoint en el flow). Confirmar qué alcance rige antes de reabrir E2-02."
+    "text": "respuesta del issue #7 registrada en D-034 y PLAN; no requiere prueba del despertador."
    },
    {
     "ref": "T-14",
@@ -29,13 +25,13 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-21, intento 1: completada; skill instalada idéntica a Drive (SHA-256 4C7403D5…), tres reglas actualizadas, mini-spec y HZ-11 registrados. El ID T-03 ya estaba Hecha; se usó T-21. Publicador regeneró data.js pero falló al escribir publish.log (KF-H04); publicación remota sin confirmar."
+   "E2-02, intento 11/12: inicio 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. Enfoque: reconstruir la segunda acción HTTP usando solo contenido dinámico o Parse JSON; antes de cambiar el flow, comprobar en Peek code el nombre interno exacto de la acción HTTP inicial. Cierre: Flow Checker 0 y run Succeeded con JSON de carpetas visible en el historial. Máximo 2 intentos con este enfoque."
   ],
-  "fileUtc": "2026-10-01T19:20:25.808606Z",
+  "fileUtc": "2026-10-01T19:39:18.608460Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
-    "Desarrollo": "4FD52CD8",
+    "Desarrollo": "A4E37120",
     "Entorno": "A4E37120"
    }
   }
@@ -224,7 +220,7 @@ window.PFA_DATA = {
   {
    "id": "E2",
    "title": "Carpetas de proyecto",
-   "goal": "Decidir en la app cuáles carpetas de Projects son proyectos; la app avisa cuando aparece una carpeta nueva",
+   "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos y revisar las nuevas",
    "status": "En curso",
    "done": 1,
    "total": 10,
@@ -690,14 +686,14 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-02",
-    "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flujo no usa SharePoint. Get items con URL exacta y GUID falló: el diseñador marca “Se requiere Dirección del sitio” y “Se requiere Nombre de lista”; se descarta ese acceso",
+    "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
     "owner": "Agente",
     "depends": "E2-01",
-    "expected": "La app puede pedir al flujo la lista de carpetas",
-    "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
+    "expected": "La app puede pedir al flow las carpetas",
+    "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
-    "status": "Bloqueada",
-    "attempts": 10,
+    "status": "Reabierta",
+    "attempts": 11,
     "minutes": 38,
     "entrega": "E2",
     "fails": 4,
@@ -706,11 +702,11 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-03",
-    "action": "Ejecutar el flujo una vez",
+    "action": "Ejecutar el flow una vez y comprobar su respuesta JSON de carpetas de nivel 1",
     "owner": "Agente",
     "depends": "E2-02",
-    "expected": "Una fila por carpeta de nivel 1",
-    "evidence": "Run Succeeded; número de filas igual al de carpetas de nivel 1 (anotar el número)",
+    "expected": "JSON visible con una entrada por carpeta de nivel 1",
+    "evidence": "Run Succeeded; JSON y conteo de carpetas visibles en el historial del run",
     "limit": 20,
     "status": "Pendiente",
     "attempts": 0,
@@ -1229,13 +1225,12 @@ window.PFA_DATA = {
     "expected": "Las respuestas de Oscar reactivan el trabajo desde el tablero sin otro mensaje en chat",
     "evidence": "Automatización activa en este proyecto con el mensaje solicitado; issue de prueba de Oscar queda cerrado con “Registrado en [archivo]” y worklog registra el intento dentro de 30 minutos",
     "limit": 30,
-    "status": "Por validar",
+    "status": "Cancelada",
     "attempts": 1,
     "minutes": 1,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T17:10:00Z",
-    "ready": true
+    "lastActivity": "2026-10-01T17:10:00Z"
    },
    {
     "id": "T-19",
@@ -1285,32 +1280,32 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "T-11",
-  "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+  "id": "E2-02",
+  "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
   "owner": "Agente",
-  "depends": "—",
-  "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
-  "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
-  "limit": 20,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 2,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "2026-10-01T05:47:00Z",
+  "depends": "E2-01",
+  "expected": "La app puede pedir al flow las carpetas",
+  "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
+  "limit": 90,
+  "status": "Reabierta",
+  "attempts": 11,
+  "minutes": 38,
+  "entrega": "E2",
+  "fails": 4,
+  "lastActivity": "2026-10-01T15:46:00Z",
   "ready": true
  },
  "upcoming": [
   {
    "id": "E2-02",
-   "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flujo no usa SharePoint. Get items con URL exacta y GUID falló: el diseñador marca “Se requiere Dirección del sitio” y “Se requiere Nombre de lista”; se descarta ese acceso",
+   "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
    "owner": "Agente",
    "depends": "E2-01",
-   "expected": "La app puede pedir al flujo la lista de carpetas",
-   "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
+   "expected": "La app puede pedir al flow las carpetas",
+   "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
-   "status": "Bloqueada",
-   "attempts": 10,
+   "status": "Reabierta",
+   "attempts": 11,
    "minutes": 38,
    "entrega": "E2",
    "fails": 4,
@@ -1319,11 +1314,11 @@ window.PFA_DATA = {
   },
   {
    "id": "E2-03",
-   "action": "Ejecutar el flujo una vez",
+   "action": "Ejecutar el flow una vez y comprobar su respuesta JSON de carpetas de nivel 1",
    "owner": "Agente",
    "depends": "E2-02",
-   "expected": "Una fila por carpeta de nivel 1",
-   "evidence": "Run Succeeded; número de filas igual al de carpetas de nivel 1 (anotar el número)",
+   "expected": "JSON visible con una entrada por carpeta de nivel 1",
+   "evidence": "Run Succeeded; JSON y conteo de carpetas visibles en el historial del run",
    "limit": 20,
    "status": "Pendiente",
    "attempts": 0,
@@ -2117,8 +2112,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
+   "reason": "Reabierta: se dio por terminada y no lo estaba (11 intentos previos)",
+   "level": "serious"
   },
   {
    "task": "Hallazgo",
