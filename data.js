@@ -1,37 +1,29 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T06:07:12.051192Z",
+ "generatedUtc": "2026-10-01T06:31:51.055964Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 06:05 UTC",
+  "updated": "2026-10-01 06:29 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "Oscar revisa el análisis de reapertura de E1-05; luego medir App.Width/App.Height en producción antes de cualquier edición.",
+  "nextAction": "Oscar prueba E1-09 en la app publicada y responde «E1 aceptada» o describe un defecto concreto.",
   "needsOscar": [
    {
     "ref": "T-09",
     "text": "reiniciar Codex para cargar las skills locales y la configuración del conector Microsoft Learn; codex mcp add no pudo cargar la configuración porque este proceso no encuentra el directorio de usuario."
    },
    {
-    "ref": "T-12",
-    "text": "revisar el análisis de reapertura de E1-05 antes de cualquier cambio en la app."
+    "ref": "E1-09",
+    "text": "prueba My Day y otra pantalla en el teléfono; abre el menú y comprueba que se lean las opciones y el nombre seleccionado, que My Day tenga el mismo encabezado y que Refresh responda. Escribe «E1 aceptada» o indica el defecto concreto."
    }
   ],
   "blockers": [],
   "current": [
-   "T-12, intento 1, inicio 2026-10-01 05:47 UTC: skill y procedimiento instalados; no se editó la app. Microsoft Learn consultado en web oficial y Copilot consultado; el conector MCP sigue pendiente de reinicio. GitHub confirmó data.js nuevo en e02c1ab, pero Pages aún muestra el estado de las 05:45 UTC. tools/publish_dashboard.ps1 volvió a fallar al escribir publish.log; el build local sí terminó.",
-   "E1-05, Reabierta, 6 intentos previos; el intento 7 no empieza hasta que Oscar revise este análisis.",
-   "Defecto actual: a 390 px la app publicada muestra la galería horizontal desplazable; captura: tmp/evidencia/E1-05/reapertura/My-Day-publicada-390.jpg. INC-07 ya registra el doble encabezado señalado por Oscar.",
-   "Intentos previos: (1) inspección de My Day; (2) preparación de bloques estándar; (3) aplicación y preview; (4) separar Refresh y preparar selector sin Studio; (5) revisión local del YAML sin Studio; (6) mover Refresh, guardar/publicar y probar navegación parcial.",
-   "Por qué se dio por terminada: preview y comprobaciones puntuales de My Day/Diagnostics parecían correctas; faltó comparar en paralelo las 7 pantallas publicadas en ambos tamaños.",
-   "Causa probable: desconocida. La condición por orientación y un ancho mínimo/Scale to fit son hipótesis; falta medir dimensiones y controles visibles en runtime.",
-   "Qué haré distinto: medir App.Width/App.Height en la app publicada y etiquetar temporalmente qué control está visible; revisar el árbol de Studio en las 7 pantallas antes de cambiar controles.",
-   "Criterio nuevo: un encabezado; menú desplegable legible a 390 px; menú horizontal sin desbordamiento a 1366 px; capturas comparadas de las 7 pantallas en ambos tamaños; Refresh funcional.",
-   "Consulta oficial: [Create responsive layouts in canvas apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout): revisar Scale to fit, dimensiones reales y breakpoints. Copilot recomendó medir App.Width/App.Height, comprobar instancias duplicadas y probar en la app publicada; sugirió ancho < 768 como candidato, aún sin validar."
+   "Ninguna. E1-05 se corrigió y publicó tras la decisión de Oscar de ejecutar la corrección. E1-09 espera su prueba de usuario."
   ],
-  "fileUtc": "2026-10-01T06:07:00.725637Z"
+  "fileUtc": "2026-10-01T06:29:57.620601Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -200,15 +192,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 8,
+   "done": 9,
    "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 170,
+    "prod": 270,
     "unprod": 0,
     "wait": 4,
-    "total": 174
+    "total": 274
    }
   },
   {
@@ -566,12 +558,11 @@ window.PFA_DATA = {
     "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
     "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
     "limit": 60,
-    "status": "Reabierta",
-    "attempts": 6,
-    "minutes": 43,
+    "status": "Hecha",
+    "attempts": 7,
+    "minutes": 143,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-06",
@@ -1065,36 +1056,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-05",
-  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
+  "id": "T-09",
+  "action": "Instalar las skills cerrar-intento y powerapps-yaml y la configuración de Microsoft Learn; aplicar los cinco cambios aprobados a AGENTS.md; registrar el incidente del doble encabezado",
   "owner": "Agente",
-  "depends": "E1-04",
-  "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
-  "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
-  "limit": 60,
-  "status": "Reabierta",
-  "attempts": 6,
-  "minutes": 43,
-  "entrega": "E1",
+  "depends": "—",
+  "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
+  "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
+  "limit": 30,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 3,
+  "entrega": "T",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-05",
-   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
-   "owner": "Agente",
-   "depends": "E1-04",
-   "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
-   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
-   "limit": 60,
-   "status": "Reabierta",
-   "attempts": 6,
-   "minutes": 43,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E1-09",
    "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
@@ -1304,6 +1280,21 @@ window.PFA_DATA = {
    "entrega": "E3",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E3-04",
+   "action": "Ejecutar el flujo con SoloCarpeta = PFA-Prueba, dos veces",
+   "owner": "Agente",
+   "depends": "E3-03",
+   "expected": "5 correos sin duplicados",
+   "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1490,6 +1481,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E1-05",
+   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
+   "owner": "Agente",
+   "depends": "E1-04",
+   "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
+   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 7,
+   "minutes": 143,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
    "id": "E1-06",
    "action": "Igual que E1-05 en Projects, Tasks y Review",
    "owner": "Agente",
@@ -1658,41 +1663,35 @@ window.PFA_DATA = {
    "fails": 0
   }
  ],
- "alerts": [
-  {
-   "task": "E1-05",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (6 intentos previos)",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 25,
+  "tasksDone": 26,
   "tasksTotal": 47,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 298,
+   "prod": 398,
    "unprod": 2,
    "wait": 6,
-   "total": 306
+   "total": 406
   },
   "last24h": {
-   "prod": 298,
+   "prod": 395,
    "unprod": 2,
    "wait": 6,
-   "total": 306
+   "total": 403
   },
   "last7d": {
-   "prod": 298,
+   "prod": 398,
    "unprod": 2,
    "wait": 6,
-   "total": 306
+   "total": 406
   },
   "product": {
-   "prod": 173,
+   "prod": 273,
    "unprod": 0,
    "wait": 4,
-   "total": 177
+   "total": 277
   },
   "support": {
    "prod": 125,
@@ -1782,7 +1781,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 96,
+   "prod": 196,
    "unprod": 2,
    "wait": 0
   }
@@ -1812,10 +1811,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E1-05",
-   "prod": 43,
+   "prod": 143,
    "unprod": 0,
    "wait": 0,
-   "total": 43
+   "total": 143
   },
   {
    "task": "T-01",
@@ -1884,7 +1883,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 306
+   "minutes": 406
   }
  ],
  "recent": [
@@ -1939,6 +1938,19 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Skills y cinco cambios instalados; conector no cargó en esta sesión",
    "evidence": "Auditoría 4/5 OK: .agents/skills, AGENTS.md, INC-07/KF-P07; .codex/config.toml; búsqueda pendiente por carga de configuración"
+  },
+  {
+   "start": "2026-10-01T04:49:00Z",
+   "minutes": 100,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 7,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Reapertura: encabezado de My Day igualado y selector con texto azul sobre fondo claro en siete pantallas; se superó el límite de 60 min por la auditoría 7x2",
+   "evidence": "Auditoría 14/14 OK en app publicada, preview 7/7, Refresh OK; tmp/evidencia/E1-05/actual; publicación confirmada por Power Apps; Learn responsive-layout y Copilot registrados en T-12"
   },
   {
    "start": "2026-10-01T04:22:00Z",
@@ -2004,19 +2016,6 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Añadí el directorio mingw64/bin al PATH del publicador",
    "evidence": "El helper existe allí, pero Git sigue sin encontrarlo; la documentación indica que debe ubicarse en GIT_EXEC_PATH (https://git-scm.com/docs/gitremote-helpers)"
-  },
-  {
-   "start": "2026-10-01T01:42:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-06",
-   "attempt": 1,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "OTRO",
-   "summary": "Revisé por qué el publicador no sincronizó el tablero",
-   "evidence": "git pull falla: git-remote-https no se encuentra; el script ocultó el error al no poder escribir publish.log"
   }
  ],
  "history": [
@@ -2071,6 +2070,19 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Skills y cinco cambios instalados; conector no cargó en esta sesión",
    "evidence": "Auditoría 4/5 OK: .agents/skills, AGENTS.md, INC-07/KF-P07; .codex/config.toml; búsqueda pendiente por carga de configuración"
+  },
+  {
+   "start": "2026-10-01T04:49:00Z",
+   "minutes": 100,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 7,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Reapertura: encabezado de My Day igualado y selector con texto azul sobre fondo claro en siete pantallas; se superó el límite de 60 min por la auditoría 7x2",
+   "evidence": "Auditoría 14/14 OK en app publicada, preview 7/7, Refresh OK; tmp/evidencia/E1-05/actual; publicación confirmada por Power Apps; Learn responsive-layout y Copilot registrados en T-12"
   },
   {
    "start": "2026-10-01T04:22:00Z",
