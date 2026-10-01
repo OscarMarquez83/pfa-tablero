@@ -109,6 +109,21 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 
 /* Tareas */
 .tasks { width: 100%; border-collapse: collapse; }
+.task-scroll { max-width: 100%; overflow-x: hidden; }
+.task-closed { margin-top: 10px; border-top: 1px solid var(--grid); padding-top: 8px; }
+.task-closed > summary { color: var(--muted); font-size: 12px; cursor: pointer; }
+.footprints { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 10px; padding: 7px 9px; border-radius: 8px; background: var(--surface-2); color: var(--ink-2); font-size: 11px; }
+.footprints b { font-variant-numeric: tabular-nums; }
+.footprints .match { color: var(--good-ink); }
+.footprints .mismatch { color: var(--critical-ink); }
+.tasks { table-layout: fixed; }
+.tasks th:first-child, .tasks td:first-child { width: 58px; }
+.tasks th:nth-child(2), .tasks td:nth-child(2) { width: 64px; }
+.tasks th:nth-child(4), .tasks td:nth-child(4) { width: 68px; }
+.tasks th:nth-child(5), .tasks td:nth-child(5) { width: 58px; }
+.tasks th:nth-child(6), .tasks td:nth-child(6) { width: 100px; }
+.tasks td { overflow-wrap: anywhere; }
+.tasks .act { white-space: normal; overflow-wrap: anywhere; }
 .tasks th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; padding: 0 8px 8px; border-bottom: 1px solid var(--grid); }
 .tasks td { padding: 10px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
 .tasks tr:last-child td { border-bottom: 0; }
@@ -198,6 +213,13 @@ footer { color: var(--muted); font-size: 12px; margin-top: 24px; text-align: cen
   .tmeter .num { white-space: normal; font-size: 11px; }
   h1 { font-size: 16px; }
   .tasks th:nth-child(4), .tasks td:nth-child(4) { display: none; }
+  .tasks th:first-child, .tasks td:first-child { width: 34px; }
+  .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 50px; }
+  .tasks th:nth-child(6), .tasks td:nth-child(6) { width: 60px; }
+  .tasks td, .tasks th { font-size: 10px; }
+  .tasks .tid { overflow-wrap: anywhere; }
+  .tmeter { max-width: 52px; }
+  .footprints { font-size: 10px; gap: 4px 8px; }
   .tasks td, .tasks th { padding-left: 4px; padding-right: 4px; }
   .chip { font-size: 0; padding: 3px; gap: 0; }
   .chip .ic { width: 16px; height: 16px; font-size: 10px; }
@@ -487,13 +509,34 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   function drawTasks() {
     var e = ENT[selected] || {};
     var tasks = D.tasksByEntrega[selected] || [];
+    var statusOrder = { "reabierta": 0, "en curso": 1, "bloqueada": 2, "por validar": 3, "pendiente": 4 };
+    function idOrder(a, b) {
+      var ma = String(a.id).match(/^(.*?)-(\d+)$/), mb = String(b.id).match(/^(.*?)-(\d+)$/);
+      if (ma && mb && ma[1] === mb[1]) return Number(ma[2]) - Number(mb[2]);
+      return String(a.id).localeCompare(String(b.id));
+    }
+    var openTasks = tasks.filter(function (t) { return !/^(hecha|cancelada)$/i.test(t.status); }).sort(function (a, b) {
+      var sa = statusOrder[String(a.status).toLowerCase()], sb = statusOrder[String(b.status).toLowerCase()];
+      sa = sa == null ? 5 : sa; sb = sb == null ? 5 : sb;
+      return sa - sb || idOrder(a, b);
+    });
+    var closedTasks = tasks.filter(function (t) { return /^(hecha|cancelada)$/i.test(t.status); }).sort(function (a, b) {
+      var da = Date.parse(a.lastActivity || "") || 0, db = Date.parse(b.lastActivity || "") || 0;
+      return db - da || -idOrder(a, b);
+    });
     $("tasks-title").textContent = (e.id || "") + (e.title ? " · " + e.title : "");
     $("tasks-hint").textContent = tasks.length ? (e.done + " de " + e.total + " hechas") : "";
+    var fp = D.status.ruleFootprints || { current: "", lines: {} }, fpHtml = '<div class="footprints" aria-label="Huellas de reglas">' +
+      '<span>AGENTS.md actual: <b>' + esc(fp.current || "—") + '</b></span>' +
+      Object.keys(fp.lines || {}).map(function (name) {
+        var value = fp.lines[name], same = String(value).toUpperCase() === String(fp.current).toUpperCase();
+        return '<span class="' + (same ? "match" : "mismatch") + '">' + esc(name) + ': <b>' + esc(value) + '</b> ' + (same ? "✓" : "✕") + "</span>";
+      }).join("") + "</div>";
     if (!tasks.length) {
-      $("tasks").innerHTML = '<div class="empty">Esta entrega todavía no está detallada. Se detalla siguiendo control/PLANIFICACION.md.</div><div class="next"><b>Objetivo:</b> ' + esc(e.goal || "") + "</div>";
+      $("tasks").innerHTML = fpHtml + '<div class="empty">Esta entrega todavía no está detallada. Se detalla siguiendo control/PLANIFICACION.md.</div><div class="next"><b>Objetivo:</b> ' + esc(e.goal || "") + "</div>";
       return;
     }
-    var rows = tasks.map(function (t) {
+    function taskRows(list) { return list.map(function (t) {
       var first = firstSentence(t.action);
       var over = t.limit && t.minutes > t.limit;
       var w = t.limit ? Math.min(100, pct(t.minutes, t.limit)) : 0;
@@ -501,8 +544,13 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
       return "<tr><td>" + chip(t.status) + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
         '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + "</div></details></td>" +
         '<td><span class="who ' + esc(t.owner) + '">' + esc(t.owner) + '</span></td><td class="num hide-sm">' + t.attempts + "</td><td>" + tm + "</td></tr>";
-    }).join("");
-    $("tasks").innerHTML = '<div style="overflow-x:auto"><table class="tasks"><thead><tr><th>Estado</th><th>ID</th><th>Acción</th><th>Resp.</th><th class="hide-sm">Intentos</th><th>Tiempo</th></tr></thead><tbody>' + rows + "</tbody></table></div>";
+    }).join(""); }
+    function taskTable(list) {
+      return '<div class="task-scroll"><table class="tasks"><thead><tr><th>Estado</th><th>ID</th><th>Acción</th><th>Resp.</th><th class="hide-sm">Intentos</th><th>Tiempo</th></tr></thead><tbody>' + taskRows(list) + "</tbody></table></div>";
+    }
+    var html = fpHtml + (openTasks.length ? taskTable(openTasks) : '<div class="empty">No hay tareas abiertas.</div>');
+    if (closedTasks.length) html += '<details class="task-closed"><summary>Ver hechas (' + closedTasks.length + ")</summary>" + taskTable(closedTasks) + "</details>";
+    $("tasks").innerHTML = html;
   }
 
   // ---------- Revisión ----------

@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:52:14.308329Z",
+ "generatedUtc": "2026-10-01T16:00:44.170032Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:46 UTC",
+  "updated": "2026-10-01 15:58 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Oscar debe elegir una de las dos opciones para E2-02; después la tarea se retoma como un nuevo diseño aprobado.",
   "needsOscar": [
@@ -21,6 +21,8 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
+   "T-16, intento 1; inicio 2026-10-01 15:58 UTC. Diagnosticar el parseo de tareas y actualizar dashboard/index.html + tools/build_dashboard.py según D-029. Comprobar build, conteos PLAN/Pages, orden y desplegable, huellas y capturas a 1366 px y 390 px.",
+   "Publicación inicial regeneró dashboard/data.js; falló al escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado (KF-H04).",
    "E2-02, intento 10 (final); inicio 2026-10-01 15:36 UTC. Oscar reportó 9 intentos sin Copilot en el 3, sin bloqueo en el 4 y más de 90 min; lo registré y ejecuté el intento 10 autorizado.",
    "Regla anti-bucle: tras 2 fallos detengo variantes, reviso KNOWN-FIXES y Microsoft Learn y registro URL; tras el 3.º consulto Copilot con la plantilla y uso su respuesta en el 4.º; si falla el 4.º o se excede el límite, bloqueo la tarea y paso a otra independiente.",
    "Antes de pedir algo por navegador, aplico KF-11: recargo la pestaña, abro Power Apps en pestaña nueva y entro desde la lista de apps, pruebo Edge y Codex integrado, y registro qué muestra cada uno.",
@@ -28,7 +30,14 @@ window.PFA_DATA = {
    "Revisé Peek code: Send_an_HTTP_request; respuesta foldersJson era texto literal. No hay Apply to each; KF-02 no aplica. Copilot consultado con los 9 enfoques agrupados y la respuesta quedó registrada.",
    "Flow Checker posterior al guardado conserva 1 error de referencia; E2-02 queda Bloqueada. En Necesito de Oscar están las opciones A/B y mi recomendación."
   ],
-  "fileUtc": "2026-10-01T15:47:10.361431Z"
+  "fileUtc": "2026-10-01T15:59:21.039279Z",
+  "ruleFootprints": {
+   "current": "4FD52CD8",
+   "lines": {
+    "Desarrollo": "4FD52CD8",
+    "Entorno": "4FD52CD8"
+   }
+  }
  },
  "revision": {
   "light": "ROJO",
@@ -360,8 +369,8 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 10,
-   "total": 10,
+   "done": 13,
+   "total": 16,
    "detailed": true,
    "active": false,
    "time": {
@@ -386,7 +395,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T06:21:00Z"
    },
    {
     "id": "E0-02",
@@ -400,7 +410,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T06:22:00Z"
    },
    {
     "id": "E0-03",
@@ -414,7 +425,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T06:23:00Z"
    },
    {
     "id": "E0-04",
@@ -428,7 +440,8 @@ window.PFA_DATA = {
     "attempts": 2,
     "minutes": 1,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T06:40:00Z"
    },
    {
     "id": "E0-05",
@@ -442,7 +455,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": ""
    },
    {
     "id": "E0-06",
@@ -456,7 +470,8 @@ window.PFA_DATA = {
     "attempts": 4,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": ""
    },
    {
     "id": "E0-07",
@@ -470,7 +485,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": ""
    },
    {
     "id": "E0-08",
@@ -484,7 +500,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": ""
    },
    {
     "id": "E0-09",
@@ -498,7 +515,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T10:57:00Z"
    }
   ],
   "E1": [
@@ -514,7 +532,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 10,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T11:28:00Z"
    },
    {
     "id": "E1-02",
@@ -528,7 +547,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 6,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T11:34:00Z"
    },
    {
     "id": "E1-03",
@@ -542,7 +562,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 2,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T11:42:00Z"
    },
    {
     "id": "E1-04",
@@ -556,7 +577,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 13,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T11:55:00Z"
    },
    {
     "id": "E1-05",
@@ -570,7 +592,8 @@ window.PFA_DATA = {
     "attempts": 7,
     "minutes": 143,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T06:29:00Z"
    },
    {
     "id": "E1-06",
@@ -584,7 +607,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 24,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T12:52:00Z"
    },
    {
     "id": "E1-07",
@@ -598,7 +622,8 @@ window.PFA_DATA = {
     "attempts": 2,
     "minutes": 29,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T13:21:00Z"
    },
    {
     "id": "E1-08",
@@ -612,7 +637,8 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 29,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T01:24:00Z"
    },
    {
     "id": "E1-09",
@@ -626,7 +652,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T11:07:00Z"
    },
    {
     "id": "E1-10",
@@ -640,7 +667,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 14,
     "entrega": "E1",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T01:39:00Z"
    }
   ],
   "E2": [
@@ -656,7 +684,8 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 2,
     "entrega": "E2",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T11:25:00Z"
    },
    {
     "id": "E2-02",
@@ -671,6 +700,7 @@ window.PFA_DATA = {
     "minutes": 38,
     "entrega": "E2",
     "fails": 4,
+    "lastActivity": "2026-10-01T15:46:00Z",
     "ready": true
    },
    {
@@ -686,6 +716,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -701,6 +732,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -716,6 +748,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -731,6 +764,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -746,6 +780,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -761,6 +796,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -776,6 +812,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -791,6 +828,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    }
   ],
@@ -808,6 +846,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -823,6 +862,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -838,6 +878,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -853,6 +894,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -868,6 +910,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -883,6 +926,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -898,6 +942,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    },
    {
@@ -913,6 +958,7 @@ window.PFA_DATA = {
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
+    "lastActivity": "",
     "ready": false
    }
   ],
@@ -929,7 +975,8 @@ window.PFA_DATA = {
     "attempts": 7,
     "minutes": 41,
     "entrega": "T",
-    "fails": 1
+    "fails": 1,
+    "lastActivity": "2026-09-30T07:38:00Z"
    },
    {
     "id": "T-02",
@@ -943,7 +990,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 7,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T19:23:00Z"
    },
    {
     "id": "T-03",
@@ -957,7 +1005,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 11,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-09-30T19:36:00Z"
    },
    {
     "id": "T-04",
@@ -971,7 +1020,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 19,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T00:56:00Z"
    },
    {
     "id": "T-05",
@@ -985,7 +1035,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 4,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T01:03:00Z"
    },
    {
     "id": "T-06",
@@ -999,7 +1050,8 @@ window.PFA_DATA = {
     "attempts": 4,
     "minutes": 5,
     "entrega": "T",
-    "fails": 3
+    "fails": 3,
+    "lastActivity": "2026-10-01T01:48:00Z"
    },
    {
     "id": "T-07",
@@ -1013,7 +1065,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 3,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T01:47:00Z"
    },
    {
     "id": "T-08",
@@ -1027,7 +1080,8 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 10,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T04:32:00Z"
    },
    {
     "id": "T-09",
@@ -1041,7 +1095,8 @@ window.PFA_DATA = {
     "attempts": 2,
     "minutes": 4,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T11:19:00Z"
    },
    {
     "id": "T-10",
@@ -1055,11 +1110,120 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 8,
     "entrega": "T",
-    "fails": 0
+    "fails": 0,
+    "lastActivity": "2026-10-01T11:27:00Z"
+   },
+   {
+    "id": "T-11",
+    "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
+    "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
+    "limit": 20,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 2,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T05:47:00Z",
+    "ready": true
+   },
+   {
+    "id": "T-12",
+    "action": "Instalar skill reabrir-tarea y aplicarla a E1-05 tras reconstruir sus intentos previos",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Toda reapertura parte del análisis de fallos previos",
+    "evidence": "Skill disponible; AGENTS/REVISOR actualizados; análisis publicado en STATUS; cierre visual de E1-05 exigirá auditoría 7x2",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 18,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T06:05:00Z",
+    "ready": true
+   },
+   {
+    "id": "T-13",
+    "action": "Anunciar en la primera línea cada skill usada y registrar la regla pedida por Oscar",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Cada uso de skill queda anunciado al principio de la respuesta",
+    "evidence": "Regla exacta en AGENTS.md, sección 10; D-026 registrada; tablero actualizado",
+    "limit": 10,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 6,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T11:51:00Z"
+   },
+   {
+    "id": "T-14",
+    "action": "Instalar el MCP Context7 en Codex y limitar su uso al tablero y las herramientas",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Codex consulta documentación actualizada de librerías al trabajar en dashboard/ y tools/",
+    "evidence": "codex mcp list muestra context7; una consulta de prueba sobre una librería que use el tablero devuelve documentación; nota en KNOWN-FIXES, \"Herramientas\"",
+    "limit": 20,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 6,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T15:04:00Z"
+   },
+   {
+    "id": "T-15",
+    "action": "Huella de reglas, regla de navegador y control del revisor",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "La huella y la regla de navegador quedan verificables por línea de trabajo",
+    "evidence": "Regla de huella y regla de navegador en AGENTS.md; KF-11 actualizado; incumplimiento agregado a REVISOR.md; STATUS muestra ambas huellas",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 23,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-01T15:27:00Z"
+   },
+   {
+    "id": "T-16",
+    "action": "Tablero: mostrar todas las tareas abiertas, hechas en desplegable y huellas",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El tablero presenta el universo de tareas de cada entrega y línea T, y avisa si las huellas de reglas no coinciden",
+    "evidence": "Pages muestra abiertas sin límite ordenadas por estado e ID, hechas/canceladas en desplegable cerrado por defecto, contadores por sección, huellas verdes 4FD52CD8 para ambas líneas y capturas desktop/390 px sin desbordamiento horizontal ni texto cortado",
+    "limit": 60,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "T-11",
+  "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+  "owner": "Agente",
+  "depends": "—",
+  "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
+  "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
+  "limit": 20,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 2,
+  "entrega": "T",
+  "fails": 0,
+  "lastActivity": "2026-10-01T05:47:00Z",
+  "ready": true
+ },
  "upcoming": [
   {
    "id": "E2-02",
@@ -1074,6 +1238,7 @@ window.PFA_DATA = {
    "minutes": 38,
    "entrega": "E2",
    "fails": 4,
+   "lastActivity": "2026-10-01T15:46:00Z",
    "ready": true
   },
   {
@@ -1089,6 +1254,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1104,6 +1270,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1119,6 +1286,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1134,6 +1302,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1149,6 +1318,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1164,6 +1334,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1179,6 +1350,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1194,6 +1366,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1209,6 +1382,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1224,6 +1398,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1239,6 +1414,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1254,6 +1430,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1269,6 +1446,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   },
   {
@@ -1284,6 +1462,7 @@ window.PFA_DATA = {
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
+   "lastActivity": "",
    "ready": false
   }
  ],
@@ -1300,7 +1479,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T06:21:00Z"
   },
   {
    "id": "E0-02",
@@ -1314,7 +1494,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T06:22:00Z"
   },
   {
    "id": "E0-03",
@@ -1328,7 +1509,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T06:23:00Z"
   },
   {
    "id": "E0-04",
@@ -1342,7 +1524,8 @@ window.PFA_DATA = {
    "attempts": 2,
    "minutes": 1,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T06:40:00Z"
   },
   {
    "id": "E0-05",
@@ -1356,7 +1539,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": ""
   },
   {
    "id": "E0-06",
@@ -1370,7 +1554,8 @@ window.PFA_DATA = {
    "attempts": 4,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": ""
   },
   {
    "id": "E0-07",
@@ -1384,7 +1569,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": ""
   },
   {
    "id": "E0-08",
@@ -1398,7 +1584,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": ""
   },
   {
    "id": "E0-09",
@@ -1412,7 +1599,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T10:57:00Z"
   },
   {
    "id": "E1-01",
@@ -1426,7 +1614,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 10,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T11:28:00Z"
   },
   {
    "id": "E1-02",
@@ -1440,7 +1629,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 6,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T11:34:00Z"
   },
   {
    "id": "E1-03",
@@ -1454,7 +1644,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 2,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T11:42:00Z"
   },
   {
    "id": "E1-04",
@@ -1468,7 +1659,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 13,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T11:55:00Z"
   },
   {
    "id": "E1-05",
@@ -1482,7 +1674,8 @@ window.PFA_DATA = {
    "attempts": 7,
    "minutes": 143,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T06:29:00Z"
   },
   {
    "id": "E1-06",
@@ -1496,7 +1689,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 24,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T12:52:00Z"
   },
   {
    "id": "E1-07",
@@ -1510,7 +1704,8 @@ window.PFA_DATA = {
    "attempts": 2,
    "minutes": 29,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T13:21:00Z"
   },
   {
    "id": "E1-08",
@@ -1524,7 +1719,8 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 29,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T01:24:00Z"
   },
   {
    "id": "E1-09",
@@ -1538,7 +1734,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T11:07:00Z"
   },
   {
    "id": "E1-10",
@@ -1552,7 +1749,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 14,
    "entrega": "E1",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T01:39:00Z"
   },
   {
    "id": "E2-01",
@@ -1566,7 +1764,8 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 2,
    "entrega": "E2",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T11:25:00Z"
   },
   {
    "id": "T-01",
@@ -1580,7 +1779,8 @@ window.PFA_DATA = {
    "attempts": 7,
    "minutes": 41,
    "entrega": "T",
-   "fails": 1
+   "fails": 1,
+   "lastActivity": "2026-09-30T07:38:00Z"
   },
   {
    "id": "T-02",
@@ -1594,7 +1794,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 7,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T19:23:00Z"
   },
   {
    "id": "T-03",
@@ -1608,7 +1809,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 11,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-09-30T19:36:00Z"
   },
   {
    "id": "T-04",
@@ -1622,7 +1824,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 19,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T00:56:00Z"
   },
   {
    "id": "T-05",
@@ -1636,7 +1839,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 4,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T01:03:00Z"
   },
   {
    "id": "T-06",
@@ -1650,7 +1854,8 @@ window.PFA_DATA = {
    "attempts": 4,
    "minutes": 5,
    "entrega": "T",
-   "fails": 3
+   "fails": 3,
+   "lastActivity": "2026-10-01T01:48:00Z"
   },
   {
    "id": "T-07",
@@ -1664,7 +1869,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 3,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T01:47:00Z"
   },
   {
    "id": "T-08",
@@ -1678,7 +1884,8 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 10,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T04:32:00Z"
   },
   {
    "id": "T-09",
@@ -1692,7 +1899,8 @@ window.PFA_DATA = {
    "attempts": 2,
    "minutes": 4,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T11:19:00Z"
   },
   {
    "id": "T-10",
@@ -1706,7 +1914,53 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 8,
    "entrega": "T",
-   "fails": 0
+   "fails": 0,
+   "lastActivity": "2026-10-01T11:27:00Z"
+  },
+  {
+   "id": "T-13",
+   "action": "Anunciar en la primera línea cada skill usada y registrar la regla pedida por Oscar",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Cada uso de skill queda anunciado al principio de la respuesta",
+   "evidence": "Regla exacta en AGENTS.md, sección 10; D-026 registrada; tablero actualizado",
+   "limit": 10,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 6,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T11:51:00Z"
+  },
+  {
+   "id": "T-14",
+   "action": "Instalar el MCP Context7 en Codex y limitar su uso al tablero y las herramientas",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Codex consulta documentación actualizada de librerías al trabajar en dashboard/ y tools/",
+   "evidence": "codex mcp list muestra context7; una consulta de prueba sobre una librería que use el tablero devuelve documentación; nota en KNOWN-FIXES, \"Herramientas\"",
+   "limit": 20,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 6,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T15:04:00Z"
+  },
+  {
+   "id": "T-15",
+   "action": "Huella de reglas, regla de navegador y control del revisor",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "La huella y la regla de navegador quedan verificables por línea de trabajo",
+   "evidence": "Regla de huella y regla de navegador en AGENTS.md; KF-11 actualizado; incumplimiento agregado a REVISOR.md; STATUS muestra ambas huellas",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 23,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T15:27:00Z"
   }
  ],
  "alerts": [
@@ -1717,8 +1971,8 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 30,
-  "tasksTotal": 47,
+  "tasksDone": 33,
+  "tasksTotal": 53,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
