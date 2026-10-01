@@ -1,20 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T14:43:14.884556Z",
+ "generatedUtc": "2026-10-01T14:52:13.680734Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 14:41 UTC",
+  "updated": "2026-10-01 14:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-02, intento 9: ingresar el URI de subcarpetas mediante el editor de expresiones/dynamic content del diseñador; volver a ejecutar Flow Checker y comprobar que el error de URI desaparezca antes de guardar o probar.",
-  "needsOscar": [],
+  "nextAction": "E2-02, intento 10: consultar Microsoft 365 Copilot Chat con la plantilla anti-bucle cuando la extensión Edge vuelva a estar disponible; luego corregir la referencia según la respuesta y Flow Checker.",
+  "needsOscar": [
+   {
+    "ref": "E2-02",
+    "text": "vuelve a conectar la extensión de Edge; necesito consultar Microsoft 365 Copilot Chat antes del intento 10."
+   }
+  ],
   "blockers": [],
   "current": [
-   "E2-02, intento 8 cerrado; inicio 2026-10-01 14:34 UTC, fin 14:41 UTC (7 min). Alternativa preaprobada activa: Power Apps (V2), Office 365 Outlook, salida de texto foldersJson, sin SharePoint en el flow. El conector HTTP de Outlook de nivel 1 permanece configurado. Añadí el segundo paso HTTP para subcarpetas, pero el diseñador muestra texto en URI y Flow Checker aún informa Se requiere \"URI\"; captura actual confirma que la primera letra de la dirección quedó truncada. No ejecuté el flujo. Microsoft Learn documenta URI como parámetro obligatorio y segmentos Graph permitidos: https://learn.microsoft.com/en-us/connectors/office365/. Intento 8: AVANCE; 1 error, 0 ejecuciones. Próximo intento: usar el editor de expresiones/dynamic content para crear el URI como valor reconocido por el control, validar antes de guardar/probar. D-028 mantiene aprobado el diseño bajo demanda con “Scan folders”. El publicador regeneró dashboard/data.js, pero no pudo escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado; la publicación remota no queda confirmada."
+   "E2-02, intento 9 cerrado; inicio 2026-10-01 14:43 UTC, fin 14:45 UTC (2 min). Restauré el URI íntegro y ajusté la referencia al nombre interno del paso, pero Flow Checker sigue mostrando una referencia inválida y una advertencia de respuesta. No ejecuté el flow. La documentación oficial consultada indica insertar expresiones con fx: https://learn.microsoft.com/en-us/power-automate/flows-designer. No pude consultar Microsoft 365 Copilot Chat: la pestaña aparece en Edge, pero la extensión dio tiempo de espera y luego no encontró la pestaña. Intento 9: AVANCE; siguiente acción concreta: Copilot y luego un nuevo intento. El publicador regeneró dashboard/data.js, pero no pudo escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado; la publicación remota no quedó confirmada."
   ],
-  "fileUtc": "2026-10-01T14:42:22.519675Z"
+  "fileUtc": "2026-10-01T14:46:04.734740Z"
  },
  "revision": {
   "light": "ROJO",
@@ -207,10 +212,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 12,
+    "prod": 14,
     "unprod": 16,
     "wait": 5,
-    "total": 33
+    "total": 35
    }
   },
   {
@@ -653,8 +658,8 @@ window.PFA_DATA = {
     "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
     "status": "Reabierta",
-    "attempts": 8,
-    "minutes": 26,
+    "attempts": 9,
+    "minutes": 28,
     "entrega": "E2",
     "fails": 3,
     "ready": true
@@ -1054,8 +1059,8 @@ window.PFA_DATA = {
   "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
   "limit": 90,
   "status": "Reabierta",
-  "attempts": 8,
-  "minutes": 26,
+  "attempts": 9,
+  "minutes": 28,
   "entrega": "E2",
   "fails": 3,
   "ready": true
@@ -1070,8 +1075,8 @@ window.PFA_DATA = {
    "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
    "status": "Reabierta",
-   "attempts": 8,
-   "minutes": 26,
+   "attempts": 9,
+   "minutes": 28,
    "entrega": "E2",
    "fails": 3,
    "ready": true
@@ -1712,7 +1717,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (8 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (9 intentos previos)",
    "level": "serious"
   }
  ],
@@ -1722,28 +1727,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 421,
+   "prod": 423,
    "unprod": 18,
    "wait": 17,
-   "total": 456
+   "total": 458
   },
   "last24h": {
-   "prod": 248,
+   "prod": 250,
    "unprod": 18,
    "wait": 13,
-   "total": 279
+   "total": 281
   },
   "last7d": {
-   "prod": 421,
+   "prod": 423,
    "unprod": 18,
    "wait": 17,
-   "total": 456
+   "total": 458
   },
   "product": {
-   "prod": 285,
+   "prod": 287,
    "unprod": 16,
    "wait": 9,
-   "total": 310
+   "total": 312
   },
   "support": {
    "prod": 136,
@@ -1833,7 +1838,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 219,
+   "prod": 221,
    "unprod": 18,
    "wait": 11
   }
@@ -1905,10 +1910,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-02",
-   "prod": 10,
+   "prod": 12,
    "unprod": 16,
    "wait": 0,
-   "total": 26
+   "total": 28
   },
   {
    "task": "E1-06",
@@ -1949,10 +1954,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 456
+   "minutes": 458
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T14:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Restauré URI completo y cambié referencia al nombre interno del paso; Checker mantiene referencia inválida; no pude consultar Copilot por extensión Edge inaccesible",
+   "evidence": "Flow Checker: 1 error de referencia y advertencia de respuesta; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/power-automate/flows-designer"
+  },
   {
    "start": "2026-10-01T14:34:00Z",
    "minutes": 7,
@@ -2069,22 +2087,22 @@ window.PFA_DATA = {
    "category": "PERMISOS",
    "summary": "Espera de seis minutos tras configurar la repetición",
    "evidence": "Publicador configurado PT3M; tablero publicado comprobado al finalizar la espera"
-  },
-  {
-   "start": "2026-10-01T11:19:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-01",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "La página de Microsoft pidió revisar términos actualizados antes de abrir Lists; no acepté ni ingresé credenciales",
-   "evidence": "Edge muestra Microsoft Services Agreement actualizado; List settings siguen pendientes de esa acción"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T14:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Restauré URI completo y cambié referencia al nombre interno del paso; Checker mantiene referencia inválida; no pude consultar Copilot por extensión Edge inaccesible",
+   "evidence": "Flow Checker: 1 error de referencia y advertencia de respuesta; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/power-automate/flows-designer"
+  },
   {
    "start": "2026-10-01T14:34:00Z",
    "minutes": 7,
