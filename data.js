@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T06:31:51.055964Z",
+ "generatedUtc": "2026-10-01T06:48:38.676218Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 06:29 UTC",
+  "updated": "2026-10-01 06:33 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "Oscar prueba E1-09 en la app publicada y responde «E1 aceptada» o describe un defecto concreto.",
   "needsOscar": [
@@ -23,7 +23,7 @@ window.PFA_DATA = {
   "current": [
    "Ninguna. E1-05 se corrigió y publicó tras la decisión de Oscar de ejecutar la corrección. E1-09 espera su prueba de usuario."
   ],
-  "fileUtc": "2026-10-01T06:29:57.620601Z"
+  "fileUtc": "2026-10-01T06:33:19.553744Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -1676,10 +1676,10 @@ window.PFA_DATA = {
    "total": 406
   },
   "last24h": {
-   "prod": 395,
+   "prod": 391,
    "unprod": 2,
    "wait": 6,
-   "total": 403
+   "total": 399
   },
   "last7d": {
    "prod": 398,
