@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:48:38.730353Z",
+ "generatedUtc": "2026-10-01T01:50:09.660997Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:47 UTC",
+  "updated": "2026-10-01 01:50 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
+  "nextAction": "resolver la autenticación HTTPS de T-06 para reactivar el publicador automático; después, E1-09: Oscar recorre las 7 pantallas publicadas y acepta o indica cambios concretos.",
   "needsOscar": [
    {
     "ref": "E1-09",
@@ -2552,3 +2552,4 @@ window.PFA_DATA = {
   }
  ]
 };
+
