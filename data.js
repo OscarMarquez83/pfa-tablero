@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T05:03:38.897140Z",
+ "generatedUtc": "2026-10-01T05:23:27.690683Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 04:32 UTC",
+  "updated": "2026-10-01 05:22 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
   "nextAction": "E1-05: corregir el encabezado de My Day y el contraste del menú vertical; después repetir E1-09 en la app publicada.",
   "needsOscar": [
@@ -17,8 +17,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E1-05, intento 7, inicio 2026-10-01 04:49 UTC. Oscar reabrió la tarea porque el encabezado de My Day difiere del común y el selector vertical tiene texto ilegible. Corregiré el YAML y la app; comprobaré el encabezado, el menú abierto, la selección activa, la navegación y la versión publicada."
-  ]
+   "T-10, intento 1, inicio 2026-10-01 05:22 UTC. Apliqué el parche del tablero; comprobaré el campo status.fileUtc, el temporizador de 3 minutos, el texto de antigüedad en la página publicada y el estado de la tarea programada."
+  ],
+  "fileUtc": "2026-10-01T05:22:45.531302Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -334,7 +335,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 8,
-   "total": 8,
+   "total": 10,
    "detailed": true,
    "active": false,
    "time": {
@@ -533,14 +534,14 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-05",
-    "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
+    "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
     "owner": "Agente",
     "depends": "E1-04",
     "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
-    "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
+    "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
     "limit": 60,
     "status": "En curso",
-    "attempts": 6,
+    "attempts": 7,
     "minutes": 43,
     "entrega": "E1",
     "fails": 0,
@@ -1004,19 +1005,49 @@ window.PFA_DATA = {
     "minutes": 10,
     "entrega": "T",
     "fails": 0
+   },
+   {
+    "id": "T-09",
+    "action": "Instalar las skills cerrar-intento y powerapps-yaml y la configuración de Microsoft Learn; aplicar los cinco cambios aprobados a AGENTS.md; registrar el incidente del doble encabezado",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
+    "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "ready": true
+   },
+   {
+    "id": "T-10",
+    "action": "Actualizar el tablero para mostrar la hora real de STATUS, ajustar la señal de vida y programar PFA Tablero cada 3 minutos",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El tablero muestra la antigüedad del último reporte del agente",
+    "evidence": "status.fileUtc; tarea con repetición PT3M; tablero publicado muestra “Último reporte del agente hace X min”",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "ready": true
    }
   ]
  },
  "nextTask": {
   "id": "E1-05",
-  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
+  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
   "owner": "Agente",
   "depends": "E1-04",
   "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
-  "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
+  "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
   "limit": 60,
   "status": "En curso",
-  "attempts": 6,
+  "attempts": 7,
   "minutes": 43,
   "entrega": "E1",
   "fails": 0,
@@ -1025,14 +1056,14 @@ window.PFA_DATA = {
  "upcoming": [
   {
    "id": "E1-05",
-   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente",
+   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción. Corrección solicitada por Oscar: igualar visualmente My Day y hacer legibles el menú vertical abierto y su selección con la paleta vigente; incluir auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
    "owner": "Agente",
    "depends": "E1-04",
    "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
-   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona",
+   "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
    "limit": 60,
    "status": "En curso",
-   "attempts": 6,
+   "attempts": 7,
    "minutes": 43,
    "entrega": "E1",
    "fails": 0,
@@ -1604,7 +1635,7 @@ window.PFA_DATA = {
  "alerts": [],
  "kpi": {
   "tasksDone": 25,
-  "tasksTotal": 45,
+  "tasksTotal": 47,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {

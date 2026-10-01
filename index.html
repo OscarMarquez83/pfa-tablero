@@ -553,7 +553,15 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
       html += '<ul class="revsum">' + rv.summary.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>";
       html += '<button type="button" class="revlink" id="revmore">Ver revisión completa y motivo del semáforo →</button>';
     } else html += '<div class="empty">Todavía no hay revisión. El revisor corre cada 4 horas.</div>';
-    html += '<div class="livehead">Ahora mismo · agente constructor (se actualiza con cada publicación)</div>';
+    html += '<div class="livehead">Ahora mismo · agente constructor</div>';
+    if (D.status.fileUtc) {
+      var mins = Math.max(0, Math.round((Date.now() - new Date(D.status.fileUtc).getTime()) / 60000));
+      var ago = mins < 60 ? mins + " min" : Math.floor(mins / 60) + " h " + (mins % 60) + " min";
+      var stale = mins >= 30;
+      html += '<div class="sub" style="margin:0 0 8px;' + (stale ? 'color:var(--warn,#f59e0b)' : '') + '">' +
+        (stale ? "⚠ El agente no reporta avance hace " + ago + ". Si está trabajando, revisa en Codex si espera una aprobación."
+               : "Último reporte del agente hace " + ago + ".") + "</div>";
+    }
     if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
     else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
     if (D.status.current && D.status.current.length) html += '<div class="next" style="background:var(--surface-2)"><b style="color:var(--ink)">En curso:</b> ' + D.status.current.map(esc).join(" · ") + "</div>";
