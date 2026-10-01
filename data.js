@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T16:22:14.220562Z",
+ "generatedUtc": "2026-10-01T16:31:14.061704Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:58 UTC",
+  "updated": "2026-10-01 16:22 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Oscar debe elegir una de las dos opciones para E2-02; después la tarea se retoma como un nuevo diseño aprobado.",
   "needsOscar": [
@@ -30,7 +30,7 @@ window.PFA_DATA = {
    "Revisé Peek code: Send_an_HTTP_request; respuesta foldersJson era texto literal. No hay Apply to each; KF-02 no aplica. Copilot consultado con los 9 enfoques agrupados y la respuesta quedó registrada.",
    "Flow Checker posterior al guardado conserva 1 error de referencia; E2-02 queda Bloqueada. En Necesito de Oscar están las opciones A/B y mi recomendación."
   ],
-  "fileUtc": "2026-10-01T15:59:21.039279Z",
+  "fileUtc": "2026-10-01T16:27:06.605307Z",
   "ruleFootprints": {
    "current": "4FD52CD8",
    "lines": {
