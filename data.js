@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T14:52:13.680734Z",
+ "generatedUtc": "2026-10-01T15:01:13.863461Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 14:45 UTC",
+  "updated": "2026-10-01 14:58 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-02, intento 10: consultar Microsoft 365 Copilot Chat con la plantilla anti-bucle cuando la extensión Edge vuelva a estar disponible; luego corregir la referencia según la respuesta y Flow Checker.",
+  "nextAction": "T-14, intento 1: instalar Context7 en Codex, consultar documentación de una dependencia del tablero, registrar el ámbito y verificar la consulta.",
   "needsOscar": [
    {
     "ref": "E2-02",
@@ -17,9 +17,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 9 cerrado; inicio 2026-10-01 14:43 UTC, fin 14:45 UTC (2 min). Restauré el URI íntegro y ajusté la referencia al nombre interno del paso, pero Flow Checker sigue mostrando una referencia inválida y una advertencia de respuesta. No ejecuté el flow. La documentación oficial consultada indica insertar expresiones con fx: https://learn.microsoft.com/en-us/power-automate/flows-designer. No pude consultar Microsoft 365 Copilot Chat: la pestaña aparece en Edge, pero la extensión dio tiempo de espera y luego no encontró la pestaña. Intento 9: AVANCE; siguiente acción concreta: Copilot y luego un nuevo intento. El publicador regeneró dashboard/data.js, pero no pudo escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado; la publicación remota no quedó confirmada."
+   "T-14, intento 1; inicio 2026-10-01 14:58 UTC. Instalar y probar Context7 con una librería usada en dashboard/ o tools/, limitar su uso en AGENTS.md y comprobar codex mcp list más documentación devuelta."
   ],
-  "fileUtc": "2026-10-01T14:46:04.734740Z"
+  "fileUtc": "2026-10-01T14:59:53.069358Z"
  },
  "revision": {
   "light": "ROJO",
