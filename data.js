@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T19:07:14.953109Z",
+ "generatedUtc": "2026-10-01T19:13:15.126079Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 18:59 UTC",
+  "updated": "2026-10-01 19:12 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "T-18 espera el issue de prueba de Oscar; continúa cuando llegue.",
+  "nextAction": "descargar T-03-idea-SKILL.md, instalarla y aplicar los cambios aprobados.",
   "needsOscar": [
    {
     "ref": "T-18",
@@ -24,8 +24,11 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-01T18:59:46.830002Z",
+  "current": [
+   "T-21, intento 1; inicio 2026-10-01 19:12 UTC. Instalar sin cambios el archivo de Drive, agregar las reglas pedidas y registrar el hallazgo del menú. Cierre: hash idéntico, .gitkeep y las 3 modificaciones verificadas.",
+   "El pedido la llama T-03, pero T-03 ya está Hecha; uso el siguiente ID libre T-21."
+  ],
+  "fileUtc": "2026-10-01T19:12:24.160721Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -365,7 +368,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 17,
-   "total": 20,
+   "total": 21,
    "detailed": true,
    "active": false,
    "time": {
@@ -1260,6 +1263,22 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T18:59:00Z"
+   },
+   {
+    "id": "T-21",
+    "action": "Instalar la skill idea y registrar el uso en rediseños y hallazgos",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; HZ del menú registrado",
+    "evidence": "Hash del archivo coincide; control/specs/.gitkeep existe; tres líneas verificadas; HZ asignado a E1",
+    "limit": 20,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
@@ -2087,7 +2106,7 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 37,
-  "tasksTotal": 57,
+  "tasksTotal": 58,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
