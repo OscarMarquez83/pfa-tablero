@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T11:49:14.275358Z",
+ "generatedUtc": "2026-10-01T11:51:19.883853Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:48 UTC",
+  "updated": "2026-10-01 11:51 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "esperar la decisión de Oscar sobre la ubicación de las listas o una vía alternativa que cambie el acceso; después reabrir E2-02.",
   "needsOscar": [
@@ -19,7 +19,7 @@ window.PFA_DATA = {
   "current": [
    "Ninguna. E2-02 permanece Bloqueada y espera la decisión de Oscar sobre la ubicación de las listas o una vía alternativa."
   ],
-  "fileUtc": "2026-10-01T11:48:21.428748Z"
+  "fileUtc": "2026-10-01T11:51:19.463671Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -353,10 +353,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 133,
+    "prod": 136,
     "unprod": 2,
     "wait": 8,
-    "total": 143
+    "total": 146
    }
   }
  ],
@@ -1710,22 +1710,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 408,
+   "prod": 411,
    "unprod": 18,
    "wait": 17,
-   "total": 443
+   "total": 446
   },
   "last24h": {
-   "prod": 333,
+   "prod": 336,
    "unprod": 18,
    "wait": 17,
-   "total": 368
+   "total": 371
   },
   "last7d": {
-   "prod": 408,
+   "prod": 411,
    "unprod": 18,
    "wait": 17,
-   "total": 443
+   "total": 446
   },
   "product": {
    "prod": 275,
@@ -1734,10 +1734,10 @@ window.PFA_DATA = {
    "total": 300
   },
   "support": {
-   "prod": 133,
+   "prod": 136,
    "unprod": 2,
    "wait": 8,
-   "total": 143
+   "total": 146
   }
  },
  "days": [
@@ -1821,7 +1821,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 206,
+   "prod": 209,
    "unprod": 18,
    "wait": 11
   }
@@ -1937,13 +1937,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 443
+   "minutes": 446
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T11:45:00Z",
-   "minutes": 3,
+   "minutes": 6,
    "account": "personal",
    "entrega": "T",
    "task": "T-13",
@@ -1952,7 +1952,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Añadí y registré el anuncio obligatorio de cada skill",
-   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación verificada en data.js remoto"
+   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación remota verificada por GitHub"
   },
   {
    "start": "2026-10-01T11:43:00Z",
@@ -2075,7 +2075,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T11:45:00Z",
-   "minutes": 3,
+   "minutes": 6,
    "account": "personal",
    "entrega": "T",
    "task": "T-13",
@@ -2084,7 +2084,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Añadí y registré el anuncio obligatorio de cada skill",
-   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación verificada en data.js remoto"
+   "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación remota verificada por GitHub"
   },
   {
    "start": "2026-10-01T11:43:00Z",
