@@ -1,15 +1,19 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:37:13.881115Z",
+ "generatedUtc": "2026-10-01T15:46:13.942336Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:36 UTC",
+  "updated": "2026-10-01 15:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "completar el preflight de E2-02; consultar Copilot por el protocolo antes del último intento 10.",
+  "nextAction": "Oscar debe elegir una de las dos opciones para E2-02; después la tarea se retoma como un nuevo diseño aprobado.",
   "needsOscar": [
+   {
+    "ref": "E2-02",
+    "text": "elegir diseño. Recomiendo A: rehacer la segunda acción, alimentar Parse JSON con el cuerpo dinámico del primer HTTP y construir la llamada a subcarpetas con el id dinámico; la app seguirá recibiendo una sola respuesta JSON. B: dividir en llamadas: Power Apps obtiene primero las carpetas Projects y llama un flow estándar para cada folderId; elimina la referencia entre acciones, pero exige modificar la app y manejar más llamadas."
+   },
    {
     "ref": "T-14",
     "text": "reinicia Codex para cargar el servidor Context7 recién instalado en la lista de tools."
@@ -24,7 +28,7 @@ window.PFA_DATA = {
    "E2-02 está en intento 10 de 10; antes de cambiar el flow reviso Peek code, KF-01 y KF-02, consulto Copilot con los 9 enfoques agrupados y registro respuesta/documentación.",
    "Comprobaré Flow Checker y la referencia exacta. Si falla este último intento, marcaré E2-02 Bloqueada y propondré 2 diseños distintos con recomendación."
   ],
-  "fileUtc": "2026-10-01T15:36:59.330795Z"
+  "fileUtc": "2026-10-01T15:45:51.288537Z"
  },
  "revision": {
   "light": "ROJO",
@@ -218,9 +222,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 14,
-    "unprod": 16,
+    "unprod": 25,
     "wait": 5,
-    "total": 35
+    "total": 44
    }
   },
   {
@@ -662,11 +666,11 @@ window.PFA_DATA = {
     "expected": "La app puede pedir al flujo la lista de carpetas",
     "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
-    "status": "Reabierta",
-    "attempts": 9,
-    "minutes": 28,
+    "status": "Bloqueada",
+    "attempts": 10,
+    "minutes": 37,
     "entrega": "E2",
-    "fails": 3,
+    "fails": 4,
     "ready": true
    },
    {
@@ -1055,21 +1059,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "E2-02",
-  "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flujo no usa SharePoint. Get items con URL exacta y GUID falló: el diseñador marca “Se requiere Dirección del sitio” y “Se requiere Nombre de lista”; se descarta ese acceso",
-  "owner": "Agente",
-  "depends": "E2-01",
-  "expected": "La app puede pedir al flujo la lista de carpetas",
-  "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
-  "limit": 90,
-  "status": "Reabierta",
-  "attempts": 9,
-  "minutes": 28,
-  "entrega": "E2",
-  "fails": 3,
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E2-02",
@@ -1079,11 +1069,11 @@ window.PFA_DATA = {
    "expected": "La app puede pedir al flujo la lista de carpetas",
    "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
-   "status": "Reabierta",
-   "attempts": 9,
-   "minutes": 28,
+   "status": "Bloqueada",
+   "attempts": 10,
+   "minutes": 37,
    "entrega": "E2",
-   "fails": 3,
+   "fails": 4,
    "ready": true
   },
   {
@@ -1722,8 +1712,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (9 intentos previos)",
-   "level": "serious"
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
   }
  ],
  "kpi": {
@@ -1733,27 +1723,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 452,
-   "unprod": 18,
+   "unprod": 27,
    "wait": 17,
-   "total": 487
+   "total": 496
   },
   "last24h": {
    "prod": 279,
-   "unprod": 18,
+   "unprod": 27,
    "wait": 13,
-   "total": 310
+   "total": 319
   },
   "last7d": {
    "prod": 452,
-   "unprod": 18,
+   "unprod": 27,
    "wait": 17,
-   "total": 487
+   "total": 496
   },
   "product": {
    "prod": 287,
-   "unprod": 16,
+   "unprod": 25,
    "wait": 9,
-   "total": 312
+   "total": 321
   },
   "support": {
    "prod": 165,
@@ -1844,15 +1834,15 @@ window.PFA_DATA = {
   {
    "date": "2026-10-01",
    "prod": 250,
-   "unprod": 18,
+   "unprod": 27,
    "wait": 11
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 15,
-   "attempts": 2
+   "minutes": 24,
+   "attempts": 3
   },
   {
    "category": "AUTH",
@@ -1900,6 +1890,13 @@ window.PFA_DATA = {
    "total": 41
   },
   {
+   "task": "E2-02",
+   "prod": 12,
+   "unprod": 25,
+   "wait": 0,
+   "total": 37
+  },
+  {
    "task": "E1-08",
    "prod": 29,
    "unprod": 0,
@@ -1912,13 +1909,6 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 29
-  },
-  {
-   "task": "E2-02",
-   "prod": 12,
-   "unprod": 16,
-   "wait": 0,
-   "total": 28
   },
   {
    "task": "E1-06",
@@ -1959,10 +1949,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 487
+   "minutes": 496
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T15:36:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 10,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Intento final: corregí URI duplicado usando referencia interna localizada; Flow Checker conservó error de referencia. Copilot: Graph childFolders es compatible; reconstruir paso y usar salida dinámica/Parse JSON. Consulté plantilla con nueve enfoques agrupados",
+   "evidence": "Peek code exacto: Send_an_HTTP_request; Flow Checker posterior al guardado: Corrija esto para incluir una referencia válida a \\Send_an_HTTP_request\\\" para los parámetros de entrada de la acción \\\"Enviar_una_solicitud_HTTP_2\\\"; sin respuesta probada por error. Learn: https://learn.microsoft.com/en-us/connectors/office365/ y https://learn.microsoft.com/en-us/power-automate/use-expressions-in-conditions\""
+  },
   {
    "start": "2026-10-01T15:04:00Z",
    "minutes": 23,
@@ -2079,22 +2082,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "El conector no resuelve el sitio personal; la alternativa sugerida por Copilot no se pudo localizar en el diseñador",
    "evidence": "4 intentos; documentación Microsoft Learn y Copilot consultados; Flow Checker 1 error por salida faltante del bucle; flujo no ejecutado"
-  },
-  {
-   "start": "2026-10-01T11:25:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-10",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Comprobé la publicación después de seis minutos",
-   "evidence": "Pág. publicada: Último reporte del agente hace 7 min; status.fileUtc=2026-10-01T11:23:36.314986Z"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T15:36:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 10,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Intento final: corregí URI duplicado usando referencia interna localizada; Flow Checker conservó error de referencia. Copilot: Graph childFolders es compatible; reconstruir paso y usar salida dinámica/Parse JSON. Consulté plantilla con nueve enfoques agrupados",
+   "evidence": "Peek code exacto: Send_an_HTTP_request; Flow Checker posterior al guardado: Corrija esto para incluir una referencia válida a \\Send_an_HTTP_request\\\" para los parámetros de entrada de la acción \\\"Enviar_una_solicitud_HTTP_2\\\"; sin respuesta probada por error. Learn: https://learn.microsoft.com/en-us/connectors/office365/ y https://learn.microsoft.com/en-us/power-automate/use-expressions-in-conditions\""
+  },
   {
    "start": "2026-10-01T15:04:00Z",
    "minutes": 23,
