@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T16:37:40.285538Z",
+ "generatedUtc": "2026-10-01T16:43:52.131806Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 16:34 UTC",
+  "updated": "2026-10-01 16:39 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Oscar elige una de las dos opciones para E2-02; después se retoma con un diseño aprobado.",
   "needsOscar": [
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-01T16:35:01.958126Z",
+  "fileUtc": "2026-10-01T16:39:20.455547Z",
   "ruleFootprints": {
    "current": "4FD52CD8",
    "lines": {
@@ -365,10 +365,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 201,
+    "prod": 206,
     "unprod": 2,
     "wait": 8,
-    "total": 211
+    "total": 216
    }
   }
  ],
@@ -1191,10 +1191,10 @@ window.PFA_DATA = {
     "limit": 60,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 36,
+    "minutes": 41,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T16:34:00Z"
+    "lastActivity": "2026-10-01T16:39:00Z"
    }
   ]
  },
@@ -1962,10 +1962,10 @@ window.PFA_DATA = {
    "limit": 60,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 36,
+   "minutes": 41,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T16:34:00Z"
+   "lastActivity": "2026-10-01T16:39:00Z"
   }
  ],
  "alerts": [
@@ -1981,22 +1981,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 488,
+   "prod": 493,
    "unprod": 28,
    "wait": 17,
-   "total": 533
+   "total": 538
   },
   "last24h": {
-   "prod": 315,
+   "prod": 320,
    "unprod": 28,
    "wait": 13,
-   "total": 356
+   "total": 361
   },
   "last7d": {
-   "prod": 488,
+   "prod": 493,
    "unprod": 28,
    "wait": 17,
-   "total": 533
+   "total": 538
   },
   "product": {
    "prod": 287,
@@ -2005,10 +2005,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 201,
+   "prod": 206,
    "unprod": 2,
    "wait": 8,
-   "total": 211
+   "total": 216
   }
  },
  "days": [
@@ -2092,7 +2092,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 286,
+   "prod": 291,
    "unprod": 28,
    "wait": 11
   }
@@ -2149,18 +2149,18 @@ window.PFA_DATA = {
    "total": 41
   },
   {
+   "task": "T-16",
+   "prod": 41,
+   "unprod": 0,
+   "wait": 0,
+   "total": 41
+  },
+  {
    "task": "E2-02",
    "prod": 12,
    "unprod": 26,
    "wait": 0,
    "total": 38
-  },
-  {
-   "task": "T-16",
-   "prod": 36,
-   "unprod": 0,
-   "wait": 0,
-   "total": 36
   },
   {
    "task": "E1-08",
@@ -2208,13 +2208,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 533
+   "minutes": 538
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T15:58:00Z",
-   "minutes": 36,
+   "minutes": 41,
    "account": "personal",
    "entrega": "T",
    "task": "T-16",
@@ -2346,7 +2346,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T15:58:00Z",
-   "minutes": 36,
+   "minutes": 41,
    "account": "personal",
    "entrega": "T",
    "task": "T-16",
