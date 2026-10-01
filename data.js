@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T17:13:14.180830Z",
+ "generatedUtc": "2026-10-01T17:20:07.714652Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 17:11 UTC",
+  "updated": "2026-10-01 17:18 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar el issue de prueba de Oscar y comprobar su cierre automático y nueva fila de worklog.",
+  "nextAction": "continuar T-18; espera el issue de prueba de Oscar.",
   "needsOscar": [
    {
     "ref": "T-18",
@@ -24,8 +24,11 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-01T17:11:52.790373Z",
+  "current": [
+   "Sin tarea en curso. T-17 quedó Hecha en intento 1. Pages confirmó E0–E10 y T sin interacción en 1366 px y 390 px; T mantiene 4 tareas abiertas, 14 hechas y el desplegable abre/cierra. Capturas en tmp/evidencia/T-17.",
+   "git log --follow -- dashboard/index.html no contiene una versión estática anterior; el commit base disponible 79f0f54 también selecciona una entrega. Implementé el alcance escrito por Oscar."
+  ],
+  "fileUtc": "2026-10-01T17:18:37.544236Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -364,15 +367,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 14,
+   "done": 15,
    "total": 18,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 212,
+    "prod": 223,
     "unprod": 2,
     "wait": 8,
-    "total": 222
+    "total": 233
    }
   }
  ],
@@ -1208,13 +1211,12 @@ window.PFA_DATA = {
     "expected": "Todas las tareas E0–E10 se ven sin expandir entregas; T conserva su presentación actual",
     "evidence": "Pages muestra las tareas de E0–E10 desplegadas y T sin cambios, en escritorio y teléfono vertical",
     "limit": 45,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 11,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-01T17:18:00Z"
    },
    {
     "id": "T-18",
@@ -2002,6 +2004,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T16:44:00Z"
+  },
+  {
+   "id": "T-17",
+   "action": "Tablero: recuperar vista estática de entregas E0–E10 y mantener la línea T actual",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Todas las tareas E0–E10 se ven sin expandir entregas; T conserva su presentación actual",
+   "evidence": "Pages muestra las tareas de E0–E10 desplegadas y T sin cambios, en escritorio y teléfono vertical",
+   "limit": 45,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 11,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-01T17:18:00Z"
   }
  ],
  "alerts": [
@@ -2012,27 +2029,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 34,
+  "tasksDone": 35,
   "tasksTotal": 55,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 499,
+   "prod": 510,
    "unprod": 28,
    "wait": 17,
-   "total": 544
+   "total": 555
   },
   "last24h": {
-   "prod": 326,
+   "prod": 337,
    "unprod": 28,
    "wait": 13,
-   "total": 367
+   "total": 378
   },
   "last7d": {
-   "prod": 499,
+   "prod": 510,
    "unprod": 28,
    "wait": 17,
-   "total": 544
+   "total": 555
   },
   "product": {
    "prod": 287,
@@ -2041,10 +2058,10 @@ window.PFA_DATA = {
    "total": 322
   },
   "support": {
-   "prod": 212,
+   "prod": 223,
    "unprod": 2,
    "wait": 8,
-   "total": 222
+   "total": 233
   }
  },
  "days": [
@@ -2128,7 +2145,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 297,
+   "prod": 308,
    "unprod": 28,
    "wait": 11
   }
@@ -2245,6 +2262,10 @@ window.PFA_DATA = {
   {
    "account": "personal",
    "minutes": 544
+  },
+  {
+   "account": "empresa",
+   "minutes": 11
   }
  ],
  "recent": [
@@ -2260,6 +2281,19 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
    "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
+  },
+  {
+   "start": "2026-10-01T17:07:00Z",
+   "minutes": 11,
+   "account": "empresa",
+   "entrega": "T",
+   "task": "T-17",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Vista estática E0–E10; T conserva abiertas y desplegable de hechas",
+   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T Ver hechas (14) abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
   },
   {
    "start": "2026-10-01T15:58:00Z",
@@ -2364,19 +2398,6 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Añadí y registré el anuncio obligatorio de cada skill",
    "evidence": "AGENTS.md sección 10 contiene el texto exacto; D-026 registrada en control/DECISIONS.md; publicación remota verificada por GitHub"
-  },
-  {
-   "start": "2026-10-01T11:43:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 6,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "DOCUMENTACION",
-   "summary": "La alternativa de acceso directo requiere conector HTTP con Microsoft Entra ID, clase Premium; los alcances pueden requerir consentimiento de administrador",
-   "evidence": "Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/; no se cambió permiso ni ubicación; pendiente decisión de Oscar"
   }
  ],
  "history": [
@@ -2392,6 +2413,19 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
    "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
+  },
+  {
+   "start": "2026-10-01T17:07:00Z",
+   "minutes": 11,
+   "account": "empresa",
+   "entrega": "T",
+   "task": "T-17",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Vista estática E0–E10; T conserva abiertas y desplegable de hechas",
+   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T Ver hechas (14) abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
   },
   {
    "start": "2026-10-01T15:58:00Z",
