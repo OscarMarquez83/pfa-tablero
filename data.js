@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T17:20:07.714652Z",
+ "generatedUtc": "2026-10-01T17:26:40.535783Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 17:18 UTC",
+  "updated": "2026-10-01 17:22 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "continuar T-18; espera el issue de prueba de Oscar.",
   "needsOscar": [
@@ -25,10 +25,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "Sin tarea en curso. T-17 quedó Hecha en intento 1. Pages confirmó E0–E10 y T sin interacción en 1366 px y 390 px; T mantiene 4 tareas abiertas, 14 hechas y el desplegable abre/cierra. Capturas en tmp/evidencia/T-17.",
+   "Sin tarea en curso. T-17 quedó Hecha en intento 1. Pages confirmó E0–E10 y T sin interacción en 1366 px y 390 px; T mantiene 3 tareas abiertas, 15 hechas y el desplegable abre/cierra. Capturas en tmp/evidencia/T-17.",
    "git log --follow -- dashboard/index.html no contiene una versión estática anterior; el commit base disponible 79f0f54 también selecciona una entrega. Implementé el alcance escrito por Oscar."
   ],
-  "fileUtc": "2026-10-01T17:18:37.544236Z",
+  "fileUtc": "2026-10-01T17:22:37.086612Z",
   "ruleFootprints": {
    "current": "7BD6C096",
    "lines": {
@@ -2293,7 +2293,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Vista estática E0–E10; T conserva abiertas y desplegable de hechas",
-   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T Ver hechas (14) abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
+   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T muestra 15 hechas y 3 abiertas; Ver hechas abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
   },
   {
    "start": "2026-10-01T15:58:00Z",
@@ -2425,7 +2425,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Vista estática E0–E10; T conserva abiertas y desplegable de hechas",
-   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T Ver hechas (14) abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
+   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T muestra 15 hechas y 3 abiertas; Ver hechas abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
   },
   {
    "start": "2026-10-01T15:58:00Z",
