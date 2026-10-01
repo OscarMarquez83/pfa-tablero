@@ -1,25 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T01:04:09.368476Z",
+ "generatedUtc": "2026-10-01T01:18:39.112094Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 01:03 UTC",
+  "updated": "2026-10-01 01:17 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "Oscar autoriza tomar el control de edición de Power Apps; después terminar E1-05, ejecutar E1-08, aplicar E1-10 y pedir la aceptación final E1-09. E1-08 está pendiente y depende de E1-05; no espera una decisión de Oscar.",
+  "nextAction": "completar el intento 3 de E1-08, revisar las 7 pantallas en escritorio, teléfono vertical e iPad horizontal, y probar la navegación en la app publicada. Luego ejecutar E1-10 y pedir la aceptación final E1-09.",
   "needsOscar": [
    {
-    "ref": "E1-05",
-    "text": "responde Autorizo tomar control de edición. Power Apps indica que otra sesión controla PFA_Pilot_App; tendría que pulsar «Invalidar» y no puedo inspeccionar si hay cambios sin guardar en esa sesión."
+    "ref": "",
+    "text": "Vacío. Oscar aprobó tomar el control de edición en el issue #3."
    }
   ],
   "blockers": [],
   "current": [
-   "No hay un intento activo. E1-05 sigue En curso; el intento 5 cerró con avance local y requiere autorización para editar la app.",
-   "Último intento: T-05, intento 1, 2026-10-01 00:59–01:03 UTC.",
-   "Próximo paso: Oscar autoriza tomar el control de edición; luego aplicar el bloque corregido y comprobar preview."
+   "E1-08, intento 3, iniciado 2026-10-01 01:17 UTC. Revisar todas las pantallas en los 3 formatos, guardar y publicar; comprobar las 7 opciones en la app publicada en horizontal."
   ]
  },
  "revision": {
@@ -169,15 +167,15 @@ window.PFA_DATA = {
    "title": "Estándar visual de la app",
    "goal": "Usar una app con el mismo diseño en las 7 pantallas",
    "status": "En curso",
-   "done": 6,
+   "done": 7,
    "total": 10,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 140,
+    "prod": 149,
     "unprod": 0,
     "wait": 4,
-    "total": 144
+    "total": 153
    }
   },
   {
@@ -535,12 +533,11 @@ window.PFA_DATA = {
     "expected": "2 pantallas con un solo encabezado estándar",
     "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
     "limit": 60,
-    "status": "En curso",
-    "attempts": 5,
-    "minutes": 34,
+    "status": "Hecha",
+    "attempts": 6,
+    "minutes": 43,
     "entrega": "E1",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    },
    {
     "id": "E1-06",
@@ -583,7 +580,7 @@ window.PFA_DATA = {
     "minutes": 22,
     "entrega": "E1",
     "fails": 0,
-    "ready": false
+    "ready": true
    },
    {
     "id": "E1-09",
@@ -964,36 +961,21 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E1-05",
-  "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
+  "id": "E1-08",
+  "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
   "owner": "Agente",
-  "depends": "E1-04",
-  "expected": "2 pantallas con un solo encabezado estándar",
-  "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
-  "limit": 60,
-  "status": "En curso",
-  "attempts": 5,
-  "minutes": 34,
+  "depends": "E1-05",
+  "expected": "Versión publicada y pantallas adaptadas",
+  "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
+  "limit": 45,
+  "status": "Pendiente",
+  "attempts": 2,
+  "minutes": 22,
   "entrega": "E1",
   "fails": 0,
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E1-05",
-   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
-   "owner": "Agente",
-   "depends": "E1-04",
-   "expected": "2 pantallas con un solo encabezado estándar",
-   "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
-   "limit": 60,
-   "status": "En curso",
-   "attempts": 5,
-   "minutes": 34,
-   "entrega": "E1",
-   "fails": 0,
-   "ready": true
-  },
   {
    "id": "E1-08",
    "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
@@ -1007,7 +989,7 @@ window.PFA_DATA = {
    "minutes": 22,
    "entrega": "E1",
    "fails": 0,
-   "ready": false
+   "ready": true
   },
   {
    "id": "E1-09",
@@ -1203,6 +1185,21 @@ window.PFA_DATA = {
    "entrega": "E3",
    "fails": 0,
    "ready": false
+  },
+  {
+   "id": "E3-02",
+   "action": "En List settings de PFA_Messages: dejar como obligatorias solo InternetMessageId, OutlookMessageId, Subject, Sender, ReceivedSentUtc y FolderId. Anotar en worklog las columnas cambiadas",
+   "owner": "Agente",
+   "depends": "E2-10",
+   "expected": "La lista acepta un correo con 6 campos",
+   "evidence": "Columnas cambiadas anotadas en worklog",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "ready": false
   }
  ],
  "doneTasks": [
@@ -1389,6 +1386,20 @@ window.PFA_DATA = {
    "fails": 0
   },
   {
+   "id": "E1-05",
+   "action": "Reabrir My Day y Diagnostics: eliminar los encabezados/títulos duplicados o viejos. Dejar en ambas el bloque común idéntico; mover Refresh de My Day fuera del encabezado y conservar su acción",
+   "owner": "Agente",
+   "depends": "E1-04",
+   "expected": "2 pantallas con un solo encabezado estándar",
+   "evidence": "Vista previa; árbol de controles sin encabezado duplicado; menú navega a las 7 pantallas; Refresh funciona",
+   "limit": 60,
+   "status": "Hecha",
+   "attempts": 6,
+   "minutes": 43,
+   "entrega": "E1",
+   "fails": 0
+  },
+  {
    "id": "E1-06",
    "action": "Igual que E1-05 en Projects, Tasks y Review",
    "owner": "Agente",
@@ -1489,33 +1500,33 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 20,
+  "tasksDone": 21,
   "tasksTotal": 42,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 225,
+   "prod": 234,
    "unprod": 0,
    "wait": 6,
-   "total": 231
+   "total": 240
   },
   "last24h": {
-   "prod": 225,
+   "prod": 234,
    "unprod": 0,
    "wait": 6,
-   "total": 231
+   "total": 240
   },
   "last7d": {
-   "prod": 225,
+   "prod": 234,
    "unprod": 0,
    "wait": 6,
-   "total": 231
+   "total": 240
   },
   "product": {
-   "prod": 143,
+   "prod": 152,
    "unprod": 0,
    "wait": 4,
-   "total": 147
+   "total": 156
   },
   "support": {
    "prod": 82,
@@ -1605,7 +1616,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 23,
+   "prod": 32,
    "unprod": 0,
    "wait": 0
   }
@@ -1629,18 +1640,18 @@ window.PFA_DATA = {
  ],
  "topTasks": [
   {
+   "task": "E1-05",
+   "prod": 43,
+   "unprod": 0,
+   "wait": 0,
+   "total": 43
+  },
+  {
    "task": "T-01",
    "prod": 41,
    "unprod": 0,
    "wait": 0,
    "total": 41
-  },
-  {
-   "task": "E1-05",
-   "prod": 34,
-   "unprod": 0,
-   "wait": 0,
-   "total": 34
   },
   {
    "task": "E1-07",
@@ -1702,10 +1713,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 231
+   "minutes": 240
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T01:05:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 6,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Moví Refresh fuera del encabezado azul de My Day y publiqué la corrección",
+   "evidence": "Studio guardó sin errores; preview y app publicada muestran Refresh junto al título; el botón responde; navegación de 7 opciones y Diagnostics con encabezado único"
+  },
   {
    "start": "2026-10-01T00:59:00Z",
    "minutes": 4,
@@ -1822,22 +1846,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Tarea Windows y página verificadas; concilié las dos publicaciones faltantes y registré que la pausa fue por la regla restrictiva del revisor",
    "evidence": "LastTaskResult 0; ruta absoluta pwsh; commits ef94990 y 7f3c40b en origin/main; página HTTP 200; log conciliado"
-  },
-  {
-   "start": "2026-09-30T13:36:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-08",
-   "attempt": 1,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Power Apps solicitó iniciar sesión por expiración de sesión; se pausa la edición hasta que Oscar complete el acceso",
-   "evidence": "AADSTS70044; botón Sign in visible en la pestaña PFA_Pilot_App"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T01:05:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E1",
+   "task": "E1-05",
+   "attempt": 6,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Moví Refresh fuera del encabezado azul de My Day y publiqué la corrección",
+   "evidence": "Studio guardó sin errores; preview y app publicada muestran Refresh junto al título; el botón responde; navegación de 7 opciones y Diagnostics con encabezado único"
+  },
   {
    "start": "2026-10-01T00:59:00Z",
    "minutes": 4,
