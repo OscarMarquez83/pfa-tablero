@@ -1,25 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T12:13:14.731558Z",
+ "generatedUtc": "2026-10-01T12:25:14.526717Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 11:51 UTC",
+  "updated": "2026-10-01 12:23 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar la decisión de Oscar sobre la ubicación de las listas o una vía alternativa que cambie el acceso; después reabrir E2-02.",
-  "needsOscar": [
-   {
-    "ref": "E2-02",
-    "text": "elige una opción. A) recrear/migrar PFA_MailFolders y PFA_Projects a un sitio SharePoint estándar y actualizar la app (recomendado; requiere mover datos y cambiar referencias). B) mantenerlas en el sitio personal y usar HTTP with Microsoft Entra ID (Premium); según la versión, puede requerir consentimiento de administrador para los alcances de SharePoint. El conector SharePoint estándar, tanto Get items como Send an HTTP request to SharePoint, rechaza la dirección del sitio personal. No cambiaré ubicación ni permisos sin tu decisión. Microsoft Learn: https://learn.microsoft.com/en-us/connectors/webcontents/"
-   }
-  ],
+  "nextAction": "terminar E2-02 con el origen de datos y la conexión exactos de la app; si falla, aplicar la alternativa estándar ya aprobada por Oscar.",
+  "needsOscar": [],
   "blockers": [],
   "current": [
-   "Ninguna. E2-02 permanece Bloqueada y espera la decisión de Oscar sobre la ubicación de las listas o una vía alternativa."
+   "E2-02, intento 7; inicio 2026-10-01 12:23 UTC. Reabierta por decisión expresa de Oscar. Defecto: Get items y Send an HTTP request to SharePoint rechazaron la dirección personalizada del sitio actual; el Flow Checker quedó con un error tras retirar Get items. Intentos 1–6: probar direcciones y conexiones; consultar Microsoft Learn y Copilot; insertar la acción HTTP oficial; documentar la alternativa Premium (ahora prohibida). Enfoque distinto: copiar en Power Apps Studio los datos exactos del origen de datos de ambas listas, usar la misma conexión, dirección sin sufijo de lista ni barra final y GUID de lista en Get items. Si falla, aplicar el rediseño estándar autorizado: Outlook lee; Respond to a PowerApp or flow devuelve carpetas; la app compara y crea filas con Patch. Evidencia: Get items con GUID y Flow Checker 0 errores, o ejecución del flujo de lectura y Patch de filas nuevas sin conector Premium."
   ],
-  "fileUtc": "2026-10-01T11:51:19.463671Z"
+  "fileUtc": "2026-10-01T12:23:41.512479Z"
  },
  "revision": {
   "light": "AMARILLO",
@@ -652,9 +647,9 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "E2-01",
     "expected": "Flujo de nivel 1 guardado",
-    "evidence": "Flujo guardado; Flow Checker 0 errores",
+    "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
     "limit": 90,
-    "status": "Bloqueada",
+    "status": "Reabierta",
     "attempts": 6,
     "minutes": 16,
     "entrega": "E2",
@@ -1047,7 +1042,21 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "E2-02",
+  "action": "Crear el flujo PFA_E2_LeerCarpetas en la solución PFA Pilot, con trigger manual. Pasos: Send an HTTP request (Office 365 Outlook) para encontrar la carpeta Projects dentro de Inbox → leer sus subcarpetas de nivel 1 (KF-06) → por cada una, Get items en PFA_MailFolders por OutlookFolderId → si no existe, Create item con Decision = Nueva, Included = No, ParentFolderId y DisplayedPath (ruta desde Projects); si existe, Update item solo de FolderName, DisplayedPath y LastEnumeratedUtc. Nunca cambiar Decision, Included ni ProjectId de una fila existente",
+  "owner": "Agente",
+  "depends": "E2-01",
+  "expected": "Flujo de nivel 1 guardado",
+  "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
+  "limit": 90,
+  "status": "Reabierta",
+  "attempts": 6,
+  "minutes": 16,
+  "entrega": "E2",
+  "fails": 3,
+  "ready": true
+ },
  "upcoming": [
   {
    "id": "E2-02",
@@ -1055,9 +1064,9 @@ window.PFA_DATA = {
    "owner": "Agente",
    "depends": "E2-01",
    "expected": "Flujo de nivel 1 guardado",
-   "evidence": "Flujo guardado; Flow Checker 0 errores",
+   "evidence": "Flujo guardado; Flow Checker 0 errores; Get items usa la dirección exacta del origen de datos de la app y el GUID de la lista con la misma conexión; si no resuelve, se aplica el diseño alternativo aprobado con Office 365 Outlook, Respond to a PowerApp or flow y Patch en la app",
    "limit": 90,
-   "status": "Bloqueada",
+   "status": "Reabierta",
    "attempts": 6,
    "minutes": 16,
    "entrega": "E2",
@@ -1700,8 +1709,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
+   "reason": "Reabierta: se dio por terminada y no lo estaba (6 intentos previos)",
+   "level": "serious"
   }
  ],
  "kpi": {
