@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T15:46:13.942336Z",
+ "generatedUtc": "2026-10-01T15:52:14.308329Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 15:45 UTC",
+  "updated": "2026-10-01 15:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Oscar debe elegir una de las dos opciones para E2-02; después la tarea se retoma como un nuevo diseño aprobado.",
   "needsOscar": [
@@ -21,14 +21,14 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 10 (final); inicio 2026-10-01 15:36 UTC. Revisión de Oscar: 9 intentos sin Copilot en el 3, sin bloqueo en el 4 y sobre el límite de 90 min; lo registro como incidente y mantengo un último intento por instrucción expresa de Oscar.",
+   "E2-02, intento 10 (final); inicio 2026-10-01 15:36 UTC. Oscar reportó 9 intentos sin Copilot en el 3, sin bloqueo en el 4 y más de 90 min; lo registré y ejecuté el intento 10 autorizado.",
    "Regla anti-bucle: tras 2 fallos detengo variantes, reviso KNOWN-FIXES y Microsoft Learn y registro URL; tras el 3.º consulto Copilot con la plantilla y uso su respuesta en el 4.º; si falla el 4.º o se excede el límite, bloqueo la tarea y paso a otra independiente.",
    "Antes de pedir algo por navegador, aplico KF-11: recargo la pestaña, abro Power Apps en pestaña nueva y entro desde la lista de apps, pruebo Edge y Codex integrado, y registro qué muestra cada uno.",
    "A Oscar solo puedo pedir iniciar sesión/MFA, decidir, aprobar o probar como usuario; no pedirle abrir/navegar apps, seleccionar controles ni revisar/cambiar archivos. Solo pedir reconexión si la extensión está desconectada y el navegador integrado tampoco sirve.",
-   "E2-02 está en intento 10 de 10; antes de cambiar el flow reviso Peek code, KF-01 y KF-02, consulto Copilot con los 9 enfoques agrupados y registro respuesta/documentación.",
-   "Comprobaré Flow Checker y la referencia exacta. Si falla este último intento, marcaré E2-02 Bloqueada y propondré 2 diseños distintos con recomendación."
+   "Revisé Peek code: Send_an_HTTP_request; respuesta foldersJson era texto literal. No hay Apply to each; KF-02 no aplica. Copilot consultado con los 9 enfoques agrupados y la respuesta quedó registrada.",
+   "Flow Checker posterior al guardado conserva 1 error de referencia; E2-02 queda Bloqueada. En Necesito de Oscar están las opciones A/B y mi recomendación."
   ],
-  "fileUtc": "2026-10-01T15:45:51.288537Z"
+  "fileUtc": "2026-10-01T15:47:10.361431Z"
  },
  "revision": {
   "light": "ROJO",
@@ -222,9 +222,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 14,
-    "unprod": 25,
+    "unprod": 26,
     "wait": 5,
-    "total": 44
+    "total": 45
    }
   },
   {
@@ -668,7 +668,7 @@ window.PFA_DATA = {
     "limit": 90,
     "status": "Bloqueada",
     "attempts": 10,
-    "minutes": 37,
+    "minutes": 38,
     "entrega": "E2",
     "fails": 4,
     "ready": true
@@ -1071,7 +1071,7 @@ window.PFA_DATA = {
    "limit": 90,
    "status": "Bloqueada",
    "attempts": 10,
-   "minutes": 37,
+   "minutes": 38,
    "entrega": "E2",
    "fails": 4,
    "ready": true
@@ -1723,27 +1723,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 452,
-   "unprod": 27,
+   "unprod": 28,
    "wait": 17,
-   "total": 496
+   "total": 497
   },
   "last24h": {
    "prod": 279,
-   "unprod": 27,
+   "unprod": 28,
    "wait": 13,
-   "total": 319
+   "total": 320
   },
   "last7d": {
    "prod": 452,
-   "unprod": 27,
+   "unprod": 28,
    "wait": 17,
-   "total": 496
+   "total": 497
   },
   "product": {
    "prod": 287,
-   "unprod": 25,
+   "unprod": 26,
    "wait": 9,
-   "total": 321
+   "total": 322
   },
   "support": {
    "prod": 165,
@@ -1834,14 +1834,14 @@ window.PFA_DATA = {
   {
    "date": "2026-10-01",
    "prod": 250,
-   "unprod": 27,
+   "unprod": 28,
    "wait": 11
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 24,
+   "minutes": 25,
    "attempts": 3
   },
   {
@@ -1892,9 +1892,9 @@ window.PFA_DATA = {
   {
    "task": "E2-02",
    "prod": 12,
-   "unprod": 25,
+   "unprod": 26,
    "wait": 0,
-   "total": 37
+   "total": 38
   },
   {
    "task": "E1-08",
@@ -1949,13 +1949,13 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 496
+   "minutes": 497
   }
  ],
  "recent": [
   {
    "start": "2026-10-01T15:36:00Z",
-   "minutes": 9,
+   "minutes": 10,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-02",
@@ -2087,7 +2087,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-01T15:36:00Z",
-   "minutes": 9,
+   "minutes": 10,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-02",
