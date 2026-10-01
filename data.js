@@ -1,27 +1,26 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T00:39:22.914272Z",
+ "generatedUtc": "2026-10-01T00:54:20.560999Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 00:37 UTC (inicio de T-04 según el nuevo pedido de Oscar)",
+  "updated": "2026-10-01 00:51 UTC",
   "activeEntrega": "E1 — Estándar visual de la app",
-  "nextAction": "cerrar T-04, luego terminar E1-05 en Power Apps, ejecutar E1-08 y aplicar E1-10 en ese orden. Oscar ya inició sesión. Intentaré recuperar Power Apps desde Edge y el navegador integrado sin pedirle pasos operativos.",
+  "nextAction": "Oscar autoriza tomar el control de edición de Power Apps; después terminar E1-05, ejecutar E1-08, aplicar E1-10 y pedir la aceptación final E1-09. E1-08 está pendiente y depende de E1-05; no espera una decisión de Oscar.",
   "needsOscar": [
    {
-    "ref": "",
-    "text": "Vacío. Solo pediré a Oscar aprobar, decidir, iniciar sesión o probar la app como usuario, según la sección 10 de AGENTS.md."
+    "ref": "E1-05",
+    "text": "autoriza que tome el control de edición de PFA_Pilot_App con «Invalidar». Power Apps indica que otra sesión tiene el control; podría haber cambios sin guardar en esa sesión y no puedo inspeccionarlos."
    }
   ],
   "blockers": [],
   "current": [
-   "Tarea: T-04 — En curso",
-   "Intento: 1",
-   "Inicio (UTC): 2026-10-01 00:37",
-   "Qué haré: integrar las reglas y cambios de tablero solicitados, registrar la aprobación de E1-10 y reordenar E1-08.",
-   "Cómo comprobaré el resultado: buscar cada texto solicitado, validar clasificación y filtros del tablero, confirmar E1-08 Pendiente con dependencia E1-05, y revisar la pestaña Power Apps en Edge."
+   "Tarea: ninguna. T-04 cerrada; E1-05 conserva 4 intentos y 34 min. El intento 5 no empieza hasta resolver el control de edición.",
+   "Último intento: T-04, intento 1, 2026-10-01 00:37–00:51 UTC.",
+   "Qué haré al reanudar: aplicar el YAML corregido de My Day en Power Apps y verificarlo en preview y publicado.",
+   "Cómo comprobaré el resultado: un solo encabezado; Refresh conserva su acción fuera del encabezado; revisar después E1-08 y E1-10 según sus evidencias."
   ]
  },
  "revision": {
@@ -331,15 +330,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 3,
+   "done": 4,
    "total": 4,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 59,
+    "prod": 73,
     "unprod": 0,
     "wait": 2,
-    "total": 61
+    "total": 75
    }
   }
  ],
@@ -574,13 +573,13 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-08",
-    "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, tocar el menú desde 2 pantallas distintas",
+    "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
     "owner": "Agente",
-    "depends": "E1-05, E1-07, E1-10",
-    "expected": "Versión publicada y menú probado",
-    "evidence": "Número de versión en worklog; las 7 opciones navegan a su pantalla y marcan el activo correcto en cada formato",
+    "depends": "E1-05",
+    "expected": "Versión publicada y pantallas adaptadas",
+    "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
     "limit": 45,
-    "status": "Bloqueada",
+    "status": "Pendiente",
     "attempts": 2,
     "minutes": 22,
     "entrega": "E1",
@@ -589,10 +588,10 @@ window.PFA_DATA = {
    },
    {
     "id": "E1-09",
-    "action": "Recorrer las 7 pantallas en la app publicada",
+    "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
     "owner": "Oscar",
-    "depends": "E1-08",
-    "expected": "Oscar acepta el estándar visual",
+    "depends": "E1-10",
+    "expected": "Oscar acepta el estándar visual y la navegación vertical",
     "evidence": "Oscar escribe \"E1 aceptada\" o pide cambios concretos",
     "limit": 0,
     "status": "Pendiente",
@@ -606,16 +605,16 @@ window.PFA_DATA = {
     "id": "E1-10",
     "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
     "owner": "Agente",
-    "depends": "E1-07",
+    "depends": "E1-08",
     "expected": "Navegación usable sin barra horizontal en formato vertical",
-    "evidence": "YAML común aplicado en las 7 pantallas; vista previa confirma selector en vertical y botones en horizontal; las 7 opciones navegan",
+    "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
     "limit": 60,
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "ready": true
+    "ready": false
    }
   ],
   "E2": [
@@ -943,12 +942,11 @@ window.PFA_DATA = {
     "expected": "Reglas coherentes, tablero genera solo pendientes de Oscar y E1 continúa en el orden pedido",
     "evidence": "Skill y configuración presentes; reglas, incidentes y hallazgos actualizados; $heartbeatMinutes = 15; E1-08 Pendiente depende de E1-05; decisión de E1-10 registrada; tablero y commit actualizados",
     "limit": 90,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 14,
     "entrega": "T",
-    "fails": 0,
-    "ready": true
+    "fails": 0
    }
   ]
  },
@@ -985,13 +983,13 @@ window.PFA_DATA = {
   },
   {
    "id": "E1-08",
-   "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, tocar el menú desde 2 pantallas distintas",
+   "action": "Revisar las 7 pantallas en vista previa de escritorio, teléfono vertical y iPad horizontal. Guardar y publicar. En la app publicada, probar la navegación desde 2 pantallas distintas en formato horizontal",
    "owner": "Agente",
-   "depends": "E1-05, E1-07, E1-10",
-   "expected": "Versión publicada y menú probado",
-   "evidence": "Número de versión en worklog; las 7 opciones navegan a su pantalla y marcan el activo correcto en cada formato",
+   "depends": "E1-05",
+   "expected": "Versión publicada y pantallas adaptadas",
+   "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
    "limit": 45,
-   "status": "Bloqueada",
+   "status": "Pendiente",
    "attempts": 2,
    "minutes": 22,
    "entrega": "E1",
@@ -1000,10 +998,10 @@ window.PFA_DATA = {
   },
   {
    "id": "E1-09",
-   "action": "Recorrer las 7 pantallas en la app publicada",
+   "action": "Recorrer las 7 pantallas en la app publicada después de E1-10",
    "owner": "Oscar",
-   "depends": "E1-08",
-   "expected": "Oscar acepta el estándar visual",
+   "depends": "E1-10",
+   "expected": "Oscar acepta el estándar visual y la navegación vertical",
    "evidence": "Oscar escribe \"E1 aceptada\" o pide cambios concretos",
    "limit": 0,
    "status": "Pendiente",
@@ -1017,16 +1015,16 @@ window.PFA_DATA = {
    "id": "E1-10",
    "action": "Adaptar el encabezado común en las 7 pantallas: botones horizontales en escritorio e iPad horizontal; en teléfono e iPad vertical, un botón de menú que abre una lista seleccionable con las 7 pantallas y marca la activa",
    "owner": "Agente",
-   "depends": "E1-07",
+   "depends": "E1-08",
    "expected": "Navegación usable sin barra horizontal en formato vertical",
-   "evidence": "YAML común aplicado en las 7 pantallas; vista previa confirma selector en vertical y botones en horizontal; las 7 opciones navegan",
+   "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
    "limit": 60,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "ready": true
+   "ready": false
   },
   {
    "id": "E2-01",
@@ -1446,37 +1444,45 @@ window.PFA_DATA = {
    "minutes": 11,
    "entrega": "T",
    "fails": 0
-  }
- ],
- "alerts": [
+  },
   {
-   "task": "E1-08",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
+   "id": "T-04",
+   "action": "Integrar la skill planear y los cambios de procedimiento pedidos: rol de Oscar, recuperación del navegador, clasificación de hallazgos, política del tablero y estado/decisión de E1",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Reglas coherentes, tablero genera solo pendientes de Oscar y E1 continúa en el orden pedido",
+   "evidence": "Skill y configuración presentes; reglas, incidentes y hallazgos actualizados; $heartbeatMinutes = 15; E1-08 Pendiente depende de E1-05; decisión de E1-10 registrada; tablero y commit actualizados",
+   "limit": 90,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 14,
+   "entrega": "T",
+   "fails": 0
   }
  ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 18,
+  "tasksDone": 19,
   "tasksTotal": 41,
   "entregasAccepted": 1,
   "entregasTotal": 12,
   "time": {
-   "prod": 202,
+   "prod": 216,
    "unprod": 0,
    "wait": 6,
-   "total": 208
+   "total": 222
   },
   "last24h": {
-   "prod": 202,
+   "prod": 216,
    "unprod": 0,
    "wait": 6,
-   "total": 208
+   "total": 222
   },
   "last7d": {
-   "prod": 202,
+   "prod": 216,
    "unprod": 0,
    "wait": 6,
-   "total": 208
+   "total": 222
   },
   "product": {
    "prod": 143,
@@ -1485,10 +1491,10 @@ window.PFA_DATA = {
    "total": 147
   },
   "support": {
-   "prod": 59,
+   "prod": 73,
    "unprod": 0,
    "wait": 2,
-   "total": 61
+   "total": 75
   }
  },
  "days": [
@@ -1572,7 +1578,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 0,
+   "prod": 14,
    "unprod": 0,
    "wait": 0
   }
@@ -1631,6 +1637,13 @@ window.PFA_DATA = {
    "total": 24
   },
   {
+   "task": "T-04",
+   "prod": 14,
+   "unprod": 0,
+   "wait": 0,
+   "total": 14
+  },
+  {
    "task": "E1-04",
    "prod": 13,
    "unprod": 0,
@@ -1657,22 +1670,28 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 7
-  },
-  {
-   "task": "E1-02",
-   "prod": 6,
-   "unprod": 0,
-   "wait": 0,
-   "total": 6
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 208
+   "minutes": 222
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T00:37:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-04",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
+   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; publicación confirmada en GitHub; escritura del log local denegada"
+  },
   {
    "start": "2026-09-30T22:40:00Z",
    "minutes": 4,
@@ -1789,22 +1808,22 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Ajusté la galería móvil con botones apilados y revisé Historical Search y Configuration en teléfono y formato ancho",
    "evidence": "Ambas vistas previas correctas; 7 pantallas sin scrPlantilla; nombres sin sufijo; sin errores de fórmula; app Saved (Unpublished)"
-  },
-  {
-   "start": "2026-09-30T12:52:00Z",
-   "minutes": 20,
-   "account": "personal",
-   "entrega": "E1",
-   "task": "E1-07",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Estandaricé el encabezado y título de Historical Search y Configuration; eliminé scrPlantilla y ajusté la galería de carpetas para móvil",
-   "evidence": "7 pantallas en el árbol; sin errores de fórmula; vista móvil de Configuration aún corta el botón Incremental; app guardada sin publicar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T00:37:00Z",
+   "minutes": 14,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-04",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Se actualizaron reglas, hallazgos, estados, decisión E1-10 y filtro del tablero; se revalidó E0-04",
+   "evidence": "Skill/config presentes; Import-Csv: 11 columnas y filas E0-01 a E0-03 con horas; publicación confirmada en GitHub; escritura del log local denegada"
+  },
   {
    "start": "2026-09-30T22:40:00Z",
    "minutes": 4,
@@ -2216,7 +2235,7 @@ window.PFA_DATA = {
    "text": "PFA_Messages exige 22 columnas obligatorias, 2 de ellas lookups; eso bloqueó la persistencia en el Bloque 2. Revisar cuáles vuelven a ser obligatorias cuando la carga sea automática",
    "found": "Revisión de Claude",
    "target": "E5",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-02",
@@ -2232,7 +2251,7 @@ window.PFA_DATA = {
    "text": "Los 14 flujos antiguos siguen en la solución. Decidir si se eliminan o se archivan",
    "found": "Revisión de Claude",
    "target": "E6",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-04",
@@ -2240,7 +2259,7 @@ window.PFA_DATA = {
    "text": "Correos que llegan al Inbox y todavía no se movieron a una carpeta de proyecto",
    "found": "Oscar",
    "target": "E7",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-05",
@@ -2264,7 +2283,7 @@ window.PFA_DATA = {
    "text": "Publicar en el tablero el diagrama de flujos del proyecto",
    "found": "Oscar",
    "target": "T",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-08",
@@ -2272,7 +2291,7 @@ window.PFA_DATA = {
    "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
    "found": "E1-08",
    "target": "E5",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-09",
@@ -2280,7 +2299,7 @@ window.PFA_DATA = {
    "text": "La galería de carpetas de Configuration se modificó durante E1; en la app publicada, las etiquetas de sus botones quedan recortadas verticalmente. Detener cambios ahí hasta E2",
    "found": "Incidente INC-01",
    "target": "E2",
-   "status": "Abierto"
+   "status": "Asignado"
   },
   {
    "id": "HZ-10",

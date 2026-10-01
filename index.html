@@ -586,15 +586,10 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
     var k = ideaKind(i);
     return '<li' + (k === "closed" ? ' style="opacity:.65"' : "") + '><span class="tgt' + (k === "pending" ? " pd" : "") + '">' + esc(k === "pending" ? "Por decidir" : (i.target || "—")) + '</span><span style="flex:1">' + (i.id ? "<b>" + esc(i.id) + "</b> · " : "") + esc(i.text) + '<div class="sub" style="font-size:12px">' + esc(i.status) + (i.found ? " · " + esc(i.found) : "") + (i.date ? " · " + esc(i.date) : "") + "</div></span></li>";
   }
-  var IDEAS = { pending: [], assigned: [], closed: [] };
-  D.ideas.forEach(function (i) { IDEAS[ideaKind(i)].push(i); });
+  var IDEAS = { pending: [] };
+  D.ideas.forEach(function (i) { if (ideaKind(i) === "pending") IDEAS.pending.push(i); });
   $("ideas").innerHTML = IDEAS.pending.length ? IDEAS.pending.map(ideaItem).join("") : '<li style="background:none;padding:0"><div class="empty"><span class="ok">✓</span>Nada esperando decisión</div></li>';
-  $("ideas-foot").innerHTML = IDEAS.assigned.length + " asignados a una entrega (se incorporan al planearla) · " + IDEAS.closed.length + " cerrados · " + '<button type="button" class="revlink" id="ideasall" style="padding:0">Ver todos →</button>';
-  $("ideasall").onclick = function () {
-    openDlg("Ideas y hallazgos", "<h4>Esperan decisión (" + IDEAS.pending.length + ")</h4>" + (IDEAS.pending.length ? '<ul class="list ideas">' + IDEAS.pending.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>') +
-      "<h4>Asignados a una entrega (" + IDEAS.assigned.length + ")</h4>" + (IDEAS.assigned.length ? '<ul class="list ideas">' + IDEAS.assigned.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>') +
-      "<h4>Cerrados: incorporados o descartados (" + IDEAS.closed.length + ")</h4>" + (IDEAS.closed.length ? '<ul class="list ideas">' + IDEAS.closed.map(ideaItem).join("") + "</ul>" : '<div class="empty">Ninguno.</div>'));
-  };
+  $("ideas-foot").textContent = IDEAS.pending.length + " por decidir";
 
   // ---------- Actividad ----------
   function feedItem(r) {
