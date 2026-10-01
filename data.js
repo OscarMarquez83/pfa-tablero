@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-01T14:36:06.236049Z",
+ "generatedUtc": "2026-10-01T14:43:14.884556Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 14:34 UTC",
+  "updated": "2026-10-01 14:41 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "continuar E2-02 con Power Apps (V2), Office 365 Outlook y respuesta JSON; integrar en Configuration el botón “Scan folders” y Patch solo de filas nuevas.",
+  "nextAction": "E2-02, intento 9: ingresar el URI de subcarpetas mediante el editor de expresiones/dynamic content del diseñador; volver a ejecutar Flow Checker y comprobar que el error de URI desaparezca antes de guardar o probar.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-02, intento 8; inicio 2026-10-01 14:34 UTC. Get items configurado con la dirección exacta del sitio personal sin barra final y el GUID obtenido en List settings; Power Automate sigue mostrando “Se requiere Dirección del sitio” y “Se requiere Nombre de lista”. El Flow Checker confirma esos errores; no se ejecutó ni se escribió en las listas. D-028 registra la alternativa preaprobada: trigger Power Apps (V2), lectura exclusiva por Office 365 Outlook, JSON de respuesta y Patch desde Configuration al pulsar “Scan folders”. Fuente Microsoft Learn sobre el trigger y la llamada desde Canvas app: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow. D-010 queda reemplazada para detección diaria de carpetas: ahora es bajo demanda. Límite nuevo: solo conectores estándar y permisos actuales (D-027). Evidencia de cierre pendiente: flow con respuesta de carpeta legible por la app; luego comparación/Patch idempotente."
+   "E2-02, intento 8 cerrado; inicio 2026-10-01 14:34 UTC, fin 14:41 UTC (7 min). Alternativa preaprobada activa: Power Apps (V2), Office 365 Outlook, salida de texto foldersJson, sin SharePoint en el flow. El conector HTTP de Outlook de nivel 1 permanece configurado. Añadí el segundo paso HTTP para subcarpetas, pero el diseñador muestra texto en URI y Flow Checker aún informa Se requiere \"URI\"; captura actual confirma que la primera letra de la dirección quedó truncada. No ejecuté el flujo. Microsoft Learn documenta URI como parámetro obligatorio y segmentos Graph permitidos: https://learn.microsoft.com/en-us/connectors/office365/. Intento 8: AVANCE; 1 error, 0 ejecuciones. Próximo intento: usar el editor de expresiones/dynamic content para crear el URI como valor reconocido por el control, validar antes de guardar/probar. D-028 mantiene aprobado el diseño bajo demanda con “Scan folders”. El publicador regeneró dashboard/data.js, pero no pudo escribir %LOCALAPPDATA%\\PFA\\publish.log por acceso denegado; la publicación remota no queda confirmada."
   ],
-  "fileUtc": "2026-10-01T14:35:56.573283Z"
+  "fileUtc": "2026-10-01T14:42:22.519675Z"
  },
  "revision": {
   "light": "ROJO",
@@ -207,10 +207,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 5,
+    "prod": 12,
     "unprod": 16,
     "wait": 5,
-    "total": 26
+    "total": 33
    }
   },
   {
@@ -653,8 +653,8 @@ window.PFA_DATA = {
     "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
     "status": "Reabierta",
-    "attempts": 7,
-    "minutes": 19,
+    "attempts": 8,
+    "minutes": 26,
     "entrega": "E2",
     "fails": 3,
     "ready": true
@@ -1054,8 +1054,8 @@ window.PFA_DATA = {
   "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
   "limit": 90,
   "status": "Reabierta",
-  "attempts": 7,
-  "minutes": 19,
+  "attempts": 8,
+  "minutes": 26,
   "entrega": "E2",
   "fails": 3,
   "ready": true
@@ -1070,8 +1070,8 @@ window.PFA_DATA = {
    "evidence": "Flujo guardado; Flow Checker 0; respuesta de prueba con las carpetas de nivel 1 en JSON. Fuente del trigger/respuesta: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
    "status": "Reabierta",
-   "attempts": 7,
-   "minutes": 19,
+   "attempts": 8,
+   "minutes": 26,
    "entrega": "E2",
    "fails": 3,
    "ready": true
@@ -1712,7 +1712,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (7 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (8 intentos previos)",
    "level": "serious"
   }
  ],
@@ -1722,28 +1722,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 414,
+   "prod": 421,
    "unprod": 18,
    "wait": 17,
-   "total": 449
+   "total": 456
   },
   "last24h": {
-   "prod": 241,
+   "prod": 248,
    "unprod": 18,
    "wait": 13,
-   "total": 272
+   "total": 279
   },
   "last7d": {
-   "prod": 414,
+   "prod": 421,
    "unprod": 18,
    "wait": 17,
-   "total": 449
+   "total": 456
   },
   "product": {
-   "prod": 278,
+   "prod": 285,
    "unprod": 16,
    "wait": 9,
-   "total": 303
+   "total": 310
   },
   "support": {
    "prod": 136,
@@ -1833,7 +1833,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-01",
-   "prod": 212,
+   "prod": 219,
    "unprod": 18,
    "wait": 11
   }
@@ -1904,6 +1904,13 @@ window.PFA_DATA = {
    "total": 29
   },
   {
+   "task": "E2-02",
+   "prod": 10,
+   "unprod": 16,
+   "wait": 0,
+   "total": 26
+  },
+  {
    "task": "E1-06",
    "prod": 24,
    "unprod": 0,
@@ -1914,13 +1921,6 @@ window.PFA_DATA = {
    "task": "T-04",
    "prod": 19,
    "unprod": 0,
-   "wait": 0,
-   "total": 19
-  },
-  {
-   "task": "E2-02",
-   "prod": 3,
-   "unprod": 16,
    "wait": 0,
    "total": 19
   },
@@ -1949,10 +1949,23 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 449
+   "minutes": 456
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-01T14:34:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Agregué respuesta de texto al flow; el diseñador no registra el URI dinámico como campo obligatorio aunque muestre el texto",
+   "evidence": "Flow Checker: 1 error Se requiere URI; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; salida foldersJson visible en diseñador"
+  },
   {
    "start": "2026-10-01T12:23:00Z",
    "minutes": 3,
@@ -2069,22 +2082,22 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "La página de Microsoft pidió revisar términos actualizados antes de abrir Lists; no acepté ni ingresé credenciales",
    "evidence": "Edge muestra Microsoft Services Agreement actualizado; List settings siguen pendientes de esa acción"
-  },
-  {
-   "start": "2026-10-01T11:18:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-09",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Oscar confirmó que el conector Microsoft Learn ya está disponible tras reiniciar Codex",
-   "evidence": "Skill y búsqueda Microsoft Learn verificados; issue #5 registrado en control/PLAN.md y cerrado"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-01T14:34:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Agregué respuesta de texto al flow; el diseñador no registra el URI dinámico como campo obligatorio aunque muestre el texto",
+   "evidence": "Flow Checker: 1 error Se requiere URI; no se ejecutó; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; salida foldersJson visible en diseñador"
+  },
   {
    "start": "2026-10-01T12:23:00Z",
    "minutes": 3,
