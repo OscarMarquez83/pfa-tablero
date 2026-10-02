@@ -116,10 +116,14 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .task-delivery-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0 0 8px; }
 .task-delivery-head h3 { margin: 0; font-size: 14px; font-weight: 650; }
 .task-delivery-head .hint { flex: 0 0 auto; }
-.footprints { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 10px; padding: 7px 9px; border-radius: 8px; background: var(--surface-2); color: var(--ink-2); font-size: 11px; }
-.footprints b { font-variant-numeric: tabular-nums; }
-.footprints .match { color: var(--good-ink); }
-.footprints .mismatch { color: var(--critical-ink); }
+/* D-043: huella de AGENTS.md, siempre visible en el encabezado */
+.rules { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 6px 12px 6px 8px; font-weight: 600; font-size: 12px; max-width: 100%; }
+.rules .dot { width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 11px; flex: none; }
+.rules .txt { overflow-wrap: anywhere; }
+.rules b { font-variant-numeric: tabular-nums; }
+.rules.ok { background: var(--good-soft); color: var(--good-ink); } .rules.ok .dot { background: var(--good); }
+.rules.bad { background: var(--critical-soft); color: var(--critical-ink); } .rules.bad .dot { background: var(--critical); }
+.rules.none { background: var(--surface-2); color: var(--ink-2); } .rules.none .dot { background: var(--muted); }
 .tasks { table-layout: fixed; }
 .tasks th:first-child, .tasks td:first-child { width: 92px; }
 .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 64px; }
@@ -307,6 +311,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       </div>
     </div>
     <div class="top-right">
+      <span id="rules" class="rules none" role="status"><span class="dot">?</span><span class="txt">Reglas: sin registro</span></span>
       <button type="button" id="light" class="light NONE" title="Ver la revisión completa"><span class="dot">?</span><span>Sin revisión</span></button>
       <a class="btn" id="instr" href="#" target="_blank" rel="noopener" style="display:none;text-decoration:none">Enviar instrucción</a>
       <button class="btn" id="theme" type="button" aria-label="Cambiar tema">Tema</button>
@@ -634,6 +639,19 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     openDlg("Revisión del agente revisor", html);
   }
   $("light").onclick = openRevision;
+  // D-043: ¿el agente que trabaja leyó el AGENTS.md vigente?
+  (function () {
+    var fp = D.status.ruleFootprints || {}, rd = fp.read || {}, el = $("rules"), cur = String(fp.current || "").toUpperCase();
+    if (!rd.hash) return;
+    var mins = rd.utc ? Math.max(0, Math.round((Date.now() - new Date(rd.utc).getTime()) / 60000)) : null;
+    var ago = mins == null ? "" : " hace " + (mins < 60 ? mins + " min" : mins < 1440 ? Math.floor(mins / 60) + " h" : Math.floor(mins / 1440) + " d");
+    var ok = rd.hash.toUpperCase() === cur;
+    el.className = "rules " + (ok ? "ok" : "bad");
+    el.title = "AGENTS.md vigente: " + cur + " · leído por " + (rd.agent || "?") + ": " + rd.hash + (rd.utc ? " (" + rd.utc.replace("T", " ").replace(":00Z", " UTC") + ")" : "");
+    el.innerHTML = '<span class="dot">' + (ok ? "✓" : "!") + '</span><span class="txt">' + (ok
+      ? "Reglas al día · " + esc(rd.agent || "Agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)
+      : "AGENTS.md cambió (<b>" + esc(cur) + "</b>) · " + esc(rd.agent || "el agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)) + "</span>";
+  })();
   (function () {
     var html = "";
     if (rv && rv.summary && rv.summary.length) {
@@ -647,7 +665,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       var ago = mins < 60 ? mins + " min" : Math.floor(mins / 60) + " h " + (mins % 60) + " min";
       var stale = mins >= 30;
       html += '<div class="sub" style="margin:0 0 8px;' + (stale ? 'color:var(--warn,#f59e0b)' : '') + '">' +
-        (stale ? "⚠ El agente no reporta avance hace " + ago + ". Si está trabajando, revisa en Codex si espera una aprobación."
+        (stale ? "⚠ El agente no reporta avance hace " + ago + ". Si está trabajando, revisa en el chat del agente (Codex o Claude) si espera una aprobación."
                : "Último reporte del agente hace " + ago + ".") + "</div>";
     }
     if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";

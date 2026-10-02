@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T18:40:15.160651Z",
+ "generatedUtc": "2026-10-02T18:46:14.937646Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -14,10 +14,14 @@ window.PFA_DATA = {
   "current": [
    "T-29 (Claude), intento 1, inicio 2026-10-02 18:39 UTC: huella única por agente en STATUS, regla en AGENTS.md (sección 3) y aviso siempre visible en el encabezado del tablero (D-043). Comprobación: build local, prueba en rojo con huella distinta y tablero publicado a 1366 px y 390 px."
   ],
-  "fileUtc": "2026-10-02T18:39:17.509775Z",
+  "fileUtc": "2026-10-02T18:40:32.208063Z",
   "ruleFootprints": {
    "current": "2A22684D",
-   "read": {}
+   "read": {
+    "hash": "2A22684D",
+    "agent": "Claude",
+    "utc": "2026-10-02T18:40:00Z"
+   }
   }
  },
  "revision": {
@@ -246,7 +250,7 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 3,
+   "done": 4,
    "total": 11,
    "detailed": true,
    "active": true,
@@ -740,26 +744,25 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-04",
-    "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+    "action": "(Claude, intento 19) Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
     "owner": "Agente",
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 230,
-    "status": "Hecha (Claude)",
+    "status": "Hecha",
     "attempts": 19,
     "minutes": 202,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T18:25:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T18:25:00Z"
    },
    {
     "id": "E2-05",
     "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
     "owner": "Agente",
     "depends": "E2-04",
-    "expected": "Oscar decide sus carpetas desde la app",
+    "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
     "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
     "limit": 90,
     "status": "Pendiente",
@@ -768,7 +771,7 @@ window.PFA_DATA = {
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-06",
@@ -807,7 +810,7 @@ window.PFA_DATA = {
     "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
     "owner": "Agente",
     "depends": "E2-04",
-    "expected": "Detección bajo demanda con conectores estándar",
+    "expected": "(Claude, intento 19) Detección bajo demanda con conectores estándar",
     "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
     "limit": 30,
     "status": "Pendiente",
@@ -816,7 +819,7 @@ window.PFA_DATA = {
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-09",
@@ -1411,7 +1414,7 @@ window.PFA_DATA = {
     "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
     "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
     "limit": 45,
-    "status": "En curso (Claude)",
+    "status": "En curso",
     "attempts": 1,
     "minutes": 0,
     "entrega": "T",
@@ -1422,44 +1425,28 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-04",
-  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+  "id": "E2-05",
+  "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
   "owner": "Agente",
-  "depends": "E2-03",
-  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-  "limit": 230,
-  "status": "Hecha (Claude)",
-  "attempts": 19,
-  "minutes": 202,
+  "depends": "E2-04",
+  "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
+  "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
+  "limit": 90,
+  "status": "Pendiente",
+  "attempts": 0,
+  "minutes": 0,
   "entrega": "E2",
-  "fails": 7,
-  "lastActivity": "2026-10-02T18:25:00Z",
+  "fails": 0,
+  "lastActivity": "",
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E2-04",
-   "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
-   "owner": "Agente",
-   "depends": "E2-03",
-   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-   "limit": 230,
-   "status": "Hecha (Claude)",
-   "attempts": 19,
-   "minutes": 202,
-   "entrega": "E2",
-   "fails": 7,
-   "lastActivity": "2026-10-02T18:25:00Z",
-   "ready": true
-  },
   {
    "id": "E2-05",
    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
    "owner": "Agente",
    "depends": "E2-04",
-   "expected": "Oscar decide sus carpetas desde la app",
+   "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
    "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
    "limit": 90,
    "status": "Pendiente",
@@ -1468,7 +1455,7 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-06",
@@ -1507,7 +1494,7 @@ window.PFA_DATA = {
    "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
    "owner": "Agente",
    "depends": "E2-04",
-   "expected": "Detección bajo demanda con conectores estándar",
+   "expected": "(Claude, intento 19) Detección bajo demanda con conectores estándar",
    "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
    "limit": 30,
    "status": "Pendiente",
@@ -1516,7 +1503,7 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-09",
@@ -1670,6 +1657,22 @@ window.PFA_DATA = {
    "expected": "Versión publicada y controles probados",
    "evidence": "Número de versión en worklog; el correo abre en Outlook",
    "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E3-08",
+   "action": "Abrir 2 proyectos en la app, revisar sus correos y abrir uno en Outlook",
+   "owner": "Oscar",
+   "depends": "E3-07",
+   "expected": "Oscar usa la entrega",
+   "evidence": "Oscar escribe \"E3 aceptada\"",
+   "limit": 0,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -2009,6 +2012,21 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "2026-10-02T00:46:00Z"
+  },
+  {
+   "id": "E2-04",
+   "action": "(Claude, intento 19) Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+   "owner": "Agente",
+   "depends": "E2-03",
+   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+   "limit": 230,
+   "status": "Hecha",
+   "attempts": 19,
+   "minutes": 202,
+   "entrega": "E2",
+   "fails": 7,
+   "lastActivity": "2026-10-02T18:25:00Z"
   },
   {
    "id": "T-01",
@@ -2401,15 +2419,9 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-02T06:32:00Z"
   }
  ],
- "alerts": [
-  {
-   "task": "E2-04",
-   "reason": "7 intentos sin avance",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 48,
+  "tasksDone": 49,
   "tasksTotal": 66,
   "entregasAccepted": 2,
   "entregasTotal": 12,
