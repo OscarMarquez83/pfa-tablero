@@ -1,25 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T02:28:19.775598Z",
+ "generatedUtc": "2026-10-02T02:37:15.546155Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 02:27 UTC",
+  "updated": "2026-10-02 02:36 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Esperar la decisión de Oscar sobre HZ-14 para retomar E2-04. E2-05 y E2-08 dependen de E2-04.",
-  "needsOscar": [
-   {
-    "ref": "",
-    "text": "E2-04/HZ-14: aprobar la mini-spec y elegir Camino 1 (recomendado: guardar la app sin el flow, cerrar y reabrir Studio, volver a agregarlo) o Camino 2 (crear un flow nuevo con la misma lógica y una respuesta nueva)."
-   }
-  ],
+  "nextAction": "Retomar E2-04 por Camino 1 aprobado cuando Edge o el navegador integrado responda; luego continuar E2-05.",
+  "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 5 iniciado 01:45 UTC y cerrado 2026-10-02 02:27 UTC: el flow publicado sigue funcionando y devuelve 25 carpetas de niveles 1–3. Power Apps continúa sin reconocer foldersJson. Tras consultar Learn y Copilot, probé actualizar y volver a enlazar el flow; el error sigue. Al recrear la respuesta del flow, guardar falló por una referencia de conexión faltante; deshice ese cambio y confirmé que la versión publicada conserva la acción Respond. No se ejecutó el botón ni se escribieron filas. HZ-14 registra dos caminos; E2-04 queda Bloqueada según la regla anti-bucle. El publicador regeneró dashboard/data.js, pero no pudo escribir publish.log por acceso denegado (KF-H04); la publicación remota no está confirmada."
+   "E2-04, intento 6 (Reapertura: Camino 1 aprobado). Antes de tocar Studio, intenté consultar las pestañas del navegador integrado y Edge; ambas consultas agotaron el tiempo sin mostrar el estado. No cambié la app ni el flow. Sigue pendiente quitar el flow de la app, guardar, cerrar/reabrir Studio y volver a agregarlo. Cuando el navegador responda, comprobaré que"
   ],
-  "fileUtc": "2026-10-02T02:27:57.215786Z",
+  "fileUtc": "2026-10-02T02:36:03.400589Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -237,8 +232,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 91,
     "unprod": 79,
-    "wait": 7,
-    "total": 177
+    "wait": 310,
+    "total": 480
    }
   },
   {
@@ -728,14 +723,14 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
+    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
-    "status": "Bloqueada",
+    "status": "Reabierta",
     "attempts": 5,
     "minutes": 67,
     "entrega": "E2",
     "fails": 3,
-    "lastActivity": "2026-10-02T02:27:00Z",
+    "lastActivity": "2026-10-02T02:36:00Z",
     "ready": true
    },
    {
@@ -1302,19 +1297,19 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "T-11",
-  "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+  "id": "E2-04",
+  "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
   "owner": "Agente",
-  "depends": "—",
-  "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
-  "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
-  "limit": 20,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 2,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "2026-10-01T05:47:00Z",
+  "depends": "E2-03",
+  "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
+  "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
+  "limit": 90,
+  "status": "Reabierta",
+  "attempts": 5,
+  "minutes": 67,
+  "entrega": "E2",
+  "fails": 3,
+  "lastActivity": "2026-10-02T02:36:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1324,14 +1319,14 @@ window.PFA_DATA = {
    "owner": "Agente",
    "depends": "E2-03",
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-   "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
+   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
-   "status": "Bloqueada",
+   "status": "Reabierta",
    "attempts": 5,
    "minutes": 67,
    "entrega": "E2",
    "fails": 3,
-   "lastActivity": "2026-10-02T02:27:00Z",
+   "lastActivity": "2026-10-02T02:36:00Z",
    "ready": true
   },
   {
@@ -2164,13 +2159,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
-  },
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: Power Apps no reconoce la respuesta del escaneo; requiere elegir un camino de reparación (",
-   "level": "warning"
+   "reason": "Reabierta: se dio por terminada y no lo estaba (5 intentos previos)",
+   "level": "serious"
   }
  ],
  "kpi": {
@@ -2181,26 +2171,26 @@ window.PFA_DATA = {
   "time": {
    "prod": 605,
    "unprod": 81,
-   "wait": 19,
-   "total": 705
+   "wait": 322,
+   "total": 1008
   },
   "last24h": {
    "prod": 344,
    "unprod": 79,
-   "wait": 13,
-   "total": 436
+   "wait": 316,
+   "total": 739
   },
   "last7d": {
    "prod": 605,
    "unprod": 81,
-   "wait": 19,
-   "total": 705
+   "wait": 322,
+   "total": 1008
   },
   "product": {
    "prod": 364,
    "unprod": 79,
-   "wait": 11,
-   "total": 454
+   "wait": 314,
+   "total": 757
   },
   "support": {
    "prod": 241,
@@ -2292,7 +2282,7 @@ window.PFA_DATA = {
    "date": "2026-10-02",
    "prod": 33,
    "unprod": 53,
-   "wait": 0
+   "wait": 303
   }
  ],
  "categories": [
@@ -2319,19 +2309,26 @@ window.PFA_DATA = {
  ],
  "waits": [
   {
+   "category": "NAVEGADOR",
+   "minutes": 305
+  },
+  {
    "category": "AUTH",
    "minutes": 11
   },
   {
    "category": "PERMISOS",
    "minutes": 6
-  },
-  {
-   "category": "NAVEGADOR",
-   "minutes": 2
   }
  ],
  "topTasks": [
+  {
+   "task": "E2-04",
+   "prod": 18,
+   "unprod": 49,
+   "wait": 303,
+   "total": 370
+  },
   {
    "task": "E1-05",
    "prod": 143,
@@ -2345,13 +2342,6 @@ window.PFA_DATA = {
    "unprod": 30,
    "wait": 2,
    "total": 99
-  },
-  {
-   "task": "E2-04",
-   "prod": 18,
-   "unprod": 49,
-   "wait": 0,
-   "total": 67
   },
   {
    "task": "T-16",
@@ -2410,10 +2400,23 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 39
+   "minutes": 342
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T02:33:00Z",
+   "minutes": 303,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 6,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Reapertura: Camino 1 elegido; no pude abrir el navegador integrado ni Edge para operar Studio",
+   "evidence": "Ambas consultas de estado agotaron el tiempo; no se modificó la app ni el flow"
+  },
   {
    "start": "2026-10-02T01:45:00Z",
    "minutes": 42,
@@ -2530,22 +2533,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Configuré URI /me/mailFolders en la consulta Outlook; guardado continúa pendiente",
    "evidence": "Editor muestra Saving… sin confirmación; solo Office 365 Outlook; Power Apps V2"
-  },
-  {
-   "start": "2026-10-02T00:26:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Autenticación verificada en ambos navegadores; flow inexistente y trigger Power Apps V2 seleccionado; Peek code identifica la acción inicial Send_an_HTTP_request",
-   "evidence": "My flows muestra 20 flows y búsqueda 0; editor nuevo con Power Apps V2 y Office 365 Outlook Send_an_HTTP_request; no se cambió URI ni se guardó"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T02:33:00Z",
+   "minutes": 303,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 6,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Reapertura: Camino 1 elegido; no pude abrir el navegador integrado ni Edge para operar Studio",
+   "evidence": "Ambas consultas de estado agotaron el tiempo; no se modificó la app ni el flow"
+  },
   {
    "start": "2026-10-02T01:45:00Z",
    "minutes": 42,
@@ -3776,7 +3779,7 @@ window.PFA_DATA = {
    "text": "Power Apps no reconoce la respuesta del escaneo; requiere elegir un camino de reparación (mini-spec en control/specs/HZ-14.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Por decidir"
+   "status": "Incorporado en E2-04"
   }
  ]
 };
