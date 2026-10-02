@@ -1,28 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:37:15.976010Z",
+ "generatedUtc": "2026-10-02T06:46:14.353111Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:36 UTC",
+  "updated": "2026-10-02 06:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Ejecutar el diagnóstico de E2-04 en Studio desde Edge externo; medir, corregir solo el caso observado y comprobar en la app publicada.",
+  "nextAction": "Reanudar E2-04 cuando Studio permita editar; instrumentar Monitor y medir Scan folders sin invalidar la sesión que tiene el control.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "E2-04, intento 15 iniciado 2026-10-02 06:35 UTC: medir el clic de Scan folders en Monitor y corregir solo la causa observada.",
-   "Defecto: 14 intentos previos no produjeron una corrida nueva desde Preview; el historial visto seguía en 1-oct.",
-   "Intentos previos: expresiones y Parse JSON; re-vincular el flow; revisar conexión y Flow Checker; clics sin instrumentación.",
-   "Por qué no cerró: ningún Monitor correlacionó el clic con la llamada; causa desconocida.",
-   "Enfoque nuevo: Monitor + Notify(\"Scan started\") + IfError(…FirstError.Message), un clic y captura.",
-   "Criterio nuevo: criterios de tmp/mini-spec-5-E2-04-diagnostico.md, sección 3; probar los cuatro casos y la app publicada.",
-   "Reapertura aprobada por Oscar: mini-spec 5 concede 60 minutos efectivos nuevos; historial previo 87 min.",
-   "Cierre de Studio: DESCARTAR — no recuperar la copia local del flow; conservar el publicado antes de abrir Power Apps Studio.",
-   "Avance 2026-10-02 06:36 UTC: historial de 14 intentos y mini-spec revisados; preparando inventario e instrumentación."
-  ],
-  "fileUtc": "2026-10-02T06:36:14.336136Z",
+  "current": [],
+  "fileUtc": "2026-10-02T06:46:00.460598Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -246,14 +236,14 @@ window.PFA_DATA = {
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
    "done": 3,
-   "total": 11,
+   "total": 3,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 103,
+    "prod": 114,
     "unprod": 87,
     "wait": 314,
-    "total": 504
+    "total": 515
    }
   },
   {
@@ -736,134 +726,6 @@ window.PFA_DATA = {
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "2026-10-02T00:46:00Z"
-   },
-   {
-    "id": "E2-04",
-    "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
-    "owner": "Agente",
-    "depends": "E2-03",
-    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-    "limit": 60,
-    "status": "Reabierta",
-    "attempts": 15,
-    "minutes": 87,
-    "entrega": "E2",
-    "fails": 6,
-    "lastActivity": "2026-10-02T05:10:00Z",
-    "ready": true
-   },
-   {
-    "id": "E2-05",
-    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
-    "owner": "Agente",
-    "depends": "E2-04",
-    "expected": "Oscar decide sus carpetas desde la app",
-    "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
-    "limit": 90,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
-   },
-   {
-    "id": "E2-06",
-    "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
-    "owner": "Agente",
-    "depends": "E2-05",
-    "expected": "Oscar ve y ajusta sus proyectos",
-    "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
-    "limit": 60,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
-   },
-   {
-    "id": "E2-07",
-    "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
-    "owner": "Agente",
-    "depends": "E2-05",
-    "expected": "Oscar se entera de carpetas nuevas",
-    "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
-    "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
-   },
-   {
-    "id": "E2-08",
-    "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
-    "owner": "Agente",
-    "depends": "E2-04",
-    "expected": "Detección bajo demanda con conectores estándar",
-    "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
-    "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
-   },
-   {
-    "id": "E2-09",
-    "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
-    "owner": "Agente",
-    "depends": "E2-07, E2-08",
-    "expected": "Versión publicada y controles probados",
-    "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
-    "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
-   },
-   {
-    "id": "E2-11",
-    "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
-    "owner": "Agente",
-    "depends": "E2-09",
-    "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
-    "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
-    "limit": 30,
-    "status": "Pendiente",
-    "attempts": 1,
-    "minutes": 2,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "2026-10-02T00:26:00Z",
-    "ready": false
-   },
-   {
-    "id": "E2-10",
-    "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
-    "owner": "Oscar",
-    "depends": "E2-09, E2-11",
-    "expected": "Proyectos reales definidos y navegación horizontal evaluada",
-    "evidence": "Oscar escribe \"E2 aceptada\"",
-    "limit": 0,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
-    "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
-    "ready": false
    }
   ],
   "E3": [
@@ -1404,151 +1266,8 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "E2-04",
-  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
-  "owner": "Agente",
-  "depends": "E2-03",
-  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-  "limit": 60,
-  "status": "Reabierta",
-  "attempts": 15,
-  "minutes": 87,
-  "entrega": "E2",
-  "fails": 6,
-  "lastActivity": "2026-10-02T05:10:00Z",
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
-  {
-   "id": "E2-04",
-   "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
-   "owner": "Agente",
-   "depends": "E2-03",
-   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-   "limit": 60,
-   "status": "Reabierta",
-   "attempts": 15,
-   "minutes": 87,
-   "entrega": "E2",
-   "fails": 6,
-   "lastActivity": "2026-10-02T05:10:00Z",
-   "ready": true
-  },
-  {
-   "id": "E2-05",
-   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
-   "owner": "Agente",
-   "depends": "E2-04",
-   "expected": "Oscar decide sus carpetas desde la app",
-   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
-   "limit": 90,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E2-06",
-   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
-   "owner": "Agente",
-   "depends": "E2-05",
-   "expected": "Oscar ve y ajusta sus proyectos",
-   "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
-   "limit": 60,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E2-07",
-   "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
-   "owner": "Agente",
-   "depends": "E2-05",
-   "expected": "Oscar se entera de carpetas nuevas",
-   "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E2-08",
-   "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
-   "owner": "Agente",
-   "depends": "E2-04",
-   "expected": "Detección bajo demanda con conectores estándar",
-   "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E2-09",
-   "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
-   "owner": "Agente",
-   "depends": "E2-07, E2-08",
-   "expected": "Versión publicada y controles probados",
-   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E2-11",
-   "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
-   "owner": "Agente",
-   "depends": "E2-09",
-   "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
-   "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
-   "limit": 30,
-   "status": "Pendiente",
-   "attempts": 1,
-   "minutes": 2,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "2026-10-02T00:26:00Z",
-   "ready": false
-  },
-  {
-   "id": "E2-10",
-   "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
-   "owner": "Oscar",
-   "depends": "E2-09, E2-11",
-   "expected": "Proyectos reales definidos y navegación horizontal evaluada",
-   "evidence": "Oscar escribe \"E2 aceptada\"",
-   "limit": 0,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
   {
    "id": "E3-01",
    "action": "Confirmar que la carpeta Projects/PFA-Prueba tiene 5 correos enviados por Oscar a sí mismo, sin datos de clientes, y que está marcada como proyecto en la app",
@@ -1653,6 +1372,22 @@ window.PFA_DATA = {
    "expected": "Versión publicada y controles probados",
    "evidence": "Número de versión en worklog; el correo abre en Outlook",
    "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E3-08",
+   "action": "Abrir 2 proyectos en la app, revisar sus correos y abrir uno en Outlook",
+   "owner": "Oscar",
+   "depends": "E3-07",
+   "expected": "Oscar usa la entrega",
+   "evidence": "Oscar escribe \"E3 aceptada\"",
+   "limit": 0,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -2384,41 +2119,35 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-02T06:32:00Z"
   }
  ],
- "alerts": [
-  {
-   "task": "E2-04",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (15 intentos previos)",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
   "tasksDone": 48,
-  "tasksTotal": 65,
+  "tasksTotal": 57,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 663,
+   "prod": 674,
    "unprod": 89,
    "wait": 326,
-   "total": 1078
+   "total": 1089
   },
   "last24h": {
-   "prod": 265,
+   "prod": 276,
    "unprod": 87,
    "wait": 320,
-   "total": 672
+   "total": 683
   },
   "last7d": {
-   "prod": 663,
+   "prod": 674,
    "unprod": 89,
    "wait": 326,
-   "total": 1078
+   "total": 1089
   },
   "product": {
-   "prod": 376,
+   "prod": 387,
    "unprod": 87,
    "wait": 318,
-   "total": 781
+   "total": 792
   },
   "support": {
    "prod": 287,
@@ -2508,7 +2237,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 91,
+   "prod": 102,
    "unprod": 61,
    "wait": 307
   }
@@ -2557,10 +2286,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 30,
+   "prod": 41,
    "unprod": 57,
    "wait": 307,
-   "total": 394
+   "total": 405
   },
   {
    "task": "E1-05",
@@ -2629,7 +2358,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 736
+   "minutes": 747
   },
   {
    "account": "empresa",
@@ -2637,6 +2366,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T06:35:00Z",
+   "minutes": 11,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 15,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Inventario de flujos y conexión de Monitor; Studio mantuvo el bloqueo read-only",
+   "evidence": "1/7 criterios verificados; My flows 1/21 y Solutions 1/13; ID b236f6d8-4010-468f-a84f-6db74f0f52c7 en In your app; Monitor conectado con 0 eventos; Learn: https://learn.microsoft.com/power-platform/power-apps/maker/canvas-apps/copresence-power-apps-studio; reabrir la app en la misma pestaña no liberó el control."
+  },
   {
    "start": "2026-10-02T06:27:00Z",
    "minutes": 5,
@@ -2753,22 +2495,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador."
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-16",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T06:35:00Z",
+   "minutes": 11,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 15,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Inventario de flujos y conexión de Monitor; Studio mantuvo el bloqueo read-only",
+   "evidence": "1/7 criterios verificados; My flows 1/21 y Solutions 1/13; ID b236f6d8-4010-468f-a84f-6db74f0f52c7 en In your app; Monitor conectado con 0 eventos; Learn: https://learn.microsoft.com/power-platform/power-apps/maker/canvas-apps/copresence-power-apps-studio; reabrir la app en la misma pestaña no liberó el control."
+  },
   {
    "start": "2026-10-02T06:27:00Z",
    "minutes": 5,
