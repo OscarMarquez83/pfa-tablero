@@ -1,33 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T00:16:30.335024Z",
+ "generatedUtc": "2026-10-02T00:28:14.720208Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-01 20:53 UTC",
+  "updated": "2026-10-02 00:26 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Oscar inicia sesión en Power Automate; después completar el intento 11 de E2-02 con salida dinámica/Parse JSON.",
+  "nextAction": "localizar el flow de E2-02 en la lista autenticada de Power Automate y revisar Peek code antes de editarlo; quedan 8 minutos efectivos en la tarea.",
   "needsOscar": [
    {
-    "ref": "HZ-11",
-    "text": "aprobar la mini-spec y decidir si se sustituye D-018 por menú vertical desplazable o se mantiene el selector desplegable aprobado."
-   },
-   {
-    "ref": "E2-02",
-    "text": "en la pestaña de Power Automate de Edge, pulsa “Sign in” e inicia sesión; debe abrirse Home y permitir navegar a “My flows”."
-   },
-   {
-    "ref": "T-14",
-    "text": "reinicia Codex para cargar el servidor Context7 recién instalado en la lista de tools."
+    "ref": "",
+    "text": "Issues de Oscar procesados: #8 amplía HZ-11 a evaluar móvil/tableta horizontal y crea E2-11; #9 confirma inicio de sesión; #10 confirma reinicio de Codex para T-14. Registrados; #8–#10 comentados y cerrados."
    }
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. Home mostró “Hello, Oscar”, pero al navegar volvió “Sign in required” (AADSTS160021); no se modificó el flow. Learn consultado: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow. Acumulado E2-02: 82/90 min efectivos."
+   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. La sesión renovada ya permite abrir My flows en Edge y en el navegador integrado. La lista autenticada muestra 20 flujos, pero no PFA_E2_LeerCarpetas; búsqueda por nombre: cero resultados. No editaré sin localizar el flow y registrar el nombre interno de la acción HTTP en Peek code. Acumulado E2-02: 82/90 min efectivos."
   ],
-  "fileUtc": "2026-10-01T20:53:36.320744Z",
+  "fileUtc": "2026-10-02T00:26:56.649571Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -236,17 +228,17 @@ window.PFA_DATA = {
   {
    "id": "E2",
    "title": "Carpetas de proyecto",
-   "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos y revisar las nuevas",
+   "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
    "done": 1,
-   "total": 10,
+   "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 58,
+    "prod": 60,
     "unprod": 26,
     "wait": 7,
-    "total": 91
+    "total": 93
    }
   },
   {
@@ -829,11 +821,27 @@ window.PFA_DATA = {
     "ready": false
    },
    {
+    "id": "E2-11",
+    "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
+    "owner": "Agente",
+    "depends": "E2-09",
+    "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
+    "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 1,
+    "minutes": 2,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "2026-10-02T00:26:00Z",
+    "ready": false
+   },
+   {
     "id": "E2-10",
     "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
     "owner": "Oscar",
-    "depends": "E2-09",
-    "expected": "Proyectos reales definidos",
+    "depends": "E2-09, E2-11",
+    "expected": "Proyectos reales definidos y navegación horizontal evaluada",
     "evidence": "Oscar escribe \"E2 aceptada\"",
     "limit": 0,
     "status": "Pendiente",
@@ -1441,11 +1449,27 @@ window.PFA_DATA = {
    "ready": false
   },
   {
+   "id": "E2-11",
+   "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
+   "owner": "Agente",
+   "depends": "E2-09",
+   "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
+   "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 1,
+   "minutes": 2,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "2026-10-02T00:26:00Z",
+   "ready": false
+  },
+  {
    "id": "E2-10",
    "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
    "owner": "Oscar",
-   "depends": "E2-09",
-   "expected": "Proyectos reales definidos",
+   "depends": "E2-09, E2-11",
+   "expected": "Proyectos reales definidos y navegación horizontal evaluada",
    "evidence": "Oscar escribe \"E2 aceptada\"",
    "limit": 0,
    "status": "Pendiente",
@@ -1528,22 +1552,6 @@ window.PFA_DATA = {
    "expected": "Oscar ve los correos de cada proyecto",
    "evidence": "Los 5 correos visibles en PFA-Prueba",
    "limit": 90,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E3",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E3-06",
-   "action": "Ejecutar el flujo sin SoloCarpeta (todas las carpetas activas)",
-   "owner": "Agente",
-   "depends": "E3-05",
-   "expected": "Correos reales cargados",
-   "evidence": "Run Succeeded; conteo de correos por carpeta en worklog, con carpetas numeradas y sin nombres",
-   "limit": 30,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -2130,41 +2138,36 @@ window.PFA_DATA = {
    "task": "E2-02",
    "reason": "Reabierta: se dio por terminada y no lo estaba (11 intentos previos)",
    "level": "serious"
-  },
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: Oscar reporta discrepancia: DISENO §4 menú desplazable frente a powerapps-yaml paso 5 desp",
-   "level": "warning"
   }
  ],
  "kpi": {
   "tasksDone": 38,
-  "tasksTotal": 58,
+  "tasksTotal": 59,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 572,
+   "prod": 574,
    "unprod": 28,
    "wait": 19,
-   "total": 619
+   "total": 621
   },
   "last24h": {
-   "prod": 370,
+   "prod": 372,
    "unprod": 28,
    "wait": 13,
-   "total": 411
+   "total": 413
   },
   "last7d": {
-   "prod": 572,
+   "prod": 574,
    "unprod": 28,
    "wait": 19,
-   "total": 619
+   "total": 621
   },
   "product": {
-   "prod": 331,
+   "prod": 333,
    "unprod": 26,
    "wait": 11,
-   "total": 368
+   "total": 370
   },
   "support": {
    "prod": 241,
@@ -2254,7 +2257,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 0,
+   "prod": 2,
    "unprod": 0,
    "wait": 0
   }
@@ -2370,7 +2373,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 599
+   "minutes": 601
   },
   {
    "account": "empresa",
@@ -2378,6 +2381,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:24:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-11",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Integré respuesta de Oscar sobre HZ-11 como tarea E2-11 y actualicé su mini-spec",
+   "evidence": "PLAN asigna evaluación horizontal a E2-11; decisión vertical D-018 preservada"
+  },
   {
    "start": "2026-10-01T20:52:00Z",
    "minutes": 1,
@@ -2494,22 +2510,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
    "evidence": "Pages antes del cierre de T-16: 3 abiertas/13 hechas; auditoría final: 2 abiertas/14 hechas, 14 de 16 según PLAN; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
-  },
-  {
-   "start": "2026-10-01T15:36:00Z",
-   "minutes": 10,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 10,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Intento final: corregí URI duplicado usando referencia interna localizada; Flow Checker conservó error de referencia. Copilot: Graph childFolders es compatible; reconstruir paso y usar salida dinámica/Parse JSON. Consulté plantilla con nueve enfoques agrupados",
-   "evidence": "Peek code exacto: Send_an_HTTP_request; Flow Checker posterior al guardado: Corrija esto para incluir una referencia válida a \\Send_an_HTTP_request\\\" para los parámetros de entrada de la acción \\\"Enviar_una_solicitud_HTTP_2\\\"; sin respuesta probada por error. Learn: https://learn.microsoft.com/en-us/connectors/office365/ y https://learn.microsoft.com/en-us/power-automate/use-expressions-in-conditions\""
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:24:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-11",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Integré respuesta de Oscar sobre HZ-11 como tarea E2-11 y actualicé su mini-spec",
+   "evidence": "PLAN asigna evaluación horizontal a E2-11; decisión vertical D-018 preservada"
+  },
   {
    "start": "2026-10-01T20:52:00Z",
    "minutes": 1,
@@ -3570,10 +3586,10 @@ window.PFA_DATA = {
   {
    "id": "HZ-11",
    "date": "2026-10-01",
-   "text": "Oscar reporta discrepancia: DISENO §4 menú desplazable frente a powerapps-yaml paso 5 desplegable; copias locales y D-018 indican desplegable. Recomienda desplazable por D-012; mini-spec control/specs/HZ-11.md",
+   "text": "Oscar confirma mantener el desplegable ya aprobado en vertical y amplía la revisión a teléfono y tableta en horizontal",
    "found": "Oscar",
-   "target": "E1",
-   "status": "Por decidir"
+   "target": "E2",
+   "status": "Incorporado en E2-11"
   }
  ]
 };
