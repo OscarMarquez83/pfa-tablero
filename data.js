@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T12:19:17.897954Z",
+ "generatedUtc": "2026-10-02T12:28:15.191664Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 12:18 UTC",
+  "updated": "2026-10-02 12:20 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Retomar las comprobaciones en la pestaña existente de Studio en Edge cuando vuelva a permitir inspección; identificar una corrección demostrable, medirla y completar la evidencia publicada de E2-04. Después seguir E2, E3 y E4 por dependencias.",
   "needsOscar": [],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T12:18:34.461739Z",
+  "fileUtc": "2026-10-02T12:20:58.149086Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -240,10 +240,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 161,
+    "prod": 164,
     "unprod": 98,
     "wait": 14,
-    "total": 273
+    "total": 276
    }
   },
   {
@@ -737,10 +737,10 @@ window.PFA_DATA = {
     "limit": 170,
     "status": "Bloqueada",
     "attempts": 18,
-    "minutes": 156,
+    "minutes": 159,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T12:18:00Z",
+    "lastActivity": "2026-10-02T12:21:00Z",
     "ready": true
    },
    {
@@ -1406,10 +1406,10 @@ window.PFA_DATA = {
    "limit": 170,
    "status": "Bloqueada",
    "attempts": 18,
-   "minutes": 156,
+   "minutes": 159,
    "entrega": "E2",
    "fails": 7,
-   "lastActivity": "2026-10-02T12:18:00Z",
+   "lastActivity": "2026-10-02T12:21:00Z",
    "ready": true
   },
   {
@@ -2372,10 +2372,10 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 721,
+   "prod": 724,
    "unprod": 100,
    "wait": 26,
-   "total": 847
+   "total": 850
   },
   "last24h": {
    "prod": 310,
@@ -2384,16 +2384,16 @@ window.PFA_DATA = {
    "total": 401
   },
   "last7d": {
-   "prod": 721,
+   "prod": 724,
    "unprod": 100,
    "wait": 26,
-   "total": 847
+   "total": 850
   },
   "product": {
-   "prod": 434,
+   "prod": 437,
    "unprod": 98,
    "wait": 18,
-   "total": 550
+   "total": 553
   },
   "support": {
    "prod": 287,
@@ -2483,7 +2483,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 149,
+   "prod": 152,
    "unprod": 72,
    "wait": 7
   }
@@ -2532,10 +2532,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 88,
+   "prod": 91,
    "unprod": 68,
    "wait": 7,
-   "total": 163
+   "total": 166
   },
   {
    "task": "E1-05",
@@ -2604,7 +2604,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 805
+   "minutes": 808
   },
   {
    "account": "empresa",
@@ -2614,7 +2614,7 @@ window.PFA_DATA = {
  "recent": [
   {
    "start": "2026-10-02T12:09:00Z",
-   "minutes": 9,
+   "minutes": 12,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
@@ -2623,7 +2623,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "NAVEGADOR",
    "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
-   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub conserva último commit del tablero a las 12:10 UTC; app sin cambios"
+   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub commit 965dd929 y data.js generatedUtc 12:19:17 confirmados; Pages no verificado; app sin cambios"
   },
   {
    "start": "2026-10-02T11:38:00Z",
@@ -2746,7 +2746,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-02T12:09:00Z",
-   "minutes": 9,
+   "minutes": 12,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
@@ -2755,7 +2755,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "NAVEGADOR",
    "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
-   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub conserva último commit del tablero a las 12:10 UTC; app sin cambios"
+   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub commit 965dd929 y data.js generatedUtc 12:19:17 confirmados; Pages no verificado; app sin cambios"
   },
   {
    "start": "2026-10-02T11:38:00Z",
