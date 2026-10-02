@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:40:14.275036Z",
+ "generatedUtc": "2026-10-02T04:46:14.080843Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:29 UTC",
+  "updated": "2026-10-02 04:42 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "continuar T-25 en un intento distinto; la prueba local abrió confirm en Edge, pero esta interfaz automatizada interrumpió el clic y no permitió elegir Leave o Cancel. No se probó aún el navegador integrado. T-22/T-23 esperan pruebas visuales de Oscar; E2-04 conserva 6 minutos y espera a que Studio permita editar.",
   "needsOscar": [
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-25, intento 1 iniciado 2026-10-02 04:21 UTC y cerrado 04:29 como AVANCE (8 min): reglas y script de captura añadidos; en Edge la página local guardó y navegó sin confirmación cuando no había cambios. Con cambios, mostró el confirm, pero la automatización interrumpió el clic y no permitió elegir; integrado sin probar. Publicador al cierre: dashboard/data.js regenerado; acceso denegado en C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log (KF-H04), publicación remota no confirmada.",
+   "T-25, intento 2 iniciado 2026-10-02 04:42 UTC: probé teclado y los 3 casos locales en Edge e integrado; confirmar y cancelar ya se resuelven. Cierre de Studio: GUARDAR — si un diálogo inesperado se cancela, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
    "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
@@ -35,7 +35,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:31:40.035161Z",
+  "fileUtc": "2026-10-02T04:44:25.228303Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
