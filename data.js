@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:46:14.353111Z",
+ "generatedUtc": "2026-10-02T06:55:14.218242Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:46 UTC",
+  "updated": "2026-10-02 06:47 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Reanudar E2-04 cuando Studio permita editar; instrumentar Monitor y medir Scan folders sin invalidar la sesión que tiene el control.",
   "needsOscar": [],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T06:46:00.460598Z",
+  "fileUtc": "2026-10-02T06:47:27.573789Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -236,14 +236,14 @@ window.PFA_DATA = {
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
    "done": 3,
-   "total": 3,
+   "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 114,
+    "prod": 115,
     "unprod": 87,
     "wait": 314,
-    "total": 515
+    "total": 516
    }
   },
   {
@@ -726,6 +726,134 @@ window.PFA_DATA = {
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "2026-10-02T00:46:00Z"
+   },
+   {
+    "id": "E2-04",
+    "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+    "owner": "Agente",
+    "depends": "E2-03",
+    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+    "limit": 150,
+    "status": "Reabierta",
+    "attempts": 15,
+    "minutes": 99,
+    "entrega": "E2",
+    "fails": 6,
+    "lastActivity": "2026-10-02T06:47:00Z",
+    "ready": true
+   },
+   {
+    "id": "E2-05",
+    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+    "owner": "Agente",
+    "depends": "E2-04",
+    "expected": "Oscar decide sus carpetas desde la app",
+    "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
+    "limit": 90,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
+   },
+   {
+    "id": "E2-06",
+    "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
+    "owner": "Agente",
+    "depends": "E2-05",
+    "expected": "Oscar ve y ajusta sus proyectos",
+    "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
+    "limit": 60,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
+   },
+   {
+    "id": "E2-07",
+    "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
+    "owner": "Agente",
+    "depends": "E2-05",
+    "expected": "Oscar se entera de carpetas nuevas",
+    "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
+   },
+   {
+    "id": "E2-08",
+    "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
+    "owner": "Agente",
+    "depends": "E2-04",
+    "expected": "Detección bajo demanda con conectores estándar",
+    "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
+   },
+   {
+    "id": "E2-09",
+    "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
+    "owner": "Agente",
+    "depends": "E2-07, E2-08",
+    "expected": "Versión publicada y controles probados",
+    "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
+   },
+   {
+    "id": "E2-11",
+    "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
+    "owner": "Agente",
+    "depends": "E2-09",
+    "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
+    "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 1,
+    "minutes": 2,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "2026-10-02T00:26:00Z",
+    "ready": false
+   },
+   {
+    "id": "E2-10",
+    "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
+    "owner": "Oscar",
+    "depends": "E2-09, E2-11",
+    "expected": "Proyectos reales definidos y navegación horizontal evaluada",
+    "evidence": "Oscar escribe \"E2 aceptada\"",
+    "limit": 0,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "E2",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": false
    }
   ],
   "E3": [
@@ -1266,8 +1394,151 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "E2-04",
+  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+  "owner": "Agente",
+  "depends": "E2-03",
+  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+  "limit": 150,
+  "status": "Reabierta",
+  "attempts": 15,
+  "minutes": 99,
+  "entrega": "E2",
+  "fails": 6,
+  "lastActivity": "2026-10-02T06:47:00Z",
+  "ready": true
+ },
  "upcoming": [
+  {
+   "id": "E2-04",
+   "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+   "owner": "Agente",
+   "depends": "E2-03",
+   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+   "limit": 150,
+   "status": "Reabierta",
+   "attempts": 15,
+   "minutes": 99,
+   "entrega": "E2",
+   "fails": 6,
+   "lastActivity": "2026-10-02T06:47:00Z",
+   "ready": true
+  },
+  {
+   "id": "E2-05",
+   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Oscar decide sus carpetas desde la app",
+   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
+   "limit": 90,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E2-06",
+   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar ve y ajusta sus proyectos",
+   "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
+   "limit": 60,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E2-07",
+   "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar se entera de carpetas nuevas",
+   "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E2-08",
+   "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Detección bajo demanda con conectores estándar",
+   "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E2-09",
+   "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
+   "owner": "Agente",
+   "depends": "E2-07, E2-08",
+   "expected": "Versión publicada y controles probados",
+   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E2-11",
+   "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
+   "owner": "Agente",
+   "depends": "E2-09",
+   "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
+   "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
+   "limit": 30,
+   "status": "Pendiente",
+   "attempts": 1,
+   "minutes": 2,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "2026-10-02T00:26:00Z",
+   "ready": false
+  },
+  {
+   "id": "E2-10",
+   "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
+   "owner": "Oscar",
+   "depends": "E2-09, E2-11",
+   "expected": "Proyectos reales definidos y navegación horizontal evaluada",
+   "evidence": "Oscar escribe \"E2 aceptada\"",
+   "limit": 0,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
   {
    "id": "E3-01",
    "action": "Confirmar que la carpeta Projects/PFA-Prueba tiene 5 correos enviados por Oscar a sí mismo, sin datos de clientes, y que está marcada como proyecto en la app",
@@ -1372,22 +1643,6 @@ window.PFA_DATA = {
    "expected": "Versión publicada y controles probados",
    "evidence": "Número de versión en worklog; el correo abre en Outlook",
    "limit": 30,
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E3",
-   "fails": 0,
-   "lastActivity": "",
-   "ready": false
-  },
-  {
-   "id": "E3-08",
-   "action": "Abrir 2 proyectos en la app, revisar sus correos y abrir uno en Outlook",
-   "owner": "Oscar",
-   "depends": "E3-07",
-   "expected": "Oscar usa la entrega",
-   "evidence": "Oscar escribe \"E3 aceptada\"",
-   "limit": 0,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -2119,35 +2374,41 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-02T06:32:00Z"
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E2-04",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (15 intentos previos)",
+   "level": "serious"
+  }
+ ],
  "kpi": {
   "tasksDone": 48,
-  "tasksTotal": 57,
+  "tasksTotal": 65,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 674,
+   "prod": 675,
    "unprod": 89,
    "wait": 326,
-   "total": 1089
+   "total": 1090
   },
   "last24h": {
-   "prod": 276,
+   "prod": 277,
    "unprod": 87,
    "wait": 320,
-   "total": 683
+   "total": 684
   },
   "last7d": {
-   "prod": 674,
+   "prod": 675,
    "unprod": 89,
    "wait": 326,
-   "total": 1089
+   "total": 1090
   },
   "product": {
-   "prod": 387,
+   "prod": 388,
    "unprod": 87,
    "wait": 318,
-   "total": 792
+   "total": 793
   },
   "support": {
    "prod": 287,
@@ -2237,7 +2498,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 102,
+   "prod": 103,
    "unprod": 61,
    "wait": 307
   }
@@ -2286,10 +2547,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 41,
+   "prod": 42,
    "unprod": 57,
    "wait": 307,
-   "total": 405
+   "total": 406
   },
   {
    "task": "E1-05",
@@ -2358,7 +2619,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 747
+   "minutes": 748
   },
   {
    "account": "empresa",
@@ -2368,7 +2629,7 @@ window.PFA_DATA = {
  "recent": [
   {
    "start": "2026-10-02T06:35:00Z",
-   "minutes": 11,
+   "minutes": 12,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
@@ -2500,7 +2761,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-02T06:35:00Z",
-   "minutes": 11,
+   "minutes": 12,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
