@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T19:52:15.145329Z",
+ "generatedUtc": "2026-10-02T19:58:16.390094Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 19:11 UTC",
+  "updated": "2026-10-02 19:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
   "needsOscar": [],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T19:11:15.487219Z",
+  "fileUtc": "2026-10-02T19:53:18.451488Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
@@ -397,10 +397,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 306,
+    "prod": 343,
     "unprod": 2,
     "wait": 8,
-    "total": 316
+    "total": 353
    }
   }
  ],
@@ -2534,16 +2534,16 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "Hecha",
-    "attempts": 1,
-    "minutes": 10,
+    "attempts": 2,
+    "minutes": 47,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T19:10:00Z",
+    "lastActivity": "2026-10-02T19:53:00Z",
     "byAgent": [
      {
       "agent": "Claude",
-      "attempts": 1,
-      "minutes": 10,
+      "attempts": 2,
+      "minutes": 47,
       "limit": 60,
       "extra": 0,
       "finished": true,
@@ -4841,16 +4841,16 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "Hecha",
-   "attempts": 1,
-   "minutes": 10,
+   "attempts": 2,
+   "minutes": 47,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T19:10:00Z",
+   "lastActivity": "2026-10-02T19:53:00Z",
    "byAgent": [
     {
      "agent": "Claude",
-     "attempts": 1,
-     "minutes": 10,
+     "attempts": 2,
+     "minutes": 47,
      "limit": 60,
      "extra": 0,
      "finished": true,
@@ -4867,22 +4867,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 786,
+   "prod": 823,
    "unprod": 100,
    "wait": 66,
-   "total": 952
+   "total": 989
   },
   "last24h": {
-   "prod": 214,
+   "prod": 251,
    "unprod": 72,
    "wait": 49,
-   "total": 335
+   "total": 372
   },
   "last7d": {
-   "prod": 786,
+   "prod": 823,
    "unprod": 100,
    "wait": 66,
-   "total": 952
+   "total": 989
   },
   "product": {
    "prod": 480,
@@ -4891,10 +4891,10 @@ window.PFA_DATA = {
    "total": 636
   },
   "support": {
-   "prod": 306,
+   "prod": 343,
    "unprod": 2,
    "wait": 8,
-   "total": 316
+   "total": 353
   }
  },
  "days": [
@@ -4978,7 +4978,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 214,
+   "prod": 251,
    "unprod": 72,
    "wait": 47
   }
@@ -5047,6 +5047,13 @@ window.PFA_DATA = {
    "total": 99
   },
   {
+   "task": "T-30",
+   "prod": 47,
+   "unprod": 0,
+   "wait": 0,
+   "total": 47
+  },
+  {
    "task": "T-16",
    "prod": 46,
    "unprod": 0,
@@ -5087,13 +5094,6 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 23
-  },
-  {
-   "task": "T-12",
-   "prod": 20,
-   "unprod": 0,
-   "wait": 0,
-   "total": 20
   }
  ],
  "byAccount": [
@@ -5103,7 +5103,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 102
+   "minutes": 139
   },
   {
    "account": "empresa",
@@ -5111,6 +5111,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T19:16:00Z",
+   "minutes": 37,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-30",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Diseño de Oscar: sub-filas por agente en Resp./Intentos/Tiempo y botón Lecciones bajo el estado; color azul/amarillo/rojo según terminó o no; investigación de la ampliación de 20 min: D-039 la dio por aprobada sin respuesta de Oscar (INC-13, KF-P12); límite de Codex en E2-04 = 90 +60",
+   "evidence": "Local 1366 y 390 px: E2-04 Codex 18 · 159/90 +60 rojo, Claude 1 · 43/60 azul, 7 lecciones; E2-02 Codex 97/90 +30 amarillo; sin desborde"
+  },
   {
    "start": "2026-10-02T19:00:00Z",
    "minutes": 10,
@@ -5227,22 +5240,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
    "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub commit 965dd929 y data.js generatedUtc 12:19:17 confirmados; Pages no verificado; app sin cambios"
-  },
-  {
-   "start": "2026-10-02T11:38:00Z",
-   "minutes": 11,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 17,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "FORMULA_PA",
-   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow al agotarse 60 min de diagnóstico",
-   "evidence": "Auditoría 1/7; My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado ID 9537076d-e215-4f09-8490-fd292a7d9d7b; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T19:16:00Z",
+   "minutes": 37,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-30",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Diseño de Oscar: sub-filas por agente en Resp./Intentos/Tiempo y botón Lecciones bajo el estado; color azul/amarillo/rojo según terminó o no; investigación de la ampliación de 20 min: D-039 la dio por aprobada sin respuesta de Oscar (INC-13, KF-P12); límite de Codex en E2-04 = 90 +60",
+   "evidence": "Local 1366 y 390 px: E2-04 Codex 18 · 159/90 +60 rojo, Claude 1 · 43/60 azul, 7 lecciones; E2-02 Codex 97/90 +30 amarillo; sin desborde"
+  },
   {
    "start": "2026-10-02T19:00:00Z",
    "minutes": 10,

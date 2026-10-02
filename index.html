@@ -132,7 +132,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 64px; }
 .tasks th:nth-child(4), .tasks td:nth-child(4) { width: 68px; }
 .tasks th:nth-child(5), .tasks td:nth-child(5) { width: 58px; }
-.tasks th:nth-child(6), .tasks td:nth-child(6) { width: 100px; }
+.tasks th:nth-child(6), .tasks td:nth-child(6) { width: 132px; }
 .tasks td { overflow-wrap: anywhere; }
 .tasks .act { white-space: normal; overflow-wrap: anywhere; }
 .tasks th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; padding: 0 8px 8px; border-bottom: 1px solid var(--grid); }
@@ -145,6 +145,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .tasks .more { color: var(--ink-2); font-size: 12.5px; margin-top: 6px; }
 .tasks .more b { color: var(--ink); font-weight: 600; }
 /* D-044: intentos y tiempo por agente, y lecciones de la tarea */
+.tasks td:nth-child(6) .tmeter { width: 100%; }
 .tasks .stk { min-height: 36px; display: flex; flex-direction: column; justify-content: flex-start; }
 .tasks .stk + .stk { margin-top: 4px; }
 .who.ag-Codex { background: var(--accent-soft); color: var(--accent); }
@@ -153,8 +154,9 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .tmeter.ext .num { color: var(--warning-ink); font-weight: 600; }
 .tmeter .plus { font-weight: 600; }
 .tmeter .ag-m { display: none; }
-.lessbtn { display: block; margin-top: 8px; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
+.lessbtn { display: block; margin-top: 8px; white-space: nowrap; font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
 .lessbtn:hover { background: var(--surface-2); }
+.lessbtn .lb-s { display: none; }
 .lesson { margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--grid); overflow-wrap: anywhere; font-size: 13.5px; line-height: 1.5; }
 .lesson:last-child { border-bottom: 0; }
 .lesson h4, .dlg-body .lesson h4 { margin: 0 0 4px; font-size: 14.5px; text-transform: none; letter-spacing: 0; color: var(--ink); font-weight: 650; }
@@ -244,6 +246,7 @@ footer { color: var(--muted); font-size: 12px; margin-top: 24px; text-align: cen
   .tasks th:first-child, .tasks td:first-child { width: 34px; }
   .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 50px; }
   .tasks th:nth-child(6), .tasks td:nth-child(6) { width: 84px; }
+  .lessbtn { padding: 1px 4px; font-size: 10px; } .lessbtn .lb-l { display: none; } .lessbtn .lb-s { display: inline; }
   .tmeter .ag-m { display: block; font-size: 10px; font-weight: 600; color: var(--ink-2); }
   .tasks td:nth-child(6) .tmeter { width: 80px; }
   .tasks td, .tasks th { font-size: 10px; }
@@ -598,7 +601,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
         time = meter(t.minutes, t.limit, 0, t.limit && t.minutes > t.limit ? "over" : "ok");
       }
       var total = ags.length > 1 ? "Total de la tarea: " + t.minutes + " min · asignado al inicio: " + t.limit + " min" : "";
-      var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '">Lecciones (' + nl + ")</button>" : "";
+      var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '" title="Ver lecciones y soluciones de esta tarea"><span class="lb-l">Lecciones (' + nl + ')</span><span class="lb-s">📖' + nl + "</span></button>" : "";
       return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
         '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + (total ? "<br><b>" + esc(total) + "</b>" : "") + "</div></details></td>" +
         "<td>" + resp + '</td><td class="num hide-sm">' + tries + '</td><td' + (total ? ' title="' + esc(total) + '"' : "") + ">" + time + "</td></tr>";
