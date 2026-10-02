@@ -1,26 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:13:17.198650Z",
+ "generatedUtc": "2026-10-02T05:22:14.268299Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 05:10 UTC",
+  "updated": "2026-10-02 05:16 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 está Bloqueada tras superar el límite de 90 minutos. Esperar la decisión de Oscar sobre HZ-19; después reabrir E2-04 con reabrir-tarea y realizar solo el diagnóstico elegido. No publicar.",
+  "nextAction": "E2-04 sigue Bloqueada; falta la elección de Oscar en HZ-19 para retomar el diagnóstico. Las tareas E2-05 en adelante dependen de E2-04.",
   "needsOscar": [
    {
     "ref": "HZ-19",
     "text": "elige el diagnóstico de E2-04. A) quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregarlo y probar con un aviso de éxito/error (recomendada por coincidir con la sospecha de Copilot y la evidencia ya prevista). B) mantener el vínculo actual, agregar avisos de diagnóstico y comprobar nombre del flow, conexión y entorno antes de cambiarlo. Al responder: registraré tu opción, reabriré E2-04 con reabrir-tarea y haré esa comprobación."
-   },
-   {
-    "ref": "T-23",
-    "text": "revisa Listo para Codex a 1366 px y 390 px; comprueba que el mensaje copiado empieza por $cerrar-pendientes y que cerrar y seguir termina con la frase prevista. Responde T-23 OK o indica el cambio. Al responder: actualizo T-23 según el resultado y sigo con T-24."
    }
   ],
   "blockers": [],
   "current": [
+   "T-23, intento 3 iniciado 2026-10-02 05:16 UTC y cerrado 05:16 como HECHA (0 min): Oscar confirmó en issue #12 la prueba del grupo Listo para Codex a 1366 px y 390 px y el contenido de los dos mensajes. Cerré T-23; sin cambios en la app.",
    "E2-04, intento 14 iniciado 2026-10-02 05:07 UTC y cerrado 05:10 como BLOQUEADA (3 min; total 91/90). M365 Copilot Chat recomendó como hipótesis un vínculo antiguo: quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregar el flow y probar con un aviso de éxito/error. No apliqué cambios porque se superó el límite. Al cierre, el publicador volvió a fallar al escribir publish.log (acceso denegado; KF-H04).",
    "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app. El publicador regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado; KF-H04).",
    "E2-04, intento 12 iniciado 2026-10-02 04:57 UTC y cerrado 05:00 como ESPERA/NAVEGADOR. Edge lista Studio como Editing, pero el conector informa que la pestaña ya pertenece a otra sesión; no modifiqué la app. El publicador regeneró dashboard/data.js; falló al escribir publish.log (acceso denegado; KF-H04).",
@@ -38,7 +35,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T05:12:45.991579Z",
+  "fileUtc": "2026-10-02T05:18:19.771779Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
@@ -393,7 +390,7 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 22,
+   "done": 23,
    "total": 25,
    "detailed": true,
    "active": false,
@@ -1339,13 +1336,12 @@ window.PFA_DATA = {
     "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
     "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
     "limit": 30,
-    "status": "Por validar",
-    "attempts": 2,
+    "status": "Hecha",
+    "attempts": 3,
     "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:04:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T04:04:00Z"
    },
    {
     "id": "T-24",
@@ -1379,22 +1375,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "T-23",
-  "action": "Listo para Codex: instalar cerrar-pendientes, aplicar el parche aprobado del tablero, actualizar AGENTS.md y cancelar T-11 como reemplazada",
-  "owner": "Agente",
-  "depends": "—",
-  "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
-  "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
-  "limit": 30,
-  "status": "Por validar",
-  "attempts": 2,
-  "minutes": 6,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "2026-10-02T04:04:00Z",
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E2-04",
@@ -2269,6 +2250,21 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-02T05:05:00Z"
   },
   {
+   "id": "T-23",
+   "action": "Listo para Codex: instalar cerrar-pendientes, aplicar el parche aprobado del tablero, actualizar AGENTS.md y cancelar T-11 como reemplazada",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
+   "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 6,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T04:04:00Z"
+  },
+  {
    "id": "T-24",
    "action": "Copilot del diseñador: actualizar la regla anti-bucle y registrar la limitación de connection references",
    "owner": "Agente",
@@ -2312,7 +2308,7 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 44,
+  "tasksDone": 45,
   "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
@@ -2323,10 +2319,10 @@ window.PFA_DATA = {
    "total": 1065
   },
   "last24h": {
-   "prod": 279,
+   "prod": 272,
    "unprod": 87,
    "wait": 320,
-   "total": 686
+   "total": 679
   },
   "last7d": {
    "prod": 650,
@@ -2581,7 +2577,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "DOCUMENTACION",
    "summary": "Oscar confirmó que completó la validación visual",
-   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto."
+   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto.2026-10-02 05:16,2026-10-02 05:16,0,personal,T,T-23,3,HECHA,OTRO,Oscar confirmó la prueba de Listo para Codex\""
   },
   {
    "start": "2026-10-02T05:02:00Z",
@@ -2713,7 +2709,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "DOCUMENTACION",
    "summary": "Oscar confirmó que completó la validación visual",
-   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto."
+   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto.2026-10-02 05:16,2026-10-02 05:16,0,personal,T,T-23,3,HECHA,OTRO,Oscar confirmó la prueba de Listo para Codex\""
   },
   {
    "start": "2026-10-02T05:02:00Z",
