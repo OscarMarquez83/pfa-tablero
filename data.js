@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T23:13:16.808570Z",
+ "generatedUtc": "2026-10-02T23:27:17.335807Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -264,10 +264,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 207,
+    "prod": 287,
     "unprod": 98,
     "wait": 54,
-    "total": 359
+    "total": 439
    }
   },
   {
@@ -1185,16 +1185,16 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 0,
-    "minutes": 0,
+    "attempts": 1,
+    "minutes": 80,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-02T21:30:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 80,
       "limit": 90,
       "extra": 0,
       "finished": false,
@@ -2580,16 +2580,16 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "En curso",
-  "attempts": 0,
-  "minutes": 0,
+  "attempts": 1,
+  "minutes": 80,
   "entrega": "E2",
   "fails": 0,
-  "lastActivity": "",
+  "lastActivity": "2026-10-02T21:30:00Z",
   "byAgent": [
    {
-    "agent": "Codex",
-    "attempts": 0,
-    "minutes": 0,
+    "agent": "Claude",
+    "attempts": 1,
+    "minutes": 80,
     "limit": 90,
     "extra": 0,
     "finished": false,
@@ -2615,16 +2615,16 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 0,
-   "minutes": 0,
+   "attempts": 1,
+   "minutes": 80,
    "entrega": "E2",
    "fails": 0,
-   "lastActivity": "",
+   "lastActivity": "2026-10-02T21:30:00Z",
    "byAgent": [
     {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 80,
      "limit": 90,
      "extra": 0,
      "finished": false,
@@ -4894,28 +4894,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 823,
+   "prod": 903,
    "unprod": 100,
    "wait": 66,
-   "total": 989
+   "total": 1069
   },
   "last24h": {
-   "prod": 251,
+   "prod": 331,
    "unprod": 72,
    "wait": 47,
-   "total": 370
+   "total": 450
   },
   "last7d": {
-   "prod": 823,
+   "prod": 903,
    "unprod": 100,
    "wait": 66,
-   "total": 989
+   "total": 1069
   },
   "product": {
-   "prod": 480,
+   "prod": 560,
    "unprod": 98,
    "wait": 58,
-   "total": 636
+   "total": 716
   },
   "support": {
    "prod": 343,
@@ -5005,7 +5005,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 251,
+   "prod": 331,
    "unprod": 72,
    "wait": 47
   }
@@ -5074,6 +5074,13 @@ window.PFA_DATA = {
    "total": 99
   },
   {
+   "task": "E2-05",
+   "prod": 80,
+   "unprod": 0,
+   "wait": 0,
+   "total": 80
+  },
+  {
    "task": "T-30",
    "prod": 47,
    "unprod": 0,
@@ -5114,13 +5121,6 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 24
-  },
-  {
-   "task": "T-15",
-   "prod": 23,
-   "unprod": 0,
-   "wait": 0,
-   "total": 23
   }
  ],
  "byAccount": [
@@ -5130,7 +5130,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 139
+   "minutes": 219
   },
   {
    "account": "empresa",
@@ -5138,6 +5138,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T20:10:00Z",
+   "minutes": 80,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Configuration a mano (D-045): OnVisible, galería de carpetas nuevas, etiqueta de ruta, botones Project y Part of parent project; intento cortado por límite de uso de Claude. Incluye espera de login (AUTH) sin hora medida",
+   "evidence": "App checker 0 errores en Configuration; faltan Not a project, Scan D-042, Reviewed, View code, pruebas y publicar"
+  },
   {
    "start": "2026-10-02T19:16:00Z",
    "minutes": 37,
@@ -5254,22 +5267,22 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "Reapertura (Claude): causa raíz = OnSelect leía .foldersJson y el Respond expone foldersjson (minúsculas); error de compilación impedía ejecutar OnSelect. Fórmula mínima ejecutó el flow; fórmula completa desde YAML",
    "evidence": "Run de prueba Succeeded 25 carpetas; preview mostró Flow returned 8461 characters; App checker sin errores en Configuration; escaneo 1 falló con Field MailboxKey is required (0 filas). Límites de hora aproximados por tiempos de runs y publicación"
-  },
-  {
-   "start": "2026-10-02T12:09:00Z",
-   "minutes": 12,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 18,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
-   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub commit 965dd929 y data.js generatedUtc 12:19:17 confirmados; Pages no verificado; app sin cambios"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T20:10:00Z",
+   "minutes": 80,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Configuration a mano (D-045): OnVisible, galería de carpetas nuevas, etiqueta de ruta, botones Project y Part of parent project; intento cortado por límite de uso de Claude. Incluye espera de login (AUTH) sin hora medida",
+   "evidence": "App checker 0 errores en Configuration; faltan Not a project, Scan D-042, Reviewed, View code, pruebas y publicar"
+  },
   {
    "start": "2026-10-02T19:16:00Z",
    "minutes": 37,
