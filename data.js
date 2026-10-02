@@ -1,29 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T00:34:14.293165Z",
+ "generatedUtc": "2026-10-02T00:40:14.413593Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 00:26 UTC",
+  "updated": "2026-10-02 00:37 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "localizar el flow de E2-02 en la lista autenticada de Power Automate y revisar Peek code antes de editarlo; quedan 8 minutos efectivos en la tarea.",
-  "needsOscar": [
-   {
-    "ref": "",
-    "text": "Issues de Oscar procesados: #8 amplía HZ-11 a evaluar móvil/tableta horizontal y crea E2-11; #9 confirma inicio de sesión; #10 confirma reinicio de Codex para T-14. Registrados; #8–#10 comentados y cerrados."
-   },
-   {
-    "ref": "",
-    "text": "E2-11 quedó pendiente y el alcance de E2 pasó a 11 tareas. T-14 sigue Hecha; Oscar confirmó el reinicio de Codex.\\n\\n- E2-11 quedó pendiente y el alcance de E2 pasó a 11 tareas. T-14 sigue Hecha; Oscar confirmó el reinicio de Codex."
-   }
-  ],
+  "nextAction": "Completar E2-02 con los 30 minutos adicionales autorizados; después avanzar por las tareas E2 en orden.",
+  "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. La sesión renovada ya permite abrir My flows en Edge y en el navegador integrado. My flows autenticado muestra 20 flows, pero búsqueda de PFA_E2_LeerCarpetas: cero resultados. Creé un flow nuevo con Power Apps (V2), añadí Office 365 Outlook “Send an HTTP request”; Peek code confirma Send_an_HTTP_request. Configuré URI /me/mailFolders. Al guardar, el diseñador muestra “Saving…” sin confirmación. Acumulado E2-02: 86/90 min efectivos."
+   "E2-02, intento 12: iniciado 2026-10-02 00:37 UTC. Oscar pidió continuar para completar toda E2; lo tomo como autorización de la opción A de HZ-12, con 30 minutos adicionales y conservando D-028. Comprobaré el guardado y la ejecución del flow, revisaré JSON/conteo y Flow Checker. Al reanudar, el diseñador muestra “Your flow is ready to go” y el URI Graph absoluto; aún falta una nueva ejecución exitosa."
   ],
-  "fileUtc": "2026-10-02T00:29:46.128525Z",
+  "fileUtc": "2026-10-02T00:38:04.670403Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -240,9 +231,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 64,
-    "unprod": 26,
+    "unprod": 30,
     "wait": 7,
-    "total": 97
+    "total": 101
    }
   },
   {
@@ -704,12 +695,12 @@ window.PFA_DATA = {
     "expected": "La app puede pedir al flow las carpetas",
     "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
-    "status": "Reabierta",
-    "attempts": 11,
-    "minutes": 86,
+    "status": "En curso",
+    "attempts": 12,
+    "minutes": 90,
     "entrega": "E2",
-    "fails": 4,
-    "lastActivity": "2026-10-02T00:30:00Z",
+    "fails": 5,
+    "lastActivity": "2026-10-02T00:34:00Z",
     "ready": true
    },
    {
@@ -1315,12 +1306,12 @@ window.PFA_DATA = {
   "expected": "La app puede pedir al flow las carpetas",
   "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
   "limit": 90,
-  "status": "Reabierta",
-  "attempts": 11,
-  "minutes": 86,
+  "status": "En curso",
+  "attempts": 12,
+  "minutes": 90,
   "entrega": "E2",
-  "fails": 4,
-  "lastActivity": "2026-10-02T00:30:00Z",
+  "fails": 5,
+  "lastActivity": "2026-10-02T00:34:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1332,12 +1323,12 @@ window.PFA_DATA = {
    "expected": "La app puede pedir al flow las carpetas",
    "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
-   "status": "Reabierta",
-   "attempts": 11,
-   "minutes": 86,
+   "status": "En curso",
+   "attempts": 12,
+   "minutes": 90,
    "entrega": "E2",
-   "fails": 4,
-   "lastActivity": "2026-10-02T00:30:00Z",
+   "fails": 5,
+   "lastActivity": "2026-10-02T00:34:00Z",
    "ready": true
   },
   {
@@ -2140,7 +2131,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-02",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (11 intentos previos)",
+   "reason": "5 intentos sin avance",
    "level": "serious"
   }
  ],
@@ -2151,27 +2142,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 578,
-   "unprod": 28,
+   "unprod": 32,
    "wait": 19,
-   "total": 625
+   "total": 629
   },
   "last24h": {
-   "prod": 376,
-   "unprod": 28,
+   "prod": 357,
+   "unprod": 32,
    "wait": 13,
-   "total": 417
+   "total": 402
   },
   "last7d": {
    "prod": 578,
-   "unprod": 28,
+   "unprod": 32,
    "wait": 19,
-   "total": 625
+   "total": 629
   },
   "product": {
    "prod": 337,
-   "unprod": 26,
+   "unprod": 30,
    "wait": 11,
-   "total": 374
+   "total": 378
   },
   "support": {
    "prod": 241,
@@ -2262,15 +2253,15 @@ window.PFA_DATA = {
   {
    "date": "2026-10-02",
    "prod": 6,
-   "unprod": 0,
+   "unprod": 4,
    "wait": 0
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 25,
-   "attempts": 3
+   "minutes": 29,
+   "attempts": 4
   },
   {
    "category": "AUTH",
@@ -2313,9 +2304,9 @@ window.PFA_DATA = {
   {
    "task": "E2-02",
    "prod": 60,
-   "unprod": 26,
+   "unprod": 30,
    "wait": 2,
-   "total": 88
+   "total": 92
   },
   {
    "task": "T-16",
@@ -2377,7 +2368,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 605
+   "minutes": 609
   },
   {
    "account": "empresa",
@@ -2385,6 +2376,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:30:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Flow nuevo con trigger Power Apps V2, consulta y respuesta; prueba BadRequest por URI; corrección absoluta quedó en Saving al alcanzar 90 minutos",
+   "evidence": "Flow Checker 0; primer run Test failed; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; URI absoluta configurada sin confirmación de guardado"
+  },
   {
    "start": "2026-10-02T00:29:00Z",
    "minutes": 1,
@@ -2501,22 +2505,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Parche de Claude para selección de entregas y vista de T",
    "evidence": "Pages: E0 9; E3 8; T 4 abiertas/15 hechas y desplegable probado; desktop 1366 y móvil 390 sin overflow ni texto cortado; tmp/evidencia/T-19"
-  },
-  {
-   "start": "2026-10-01T17:10:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-18",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
-   "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:30:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Flow nuevo con trigger Power Apps V2, consulta y respuesta; prueba BadRequest por URI; corrección absoluta quedó en Saving al alcanzar 90 minutos",
+   "evidence": "Flow Checker 0; primer run Test failed; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; URI absoluta configurada sin confirmación de guardado"
+  },
   {
    "start": "2026-10-02T00:29:00Z",
    "minutes": 1,
@@ -3620,6 +3624,14 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "E2",
    "status": "Incorporado en E2-11"
+  },
+  {
+   "id": "HZ-12",
+   "date": "2026-10-02",
+   "text": "E2-02 llegó al límite de 90 minutos; Oscar autorizó continuar 30 minutos para completar y probar el flow, manteniendo D-028",
+   "found": "Oscar",
+   "target": "E2",
+   "status": "Resuelto (mini-spec en control/specs/HZ-12.md)"
   }
  ]
 };
