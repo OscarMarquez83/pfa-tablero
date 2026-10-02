@@ -1,18 +1,19 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:40:15.078822Z",
+ "generatedUtc": "2026-10-02T01:49:14.710211Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 01:38 UTC",
+  "updated": "2026-10-02 01:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Continuar E2-04, intento 4: implementar ruta A con Parse JSON y Append to array variable; conservar D-028/D-033.",
+  "nextAction": "Continuar E2-04, intento 5: generar el esquema de Parse JSON usando la herramienta de muestra del diseñador, guardar y comprobar el Flow Checker.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 4 iniciado 01:38 UTC: registrar D-035 y reconstruir el recorrido en Power Automate con Parse JSON y Append to array variable. Comprobar Flow Checker, run Succeeded y JSON de niveles 1–3; el botón y Patch se validarán después en Configuration.",
+   "E2-04, intento 5 iniciado 01:45 UTC: intentar generar el esquema con un ejemplo de respuesta de Outlook desde el diseñador. Comprobar que se registra al guardar y que Flow Checker lo acepta.",
+   "E2-04, intento 4 iniciado 01:38 UTC y cerrado 01:44 UTC: registré D-035, agregué Initialize variable y Parse JSON, y escribí el esquema. El diseñador muestra el esquema, pero al guardar informa “Schema is required”; no hay run Succeeded. D-028/D-033 se conservan. El intento queda como AVANCE.",
    "E2-03, intento 1: repetí el run después de iniciar la tarea. Estado Succeeded, HTTP 200; historial muestra JSON con 8 carpetas nivel 1. Auditoría 2/2 OK.",
    "E2-02, intento 12: tras autorizar 30 minutos adicionales, guardé GET Inbox/childFolders con $top=100 y $select=id,displayName,totalItemCount. Flow Checker 0 errores/0 advertencias. El run Succeeded devolvió JSON con 8 carpetas directas bajo Inbox; la respuesta y conteo se ven en el historial. E2-02 cumple su evidencia de cierre. La ruta hacia Projects y niveles 2–3 se completará en E2-04.",
    "E2-02, intento 11: D-028 confirmado; D-031 reemplazado por D-033; alcance de E2 y evidencia de E2-03 alineados con respuesta JSON y escaneo manual. Microsoft Learn revisado. Oscar renovó la sesión. Edge e integrado abren My flows; la búsqueda autenticada confirma cero resultados para PFA_E2_LeerCarpetas. El flow no se modificó. Publicación remota no confirmada (KF-H04).",
@@ -47,7 +48,7 @@ window.PFA_DATA = {
    "T-05 actualizó la referencia horaria de AGENTS.md. Las dos automatizaciones Codex, REVISOR.md y D-015 ya muestran los seis horarios cada 4 horas; no hizo falta cambiar las automatizaciones.",
    "La tarea PFA Tablero quedó registrada y corrió: PT15M, IgnoreNew, PT5M, LastTaskResult = 0."
   ],
-  "fileUtc": "2026-10-02T01:38:55.864728Z",
+  "fileUtc": "2026-10-02T01:45:37.229893Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -263,10 +264,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 85,
+    "prod": 91,
     "unprod": 37,
     "wait": 7,
-    "total": 129
+    "total": 135
    }
   },
   {
@@ -759,11 +760,11 @@ window.PFA_DATA = {
     "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
     "limit": 90,
     "status": "En curso",
-    "attempts": 4,
-    "minutes": 19,
+    "attempts": 5,
+    "minutes": 25,
     "entrega": "E2",
     "fails": 2,
-    "lastActivity": "2026-10-02T01:12:00Z",
+    "lastActivity": "2026-10-02T01:44:00Z",
     "ready": true
    },
    {
@@ -1338,11 +1339,11 @@ window.PFA_DATA = {
   "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
   "limit": 90,
   "status": "En curso",
-  "attempts": 4,
-  "minutes": 19,
+  "attempts": 5,
+  "minutes": 25,
   "entrega": "E2",
   "fails": 2,
-  "lastActivity": "2026-10-02T01:12:00Z",
+  "lastActivity": "2026-10-02T01:44:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1355,11 +1356,11 @@ window.PFA_DATA = {
    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
    "limit": 90,
    "status": "En curso",
-   "attempts": 4,
-   "minutes": 19,
+   "attempts": 5,
+   "minutes": 25,
    "entrega": "E2",
    "fails": 2,
-   "lastActivity": "2026-10-02T01:12:00Z",
+   "lastActivity": "2026-10-02T01:44:00Z",
    "ready": true
   },
   {
@@ -2202,28 +2203,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 599,
+   "prod": 605,
    "unprod": 39,
    "wait": 19,
-   "total": 657
+   "total": 663
   },
   "last24h": {
    "prod": 344,
-   "unprod": 39,
+   "unprod": 37,
    "wait": 13,
-   "total": 396
+   "total": 394
   },
   "last7d": {
-   "prod": 599,
+   "prod": 605,
    "unprod": 39,
    "wait": 19,
-   "total": 657
+   "total": 663
   },
   "product": {
-   "prod": 358,
+   "prod": 364,
    "unprod": 37,
    "wait": 11,
-   "total": 406
+   "total": 412
   },
   "support": {
    "prod": 241,
@@ -2313,7 +2314,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 27,
+   "prod": 33,
    "unprod": 11,
    "wait": 0
   }
@@ -2398,6 +2399,13 @@ window.PFA_DATA = {
    "total": 29
   },
   {
+   "task": "E2-04",
+   "prod": 18,
+   "unprod": 7,
+   "wait": 0,
+   "total": 25
+  },
+  {
    "task": "E1-06",
    "prod": 24,
    "unprod": 0,
@@ -2417,19 +2425,12 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 19
-  },
-  {
-   "task": "E2-04",
-   "prod": 12,
-   "unprod": 7,
-   "wait": 0,
-   "total": 19
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 618
+   "minutes": 624
   },
   {
    "account": "empresa",
@@ -2437,6 +2438,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T01:38:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Ruta A: agregué Parse JSON y definí el esquema; el diseñador no lo registra al guardar",
+   "evidence": "Auditoría: el esquema aparece en pantalla; al guardar informa Schema is required. Sin Flow Checker válido ni run. Captura del estado en esta conversación"
+  },
   {
    "start": "2026-10-02T01:10:00Z",
    "minutes": 2,
@@ -2553,22 +2567,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Integré respuesta de Oscar sobre HZ-11 como tarea E2-11 y actualicé su mini-spec",
    "evidence": "PLAN asigna evaluación horizontal a E2-11; decisión vertical D-018 preservada"
-  },
-  {
-   "start": "2026-10-01T20:52:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Power Automate vuelve a pedir inicio de sesión al navegar",
-   "evidence": "Home mostró Hello, Oscar; al usar navegación apareció Sign in required / AADSTS160021; flow intacto"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T01:38:00Z",
+   "minutes": 6,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Ruta A: agregué Parse JSON y definí el esquema; el diseñador no lo registra al guardar",
+   "evidence": "Auditoría: el esquema aparece en pantalla; al guardar informa Schema is required. Sin Flow Checker válido ni run. Captura del estado en esta conversación"
+  },
   {
    "start": "2026-10-02T01:10:00Z",
    "minutes": 2,
