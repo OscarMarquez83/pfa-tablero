@@ -1,18 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:28:18.075667Z",
+ "generatedUtc": "2026-10-02T03:34:20.453361Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:26 UTC",
+  "updated": "2026-10-02 03:31 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "registrar las cuatro mini-specs aprobadas y sus tareas T; después retomar E2-04 por Camino 1.",
+  "nextAction": "resolver la referencia de conexión faltante del flow; probar Scan folders en preview y verificar la primera y segunda escritura antes de continuar E2-05.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T03:27:11.874079Z",
+  "current": [
+   "E2-04, intento 8 iniciado 2026-10-02 03:26 UTC. Camino 1 completado: se quitó y volvió a agregar el flow después de guardar y reabrir Studio; la app guardó sin publicar y reconoce foldersJson. El clic en preview no generó una ejecución. Detalles del flow muestran una conexión Office 365 Outlook, mientras el editor reporta otra referencia de conexión ausente. Próximo paso: reconciliar esa referencia sin cambiar la arquitectura ni publicar; comprobar ejecución y escrituras sin duplicados.",
+   "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
+   "Avance 03:31 UTC: captura de pantalla completa en tmp/evidencia/E2-04/pantalla-completa-leave-site.png; Edge respondió y Studio quedó en Configuration. No se observó el diálogo Leave site; Escape volvió de preview al editor. No guardé ni descarté ni cerré Studio. Confirmé el solapamiento de Scan folders con Mail folders y moví el botón en YAML debajo del título; falta pegarlo y verificar en Studio."
+  ],
+  "fileUtc": "2026-10-02T03:32:34.591152Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -228,10 +232,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 91,
+    "prod": 95,
     "unprod": 79,
-    "wait": 310,
-    "total": 480
+    "wait": 311,
+    "total": 485
    }
   },
   {
@@ -368,7 +372,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 18,
-   "total": 21,
+   "total": 25,
    "detailed": true,
    "active": false,
    "time": {
@@ -724,11 +728,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 7,
-    "minutes": 67,
+    "attempts": 8,
+    "minutes": 71,
     "entrega": "E2",
     "fails": 3,
-    "lastActivity": "2026-10-02T03:26:00Z",
+    "lastActivity": "2026-10-02T03:31:00Z",
     "ready": true
    },
    {
@@ -1291,6 +1295,70 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T19:20:00Z"
+   },
+   {
+    "id": "T-22",
+    "action": "Ideas cerradas: agregar Cierre, completar HZ-01 a HZ-13 desde registros existentes, corregir HZ-12 y la referencia a HZ-11 en T-21",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
+    "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
+   },
+   {
+    "id": "T-23",
+    "action": "Listo para Codex: instalar cerrar-pendientes, aplicar el parche aprobado del tablero, actualizar AGENTS.md y cancelar T-11 como reemplazada",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
+    "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
+   },
+   {
+    "id": "T-24",
+    "action": "Copilot del diseñador: actualizar la regla anti-bucle y registrar la limitación de connection references",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Las fallas de flows consultan Learn y al Copilot adecuado según el intento",
+    "evidence": "- [ ] En la 2.ª falla de un flujo, el worklog muestra primero la consulta a Microsoft Learn (resumen y URL) y después la pregunta al Copilot del diseñador, armada con lo que dijo Learn.<br>- [ ] Cada consulta al Copilot del diseñador tiene su línea en worklog: pregunta resumida y si cambió el flujo o solo respondió.<br>- [ ] Si Copilot cambió el flujo, Codex lo revisa en Code view antes de guardar; si no sirve o agrega acciones Premium o que requieran permisos (D-027), lo deshace sin guardar.<br>- [ ] Si Copilot responde que no puede (por ejemplo \"Failed to add actions…\"), cuenta como intento fallido y Codex no se lo vuelve a pedir más de una vez.",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
+   },
+   {
+    "id": "T-25",
+    "action": "Diálogo nativo del navegador: agregar captura de pantalla, reglas de cierre seguras y prueba local en Edge y navegador integrado",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
+    "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
+    "limit": 30,
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
@@ -1303,11 +1371,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 7,
-  "minutes": 67,
+  "attempts": 8,
+  "minutes": 71,
   "entrega": "E2",
   "fails": 3,
-  "lastActivity": "2026-10-02T03:26:00Z",
+  "lastActivity": "2026-10-02T03:31:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1320,11 +1388,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 7,
-   "minutes": 67,
+   "attempts": 8,
+   "minutes": 71,
    "entrega": "E2",
    "fails": 3,
-   "lastActivity": "2026-10-02T03:26:00Z",
+   "lastActivity": "2026-10-02T03:31:00Z",
    "ready": true
   },
   {
@@ -2163,32 +2231,32 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 40,
-  "tasksTotal": 59,
+  "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 605,
+   "prod": 609,
    "unprod": 81,
-   "wait": 322,
-   "total": 1008
+   "wait": 323,
+   "total": 1013
   },
   "last24h": {
-   "prod": 344,
+   "prod": 348,
    "unprod": 79,
-   "wait": 316,
-   "total": 739
+   "wait": 317,
+   "total": 744
   },
   "last7d": {
-   "prod": 605,
+   "prod": 609,
    "unprod": 81,
-   "wait": 322,
-   "total": 1008
+   "wait": 323,
+   "total": 1013
   },
   "product": {
-   "prod": 364,
+   "prod": 368,
    "unprod": 79,
-   "wait": 314,
-   "total": 757
+   "wait": 315,
+   "total": 762
   },
   "support": {
    "prod": 241,
@@ -2278,9 +2346,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 33,
+   "prod": 37,
    "unprod": 53,
-   "wait": 303
+   "wait": 304
   }
  ],
  "categories": [
@@ -2308,7 +2376,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "NAVEGADOR",
-   "minutes": 305
+   "minutes": 306
   },
   {
    "category": "AUTH",
@@ -2322,10 +2390,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 18,
+   "prod": 22,
    "unprod": 49,
-   "wait": 303,
-   "total": 370
+   "wait": 304,
+   "total": 375
   },
   {
    "task": "E1-05",
@@ -2394,7 +2462,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 666
+   "minutes": 671
   },
   {
    "account": "empresa",
@@ -2402,6 +2470,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T03:30:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 8,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo Leave site",
+   "evidence": "Captura tmp/evidencia/E2-04/pantalla-completa-leave-site.png; no se observó el diálogo; Escape regresó de preview al editor; Studio sigue abierto sin guardar ni descartar"
+  },
+  {
+   "start": "2026-10-02T03:26:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Camino 1 aplicado y app guardada sin publicar; el botón no inicia el flow.",
+   "evidence": "Auditoría 2/5 OK: flujo quitado y agregado tras reabrir Studio; Power Apps reconoce foldersJson. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia de conexión ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión de referencia y el trigger."
+  },
   {
    "start": "2026-10-02T03:15:00Z",
    "minutes": 0,
@@ -2505,35 +2599,35 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Run Succeeded, HTTP 200 y JSON de 8 carpetas nivel 1 visible en historial",
    "evidence": "Auditoría 2/2 OK: estado Succeeded y JSON/conteo visibles en historial del run"
-  },
-  {
-   "start": "2026-10-02T00:37:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 12,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Recuperé el guardado y corregí la consulta a Inbox/childFolders con campos y límite explícitos",
-   "evidence": "Auditoría 3/3 OK: Flow Checker 0/0; run Succeeded; JSON visible con 8 carpetas directas bajo Inbox"
-  },
-  {
-   "start": "2026-10-02T00:30:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Flow nuevo con trigger Power Apps V2, consulta y respuesta; prueba BadRequest por URI; corrección absoluta quedó en Saving al alcanzar 90 minutos",
-   "evidence": "Flow Checker 0; primer run Test failed; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; URI absoluta configurada sin confirmación de guardado"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T03:30:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 8,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo Leave site",
+   "evidence": "Captura tmp/evidencia/E2-04/pantalla-completa-leave-site.png; no se observó el diálogo; Escape regresó de preview al editor; Studio sigue abierto sin guardar ni descartar"
+  },
+  {
+   "start": "2026-10-02T03:26:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Camino 1 aplicado y app guardada sin publicar; el botón no inicia el flow.",
+   "evidence": "Auditoría 2/5 OK: flujo quitado y agregado tras reabrir Studio; Power Apps reconoce foldersJson. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia de conexión ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión de referencia y el trigger."
+  },
   {
    "start": "2026-10-02T03:15:00Z",
    "minutes": 0,
@@ -3791,6 +3885,38 @@ window.PFA_DATA = {
    "found": "Codex en E2-04",
    "target": "E2",
    "status": "Incorporado en E2-04"
+  },
+  {
+   "id": "HZ-15",
+   "date": "2026-10-02",
+   "text": "Ver el cierre de cada idea o hallazgo asignado (mini-spec en control/specs/HZ-15.md)",
+   "found": "Oscar en Claude",
+   "target": "T",
+   "status": "Asignado"
+  },
+  {
+   "id": "HZ-16",
+   "date": "2026-10-02",
+   "text": "Detectar pendientes listos para que Oscar los envíe a Codex con un mensaje (mini-spec en control/specs/HZ-16.md)",
+   "found": "Oscar en Claude",
+   "target": "T",
+   "status": "Asignado"
+  },
+  {
+   "id": "HZ-17",
+   "date": "2026-10-02",
+   "text": "Consultar primero Learn y después al Copilot del diseñador de flows desde la segunda falla (mini-spec en control/specs/HZ-17.md)",
+   "found": "Oscar en Claude",
+   "target": "T",
+   "status": "Asignado"
+  },
+  {
+   "id": "HZ-18",
+   "date": "2026-10-02",
+   "text": "Detectar y resolver diálogos nativos del navegador antes de declarar que no responde (mini-spec en control/specs/HZ-18.md)",
+   "found": "Oscar en Claude",
+   "target": "T",
+   "status": "Asignado"
   }
  ]
 };
