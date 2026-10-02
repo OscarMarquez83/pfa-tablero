@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T00:40:14.413593Z",
+ "generatedUtc": "2026-10-02T00:46:14.619163Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 00:37 UTC",
+  "updated": "2026-10-02 00:44 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar E2-02 con los 30 minutos adicionales autorizados; después avanzar por las tareas E2 en orden.",
+  "nextAction": "Completar E2-03: repetir el run y confirmar en el historial el JSON y el conteo.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-02, intento 12: iniciado 2026-10-02 00:37 UTC. Oscar pidió continuar para completar toda E2; lo tomo como autorización de la opción A de HZ-12, con 30 minutos adicionales y conservando D-028. Comprobaré el guardado y la ejecución del flow, revisaré JSON/conteo y Flow Checker. Al reanudar, el diseñador muestra “Your flow is ready to go” y el URI Graph absoluto; aún falta una nueva ejecución exitosa."
+   "E2-03, intento 1: iniciado 2026-10-02 00:44 UTC. Ejecutaré PFA_E2_LeerCarpetas y comprobaré en el historial que terminó Succeeded, que la respuesta es JSON y que el conteo de carpetas de nivel 1 es visible."
   ],
-  "fileUtc": "2026-10-02T00:38:04.670403Z",
+  "fileUtc": "2026-10-02T00:44:40.254615Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -225,15 +225,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 1,
+   "done": 2,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 64,
+    "prod": 71,
     "unprod": 30,
     "wait": 7,
-    "total": 101
+    "total": 108
    }
   },
   {
@@ -695,13 +695,12 @@ window.PFA_DATA = {
     "expected": "La app puede pedir al flow las carpetas",
     "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 12,
-    "minutes": 90,
+    "minutes": 97,
     "entrega": "E2",
     "fails": 5,
-    "lastActivity": "2026-10-02T00:34:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T00:44:00Z"
    },
    {
     "id": "E2-03",
@@ -717,11 +716,11 @@ window.PFA_DATA = {
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-04",
-    "action": "Extender PFA_E2_LeerCarpetas a niveles 2 y 3 y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+    "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
     "owner": "Agente",
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
@@ -1299,38 +1298,22 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-02",
-  "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
+  "id": "E2-03",
+  "action": "Ejecutar el flow una vez y comprobar su respuesta JSON de carpetas de nivel 1",
   "owner": "Agente",
-  "depends": "E2-01",
-  "expected": "La app puede pedir al flow las carpetas",
-  "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
-  "limit": 90,
-  "status": "En curso",
-  "attempts": 12,
-  "minutes": 90,
+  "depends": "E2-02",
+  "expected": "JSON visible con una entrada por carpeta de nivel 1",
+  "evidence": "Run Succeeded; JSON y conteo de carpetas visibles en el historial del run",
+  "limit": 20,
+  "status": "Pendiente",
+  "attempts": 0,
+  "minutes": 0,
   "entrega": "E2",
-  "fails": 5,
-  "lastActivity": "2026-10-02T00:34:00Z",
+  "fails": 0,
+  "lastActivity": "",
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E2-02",
-   "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
-   "owner": "Agente",
-   "depends": "E2-01",
-   "expected": "La app puede pedir al flow las carpetas",
-   "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
-   "limit": 90,
-   "status": "En curso",
-   "attempts": 12,
-   "minutes": 90,
-   "entrega": "E2",
-   "fails": 5,
-   "lastActivity": "2026-10-02T00:34:00Z",
-   "ready": true
-  },
   {
    "id": "E2-03",
    "action": "Ejecutar el flow una vez y comprobar su respuesta JSON de carpetas de nivel 1",
@@ -1345,11 +1328,11 @@ window.PFA_DATA = {
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-04",
-   "action": "Extender PFA_E2_LeerCarpetas a niveles 2 y 3 y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+   "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
    "owner": "Agente",
    "depends": "E2-03",
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
@@ -1547,6 +1530,22 @@ window.PFA_DATA = {
    "expected": "Oscar ve los correos de cada proyecto",
    "evidence": "Los 5 correos visibles en PFA-Prueba",
    "limit": 90,
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "E3",
+   "fails": 0,
+   "lastActivity": "",
+   "ready": false
+  },
+  {
+   "id": "E3-06",
+   "action": "Ejecutar el flujo sin SoloCarpeta (todas las carpetas activas)",
+   "owner": "Agente",
+   "depends": "E3-05",
+   "expected": "Correos reales cargados",
+   "evidence": "Run Succeeded; conteo de correos por carpeta en worklog, con carpetas numeradas y sin nombres",
+   "limit": 30,
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
@@ -1858,6 +1857,21 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-01T11:25:00Z"
   },
   {
+   "id": "E2-02",
+   "action": "Crear PFA_E2_LeerCarpetas con trigger Power Apps (V2). Office 365 Outlook identifica las carpetas bajo Inbox/Projects y devuelve JSON mediante Respond to a PowerApp or flow; el flow no usa SharePoint.",
+   "owner": "Agente",
+   "depends": "E2-01",
+   "expected": "La app puede pedir al flow las carpetas",
+   "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
+   "limit": 90,
+   "status": "Hecha",
+   "attempts": 12,
+   "minutes": 97,
+   "entrega": "E2",
+   "fails": 5,
+   "lastActivity": "2026-10-02T00:44:00Z"
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -2128,41 +2142,35 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-01T19:20:00Z"
   }
  ],
- "alerts": [
-  {
-   "task": "E2-02",
-   "reason": "5 intentos sin avance",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 38,
+  "tasksDone": 39,
   "tasksTotal": 59,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 578,
+   "prod": 585,
    "unprod": 32,
    "wait": 19,
-   "total": 629
+   "total": 636
   },
   "last24h": {
-   "prod": 357,
+   "prod": 364,
    "unprod": 32,
    "wait": 13,
-   "total": 402
+   "total": 409
   },
   "last7d": {
-   "prod": 578,
+   "prod": 585,
    "unprod": 32,
    "wait": 19,
-   "total": 629
+   "total": 636
   },
   "product": {
-   "prod": 337,
+   "prod": 344,
    "unprod": 30,
    "wait": 11,
-   "total": 378
+   "total": 385
   },
   "support": {
    "prod": 241,
@@ -2252,7 +2260,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 6,
+   "prod": 13,
    "unprod": 4,
    "wait": 0
   }
@@ -2303,10 +2311,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-02",
-   "prod": 60,
+   "prod": 67,
    "unprod": 30,
    "wait": 2,
-   "total": 92
+   "total": 99
   },
   {
    "task": "T-16",
@@ -2368,7 +2376,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 609
+   "minutes": 616
   },
   {
    "account": "empresa",
@@ -2376,6 +2384,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:37:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 12,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Recuperé el guardado y corregí la consulta a Inbox/childFolders con campos y límite explícitos",
+   "evidence": "Auditoría 3/3 OK: Flow Checker 0/0; run Succeeded; JSON visible con 8 carpetas directas bajo Inbox"
+  },
   {
    "start": "2026-10-02T00:30:00Z",
    "minutes": 4,
@@ -2492,22 +2513,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "DECISIONS.md subido a la carpeta compartida de Drive",
    "evidence": "Auditoría 1/1 OK; listado Drive confirma nombre y 9573 bytes"
-  },
-  {
-   "start": "2026-10-01T17:54:00Z",
-   "minutes": 9,
-   "account": "empresa",
-   "entrega": "T",
-   "task": "T-19",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Parche de Claude para selección de entregas y vista de T",
-   "evidence": "Pages: E0 9; E3 8; T 4 abiertas/15 hechas y desplegable probado; desktop 1366 y móvil 390 sin overflow ni texto cortado; tmp/evidencia/T-19"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:37:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 12,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Recuperé el guardado y corregí la consulta a Inbox/childFolders con campos y límite explícitos",
+   "evidence": "Auditoría 3/3 OK: Flow Checker 0/0; run Succeeded; JSON visible con 8 carpetas directas bajo Inbox"
+  },
   {
    "start": "2026-10-02T00:30:00Z",
    "minutes": 4,
