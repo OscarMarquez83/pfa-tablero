@@ -1,23 +1,53 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:25:14.900489Z",
+ "generatedUtc": "2026-10-02T01:40:15.078822Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 01:12 UTC",
+  "updated": "2026-10-02 01:38 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Esperar decisión de HZ-13 para retomar E2-04. D-028 permanece vigente.",
-  "needsOscar": [
-   {
-    "ref": "HZ-13",
-    "text": "tras fallar otra vez la ruta A, elige B (Power Apps combina niveles) o autoriza probar Parse JSON + Append dentro del flow. D-028 se mantiene."
-   }
-  ],
+  "nextAction": "Continuar E2-04, intento 4: implementar ruta A con Parse JSON y Append to array variable; conservar D-028/D-033.",
+  "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T01:13:36.646698Z",
+  "current": [
+   "E2-04, intento 4 iniciado 01:38 UTC: registrar D-035 y reconstruir el recorrido en Power Automate con Parse JSON y Append to array variable. Comprobar Flow Checker, run Succeeded y JSON de niveles 1–3; el botón y Patch se validarán después en Configuration.",
+   "E2-03, intento 1: repetí el run después de iniciar la tarea. Estado Succeeded, HTTP 200; historial muestra JSON con 8 carpetas nivel 1. Auditoría 2/2 OK.",
+   "E2-02, intento 12: tras autorizar 30 minutos adicionales, guardé GET Inbox/childFolders con $top=100 y $select=id,displayName,totalItemCount. Flow Checker 0 errores/0 advertencias. El run Succeeded devolvió JSON con 8 carpetas directas bajo Inbox; la respuesta y conteo se ven en el historial. E2-02 cumple su evidencia de cierre. La ruta hacia Projects y niveles 2–3 se completará en E2-04.",
+   "E2-02, intento 11: D-028 confirmado; D-031 reemplazado por D-033; alcance de E2 y evidencia de E2-03 alineados con respuesta JSON y escaneo manual. Microsoft Learn revisado. Oscar renovó la sesión. Edge e integrado abren My flows; la búsqueda autenticada confirma cero resultados para PFA_E2_LeerCarpetas. El flow no se modificó. Publicación remota no confirmada (KF-H04).",
+   "E2-02, intento 11: sesión restablecida y My flows accesible en Edge y navegador integrado. Encontré cero flows con ese nombre, creé el flow nuevo, Flow Checker = 0; primer run falló BadRequest por URI relativa. Configuré la URI absoluta de Graph, pero no pude verificar el guardado ni una nueva ejecución antes del límite de 90 min. Microsoft Learn consultado: https://learn.microsoft.com/en-us/connectors/office365/. Mini-spec HZ-12 registra las dos opciones para continuar.",
+   "T-18: Oscar pidió cancelar PFA Despertador en el issue #7; respuesta registrada en D-034 y PLAN, issue comentado y cerrado. La automatización ya estaba PAUSED.",
+   "T-20, intento 1: DECISIONS.md subido a PFA - Compartido con Codex; listado posterior confirma nombre y 9 573 bytes, igual al local. Auditoría 1/1 OK. Publicador: acceso denegado al escribir publish.log (KF-H04); publicación remota no confirmada.",
+   "T-19, intento 1: git apply tmp/T-tablero-entregas.patch cambió solo dashboard/index.html. Pages, tras el cierre: E0 9 filas; E3 8; T muestra 3 abiertas y Ver hechas (16) abajo; el desplegable abre/cierra. Escritorio 1366 px y teléfono 390 px sin overflow ni texto cortado. Capturas en tmp/evidencia/T-19. Publicación remota comprobada en commit 18:07 UTC.",
+   "T-18, intento 1: creé PFA Despertador activo cada 15 minutos en el proyecto de este repositorio, agregué la regla a AGENTS.md y confirmé que no había issues abiertos. Falta el issue de prueba de Oscar para validar cierre y worklog. El publicador regeneró data.js, pero no pudo escribir publish.log por acceso denegado (KF-H04); Pages tampoco respondió por SSL.",
+   "T-17: Pages verificó E0–E10 visibles al cargar y T con el desplegable de 14 tareas hechas cerrado por defecto; escritorio 1366 px y teléfono 390 px sin scroll horizontal ni errores JS. T conserva 3 abiertas y 15 hechas. Capturas: tmp/evidencia/T-17.",
+   "T-16, intento 1: Pages muestra T con 16 tareas (2 abiertas, 14 hechas), 14 de 16; desplegable probado abrir/cerrar. Huella AGENTS.md/Desarrollo/Entorno = 4FD52CD8 (verde); capturas a 1366 px y 390 px en tmp/evidencia/T-16; sin scroll horizontal ni texto cortado. Diagnóstico registrado en KF-H05.",
+   "E2-02, intento 10/10: revisé Peek code; la URI del segundo HTTP estaba duplicada con Send_an_HTTP_request, respuesta llevaba expresión literal y no hay Apply to each (KF-02 no aplica). Copilot confirmó endpoint Graph y sugirió rehacer el paso con contenido dinámico/Parse JSON. Probé una sola corrección; Flow Checker aún reporta referencia inválida. Bloqueada por límite final. Edge: pestaña Copilot listada pero dos lecturas agotaron tiempo; integrado: Power Apps Studio abrió la app y Copilot cargó con sesión activa. Pages: no pude verificar por SSL/ERR_BLOCKED_BY_CLIENT; el log local tiene último registro 14:36 UTC y falla al escribir por acceso denegado (KF-H04).",
+   "T-15, intento 1: AGENTS.md mide 23 807 bytes; huella Entorno 4FD52CD8 tras lectura completa posterior a cambios. Huella de reglas, regla de navegador y criterio de REVISOR/KF-11 verificados. build_dashboard.py generó status.fileUtc; el publicador no pudo escribir publish.log por acceso denegado.",
+   "T-14, intento 1: Context7 instalado como servidor MCP stdio. codex mcp list muestra context7 enabled; la consulta resolvió /python/cpython y devolvió documentación de json.dumps / json.loads. Alcance fijado en AGENTS.md §5; KF-H03 documenta el runtime sin npx. Requiere reiniciar Codex para cargar las tools en esta sesión. El publicador actualizó data.js, pero no pudo escribir publish.log por acceso denegado.",
+   "T-13, intento 1: AGENTS.md sección 10 exige anunciar cada skill en la primera línea; D-026 registra el pedido de Oscar. La publicación remota se confirmó por GitHub; Chrome agotó el tiempo en dos lecturas. El publicador se ejecutó con permiso elevado y generó dashboard/data.js, pero publish.log conserva la última entrada de 11:10 UTC; el log no quedó confirmado.",
+   "E2-02, intento 6: Microsoft Learn indica que HTTP with Microsoft Entra ID es Premium y requiere alcances concedidos para leer recursos. No se modificaron permisos ni listas; queda pendiente elegir A o B.",
+   "E2-02, intento 5: el conector ofrece la acción documentada Send an HTTP request to SharePoint, pero vuelve a rechazar el sitio personal con el mismo error de Site Address. Flow no ejecutado; espera decisión de Oscar sobre reubicar listas o cambiar el modelo de acceso.",
+   "E2-01, intento 3: List settings confirmó los tipos de todas las columnas de PFA_MailFolders y PFA_Projects; solo las cuatro columnas indicadas quedan obligatorias. Decision es texto opcional con valor predeterminado Nueva; existen ParentFolderId y DisplayedPath. E1-09: Oscar aceptó E1; el tablero se regeneró, el publicador tuvo acceso denegado en publish.log.",
+   "T-10, intento 2: Hecha. Configuré “PFA Tablero” con repetición PT3M; python tools/build_dashboard.py generó status.fileUtc; tras seis minutos el tablero publicado mostró “Último reporte del agente hace 7 min”. El publicador regeneró dashboard/data.js, pero falló al escribir publish.log por acceso denegado. Registré KF-H02.",
+   "T-09, intento 2: Oscar confirmó en issue #5 que Microsoft Learn ya funciona; skill y búsqueda verificadas, issue registrado en PLAN y cerrado.",
+   "E1-05, intento 7: el ModernDropdown de las 7 pantallas usa fondo claro y texto azul oscuro del tema. My Day tiene el mismo encabezado plano y de una línea que las otras pantallas. Publicación confirmada por Power Apps. En preview navegué las 7 opciones; en la app publicada comparé capturas de las 7 pantallas a 1366 y 390 px, comprobé la selección del menú y Refresh. El contenido de la app cabe en 375 px; la barra horizontal observada a 390 px pertenece al encabezado exterior de Power Apps. El tablero se publicó a las 06:31 UTC. El intento consumió 100 minutos, por encima del límite de 60.",
+   "T-12, intento 1: quedó registrado el análisis previo de la reapertura y la consulta oficial/Copilot. Oscar pidió después diseñar y ejecutar la corrección.",
+   "T-08, intento 1: registré la limpieza de la raíz, corregí el proyecto y la carpeta de la automatización cron del revisor, confirmé los issues y publiqué el tablero por GitHub. El publicador falló dos veces al escribir publish.log; revisé KF-H01 y Microsoft Learn. La función documentada -Force solo omite el atributo de solo lectura, no cambia permisos. El error del registro oculta la causa anterior del script.",
+   "T-06, intento 4: añadí la ruta de git-remote-https, fijé GIT_EXEC_PATH y OpenSSL, y conecté Git con la sesión existente de GitHub CLI. El publicador terminó con código 0 y creó el commit 7ee8fd9. GitHub Pages devuelve data.js actualizado con HTTP 200; la pestaña cargada conserva una copia anterior del mismo archivo.",
+   "T-07, intento 1: moví la aprobación del issue #3 a D-019. GitHub y GitHub Pages muestran solo E1-09 en needsOscar; desapareció la nota de aprobación.",
+   "E1-10, intento 1: apliqué el encabezado común en las 7 pantallas. Teléfono e iPad vertical muestran el selector con las 7 opciones; las 7 navegan en preview. En iPad horizontal aparecen los botones; en la app publicada comprobé My Day → Projects → Diagnostics y Refresh fuera del encabezado. El tablero se publicó en el commit e2451a4; el registro local falló por acceso denegado.",
+   "E1-08, intento 3: las 7 pantallas cargaron en preview con dispositivo desktop, teléfono vertical y iPad horizontal. La navegación vertical queda recortada y se resolverá en E1-10. Publiqué y verifiqué v154 (Live); en la app publicada navegué My Day → Projects → Diagnostics y cada pantalla quedó seleccionada.",
+   "E1-05, intento 6, cerrada en el commit b35101d: tomé el control aprobado en Studio, quité Refresh del encabezado azul de My Day y lo puse junto al título. La acción original quedó intacta. Studio guardó sin errores de fórmula. En preview, Refresh respondió y las 7 opciones llegaron a su pantalla; Diagnostics conserva un solo encabezado.",
+   "Publiqué la app y confirmé My Day en la versión publicada: Refresh aparece fuera del encabezado y funciona. El navegador abrió una versión anterior; usé el aviso de Power Apps para cargar la nueva.",
+   "Ejecuté tools/publish_dashboard.ps1 como pide el protocolo. Regeneró dashboard/data.js, pero terminó con código 1 porque no pudo escribir %LOCALAPPDATA%\\PFA\\publish.log; queda pendiente confirmar si el push terminó. La tarea está configurada cada 15 minutos; Get-ScheduledTaskInfo ahora devuelve Access denied en esta sesión.",
+   "T-04 se cerró en el commit 05c3021: reglas, decisiones, estados y filtro de ideas actualizados. Import-Csv confirmó 11 columnas y las 3 filas E0-01 a E0-03 con horas.",
+   "El script publicó index.html una vez, pero falló al registrar el resultado en %LOCALAPPDATA%\\PFA\\publish.log; después publiqué index.html y data.js con GitHub y confirmé ambas versiones en main. El tablero muestra solo hallazgos «Por decidir».",
+   "T-05 actualizó la referencia horaria de AGENTS.md. Las dos automatizaciones Codex, REVISOR.md y D-015 ya muestran los seis horarios cada 4 horas; no hizo falta cambiar las automatizaciones.",
+   "La tarea PFA Tablero quedó registrada y corrió: PT15M, IgnoreNew, PT5M, LastTaskResult = 0."
+  ],
+  "fileUtc": "2026-10-02T01:38:55.864728Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -728,8 +758,8 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
     "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
     "limit": 90,
-    "status": "Bloqueada",
-    "attempts": 3,
+    "status": "En curso",
+    "attempts": 4,
     "minutes": 19,
     "entrega": "E2",
     "fails": 2,
@@ -1300,19 +1330,19 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "T-11",
-  "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+  "id": "E2-04",
+  "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
   "owner": "Agente",
-  "depends": "—",
-  "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
-  "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
-  "limit": 20,
+  "depends": "E2-03",
+  "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
+  "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
+  "limit": 90,
   "status": "En curso",
-  "attempts": 1,
-  "minutes": 2,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "2026-10-01T05:47:00Z",
+  "attempts": 4,
+  "minutes": 19,
+  "entrega": "E2",
+  "fails": 2,
+  "lastActivity": "2026-10-02T01:12:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1324,8 +1354,8 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
    "limit": 90,
-   "status": "Bloqueada",
-   "attempts": 3,
+   "status": "En curso",
+   "attempts": 4,
    "minutes": 19,
    "entrega": "E2",
    "fails": 2,
@@ -2162,12 +2192,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
-  },
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: El diseñador rechazó de nuevo la salida del HTTP como arreglo en el intento 3; elegir enfo",
+   "reason": "2 intentos sin avance: toca revisar documentación",
    "level": "warning"
   }
  ],
@@ -3737,10 +3762,10 @@ window.PFA_DATA = {
   {
    "id": "HZ-13",
    "date": "2026-10-02",
-   "text": "El diseñador rechazó de nuevo la salida del HTTP como arreglo en el intento 3; elegir enfoque de continuación (mini-spec en control/specs/HZ-13.md)",
+   "text": "Oscar eligió que el flow reúna los resultados y Power Apps los muestre y guarde los nuevos; ruta A seleccionada para E2-04 (mini-spec en control/specs/HZ-13.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Por decidir"
+   "status": "Incorporado en E2-04"
   }
  ]
 };
