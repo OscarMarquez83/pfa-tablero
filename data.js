@@ -1,22 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:10:14.247384Z",
+ "generatedUtc": "2026-10-02T06:16:14.158128Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 05:24 UTC",
+  "updated": "2026-10-02 06:14 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 sigue Bloqueada a la espera de la elección HZ-19. Corregí el intento 8 de 15 a 11 minutos según sus horas registradas; el total efectivo es 87/90. Las tareas E2-05 en adelante dependen de E2-04.",
+  "nextAction": "Completar T-27 y comprobar el tablero; luego medir E2-04 según la mini-spec aprobada.",
   "needsOscar": [],
   "blockers": [],
   "current": [
    "T-27, intento 1 iniciado 2026-10-02 06:08 UTC: registrar la mini-spec aprobada y limpiar la tabla de hallazgos, aplicar el patch verificado y comprobar el tablero a 1366 px y 390 px."
   ],
-  "fileUtc": "2026-10-02T06:09:06.774160Z",
+  "fileUtc": "2026-10-02T06:16:02.323011Z",
   "ruleFootprints": {
-   "current": "C938B2D9",
+   "current": "6BC7F7B5",
    "lines": {
     "Desarrollo": "C938B2D9",
     "Entorno": "C938B2D9"
@@ -382,7 +382,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 24,
-   "total": 26,
+   "total": 27,
    "detailed": true,
    "active": false,
    "time": {
@@ -1378,10 +1378,41 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-02T05:24:00Z"
+   },
+   {
+    "id": "T-27",
+    "action": "Ideas y hallazgos solo de producto; reglas de tipo, cierre del intento y presentación plegada de En curso",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
+    "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "T-27",
+  "action": "Ideas y hallazgos solo de producto; reglas de tipo, cierre del intento y presentación plegada de En curso",
+  "owner": "Agente",
+  "depends": "—",
+  "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
+  "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
+  "limit": 30,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 0,
+  "entrega": "T",
+  "fails": 0,
+  "lastActivity": "",
+  "ready": true
+ },
  "upcoming": [
   {
    "id": "E2-04",
@@ -2321,16 +2352,11 @@ window.PFA_DATA = {
    "task": "E2-04",
    "reason": "Bloqueada: espera decisión de Oscar",
    "level": "critical"
-  },
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: Rediseñar el diagnóstico de Scan folders, que no inicia el flujo (mini-spec en control/spe",
-   "level": "warning"
   }
  ],
  "kpi": {
   "tasksDone": 46,
-  "tasksTotal": 64,
+  "tasksTotal": 65,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
@@ -4401,56 +4427,20 @@ window.PFA_DATA = {
   {
    "id": "HZ-14",
    "date": "2026-10-02",
-   "text": "Power Apps no reconoce la respuesta del escaneo; requiere elegir un camino de reparación (mini-spec en control/specs/HZ-14.md)",
+   "text": "Power Apps no reconoce la respuesta del escaneo (mini-spec en control/specs/HZ-14.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas.",
-   "closure": ""
-  },
-  {
-   "id": "HZ-15",
-   "date": "2026-10-02",
-   "text": "Ver el cierre de cada idea o hallazgo asignado (mini-spec en control/specs/HZ-15.md)",
-   "found": "Oscar en Claude",
-   "target": "T",
-   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas.",
-   "closure": ""
-  },
-  {
-   "id": "HZ-16",
-   "date": "2026-10-02",
-   "text": "Detectar pendientes listos para que Oscar los envíe a Codex con un mensaje (mini-spec en control/specs/HZ-16.md)",
-   "found": "Oscar en Claude",
-   "target": "T",
-   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador.",
-   "closure": ""
-  },
-  {
-   "id": "HZ-17",
-   "date": "2026-10-02",
-   "text": "Consultar primero Learn y después al Copilot del diseñador de flows desde la segunda falla (mini-spec en control/specs/HZ-17.md)",
-   "found": "Oscar en Claude",
-   "target": "T",
-   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador.",
-   "closure": ""
-  },
-  {
-   "id": "HZ-18",
-   "date": "2026-10-02",
-   "text": "Detectar y resolver diálogos nativos del navegador antes de declarar que no responde (mini-spec en control/specs/HZ-18.md)",
-   "found": "Oscar en Claude",
-   "target": "T",
-   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador.",
-   "closure": ""
+   "status": "Incorporado en E2-04",
+   "closure": "2026-10-02 · D-035 · alcance confirmado; el bloqueo técnico pasa a diagnóstico E2-04."
   },
   {
    "id": "HZ-19",
    "date": "2026-10-02",
-   "text": "Rediseñar el diagnóstico de Scan folders, que no inicia el flujo (mini-spec en control/specs/HZ-19.md)",
+   "text": "Diagnóstico de Scan folders, que no inicia el flujo (mini-spec en control/specs/HZ-19.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Por decidir",
-   "closure": ""
+   "status": "Incorporado en E2-04",
+   "closure": "Incorporado en E2-04; Oscar no elige A ni B."
   }
  ]
 };
