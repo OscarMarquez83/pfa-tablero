@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:46:14.080843Z",
+ "generatedUtc": "2026-10-02T04:52:15.122830Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:42 UTC",
+  "updated": "2026-10-02 04:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "continuar T-25 en un intento distinto; la prueba local abrió confirm en Edge, pero esta interfaz automatizada interrumpió el clic y no permitió elegir Leave o Cancel. No se probó aún el navegador integrado. T-22/T-23 esperan pruebas visuales de Oscar; E2-04 conserva 6 minutos y espera a que Studio permita editar.",
+  "nextAction": "T-25 cerrada; T-22 y T-23 esperan pruebas visuales de Oscar. E2-04 conserva 6 minutos efectivos y se reanuda cuando Studio permita editar.",
   "needsOscar": [
    {
     "ref": "T-22",
@@ -21,7 +21,8 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-25, intento 2 iniciado 2026-10-02 04:42 UTC: probé teclado y los 3 casos locales en Edge e integrado; confirmar y cancelar ya se resuelven. Cierre de Studio: GUARDAR — si un diálogo inesperado se cancela, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
+   "T-25, intento 2: HECHA; GUARDAR, DESCARTAR e inesperado probados en los dos navegadores; el script de captura ya había guardado pantalla completa en tmp/evidencia/T-25. Publicación: el tablero se regeneró; el log local sigue dando acceso denegado (KF-H04).",
+   "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
    "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
@@ -35,11 +36,11 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:44:25.228303Z",
+  "fileUtc": "2026-10-02T04:46:25.937049Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
-    "Desarrollo": "C938B2D9",
+    "Desarrollo": "AB72D313",
     "Entorno": "C938B2D9"
    }
   }
@@ -390,15 +391,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 19,
+   "done": 20,
    "total": 25,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 261,
+    "prod": 268,
     "unprod": 2,
     "wait": 8,
-    "total": 271
+    "total": 278
    }
   }
  ],
@@ -1343,7 +1344,7 @@ window.PFA_DATA = {
     "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T03:54:00Z",
+    "lastActivity": "2026-10-02T04:04:00Z",
     "ready": true
    },
    {
@@ -1369,13 +1370,12 @@ window.PFA_DATA = {
     "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
     "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
     "limit": 30,
-    "status": "AVANCE",
-    "attempts": 1,
-    "minutes": 8,
+    "status": "Hecha",
+    "attempts": 7,
+    "minutes": 11,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:29:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T04:45:00Z"
    }
   ]
  },
@@ -2252,6 +2252,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-02T04:20:00Z"
+  },
+  {
+   "id": "T-25",
+   "action": "Diálogo nativo del navegador: agregar captura de pantalla, reglas de cierre seguras y prueba local en Edge y navegador integrado",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
+   "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 7,
+   "minutes": 11,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T04:45:00Z"
   }
  ],
  "alerts": [
@@ -2262,27 +2277,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 41,
+  "tasksDone": 42,
   "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 641,
+   "prod": 648,
    "unprod": 82,
    "wait": 326,
-   "total": 1049
+   "total": 1056
   },
   "last24h": {
-   "prod": 370,
+   "prod": 277,
    "unprod": 80,
    "wait": 320,
-   "total": 770
+   "total": 677
   },
   "last7d": {
-   "prod": 641,
+   "prod": 648,
    "unprod": 82,
    "wait": 326,
-   "total": 1049
+   "total": 1056
   },
   "product": {
    "prod": 380,
@@ -2291,10 +2306,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 261,
+   "prod": 268,
    "unprod": 2,
    "wait": 8,
-   "total": 271
+   "total": 278
   }
  },
  "days": [
@@ -2378,7 +2393,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 69,
+   "prod": 76,
    "unprod": 54,
    "wait": 307
   }
@@ -2494,7 +2509,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 707
+   "minutes": 714
   },
   {
    "account": "empresa",
@@ -2503,6 +2518,84 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
+   "start": "2026-10-02T04:45:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — inesperado — integrado",
+   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — DESCARTAR — integrado",
+   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — GUARDAR — integrado",
+   "evidence": "Guardé; el destino confirmó la versión guardada inicial sin mostrar confirm."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — inesperado — Edge",
+   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
+  },
+  {
+   "start": "2026-10-02T04:43:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — DESCARTAR — Edge",
+   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
+  },
+  {
+   "start": "2026-10-02T04:42:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — GUARDAR — Edge",
+   "evidence": "Guardé; la página de destino confirmó la versión guardada inicial sin mostrar confirm."
+  },
+  {
    "start": "2026-10-02T04:21:00Z",
    "minutes": 8,
    "account": "personal",
@@ -2542,99 +2635,99 @@ window.PFA_DATA = {
    "evidence": "Build correcto; data.js en GitHub actualizado 04:11; Pages muestra una copia anterior en caché; falta revisión visual a 1366/390 px"
   },
   {
-   "start": "2026-10-02T03:52:00Z",
-   "minutes": 2,
+   "start": "2026-10-02T03:59:00Z",
+   "minutes": 4,
    "account": "personal",
    "entrega": "T",
    "task": "T-23",
-   "attempt": 1,
+   "attempt": 2,
    "result": "AVANCE",
    "kind": "prod",
    "category": "OTRO",
-   "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
-   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado.2026-10-02 03:59"
-  },
-  {
-   "start": "2026-10-02T03:42:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 11,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Studio integrado abrió PFA_Pilot_App en solo lectura porque otra sesión conserva el control; Edge no respondió.",
-   "evidence": "Banner confirma que otra sesión tiene control de edición. No usé Invalidar ni cambié la app. Edge no respondió en dos intentos; navegador integrado carga Power Automate y Studio en solo lectura. Reanudar cuando Studio vuelva a permitir edición."
-  },
-  {
-   "start": "2026-10-02T03:40:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 10,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Probé Scan folders en preview después de guardar; no mostró resultado ni inició el flow.",
-   "evidence": "Historial actualizado tras el clic: la corrida más reciente sigue siendo del 1-oct, 9:04 p. m.; ninguna nueva. Preview no muestra confirmación ni error. La conexión del flow está asignada y Flow checker da 0 errores/advertencias; causa sin aislar."
-  },
-  {
-   "start": "2026-10-02T03:38:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 9,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Revisión del flow: conexión Outlook asignada y Flow checker sin errores; no se aisló por qué la app no lo inicia.",
-   "evidence": "Flow Details muestra Office 365 Outlook conectado; Flow checker indica 0 errores y 0 advertencias. Historial sin ejecución nueva desde el clic de la app. El diseñador conserva una copia no guardada; no la recuperé ni edité. Límite E2-04: 83/90 min."
-  },
-  {
-   "start": "2026-10-02T03:30:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 8,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo Leave site",
-   "evidence": "Captura tmp/evidencia/E2-04/pantalla-completa-leave-site.png; no se observó el diálogo; Escape regresó de preview al editor; Studio sigue abierto sin guardar ni descartar"
-  },
-  {
-   "start": "2026-10-02T03:26:00Z",
-   "minutes": 15,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 8,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Camino 1 aplicado; botón recolocado y app guardada sin publicar. Aún no inicia el flow.",
-   "evidence": "Auditoría 2/5 OK: Studio reconoce foldersJson; OnSelect sin error y botón ya no se solapa. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión y el trigger."
-  },
-  {
-   "start": "2026-10-02T03:15:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 7,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Studio abrió en solo lectura por otra sesión; pausé para atender el pedido T de Oscar",
-   "evidence": "No se modificó ni guardó la app o el flow; queda para retomar Camino 1"
+   "summary": "Verifiqué Pages tras publicar: agrupación y botones Copiar funcionan; T-11 ya no aparece.",
+   "evidence": "Pages actualizada 2026-10-02 03:57 UTC; preview muestra dos puntos en Chat Entorno; ambos botones respondieron Copiado. PFA Despertador PAUSED. Falta prueba a 1366/390 px y el ciclo completo en el chat."
   }
  ],
  "history": [
   {
+   "start": "2026-10-02T04:45:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — inesperado — integrado",
+   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — DESCARTAR — integrado",
+   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — GUARDAR — integrado",
+   "evidence": "Guardé; el destino confirmó la versión guardada inicial sin mostrar confirm."
+  },
+  {
+   "start": "2026-10-02T04:44:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — inesperado — Edge",
+   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
+  },
+  {
+   "start": "2026-10-02T04:43:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — DESCARTAR — Edge",
+   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
+  },
+  {
+   "start": "2026-10-02T04:42:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo — GUARDAR — Edge",
+   "evidence": "Guardé; la página de destino confirmó la versión guardada inicial sin mostrar confirm."
+  },
+  {
    "start": "2026-10-02T04:21:00Z",
    "minutes": 8,
    "account": "personal",
@@ -2674,6 +2767,19 @@ window.PFA_DATA = {
    "evidence": "Build correcto; data.js en GitHub actualizado 04:11; Pages muestra una copia anterior en caché; falta revisión visual a 1366/390 px"
   },
   {
+   "start": "2026-10-02T03:59:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-23",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Verifiqué Pages tras publicar: agrupación y botones Copiar funcionan; T-11 ya no aparece.",
+   "evidence": "Pages actualizada 2026-10-02 03:57 UTC; preview muestra dos puntos en Chat Entorno; ambos botones respondieron Copiado. PFA Despertador PAUSED. Falta prueba a 1366/390 px y el ciclo completo en el chat."
+  },
+  {
    "start": "2026-10-02T03:52:00Z",
    "minutes": 2,
    "account": "personal",
@@ -2684,7 +2790,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
-   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado.2026-10-02 03:59"
+   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado."
   },
   {
    "start": "2026-10-02T03:42:00Z",
