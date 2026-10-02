@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:31:15.797075Z",
+ "generatedUtc": "2026-10-02T04:40:14.275036Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -35,11 +35,11 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:30:21.895025Z",
+  "fileUtc": "2026-10-02T04:31:40.035161Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
-    "Desarrollo": "AB72D313",
+    "Desarrollo": "C938B2D9",
     "Entorno": "C938B2D9"
    }
   }
