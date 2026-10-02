@@ -1,23 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T18:10:14.729605Z",
+ "generatedUtc": "2026-10-02T18:24:59.428940Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 14:08 UTC",
+  "updated": "2026-10-02 18:26 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 está Por validar (trabajo de Claude, D-040): falta la prueba de Oscar (abajo). Codex puede seguir con E2-05, que depende de E2-04: se puede detallar, pero no cerrar hasta que Oscar confirme. No tocar el flow PFA_E2_LeerCarpetas ni btnScanFolders sin leer KF-13 a KF-17.",
+  "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir lo que Oscar decida en HZ-20. Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
   "needsOscar": [
    {
-    "ref": "",
-    "text": "E2-04 (Claude): prueba de Scan folders, 3 pasos. 1) En Outlook crea una subcarpeta vacía dentro de Inbox/Projects/PFA-Prueba, con cualquier nombre. 2) Abre la app publicada → menú → Configuration → pulsa \"Scan folders\" → en unos segundos debe aparecer arriba \"25 folders found, 1 new.\". 3) Pulsa \"Scan folders\" otra vez → debe decir \"25 folders found, 0 new.\". Responde \"E2-04 OK\" o qué viste. Al responder: marco E2-04 Hecha, cierro el intento y libero E2-05."
+    "ref": "HZ-20",
+    "text": "decidir qué hace la app con las carpetas que borras en Outlook. Hoy su fila queda en la lista como \"por decidir\" (3 de tus pruebas: filas 27-29). Recomendación de Claude: en E2-05, marcarlas como \"ya no está en Outlook\" y ocultarlas de la revisión, sin borrar filas. Al responder: incorporo tu decisión a E2-05."
    }
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T14:04:36.881074Z",
+  "fileUtc": "2026-10-02T18:24:58.928924Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -257,10 +257,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 204,
+    "prod": 207,
     "unprod": 98,
     "wait": 54,
-    "total": 356
+    "total": 359
    }
   },
   {
@@ -752,12 +752,12 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 230,
-    "status": "Por validar (Claude)",
+    "status": "Hecha (Claude)",
     "attempts": 19,
-    "minutes": 199,
+    "minutes": 202,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T14:05:00Z",
+    "lastActivity": "2026-10-02T18:25:00Z",
     "ready": true
    },
    {
@@ -1419,12 +1419,12 @@ window.PFA_DATA = {
   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
   "limit": 230,
-  "status": "Por validar (Claude)",
+  "status": "Hecha (Claude)",
   "attempts": 19,
-  "minutes": 199,
+  "minutes": 202,
   "entrega": "E2",
   "fails": 7,
-  "lastActivity": "2026-10-02T14:05:00Z",
+  "lastActivity": "2026-10-02T18:25:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1436,12 +1436,12 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
    "limit": 230,
-   "status": "Por validar (Claude)",
+   "status": "Hecha (Claude)",
    "attempts": 19,
-   "minutes": 199,
+   "minutes": 202,
    "entrega": "E2",
    "fails": 7,
-   "lastActivity": "2026-10-02T14:05:00Z",
+   "lastActivity": "2026-10-02T18:25:00Z",
    "ready": true
   },
   {
@@ -2396,6 +2396,11 @@ window.PFA_DATA = {
    "task": "E2-04",
    "reason": "7 intentos sin avance",
    "level": "serious"
+  },
+  {
+   "task": "Hallazgo",
+   "reason": "Sin entrega destino: Scan folders solo agrega filas: si una carpeta se borra en Outlook, su fila sigue en PFA_M",
+   "level": "warning"
   }
  ],
  "kpi": {
@@ -2404,28 +2409,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 764,
+   "prod": 767,
    "unprod": 100,
    "wait": 66,
-   "total": 930
+   "total": 933
   },
   "last24h": {
-   "prod": 245,
+   "prod": 248,
    "unprod": 72,
    "wait": 49,
-   "total": 366
+   "total": 369
   },
   "last7d": {
-   "prod": 764,
+   "prod": 767,
    "unprod": 100,
    "wait": 66,
-   "total": 930
+   "total": 933
   },
   "product": {
-   "prod": 477,
+   "prod": 480,
    "unprod": 98,
    "wait": 58,
-   "total": 633
+   "total": 636
   },
   "support": {
    "prod": 287,
@@ -2515,7 +2520,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 192,
+   "prod": 195,
    "unprod": 72,
    "wait": 47
   }
@@ -2564,10 +2569,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 131,
+   "prod": 134,
    "unprod": 68,
    "wait": 47,
-   "total": 246
+   "total": 249
   },
   {
    "task": "E1-05",
@@ -2640,7 +2645,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 80
+   "minutes": 83
   },
   {
    "account": "empresa",
@@ -2648,6 +2653,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T18:22:00Z",
+   "minutes": 3,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Oscar validó en la app publicada: primer escaneo 24 encontradas; con 3 carpetas de prueba nuevas 27 encontradas y 3 nuevas; carpetas fuera de Projects no se leen; tras borrarlas, 24 encontradas y 0 nuevas. E2-04 Hecha (Claude)",
+   "evidence": "REST: 29 filas, 0 duplicados; filas 27-29 de las carpetas borradas siguen con Decision=Nueva (HZ-20)"
+  },
   {
    "start": "2026-10-02T13:44:00Z",
    "minutes": 21,
@@ -2764,22 +2782,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Inventario de flujos y conexión de Monitor; Studio mantuvo el bloqueo read-only",
    "evidence": "1/7 criterios verificados; My flows 1/21 y Solutions 1/13; ID b236f6d8-4010-468f-a84f-6db74f0f52c7 en In your app; Monitor conectado con 0 eventos; Learn: https://learn.microsoft.com/power-platform/power-apps/maker/canvas-apps/copresence-power-apps-studio; reabrir la app en la misma pestaña no liberó el control."
-  },
-  {
-   "start": "2026-10-02T06:27:00Z",
-   "minutes": 5,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-28",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Reglas técnicas y chat diario actualizados",
-   "evidence": "Auditoría 8/8 OK; AGENTS.md, skill idea, plantilla e informe revisados"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T18:22:00Z",
+   "minutes": 3,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Oscar validó en la app publicada: primer escaneo 24 encontradas; con 3 carpetas de prueba nuevas 27 encontradas y 3 nuevas; carpetas fuera de Projects no se leen; tras borrarlas, 24 encontradas y 0 nuevas. E2-04 Hecha (Claude)",
+   "evidence": "REST: 29 filas, 0 duplicados; filas 27-29 de las carpetas borradas siguen con Decision=Nueva (HZ-20)"
+  },
   {
    "start": "2026-10-02T13:44:00Z",
    "minutes": 21,
@@ -4645,6 +4663,15 @@ window.PFA_DATA = {
    "target": "E2",
    "status": "Incorporado en E2-04",
    "closure": "Incorporado en E2-04; Oscar no elige A ni B."
+  },
+  {
+   "id": "HZ-20",
+   "date": "2026-10-02",
+   "text": "Scan folders solo agrega filas: si una carpeta se borra en Outlook, su fila sigue en PFA_MailFolders con Decision = Nueva y aparecería como carpeta por decidir. Prueba de Oscar: 3 carpetas creadas y borradas = filas 27-29 huérfanas. Recomendación de Claude: en E2-05, marcar las filas cuyo OutlookFolderId no vino en el último escaneo (por ejemplo, Decision = \"NoEnOutlook\") y ocultarlas de \"New folders to review\", sin borrar filas",
+   "found": "Oscar en prueba de E2-04 (Claude)",
+   "target": "E2-05",
+   "status": "Por decidir",
+   "closure": ""
   }
  ]
 };
