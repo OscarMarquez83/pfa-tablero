@@ -1,22 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:07:14.127939Z",
+ "generatedUtc": "2026-10-02T05:13:17.198650Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 05:06 UTC",
+  "updated": "2026-10-02 05:10 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 intento 14: consultar M365 Copilot Chat sobre el botón que no dispara el flow y aplicar su propuesta a Scan folders. Quedan 2 minutos efectivos; no publicar.",
+  "nextAction": "E2-04 está Bloqueada tras superar el límite de 90 minutos. Esperar la decisión de Oscar sobre HZ-19; después reabrir E2-04 con reabrir-tarea y realizar solo el diagnóstico elegido. No publicar.",
   "needsOscar": [
    {
-    "ref": "E2-04",
-    "text": "la pestaña de Studio está asignada a otra sesión; para evitar cambios concurrentes, espero a que quede libre. Avísame aquí cuando termine. Al responder: reanudo E2-04 y compruebo Scan folders."
-   },
-   {
-    "ref": "T-22",
-    "text": "revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
+    "ref": "HZ-19",
+    "text": "elige el diagnóstico de E2-04. A) quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregarlo y probar con un aviso de éxito/error (recomendada por coincidir con la sospecha de Copilot y la evidencia ya prevista). B) mantener el vínculo actual, agregar avisos de diagnóstico y comprobar nombre del flow, conexión y entorno antes de cambiarlo. Al responder: registraré tu opción, reabriré E2-04 con reabrir-tarea y haré esa comprobación."
    },
    {
     "ref": "T-23",
@@ -25,7 +21,8 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app.",
+   "E2-04, intento 14 iniciado 2026-10-02 05:07 UTC y cerrado 05:10 como BLOQUEADA (3 min; total 91/90). M365 Copilot Chat recomendó como hipótesis un vínculo antiguo: quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregar el flow y probar con un aviso de éxito/error. No apliqué cambios porque se superó el límite. Al cierre, el publicador volvió a fallar al escribir publish.log (acceso denegado; KF-H04).",
+   "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app. El publicador regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado; KF-H04).",
    "E2-04, intento 12 iniciado 2026-10-02 04:57 UTC y cerrado 05:00 como ESPERA/NAVEGADOR. Edge lista Studio como Editing, pero el conector informa que la pestaña ya pertenece a otra sesión; no modifiqué la app. El publicador regeneró dashboard/data.js; falló al escribir publish.log (acceso denegado; KF-H04).",
    "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
@@ -41,7 +38,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T05:06:44.001814Z",
+  "fileUtc": "2026-10-02T05:12:45.991579Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
@@ -258,9 +255,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 107,
-    "unprod": 84,
+    "unprod": 87,
     "wait": 314,
-    "total": 505
+    "total": 508
    }
   },
   {
@@ -396,7 +393,7 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 21,
+   "done": 22,
    "total": 25,
    "detailed": true,
    "active": false,
@@ -752,12 +749,12 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
-    "status": "En curso",
-    "attempts": 13,
-    "minutes": 88,
+    "status": "Bloqueada",
+    "attempts": 14,
+    "minutes": 91,
     "entrega": "E2",
-    "fails": 5,
-    "lastActivity": "2026-10-02T05:06:00Z",
+    "fails": 6,
+    "lastActivity": "2026-10-02T05:10:00Z",
     "ready": true
    },
    {
@@ -1327,13 +1324,12 @@ window.PFA_DATA = {
     "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
     "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
     "limit": 30,
-    "status": "Por validar",
-    "attempts": 1,
+    "status": "Hecha",
+    "attempts": 2,
     "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:14:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T05:05:00Z"
    },
    {
     "id": "T-23",
@@ -1384,19 +1380,19 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-04",
-  "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+  "id": "T-23",
+  "action": "Listo para Codex: instalar cerrar-pendientes, aplicar el parche aprobado del tablero, actualizar AGENTS.md y cancelar T-11 como reemplazada",
   "owner": "Agente",
-  "depends": "E2-03",
-  "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-  "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
-  "limit": 90,
-  "status": "En curso",
-  "attempts": 13,
-  "minutes": 88,
-  "entrega": "E2",
-  "fails": 5,
-  "lastActivity": "2026-10-02T05:06:00Z",
+  "depends": "—",
+  "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
+  "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
+  "limit": 30,
+  "status": "Por validar",
+  "attempts": 2,
+  "minutes": 6,
+  "entrega": "T",
+  "fails": 0,
+  "lastActivity": "2026-10-02T04:04:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1408,12 +1404,12 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
-   "status": "En curso",
-   "attempts": 13,
-   "minutes": 88,
+   "status": "Bloqueada",
+   "attempts": 14,
+   "minutes": 91,
    "entrega": "E2",
-   "fails": 5,
-   "lastActivity": "2026-10-02T05:06:00Z",
+   "fails": 6,
+   "lastActivity": "2026-10-02T05:10:00Z",
    "ready": true
   },
   {
@@ -2258,6 +2254,21 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-01T19:20:00Z"
   },
   {
+   "id": "T-22",
+   "action": "Ideas cerradas: agregar Cierre, completar HZ-01 a HZ-13 desde registros existentes, corregir HZ-12 y la referencia a HZ-11 en T-21",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
+   "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 8,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T05:05:00Z"
+  },
+  {
    "id": "T-24",
    "action": "Copilot del diseñador: actualizar la regla anti-bucle y registrar la limitación de connection references",
    "owner": "Agente",
@@ -2291,38 +2302,43 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "5 intentos sin avance",
-   "level": "serious"
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
+  },
+  {
+   "task": "Hallazgo",
+   "reason": "Sin entrega destino: Rediseñar el diagnóstico de Scan folders, que no inicia el flujo (mini-spec en control/spe",
+   "level": "warning"
   }
  ],
  "kpi": {
-  "tasksDone": 43,
+  "tasksDone": 44,
   "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
    "prod": 650,
-   "unprod": 86,
+   "unprod": 89,
    "wait": 326,
-   "total": 1062
+   "total": 1065
   },
   "last24h": {
    "prod": 279,
-   "unprod": 84,
+   "unprod": 87,
    "wait": 320,
-   "total": 683
+   "total": 686
   },
   "last7d": {
    "prod": 650,
-   "unprod": 86,
+   "unprod": 89,
    "wait": 326,
-   "total": 1062
+   "total": 1065
   },
   "product": {
    "prod": 380,
-   "unprod": 84,
+   "unprod": 87,
    "wait": 318,
-   "total": 782
+   "total": 785
   },
   "support": {
    "prod": 270,
@@ -2413,7 +2429,7 @@ window.PFA_DATA = {
   {
    "date": "2026-10-02",
    "prod": 78,
-   "unprod": 58,
+   "unprod": 61,
    "wait": 307
   }
  ],
@@ -2424,14 +2440,14 @@ window.PFA_DATA = {
    "attempts": 7
   },
   {
-   "category": "DOCUMENTACION",
-   "minutes": 6,
+   "category": "FORMULA_PA",
+   "minutes": 7,
    "attempts": 2
   },
   {
-   "category": "FORMULA_PA",
-   "minutes": 4,
-   "attempts": 1
+   "category": "DOCUMENTACION",
+   "minutes": 6,
+   "attempts": 2
   },
   {
    "category": "AUTH",
@@ -2462,9 +2478,9 @@ window.PFA_DATA = {
   {
    "task": "E2-04",
    "prod": 34,
-   "unprod": 54,
+   "unprod": 57,
    "wait": 307,
-   "total": 395
+   "total": 398
   },
   {
    "task": "E1-05",
@@ -2533,7 +2549,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 720
+   "minutes": 723
   },
   {
    "account": "empresa",
@@ -2541,6 +2557,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T05:07:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 14,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "FORMULA_PA",
+   "summary": "Consulté M365 Copilot Chat sobre Scan folders sin nueva ejecución",
+   "evidence": "Copilot sospecha vínculo viejo y propone quitar, guardar, cerrar/reabrir Studio, agregar de nuevo y probar aviso. Hipótesis sin comprobar; se detuvo al superar 90 min. No se cambió ni publicó la app."
+  },
+  {
+   "start": "2026-10-02T05:05:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-22",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Oscar confirmó que completó la validación visual",
+   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto."
+  },
   {
    "start": "2026-10-02T05:02:00Z",
    "minutes": 4,
@@ -2644,35 +2686,35 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-08",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-07",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T05:07:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 14,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "FORMULA_PA",
+   "summary": "Consulté M365 Copilot Chat sobre Scan folders sin nueva ejecución",
+   "evidence": "Copilot sospecha vínculo viejo y propone quitar, guardar, cerrar/reabrir Studio, agregar de nuevo y probar aviso. Hipótesis sin comprobar; se detuvo al superar 90 min. No se cambió ni publicó la app."
+  },
+  {
+   "start": "2026-10-02T05:05:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-22",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Oscar confirmó que completó la validación visual",
+   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto."
+  },
   {
    "start": "2026-10-02T05:02:00Z",
    "minutes": 4,
@@ -4369,6 +4411,15 @@ window.PFA_DATA = {
    "found": "Oscar en Claude",
    "target": "T",
    "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador.",
+   "closure": ""
+  },
+  {
+   "id": "HZ-19",
+   "date": "2026-10-02",
+   "text": "Rediseñar el diagnóstico de Scan folders, que no inicia el flujo (mini-spec en control/specs/HZ-19.md)",
+   "found": "Codex en E2-04",
+   "target": "E2",
+   "status": "Por decidir",
    "closure": ""
   }
  ]
