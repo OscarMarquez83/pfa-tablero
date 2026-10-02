@@ -1,18 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T12:43:16.898058Z",
+ "generatedUtc": "2026-10-02T12:52:23.508236Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 12:20 UTC",
+  "updated": "2026-10-02 12:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Retomar las comprobaciones en la pestaña existente de Studio en Edge cuando vuelva a permitir inspección; identificar una corrección demostrable, medirla y completar la evidencia publicada de E2-04. Después seguir E2, E3 y E4 por dependencias.",
+  "nextAction": "E2-04 la trabaja Claude (D-040). Codex no toca E2-04, Studio ni el flow hasta que Claude la cierre.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T12:20:58.149086Z",
+  "current": [
+   "E2-04 (Claude), intento 19, inicio 2026-10-02 12:45 UTC. Enfoque nuevo: la fórmula OnSelect tiene 12 errores, y una fórmula con errores no se ejecuta (por eso no aparece ni el primer Notify). Haré: 1) leer la salida real del último run del flow (campos y niveles); 2) leer columnas y filas de PFA_MailFolders; 3) reescribir OnSelect por pasos medibles (Notify + Run solo → run nuevo en historial; luego ParseJSON; luego Patch). Comprobación: run nuevo Succeeded desde la app; primer scan agrega niveles 1-3; segundo scan 0 nuevas; fila decidida intacta; app publicada. Navegador integrado de Claude Code con sesión de Oscar. Cierre de Studio: GUARDAR."
+  ],
+  "fileUtc": "2026-10-02T12:45:29.829413Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -734,8 +736,8 @@ window.PFA_DATA = {
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-    "limit": 170,
-    "status": "Bloqueada",
+    "limit": 230,
+    "status": "En curso (Claude)",
     "attempts": 18,
     "minutes": 159,
     "entrega": "E2",
@@ -1394,7 +1396,22 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "E2-04",
+  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+  "owner": "Agente",
+  "depends": "E2-03",
+  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+  "limit": 230,
+  "status": "En curso (Claude)",
+  "attempts": 18,
+  "minutes": 159,
+  "entrega": "E2",
+  "fails": 7,
+  "lastActivity": "2026-10-02T12:21:00Z",
+  "ready": true
+ },
  "upcoming": [
   {
    "id": "E2-04",
@@ -1403,8 +1420,8 @@ window.PFA_DATA = {
    "depends": "E2-03",
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-   "limit": 170,
-   "status": "Bloqueada",
+   "limit": 230,
+   "status": "En curso (Claude)",
    "attempts": 18,
    "minutes": 159,
    "entrega": "E2",
@@ -2362,8 +2379,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
+   "reason": "7 intentos sin avance",
+   "level": "serious"
   }
  ],
  "kpi": {
