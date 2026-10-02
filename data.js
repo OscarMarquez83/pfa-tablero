@@ -1,23 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T11:28:19.202468Z",
+ "generatedUtc": "2026-10-02T11:37:14.253936Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 11:15 UTC",
+  "updated": "2026-10-02 11:31 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Ejecutar E2-04 con Studio editable: instrumentar OnSelect, medir un clic y aplicar solo la corrección del caso observado.",
+  "nextAction": "Reanudar E2-04 con 14 minutos efectivos disponibles en el límite actual; comprobar la hipótesis de metadatos antiguos del output de Power Apps y medir el OnSelect con Monitor.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "E2-04, intento 16 iniciado 2026-10-02 10:54 UTC: experimento único en Monitor con Notify y FirstError; aplicar solo el caso medido y continuar hasta la evidencia publicada.",
-   "Tanda nueva: restan 48 minutos efectivos; el intento 15 consumió 12 de los 60 concedidos. Inventario previo: un flow objetivo en My flows y Solutions, vinculado In your app.",
-   "Studio: una pestaña de Edge externo, estado Editing. App guardada como Saved (Unpublished), con fórmula diagnóstica; 12 errores Power Fx siguen activos tras refrescar y volver a agregar el flow publicado.",
-   "Avance 11:19 UTC: confirmé que FolderCollection es Array y que Respond devolvía ese array en un output declarado String. Cambié solo el body a string(variables('FolderCollection')), revisé Code view y el flow está Published. Refresqué y quité/agregué de nuevo desde Solutions; Studio conserva 12 errores ParseJSON y el único clic anterior no llamó al flow.\\n- Cierre de Studio: GUARDAR — app Saved (Unpublished); fórmula diagnóstica e intento fallido conservados para recarga."
-  ],
-  "fileUtc": "2026-10-02T11:20:12.657171Z",
+  "current": [],
+  "fileUtc": "2026-10-02T11:33:11.318791Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -245,10 +240,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 115,
+    "prod": 152,
     "unprod": 87,
     "wait": 314,
-    "total": 516
+    "total": 553
    }
   },
   {
@@ -741,11 +736,11 @@ window.PFA_DATA = {
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 150,
     "status": "Reabierta",
-    "attempts": 15,
-    "minutes": 99,
+    "attempts": 16,
+    "minutes": 136,
     "entrega": "E2",
     "fails": 6,
-    "lastActivity": "2026-10-02T06:47:00Z",
+    "lastActivity": "2026-10-02T11:31:00Z",
     "ready": true
    },
    {
@@ -1408,11 +1403,11 @@ window.PFA_DATA = {
   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
   "limit": 150,
   "status": "Reabierta",
-  "attempts": 15,
-  "minutes": 99,
+  "attempts": 16,
+  "minutes": 136,
   "entrega": "E2",
   "fails": 6,
-  "lastActivity": "2026-10-02T06:47:00Z",
+  "lastActivity": "2026-10-02T11:31:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1425,11 +1420,11 @@ window.PFA_DATA = {
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
    "limit": 150,
    "status": "Reabierta",
-   "attempts": 15,
-   "minutes": 99,
+   "attempts": 16,
+   "minutes": 136,
    "entrega": "E2",
    "fails": 6,
-   "lastActivity": "2026-10-02T06:47:00Z",
+   "lastActivity": "2026-10-02T11:31:00Z",
    "ready": true
   },
   {
@@ -2382,7 +2377,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (15 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (16 intentos previos)",
    "level": "serious"
   }
  ],
@@ -2392,28 +2387,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 675,
+   "prod": 712,
    "unprod": 89,
    "wait": 326,
-   "total": 1090
+   "total": 1127
   },
   "last24h": {
-   "prod": 270,
+   "prod": 307,
    "unprod": 73,
    "wait": 309,
-   "total": 652
+   "total": 689
   },
   "last7d": {
-   "prod": 675,
+   "prod": 712,
    "unprod": 89,
    "wait": 326,
-   "total": 1090
+   "total": 1127
   },
   "product": {
-   "prod": 388,
+   "prod": 425,
    "unprod": 87,
    "wait": 318,
-   "total": 793
+   "total": 830
   },
   "support": {
    "prod": 287,
@@ -2503,7 +2498,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 103,
+   "prod": 140,
    "unprod": 61,
    "wait": 307
   }
@@ -2552,10 +2547,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 42,
+   "prod": 79,
    "unprod": 57,
    "wait": 307,
-   "total": 406
+   "total": 443
   },
   {
    "task": "E1-05",
@@ -2624,7 +2619,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 748
+   "minutes": 785
   },
   {
    "account": "empresa",
@@ -2632,6 +2627,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T10:54:00Z",
+   "minutes": 37,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 16,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
+   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor anterior: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
+  },
   {
    "start": "2026-10-02T06:35:00Z",
    "minutes": 12,
@@ -2748,22 +2756,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador."
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-17",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T10:54:00Z",
+   "minutes": 37,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 16,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
+   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor anterior: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
+  },
   {
    "start": "2026-10-02T06:35:00Z",
    "minutes": 12,
