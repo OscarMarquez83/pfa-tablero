@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:17:14.608457Z",
+ "generatedUtc": "2026-10-02T04:23:18.890157Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:14 UTC",
+  "updated": "2026-10-02 04:21 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "esperar las pruebas visuales T-22 y T-23; después seguir con T-24. E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
+  "nextAction": "crear la página local y probar los tres resultados del diálogo en Edge y el navegador integrado. T-22 y T-23 esperan pruebas visuales de Oscar. E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
   "needsOscar": [
    {
     "ref": "T-22",
@@ -21,6 +21,9 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
+   "T-25, intento 1 iniciado 2026-10-02 04:21 UTC: añadir captura de pantalla completa, reglas de cierre para Studio/flow designer y probar guardar, descartar e inesperado en la página local.",
+   "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
+   "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
    "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
    "T-23, intento 2: iniciado 2026-10-02 03:59 UTC y cerrado 2026-10-02 04:04 como AVANCE. Pages muestra Listo para Codex con dos puntos en Entorno; ambos botones muestran Copiado. PFA Despertador figura PAUSED. Vista comprobada a 1265 px; faltan 1366/390 px y el ciclo completo en el chat.",
    "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
@@ -32,12 +35,12 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:15:24.779816Z",
+  "fileUtc": "2026-10-02T04:23:07.763813Z",
   "ruleFootprints": {
-   "current": "AB72D313",
+   "current": "3BCBA813",
    "lines": {
     "Desarrollo": "AB72D313",
-    "Entorno": "AB72D313"
+    "Entorno": "3BCBA813"
    }
   }
  },
@@ -387,15 +390,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 18,
+   "done": 19,
    "total": 25,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 251,
+    "prod": 253,
     "unprod": 2,
     "wait": 8,
-    "total": 261
+    "total": 263
    }
   }
  ],
@@ -1351,13 +1354,12 @@ window.PFA_DATA = {
     "expected": "Las fallas de flows consultan Learn y al Copilot adecuado según el intento",
     "evidence": "- [ ] En la 2.ª falla de un flujo, el worklog muestra primero la consulta a Microsoft Learn (resumen y URL) y después la pregunta al Copilot del diseñador, armada con lo que dijo Learn.<br>- [ ] Cada consulta al Copilot del diseñador tiene su línea en worklog: pregunta resumida y si cambió el flujo o solo respondió.<br>- [ ] Si Copilot cambió el flujo, Codex lo revisa en Code view antes de guardar; si no sirve o agrega acciones Premium o que requieran permisos (D-027), lo deshace sin guardar.<br>- [ ] Si Copilot responde que no puede (por ejemplo \"Failed to add actions…\"), cuenta como intento fallido y Codex no se lo vuelve a pedir más de una vez.",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-02T04:20:00Z"
    },
    {
     "id": "T-25",
@@ -1367,8 +1369,8 @@ window.PFA_DATA = {
     "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
     "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "En curso",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "T",
     "fails": 0,
@@ -2235,6 +2237,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T19:20:00Z"
+  },
+  {
+   "id": "T-24",
+   "action": "Copilot del diseñador: actualizar la regla anti-bucle y registrar la limitación de connection references",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Las fallas de flows consultan Learn y al Copilot adecuado según el intento",
+   "evidence": "- [ ] En la 2.ª falla de un flujo, el worklog muestra primero la consulta a Microsoft Learn (resumen y URL) y después la pregunta al Copilot del diseñador, armada con lo que dijo Learn.<br>- [ ] Cada consulta al Copilot del diseñador tiene su línea en worklog: pregunta resumida y si cambió el flujo o solo respondió.<br>- [ ] Si Copilot cambió el flujo, Codex lo revisa en Code view antes de guardar; si no sirve o agrega acciones Premium o que requieran permisos (D-027), lo deshace sin guardar.<br>- [ ] Si Copilot responde que no puede (por ejemplo \"Failed to add actions…\"), cuenta como intento fallido y Codex no se lo vuelve a pedir más de una vez.",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 2,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T04:20:00Z"
   }
  ],
  "alerts": [
@@ -2245,27 +2262,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 40,
+  "tasksDone": 41,
   "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 631,
+   "prod": 633,
    "unprod": 82,
    "wait": 326,
-   "total": 1039
+   "total": 1041
   },
   "last24h": {
-   "prod": 370,
+   "prod": 362,
    "unprod": 80,
    "wait": 320,
-   "total": 770
+   "total": 762
   },
   "last7d": {
-   "prod": 631,
+   "prod": 633,
    "unprod": 82,
    "wait": 326,
-   "total": 1039
+   "total": 1041
   },
   "product": {
    "prod": 380,
@@ -2274,10 +2291,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 251,
+   "prod": 253,
    "unprod": 2,
    "wait": 8,
-   "total": 261
+   "total": 263
   }
  },
  "days": [
@@ -2361,7 +2378,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 59,
+   "prod": 61,
    "unprod": 54,
    "wait": 307
   }
@@ -2477,7 +2494,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 697
+   "minutes": 699
   },
   {
    "account": "empresa",
@@ -2485,6 +2502,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T04:18:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-24",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Actualicé el anti-bucle de flows y agregué la limitación del Copilot del diseñador",
+   "evidence": "AGENTS.md filas 2.ª/3.ª y nota de fallo; KNOWN-FIXES KF-H06 con URL; consultas previas de Learn/Copilot registradas en worklog"
+  },
   {
    "start": "2026-10-02T04:06:00Z",
    "minutes": 8,
@@ -2601,22 +2631,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Reapertura: Camino 1 elegido; no pude abrir el navegador integrado ni Edge para operar Studio",
    "evidence": "Ambas consultas de estado agotaron el tiempo; no se modificó la app ni el flow"
-  },
-  {
-   "start": "2026-10-02T01:45:00Z",
-   "minutes": 42,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 5,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Learn indica actualizar el vínculo desde Refresh; Power Apps siguió sin reconocer foldersJson.",
-   "evidence": "Auditoría 0/3 OK: el run devuelve 25 elementos; botón sin ejecutar ni filas escritas. Copilot recomendó quitar flow, guardar, cerrar y reabrir antes de agregarlo. Learn: https://learn.microsoft.com/fil-ph/power-apps/maker/canvas-apps/working-with-flows. Guardar al recrear Respond falló por referencia de conexión; Undo restauró la acción publicada."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T04:18:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-24",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Actualicé el anti-bucle de flows y agregué la limitación del Copilot del diseñador",
+   "evidence": "AGENTS.md filas 2.ª/3.ª y nota de fallo; KNOWN-FIXES KF-H06 con URL; consultas previas de Learn/Copilot registradas en worklog"
+  },
   {
    "start": "2026-10-02T04:06:00Z",
    "minutes": 8,
