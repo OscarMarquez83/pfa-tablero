@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T18:24:59.428940Z",
+ "generatedUtc": "2026-10-02T18:32:03.667622Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,16 +8,11 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-10-02 18:26 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir lo que Oscar decida en HZ-20. Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [
-   {
-    "ref": "HZ-20",
-    "text": "decidir qué hace la app con las carpetas que borras en Outlook. Hoy su fila queda en la lista como \"por decidir\" (3 de tus pruebas: filas 27-29). Recomendación de Claude: en E2-05, marcarlas como \"ya no está en Outlook\" y ocultarlas de la revisión, sin borrar filas. Al responder: incorporo tu decisión a E2-05."
-   }
-  ],
+  "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
+  "needsOscar": [],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T18:24:58.928924Z",
+  "fileUtc": "2026-10-02T18:31:58.040590Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -2396,11 +2391,6 @@ window.PFA_DATA = {
    "task": "E2-04",
    "reason": "7 intentos sin avance",
    "level": "serious"
-  },
-  {
-   "task": "Hallazgo",
-   "reason": "Sin entrega destino: Scan folders solo agrega filas: si una carpeta se borra en Outlook, su fila sigue en PFA_M",
-   "level": "warning"
   }
  ],
  "kpi": {
@@ -4670,8 +4660,8 @@ window.PFA_DATA = {
    "text": "Scan folders solo agrega filas: si una carpeta se borra en Outlook, su fila sigue en PFA_MailFolders con Decision = Nueva y aparecería como carpeta por decidir. Prueba de Oscar: 3 carpetas creadas y borradas = filas 27-29 huérfanas. Recomendación de Claude: en E2-05, marcar las filas cuyo OutlookFolderId no vino en el último escaneo (por ejemplo, Decision = \"NoEnOutlook\") y ocultarlas de \"New folders to review\", sin borrar filas",
    "found": "Oscar en prueba de E2-04 (Claude)",
    "target": "E2-05",
-   "status": "Por decidir",
-   "closure": ""
+   "status": "Asignado",
+   "closure": "2026-10-02 · chat de Claude, DECISIONS D-042 · Oscar eligió A: marcar \"ya no está en Outlook\", ocultar de la revisión y no borrar la fila."
   }
  ]
 };
