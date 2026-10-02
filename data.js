@@ -1,23 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:22:14.813064Z",
+ "generatedUtc": "2026-10-02T06:31:14.254250Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:18 UTC",
+  "updated": "2026-10-02 06:27 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Registrar T-28 con la mini-spec 6; actualizar la regla anti-bucle, la comunicación y la regla de chat diario.",
+  "nextAction": "Completar T-28 y publicar sus cambios; luego medir E2-04 con un solo Edge externo.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T06:18:51.416332Z",
+  "current": [
+   "T-28, intento 1 iniciado 2026-10-02 06:27 UTC: aplicar la mini-spec aprobada a AGENTS.md, idea y los informes; comprobar cada criterio en los archivos."
+  ],
+  "fileUtc": "2026-10-02T06:29:51.357824Z",
   "ruleFootprints": {
-   "current": "6BC7F7B5",
+   "current": "31977571",
    "lines": {
     "Desarrollo": "C938B2D9",
-    "Entorno": "C938B2D9"
+    "Entorno": "31977571"
    }
   }
  },
@@ -1243,21 +1245,6 @@ window.PFA_DATA = {
     "lastActivity": "2026-10-01T17:18:00Z"
    },
    {
-    "id": "T-18",
-    "action": "Crear la automatización Codex PFA Despertador cada 15 minutos para procesar issues abiertos de Oscar cuando no haya una sesión activa",
-    "owner": "Agente",
-    "depends": "—",
-    "expected": "Las respuestas de Oscar reactivan el trabajo desde el tablero sin otro mensaje en chat",
-    "evidence": "Automatización activa en este proyecto con el mensaje solicitado; issue de prueba de Oscar queda cerrado con “Registrado en [archivo]” y worklog registra el intento dentro de 30 minutos",
-    "limit": 30,
-    "status": "Cancelada",
-    "attempts": 1,
-    "minutes": 1,
-    "entrega": "T",
-    "fails": 0,
-    "lastActivity": "2026-10-01T17:10:00Z"
-   },
-   {
     "id": "T-19",
     "action": "Aplicar el parche aprobado de Claude para recuperar la navegación interactiva por entregas en el tablero",
     "owner": "Agente",
@@ -1391,10 +1378,41 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-02T06:18:00Z"
+   },
+   {
+    "id": "T-28",
+    "action": "No escalar decisiones técnicas: hipótesis, límite de diagnóstico, informe y chat diario",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
+    "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
+    "limit": 30,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
- "nextTask": null,
+ "nextTask": {
+  "id": "T-28",
+  "action": "No escalar decisiones técnicas: hipótesis, límite de diagnóstico, informe y chat diario",
+  "owner": "Agente",
+  "depends": "—",
+  "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
+  "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
+  "limit": 30,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 0,
+  "entrega": "T",
+  "fails": 0,
+  "lastActivity": "",
+  "ready": true
+ },
  "upcoming": [
   {
    "id": "E2-04",
