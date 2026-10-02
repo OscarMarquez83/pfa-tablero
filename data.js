@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T19:37:15.725944Z",
+ "generatedUtc": "2026-10-02T19:52:15.145329Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -430,7 +430,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 15,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -459,7 +461,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -488,7 +492,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 1,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -517,7 +523,9 @@ window.PFA_DATA = {
       "attempts": 2,
       "minutes": 1,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -548,7 +556,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -577,7 +587,9 @@ window.PFA_DATA = {
       "attempts": 4,
       "minutes": 0,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -606,7 +618,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -635,7 +649,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -664,7 +680,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 1,
       "limit": 0,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -695,7 +713,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 10,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -724,7 +744,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 6,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -753,7 +775,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -782,7 +806,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 13,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -811,7 +837,9 @@ window.PFA_DATA = {
       "attempts": 7,
       "minutes": 143,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "over"
      }
     ],
     "lessons": [
@@ -844,7 +872,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 24,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -875,7 +905,9 @@ window.PFA_DATA = {
       "attempts": 2,
       "minutes": 29,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -907,7 +939,9 @@ window.PFA_DATA = {
       "attempts": 3,
       "minutes": 29,
       "limit": 45,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -936,7 +970,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 0,
       "limit": 0,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -965,7 +1001,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 14,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -996,7 +1034,9 @@ window.PFA_DATA = {
       "attempts": 3,
       "minutes": 2,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -1029,7 +1069,9 @@ window.PFA_DATA = {
       "attempts": 12,
       "minutes": 97,
       "limit": 90,
-      "extra": 30
+      "extra": 30,
+      "finished": true,
+      "tone": "ext"
      }
     ],
     "lessons": [
@@ -1060,7 +1102,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1075,7 +1119,7 @@ window.PFA_DATA = {
     "limit": 90,
     "limitAlloc": {
      "ext": {
-      "Codex": 80
+      "Codex": 60
      },
      "own": {
       "Claude": 60
@@ -1093,14 +1137,18 @@ window.PFA_DATA = {
       "attempts": 18,
       "minutes": 159,
       "limit": 90,
-      "extra": 80
+      "extra": 60,
+      "finished": false,
+      "tone": "over"
      },
      {
       "agent": "Claude",
       "attempts": 1,
       "minutes": 43,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -1109,7 +1157,8 @@ window.PFA_DATA = {
      "KF-16",
      "KF-14",
      "KF-P09",
-     "KF-P11"
+     "KF-P11",
+     "KF-P12"
     ]
    },
    {
@@ -1136,7 +1185,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1166,7 +1217,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1196,7 +1249,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1226,7 +1281,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1256,7 +1313,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1286,7 +1345,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1316,7 +1377,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 0,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1348,7 +1411,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 0,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1378,7 +1443,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1408,7 +1475,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1438,7 +1507,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1468,7 +1539,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1498,7 +1571,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1528,7 +1603,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1558,7 +1635,9 @@ window.PFA_DATA = {
       "attempts": 0,
       "minutes": 0,
       "limit": 0,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": [],
@@ -1590,7 +1669,9 @@ window.PFA_DATA = {
       "attempts": 7,
       "minutes": 41,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "over"
      }
     ],
     "lessons": []
@@ -1619,7 +1700,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 7,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -1650,7 +1733,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 11,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1679,7 +1764,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 19,
       "limit": 90,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1708,7 +1795,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 5,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1737,7 +1826,9 @@ window.PFA_DATA = {
       "attempts": 4,
       "minutes": 5,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1766,7 +1857,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 3,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1795,7 +1888,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 10,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1824,7 +1919,9 @@ window.PFA_DATA = {
       "attempts": 2,
       "minutes": 4,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1853,7 +1950,9 @@ window.PFA_DATA = {
       "attempts": 3,
       "minutes": 8,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1882,7 +1981,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1911,7 +2012,9 @@ window.PFA_DATA = {
       "attempts": 2,
       "minutes": 20,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1940,7 +2043,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 6,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1969,7 +2074,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 8,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -1998,7 +2105,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 23,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2027,7 +2136,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 46,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2056,7 +2167,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 11,
       "limit": 45,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2085,7 +2198,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 9,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2114,7 +2229,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 1,
       "limit": 10,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2143,7 +2260,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 8,
       "limit": 20,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2172,7 +2291,9 @@ window.PFA_DATA = {
       "attempts": 2,
       "minutes": 8,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -2203,7 +2324,9 @@ window.PFA_DATA = {
       "attempts": 3,
       "minutes": 6,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -2234,7 +2357,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2263,7 +2388,9 @@ window.PFA_DATA = {
       "attempts": 7,
       "minutes": 11,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2292,7 +2419,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 2,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2321,7 +2450,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 10,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2350,7 +2481,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 5,
       "limit": 30,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2379,7 +2512,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 9,
       "limit": 45,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": [
@@ -2410,7 +2545,9 @@ window.PFA_DATA = {
       "attempts": 1,
       "minutes": 10,
       "limit": 60,
-      "extra": 0
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
     "lessons": []
@@ -2441,7 +2578,9 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "limit": 90,
-    "extra": 0
+    "extra": 0,
+    "finished": false,
+    "tone": "ok"
    }
   ],
   "lessons": [],
@@ -2472,7 +2611,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2502,7 +2643,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2532,7 +2675,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2562,7 +2707,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2592,7 +2739,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2622,7 +2771,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 2,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2652,7 +2803,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 0,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2682,7 +2835,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 0,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2712,7 +2867,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2742,7 +2899,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2772,7 +2931,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2802,7 +2963,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2832,7 +2995,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2862,7 +3027,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -2892,7 +3059,9 @@ window.PFA_DATA = {
      "attempts": 0,
      "minutes": 0,
      "limit": 0,
-     "extra": 0
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
     }
    ],
    "lessons": [],
@@ -3024,6 +3193,15 @@ window.PFA_DATA = {
     "- **Regla práctica:** antes de cada cambio, escribe en una línea qué observación lo justifica y qué resultado esperas. Si no puedes escribirla, mide primero."
    ]
   },
+  "KF-P12": {
+   "title": "INC-13 · Una aprobación debe ser explícita y responder a ese pedido.",
+   "note": "",
+   "lines": [
+    "- Desvío (E2-04, intento 18): Codex pidió una ampliación de 20 min. Sin respuesta, la dio por aprobada porque Oscar había dicho que siguiera con el objetivo E2–E4 (D-039), y la usó.",
+    "- Regla: un pedido de \"Necesito de Oscar\" solo se aprueba con un issue suyo que lo responda o con un mensaje suyo que lo nombre. Un objetivo general (\"sigue con E2–E4\") no aprueba pedidos pendientes, ampliaciones de tiempo ni excepciones. Sin respuesta, la tarea sigue `Bloqueada` y el agente pasa a otra.",
+    "- Al registrar una aprobación en DECISIONS, cita la frase o el issue exactos de Oscar."
+   ]
+  },
   "KF-H08": {
    "title": "TABLERO · Comprobar un cambio del tablero en local y en Pages (T-29, Claude)",
    "note": "",
@@ -3078,7 +3256,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 15,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3107,7 +3287,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3136,7 +3318,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 1,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3165,7 +3349,9 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 1,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3196,7 +3382,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3225,7 +3413,9 @@ window.PFA_DATA = {
      "attempts": 4,
      "minutes": 0,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3254,7 +3444,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3283,7 +3475,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3312,7 +3506,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 1,
      "limit": 0,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3341,7 +3537,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 10,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3370,7 +3568,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 6,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3399,7 +3599,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 2,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3428,7 +3630,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 13,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3457,7 +3661,9 @@ window.PFA_DATA = {
      "attempts": 7,
      "minutes": 143,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
     }
    ],
    "lessons": [
@@ -3490,7 +3696,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 24,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3521,7 +3729,9 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 29,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3553,7 +3763,9 @@ window.PFA_DATA = {
      "attempts": 3,
      "minutes": 29,
      "limit": 45,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3582,7 +3794,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 0,
      "limit": 0,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3611,7 +3825,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 14,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3640,7 +3856,9 @@ window.PFA_DATA = {
      "attempts": 3,
      "minutes": 2,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3673,7 +3891,9 @@ window.PFA_DATA = {
      "attempts": 12,
      "minutes": 97,
      "limit": 90,
-     "extra": 30
+     "extra": 30,
+     "finished": true,
+     "tone": "ext"
     }
    ],
    "lessons": [
@@ -3704,7 +3924,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 2,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3719,7 +3941,7 @@ window.PFA_DATA = {
    "limit": 90,
    "limitAlloc": {
     "ext": {
-     "Codex": 80
+     "Codex": 60
     },
     "own": {
      "Claude": 60
@@ -3737,14 +3959,18 @@ window.PFA_DATA = {
      "attempts": 18,
      "minutes": 159,
      "limit": 90,
-     "extra": 80
+     "extra": 60,
+     "finished": false,
+     "tone": "over"
     },
     {
      "agent": "Claude",
      "attempts": 1,
      "minutes": 43,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3753,7 +3979,8 @@ window.PFA_DATA = {
     "KF-16",
     "KF-14",
     "KF-P09",
-    "KF-P11"
+    "KF-P11",
+    "KF-P12"
    ]
   },
   {
@@ -3780,7 +4007,9 @@ window.PFA_DATA = {
      "attempts": 7,
      "minutes": 41,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
     }
    ],
    "lessons": []
@@ -3809,7 +4038,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 7,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -3840,7 +4071,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 11,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3869,7 +4102,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 19,
      "limit": 90,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3898,7 +4133,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 5,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3927,7 +4164,9 @@ window.PFA_DATA = {
      "attempts": 4,
      "minutes": 5,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3956,7 +4195,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 3,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -3985,7 +4226,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 10,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4014,7 +4257,9 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 4,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4043,7 +4288,9 @@ window.PFA_DATA = {
      "attempts": 3,
      "minutes": 8,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4072,7 +4319,9 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 20,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4101,7 +4350,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 6,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4130,7 +4381,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 8,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4159,7 +4412,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 23,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4188,7 +4443,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 46,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4217,7 +4474,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 11,
      "limit": 45,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4246,7 +4505,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 9,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4275,7 +4536,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 1,
      "limit": 10,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4304,7 +4567,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 8,
      "limit": 20,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4333,7 +4598,9 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 8,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -4364,7 +4631,9 @@ window.PFA_DATA = {
      "attempts": 3,
      "minutes": 6,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -4395,7 +4664,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 2,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4424,7 +4695,9 @@ window.PFA_DATA = {
      "attempts": 7,
      "minutes": 11,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4453,7 +4726,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 2,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4482,7 +4757,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 10,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4511,7 +4788,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 5,
      "limit": 30,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []
@@ -4540,7 +4819,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 9,
      "limit": 45,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": [
@@ -4571,7 +4852,9 @@ window.PFA_DATA = {
      "attempts": 1,
      "minutes": 10,
      "limit": 60,
-     "extra": 0
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
     }
    ],
    "lessons": []

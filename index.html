@@ -25,6 +25,7 @@
   --warning: #fab219; --warning-ink: #7a5300; --warning-soft: #fef4dc;
   --serious: #ec835a; --serious-ink: #8f3b17; --serious-soft: #fdeee7;
   --critical: #d03b3b; --critical-ink: #a32525; --critical-soft: #fbe7e7;
+  --claude-ink: #9a4a2c; --claude-soft: #f6e3da;
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
 }
 @media (prefers-color-scheme: dark) {
@@ -36,6 +37,7 @@
     --s1: #3987e5; --s2: #d95926;
     --good-ink: #0ca30c; --good-soft: #132613; --warning-ink: #fab219; --warning-soft: #2e2510;
     --serious-ink: #ec835a; --serious-soft: #2e1c14; --critical-ink: #e66767; --critical-soft: #2e1616;
+    --claude-ink: #e8a387; --claude-soft: #33221a;
     --shadow: none;
   }
 }
@@ -47,6 +49,7 @@
   --s1: #3987e5; --s2: #d95926;
   --good-ink: #0ca30c; --good-soft: #132613; --warning-ink: #fab219; --warning-soft: #2e2510;
   --serious-ink: #ec835a; --serious-soft: #2e1c14; --critical-ink: #e66767; --critical-soft: #2e1616;
+  --claude-ink: #e8a387; --claude-soft: #33221a;
   --shadow: none;
 }
 * { box-sizing: border-box; }
@@ -142,16 +145,15 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .tasks .more { color: var(--ink-2); font-size: 12.5px; margin-top: 6px; }
 .tasks .more b { color: var(--ink); font-weight: 600; }
 /* D-044: intentos y tiempo por agente, y lecciones de la tarea */
-.tasks tr.has-agents td { border-bottom: 0; padding-bottom: 4px; }
-.tasks tr.agents td { padding-top: 0; font-size: 11.5px; color: var(--ink-2); }
-.agentline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
-.ag { font-variant-numeric: tabular-nums; }
-.ag b { color: var(--ink); font-weight: 600; }
-.ag .adot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; background: var(--muted); }
-.ag.Codex .adot { background: var(--accent); } .ag.Claude .adot { background: #d97757; }
-.ag.ext .lim { color: var(--warning-ink); font-weight: 600; }
-.ag.over .lim { color: var(--critical-ink); font-weight: 600; }
-.lessbtn { margin-left: auto; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
+.tasks .stk { min-height: 36px; display: flex; flex-direction: column; justify-content: flex-start; }
+.tasks .stk + .stk { margin-top: 4px; }
+.who.ag-Codex { background: var(--accent-soft); color: var(--accent); }
+.who.ag-Claude { background: var(--claude-soft); color: var(--claude-ink); }
+.tmeter.ext .meter > i { background: var(--warning); }
+.tmeter.ext .num { color: var(--warning-ink); font-weight: 600; }
+.tmeter .plus { font-weight: 600; }
+.tmeter .ag-m { display: none; }
+.lessbtn { display: block; margin-top: 8px; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
 .lessbtn:hover { background: var(--surface-2); }
 .lesson { margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--grid); overflow-wrap: anywhere; font-size: 13.5px; line-height: 1.5; }
 .lesson:last-child { border-bottom: 0; }
@@ -241,7 +243,9 @@ footer { color: var(--muted); font-size: 12px; margin-top: 24px; text-align: cen
   .tasks th:nth-child(4), .tasks td:nth-child(4) { display: none; }
   .tasks th:first-child, .tasks td:first-child { width: 34px; }
   .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 50px; }
-  .tasks th:nth-child(6), .tasks td:nth-child(6) { width: 60px; }
+  .tasks th:nth-child(6), .tasks td:nth-child(6) { width: 84px; }
+  .tmeter .ag-m { display: block; font-size: 10px; font-weight: 600; color: var(--ink-2); }
+  .tasks td:nth-child(6) .tmeter { width: 80px; }
   .tasks td, .tasks th { font-size: 10px; }
   .tasks .tid { overflow-wrap: anywhere; }
   .tmeter { max-width: 52px; }
@@ -568,29 +572,37 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       if (ma && mb && ma[1] === mb[1]) return Number(ma[2]) - Number(mb[2]);
       return String(a.id).localeCompare(String(b.id));
     }
-    function taskRows(list) { return list.map(function (t) {
-      var first = firstSentence(t.action);
-      var over = t.limit && t.minutes > t.limit;
-      var w = t.limit ? Math.min(100, pct(t.minutes, t.limit)) : 0;
-      var tm = t.limit ? '<div class="tmeter' + (over ? " over" : "") + '"><span class="num">' + t.minutes + " / " + t.limit + ' min</span><div class="meter"><i style="width:' + w + '%"></i></div></div>' : '<span class="num" style="color:var(--muted)">' + (t.minutes ? t.minutes + " min" : "—") + "</span>";
-      var sub = agentRow(t);
-      return '<tr' + (sub ? ' class="has-agents"' : "") + "><td>" + chip(t.status) + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
-        '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + "</div></details></td>" +
-        '<td><span class="who ' + esc(t.owner) + '">' + esc(t.owner) + '</span></td><td class="num hide-sm">' + t.attempts + "</td><td>" + tm + "</td></tr>" + sub;
-    }).join(""); }
-    // D-044: una línea por agente (intentos · minutos usados / asignados) y botón de lecciones.
-    function agentRow(t) {
-      var ags = (t.byAgent || []).filter(function (a) { return a.attempts || a.minutes; });
-      var nl = (t.lessons || []).length;
-      if (!ags.length && !nl) return "";
-      var parts = ags.map(function (a) {
-        var cap = (a.limit || 0) + (a.extra || 0), cls = a.minutes > cap && cap ? " over" : (a.extra && a.minutes > a.limit ? " ext" : "");
-        var lim = a.limit ? " / " + a.limit + (a.extra ? " +" + a.extra : "") + " min" : " min";
-        return '<span class="ag ' + esc(a.agent) + cls + '" title="' + esc(a.agent + ": " + a.attempts + " intentos, " + a.minutes + " min usados" + (a.limit ? " de " + a.limit + " asignados" + (a.extra ? " + " + a.extra + " de ampliación" : "") : "")) + '"><span class="adot"></span><b>' + esc(a.agent) + "</b> · " + a.attempts + " int. · " + a.minutes + '<span class="lim">' + esc(lim) + "</span></span>";
-      }).join("");
-      var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '">Lecciones (' + nl + ")</button>" : "";
-      return '<tr class="agents"><td colspan="6"><div class="agentline">' + parts + btn + "</div></td></tr>";
+    // D-044: Resp., Intentos y Tiempo llevan una sub-fila por agente (Codex o Claude), alineadas.
+    // Color de cada barra: azul = dentro de lo asignado; amarillo = usó la ampliación y terminó;
+    // rojo = pasó lo asignado y no terminó (la cerró otro agente) o pasó también la ampliación.
+    function agentsOf(t) { return (t.byAgent || []).filter(function (a) { return a.attempts || a.minutes; }); }
+    function meter(minutes, limit, extra, tone, label) {
+      if (!limit) return '<div class="tmeter">' + (label || "") + '<span class="num" style="color:var(--muted)">' + (minutes ? minutes + " min" : "—") + "</span></div>";
+      var cls = tone === "over" ? " over" : tone === "ext" ? " ext" : "", cap = limit + (extra || 0);
+      var w = Math.min(100, pct(minutes, limit));
+      return '<div class="tmeter' + cls + '">' + (label || "") + '<span class="num">' + minutes + " / " + limit + (extra ? ' <span class="plus">+' + extra + "</span>" : "") + ' min</span><div class="meter"><i style="width:' + w + '%"></i></div></div>';
     }
+    function taskRows(list) { return list.map(function (t) {
+      var first = firstSentence(t.action), ags = agentsOf(t), nl = (t.lessons || []).length;
+      var resp, tries, time;
+      if (t.owner !== "Oscar" && ags.length) {
+        resp = ags.map(function (a) { return '<div class="stk"><span class="who ag-' + esc(a.agent) + '">' + esc(a.agent) + "</span></div>"; }).join("");
+        tries = ags.map(function (a) { return '<div class="stk">' + a.attempts + "</div>"; }).join("");
+        time = ags.map(function (a) {
+          var lbl = '<span class="ag-m">' + esc(a.agent) + " · " + a.attempts + "</span>";
+          return '<div class="stk" title="' + esc(a.agent + ": " + a.attempts + " intentos · " + a.minutes + " min usados de " + a.limit + " asignados" + (a.extra ? " + " + a.extra + " de ampliación" : "") + (a.finished ? " · cerró la tarea" : "")) + '">' + meter(a.minutes, a.limit, a.extra, a.tone, lbl) + "</div>";
+        }).join("");
+      } else {
+        resp = '<span class="who ' + esc(t.owner) + '">' + esc(t.owner) + "</span>";
+        tries = String(t.attempts);
+        time = meter(t.minutes, t.limit, 0, t.limit && t.minutes > t.limit ? "over" : "ok");
+      }
+      var total = ags.length > 1 ? "Total de la tarea: " + t.minutes + " min · asignado al inicio: " + t.limit + " min" : "";
+      var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '">Lecciones (' + nl + ")</button>" : "";
+      return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
+        '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + (total ? "<br><b>" + esc(total) + "</b>" : "") + "</div></details></td>" +
+        "<td>" + resp + '</td><td class="num hide-sm">' + tries + '</td><td' + (total ? ' title="' + esc(total) + '"' : "") + ">" + time + "</td></tr>";
+    }).join(""); }
     function taskTable(list) {
       return '<div class="task-scroll"><table class="tasks"><thead><tr><th>Estado</th><th>ID</th><th>Acción</th><th>Resp.</th><th class="hide-sm">Intentos</th><th>Tiempo</th></tr></thead><tbody>' + taskRows(list) + "</tbody></table></div>";
     }
