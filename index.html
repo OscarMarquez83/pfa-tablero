@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PFA · Avance</title>
-<!-- Diseño: Claude (2026-10-02: sección «Listo para Codex» e ideas asignadas y cerradas con su cierre). No editar. Los datos vienen de data.js. -->
+<!-- Diseño: Claude (2026-10-02: «Listo para Codex», ideas cerradas y «En curso» plegado). No editar. Los datos vienen de data.js. -->
 <style>
 :root {
   color-scheme: light;
@@ -288,6 +288,12 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
 .ideas-rest { margin-top: 10px; border-top: 1px solid var(--grid); padding-top: 8px; }
 .ideas-rest > summary { color: var(--muted); font-size: 12px; cursor: pointer; }
 .ideas-rest .list { margin-top: 8px; }
+/* En curso plegado (2026-10-02) */
+.now-box { background: var(--surface-2); }
+.now-more { margin-top: 6px; }
+.now-more > summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+.now-more ul { margin: 6px 0 0; padding-left: 18px; color: var(--ink-2); font-size: 12.5px; max-height: 320px; overflow-y: auto; }
+.now-more li { margin: 0 0 6px; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -652,7 +658,13 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     }
     if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
     else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
-    if (D.status.current && D.status.current.length) html += '<div class="next" style="background:var(--surface-2)"><b style="color:var(--ink)">En curso:</b> ' + D.status.current.map(esc).join(" · ") + "</div>";
+    // En curso: solo la primera nota (la vigente), recortada; el resto queda plegado.
+    if (D.status.current && D.status.current.length) {
+      var cur = D.status.current, first = String(cur[0]), short = first.length > 170 ? first.slice(0, 167).replace(/\s+\S*$/, "") + "…" : first;
+      html += '<div class="next now-box"><b style="color:var(--ink)">En curso:</b> ' + esc(short) +
+        '<details class="now-more"><summary>' + (cur.length > 1 ? "Ver detalle y " + (cur.length - 1) + " notas anteriores" : "Ver detalle") + "</summary><ul>" +
+        cur.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ul></details></div>";
+    }
     $("rev").innerHTML = html;
     if ($("revmore")) $("revmore").onclick = openRevision;
   })();

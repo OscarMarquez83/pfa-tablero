@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:55:14.846205Z",
+ "generatedUtc": "2026-10-02T06:10:14.247384Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,33 +9,12 @@ window.PFA_DATA = {
   "updated": "2026-10-02 05:24 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 sigue Bloqueada a la espera de la elección HZ-19. Corregí el intento 8 de 15 a 11 minutos según sus horas registradas; el total efectivo es 87/90. Las tareas E2-05 en adelante dependen de E2-04.",
-  "needsOscar": [
-   {
-    "ref": "HZ-19",
-    "text": "elige el diagnóstico de E2-04. A) quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregarlo y probar con un aviso de éxito/error (recomendada por coincidir con la sospecha de Copilot y la evidencia ya prevista). B) mantener el vínculo actual, agregar avisos de diagnóstico y comprobar nombre del flow, conexión y entorno antes de cambiarlo. Al responder: registraré tu opción, reabriré E2-04 con reabrir-tarea y haré esa comprobación."
-   }
-  ],
+  "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-23, intento 3 iniciado 2026-10-02 05:16 UTC y cerrado 05:16 como HECHA (0 min): Oscar confirmó en issue #12 la prueba del grupo Listo para Codex a 1366 px y 390 px y el contenido de los dos mensajes. Cerré T-23; sin cambios en la app.",
-   "E2-04, intento 14 iniciado 2026-10-02 05:07 UTC y cerrado 05:10 como BLOQUEADA (3 min; total 87/90). M365 Copilot Chat recomendó como hipótesis un vínculo antiguo: quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregar el flow y probar con un aviso de éxito/error. No apliqué cambios porque se superó el límite. Al cierre, el publicador volvió a fallar al escribir publish.log (acceso denegado; KF-H04).",
-   "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app. El publicador regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado; KF-H04).",
-   "E2-04, intento 12 iniciado 2026-10-02 04:57 UTC y cerrado 05:00 como ESPERA/NAVEGADOR. Edge lista Studio como Editing, pero el conector informa que la pestaña ya pertenece a otra sesión; no modifiqué la app. El publicador regeneró dashboard/data.js; falló al escribir publish.log (acceso denegado; KF-H04).",
-   "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
-   "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
-   "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
-   "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
-   "T-23, intento 2: iniciado 2026-10-02 03:59 UTC y cerrado 2026-10-02 04:04 como AVANCE. Pages muestra Listo para Codex con dos puntos en Entorno; ambos botones muestran Copiado. PFA Despertador figura PAUSED. Vista comprobada a 1265 px; faltan 1366/390 px y el ciclo completo en el chat.",
-   "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
-   "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
-   "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
-   "Avance 03:31 UTC: revisé la respuesta del navegador ante Leave site; Escape regresó de preview al editor sin cerrar ni descartar Studio. Detecté que Scan folders se solapaba con el texto de ayuda.",
-   "Avance 03:37 UTC: corregí el YAML, reemplacé el botón y guardé la app sin publicarla. Studio confirma el botón a la derecha de Mail folders y sin error en OnSelect.",
-   "Avance 03:39 UTC: Details muestra la conexión Outlook asignada y Flow checker indica 0 errores/advertencias. No hay ejecución nueva; primera y segunda escritura siguen pendientes. No recuperé la copia no guardada del diseñador.",
-   "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
-   "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
+   "T-27, intento 1 iniciado 2026-10-02 06:08 UTC: registrar la mini-spec aprobada y limpiar la tabla de hallazgos, aplicar el patch verificado y comprobar el tablero a 1366 px y 390 px."
   ],
-  "fileUtc": "2026-10-02T05:25:25.887175Z",
+  "fileUtc": "2026-10-02T06:09:06.774160Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
