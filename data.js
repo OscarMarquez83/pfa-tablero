@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T11:13:15.652535Z",
+ "generatedUtc": "2026-10-02T11:20:26.023462Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -14,10 +14,10 @@ window.PFA_DATA = {
   "current": [
    "E2-04, intento 16 iniciado 2026-10-02 10:54 UTC: experimento único en Monitor con Notify y FirstError; aplicar solo el caso medido y continuar hasta la evidencia publicada.",
    "Tanda nueva: restan 48 minutos efectivos; el intento 15 consumió 12 de los 60 concedidos. Inventario previo: un flow objetivo en My flows y Solutions, vinculado In your app.",
-   "Studio: una pestaña de Edge externo, estado Editing. Aún no hay cambios en la app.",
-   "Avance 11:15 UTC: tras quitar y volver a agregar el flow, Studio sigue sin reconocer foldersJson (12 errores de fórmula). El único clic en preview registró UserAction / Select para btnScanFolders; Monitor no registró llamada al flow y no apareció el aviso Scan started. La prueba no encaja aún con los casos de la tabla porque la fórmula no compila. Sin corrección adicional."
+   "Studio: una pestaña de Edge externo, estado Editing. App guardada como Saved (Unpublished), con fórmula diagnóstica; 12 errores Power Fx siguen activos tras refrescar y volver a agregar el flow publicado.",
+   "Avance 11:19 UTC: confirmé que FolderCollection es Array y que Respond devolvía ese array en un output declarado String. Cambié solo el body a string(variables('FolderCollection')), revisé Code view y el flow está Published. Refresqué y quité/agregué de nuevo desde Solutions; Studio conserva 12 errores ParseJSON y el único clic anterior no llamó al flow.\\n- Cierre de Studio: GUARDAR — app Saved (Unpublished); fórmula diagnóstica e intento fallido conservados para recarga."
   ],
-  "fileUtc": "2026-10-02T11:04:15.948252Z",
+  "fileUtc": "2026-10-02T11:20:12.657171Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -2398,10 +2398,10 @@ window.PFA_DATA = {
    "total": 1090
   },
   "last24h": {
-   "prod": 277,
+   "prod": 274,
    "unprod": 87,
-   "wait": 319,
-   "total": 683
+   "wait": 309,
+   "total": 670
   },
   "last7d": {
    "prod": 675,
