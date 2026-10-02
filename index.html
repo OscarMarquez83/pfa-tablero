@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PFA · Avance</title>
-<!-- Diseño: Claude (2026-10-01: E0–E10 por selección, T con abiertas y hechas). No editar. Los datos vienen de data.js. -->
+<!-- Diseño: Claude (2026-10-02: sección «Listo para Codex» e ideas asignadas y cerradas con su cierre). No editar. Los datos vienen de data.js. -->
 <style>
 :root {
   color-scheme: light;
@@ -271,6 +271,23 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
 .ideas .tgt.pd { background: var(--warning-soft); color: var(--warning-ink); }
 @media (max-width: 1100px) { .road { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .road { grid-template-columns: repeat(2, minmax(0, 1fr)); } dialog { width: calc(100vw - 16px); } .dlg-body { padding: 4px 14px 16px; } }
+/* Listo para Codex e ideas cerradas (2026-10-02) */
+button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.btn-s.done { background: var(--good-soft); color: var(--good-ink); border-color: transparent; }
+.ready-group + .ready-group { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--grid); }
+.ready-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 0 0 8px; font-size: 13px; font-weight: 650; }
+.ready-head .hint { font-weight: 400; color: var(--muted); font-size: 12px; }
+.ready .ico { background: var(--accent-soft); color: var(--accent); }
+.ready .why { color: var(--ink-2); font-size: 12px; margin-top: 2px; overflow-wrap: anywhere; }
+.ready-msg { margin-top: 8px; }
+.ready-msg > summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+.ready-msg pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--surface-2); border-radius: 8px; padding: 10px; margin: 6px 0 0; color: var(--ink); user-select: all; -webkit-user-select: all; }
+.ready-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.idea-closure { font-size: 12px; color: var(--ink-2); margin-top: 3px; }
+.idea-closure.missing { color: var(--warning-ink); font-weight: 600; }
+.ideas-rest { margin-top: 10px; border-top: 1px solid var(--grid); padding-top: 8px; }
+.ideas-rest > summary { color: var(--muted); font-size: 12px; cursor: pointer; }
+.ideas-rest .list { margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -314,6 +331,10 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
         <ul class="list" id="oscar"></ul>
       </section>
       <section class="card">
+        <h2>Listo para Codex <span class="hint" id="ready-n"></span></h2>
+        <div id="ready"></div>
+      </section>
+      <section class="card">
         <h2>Alertas <span class="hint">anti-bucle, límites y hallazgos</span></h2>
         <ul class="list" id="alerts"></ul>
       </section>
@@ -340,13 +361,14 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
       <button type="button" class="revlink" id="feedall">Ver historial completo →</button>
     </section>
     <section class="card">
-      <h2>Ideas y hallazgos <span class="hint">solo los que esperan decisión</span></h2>
+      <h2>Ideas y hallazgos <span class="hint">arriba, las que esperan tu decisión</span></h2>
       <ul class="list ideas" id="ideas"></ul>
+      <div id="ideas-rest"></div>
       <div class="sub" id="ideas-foot" style="margin-top:10px"></div>
     </section>
   </div>
 
-  <footer>Fuente: carpeta control/ del repositorio. Se publica cada 15 minutos si hay cambios y al cerrar cada intento del agente.</footer>
+  <footer>Fuente: carpeta control/ del repositorio. Se revisa cada 3 minutos y se publica si hay cambios, y al cerrar cada intento del agente.</footer>
 </div>
 <div class="tip" id="tip"></div>
 <dialog id="dlg"><div class="dlg-head"><h3 id="dlg-title"></h3><button class="x" id="dlg-x" type="button" aria-label="Cerrar">✕</button></div><div class="dlg-body" id="dlg-body"></div></dialog>
@@ -640,23 +662,121 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   $("oscar").innerHTML = D.status.needsOscar.length ? D.status.needsOscar.map(function (n) {
     return '<li class="oscar" data-ref="' + esc(n.ref || "General") + '"><span class="ico">→</span><span style="flex:1">' + (n.ref ? "<b>" + esc(n.ref) + ":</b> " : "") + esc(n.text) + replyButtons(n) + "</span></li>";
   }).join("") : '<li style="background:none;padding:0"><div class="empty"><span class="ok">✓</span>Nada pendiente</div></li>';
-  // Respuestas ya enviadas: issues abiertos de Oscar que el agente todavía no registró.
-  if (canReply && D.status.needsOscar.length && window.fetch) {
-    fetch("https://api.github.com/repos/" + encodeURIComponent(C.owner) + "/" + encodeURIComponent(C.repo) + "/issues?state=open&per_page=50")
-      .then(function (r) { return r.ok ? r.json() : []; })
+  // Respuestas ya enviadas: marca en "Necesito de Oscar" los pendientes que ya tienen un issue abierto.
+  function markAnswered(openIssues) {
+    Array.prototype.forEach.call(document.querySelectorAll("#oscar li.oscar[data-ref]"), function (li) {
+      var ref = li.getAttribute("data-ref");
+      var hit = openIssues.filter(function (i) { return i.title.slice(-(ref.length + 2)) === ": " + ref; })[0];
+      if (!hit) return;
+      var act = li.querySelector(".actions");
+      var note = '<div class="actions"><a class="btn-s" target="_blank" rel="noopener" href="' + esc(hit.html_url) + '">✓ Respondido (#' + hit.number + ")</a>" +
+        '<span class="sub" style="margin-left:8px">Aparece en «Listo para Codex» para que se lo pases.</span></div>';
+      if (act) act.outerHTML = note; else li.lastChild.insertAdjacentHTML("beforeend", note);
+      li.style.opacity = "0.75";
+    });
+  }
+
+  // ---------- Listo para Codex ----------
+  // Lo que ya puede cerrarse o retomarse y espera solo a que Oscar le pase el mensaje a Codex.
+  // No ejecuta nada: arma un mensaje por chat (Desarrollo = entregas E; Entorno = T, hallazgos y lo demás).
+  var STALE_H = 12, TASK_RE = /^(E\d+-\d+|T-\d+)$/, TASK = {};
+  Object.keys(D.tasksByEntrega || {}).forEach(function (k) { (D.tasksByEntrega[k] || []).forEach(function (t) { TASK[t.id] = t; }); });
+  function lineOf(ref) { return /^E\d/.test(ref || "") ? "Desarrollo" : "Entorno"; }
+  function hoursSince(iso) { var t = Date.parse(iso || ""); return t ? (Date.now() - t) / 3600000 : null; }
+  function agoTxt(h) { return h == null ? "sin actividad registrada" : (h < 1 ? "hace menos de 1 h" : (h < 48 ? "hace " + Math.floor(h) + " h" : "hace " + Math.floor(h / 24) + " días")); }
+  function issueRef(title) { var m = String(title || "").match(/^\[PFA\][^:]*:\s*(.+)$/); return m ? m[1].trim() : "General"; }
+  function onAnswer(body) { var m = String(body || "").match(/Al responder:\s*([^\n]+)/i); return m ? m[1].trim().replace(/\.$/, "") : ""; }
+  function workingNow(id) {
+    var first = (D.status.current || [])[0] || "", h = hoursSince(D.status.fileUtc);
+    return h != null && h < 0.5 && new RegExp("(^|[^\\w-])" + id.replace(/-/g, "\\-") + "(?![\\w-]|-\\d)").test(first);
+  }
+  function localItems() {
+    var out = [];
+    Object.keys(TASK).forEach(function (id) {
+      var t = TASK[id], st = String(t.status).toLowerCase(), h = hoursSince(t.lastActivity);
+      if ((st !== "en curso" && st !== "reabierta") || t.owner === "Oscar") return;
+      if ((h != null && h < STALE_H) || workingNow(id)) return;
+      out.push({ line: lineOf(id), ref: id, why: t.status + " · " + agoTxt(h),
+        action: "Comprueba su evidencia de cierre con una prueba nueva. Si se cumple, ciérrala con cerrar-intento; si no, escribe en \"Necesito de Oscar\" qué falta, terminando con \"Al responder: …\"." });
+    });
+    var noClosure = [];
+    (D.ideas || []).forEach(function (i) {
+      var st = String(i.status || "").trim(), ref = i.id || "Hallazgo";
+      if (!/^(por decidir|asignado|incorporado|descartado)/i.test(st)) {
+        out.push({ line: "Entorno", ref: ref, why: "estado no válido «" + st + "»",
+          action: "Cambia el estado a uno válido (Por decidir, Asignado, Incorporado en EX-NN o Descartado) y completa su columna Cierre." });
+      } else if ("closure" in i && !/^por decidir/i.test(st) && !i.closure) noClosure.push(ref);
+    });
+    // Los hallazgos sin cierre van juntos en un solo punto para no llenar la lista.
+    if (noClosure.length) out.push({ line: "Entorno", ref: noClosure.length === 1 ? noClosure[0] : noClosure.length + " hallazgos", why: "sin cierre registrado: " + noClosure.join(", "),
+      action: "Completa la columna Cierre de " + (noClosure.length === 1 ? "ese hallazgo" : "cada uno") + ": fecha, issue #N o chat de origen y la respuesta de Oscar en una línea." });
+    return out;
+  }
+  function issueItems(issues) {
+    var out = [];
+    issues.forEach(function (i) {
+      var ref = issueRef(i.title), act = onAnswer(i.body);
+      if (i.state === "open") {
+        out.push({ line: lineOf(ref), ref: "Issue #" + i.number, why: "respondiste a " + ref + " " + agoTxt(hoursSince(i.created_at)),
+          action: "Registra la respuesta del issue #" + i.number + " (" + ref + ") según AGENTS.md, sección 3" + (act ? ", y después: " + act : ", y aplica lo que Oscar decidió") + "." });
+        return;
+      }
+      var t = TASK[ref], closedH = hoursSince(i.closed_at);
+      if (!t || !TASK_RE.test(ref) || closedH == null || closedH > 24 * 7) return;
+      if (/^(hecha|cancelada)$/i.test(t.status)) return;
+      if ((Date.parse(t.lastActivity || "") || 0) > Date.parse(i.closed_at)) return;
+      out.push({ line: lineOf(ref), ref: ref, why: "respondiste en el issue #" + i.number + " (" + agoTxt(closedH) + ") y sigue " + t.status,
+        action: "Retoma " + ref + " con la respuesta del issue #" + i.number + (act ? " (" + act + ")" : "") + ". Si ya cumple su evidencia de cierre, ciérrala con cerrar-intento." });
+    });
+    return out;
+  }
+  function readyMsg(line, items, keepGoing) {
+    var when; try { when = new Date().toLocaleString("sv-SE", { timeZone: TZ }).slice(0, 16); } catch (e) { when = new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC"; }
+    return "$cerrar-pendientes " + line + " · tablero " + when + " (hora Central)\n" +
+      items.map(function (it, n) { return (n + 1) + ". " + it.ref + " — " + it.why + ". " + it.action; }).join("\n") + "\n" +
+      (keepGoing ? "Después, sigue con la siguiente tarea disponible según AGENTS.md." : "Cierra solo lo listado y detente.");
+  }
+  function copyText(txt, btn) {
+    var label = btn.textContent;
+    function ok() { btn.textContent = "✓ Copiado"; btn.classList.add("done"); setTimeout(function () { btn.textContent = label; btn.classList.remove("done"); }, 2200); }
+    function fallback() {
+      var ta = document.createElement("textarea"); ta.value = txt; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { if (document.execCommand("copy")) ok(); else btn.textContent = "Mantén presionado el mensaje para copiarlo"; } catch (e) { btn.textContent = "Mantén presionado el mensaje para copiarlo"; }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, fallback); else fallback();
+  }
+  function drawReady(items, note) {
+    var seen = {}, groups = { Desarrollo: [], Entorno: [] };
+    // Si una tarea aparece por respuesta y por estar quieta, queda la más específica (la respuesta va primero).
+    items.forEach(function (it) { if (seen[it.ref]) return; seen[it.ref] = 1; groups[it.line].push(it); });
+    var total = groups.Desarrollo.length + groups.Entorno.length, html = "";
+    $("ready-n").textContent = total ? total + " por cerrar" : "";
+    if (!total) html = '<div class="empty"><span class="ok">✓</span>Nada esperando a Codex</div>';
+    ["Desarrollo", "Entorno"].forEach(function (line) {
+      var g = groups[line]; if (!g.length) return;
+      html += '<div class="ready-group"><div class="ready-head">Chat ' + line + '<span class="hint">' + g.length + (g.length === 1 ? " elemento" : " elementos") + '</span></div><ul class="list">' +
+        g.map(function (it) { return '<li class="ready"><span class="ico">↻</span><span style="flex:1;min-width:0"><b>' + esc(it.ref) + '</b><div class="why">' + esc(it.why.charAt(0).toUpperCase() + it.why.slice(1)) + "</div></span></li>"; }).join("") +
+        '</ul><div class="actions"><button type="button" class="btn-s pri" data-line="' + line + '" data-go="0">Copiar: solo cerrar</button><button type="button" class="btn-s" data-line="' + line + '" data-go="1">Copiar: cerrar y seguir</button></div>' +
+        '<details class="ready-msg"><summary>Ver mensaje</summary><pre>' + esc(readyMsg(line, g, false)) + "</pre></details></div>";
+    });
+    if (note) html += '<div class="ready-note">' + esc(note) + "</div>";
+    $("ready").innerHTML = html;
+    Array.prototype.forEach.call($("ready").querySelectorAll("button[data-line]"), function (b) {
+      b.onclick = function () { var line = b.getAttribute("data-line"); copyText(readyMsg(line, groups[line], b.getAttribute("data-go") === "1"), b); };
+    });
+  }
+  drawReady(localItems(), canReply && window.fetch ? "Consultando tus respuestas en GitHub…" : "");
+  if (canReply && window.fetch) {
+    fetch("https://api.github.com/repos/" + encodeURIComponent(C.owner) + "/" + encodeURIComponent(C.repo) + "/issues?state=all&per_page=50&creator=" + encodeURIComponent(C.owner))
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (issues) {
         var mine = (issues || []).filter(function (i) { return !i.pull_request && i.user && i.user.login.toLowerCase() === String(C.owner).toLowerCase() && /^\[PFA\]/.test(i.title); });
-        Array.prototype.forEach.call(document.querySelectorAll("#oscar li.oscar[data-ref]"), function (li) {
-          var ref = li.getAttribute("data-ref");
-          var hit = mine.filter(function (i) { return i.title.slice(-(ref.length + 2)) === ": " + ref; })[0];
-          if (!hit) return;
-          var act = li.querySelector(".actions");
-          var note = '<div class="actions"><a class="btn-s" target="_blank" rel="noopener" href="' + esc(hit.html_url) + '">✓ Respondido (#' + hit.number + ")</a>" +
-            '<span class="sub" style="margin-left:8px">El agente lo registra al empezar su siguiente intento.</span></div>';
-          if (act) act.outerHTML = note; else li.lastChild.insertAdjacentHTML("beforeend", note);
-          li.style.opacity = "0.75";
-        });
-      }).catch(function () {});
+        markAnswered(mine.filter(function (i) { return i.state === "open"; }));
+        drawReady(issueItems(mine).concat(localItems()), "");
+      })
+      .catch(function () { drawReady(localItems(), "No pude consultar GitHub: aquí faltan tus respuestas recientes. Recarga en unos minutos."); });
   }
 
   // ---------- Alertas ----------
@@ -676,12 +796,17 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   }
   function ideaItem(i) {
     var k = ideaKind(i);
-    return '<li' + (k === "closed" ? ' style="opacity:.65"' : "") + '><span class="tgt' + (k === "pending" ? " pd" : "") + '">' + esc(k === "pending" ? "Por decidir" : (i.target || "—")) + '</span><span style="flex:1">' + (i.id ? "<b>" + esc(i.id) + "</b> · " : "") + esc(i.text) + '<div class="sub" style="font-size:12px">' + esc(i.status) + (i.found ? " · " + esc(i.found) : "") + (i.date ? " · " + esc(i.date) : "") + "</div></span></li>";
+    var closure = k === "pending" ? "" : (i.closure ? '<div class="idea-closure"><b>Cierre:</b> ' + esc(i.closure) + "</div>"
+      : ("closure" in i ? '<div class="idea-closure missing">Sin cierre registrado</div>' : ""));
+    return '<li><span class="tgt' + (k === "pending" ? " pd" : "") + '">' + esc(k === "pending" ? "Por decidir" : (i.target || "—")) + '</span><span style="flex:1;min-width:0">' + (i.id ? "<b>" + esc(i.id) + "</b> · " : "") + esc(i.text) + '<div class="sub" style="font-size:12px">' + esc(i.status) + (i.found ? " · " + esc(i.found) : "") + (i.date ? " · " + esc(i.date) : "") + "</div>" + closure + "</span></li>";
   }
-  var IDEAS = { pending: [] };
-  D.ideas.forEach(function (i) { if (ideaKind(i) === "pending") IDEAS.pending.push(i); });
+  function ideaNum(i) { var m = String(i.id || "").match(/(\d+)$/); return m ? Number(m[1]) : 0; }
+  var IDEAS = { pending: [], rest: [] };
+  D.ideas.forEach(function (i) { IDEAS[ideaKind(i) === "pending" ? "pending" : "rest"].push(i); });
+  IDEAS.rest.sort(function (a, b) { return ideaNum(b) - ideaNum(a); });
   $("ideas").innerHTML = IDEAS.pending.length ? IDEAS.pending.map(ideaItem).join("") : '<li style="background:none;padding:0"><div class="empty"><span class="ok">✓</span>Nada esperando decisión</div></li>';
-  $("ideas-foot").textContent = IDEAS.pending.length + " por decidir";
+  $("ideas-rest").innerHTML = IDEAS.rest.length ? '<details class="ideas-rest"><summary>Ver asignadas y cerradas (' + IDEAS.rest.length + ')</summary><ul class="list ideas">' + IDEAS.rest.map(ideaItem).join("") + "</ul></details>" : "";
+  $("ideas-foot").textContent = IDEAS.pending.length + " por decidir · " + IDEAS.rest.length + " asignadas o cerradas";
 
   // ---------- Actividad ----------
   function feedItem(r) {

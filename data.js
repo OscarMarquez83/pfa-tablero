@@ -1,17 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:50:08.110040Z",
+ "generatedUtc": "2026-10-02T03:57:01.263362Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:45 UTC",
+  "updated": "2026-10-02 03:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "cuando Studio libere la app, reabrirla para captar el error real de Run(); quedan 6 minutos efectivos de E2-04. No publicar.",
+  "nextAction": "reanudar T-23 para verificar Pages y los criterios interactivos; Pages falló por SSL y el publicador no pudo escribir publish.log. E2-04 queda en espera de que Studio permita editar y conserva 6 minutos efectivos.",
   "needsOscar": [],
   "blockers": [],
   "current": [
+   "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
    "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
    "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
    "Avance 03:31 UTC: revisé la respuesta del navegador ante Leave site; Escape regresó de preview al editor sin cerrar ni descartar Studio. Detecté que Scan folders se solapaba con el texto de ayuda.",
@@ -20,9 +21,9 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T03:46:40.481654Z",
+  "fileUtc": "2026-10-02T03:54:49.343027Z",
   "ruleFootprints": {
-   "current": "A4E37120",
+   "current": "AB72D313",
    "lines": {
     "Desarrollo": "A4E37120",
     "Entorno": "A4E37120"
@@ -380,10 +381,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 241,
+    "prod": 243,
     "unprod": 2,
     "wait": 8,
-    "total": 251
+    "total": 253
    }
   }
  ],
@@ -1141,7 +1142,7 @@ window.PFA_DATA = {
     "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
     "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
     "limit": 20,
-    "status": "En curso",
+    "status": "Cancelada (reemplazada por T-23)",
     "attempts": 1,
     "minutes": 2,
     "entrega": "T",
@@ -1324,12 +1325,12 @@ window.PFA_DATA = {
     "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
     "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-02T03:54:00Z",
     "ready": true
    },
    {
@@ -2239,22 +2240,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 621,
+   "prod": 623,
    "unprod": 82,
    "wait": 326,
-   "total": 1029
+   "total": 1031
   },
   "last24h": {
-   "prod": 360,
+   "prod": 362,
    "unprod": 80,
    "wait": 320,
-   "total": 760
+   "total": 762
   },
   "last7d": {
-   "prod": 621,
+   "prod": 623,
    "unprod": 82,
    "wait": 326,
-   "total": 1029
+   "total": 1031
   },
   "product": {
    "prod": 380,
@@ -2263,10 +2264,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 241,
+   "prod": 243,
    "unprod": 2,
    "wait": 8,
-   "total": 251
+   "total": 253
   }
  },
  "days": [
@@ -2350,7 +2351,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 49,
+   "prod": 51,
    "unprod": 54,
    "wait": 307
   }
@@ -2466,7 +2467,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 687
+   "minutes": 689
   },
   {
    "account": "empresa",
@@ -2474,6 +2475,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T03:52:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-23",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
+   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado."
+  },
   {
    "start": "2026-10-02T03:42:00Z",
    "minutes": 3,
@@ -2590,22 +2604,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Ruta A: agregué Parse JSON y definí el esquema; el diseñador no lo registra al guardar",
    "evidence": "Auditoría: el esquema aparece en pantalla; al guardar informa Schema is required. Sin Flow Checker válido ni run. Captura del estado en esta conversación"
-  },
-  {
-   "start": "2026-10-02T01:10:00Z",
-   "minutes": 2,
-   "account": "empresa",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 3,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "CONECTOR",
-   "summary": "Salida HTTP como arreglo vuelve a ser rechazada en el diseñador",
-   "evidence": "Auditoría: editor muestra This expression has a problem; flow sin guardar ni ejecutar. D-028 intacto; publicación local regeneró data.js y log remoto denegado por KF-H04"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T03:52:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-23",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
+   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado."
+  },
   {
    "start": "2026-10-02T03:42:00Z",
    "minutes": 3,
