@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T00:52:17.163742Z",
+ "generatedUtc": "2026-10-02T01:01:15.405071Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 00:47 UTC",
+  "updated": "2026-10-02 01:01 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Iniciar E2-04: ampliar el flow a los niveles 2 y 3 bajo Projects y construir el botón Scan folders en Configuration.",
+  "nextAction": "Completar el intento 2 de E2-04: validar la URI del ciclo con la sintaxis oficial items(loop)[property], guardar y probar el flow.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 1: iniciado 2026-10-02 00:47 UTC. Ampliaré el flow para leer Inbox/Projects hasta nivel 3 y añadiré en Configuration el botón Scan folders con inserción idempotente por OutlookFolderId. Comprobaré runs y preservación de filas existentes; validaré el botón en preview."
+   "E2-04, intento 2: iniciado 2026-10-02 01:01 UTC. Corregiré la expresión de URI con la forma documentada items(loop)[property], ejecutaré Flow Checker y solo guardaré si el editor la acepta."
   ],
-  "fileUtc": "2026-10-02T00:52:03.890495Z",
+  "fileUtc": "2026-10-02T01:01:14.870862Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -230,10 +230,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 73,
+    "prod": 85,
     "unprod": 30,
     "wait": 7,
-    "total": 110
+    "total": 122
    }
   },
   {
@@ -726,11 +726,11 @@ window.PFA_DATA = {
     "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
     "limit": 90,
     "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "attempts": 1,
+    "minutes": 12,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-02T00:59:00Z",
     "ready": true
    },
    {
@@ -1305,11 +1305,11 @@ window.PFA_DATA = {
   "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
   "limit": 90,
   "status": "Pendiente",
-  "attempts": 0,
-  "minutes": 0,
+  "attempts": 1,
+  "minutes": 12,
   "entrega": "E2",
   "fails": 0,
-  "lastActivity": "",
+  "lastActivity": "2026-10-02T00:59:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1322,11 +1322,11 @@ window.PFA_DATA = {
    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
    "limit": 90,
    "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
+   "attempts": 1,
+   "minutes": 12,
    "entrega": "E2",
    "fails": 0,
-   "lastActivity": "",
+   "lastActivity": "2026-10-02T00:59:00Z",
    "ready": true
   },
   {
@@ -2163,28 +2163,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 587,
+   "prod": 599,
    "unprod": 32,
    "wait": 19,
-   "total": 638
+   "total": 650
   },
   "last24h": {
-   "prod": 366,
+   "prod": 374,
    "unprod": 32,
    "wait": 13,
-   "total": 411
+   "total": 419
   },
   "last7d": {
-   "prod": 587,
+   "prod": 599,
    "unprod": 32,
    "wait": 19,
-   "total": 638
+   "total": 650
   },
   "product": {
-   "prod": 346,
+   "prod": 358,
    "unprod": 30,
    "wait": 11,
-   "total": 387
+   "total": 399
   },
   "support": {
    "prod": 241,
@@ -2274,7 +2274,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 15,
+   "prod": 27,
    "unprod": 4,
    "wait": 0
   }
@@ -2394,10 +2394,23 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 20
+   "minutes": 32
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:47:00Z",
+   "minutes": 12,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Prueba confirmó omisión del último nivel en expansión anidada; editor rechaza expresión dinámica en consulta del ciclo",
+   "evidence": "HTTP 200 con 10 carpetas hijas; sin nietas; consulta por carpeta padre aún no válida; flow sin guardar"
+  },
   {
    "start": "2026-10-02T00:44:00Z",
    "minutes": 2,
@@ -2514,22 +2527,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Reconcilié el alcance de E2 con D-028; revisé la guía de integración de flows con Power Apps",
    "evidence": "D-033; control/PLAN.md actualizado; Learn https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow; flow sin cambios"
-  },
-  {
-   "start": "2026-10-01T19:12:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-21",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Skill idea y regla HZ-11 instaladas",
-   "evidence": "Auditoría 5/5 OK; SHA-256 4C7403D5; gitkeep, HZ-11 y 3 reglas verificados"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:47:00Z",
+   "minutes": 12,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Prueba confirmó omisión del último nivel en expansión anidada; editor rechaza expresión dinámica en consulta del ciclo",
+   "evidence": "HTTP 200 con 10 carpetas hijas; sin nietas; consulta por carpeta padre aún no válida; flow sin guardar"
+  },
   {
    "start": "2026-10-02T00:44:00Z",
    "minutes": 2,
