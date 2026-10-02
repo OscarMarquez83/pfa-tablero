@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T21:07:15.384648Z",
+ "generatedUtc": "2026-10-02T21:19:16.223995Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -18,9 +18,10 @@ window.PFA_DATA = {
   "blockers": [],
   "current": [
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
-   "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página)."
+   "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página).",
+   "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC."
   ],
-  "fileUtc": "2026-10-02T20:41:42.922794Z",
+  "fileUtc": "2026-10-02T21:18:57.049913Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
