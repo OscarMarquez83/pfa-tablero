@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T00:28:14.720208Z",
+ "generatedUtc": "2026-10-02T00:34:14.293165Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -13,13 +13,17 @@ window.PFA_DATA = {
    {
     "ref": "",
     "text": "Issues de Oscar procesados: #8 amplía HZ-11 a evaluar móvil/tableta horizontal y crea E2-11; #9 confirma inicio de sesión; #10 confirma reinicio de Codex para T-14. Registrados; #8–#10 comentados y cerrados."
+   },
+   {
+    "ref": "",
+    "text": "E2-11 quedó pendiente y el alcance de E2 pasó a 11 tareas. T-14 sigue Hecha; Oscar confirmó el reinicio de Codex.\\n\\n- E2-11 quedó pendiente y el alcance de E2 pasó a 11 tareas. T-14 sigue Hecha; Oscar confirmó el reinicio de Codex."
    }
   ],
   "blockers": [],
   "current": [
-   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. La sesión renovada ya permite abrir My flows en Edge y en el navegador integrado. La lista autenticada muestra 20 flujos, pero no PFA_E2_LeerCarpetas; búsqueda por nombre: cero resultados. No editaré sin localizar el flow y registrar el nombre interno de la acción HTTP en Peek code. Acumulado E2-02: 82/90 min efectivos."
+   "E2-02, intento 11 (enfoque dinámico 1/2): iniciado 2026-10-01 19:37 UTC. Reapertura autorizada al confirmar D-028. El plan describe el flow que responde JSON y la app que hace Patch solo de filas nuevas. Antes de cambiar el flow comprobaré en Peek code el nombre interno exacto de la acción HTTP inicial. La sesión renovada ya permite abrir My flows en Edge y en el navegador integrado. My flows autenticado muestra 20 flows, pero búsqueda de PFA_E2_LeerCarpetas: cero resultados. Creé un flow nuevo con Power Apps (V2), añadí Office 365 Outlook “Send an HTTP request”; Peek code confirma Send_an_HTTP_request. Configuré URI /me/mailFolders. Al guardar, el diseñador muestra “Saving…” sin confirmación. Acumulado E2-02: 86/90 min efectivos."
   ],
-  "fileUtc": "2026-10-02T00:26:56.649571Z",
+  "fileUtc": "2026-10-02T00:29:46.128525Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -235,10 +239,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 60,
+    "prod": 64,
     "unprod": 26,
     "wait": 7,
-    "total": 93
+    "total": 97
    }
   },
   {
@@ -702,10 +706,10 @@ window.PFA_DATA = {
     "limit": 90,
     "status": "Reabierta",
     "attempts": 11,
-    "minutes": 82,
+    "minutes": 86,
     "entrega": "E2",
     "fails": 4,
-    "lastActivity": "2026-10-01T20:53:00Z",
+    "lastActivity": "2026-10-02T00:30:00Z",
     "ready": true
    },
    {
@@ -1313,10 +1317,10 @@ window.PFA_DATA = {
   "limit": 90,
   "status": "Reabierta",
   "attempts": 11,
-  "minutes": 82,
+  "minutes": 86,
   "entrega": "E2",
   "fails": 4,
-  "lastActivity": "2026-10-01T20:53:00Z",
+  "lastActivity": "2026-10-02T00:30:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1330,10 +1334,10 @@ window.PFA_DATA = {
    "limit": 90,
    "status": "Reabierta",
    "attempts": 11,
-   "minutes": 82,
+   "minutes": 86,
    "entrega": "E2",
    "fails": 4,
-   "lastActivity": "2026-10-01T20:53:00Z",
+   "lastActivity": "2026-10-02T00:30:00Z",
    "ready": true
   },
   {
@@ -2146,28 +2150,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 574,
+   "prod": 578,
    "unprod": 28,
    "wait": 19,
-   "total": 621
+   "total": 625
   },
   "last24h": {
-   "prod": 372,
+   "prod": 376,
    "unprod": 28,
    "wait": 13,
-   "total": 413
+   "total": 417
   },
   "last7d": {
-   "prod": 574,
+   "prod": 578,
    "unprod": 28,
    "wait": 19,
-   "total": 621
+   "total": 625
   },
   "product": {
-   "prod": 333,
+   "prod": 337,
    "unprod": 26,
    "wait": 11,
-   "total": 370
+   "total": 374
   },
   "support": {
    "prod": 241,
@@ -2257,7 +2261,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 2,
+   "prod": 6,
    "unprod": 0,
    "wait": 0
   }
@@ -2308,10 +2312,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-02",
-   "prod": 56,
+   "prod": 60,
    "unprod": 26,
    "wait": 2,
-   "total": 84
+   "total": 88
   },
   {
    "task": "T-16",
@@ -2373,7 +2377,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 601
+   "minutes": 605
   },
   {
    "account": "empresa",
@@ -2381,6 +2385,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:29:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Configuré URI /me/mailFolders en la consulta Outlook; guardado continúa pendiente",
+   "evidence": "Editor muestra Saving… sin confirmación; solo Office 365 Outlook; Power Apps V2"
+  },
+  {
+   "start": "2026-10-02T00:26:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Autenticación verificada en ambos navegadores; flow inexistente y trigger Power Apps V2 seleccionado; Peek code identifica la acción inicial Send_an_HTTP_request",
+   "evidence": "My flows muestra 20 flows y búsqueda 0; editor nuevo con Power Apps V2 y Office 365 Outlook Send_an_HTTP_request; no se cambió URI ni se guardó"
+  },
   {
    "start": "2026-10-02T00:24:00Z",
    "minutes": 2,
@@ -2484,35 +2514,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "PFA Despertador activo cada 15 minutos en proyecto PFA; sin issues abiertos para ejecutar prueba",
    "evidence": "Automatización creada y activa; queda pendiente el issue de prueba de Oscar"
-  },
-  {
-   "start": "2026-10-01T17:07:00Z",
-   "minutes": 11,
-   "account": "empresa",
-   "entrega": "T",
-   "task": "T-17",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Vista estática E0–E10; T conserva abiertas y desplegable de hechas",
-   "evidence": "Pages escritorio 1366 y teléfono 390: 12 secciones visibles, T muestra 15 hechas y 3 abiertas; Ver hechas abre/cierra, sin overflow ni errores JS; tmp/evidencia/T-17"
-  },
-  {
-   "start": "2026-10-01T15:58:00Z",
-   "minutes": 46,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-16",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Corregí parse_tables: las líneas vacías ocultaban tareas posteriores de PLAN; añadí estado completo, desplegable de cerradas y huellas SHA-256",
-   "evidence": "Pages antes del cierre de T-16: 3 abiertas/13 hechas; auditoría final: 2 abiertas/14 hechas, 14 de 16 según PLAN; desplegable probado abrir/cerrar; huellas 4FD52CD8 verdes; sin desbordamiento a 1366/390; capturas tmp/evidencia/T-16"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:29:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Configuré URI /me/mailFolders en la consulta Outlook; guardado continúa pendiente",
+   "evidence": "Editor muestra Saving… sin confirmación; solo Office 365 Outlook; Power Apps V2"
+  },
+  {
+   "start": "2026-10-02T00:26:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-02",
+   "attempt": 11,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Autenticación verificada en ambos navegadores; flow inexistente y trigger Power Apps V2 seleccionado; Peek code identifica la acción inicial Send_an_HTTP_request",
+   "evidence": "My flows muestra 20 flows y búsqueda 0; editor nuevo con Power Apps V2 y Office 365 Outlook Send_an_HTTP_request; no se cambió URI ni se guardó"
+  },
   {
    "start": "2026-10-02T00:24:00Z",
    "minutes": 2,
