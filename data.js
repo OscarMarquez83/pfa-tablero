@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T19:01:14.968268Z",
+ "generatedUtc": "2026-10-02T19:07:15.614683Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -19,7 +19,7 @@ window.PFA_DATA = {
   "current": [],
   "fileUtc": "2026-10-02T18:48:34.917059Z",
   "ruleFootprints": {
-   "current": "2A22684D",
+   "current": "FE84A01D",
    "read": {
     "hash": "2A22684D",
     "agent": "Claude",
