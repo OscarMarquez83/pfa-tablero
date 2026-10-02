@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:28:17.129468Z",
+ "generatedUtc": "2026-10-02T05:37:14.016212Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -45,22 +45,22 @@ window.PFA_DATA = {
   }
  },
  "revision": {
-  "light": "AMARILLO",
-  "reason": "T-11 y T-12 llevan más de 12 horas sin nuevas filas; E1-05 y T-01 exceden sus límites; el exceso de E1-05 informado en la corrida anterior sigue sin respuesta propia desde hace menos de 24 horas.",
-  "date": "2026-10-01 21:32 UTC",
-  "dateIso": "2026-10-01T21:32:00Z",
+  "light": "ROJO",
+  "reason": "INC-12 nuevo: worklog registra 303 minutos para una espera de 3 minutos y absorbe la fila de T-23 dentro de la evidencia de T-22. Los totales y la trazabilidad de cierre no son fiables hasta corregir el registro.",
+  "date": "2026-10-02 05:33 UTC",
+  "dateIso": "2026-10-02T05:33:00Z",
   "summary": [
-   "E1 aceptada; E2 1/10. E2-02 Reabierta, intento 11, pendiente de inicio de sesión y ejecución Succeeded.",
-   "E2-02 acumula 82/90 minutos efectivos: quedan 8 según el registro. T: 18 Hecha, 2 En curso y 1 Cancelada.",
-   "INC-08 a INC-10 están Atendido; la colisión de INC-08 deja pendiente el exceso de E1-05, identificado aquí como INC-11."
+   "E1 aceptada; PLAN registra E2 3/11 Hecha. E2-02 y E2-03 tienen Succeeded documentado; E2-04 Bloqueada, 87/90 minutos efectivos.",
+   "Oscar debe elegir la opción de diagnóstico HZ-19. No se ha probado que Scan folders inicie el flow ni la escritura sin duplicados.",
+   "T tiene 24/26 Hecha y 2 Cancelada; STATUS conserva E2 1/11 y T 23/23. INC-11 sigue sin respuesta propia."
   ],
   "sections": [
    {
     "title": "Resumen en 3 líneas",
     "lines": [
-     "E1 aceptada; E2 1/10. E2-02 Reabierta, intento 11, pendiente de inicio de sesión y ejecución Succeeded.",
-     "E2-02 acumula 82/90 minutos efectivos: quedan 8 según el registro. T: 18 Hecha, 2 En curso y 1 Cancelada.",
-     "INC-08 a INC-10 están Atendido; la colisión de INC-08 deja pendiente el exceso de E1-05, identificado aquí como INC-11."
+     "E1 aceptada; PLAN registra E2 3/11 Hecha. E2-02 y E2-03 tienen Succeeded documentado; E2-04 Bloqueada, 87/90 minutos efectivos.",
+     "Oscar debe elegir la opción de diagnóstico HZ-19. No se ha probado que Scan folders inicie el flow ni la escritura sin duplicados.",
+     "T tiene 24/26 Hecha y 2 Cancelada; STATUS conserva E2 1/11 y T 23/23. INC-11 sigue sin respuesta propia."
     ]
    },
    {
@@ -68,18 +68,18 @@ window.PFA_DATA = {
     "lines": [
      "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
      "|---|---:|---:|---:|",
-     "| Últimas 24 horas | 7.033333 (422 min) | 90.28436 | 0.466667 (28 min) |",
-     "| Desde 2026-09-30 | 10.316667 (619 min) | 92.407108 | 0.466667 (28 min) |",
-     "Últimas 24 h: 47 filas; 381 minutos productivos, 28 sin avance, 13 espera; 409 efectivos. Acumulado: 75 filas; 572 productivos, 28 sin avance, 19 espera; 600 efectivos. Total incluye espera. Decimales redondeados a 6 posiciones. Se filtra por inicio del intento; no se prorratea un intento que cruza el corte.",
+     "| Últimas 24 horas | 11.283333 (677 min) | 39.881832 | 1.45 (87 min) |",
+     "| Desde 2026-09-30 | 17.716667 (1063 min) | 60.959548 | 1.483333 (89 min) |",
+     "Cifras provisionales leídas sin corregir: 24 h = 75 registros, 270 minutos productivos, 87 sin avance, 320 espera; 357 efectivos. Acumulado = 121 registros, 648 productivos, 89 sin avance, 326 espera; 737 efectivos. Total incluye espera. El error 303 en vez de 3 agrega 300 minutos a ambos totales y reduce artificialmente la productividad. Decimales redondeados a 6 posiciones. Filtro por inicio del intento, sin prorrateo.",
      "### Tiempo por entrega",
      "| Entrega | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
      "|---|---:|---:|---:|---:|",
      "| E0 | 0 | 0 | 3 | 3 |",
-     "| E1 | 141 | 141 | 274 | 270 |",
-     "| E2 | 91 | 84 | 91 | 84 |",
-     "| T | 190 | 184 | 251 | 243 |",
+     "| E1 | 0 | 0 | 274 | 270 |",
+     "| E2 | 504 | 190 | 504 | 190 |",
+     "| T | 173 | 167 | 282 | 274 |",
      "### Tiempo por tarea",
-     "| Tarea | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
+     "| Tarea o hallazgo | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
      "|---|---:|---:|---:|---:|",
      "| E0-01 | 0 | 0 | 0 | 0 |",
      "| E0-02 | 0 | 0 | 0 | 0 |",
@@ -90,26 +90,40 @@ window.PFA_DATA = {
      "| E1-02 | 0 | 0 | 6 | 6 |",
      "| E1-03 | 0 | 0 | 2 | 2 |",
      "| E1-04 | 0 | 0 | 13 | 13 |",
-     "| E1-05 | 113 | 113 | 143 | 143 |",
+     "| E1-05 | 0 | 0 | 143 | 143 |",
      "| E1-06 | 0 | 0 | 24 | 24 |",
      "| E1-07 | 0 | 0 | 29 | 29 |",
-     "| E1-08 | 14 | 14 | 33 | 29 |",
+     "| E1-08 | 0 | 0 | 33 | 29 |",
      "| E1-09 | 0 | 0 | 0 | 0 |",
-     "| E1-10 | 14 | 14 | 14 | 14 |",
+     "| E1-10 | 0 | 0 | 14 | 14 |",
      "| E2-01 | 7 | 2 | 7 | 2 |",
-     "| E2-02 | 84 | 82 | 84 | 82 |",
+     "| E2-02 | 99 | 97 | 99 | 97 |",
+     "| E2-03 | 2 | 2 | 2 | 2 |",
+     "| E2-04 | 394 | 87 | 394 | 87 |",
+     "| E2-11 | 2 | 2 | 2 | 2 |",
+     "| HZ-01 | 0 | 0 | 0 | 0 |",
+     "| HZ-03 | 0 | 0 | 0 | 0 |",
+     "| HZ-04 | 0 | 0 | 0 | 0 |",
+     "| HZ-07 | 0 | 0 | 0 | 0 |",
+     "| HZ-08 | 0 | 0 | 0 | 0 |",
+     "| HZ-09 | 0 | 0 | 0 | 0 |",
+     "| HZ-14 | 0 | 0 | 0 | 0 |",
+     "| HZ-15 | 0 | 0 | 0 | 0 |",
+     "| HZ-16 | 0 | 0 | 0 | 0 |",
+     "| HZ-17 | 0 | 0 | 0 | 0 |",
+     "| HZ-18 | 0 | 0 | 0 | 0 |",
      "| T-01 | 0 | 0 | 41 | 41 |",
      "| T-02 | 0 | 0 | 7 | 7 |",
      "| T-03 | 0 | 0 | 13 | 11 |",
-     "| T-04 | 19 | 19 | 19 | 19 |",
-     "| T-05 | 4 | 4 | 4 | 4 |",
-     "| T-06 | 5 | 5 | 5 | 5 |",
-     "| T-07 | 3 | 3 | 3 | 3 |",
-     "| T-08 | 10 | 10 | 10 | 10 |",
-     "| T-09 | 4 | 4 | 4 | 4 |",
-     "| T-10 | 14 | 8 | 14 | 8 |",
+     "| T-04 | 0 | 0 | 19 | 19 |",
+     "| T-05 | 0 | 0 | 4 | 4 |",
+     "| T-06 | 0 | 0 | 5 | 5 |",
+     "| T-07 | 0 | 0 | 3 | 3 |",
+     "| T-08 | 0 | 0 | 10 | 10 |",
+     "| T-09 | 1 | 1 | 4 | 4 |",
+     "| T-10 | 10 | 4 | 14 | 8 |",
      "| T-11 | 2 | 2 | 2 | 2 |",
-     "| T-12 | 18 | 18 | 18 | 18 |",
+     "| T-12 | 20 | 20 | 20 | 20 |",
      "| T-13 | 6 | 6 | 6 | 6 |",
      "| T-14 | 6 | 6 | 6 | 6 |",
      "| T-15 | 23 | 23 | 23 | 23 |",
@@ -119,7 +133,12 @@ window.PFA_DATA = {
      "| T-19 | 9 | 9 | 9 | 9 |",
      "| T-20 | 1 | 1 | 1 | 1 |",
      "| T-21 | 8 | 8 | 8 | 8 |",
-     "Las tareas restantes no tienen tiempo registrado. E2-02 no tiene filas separadas para los intentos 1–3. El intento 6 registra 1 minuto frente a 2 por sus horas; T-18 registra 1 minuto con inicio y fin en el mismo minuto; T-14 suma 6 en worklog frente a 8 en PLAN. Se conservan los números originales. E1-05 intento 7 comparte intervalo con T-12; no se puede descartar solapamiento del tiempo efectivo."
+     "| T-22 | 8 | 8 | 8 | 8 |",
+     "| T-23 | 6 | 6 | 6 | 6 |",
+     "| T-24 | 2 | 2 | 2 | 2 |",
+     "| T-25 | 11 | 11 | 11 | 11 |",
+     "| T-26 | 2 | 2 | 2 | 2 |",
+     "Tareas restantes: 0 minutos registrados. Se incluyen HZ con filas de 0 minutos sin contarlos como tareas de entrega. T-23 intento 3 no se importa como fila independiente. E2-02 intentos 1–3 siguen sin filas separadas; intento 6 registra 1 minuto frente a 2 por sus horas. T-14 conserva 6 minutos en worklog frente a 8 en PLAN. E1-05 y T-12 tienen intervalos solapados."
     ]
    },
    {
@@ -129,11 +148,10 @@ window.PFA_DATA = {
      "|---|---:|",
      "| E0 | 9 / 9 |",
      "| E1 | 10 / 10 |",
-     "| E2 | 1 / 10 |",
+     "| E2 | 3 / 11 |",
      "| E3 | 0 / 8 |",
-     "| T | 18 / 21; 1 Cancelada |",
-     "| E4–E10 | Sin detallar |",
-     "Los conteos de STATUS y PLAN coinciden ahora. T-18 se canceló por D-034; no cuenta como Hecha."
+     "| T | 24 / 26; 2 Cancelada |",
+     "| E4–E10 | Sin detallar |"
     ]
    },
    {
@@ -141,12 +159,11 @@ window.PFA_DATA = {
     "lines": [
      "| Tarea | Motivo | Intentos | Minutos / límite |",
      "|---|---|---:|---:|",
-     "| E1-05 | Hecha; excede límite por 83 minutos | 7 | 143 / 60 |",
-     "| T-01 | Hecha; excede límite por 11 minutos | 7 | 41 / 30 |",
+     "| E1-05 | Hecha; excede límite por 83 min | 7 | 143 / 60 |",
+     "| E2-02 | Hecha; excede límite nominal por 6 min; HZ-12 registra extensión de 30 min autorizada por Oscar | 12 | 96 / 90; autorizado 120 |",
+     "| T-01 | Hecha; excede límite por 11 min | 7 | 41 / 30 |",
      "| T-06 | Hecha; 3 SIN_AVANCE históricos | 4 | 5 / 30 |",
-     "| T-11 | En curso; última fila terminó a las 12:47 a. m. Central; más de 12 horas sin registro nuevo | 1 | 2 / 20 |",
-     "| T-12 | En curso; última fila terminó a la 1:05 a. m. Central; más de 12 horas sin registro nuevo | 1 | 18 / 30 |",
-     "E2-02 no supera todavía 90 minutos; tiene 4 registros BLOQUEADA y ninguno SIN_AVANCE. Son cierres de intentos históricos: no se equiparan a cuatro fallos actuales sin consulta o autorización. D-033 confirma el diseño bajo demanda con Outlook y Patch desde la app. Su estado actual es Reabierta, con espera AUTH. No hay Bloqueada o Por validar con más de 24 horas."
+     "E2-04: Bloqueada con 87 minutos efectivos, 3 menos que el límite. STATUS dice que se superó el límite, pero la corrección posterior del intento 8 deja 87. Hay 2 filas SIN_AVANCE y 4 BLOQUEADA; no se interpreta ese historial como cuatro fallos nuevos sin autorización. No hay En curso sin actividad por 12 horas; T-11 fue Cancelada y T-12 Hecha. Ninguna tarea Bloqueada o Por validar supera 24 horas."
     ]
    },
    {
@@ -154,55 +171,50 @@ window.PFA_DATA = {
     "lines": [
      "| Categoría | Minutos 24 h / acumulado | Registros 24 h / acumulado |",
      "|---|---:|---:|",
-     "| CONECTOR | 25 / 25 | 3 / 3 |",
-     "| AUTH | 2 / 2 | 1 / 2 |",
-     "| DOCUMENTACION | 1 / 1 | 1 / 1 |",
-     "| OTRO | 0 / 0 | 2 / 2 |",
+     "| CONECTOR | 74 / 74 | 7 / 7 |",
+     "| FORMULA_PA | 7 / 7 | 2 / 2 |",
+     "| DOCUMENTACION | 6 / 6 | 2 / 2 |",
+     "| AUTH | 0 / 2 | 0 / 2 |",
+     "| OTRO | 0 / 0 | 0 / 2 |",
      "### Tiempo de espera en 24 horas",
-     "| Categoría | Minutos | Registros |",
+     "| Categoría | Minutos provisionales | Registros |",
      "|---|---:|---:|",
      "| AUTH | 7 | 4 |",
-     "| PERMISOS | 6 | 1 |",
-     "| NAVEGADOR | 0 | 1 |"
+     "| NAVEGADOR | 307 | 5 |",
+     "| PERMISOS | 6 | 1 |"
     ]
    },
    {
     "title": "Incumplimientos de AGENTS.md",
     "lines": [
      "### Nuevos",
-     "Ningún hecho nuevo confirmado desde la revisión anterior. Se corrige la identificación de un hecho ya reportado; no se cuenta como incidente recién ocurrido.",
-     "**INC-11 — Exceso de tiempo de E1-05, pendiente de registro.** En la corrida anterior este hecho recibió INC-08. INCIDENTES asignó después INC-08 a los intentos de E2-02 y añadió INC-09/INC-10. Para evitar mezclar hechos, este informe conserva los IDs del registro permanente y refiere el exceso de E1-05 como INC-11, con detección original en la revisión de las 8:33 a. m. Central de hoy. El intento 7 agregó 100 minutos a los 43 anteriores con límite de 60; terminó Hecha sin registro de detención al superar el límite. Falta registrar todas las columnas y la respuesta del constructor, con lección y prevención. La corrección quedó publicada y E1 aceptada; no se pide revertirla. La respuesta de INC-08 sobre E2-02 no atiende este hecho.",
-     "Huellas actuales: AGENTS.md = A4E37120; Desarrollo y Entorno coinciden. El último commit de reglas es 755f04f. No hay alerta de huella desactualizada.",
-     "E2-02 documenta autorización, enfoque distinto y prueba pendiente; el análisis está resumido en Tarea en curso aunque no tenga el título literal “Análisis de reapertura”. El intento 11 no cambió el flow por falta de sesión. No se confirma una infracción nueva por repetir correcciones.",
+     "**INC-12 — Registro de tiempo y cierre dañado.** E2-04 intento 6 comienza el 1 de octubre a las 9:33 p. m. Central y termina a las 9:36 p. m.; minutos dice 303. AGENTS §6 exige diferencia de horas reales. Además, T-22 intento 2 abre una evidencia entre comillas que engloba la línea posterior de T-23 intento 3; Import-Csv absorbe ese cierre como texto de T-22. T-23 está Hecha en PLAN y tiene aceptación en STATUS, pero carece de fila independiente importable. Estado: archivo guardado y tablero generado desde ese registro. Acción requerida del constructor: corregir ambos errores, comprobar las filas de ambos cierres y reconciliar totales de PLAN/STATUS/tablero. No inventar horas ni modificar la aceptación de Oscar. Resuelto por: pendiente. Estado: sin respuesta. KF: pendiente.",
+     "No se cuentan como incidentes nuevos las diferencias de STATUS ni los hallazgos antiguos. Huellas de Desarrollo/Entorno coinciden con C938B2D9. YAML de Configuration acompaña los cambios de Scan folders. Los archivos de informes y mini-specs corresponden a tareas aprobadas.",
      "### Atendidos",
-     "INC-08 (E2-02): Atendido. El intento final 10 consultó Learn/Copilot y terminó Bloqueada. La reapertura posterior tiene autorización de Oscar y D-033. Listo para cerrar la acción correctiva del intento final, sin afirmar que el flow esté terminado.",
-     "INC-09: Atendido. STATUS y worklog registran las pausas y esperas actuales; listo para cerrar según evidencia documental posterior.",
-     "INC-10: Atendido. STATUS registra comprobación de Edge y navegador integrado en el intento 10 y retiró el pedido de reconexión. El pedido actual corresponde a AUTH. Listo para cerrar.",
-     "INC-01 e INC-07 siguen listos para cerrar con la evidencia registrada de Configuration y la auditoría publicada 7x2 de E1-05. INCIDENTES conserva Abierto y Atendido, respectivamente. INC-02 a INC-06 están Cerrado.",
+     "INC-01 e INC-07: siguen listos para cerrar por la comprobación posterior de Configuration y auditoría publicada 7x2. INC-08, INC-09 e INC-10: siguen Atendido y listos para cerrar las acciones correctivas documentadas; el cierre del flow no elimina el historial del incumplimiento. INC-02 a INC-06: Cerrado.",
      "### Sin respuesta",
-     "INC-11 (antes INC-08 del revisor): pendiente, con menos de 24 horas desde la detección original. No se considera atendido por la fila distinta de E2-02."
+     "INC-11: exceso de E1-05, informado primero el 1 de octubre a las 8:33 a. m. Central como INC-08 del revisor y renombrado para evitar colisión con INC-08 de E2-02. Sigue sin fila ni respuesta propia; aún no cumple 24 horas desde la detección original. No se propone revertir E1 aceptada.",
+     "INC-12: nuevo en esta corrida, pendiente de registro y respuesta."
     ]
    },
    {
     "title": "Hallazgos sin heredar",
     "lines": [
-     "HZ-11 está Por decidir desde hoy: no supera 48 horas. Tiene mini-spec y requiere decisión sobre menú desplazable o selector aprobado en D-018. E1 ya aceptada no se reabre por este informe. HZ-09 sigue Asignado a E2 activa sin incorporación explícita; HZ-07 sigue Asignado a T sin tarea del diagrama. HZ-02, HZ-05 y HZ-10 están incorporados."
+     "HZ-11 incorporado en E2-11 y HZ-12 registra la ampliación aprobada de E2-02. HZ-13 incorporado en E2-04. HZ-19 está Por decidir desde hoy: no supera 48 horas. HZ-09 sigue Asignado a E2 sin incorporación explícita del recorte de botones. HZ-07 sigue Asignado a T sin tarea del diagrama. HZ-14 a HZ-18 tienen texto de cierre en la columna Estado y falta una columna respecto al encabezado; el constructor debe reconciliar su estado y cierre. Las filas HECHA de 0 minutos para HZ sin respuesta no demuestran aceptación ni descarte; los hallazgos siguen asignados según PLAN."
     ]
    },
    {
     "title": "Oscar tiene que decidir o hacer",
     "lines": [
-     "- E2-02: iniciar sesión en Power Automate; STATUS indica que debe poder navegar a My flows. No compartir contraseña ni MFA.",
-     "- HZ-11: aprobar la mini-spec y elegir menú vertical desplazable o mantener el selector desplegable de D-018.",
-     "- T-14: reiniciar Codex para cargar Context7, según STATUS.",
-     "Issues: no verificados en esta corrida. El constructor procesa los issues al empezar su sesión. GitHub CLI no pudo iniciarse: Access denied."
+     "- HZ-19: elegir A, quitar y volver a agregar el flow después de guardar/cerrar/reabrir Studio, con aviso de éxito/error (recomendada en STATUS); o B, conservar el vínculo y agregar diagnóstico de nombre, conexión y entorno. El constructor registrará la elección y reabrirá E2-04 con un enfoque distinto.",
+     "Issues: no verificados en esta corrida. El agente constructor procesa los issues al empezar su sesión."
     ]
    },
    {
     "title": "Límites de esta revisión",
     "lines": [
-     "Revisión documental de REVISOR, worklog, PLAN, STATUS, DECISIONS, INCIDENTES, huella de AGENTS y cambios Git. No se abrieron Power Automate, Power Apps ni SharePoint. El árbol estaba limpio al empezar. Los nuevos archivos de skill idea y mini-spec están pedidos por T-21; los cambios del tablero corresponden a T-16, T-17 y el parche de Claude en T-19, con decisiones D-029 a D-032. No se detectó contenido de correo real en los controles públicos ni ediciones posteriores del archivo congelado. Los commits de cierre existen. No se repitieron pruebas de trabajo cerrado ni se ejecutó la suite antigua. No se pueden comprobar archivos externos desde Git. El revisor conserva su límite de escritura: solo REVISION.md; no actualiza huellas del constructor en STATUS.",
-     "Publicación: publicador ejecutado una vez; dashboard/data.js regenerado. Código 1 por Access denied al escribir C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. No se reintentó; Windows lo publicará en máximo 15 minutos. Publicación remota no confirmada en esta corrida."
+     "Revisión documental de controles, decisiones y cambios Git. No se abrió Power Automate, Power Apps ni SharePoint. GitHub CLI no pudo iniciarse por Access denied. El árbol estaba limpio al empezar. Hay commits de cierre; los cambios visuales tienen YAML. No se detectó contenido de correos reales en controles públicos ni ediciones posteriores del historial congelado; su traslado corresponde a T-08. No se ejecutó la suite antigua ni se corrigieron los archivos del constructor. Las pruebas de runtime se evalúan por su registro, no se repiten. El revisor no altera STATUS para la huella ni procesa issues.",
+     "Publicación: publicador ejecutado una vez; regeneró dashboard/data.js desde 121 registros. Código 1 por Access denied al escribir C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. No se reintentó; Windows lo publicará en máximo 15 minutos. Publicación remota no confirmada."
     ]
    }
   ]
