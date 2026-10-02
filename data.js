@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T21:19:16.223995Z",
+ "generatedUtc": "2026-10-02T21:28:15.866366Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -19,9 +19,10 @@ window.PFA_DATA = {
   "current": [
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
    "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página).",
-   "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC."
+   "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC.",
+   "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial."
   ],
-  "fileUtc": "2026-10-02T21:18:57.049913Z",
+  "fileUtc": "2026-10-02T21:21:31.524606Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
@@ -1199,7 +1200,9 @@ window.PFA_DATA = {
       "tone": "ok"
      }
     ],
-    "lessons": [],
+    "lessons": [
+     "KF-18"
+    ],
     "ready": true
    },
    {
@@ -2592,7 +2595,9 @@ window.PFA_DATA = {
     "tone": "ok"
    }
   ],
-  "lessons": [],
+  "lessons": [
+   "KF-18"
+  ],
   "ready": true
  },
  "upcoming": [
@@ -2625,7 +2630,9 @@ window.PFA_DATA = {
      "tone": "ok"
     }
    ],
-   "lessons": [],
+   "lessons": [
+    "KF-18"
+   ],
    "ready": true
   },
   {
@@ -3134,6 +3141,16 @@ window.PFA_DATA = {
     "- Síntoma: `Patch` falla con \"Field 'MailboxKey' is required\" aunque el registro de E2-01 decía que solo había 2 obligatorias.",
     "- Comprobación de solo lectura: `GET {sitio}/_api/web/lists/getbytitle('PFA_MailFolders')/fields?$filter=Required eq true and Hidden eq false`. El sitio es el personal de OneDrive de Oscar.",
     "- Solución: D-005/D-041. Quitar Required a las columnas que la entrega no llena; no borrarlas."
+   ]
+  },
+  "KF-18": {
+   "title": "YAML_PA · Construir sin pegar YAML (D-045): Studio autoguarda y un clic fuera de lugar cambia el control seleccionado",
+   "note": "",
+   "lines": [
+    "- Contexto (E2-05, Claude): el navegador integrado de Claude no permite que Studio lea el portapapeles (`clipboard-read` = denied). Pegar YAML no funciona con Ctrl+V ni con el menú Paste.",
+    "- Desvío: al fijar varias propiedades seguidas, la confirmación de cada una se hacía con un clic en el panel de propiedades. Studio cerró ese panel, el clic cayó en el lienzo y cambió la selección. Las fórmulas terminaron en `ContentLanguage` de 8 contenedores (24 errores). Studio ya había autoguardado (versión 162).",
+    "- Recuperación: Details → Versions → seleccionar la última versión buena (la publicada, Live) → Restore. Se crea una versión nueva (163) y se conserva el historial. Para retomar la edición, Override, que solo desaloja la sesión propia anterior.",
+    "- Método seguro: confirmar cada propiedad haciendo clic en el selector de propiedades (arriba a la izquierda), nunca en el lienzo ni en paneles que se mueven. Comprobar en una captura qué control está seleccionado antes de cada serie y revisar el App checker después de cada control."
    ]
   },
   "KF-P03": {
