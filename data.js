@@ -1,22 +1,25 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:34:20.453361Z",
+ "generatedUtc": "2026-10-02T03:43:15.212881Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:31 UTC",
+  "updated": "2026-10-02 03:42 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "resolver la referencia de conexión faltante del flow; probar Scan folders en preview y verificar la primera y segunda escritura antes de continuar E2-05.",
+  "nextAction": "captar el error real de Run() en Power Apps antes de cambiar el flow; quedan 6 minutos efectivos en E2-04. No publicar.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 8 iniciado 2026-10-02 03:26 UTC. Camino 1 completado: se quitó y volvió a agregar el flow después de guardar y reabrir Studio; la app guardó sin publicar y reconoce foldersJson. El clic en preview no generó una ejecución. Detalles del flow muestran una conexión Office 365 Outlook, mientras el editor reporta otra referencia de conexión ausente. Próximo paso: reconciliar esa referencia sin cambiar la arquitectura ni publicar; comprobar ejecución y escrituras sin duplicados.",
+   "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC. Camino 1 completado: se quitó y volvió a agregar el flow después de guardar y reabrir Studio; la app guardó sin publicar y reconoce foldersJson. En preview, el botón no mostró resultado y el historial no registra una corrida nueva. Details confirma Outlook asignado y Flow checker indica 0 errores/advertencias; el editor guarda una copia no recuperada. Próximo paso: captar el error real de Run() antes de cambiar el flow.",
    "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
-   "Avance 03:31 UTC: captura de pantalla completa en tmp/evidencia/E2-04/pantalla-completa-leave-site.png; Edge respondió y Studio quedó en Configuration. No se observó el diálogo Leave site; Escape volvió de preview al editor. No guardé ni descarté ni cerré Studio. Confirmé el solapamiento de Scan folders con Mail folders y moví el botón en YAML debajo del título; falta pegarlo y verificar en Studio."
+   "Avance 03:31 UTC: revisé la respuesta del navegador ante Leave site; Escape regresó de preview al editor sin cerrar ni descartar Studio. Detecté que Scan folders se solapaba con el texto de ayuda.",
+   "Avance 03:37 UTC: corregí el YAML, reemplacé el botón y guardé la app sin publicarla. Studio confirma el botón a la derecha de Mail folders y sin error en OnSelect.",
+   "Avance 03:39 UTC: Details muestra la conexión Outlook asignada y Flow checker indica 0 errores/advertencias. No hay ejecución nueva; primera y segunda escritura siguen pendientes. No recuperé la copia no guardada del diseñador.",
+   "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva."
   ],
-  "fileUtc": "2026-10-02T03:32:34.591152Z",
+  "fileUtc": "2026-10-02T03:42:52.994161Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -232,10 +235,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 95,
-    "unprod": 79,
+    "prod": 107,
+    "unprod": 80,
     "wait": 311,
-    "total": 485
+    "total": 498
    }
   },
   {
@@ -728,11 +731,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 8,
-    "minutes": 71,
+    "attempts": 10,
+    "minutes": 84,
     "entrega": "E2",
-    "fails": 3,
-    "lastActivity": "2026-10-02T03:31:00Z",
+    "fails": 4,
+    "lastActivity": "2026-10-02T03:41:00Z",
     "ready": true
    },
    {
@@ -1371,11 +1374,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 8,
-  "minutes": 71,
+  "attempts": 10,
+  "minutes": 84,
   "entrega": "E2",
-  "fails": 3,
-  "lastActivity": "2026-10-02T03:31:00Z",
+  "fails": 4,
+  "lastActivity": "2026-10-02T03:41:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1388,11 +1391,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 8,
-   "minutes": 71,
+   "attempts": 10,
+   "minutes": 84,
    "entrega": "E2",
-   "fails": 3,
-   "lastActivity": "2026-10-02T03:31:00Z",
+   "fails": 4,
+   "lastActivity": "2026-10-02T03:41:00Z",
    "ready": true
   },
   {
@@ -2225,7 +2228,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "3 intentos sin avance",
+   "reason": "4 intentos sin avance",
    "level": "serious"
   }
  ],
@@ -2235,28 +2238,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 609,
-   "unprod": 81,
+   "prod": 621,
+   "unprod": 82,
    "wait": 323,
-   "total": 1013
+   "total": 1026
   },
   "last24h": {
-   "prod": 348,
-   "unprod": 79,
+   "prod": 360,
+   "unprod": 80,
    "wait": 317,
-   "total": 744
+   "total": 757
   },
   "last7d": {
-   "prod": 609,
-   "unprod": 81,
+   "prod": 621,
+   "unprod": 82,
    "wait": 323,
-   "total": 1013
+   "total": 1026
   },
   "product": {
-   "prod": 368,
-   "unprod": 79,
+   "prod": 380,
+   "unprod": 80,
    "wait": 315,
-   "total": 762
+   "total": 775
   },
   "support": {
    "prod": 241,
@@ -2346,16 +2349,16 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 37,
-   "unprod": 53,
+   "prod": 49,
+   "unprod": 54,
    "wait": 304
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 73,
-   "attempts": 6
+   "minutes": 74,
+   "attempts": 7
   },
   {
    "category": "DOCUMENTACION",
@@ -2390,10 +2393,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 22,
-   "unprod": 49,
+   "prod": 34,
+   "unprod": 50,
    "wait": 304,
-   "total": 375
+   "total": 388
   },
   {
    "task": "E1-05",
@@ -2462,7 +2465,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 671
+   "minutes": 684
   },
   {
    "account": "empresa",
@@ -2470,6 +2473,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T03:40:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 10,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Probé Scan folders en preview después de guardar; no mostró resultado ni inició el flow.",
+   "evidence": "Historial actualizado tras el clic: la corrida más reciente sigue siendo del 1-oct, 9:04 p. m.; ninguna nueva. Preview no muestra confirmación ni error. La conexión del flow está asignada y Flow checker da 0 errores/advertencias; causa sin aislar."
+  },
+  {
+   "start": "2026-10-02T03:38:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Revisión del flow: conexión Outlook asignada y Flow checker sin errores; no se aisló por qué la app no lo inicia.",
+   "evidence": "Flow Details muestra Office 365 Outlook conectado; Flow checker indica 0 errores y 0 advertencias. Historial sin ejecución nueva desde el clic de la app. El diseñador conserva una copia no guardada; no la recuperé ni edité. Límite E2-04: 83/90 min."
+  },
   {
    "start": "2026-10-02T03:30:00Z",
    "minutes": 1,
@@ -2485,7 +2514,7 @@ window.PFA_DATA = {
   },
   {
    "start": "2026-10-02T03:26:00Z",
-   "minutes": 4,
+   "minutes": 15,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
@@ -2493,8 +2522,8 @@ window.PFA_DATA = {
    "result": "AVANCE",
    "kind": "prod",
    "category": "CONECTOR",
-   "summary": "Camino 1 aplicado y app guardada sin publicar; el botón no inicia el flow.",
-   "evidence": "Auditoría 2/5 OK: flujo quitado y agregado tras reabrir Studio; Power Apps reconoce foldersJson. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia de conexión ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión de referencia y el trigger."
+   "summary": "Camino 1 aplicado; botón recolocado y app guardada sin publicar. Aún no inicia el flow.",
+   "evidence": "Auditoría 2/5 OK: Studio reconoce foldersJson; OnSelect sin error y botón ya no se solapa. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión y el trigger."
   },
   {
    "start": "2026-10-02T03:15:00Z",
@@ -2573,35 +2602,35 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Expresión del array volvió a fallar tras consultar Microsoft Learn y Copilot; anti-bucle detuvo E2-04",
    "evidence": "Cuarta falla del editor; mini-spec HZ-13 con opciones para Oscar; flow sin guardar"
-  },
-  {
-   "start": "2026-10-02T00:47:00Z",
-   "minutes": 12,
-   "account": "empresa",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Prueba confirmó omisión del último nivel en expansión anidada; editor rechaza expresión dinámica en consulta del ciclo",
-   "evidence": "HTTP 200 con 10 carpetas hijas; sin nietas; consulta por carpeta padre aún no válida; flow sin guardar"
-  },
-  {
-   "start": "2026-10-02T00:44:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-03",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Run Succeeded, HTTP 200 y JSON de 8 carpetas nivel 1 visible en historial",
-   "evidence": "Auditoría 2/2 OK: estado Succeeded y JSON/conteo visibles en historial del run"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T03:40:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 10,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Probé Scan folders en preview después de guardar; no mostró resultado ni inició el flow.",
+   "evidence": "Historial actualizado tras el clic: la corrida más reciente sigue siendo del 1-oct, 9:04 p. m.; ninguna nueva. Preview no muestra confirmación ni error. La conexión del flow está asignada y Flow checker da 0 errores/advertencias; causa sin aislar."
+  },
+  {
+   "start": "2026-10-02T03:38:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Revisión del flow: conexión Outlook asignada y Flow checker sin errores; no se aisló por qué la app no lo inicia.",
+   "evidence": "Flow Details muestra Office 365 Outlook conectado; Flow checker indica 0 errores y 0 advertencias. Historial sin ejecución nueva desde el clic de la app. El diseñador conserva una copia no guardada; no la recuperé ni edité. Límite E2-04: 83/90 min."
+  },
   {
    "start": "2026-10-02T03:30:00Z",
    "minutes": 1,
@@ -2617,7 +2646,7 @@ window.PFA_DATA = {
   },
   {
    "start": "2026-10-02T03:26:00Z",
-   "minutes": 4,
+   "minutes": 15,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
@@ -2625,8 +2654,8 @@ window.PFA_DATA = {
    "result": "AVANCE",
    "kind": "prod",
    "category": "CONECTOR",
-   "summary": "Camino 1 aplicado y app guardada sin publicar; el botón no inicia el flow.",
-   "evidence": "Auditoría 2/5 OK: flujo quitado y agregado tras reabrir Studio; Power Apps reconoce foldersJson. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia de conexión ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión de referencia y el trigger."
+   "summary": "Camino 1 aplicado; botón recolocado y app guardada sin publicar. Aún no inicia el flow.",
+   "evidence": "Auditoría 2/5 OK: Studio reconoce foldersJson; OnSelect sin error y botón ya no se solapa. Pendiente: ejecución, primer escaneo, no duplicados y conservación de fila existente. Details muestra conexión Office 365 Outlook; editor marca referencia ausente. Learn: https://learn.microsoft.com/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow. Copilot recomienda revisar la conexión y el trigger."
   },
   {
    "start": "2026-10-02T03:15:00Z",
