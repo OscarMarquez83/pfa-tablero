@@ -1,20 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:16:17.702291Z",
+ "generatedUtc": "2026-10-02T03:28:18.075667Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:15 UTC",
+  "updated": "2026-10-02 03:26 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Retomar E2-04 por Camino 1 aprobado cuando Edge o el navegador integrado responda; luego continuar E2-05.",
+  "nextAction": "registrar las cuatro mini-specs aprobadas y sus tareas T; después retomar E2-04 por Camino 1.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "E2-04, intento 6 (ESPERA, 0 min): las consultas anteriores del navegador agotaron el tiempo. Intento 7 iniciado 2026-10-02 03:15 UTC. Power Apps Studio abrió PFA_Pilot_App en modo solo lectura porque detecta otra sesión del mismo usuario; aparece la opción Override. Voy a retomar el control, revisar Configuration, tomar evidencia antes del cambio y seguir Camino 1. No publicaré la app."
-  ],
-  "fileUtc": "2026-10-02T03:15:27.595912Z",
+  "current": [],
+  "fileUtc": "2026-10-02T03:27:11.874079Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -726,11 +724,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 6,
+    "attempts": 7,
     "minutes": 67,
     "entrega": "E2",
     "fails": 3,
-    "lastActivity": "2026-10-02T02:36:00Z",
+    "lastActivity": "2026-10-02T03:26:00Z",
     "ready": true
    },
    {
@@ -1305,11 +1303,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 6,
+  "attempts": 7,
   "minutes": 67,
   "entrega": "E2",
   "fails": 3,
-  "lastActivity": "2026-10-02T02:36:00Z",
+  "lastActivity": "2026-10-02T03:26:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1322,11 +1320,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 6,
+   "attempts": 7,
    "minutes": 67,
    "entrega": "E2",
    "fails": 3,
-   "lastActivity": "2026-10-02T02:36:00Z",
+   "lastActivity": "2026-10-02T03:26:00Z",
    "ready": true
   },
   {
@@ -2405,6 +2403,19 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
+   "start": "2026-10-02T03:15:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 7,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio abrió en solo lectura por otra sesión; pausé para atender el pedido T de Oscar",
+   "evidence": "No se modificó ni guardó la app o el flow; queda para retomar Camino 1"
+  },
+  {
    "start": "2026-10-02T02:33:00Z",
    "minutes": 303,
    "account": "empresa",
@@ -2520,22 +2531,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Flow nuevo con trigger Power Apps V2, consulta y respuesta; prueba BadRequest por URI; corrección absoluta quedó en Saving al alcanzar 90 minutos",
    "evidence": "Flow Checker 0; primer run Test failed; Microsoft Learn https://learn.microsoft.com/en-us/connectors/office365/; URI absoluta configurada sin confirmación de guardado"
-  },
-  {
-   "start": "2026-10-02T00:29:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Configuré URI /me/mailFolders en la consulta Outlook; guardado continúa pendiente",
-   "evidence": "Editor muestra Saving… sin confirmación; solo Office 365 Outlook; Power Apps V2"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T03:15:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 7,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio abrió en solo lectura por otra sesión; pausé para atender el pedido T de Oscar",
+   "evidence": "No se modificó ni guardó la app o el flow; queda para retomar Camino 1"
+  },
   {
    "start": "2026-10-02T02:33:00Z",
    "minutes": 303,
