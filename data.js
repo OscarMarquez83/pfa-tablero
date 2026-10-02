@@ -1,20 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T18:46:14.937646Z",
+ "generatedUtc": "2026-10-02T18:52:15.917849Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 18:26 UTC",
+  "updated": "2026-10-02 18:49 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [],
-  "blockers": [],
-  "current": [
-   "T-29 (Claude), intento 1, inicio 2026-10-02 18:39 UTC: huella única por agente en STATUS, regla en AGENTS.md (sección 3) y aviso siempre visible en el encabezado del tablero (D-043). Comprobación: build local, prueba en rojo con huella distinta y tablero publicado a 1366 px y 390 px."
+  "needsOscar": [
+   {
+    "ref": "",
+    "text": "KF-P11 (Claude): aprobar que se agregue a AGENTS.md, sección 5 (regla anti-bucle), esta línea: \"Antes del intento 2 de cualquier falla, aplica el método de KNOWN-FIXES KF-P11: seguir la evidencia, leer el contrato real en los dos extremos, reducir al mínimo y medir.\" Al responder: edito AGENTS.md, actualizo la huella y publico."
+   }
   ],
-  "fileUtc": "2026-10-02T18:40:32.208063Z",
+  "blockers": [],
+  "current": [],
+  "fileUtc": "2026-10-02T18:48:34.917059Z",
   "ruleFootprints": {
    "current": "2A22684D",
    "read": {
@@ -394,15 +397,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 26,
+   "done": 27,
    "total": 28,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 287,
+    "prod": 296,
     "unprod": 2,
     "wait": 8,
-    "total": 297
+    "total": 306
    }
   }
  ],
@@ -1414,13 +1417,12 @@ window.PFA_DATA = {
     "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
     "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
     "limit": 45,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 9,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-02T18:48:00Z"
    }
   ]
  },
@@ -2417,31 +2419,46 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-02T06:32:00Z"
+  },
+  {
+   "id": "T-29",
+   "action": "Huella de AGENTS.md por agente (Codex o Claude) y aviso siempre visible en el encabezado del tablero; quitar el bloque de huellas de T (Claude)",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
+   "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
+   "limit": 45,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 9,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T18:48:00Z"
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 49,
+  "tasksDone": 50,
   "tasksTotal": 66,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 767,
+   "prod": 776,
    "unprod": 100,
    "wait": 66,
-   "total": 933
+   "total": 942
   },
   "last24h": {
-   "prod": 248,
+   "prod": 257,
    "unprod": 72,
    "wait": 49,
-   "total": 369
+   "total": 378
   },
   "last7d": {
-   "prod": 767,
+   "prod": 776,
    "unprod": 100,
    "wait": 66,
-   "total": 933
+   "total": 942
   },
   "product": {
    "prod": 480,
@@ -2450,10 +2467,10 @@ window.PFA_DATA = {
    "total": 636
   },
   "support": {
-   "prod": 287,
+   "prod": 296,
    "unprod": 2,
    "wait": 8,
-   "total": 297
+   "total": 306
   }
  },
  "days": [
@@ -2537,7 +2554,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 195,
+   "prod": 204,
    "unprod": 72,
    "wait": 47
   }
@@ -2662,7 +2679,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 83
+   "minutes": 92
   },
   {
    "account": "empresa",
@@ -2670,6 +2687,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T18:39:00Z",
+   "minutes": 9,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-29",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Huella única por agente (D-043): AGENTS.md sección 3, línea en STATUS, build_dashboard.py y aviso en el encabezado del tablero; bloque de huellas retirado de T; REVISOR.md alineado",
+   "evidence": "Auditoría 5/5 OK: Pages muestra Reglas al día con Claude y 2A22684D; prueba en rojo con huella simulada; sin bloque en T; sin desborde a 390 y 1366 px; commit del tablero 3772888"
+  },
   {
    "start": "2026-10-02T18:22:00Z",
    "minutes": 3,
@@ -2786,22 +2816,22 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
    "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
-  },
-  {
-   "start": "2026-10-02T06:35:00Z",
-   "minutes": 12,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 15,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "Inventario de flujos y conexión de Monitor; Studio mantuvo el bloqueo read-only",
-   "evidence": "1/7 criterios verificados; My flows 1/21 y Solutions 1/13; ID b236f6d8-4010-468f-a84f-6db74f0f52c7 en In your app; Monitor conectado con 0 eventos; Learn: https://learn.microsoft.com/power-platform/power-apps/maker/canvas-apps/copresence-power-apps-studio; reabrir la app en la misma pestaña no liberó el control."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T18:39:00Z",
+   "minutes": 9,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-29",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Huella única por agente (D-043): AGENTS.md sección 3, línea en STATUS, build_dashboard.py y aviso en el encabezado del tablero; bloque de huellas retirado de T; REVISOR.md alineado",
+   "evidence": "Auditoría 5/5 OK: Pages muestra Reglas al día con Claude y 2A22684D; prueba en rojo con huella simulada; sin bloque en T; sin desborde a 390 y 1366 px; commit del tablero 3772888"
+  },
   {
    "start": "2026-10-02T18:22:00Z",
    "minutes": 3,
