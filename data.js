@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T18:32:03.667622Z",
+ "generatedUtc": "2026-10-02T18:40:15.160651Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -11,14 +11,13 @@ window.PFA_DATA = {
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T18:31:58.040590Z",
+  "current": [
+   "T-29 (Claude), intento 1, inicio 2026-10-02 18:39 UTC: huella única por agente en STATUS, regla en AGENTS.md (sección 3) y aviso siempre visible en el encabezado del tablero (D-043). Comprobación: build local, prueba en rojo con huella distinta y tablero publicado a 1366 px y 390 px."
+  ],
+  "fileUtc": "2026-10-02T18:39:17.509775Z",
   "ruleFootprints": {
-   "current": "31977571",
-   "lines": {
-    "Desarrollo": "31977571",
-    "Entorno": "31977571"
-   }
+   "current": "2A22684D",
+   "read": {}
   }
  },
  "revision": {
@@ -392,7 +391,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 26,
-   "total": 27,
+   "total": 28,
    "detailed": true,
    "active": false,
    "time": {
@@ -1403,6 +1402,22 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-02T06:32:00Z"
+   },
+   {
+    "id": "T-29",
+    "action": "Huella de AGENTS.md por agente (Codex o Claude) y aviso siempre visible en el encabezado del tablero; quitar el bloque de huellas de T (Claude)",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
+    "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
+    "limit": 45,
+    "status": "En curso (Claude)",
+    "attempts": 1,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "ready": true
    }
   ]
  },
@@ -2395,7 +2410,7 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 48,
-  "tasksTotal": 65,
+  "tasksTotal": 66,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {

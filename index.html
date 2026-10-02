@@ -545,12 +545,6 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       if (ma && mb && ma[1] === mb[1]) return Number(ma[2]) - Number(mb[2]);
       return String(a.id).localeCompare(String(b.id));
     }
-    var fp = D.status.ruleFootprints || { current: "", lines: {} }, fpHtml = '<div class="footprints" aria-label="Huellas de reglas">' +
-      '<span>AGENTS.md actual: <b>' + esc(fp.current || "—") + '</b></span>' +
-      Object.keys(fp.lines || {}).map(function (name) {
-        var value = fp.lines[name], same = String(value).toUpperCase() === String(fp.current).toUpperCase();
-        return '<span class="' + (same ? "match" : "mismatch") + '">' + esc(name) + ': <b>' + esc(value) + '</b> ' + (same ? "✓" : "✕") + "</span>";
-      }).join("") + "</div>";
     function taskRows(list) { return list.map(function (t) {
       var first = firstSentence(t.action);
       var over = t.limit && t.minutes > t.limit;
@@ -588,7 +582,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       var split = splitTasks(D.tasksByEntrega[e.id] || []), body =
         (split.open.length ? taskTable(split.open) : '<div class="empty">No hay tareas abiertas.</div>');
       if (split.closed.length) body += '<details class="task-closed"><summary>Ver hechas (' + split.closed.length + ")</summary>" + taskTable(split.closed) + "</details>";
-      return fpHtml + body;
+      return body;
     }
 
     var e = ENT[selected] || {};
