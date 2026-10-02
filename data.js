@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:13:14.350621Z",
+ "generatedUtc": "2026-10-02T01:19:14.408600Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,12 +9,15 @@ window.PFA_DATA = {
   "updated": "2026-10-02 01:12 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Esperar decisión de HZ-13 para retomar E2-04. D-028 permanece vigente.",
-  "needsOscar": [],
-  "blockers": [],
-  "current": [
-   "E2-04, intento 3 (2 min): la ruta A con salida del HTTP como arreglo también queda marcada inválida. No guardé ni ejecuté el flow. El editor estaba autenticado en Edge. Publicación local actualizó data.js; el log remoto falló por KF-H04."
+  "needsOscar": [
+   {
+    "ref": "HZ-13",
+    "text": "tras fallar otra vez la ruta A, elige B (Power Apps combina niveles) o autoriza probar Parse JSON + Append dentro del flow. D-028 se mantiene."
+   }
   ],
-  "fileUtc": "2026-10-02T01:13:01.893448Z",
+  "blockers": [],
+  "current": [],
+  "fileUtc": "2026-10-02T01:13:36.646698Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -2180,10 +2183,10 @@ window.PFA_DATA = {
    "total": 657
   },
   "last24h": {
-   "prod": 365,
+   "prod": 358,
    "unprod": 39,
    "wait": 13,
-   "total": 417
+   "total": 410
   },
   "last7d": {
    "prod": 599,
@@ -2410,7 +2413,7 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
-   "start": "2026-10-02T01:12:00Z",
+   "start": "2026-10-02T01:10:00Z",
    "minutes": 2,
    "account": "empresa",
    "entrega": "E2",
@@ -2542,7 +2545,7 @@ window.PFA_DATA = {
  ],
  "history": [
   {
-   "start": "2026-10-02T01:12:00Z",
+   "start": "2026-10-02T01:10:00Z",
    "minutes": 2,
    "account": "empresa",
    "entrega": "E2",
