@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T13:55:16.094979Z",
+ "generatedUtc": "2026-10-02T14:04:16.882947Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -264,10 +264,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 164,
+    "prod": 204,
     "unprod": 98,
-    "wait": 14,
-    "total": 276
+    "wait": 54,
+    "total": 356
    }
   },
   {
@@ -759,12 +759,12 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 230,
-    "status": "En curso (Claude)",
-    "attempts": 18,
-    "minutes": 159,
+    "status": "Por validar (Claude)",
+    "attempts": 19,
+    "minutes": 199,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T12:21:00Z",
+    "lastActivity": "2026-10-02T14:05:00Z",
     "ready": true
    },
    {
@@ -837,7 +837,7 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "E2-07, E2-08",
     "expected": "Versión publicada y controles probados",
-    "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
+    "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
     "limit": 30,
     "status": "Pendiente",
     "attempts": 0,
@@ -1426,12 +1426,12 @@ window.PFA_DATA = {
   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
   "limit": 230,
-  "status": "En curso (Claude)",
-  "attempts": 18,
-  "minutes": 159,
+  "status": "Por validar (Claude)",
+  "attempts": 19,
+  "minutes": 199,
   "entrega": "E2",
   "fails": 7,
-  "lastActivity": "2026-10-02T12:21:00Z",
+  "lastActivity": "2026-10-02T14:05:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1443,12 +1443,12 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
    "limit": 230,
-   "status": "En curso (Claude)",
-   "attempts": 18,
-   "minutes": 159,
+   "status": "Por validar (Claude)",
+   "attempts": 19,
+   "minutes": 199,
    "entrega": "E2",
    "fails": 7,
-   "lastActivity": "2026-10-02T12:21:00Z",
+   "lastActivity": "2026-10-02T14:05:00Z",
    "ready": true
   },
   {
@@ -1521,7 +1521,7 @@ window.PFA_DATA = {
    "owner": "Agente",
    "depends": "E2-07, E2-08",
    "expected": "Versión publicada y controles probados",
-   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado",
+   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
    "limit": 30,
    "status": "Pendiente",
    "attempts": 0,
@@ -2411,28 +2411,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 724,
+   "prod": 764,
    "unprod": 100,
-   "wait": 26,
-   "total": 850
+   "wait": 66,
+   "total": 930
   },
   "last24h": {
-   "prod": 310,
+   "prod": 350,
    "unprod": 82,
-   "wait": 9,
-   "total": 401
+   "wait": 49,
+   "total": 481
   },
   "last7d": {
-   "prod": 724,
+   "prod": 764,
    "unprod": 100,
-   "wait": 26,
-   "total": 850
+   "wait": 66,
+   "total": 930
   },
   "product": {
-   "prod": 437,
+   "prod": 477,
    "unprod": 98,
-   "wait": 18,
-   "total": 553
+   "wait": 58,
+   "total": 633
   },
   "support": {
    "prod": 287,
@@ -2522,9 +2522,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 152,
+   "prod": 192,
    "unprod": 72,
-   "wait": 7
+   "wait": 47
   }
  ],
  "categories": [
@@ -2556,25 +2556,25 @@ window.PFA_DATA = {
  ],
  "waits": [
   {
+   "category": "PERMISOS",
+   "minutes": 46
+  },
+  {
    "category": "AUTH",
    "minutes": 11
   },
   {
    "category": "NAVEGADOR",
    "minutes": 9
-  },
-  {
-   "category": "PERMISOS",
-   "minutes": 6
   }
  ],
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 91,
+   "prod": 131,
    "unprod": 68,
-   "wait": 7,
-   "total": 166
+   "wait": 47,
+   "total": 246
   },
   {
    "task": "E1-05",
@@ -2646,11 +2646,80 @@ window.PFA_DATA = {
    "minutes": 808
   },
   {
+   "account": "claude",
+   "minutes": 80
+  },
+  {
    "account": "empresa",
    "minutes": 42
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T13:44:00Z",
+   "minutes": 21,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "App publicada: run 13:45 UTC falló por ActionResponseTimedOut (bucle 3m20s > 120 s). Flow rehecho: 1 llamada childFolders con $top=250 y $expand=childFolders desde Projects, sin bucles anidados; OnSelect lee la nueva forma y carga ids existentes una vez",
+   "evidence": "Test run 865 ms (10 nivel 2 + 14 nivel 3, childFolderCount coincide); flow y app publicados 14:00 UTC; app publicada: 24 folders found, 0 new; REST 26 filas sin cambios; botón sin superposición a 1366 px y vista angosta. Pendiente: creación con la fórmula final y fila decidida"
+  },
+  {
+   "start": "2026-10-02T13:07:00Z",
+   "minutes": 37,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera autorización de Oscar para aceptar el permiso de conexiones de la app publicada",
+   "evidence": "Diálogo Allow PFA_Pilot_App to access your data (Office 365 Outlook y SharePoint del propio Oscar)"
+  },
+  {
+   "start": "2026-10-02T13:00:00Z",
+   "minutes": 7,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "ESQUEMA_LISTA",
+   "summary": "D-041 aplicado; preview escaneo 1: 25 folders found, 25 new; escaneo 2: 25 found, 0 new; app publicada 13:05 UTC",
+   "evidence": "REST: 26 filas, 0 duplicados, Decision=Nueva, Id/Modified/Decision/Included/ProjectId idénticos antes y después del escaneo 2"
+  },
+  {
+   "start": "2026-10-02T12:57:00Z",
+   "minutes": 3,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera aprobación de Oscar para quitar Required a 4 columnas de PFA_MailFolders (D-041)",
+   "evidence": "REST: obligatorias reales eran 6 (E2-01 anotó 2)"
+  },
+  {
+   "start": "2026-10-02T12:45:00Z",
+   "minutes": 12,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Reapertura (Claude): causa raíz = OnSelect leía .foldersJson y el Respond expone foldersjson (minúsculas); error de compilación impedía ejecutar OnSelect. Fórmula mínima ejecutó el flow; fórmula completa desde YAML",
+   "evidence": "Run de prueba Succeeded 25 carpetas; preview mostró Flow returned 8461 characters; App checker sin errores en Configuration; escaneo 1 falló con Field MailboxKey is required (0 filas). Límites de hora aproximados por tiempos de runs y publicación"
+  },
   {
    "start": "2026-10-02T12:09:00Z",
    "minutes": 12,
@@ -2715,74 +2784,74 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Reglas técnicas y chat diario actualizados",
    "evidence": "Auditoría 8/8 OK; AGENTS.md, skill idea, plantilla e informe revisados"
-  },
-  {
-   "start": "2026-10-02T06:08:00Z",
-   "minutes": 10,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-27",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Hallazgos tipados; HZ-15 a HZ-18 retirados; tablero plegado",
-   "evidence": "Auditoría 8/8: D-037 y T-27 registrados; tabla validada; Pages sin estado inválido a 1366/390 px, sin overflow y detalle cerrado; SHA dashboard/index.html 0515a84d…374348"
-  },
-  {
-   "start": "2026-10-02T05:22:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-26",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Informe completo de E2-04 subido a la carpeta compartida de Drive",
-   "evidence": "Auditoría 2/2 OK: archivo local existe; Drive lista el archivo compartido con el mismo tamaño (12784 bytes)"
-  },
-  {
-   "start": "2026-10-02T05:16:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-23",
-   "attempt": 3,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Oscar confirmó la prueba de Listo para Codex",
-   "evidence": "Issue #12: Oscar confirmó la prueba de copiado."
-  },
-  {
-   "start": "2026-10-02T05:07:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 14,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "FORMULA_PA",
-   "summary": "Consulté M365 Copilot Chat sobre Scan folders sin nueva ejecución",
-   "evidence": "Copilot sospecha vínculo viejo y propone quitar, guardar, cerrar/reabrir Studio, agregar de nuevo y probar aviso. Hipótesis sin comprobar; se detuvo al superar 90 min. No se cambió ni publicó la app."
-  },
-  {
-   "start": "2026-10-02T05:05:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-22",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Oscar confirmó que completó la validación visual",
-   "evidence": "Issue #11: Oscar confirmó la validación visual de la app."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T13:44:00Z",
+   "minutes": 21,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "App publicada: run 13:45 UTC falló por ActionResponseTimedOut (bucle 3m20s > 120 s). Flow rehecho: 1 llamada childFolders con $top=250 y $expand=childFolders desde Projects, sin bucles anidados; OnSelect lee la nueva forma y carga ids existentes una vez",
+   "evidence": "Test run 865 ms (10 nivel 2 + 14 nivel 3, childFolderCount coincide); flow y app publicados 14:00 UTC; app publicada: 24 folders found, 0 new; REST 26 filas sin cambios; botón sin superposición a 1366 px y vista angosta. Pendiente: creación con la fórmula final y fila decidida"
+  },
+  {
+   "start": "2026-10-02T13:07:00Z",
+   "minutes": 37,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera autorización de Oscar para aceptar el permiso de conexiones de la app publicada",
+   "evidence": "Diálogo Allow PFA_Pilot_App to access your data (Office 365 Outlook y SharePoint del propio Oscar)"
+  },
+  {
+   "start": "2026-10-02T13:00:00Z",
+   "minutes": 7,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "ESQUEMA_LISTA",
+   "summary": "D-041 aplicado; preview escaneo 1: 25 folders found, 25 new; escaneo 2: 25 found, 0 new; app publicada 13:05 UTC",
+   "evidence": "REST: 26 filas, 0 duplicados, Decision=Nueva, Id/Modified/Decision/Included/ProjectId idénticos antes y después del escaneo 2"
+  },
+  {
+   "start": "2026-10-02T12:57:00Z",
+   "minutes": 3,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "PERMISOS",
+   "summary": "Espera aprobación de Oscar para quitar Required a 4 columnas de PFA_MailFolders (D-041)",
+   "evidence": "REST: obligatorias reales eran 6 (E2-01 anotó 2)"
+  },
+  {
+   "start": "2026-10-02T12:45:00Z",
+   "minutes": 12,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 19,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Reapertura (Claude): causa raíz = OnSelect leía .foldersJson y el Respond expone foldersjson (minúsculas); error de compilación impedía ejecutar OnSelect. Fórmula mínima ejecutó el flow; fórmula completa desde YAML",
+   "evidence": "Run de prueba Succeeded 25 carpetas; preview mostró Flow returned 8461 characters; App checker sin errores en Configuration; escaneo 1 falló con Field MailboxKey is required (0 filas). Límites de hora aproximados por tiempos de runs y publicación"
+  },
   {
    "start": "2026-10-02T12:09:00Z",
    "minutes": 12,
