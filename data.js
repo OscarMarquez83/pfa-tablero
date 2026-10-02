@@ -1,25 +1,26 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:43:15.212881Z",
+ "generatedUtc": "2026-10-02T03:50:08.110040Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:42 UTC",
+  "updated": "2026-10-02 03:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "captar el error real de Run() en Power Apps antes de cambiar el flow; quedan 6 minutos efectivos en E2-04. No publicar.",
+  "nextAction": "cuando Studio libere la app, reabrirla para captar el error real de Run(); quedan 6 minutos efectivos de E2-04. No publicar.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC. Camino 1 completado: se quitó y volvió a agregar el flow después de guardar y reabrir Studio; la app guardó sin publicar y reconoce foldersJson. En preview, el botón no mostró resultado y el historial no registra una corrida nueva. Details confirma Outlook asignado y Flow checker indica 0 errores/advertencias; el editor guarda una copia no recuperada. Próximo paso: captar el error real de Run() antes de cambiar el flow.",
+   "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
    "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
    "Avance 03:31 UTC: revisé la respuesta del navegador ante Leave site; Escape regresó de preview al editor sin cerrar ni descartar Studio. Detecté que Scan folders se solapaba con el texto de ayuda.",
    "Avance 03:37 UTC: corregí el YAML, reemplacé el botón y guardé la app sin publicarla. Studio confirma el botón a la derecha de Mail folders y sin error en OnSelect.",
    "Avance 03:39 UTC: Details muestra la conexión Outlook asignada y Flow checker indica 0 errores/advertencias. No hay ejecución nueva; primera y segunda escritura siguen pendientes. No recuperé la copia no guardada del diseñador.",
-   "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva."
+   "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
+   "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T03:42:52.994161Z",
+  "fileUtc": "2026-10-02T03:46:40.481654Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -237,8 +238,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 107,
     "unprod": 80,
-    "wait": 311,
-    "total": 498
+    "wait": 314,
+    "total": 501
    }
   },
   {
@@ -731,11 +732,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 10,
+    "attempts": 11,
     "minutes": 84,
     "entrega": "E2",
     "fails": 4,
-    "lastActivity": "2026-10-02T03:41:00Z",
+    "lastActivity": "2026-10-02T03:45:00Z",
     "ready": true
    },
    {
@@ -1374,11 +1375,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 10,
+  "attempts": 11,
   "minutes": 84,
   "entrega": "E2",
   "fails": 4,
-  "lastActivity": "2026-10-02T03:41:00Z",
+  "lastActivity": "2026-10-02T03:45:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1391,11 +1392,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 10,
+   "attempts": 11,
    "minutes": 84,
    "entrega": "E2",
    "fails": 4,
-   "lastActivity": "2026-10-02T03:41:00Z",
+   "lastActivity": "2026-10-02T03:45:00Z",
    "ready": true
   },
   {
@@ -2240,26 +2241,26 @@ window.PFA_DATA = {
   "time": {
    "prod": 621,
    "unprod": 82,
-   "wait": 323,
-   "total": 1026
+   "wait": 326,
+   "total": 1029
   },
   "last24h": {
    "prod": 360,
    "unprod": 80,
-   "wait": 317,
-   "total": 757
+   "wait": 320,
+   "total": 760
   },
   "last7d": {
    "prod": 621,
    "unprod": 82,
-   "wait": 323,
-   "total": 1026
+   "wait": 326,
+   "total": 1029
   },
   "product": {
    "prod": 380,
    "unprod": 80,
-   "wait": 315,
-   "total": 775
+   "wait": 318,
+   "total": 778
   },
   "support": {
    "prod": 241,
@@ -2351,7 +2352,7 @@ window.PFA_DATA = {
    "date": "2026-10-02",
    "prod": 49,
    "unprod": 54,
-   "wait": 304
+   "wait": 307
   }
  ],
  "categories": [
@@ -2379,7 +2380,7 @@ window.PFA_DATA = {
  "waits": [
   {
    "category": "NAVEGADOR",
-   "minutes": 306
+   "minutes": 309
   },
   {
    "category": "AUTH",
@@ -2395,8 +2396,8 @@ window.PFA_DATA = {
    "task": "E2-04",
    "prod": 34,
    "unprod": 50,
-   "wait": 304,
-   "total": 388
+   "wait": 307,
+   "total": 391
   },
   {
    "task": "E1-05",
@@ -2465,7 +2466,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 684
+   "minutes": 687
   },
   {
    "account": "empresa",
@@ -2473,6 +2474,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T03:42:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio integrado abrió PFA_Pilot_App en solo lectura porque otra sesión conserva el control; Edge no respondió.",
+   "evidence": "Banner confirma que otra sesión tiene control de edición. No usé Invalidar ni cambié la app. Edge no respondió en dos intentos; navegador integrado carga Power Automate y Studio en solo lectura. Reanudar cuando Studio vuelva a permitir edición."
+  },
   {
    "start": "2026-10-02T03:40:00Z",
    "minutes": 1,
@@ -2589,22 +2603,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Salida HTTP como arreglo vuelve a ser rechazada en el diseñador",
    "evidence": "Auditoría: editor muestra This expression has a problem; flow sin guardar ni ejecutar. D-028 intacto; publicación local regeneró data.js y log remoto denegado por KF-H04"
-  },
-  {
-   "start": "2026-10-02T00:59:00Z",
-   "minutes": 5,
-   "account": "empresa",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 2,
-   "result": "BLOQUEADA",
-   "kind": "unprod",
-   "category": "DOCUMENTACION",
-   "summary": "Expresión del array volvió a fallar tras consultar Microsoft Learn y Copilot; anti-bucle detuvo E2-04",
-   "evidence": "Cuarta falla del editor; mini-spec HZ-13 con opciones para Oscar; flow sin guardar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T03:42:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 11,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio integrado abrió PFA_Pilot_App en solo lectura porque otra sesión conserva el control; Edge no respondió.",
+   "evidence": "Banner confirma que otra sesión tiene control de edición. No usé Invalidar ni cambié la app. Edge no respondió en dos intentos; navegador integrado carga Power Automate y Studio en solo lectura. Reanudar cuando Studio vuelva a permitir edición."
+  },
   {
    "start": "2026-10-02T03:40:00Z",
    "minutes": 1,
