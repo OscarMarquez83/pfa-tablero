@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T10:58:17.527401Z",
+ "generatedUtc": "2026-10-02T11:04:28.512271Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 10:54 UTC",
+  "updated": "2026-10-02 11:15 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Ejecutar E2-04 con Studio editable: instrumentar OnSelect, medir un clic y aplicar solo la corrección del caso observado.",
   "needsOscar": [],
@@ -14,9 +14,10 @@ window.PFA_DATA = {
   "current": [
    "E2-04, intento 16 iniciado 2026-10-02 10:54 UTC: experimento único en Monitor con Notify y FirstError; aplicar solo el caso medido y continuar hasta la evidencia publicada.",
    "Tanda nueva: restan 48 minutos efectivos; el intento 15 consumió 12 de los 60 concedidos. Inventario previo: un flow objetivo en My flows y Solutions, vinculado In your app.",
-   "Studio: una pestaña de Edge externo, estado Editing. Aún no hay cambios en la app."
+   "Studio: una pestaña de Edge externo, estado Editing. Aún no hay cambios en la app.",
+   "Avance 11:15 UTC: tras quitar y volver a agregar el flow, Studio sigue sin reconocer foldersJson (12 errores de fórmula). El único clic en preview registró UserAction / Select para btnScanFolders; Monitor no registró llamada al flow y no apareció el aviso Scan started. La prueba no encaja aún con los casos de la tabla porque la fórmula no compila. Sin corrección adicional."
   ],
-  "fileUtc": "2026-10-02T10:54:04.964633Z",
+  "fileUtc": "2026-10-02T11:04:15.948252Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
