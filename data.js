@@ -1,27 +1,21 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T12:03:52.852408Z",
+ "generatedUtc": "2026-10-02T12:10:18.524674Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 12:01 UTC",
+  "updated": "2026-10-02 12:09 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Esperar que Oscar revise el informe y apruebe o rechace una única extensión de 20 minutos para las comprobaciones de solo lectura recomendadas por Claude.",
-  "needsOscar": [
-   {
-    "ref": "E2-04",
-    "text": "informe listo en Drive para revisarlo con Claude. Al responder: aplico el plan que salga de esa revisión."
-   },
-   {
-    "ref": "E2-04",
-    "text": "autorizas una única extensión de 20 minutos efectivos para revisar los errores de OnSelect, el tipo de .Run() y el flow referenciado, sin cambiar la app. Al responder: ejecuto esas comprobaciones de solo lectura y luego aplico solo la corrección que quede demostrada."
-   }
-  ],
+  "nextAction": "Completar E2-04 y después continuar E2–E4 en orden; validar cada criterio en la app publicada.",
+  "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T12:01:48.223865Z",
+  "current": [
+   "E2-04, intento 18; inicio 2026-10-02 12:09 UTC. Comprobar solo lectura los errores, el retorno de .Run() y el flow referenciado; aplicar únicamente la corrección demostrada, luego medir en la app publicada. Oscar pidió completar E2–E4, incluido este diagnóstico.",
+   "Avance 12:09 UTC: AGENTS, STATUS, PLAN activo, KNOWN-FIXES y skills revisados; hash Desarrollo 31977571; no hay issues abiertos de Oscar."
+  ],
+  "fileUtc": "2026-10-02T12:09:38.776070Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
