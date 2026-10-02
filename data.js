@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:49:14.710211Z",
+ "generatedUtc": "2026-10-02T02:01:16.608828Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -48,7 +48,7 @@ window.PFA_DATA = {
    "T-05 actualizó la referencia horaria de AGENTS.md. Las dos automatizaciones Codex, REVISOR.md y D-015 ya muestran los seis horarios cada 4 horas; no hizo falta cambiar las automatizaciones.",
    "La tarea PFA Tablero quedó registrada y corrió: PT15M, IgnoreNew, PT5M, LastTaskResult = 0."
   ],
-  "fileUtc": "2026-10-02T01:45:37.229893Z",
+  "fileUtc": "2026-10-02T02:00:45.209811Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
