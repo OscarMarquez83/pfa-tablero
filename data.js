@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:04:17.110690Z",
+ "generatedUtc": "2026-10-02T04:11:05.456403Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:04 UTC",
+  "updated": "2026-10-02 04:06 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "T-22, completar Ideas cerradas. T-23 queda Por validar; E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
+  "nextAction": "completar T-22: columna Cierre, hallazgos HZ-01 a HZ-13 y build del tablero. T-23 queda Por validar; E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
   "needsOscar": [
    {
     "ref": "T-23",
@@ -17,6 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
+   "T-22, intento 1 iniciado 2026-10-02 04:06 UTC: completar cierres de HZ-01..13 basados en registros, corregir HZ-12 y T-21 y comprobar el build.",
    "T-23, intento 2: iniciado 2026-10-02 03:59 UTC y cerrado 2026-10-02 04:04 como AVANCE. Pages muestra Listo para Codex con dos puntos en Entorno; ambos botones muestran Copiado. PFA Despertador figura PAUSED. Vista comprobada a 1265 px; faltan 1366/390 px y el ciclo completo en el chat.",
    "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
    "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
@@ -27,7 +28,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:04:16.858969Z",
+  "fileUtc": "2026-10-02T04:06:42.981449Z",
   "ruleFootprints": {
    "current": "AB72D313",
    "lines": {
@@ -1297,7 +1298,7 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "—",
     "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
-    "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E1",
+    "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E2-11",
     "limit": 20,
     "status": "Hecha",
     "attempts": 1,
@@ -2222,7 +2223,7 @@ window.PFA_DATA = {
    "owner": "Agente",
    "depends": "—",
    "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
-   "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E1",
+   "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E2-11",
    "limit": 20,
    "status": "Hecha",
    "attempts": 1,
@@ -3842,7 +3843,8 @@ window.PFA_DATA = {
    "text": "PFA_Messages exige 22 columnas obligatorias, 2 de ellas lookups; eso bloqueó la persistencia en el Bloque 2. Revisar cuáles vuelven a ser obligatorias cuando la carga sea automática",
    "found": "Revisión de Claude",
    "target": "E5",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-02",
@@ -3850,7 +3852,8 @@ window.PFA_DATA = {
    "text": "El flujo antiguo PFA_InventoryMailFolders no lee Outlook: solo cuenta filas de PFA_MailFolders",
    "found": "Revisión de Claude",
    "target": "E2",
-   "status": "Incorporado en E2-02 (flujo nuevo)"
+   "status": "Incorporado en E2-02 (flujo nuevo)",
+   "closure": "2026-10-01 · DECISIONS D-033 (issue #6) · Oscar confirma escaneo manual: el flow lee Outlook y devuelve JSON; la app guarda las carpetas nuevas."
   },
   {
    "id": "HZ-03",
@@ -3858,7 +3861,8 @@ window.PFA_DATA = {
    "text": "Los 14 flujos antiguos siguen en la solución. Decidir si se eliminan o se archivan",
    "found": "Revisión de Claude",
    "target": "E6",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-04",
@@ -3866,7 +3870,8 @@ window.PFA_DATA = {
    "text": "Correos que llegan al Inbox y todavía no se movieron a una carpeta de proyecto",
    "found": "Oscar",
    "target": "E7",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-05",
@@ -3874,7 +3879,8 @@ window.PFA_DATA = {
    "text": "Proyectos con varios proyectos dentro: posible vista de \"programa\" que agrupe los subproyectos",
    "found": "Oscar",
    "target": "E2",
-   "status": "Incorporado en E2-05 y E2-06"
+   "status": "Incorporado en E2-05",
+   "closure": "2026-09-30 · DECISIONS D-010 · Oscar aprobó clasificar cada carpeta como proyecto, parte del superior o no proyecto; se refleja en E2-05 y E2-06."
   },
   {
    "id": "HZ-06",
@@ -3882,7 +3888,8 @@ window.PFA_DATA = {
    "text": "El contenido interno de las pantallas no sigue un estándar. Cada entrega rehace con el estándar la parte que usa",
    "found": "Oscar",
    "target": "E1 en adelante",
-   "status": "Incorporado en la regla D-013"
+   "status": "Incorporado en E1-02",
+   "closure": "2026-09-30 · DECISIONS D-013 · Oscar aprobó YAML y un tema único para las pantallas."
   },
   {
    "id": "HZ-07",
@@ -3890,7 +3897,8 @@ window.PFA_DATA = {
    "text": "Publicar en el tablero el diagrama de flujos del proyecto",
    "found": "Oscar",
    "target": "T",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-08",
@@ -3898,7 +3906,8 @@ window.PFA_DATA = {
    "text": "En Diagnostics, el texto de estados se superpone en la vista de teléfono; revisar al rediseñar Diagnostics",
    "found": "E1-08",
    "target": "E5",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-09",
@@ -3906,7 +3915,8 @@ window.PFA_DATA = {
    "text": "La galería de carpetas de Configuration se modificó durante E1; en la app publicada, las etiquetas de sus botones quedan recortadas verticalmente. Detener cambios ahí hasta E2",
    "found": "Incidente INC-01",
    "target": "E2",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-10",
@@ -3914,7 +3924,8 @@ window.PFA_DATA = {
    "text": "En teléfono e iPad vertical, reemplazar la navegación horizontal desplazable por un botón que abra una lista vertical seleccionable; mantener botones en formato horizontal",
    "found": "Oscar",
    "target": "E1-10",
-   "status": "Incorporado en E1-10"
+   "status": "Incorporado en E1-10",
+   "closure": "2026-09-30 · DECISIONS D-018 · Oscar aprobó el menú desplegable para teléfono y tableta vertical."
   },
   {
    "id": "HZ-11",
@@ -3922,7 +3933,8 @@ window.PFA_DATA = {
    "text": "Oscar confirma mantener el desplegable ya aprobado en vertical y amplía la revisión a teléfono y tableta en horizontal",
    "found": "Oscar",
    "target": "E2",
-   "status": "Incorporado en E2-11"
+   "status": "Incorporado en E2-11",
+   "closure": "2026-10-01 · issue #8 · Oscar confirma el menú en vertical y pide evaluar teléfono y tableta en horizontal; queda E2-11."
   },
   {
    "id": "HZ-12",
@@ -3930,7 +3942,8 @@ window.PFA_DATA = {
    "text": "E2-02 llegó al límite de 90 minutos; Oscar autorizó continuar 30 minutos para completar y probar el flow, manteniendo D-028",
    "found": "Oscar",
    "target": "E2",
-   "status": "Resuelto (mini-spec en control/specs/HZ-12.md)"
+   "status": "Incorporado en E2-02",
+   "closure": "2026-10-02 · chat Entorno · Oscar autorizó continuar E2; E2-02 completó Succeeded con JSON de 8 carpetas y Flow Checker en 0 errores."
   },
   {
    "id": "HZ-13",
@@ -3938,7 +3951,8 @@ window.PFA_DATA = {
    "text": "Oscar eligió que el flow reúna los resultados y Power Apps los muestre y guarde los nuevos; ruta A seleccionada para E2-04 (mini-spec en control/specs/HZ-13.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Incorporado en E2-04"
+   "status": "Incorporado en E2-04",
+   "closure": "2026-10-02 · DECISIONS D-035 · Oscar eligió la ruta A: el flow reúne carpetas hasta nivel 3 y la app guarda solo las nuevas."
   },
   {
    "id": "HZ-14",
@@ -3946,7 +3960,8 @@ window.PFA_DATA = {
    "text": "Power Apps no reconoce la respuesta del escaneo; requiere elegir un camino de reparación (mini-spec en control/specs/HZ-14.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Incorporado en E2-04"
+   "status": "Incorporado en E2-04",
+   "closure": ""
   },
   {
    "id": "HZ-15",
@@ -3954,7 +3969,8 @@ window.PFA_DATA = {
    "text": "Ver el cierre de cada idea o hallazgo asignado (mini-spec en control/specs/HZ-15.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-16",
@@ -3962,7 +3978,8 @@ window.PFA_DATA = {
    "text": "Detectar pendientes listos para que Oscar los envíe a Codex con un mensaje (mini-spec en control/specs/HZ-16.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-17",
@@ -3970,7 +3987,8 @@ window.PFA_DATA = {
    "text": "Consultar primero Learn y después al Copilot del diseñador de flows desde la segunda falla (mini-spec en control/specs/HZ-17.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   },
   {
    "id": "HZ-18",
@@ -3978,7 +3996,8 @@ window.PFA_DATA = {
    "text": "Detectar y resolver diálogos nativos del navegador antes de declarar que no responde (mini-spec en control/specs/HZ-18.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado"
+   "status": "Asignado",
+   "closure": ""
   }
  ]
 };
