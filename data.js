@@ -1,18 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:01:14.029008Z",
+ "generatedUtc": "2026-10-02T05:07:14.127939Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 05:00 UTC",
+  "updated": "2026-10-02 05:06 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "T-12 cerrada tras auditoría; 11 cierres HZ registrados. Siguiente: reanudar E2-04 cuando la otra sesión libere Studio; quedan 6 minutos efectivos.",
+  "nextAction": "E2-04 intento 14: consultar M365 Copilot Chat sobre el botón que no dispara el flow y aplicar su propuesta a Scan folders. Quedan 2 minutos efectivos; no publicar.",
   "needsOscar": [
    {
     "ref": "E2-04",
-    "text": "la pestaña de Studio está asignada a otra sesión; para evitar cambios concurrentes, espero a que quede libre. Avísame aquí cuando termine. Al responder: reanudo E2-04 y compruebo Scan folders.rn- T-22: revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
+    "text": "la pestaña de Studio está asignada a otra sesión; para evitar cambios concurrentes, espero a que quede libre. Avísame aquí cuando termine. Al responder: reanudo E2-04 y compruebo Scan folders."
+   },
+   {
+    "ref": "T-22",
+    "text": "revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
    },
    {
     "ref": "T-23",
@@ -21,7 +25,8 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-12, intento 2: HECHA (20 minutos acumulados). Skill/reglas instaladas; análisis histórico en ba2d73a; E1-05 cumple auditoría visual 7x2 (14/14). Los 11 hallazgos solicitados tienen Cierre actualizado.",
+   "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app.",
+   "E2-04, intento 12 iniciado 2026-10-02 04:57 UTC y cerrado 05:00 como ESPERA/NAVEGADOR. Edge lista Studio como Editing, pero el conector informa que la pestaña ya pertenece a otra sesión; no modifiqué la app. El publicador regeneró dashboard/data.js; falló al escribir publish.log (acceso denegado; KF-H04).",
    "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
@@ -36,11 +41,11 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T05:01:02.092832Z",
+  "fileUtc": "2026-10-02T05:06:44.001814Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
-    "Desarrollo": "AB72D313",
+    "Desarrollo": "C938B2D9",
     "Entorno": "C938B2D9"
    }
   }
@@ -253,9 +258,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 107,
-    "unprod": 80,
+    "unprod": 84,
     "wait": 314,
-    "total": 501
+    "total": 505
    }
   },
   {
@@ -748,11 +753,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 12,
-    "minutes": 84,
+    "attempts": 13,
+    "minutes": 88,
     "entrega": "E2",
-    "fails": 4,
-    "lastActivity": "2026-10-02T05:00:00Z",
+    "fails": 5,
+    "lastActivity": "2026-10-02T05:06:00Z",
     "ready": true
    },
    {
@@ -1387,11 +1392,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 12,
-  "minutes": 84,
+  "attempts": 13,
+  "minutes": 88,
   "entrega": "E2",
-  "fails": 4,
-  "lastActivity": "2026-10-02T05:00:00Z",
+  "fails": 5,
+  "lastActivity": "2026-10-02T05:06:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1404,11 +1409,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 12,
-   "minutes": 84,
+   "attempts": 13,
+   "minutes": 88,
    "entrega": "E2",
-   "fails": 4,
-   "lastActivity": "2026-10-02T05:00:00Z",
+   "fails": 5,
+   "lastActivity": "2026-10-02T05:06:00Z",
    "ready": true
   },
   {
@@ -2286,7 +2291,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "4 intentos sin avance",
+   "reason": "5 intentos sin avance",
    "level": "serious"
   }
  ],
@@ -2297,27 +2302,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 650,
-   "unprod": 82,
+   "unprod": 86,
    "wait": 326,
-   "total": 1058
+   "total": 1062
   },
   "last24h": {
    "prod": 279,
-   "unprod": 80,
+   "unprod": 84,
    "wait": 320,
-   "total": 679
+   "total": 683
   },
   "last7d": {
    "prod": 650,
-   "unprod": 82,
+   "unprod": 86,
    "wait": 326,
-   "total": 1058
+   "total": 1062
   },
   "product": {
    "prod": 380,
-   "unprod": 80,
+   "unprod": 84,
    "wait": 318,
-   "total": 778
+   "total": 782
   },
   "support": {
    "prod": 270,
@@ -2408,7 +2413,7 @@ window.PFA_DATA = {
   {
    "date": "2026-10-02",
    "prod": 78,
-   "unprod": 54,
+   "unprod": 58,
    "wait": 307
   }
  ],
@@ -2422,6 +2427,11 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "minutes": 6,
    "attempts": 2
+  },
+  {
+   "category": "FORMULA_PA",
+   "minutes": 4,
+   "attempts": 1
   },
   {
    "category": "AUTH",
@@ -2452,9 +2462,9 @@ window.PFA_DATA = {
   {
    "task": "E2-04",
    "prod": 34,
-   "unprod": 50,
+   "unprod": 54,
    "wait": 307,
-   "total": 391
+   "total": 395
   },
   {
    "task": "E1-05",
@@ -2523,7 +2533,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 716
+   "minutes": 720
   },
   {
    "account": "empresa",
@@ -2531,6 +2541,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T05:02:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 13,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "FORMULA_PA",
+   "summary": "En preview, Scan folders no disparó el flow",
+   "evidence": "Studio editable; app Saved (Unpublished); btnScanFolders.OnSelect contiene PFA_E2_LeerCarpetas.Run(); tras pulsar en preview, historial sin ejecución nueva, última 1 oct 21:04. Sin cambios ni publicación."
+  },
   {
    "start": "2026-10-02T04:57:00Z",
    "minutes": 0,
@@ -2647,22 +2670,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-04",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T05:02:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 13,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "FORMULA_PA",
+   "summary": "En preview, Scan folders no disparó el flow",
+   "evidence": "Studio editable; app Saved (Unpublished); btnScanFolders.OnSelect contiene PFA_E2_LeerCarpetas.Run(); tras pulsar en preview, historial sin ejecución nueva, última 1 oct 21:04. Sin cambios ni publicación."
+  },
   {
    "start": "2026-10-02T04:57:00Z",
    "minutes": 0,
