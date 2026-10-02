@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T15:34:15.302313Z",
+ "generatedUtc": "2026-10-02T15:43:14.525750Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -2411,9 +2411,9 @@ window.PFA_DATA = {
   },
   "last24h": {
    "prod": 312,
-   "unprod": 82,
+   "unprod": 72,
    "wait": 49,
-   "total": 443
+   "total": 433
   },
   "last7d": {
    "prod": 764,
