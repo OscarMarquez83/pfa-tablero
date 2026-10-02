@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:07:14.462598Z",
+ "generatedUtc": "2026-10-02T01:13:14.350621Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 01:04 UTC",
+  "updated": "2026-10-02 01:12 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Retomar E2-04 con el picker de contenido dinámico para enlazar el array de respuestas y Append to array variable; guardar y probar el flow antes de crear la fórmula del botón.",
+  "nextAction": "Esperar decisión de HZ-13 para retomar E2-04. D-028 permanece vigente.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 2: 2026-10-02 00:59–01:04 UTC. Microsoft Learn y Copilot consultados: recomiendan items(loop)[property] y Append to array variable para evitar union. Quité el Set variable inválido y añadí un segundo ciclo; el diseñador también marca como inválida la expresión body del array. Los cambios siguen sin guardar. Publicador regeneró data.js, pero falló el acceso a publish.log (KF-H04)."
+   "E2-04, intento 3 (2 min): la ruta A con salida del HTTP como arreglo también queda marcada inválida. No guardé ni ejecuté el flow. El editor estaba autenticado en Edge. Publicación local actualizó data.js; el log remoto falló por KF-H04."
   ],
-  "fileUtc": "2026-10-02T01:05:09.127137Z",
+  "fileUtc": "2026-10-02T01:13:01.893448Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -230,10 +230,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 90,
-    "unprod": 30,
+    "prod": 85,
+    "unprod": 37,
     "wait": 7,
-    "total": 127
+    "total": 129
    }
   },
   {
@@ -725,12 +725,12 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
     "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
     "limit": 90,
-    "status": "Pendiente",
-    "attempts": 2,
-    "minutes": 17,
+    "status": "Bloqueada",
+    "attempts": 3,
+    "minutes": 19,
     "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "2026-10-02T01:04:00Z",
+    "fails": 2,
+    "lastActivity": "2026-10-02T01:12:00Z",
     "ready": true
    },
    {
@@ -1297,19 +1297,19 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-04",
-  "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+  "id": "T-11",
+  "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
   "owner": "Agente",
-  "depends": "E2-03",
-  "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-  "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
-  "limit": 90,
-  "status": "Pendiente",
-  "attempts": 2,
-  "minutes": 17,
-  "entrega": "E2",
+  "depends": "—",
+  "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
+  "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
+  "limit": 20,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 2,
+  "entrega": "T",
   "fails": 0,
-  "lastActivity": "2026-10-02T01:04:00Z",
+  "lastActivity": "2026-10-01T05:47:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1321,12 +1321,12 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
    "limit": 90,
-   "status": "Pendiente",
-   "attempts": 2,
-   "minutes": 17,
+   "status": "Bloqueada",
+   "attempts": 3,
+   "minutes": 19,
    "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "2026-10-02T01:04:00Z",
+   "fails": 2,
+   "lastActivity": "2026-10-02T01:12:00Z",
    "ready": true
   },
   {
@@ -2156,35 +2156,46 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-01T19:20:00Z"
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E2-04",
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
+  },
+  {
+   "task": "Hallazgo",
+   "reason": "Sin entrega destino: El diseñador rechazó de nuevo la salida del HTTP como arreglo en el intento 3; elegir enfo",
+   "level": "warning"
+  }
+ ],
  "kpi": {
   "tasksDone": 40,
   "tasksTotal": 59,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 604,
-   "unprod": 32,
+   "prod": 599,
+   "unprod": 39,
    "wait": 19,
-   "total": 655
+   "total": 657
   },
   "last24h": {
-   "prod": 370,
-   "unprod": 32,
+   "prod": 365,
+   "unprod": 39,
    "wait": 13,
-   "total": 415
+   "total": 417
   },
   "last7d": {
-   "prod": 604,
-   "unprod": 32,
+   "prod": 599,
+   "unprod": 39,
    "wait": 19,
-   "total": 655
+   "total": 657
   },
   "product": {
-   "prod": 363,
-   "unprod": 30,
+   "prod": 358,
+   "unprod": 37,
    "wait": 11,
-   "total": 404
+   "total": 406
   },
   "support": {
    "prod": 241,
@@ -2274,26 +2285,26 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 32,
-   "unprod": 4,
+   "prod": 27,
+   "unprod": 11,
    "wait": 0
   }
  ],
  "categories": [
   {
    "category": "CONECTOR",
-   "minutes": 29,
-   "attempts": 4
+   "minutes": 31,
+   "attempts": 5
+  },
+  {
+   "category": "DOCUMENTACION",
+   "minutes": 6,
+   "attempts": 2
   },
   {
    "category": "AUTH",
    "minutes": 2,
    "attempts": 2
-  },
-  {
-   "category": "DOCUMENTACION",
-   "minutes": 1,
-   "attempts": 1
   },
   {
    "category": "OTRO",
@@ -2380,11 +2391,11 @@ window.PFA_DATA = {
    "total": 19
   },
   {
-   "task": "T-12",
-   "prod": 18,
-   "unprod": 0,
+   "task": "E2-04",
+   "prod": 12,
+   "unprod": 7,
    "wait": 0,
-   "total": 18
+   "total": 19
   }
  ],
  "byAccount": [
@@ -2394,10 +2405,23 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 37
+   "minutes": 39
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T01:12:00Z",
+   "minutes": 2,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 3,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Salida HTTP como arreglo vuelve a ser rechazada en el diseñador",
+   "evidence": "Auditoría: editor muestra This expression has a problem; flow sin guardar ni ejecutar. D-028 intacto; publicación local regeneró data.js y log remoto denegado por KF-H04"
+  },
   {
    "start": "2026-10-02T00:59:00Z",
    "minutes": 5,
@@ -2405,11 +2429,11 @@ window.PFA_DATA = {
    "entrega": "E2",
    "task": "E2-04",
    "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "EXPRESION",
-   "summary": "Consulté Microsoft Learn y Copilot; preparé un segundo ciclo para acumular carpetas sin union",
-   "evidence": "Editor rechaza expresión body del array; flow aún sin guardar; respuesta de Copilot recomienda items(loop)[property] y Append to array variable"
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "DOCUMENTACION",
+   "summary": "Expresión del array volvió a fallar tras consultar Microsoft Learn y Copilot; anti-bucle detuvo E2-04",
+   "evidence": "Cuarta falla del editor; mini-spec HZ-13 con opciones para Oscar; flow sin guardar"
   },
   {
    "start": "2026-10-02T00:47:00Z",
@@ -2514,22 +2538,22 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Power Automate vuelve a pedir inicio de sesión al navegar",
    "evidence": "Home mostró Hello, Oscar; al usar navegación apareció Sign in required / AADSTS160021; flow intacto"
-  },
-  {
-   "start": "2026-10-01T20:21:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Power Automate requiere iniciar sesión",
-   "evidence": "Edge muestra Sign in required / AADSTS160021; flow sin cambios"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T01:12:00Z",
+   "minutes": 2,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 3,
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "CONECTOR",
+   "summary": "Salida HTTP como arreglo vuelve a ser rechazada en el diseñador",
+   "evidence": "Auditoría: editor muestra This expression has a problem; flow sin guardar ni ejecutar. D-028 intacto; publicación local regeneró data.js y log remoto denegado por KF-H04"
+  },
   {
    "start": "2026-10-02T00:59:00Z",
    "minutes": 5,
@@ -2537,11 +2561,11 @@ window.PFA_DATA = {
    "entrega": "E2",
    "task": "E2-04",
    "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "EXPRESION",
-   "summary": "Consulté Microsoft Learn y Copilot; preparé un segundo ciclo para acumular carpetas sin union",
-   "evidence": "Editor rechaza expresión body del array; flow aún sin guardar; respuesta de Copilot recomienda items(loop)[property] y Append to array variable"
+   "result": "BLOQUEADA",
+   "kind": "unprod",
+   "category": "DOCUMENTACION",
+   "summary": "Expresión del array volvió a fallar tras consultar Microsoft Learn y Copilot; anti-bucle detuvo E2-04",
+   "evidence": "Cuarta falla del editor; mini-spec HZ-13 con opciones para Oscar; flow sin guardar"
   },
   {
    "start": "2026-10-02T00:47:00Z",
@@ -3706,6 +3730,14 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "E2",
    "status": "Resuelto (mini-spec en control/specs/HZ-12.md)"
+  },
+  {
+   "id": "HZ-13",
+   "date": "2026-10-02",
+   "text": "El diseñador rechazó de nuevo la salida del HTTP como arreglo en el intento 3; elegir enfoque de continuación (mini-spec en control/specs/HZ-13.md)",
+   "found": "Codex en E2-04",
+   "target": "E2",
+   "status": "Por decidir"
   }
  ]
 };
