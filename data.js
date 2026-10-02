@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:10:15.888840Z",
+ "generatedUtc": "2026-10-02T03:16:17.702291Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 02:36 UTC",
+  "updated": "2026-10-02 03:15 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Retomar E2-04 por Camino 1 aprobado cuando Edge o el navegador integrado responda; luego continuar E2-05.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 6 (Reapertura: Camino 1 aprobado). Antes de tocar Studio, intenté consultar las pestañas del navegador integrado y Edge; ambas consultas agotaron el tiempo sin mostrar el estado. No cambié la app ni el flow. Sigue pendiente quitar el flow de la app, guardar, cerrar/reabrir Studio y volver a agregarlo. Cuando el navegador responda, comprobaré que"
+   "E2-04, intento 6 (ESPERA, 0 min): las consultas anteriores del navegador agotaron el tiempo. Intento 7 iniciado 2026-10-02 03:15 UTC. Power Apps Studio abrió PFA_Pilot_App en modo solo lectura porque detecta otra sesión del mismo usuario; aparece la opción Override. Voy a retomar el control, revisar Configuration, tomar evidencia antes del cambio y seguir Camino 1. No publicaré la app."
   ],
-  "fileUtc": "2026-10-02T02:36:03.400589Z",
+  "fileUtc": "2026-10-02T03:15:27.595912Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -725,8 +725,8 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
-    "status": "Reabierta",
-    "attempts": 5,
+    "status": "En curso",
+    "attempts": 6,
     "minutes": 67,
     "entrega": "E2",
     "fails": 3,
@@ -1304,8 +1304,8 @@ window.PFA_DATA = {
   "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
-  "status": "Reabierta",
-  "attempts": 5,
+  "status": "En curso",
+  "attempts": 6,
   "minutes": 67,
   "entrega": "E2",
   "fails": 3,
@@ -1321,8 +1321,8 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
-   "status": "Reabierta",
-   "attempts": 5,
+   "status": "En curso",
+   "attempts": 6,
    "minutes": 67,
    "entrega": "E2",
    "fails": 3,
@@ -2159,7 +2159,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (5 intentos previos)",
+   "reason": "3 intentos sin avance",
    "level": "serious"
   }
  ],
