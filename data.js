@@ -1,17 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T03:57:01.263362Z",
+ "generatedUtc": "2026-10-02T04:04:17.110690Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 03:54 UTC",
+  "updated": "2026-10-02 04:04 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "reanudar T-23 para verificar Pages y los criterios interactivos; Pages falló por SSL y el publicador no pudo escribir publish.log. E2-04 queda en espera de que Studio permita editar y conserva 6 minutos efectivos.",
-  "needsOscar": [],
+  "nextAction": "T-22, completar Ideas cerradas. T-23 queda Por validar; E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
+  "needsOscar": [
+   {
+    "ref": "T-23",
+    "text": "revisa Listo para Codex a 1366 px y 390 px; comprueba que el mensaje copiado empieza por $cerrar-pendientes y que cerrar y seguir termina con la frase prevista. Responde T-23 OK o indica el cambio. Al responder: actualizo T-23 según el resultado y sigo con T-24."
+   }
+  ],
   "blockers": [],
   "current": [
+   "T-23, intento 2: iniciado 2026-10-02 03:59 UTC y cerrado 2026-10-02 04:04 como AVANCE. Pages muestra Listo para Codex con dos puntos en Entorno; ambos botones muestran Copiado. PFA Despertador figura PAUSED. Vista comprobada a 1265 px; faltan 1366/390 px y el ciclo completo en el chat.",
    "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
    "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
    "Avance 03:30 UTC: verifiqué el mensaje del editor, conexiones asociadas y el historial; consulté Microsoft Learn y M365 Copilot. No apareció una ejecución nueva.",
@@ -21,7 +27,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T03:54:49.343027Z",
+  "fileUtc": "2026-10-02T04:04:16.858969Z",
   "ruleFootprints": {
    "current": "AB72D313",
    "lines": {
@@ -1136,19 +1142,18 @@ window.PFA_DATA = {
    },
    {
     "id": "T-11",
-    "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento",
+    "action": "Mostrar y procesar las respuestas abiertas de Oscar en cada intento (reemplazada por T-23)",
     "owner": "Agente",
     "depends": "—",
     "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
     "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
     "limit": 20,
-    "status": "Cancelada (reemplazada por T-23)",
+    "status": "Cancelada",
     "attempts": 1,
     "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T05:47:00Z",
-    "ready": true
+    "lastActivity": "2026-10-01T05:47:00Z"
    },
    {
     "id": "T-12",
@@ -1325,9 +1330,9 @@ window.PFA_DATA = {
     "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
     "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 2,
+    "status": "Por validar",
+    "attempts": 2,
+    "minutes": 6,
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-02T03:54:00Z",
@@ -2486,7 +2491,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
-   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado."
+   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado.2026-10-02 03:59"
   },
   {
    "start": "2026-10-02T03:42:00Z",
@@ -2618,7 +2623,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "OTRO",
    "summary": "Skill y parche aprobado aplicados; cambios de reglas y cancelación de T-11 registrados.",
-   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado."
+   "evidence": "Hash base y resultado aprobados; hash de skill verificado. Páginas no verificadas: fallo SSL; publicador no pudo escribir publish.log por acceso denegado.2026-10-02 03:59"
   },
   {
    "start": "2026-10-02T03:42:00Z",
