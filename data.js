@@ -1,21 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T11:43:14.648296Z",
+ "generatedUtc": "2026-10-02T11:49:24.861319Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 11:38 UTC",
+  "updated": "2026-10-02 11:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "En E2-04, comprobar si Power Apps ve el output foldersJson como texto usando una prueba de fórmula que no ejecute ni cambie el flow.",
+  "nextAction": "En E2-04, aislar el disparo del flow con fórmula temporal sin ParseJSON; comprobar en Live Monitor si se ejecuta o devuelve FirstError. No guardar la fórmula de prueba.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "E2-04, intento 17 iniciado 2026-10-02 11:38 UTC: probar si el error de ParseJSON viene de que Power Apps no reconoce el output foldersJson; usar una fórmula aislada y comparar los errores antes y después. No guardar cambios de prueba.",
-   "Tiempo de diagnóstico adicional usado: 49/60 minutos; quedan 11 efectivos. Acumulado E2-04: 136/150 minutos."
-  ],
-  "fileUtc": "2026-10-02T11:38:18.513519Z",
+  "current": [],
+  "fileUtc": "2026-10-02T11:45:18.760963Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -243,10 +240,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 152,
+    "prod": 159,
     "unprod": 87,
     "wait": 14,
-    "total": 253
+    "total": 260
    }
   },
   {
@@ -739,11 +736,11 @@ window.PFA_DATA = {
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 150,
     "status": "Reabierta",
-    "attempts": 16,
-    "minutes": 136,
+    "attempts": 17,
+    "minutes": 143,
     "entrega": "E2",
     "fails": 6,
-    "lastActivity": "2026-10-02T11:31:00Z",
+    "lastActivity": "2026-10-02T11:45:00Z",
     "ready": true
    },
    {
@@ -1406,11 +1403,11 @@ window.PFA_DATA = {
   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
   "limit": 150,
   "status": "Reabierta",
-  "attempts": 16,
-  "minutes": 136,
+  "attempts": 17,
+  "minutes": 143,
   "entrega": "E2",
   "fails": 6,
-  "lastActivity": "2026-10-02T11:31:00Z",
+  "lastActivity": "2026-10-02T11:45:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1423,11 +1420,11 @@ window.PFA_DATA = {
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
    "limit": 150,
    "status": "Reabierta",
-   "attempts": 16,
-   "minutes": 136,
+   "attempts": 17,
+   "minutes": 143,
    "entrega": "E2",
    "fails": 6,
-   "lastActivity": "2026-10-02T11:31:00Z",
+   "lastActivity": "2026-10-02T11:45:00Z",
    "ready": true
   },
   {
@@ -2380,7 +2377,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (16 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (17 intentos previos)",
    "level": "serious"
   }
  ],
@@ -2390,28 +2387,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 712,
+   "prod": 719,
    "unprod": 89,
    "wait": 26,
-   "total": 827
+   "total": 834
   },
   "last24h": {
-   "prod": 307,
+   "prod": 308,
    "unprod": 71,
    "wait": 9,
-   "total": 387
+   "total": 388
   },
   "last7d": {
-   "prod": 712,
+   "prod": 719,
    "unprod": 89,
    "wait": 26,
-   "total": 827
+   "total": 834
   },
   "product": {
-   "prod": 425,
+   "prod": 432,
    "unprod": 87,
    "wait": 18,
-   "total": 530
+   "total": 537
   },
   "support": {
    "prod": 287,
@@ -2501,7 +2498,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 140,
+   "prod": 147,
    "unprod": 61,
    "wait": 7
   }
@@ -2549,17 +2546,17 @@ window.PFA_DATA = {
  ],
  "topTasks": [
   {
+   "task": "E2-04",
+   "prod": 86,
+   "unprod": 57,
+   "wait": 7,
+   "total": 150
+  },
+  {
    "task": "E1-05",
    "prod": 143,
    "unprod": 0,
    "wait": 0,
-   "total": 143
-  },
-  {
-   "task": "E2-04",
-   "prod": 79,
-   "unprod": 57,
-   "wait": 7,
    "total": 143
   },
   {
@@ -2622,7 +2619,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 785
+   "minutes": 792
   },
   {
    "account": "empresa",
@@ -2630,6 +2627,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T11:38:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 17,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow",
+   "evidence": "Auditoría 1/7; My flows 1/21, Solutions 1/13; In your app; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
+  },
   {
    "start": "2026-10-02T10:54:00Z",
    "minutes": 37,
@@ -2746,22 +2756,22 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "En preview, Scan folders no disparó el flow",
    "evidence": "Studio editable; app Saved (Unpublished); btnScanFolders.OnSelect contiene PFA_E2_LeerCarpetas.Run(); tras pulsar en preview, historial sin ejecución nueva, última 1 oct 21:04. Sin cambios ni publicación."
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 12,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Studio aparece Editing, pero su pestaña está reclamada por otra sesión",
-   "evidence": "openTabs identificó Power Apps Studio; claimTab respondió que la pestaña ya pertenece a otra sesión; no se editó la app"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T11:38:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 17,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow",
+   "evidence": "Auditoría 1/7; My flows 1/21, Solutions 1/13; In your app; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
+  },
   {
    "start": "2026-10-02T10:54:00Z",
    "minutes": 37,
