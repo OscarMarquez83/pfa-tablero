@@ -1,20 +1,20 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T01:01:15.405071Z",
+ "generatedUtc": "2026-10-02T01:07:14.462598Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 01:01 UTC",
+  "updated": "2026-10-02 01:04 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar el intento 2 de E2-04: validar la URI del ciclo con la sintaxis oficial items(loop)[property], guardar y probar el flow.",
+  "nextAction": "Retomar E2-04 con el picker de contenido dinámico para enlazar el array de respuestas y Append to array variable; guardar y probar el flow antes de crear la fórmula del botón.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-04, intento 2: iniciado 2026-10-02 01:01 UTC. Corregiré la expresión de URI con la forma documentada items(loop)[property], ejecutaré Flow Checker y solo guardaré si el editor la acepta."
+   "E2-04, intento 2: 2026-10-02 00:59–01:04 UTC. Microsoft Learn y Copilot consultados: recomiendan items(loop)[property] y Append to array variable para evitar union. Quité el Set variable inválido y añadí un segundo ciclo; el diseñador también marca como inválida la expresión body del array. Los cambios siguen sin guardar. Publicador regeneró data.js, pero falló el acceso a publish.log (KF-H04)."
   ],
-  "fileUtc": "2026-10-02T01:01:14.870862Z",
+  "fileUtc": "2026-10-02T01:05:09.127137Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
@@ -230,10 +230,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 85,
+    "prod": 90,
     "unprod": 30,
     "wait": 7,
-    "total": 122
+    "total": 127
    }
   },
   {
@@ -726,11 +726,11 @@ window.PFA_DATA = {
     "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
     "limit": 90,
     "status": "Pendiente",
-    "attempts": 1,
-    "minutes": 12,
+    "attempts": 2,
+    "minutes": 17,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "2026-10-02T00:59:00Z",
+    "lastActivity": "2026-10-02T01:04:00Z",
     "ready": true
    },
    {
@@ -1305,11 +1305,11 @@ window.PFA_DATA = {
   "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
   "limit": 90,
   "status": "Pendiente",
-  "attempts": 1,
-  "minutes": 12,
+  "attempts": 2,
+  "minutes": 17,
   "entrega": "E2",
   "fails": 0,
-  "lastActivity": "2026-10-02T00:59:00Z",
+  "lastActivity": "2026-10-02T01:04:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1322,11 +1322,11 @@ window.PFA_DATA = {
    "evidence": "En app de prueba, el primer escaneo crea las filas de niveles 1–3, el segundo no agrega duplicados; una fila existente conserva Decision/Included/ProjectId; botón probado en preview",
    "limit": 90,
    "status": "Pendiente",
-   "attempts": 1,
-   "minutes": 12,
+   "attempts": 2,
+   "minutes": 17,
    "entrega": "E2",
    "fails": 0,
-   "lastActivity": "2026-10-02T00:59:00Z",
+   "lastActivity": "2026-10-02T01:04:00Z",
    "ready": true
   },
   {
@@ -2163,28 +2163,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 599,
+   "prod": 604,
    "unprod": 32,
    "wait": 19,
-   "total": 650
+   "total": 655
   },
   "last24h": {
-   "prod": 374,
+   "prod": 370,
    "unprod": 32,
    "wait": 13,
-   "total": 419
+   "total": 415
   },
   "last7d": {
-   "prod": 599,
+   "prod": 604,
    "unprod": 32,
    "wait": 19,
-   "total": 650
+   "total": 655
   },
   "product": {
-   "prod": 358,
+   "prod": 363,
    "unprod": 30,
    "wait": 11,
-   "total": 399
+   "total": 404
   },
   "support": {
    "prod": 241,
@@ -2274,7 +2274,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 27,
+   "prod": 32,
    "unprod": 4,
    "wait": 0
   }
@@ -2394,10 +2394,23 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 32
+   "minutes": 37
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T00:59:00Z",
+   "minutes": 5,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "EXPRESION",
+   "summary": "Consulté Microsoft Learn y Copilot; preparé un segundo ciclo para acumular carpetas sin union",
+   "evidence": "Editor rechaza expresión body del array; flow aún sin guardar; respuesta de Copilot recomienda items(loop)[property] y Append to array variable"
+  },
   {
    "start": "2026-10-02T00:47:00Z",
    "minutes": 12,
@@ -2514,22 +2527,22 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "Power Automate requiere iniciar sesión",
    "evidence": "Edge muestra Sign in required / AADSTS160021; flow sin cambios"
-  },
-  {
-   "start": "2026-10-01T19:37:00Z",
-   "minutes": 44,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-02",
-   "attempt": 11,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Reconcilié el alcance de E2 con D-028; revisé la guía de integración de flows con Power Apps",
-   "evidence": "D-033; control/PLAN.md actualizado; Learn https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow; flow sin cambios"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T00:59:00Z",
+   "minutes": 5,
+   "account": "empresa",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "EXPRESION",
+   "summary": "Consulté Microsoft Learn y Copilot; preparé un segundo ciclo para acumular carpetas sin union",
+   "evidence": "Editor rechaza expresión body del array; flow aún sin guardar; respuesta de Copilot recomienda items(loop)[property] y Append to array variable"
+  },
   {
    "start": "2026-10-02T00:47:00Z",
    "minutes": 12,
