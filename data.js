@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T05:22:14.268299Z",
+ "generatedUtc": "2026-10-02T05:28:17.129468Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 05:16 UTC",
+  "updated": "2026-10-02 05:24 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 sigue Bloqueada; falta la elección de Oscar en HZ-19 para retomar el diagnóstico. Las tareas E2-05 en adelante dependen de E2-04.",
+  "nextAction": "E2-04 sigue Bloqueada a la espera de la elección HZ-19. Corregí el intento 8 de 15 a 11 minutos según sus horas registradas; el total efectivo es 87/90. Las tareas E2-05 en adelante dependen de E2-04.",
   "needsOscar": [
    {
     "ref": "HZ-19",
@@ -18,7 +18,7 @@ window.PFA_DATA = {
   "blockers": [],
   "current": [
    "T-23, intento 3 iniciado 2026-10-02 05:16 UTC y cerrado 05:16 como HECHA (0 min): Oscar confirmó en issue #12 la prueba del grupo Listo para Codex a 1366 px y 390 px y el contenido de los dos mensajes. Cerré T-23; sin cambios en la app.",
-   "E2-04, intento 14 iniciado 2026-10-02 05:07 UTC y cerrado 05:10 como BLOQUEADA (3 min; total 91/90). M365 Copilot Chat recomendó como hipótesis un vínculo antiguo: quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregar el flow y probar con un aviso de éxito/error. No apliqué cambios porque se superó el límite. Al cierre, el publicador volvió a fallar al escribir publish.log (acceso denegado; KF-H04).",
+   "E2-04, intento 14 iniciado 2026-10-02 05:07 UTC y cerrado 05:10 como BLOQUEADA (3 min; total 87/90). M365 Copilot Chat recomendó como hipótesis un vínculo antiguo: quitar el flow de la app, guardar, cerrar y reabrir Studio, volver a agregar el flow y probar con un aviso de éxito/error. No apliqué cambios porque se superó el límite. Al cierre, el publicador volvió a fallar al escribir publish.log (acceso denegado; KF-H04).",
    "E2-04, intento 13 iniciado 2026-10-02 05:02 UTC y cerrado 2026-10-02 05:06 como SIN_AVANCE (4 min efectivos): Studio editable; app Saved (Unpublished). Inspeccioné btnScanFolders y pulsé Scan folders en preview; el historial del flow no mostró una ejecución nueva (última: 1 oct 21:04). No modifiqué ni publiqué la app. El publicador regeneró dashboard/data.js, pero no pudo escribir publish.log (acceso denegado; KF-H04).",
    "E2-04, intento 12 iniciado 2026-10-02 04:57 UTC y cerrado 05:00 como ESPERA/NAVEGADOR. Edge lista Studio como Editing, pero el conector informa que la pestaña ya pertenece a otra sesión; no modifiqué la app. El publicador regeneró dashboard/data.js; falló al escribir publish.log (acceso denegado; KF-H04).",
    "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
@@ -35,7 +35,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T05:18:19.771779Z",
+  "fileUtc": "2026-10-02T05:25:25.887175Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
@@ -251,10 +251,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 107,
+    "prod": 103,
     "unprod": 87,
     "wait": 314,
-    "total": 508
+    "total": 504
    }
   },
   {
@@ -390,15 +390,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 23,
-   "total": 25,
+   "done": 24,
+   "total": 26,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 270,
+    "prod": 272,
     "unprod": 2,
     "wait": 8,
-    "total": 280
+    "total": 282
    }
   }
  ],
@@ -748,7 +748,7 @@ window.PFA_DATA = {
     "limit": 90,
     "status": "Bloqueada",
     "attempts": 14,
-    "minutes": 91,
+    "minutes": 87,
     "entrega": "E2",
     "fails": 6,
     "lastActivity": "2026-10-02T05:10:00Z",
@@ -1372,6 +1372,21 @@ window.PFA_DATA = {
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-02T04:45:00Z"
+   },
+   {
+    "id": "T-26",
+    "action": "Redactar y subir a Drive el informe completo de los intentos de E2-04",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar tiene un informe de texto detallado en la carpeta compartida de PFA",
+    "evidence": "El archivo local existe y el conector de Drive confirma el archivo en “PFA - Compartido con Codex” con el mismo tamaño",
+    "limit": 30,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 2,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-02T05:24:00Z"
    }
   ]
  },
@@ -1387,7 +1402,7 @@ window.PFA_DATA = {
    "limit": 90,
    "status": "Bloqueada",
    "attempts": 14,
-   "minutes": 91,
+   "minutes": 87,
    "entrega": "E2",
    "fails": 6,
    "lastActivity": "2026-10-02T05:10:00Z",
@@ -2293,6 +2308,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-02T04:45:00Z"
+  },
+  {
+   "id": "T-26",
+   "action": "Redactar y subir a Drive el informe completo de los intentos de E2-04",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar tiene un informe de texto detallado en la carpeta compartida de PFA",
+   "evidence": "El archivo local existe y el conector de Drive confirma el archivo en “PFA - Compartido con Codex” con el mismo tamaño",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 2,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T05:24:00Z"
   }
  ],
  "alerts": [
@@ -2308,39 +2338,39 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 45,
-  "tasksTotal": 63,
+  "tasksDone": 46,
+  "tasksTotal": 64,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 650,
+   "prod": 648,
    "unprod": 89,
    "wait": 326,
-   "total": 1065
+   "total": 1063
   },
   "last24h": {
-   "prod": 272,
+   "prod": 270,
    "unprod": 87,
    "wait": 320,
-   "total": 679
+   "total": 677
   },
   "last7d": {
-   "prod": 650,
+   "prod": 648,
    "unprod": 89,
    "wait": 326,
-   "total": 1065
+   "total": 1063
   },
   "product": {
-   "prod": 380,
+   "prod": 376,
    "unprod": 87,
    "wait": 318,
-   "total": 785
+   "total": 781
   },
   "support": {
-   "prod": 270,
+   "prod": 272,
    "unprod": 2,
    "wait": 8,
-   "total": 280
+   "total": 282
   }
  },
  "days": [
@@ -2424,7 +2454,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 78,
+   "prod": 76,
    "unprod": 61,
    "wait": 307
   }
@@ -2473,10 +2503,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 34,
+   "prod": 30,
    "unprod": 57,
    "wait": 307,
-   "total": 398
+   "total": 394
   },
   {
    "task": "E1-05",
@@ -2545,7 +2575,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 723
+   "minutes": 721
   },
   {
    "account": "empresa",
@@ -2553,6 +2583,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T05:22:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-26",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Informe completo de E2-04 subido a la carpeta compartida de Drive",
+   "evidence": "Auditoría 2/2 OK: archivo local existe; Drive lista el archivo compartido con el mismo tamaño (12784 bytes)"
+  },
   {
    "start": "2026-10-02T05:07:00Z",
    "minutes": 3,
@@ -2669,22 +2712,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas."
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-09",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T05:22:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-26",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Informe completo de E2-04 subido a la carpeta compartida de Drive",
+   "evidence": "Auditoría 2/2 OK: archivo local existe; Drive lista el archivo compartido con el mismo tamaño (12784 bytes)"
+  },
   {
    "start": "2026-10-02T05:07:00Z",
    "minutes": 3,
@@ -3090,7 +3133,7 @@ window.PFA_DATA = {
   },
   {
    "start": "2026-10-02T03:26:00Z",
-   "minutes": 15,
+   "minutes": 11,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
