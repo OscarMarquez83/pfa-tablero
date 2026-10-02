@@ -1,18 +1,21 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T11:37:14.253936Z",
+ "generatedUtc": "2026-10-02T11:43:14.648296Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 11:31 UTC",
+  "updated": "2026-10-02 11:38 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Reanudar E2-04 con 14 minutos efectivos disponibles en el límite actual; comprobar la hipótesis de metadatos antiguos del output de Power Apps y medir el OnSelect con Monitor.",
+  "nextAction": "En E2-04, comprobar si Power Apps ve el output foldersJson como texto usando una prueba de fórmula que no ejecute ni cambie el flow.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T11:33:11.318791Z",
+  "current": [
+   "E2-04, intento 17 iniciado 2026-10-02 11:38 UTC: probar si el error de ParseJSON viene de que Power Apps no reconoce el output foldersJson; usar una fórmula aislada y comparar los errores antes y después. No guardar cambios de prueba.",
+   "Tiempo de diagnóstico adicional usado: 49/60 minutos; quedan 11 efectivos. Acumulado E2-04: 136/150 minutos."
+  ],
+  "fileUtc": "2026-10-02T11:38:18.513519Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -242,8 +245,8 @@ window.PFA_DATA = {
    "time": {
     "prod": 152,
     "unprod": 87,
-    "wait": 314,
-    "total": 553
+    "wait": 14,
+    "total": 253
    }
   },
   {
@@ -1315,7 +1318,7 @@ window.PFA_DATA = {
     "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:04:00Z"
+    "lastActivity": "2026-10-02T05:16:00Z"
    },
    {
     "id": "T-24",
@@ -2296,7 +2299,7 @@ window.PFA_DATA = {
    "minutes": 6,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T04:04:00Z"
+   "lastActivity": "2026-10-02T05:16:00Z"
   },
   {
    "id": "T-24",
@@ -2389,26 +2392,26 @@ window.PFA_DATA = {
   "time": {
    "prod": 712,
    "unprod": 89,
-   "wait": 326,
-   "total": 1127
+   "wait": 26,
+   "total": 827
   },
   "last24h": {
    "prod": 307,
-   "unprod": 73,
-   "wait": 309,
-   "total": 689
+   "unprod": 71,
+   "wait": 9,
+   "total": 387
   },
   "last7d": {
    "prod": 712,
    "unprod": 89,
-   "wait": 326,
-   "total": 1127
+   "wait": 26,
+   "total": 827
   },
   "product": {
    "prod": 425,
    "unprod": 87,
-   "wait": 318,
-   "total": 830
+   "wait": 18,
+   "total": 530
   },
   "support": {
    "prod": 287,
@@ -2500,7 +2503,7 @@ window.PFA_DATA = {
    "date": "2026-10-02",
    "prod": 140,
    "unprod": 61,
-   "wait": 307
+   "wait": 7
   }
  ],
  "categories": [
@@ -2532,12 +2535,12 @@ window.PFA_DATA = {
  ],
  "waits": [
   {
-   "category": "NAVEGADOR",
-   "minutes": 309
-  },
-  {
    "category": "AUTH",
    "minutes": 11
+  },
+  {
+   "category": "NAVEGADOR",
+   "minutes": 9
   },
   {
    "category": "PERMISOS",
@@ -2546,17 +2549,17 @@ window.PFA_DATA = {
  ],
  "topTasks": [
   {
-   "task": "E2-04",
-   "prod": 79,
-   "unprod": 57,
-   "wait": 307,
-   "total": 443
-  },
-  {
    "task": "E1-05",
    "prod": 143,
    "unprod": 0,
    "wait": 0,
+   "total": 143
+  },
+  {
+   "task": "E2-04",
+   "prod": 79,
+   "unprod": 57,
+   "wait": 7,
    "total": 143
   },
   {
@@ -2623,7 +2626,7 @@ window.PFA_DATA = {
   },
   {
    "account": "empresa",
-   "minutes": 342
+   "minutes": 42
   }
  ],
  "recent": [
@@ -2638,7 +2641,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "FORMULA_PA",
    "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
-   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor anterior: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
+   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
   },
   {
    "start": "2026-10-02T06:35:00Z",
@@ -2693,6 +2696,19 @@ window.PFA_DATA = {
    "evidence": "Auditoría 2/2 OK: archivo local existe; Drive lista el archivo compartido con el mismo tamaño (12784 bytes)"
   },
   {
+   "start": "2026-10-02T05:16:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-23",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Oscar confirmó la prueba de Listo para Codex",
+   "evidence": "Issue #12: Oscar confirmó la prueba de copiado."
+  },
+  {
    "start": "2026-10-02T05:07:00Z",
    "minutes": 3,
    "account": "personal",
@@ -2716,7 +2732,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "DOCUMENTACION",
    "summary": "Oscar confirmó que completó la validación visual",
-   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto.2026-10-02 05:16,2026-10-02 05:16,0,personal,T,T-23,3,HECHA,OTRO,Oscar confirmó la prueba de Listo para Codex\""
+   "evidence": "Issue #11: Oscar confirmó la validación visual de la app."
   },
   {
    "start": "2026-10-02T05:02:00Z",
@@ -2743,19 +2759,6 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Studio aparece Editing, pero su pestaña está reclamada por otra sesión",
    "evidence": "openTabs identificó Power Apps Studio; claimTab respondió que la pestaña ya pertenece a otra sesión; no se editó la app"
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-18",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador."
   }
  ],
  "history": [
@@ -2770,7 +2773,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "FORMULA_PA",
    "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
-   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor anterior: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
+   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
   },
   {
    "start": "2026-10-02T06:35:00Z",
@@ -2825,6 +2828,19 @@ window.PFA_DATA = {
    "evidence": "Auditoría 2/2 OK: archivo local existe; Drive lista el archivo compartido con el mismo tamaño (12784 bytes)"
   },
   {
+   "start": "2026-10-02T05:16:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-23",
+   "attempt": 3,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Oscar confirmó la prueba de Listo para Codex",
+   "evidence": "Issue #12: Oscar confirmó la prueba de copiado."
+  },
+  {
    "start": "2026-10-02T05:07:00Z",
    "minutes": 3,
    "account": "personal",
@@ -2848,7 +2864,7 @@ window.PFA_DATA = {
    "kind": "prod",
    "category": "DOCUMENTACION",
    "summary": "Oscar confirmó que completó la validación visual",
-   "evidence": "Issue #11, creado por OscarMarquez83: completado, todo luce bien, cierra esto.2026-10-02 05:16,2026-10-02 05:16,0,personal,T,T-23,3,HECHA,OTRO,Oscar confirmó la prueba de Listo para Codex\""
+   "evidence": "Issue #11: Oscar confirmó la validación visual de la app."
   },
   {
    "start": "2026-10-02T05:02:00Z",
@@ -3255,7 +3271,7 @@ window.PFA_DATA = {
   },
   {
    "start": "2026-10-02T02:33:00Z",
-   "minutes": 303,
+   "minutes": 3,
    "account": "empresa",
    "entrega": "E2",
    "task": "E2-04",
