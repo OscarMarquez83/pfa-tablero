@@ -1,18 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T10:52:15.712961Z",
+ "generatedUtc": "2026-10-02T10:58:17.527401Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:47 UTC",
+  "updated": "2026-10-02 10:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Reanudar E2-04 cuando Studio permita editar; instrumentar Monitor y medir Scan folders sin invalidar la sesión que tiene el control.",
+  "nextAction": "Ejecutar E2-04 con Studio editable: instrumentar OnSelect, medir un clic y aplicar solo la corrección del caso observado.",
   "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-02T06:47:27.573789Z",
+  "current": [
+   "E2-04, intento 16 iniciado 2026-10-02 10:54 UTC: experimento único en Monitor con Notify y FirstError; aplicar solo el caso medido y continuar hasta la evidencia publicada.",
+   "Tanda nueva: restan 48 minutos efectivos; el intento 15 consumió 12 de los 60 concedidos. Inventario previo: un flow objetivo en My flows y Solutions, vinculado In your app.",
+   "Studio: una pestaña de Edge externo, estado Editing. Aún no hay cambios en la app."
+  ],
+  "fileUtc": "2026-10-02T10:54:04.964633Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
