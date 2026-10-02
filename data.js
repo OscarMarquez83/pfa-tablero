@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T21:28:15.866366Z",
+ "generatedUtc": "2026-10-02T21:37:15.458206Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,20 +9,16 @@ window.PFA_DATA = {
   "updated": "2026-10-02 19:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [
-   {
-    "ref": "",
-    "text": "E2-05 (Claude): iniciar sesión en Power Apps Studio con Oscar.Marquez@Puffer.com en el navegador integrado de Claude; la sesión venció por la frecuencia de inicio de sesión de Puffer (AADSTS70044). Al responder: abro Configuration en Studio y construyo la pantalla (D-045)."
-   }
-  ],
+  "needsOscar": [],
   "blockers": [],
   "current": [
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
    "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página).",
    "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC.",
-   "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial."
+   "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial.",
+   "Avance (Claude, D-045): Configuration.OnVisible carga colFolders y colProjects. La galería de carpetas nuevas tiene Items, TemplateSize, X, Y, Width y Height. Ya se cambiaron la etiqueta de ruta (Text, Tooltip, Width, X, Y, Height), el botón Project (OnSelect, Text, posición) y el botón Part of parent project (OnSelect, DisplayMode, Text, posición, colores). App checker: 0 errores en Configuration. Lección: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo; para borrar usar Ctrl+End, Ctrl+Shift+Home y Delete, y revisar cada propiedad con View code antes de guardar. Falta: botón Not a project (insertarlo en la galería), títulos, estados vacíos, OnSelect de Scan con D-042, sección Reviewed folders, quitar controles viejos, revisar con View code, pruebas, publicar y cerrar. Cierre de Studio: GUARDAR (Studio autoguarda; la versión 161 publicada sigue Live)."
   ],
-  "fileUtc": "2026-10-02T21:21:31.524606Z",
+  "fileUtc": "2026-10-02T21:30:39.522699Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
@@ -34,21 +30,21 @@ window.PFA_DATA = {
  },
  "revision": {
   "light": "AMARILLO",
-  "reason": "E2-02 registra 97 minutos efectivos frente a 90; T-06 acumula 3 SIN_AVANCE. Los incidentes INC-11 e INC-12 están atendidos y ya no mantienen el rojo.",
-  "date": "2026-10-02 13:33 UTC",
-  "dateIso": "2026-10-02T13:33:00Z",
+  "reason": "persisten alertas históricas de tiempo y T-06 con 3 SIN_AVANCE; hubo tareas Hecha en 24 h. INC-13 está atendido y no mantiene rojo.",
+  "date": "2026-10-02 21:33 UTC",
+  "dateIso": "2026-10-02T21:33:00Z",
   "summary": [
-   "E0 y E1 aceptadas; E2 conserva 3/11 Hecha. Claude trabaja E2-04 con extensión aprobada D-040.",
-   "STATUS documenta 25 carpetas nuevas y luego 0 nuevas en preview; faltan prueba publicada y auditoría visual. Oscar tiene pendiente el consentimiento de sus conexiones.",
-   "INC-12 corregido: espera de 3 minutos y T-23 separado. No se detectan incumplimientos nuevos respecto de la revisión anterior."
+   "E2-04 Hecha, validada por Oscar: 24 carpetas, 3 nuevas de prueba, sin duplicados; E2 llega a 4/11.",
+   "Claude trabaja E2-05; YAML preparado, bloqueo de portapapeles y restauración registrados, excepción D-045 aprobada. No hay solicitud activa para Oscar.",
+   "INC-13 atendido: los 20 minutos de D-039 no fueron aprobados. D-040 asigna 60 minutos a Claude; no autoriza retroactivamente el tiempo de Codex."
   ],
   "sections": [
    {
     "title": "Resumen en 3 líneas",
     "lines": [
-     "E0 y E1 aceptadas; E2 conserva 3/11 Hecha. Claude trabaja E2-04 con extensión aprobada D-040.",
-     "STATUS documenta 25 carpetas nuevas y luego 0 nuevas en preview; faltan prueba publicada y auditoría visual. Oscar tiene pendiente el consentimiento de sus conexiones.",
-     "INC-12 corregido: espera de 3 minutos y T-23 separado. No se detectan incumplimientos nuevos respecto de la revisión anterior."
+     "E2-04 Hecha, validada por Oscar: 24 carpetas, 3 nuevas de prueba, sin duplicados; E2 llega a 4/11.",
+     "Claude trabaja E2-05; YAML preparado, bloqueo de portapapeles y restauración registrados, excepción D-045 aprobada. No hay solicitud activa para Oscar.",
+     "INC-13 atendido: los 20 minutos de D-039 no fueron aprobados. D-040 asigna 60 minutos a Claude; no autoriza retroactivamente el tiempo de Codex."
     ]
    },
    {
@@ -56,16 +52,16 @@ window.PFA_DATA = {
     "lines": [
      "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
      "|---|---:|---:|---:|",
-     "| Últimas 24 horas | 6.683333 (401 min) | 77.306733 | 1.366667 (82 min) |",
-     "| Desde 2026-09-30 | 14.166667 (850 min) | 85.176471 | 1.666667 (100 min) |",
-     "Total incluye ESPERA; efectivo la excluye. Productivo = HECHA + AVANCE. Sin avance = SIN_AVANCE + BLOQUEADA. Filtro por inicio, sin prorrateo; cifras redondeadas a 6 decimales. El intento abierto de Claude aún no figura en worklog.",
+     "| Últimas 24 horas | 6.166667 (370 min) | 67.837838 | 1.2 |",
+     "| Desde 2026-09-30 | 16.483333 (989 min) | 83.215369 | 1.666667 |",
+     "Total incluye ESPERA; efectivo la excluye. Productivo = HECHA + AVANCE. Sin avance = SIN_AVANCE + BLOQUEADA. Filtro por inicio sin prorrateo; redondeo a 6 decimales. E2-05 tiene intento abierto sin cierre en worklog; su tiempo actual aún no integra los totales.",
      "### Tiempo por entrega",
      "| ID | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
      "|---|---:|---:|---:|---:|",
      "| E0 | 0 | 0 | 3 | 3 |",
      "| E1 | 0 | 0 | 274 | 270 |",
-     "| E2 | 250 | 241 | 276 | 262 |",
-     "| T | 151 | 151 | 297 | 289 |",
+     "| E2 | 268 | 221 | 359 | 305 |",
+     "| T | 102 | 102 | 353 | 345 |",
      "### Tiempo por tarea",
      "| ID | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
      "|---|---:|---:|---:|---:|",
@@ -85,9 +81,9 @@ window.PFA_DATA = {
      "| E1-09 | 0 | 0 | 0 | 0 |",
      "| E1-10 | 0 | 0 | 14 | 14 |",
      "| E2-01 | 0 | 0 | 7 | 2 |",
-     "| E2-02 | 80 | 78 | 99 | 97 |",
+     "| E2-02 | 15 | 15 | 99 | 97 |",
      "| E2-03 | 2 | 2 | 2 | 2 |",
-     "| E2-04 | 166 | 159 | 166 | 159 |",
+     "| E2-04 | 249 | 202 | 249 | 202 |",
      "| E2-11 | 2 | 2 | 2 | 2 |",
      "| HZ-01 | 0 | 0 | 0 | 0 |",
      "| HZ-03 | 0 | 0 | 0 | 0 |",
@@ -113,21 +109,23 @@ window.PFA_DATA = {
      "| T-11 | 0 | 0 | 2 | 2 |",
      "| T-12 | 2 | 2 | 20 | 20 |",
      "| T-13 | 0 | 0 | 6 | 6 |",
-     "| T-14 | 6 | 6 | 6 | 6 |",
-     "| T-15 | 23 | 23 | 23 | 23 |",
-     "| T-16 | 46 | 46 | 46 | 46 |",
-     "| T-17 | 11 | 11 | 11 | 11 |",
-     "| T-18 | 1 | 1 | 1 | 1 |",
-     "| T-19 | 9 | 9 | 9 | 9 |",
-     "| T-20 | 1 | 1 | 1 | 1 |",
-     "| T-21 | 8 | 8 | 8 | 8 |",
+     "| T-14 | 0 | 0 | 6 | 6 |",
+     "| T-15 | 0 | 0 | 23 | 23 |",
+     "| T-16 | 0 | 0 | 46 | 46 |",
+     "| T-17 | 0 | 0 | 11 | 11 |",
+     "| T-18 | 0 | 0 | 1 | 1 |",
+     "| T-19 | 0 | 0 | 9 | 9 |",
+     "| T-20 | 0 | 0 | 1 | 1 |",
+     "| T-21 | 0 | 0 | 8 | 8 |",
      "| T-22 | 8 | 8 | 8 | 8 |",
      "| T-23 | 6 | 6 | 6 | 6 |",
      "| T-24 | 2 | 2 | 2 | 2 |",
      "| T-25 | 11 | 11 | 11 | 11 |",
      "| T-26 | 2 | 2 | 2 | 2 |",
      "| T-27 | 10 | 10 | 10 | 10 |",
-     "| T-28 | 5 | 5 | 5 | 5 |"
+     "| T-28 | 5 | 5 | 5 | 5 |",
+     "| T-29 | 9 | 9 | 9 | 9 |",
+     "| T-30 | 47 | 47 | 47 | 47 |"
     ]
    },
    {
@@ -137,8 +135,10 @@ window.PFA_DATA = {
      "|---|---:|",
      "| E0 | 9 / 9 |",
      "| E1 | 10 / 10 |",
-     "| E2 | 3 / 11 |",
-     "| T | 26 / 27 |"
+     "| E2 | 4 / 11 |",
+     "| E3 | 0 / 8 |",
+     "| T | 28 / 29 |",
+     "T incluye T-11 Cancelada en el denominador; STATUS muestra 28/28 sin esa tarea."
     ]
    },
    {
@@ -146,19 +146,20 @@ window.PFA_DATA = {
     "lines": [
      "| Tarea | Motivo | Intentos | Minutos / límite |",
      "|---|---|---:|---:|",
-     "| E2-02 | Exceso efectivo; cerrada y desviación atendida INC-08 | 12 | 97 / 90 (PLAN: 96) |",
-     "| E1-05 | Exceso histórico; aceptada, INC-11 atendido |  — | 143 / 60 |",
-     "| T-01 | Exceso histórico | — | 41 / 30 |",
-     "| T-06 | 3 registros SIN_AVANCE históricos; actualmente Hecha | 4 | 5 / 30 |",
-     "E2-04: worklog suma 159 minutos efectivos; PLAN indica 158, límite vigente 230. Último intento cerrado a las 7:21 a. m. Central; Claude mantiene actividad en STATUS. No hay tarea En curso sin registro durante 12 h ni Bloqueada/Por validar durante 24 h. E2-04 tiene 2 SIN_AVANCE literales; los BLOQUEADA no se suman al umbral de intentos."
+     "| T-01 | Exceso histórico de tiempo | 7 | 41 / 30 |",
+     "| T-06 | 3 SIN_AVANCE históricos; actualmente Hecha | 4 | 5 / 30 |",
+     "| E2-02 | Exceso; INC-08 atendido | 12 | 97 / 90 (PLAN: 96) |",
+     "| E1-05 | Exceso; INC-11 atendido, entrega aceptada | 7 | 143 / 60 |",
+     "| E2-04 Codex | 159 efectivos frente a 90 +60 autorizados; INC-13 atendido | 18 | 159 / 150 |",
+     "E2-04 Claude registra 43 efectivos frente a 60 asignados; total 202. E2-05 comenzó a las 3:10 p. m. Central y mantiene avance en STATUS: no se cumple la alerta de 12 h sin worklog. No hay Bloqueada o Por validar de más de 24 h. E2-04 tiene 2 SIN_AVANCE literales."
     ]
    },
    {
     "title": "Problemas más frecuentes (sin avance, por categoría)",
     "lines": [
-     "| Periodo | Categoría | Minutos | Intentos |",
+     "| Periodo | Categoría | Minutos | Registros |",
      "|---|---|---:|---:|",
-     "| 24 h | CONECTOR | 59 | 5 |",
+     "| 24 h | CONECTOR | 49 | 4 |",
      "| 24 h | FORMULA_PA | 18 | 3 |",
      "| 24 h | DOCUMENTACION | 5 | 1 |",
      "| Acumulado | CONECTOR | 74 | 7 |",
@@ -173,48 +174,48 @@ window.PFA_DATA = {
     "lines": [
      "| Categoría | Minutos | Registros |",
      "|---|---:|---:|",
-     "| AUTH | 2 | 2 |",
-     "| NAVEGADOR | 7 | 5 |"
+     "| NAVEGADOR | 7 | 5 |",
+     "| PERMISOS | 40 | 2 |"
     ]
    },
    {
     "title": "Incumplimientos de AGENTS.md",
     "lines": [
      "### Nuevos",
-     "Ninguno identificado. Huellas Desarrollo y Entorno coinciden con AGENTS.md: 31977571. Los cambios de T-27/T-28 y E2-04 están respaldados por tareas y decisiones. La reorganización histórica autorizada T-08 no se cuenta como nueva edición de archivo congelado.",
+     "Ninguno adicional identificado. INC-13 fue detectado y atendido por Oscar y Claude después del informe anterior; conserva su ID. La revisión anterior trató D-039 como aprobación: queda corregida esa interpretación conforme al registro de Oscar.",
+     "Huella vigente FE84A01D, coincide con STATUS. D-043 reemplaza las huellas por línea por una lectura con agente y hora. El revisor leyó AGENTS.md vigente y no modifica STATUS por su alcance restringido.",
+     "D-045 permite a Claude escribir propiedades desde el YAML debido al portapapeles denegado; ese procedimiento autorizado no se cuenta como incumplimiento. T-29/T-30 respaldan cambios del tablero y reglas. Git de 36 h no muestra nuevas modificaciones del archivo congelado ni nuevas rutas ajenas al trabajo aprobado.",
      "### Atendidos",
-     "INC-12 listo para cerrar: Import-Csv confirma 128 registros actuales; E2-04 intento 6 = 3 minutos ESPERA y T-23 intento 3 tiene fila propia. La cifra anterior de 126 corresponde a un corte anterior.",
-     "INC-07 listo para cerrar: auditoría previa y aceptación de E1 registradas. INC-08/09/10 atendidos, cierre de E2-02 y recuperación registrados. INC-11 atendido: se preserva la aceptación y se documenta la prevención KF-P10.",
-     "INC-02 a INC-06 ya Cerrado. INC-01 sigue Abierto: HZ-09 heredado a E2; no se acredita aún corrección visual en la app publicada.",
+     "INC-12 listo para cerrar: espera de 3 minutos y T-23 independiente conservados en Import-Csv. INC-07 listo para cerrar por auditoría y aceptación de E1. INC-08/09/10 atendidos con cierre y registros previos. INC-11 atendido; aceptación preservada. INC-13 atendido: D-039 corregida, límite separado por agente y KF-P12 registrados.",
+     "INC-01 listo para cerrar en su acción original: se detuvo el cambio fuera de E1, quedó heredado a E2 y Configuration ya tiene prueba publicada aceptada. El recorte visual de HZ-09 debe comprobarse con el nuevo diseño E2-05. INC-02 a INC-06 Cerrado.",
      "### Sin respuesta",
-     "No hay incumplimiento nuevo sin respuesta. INC-01 conserva acción registrada; no se vuelve a contar como nuevo."
+     "Ninguno nuevo sin respuesta. INC-01 conserva estado Abierto en el registro; el constructor realiza su cierre."
     ]
    },
    {
     "title": "Hallazgos sin heredar",
     "lines": [
-     "HZ-09 sigue Asignado a E2 sin tarea explícita de cierre del recorte visual; debe enlazarse y comprobarse al cerrar Configuration. HZ-07 sigue Asignado a T sin tarea vinculada y requiere traslado conforme a T-27. No hay Por decidir de más de 48 h. HZ-11/12/13/14/19 están incorporados a tareas."
+     "HZ-20 asignado a E2-05 con D-042: marcar carpetas ausentes de Outlook y ocultarlas de nuevas, conservando filas. HZ-09 sigue Asignado a E2 sin enlace explícito al criterio visual de E2-05. HZ-07 sigue Asignado a T sin tarea propia; corresponde migrarlo conforme a T-27. No hay Por decidir de más de 48 h."
     ]
    },
    {
     "title": "Oscar tiene que decidir o hacer",
     "lines": [
-     "E2-04 (Claude): autorizar que el agente acepte el consentimiento de Office 365 Outlook y SharePoint de la app publicada, o aceptarlo personalmente. Al responder: Claude repite el escaneo publicado y termina las pruebas visuales.",
+     "La sección Necesito de Oscar está vacía. El consentimiento y la validación pendientes de E2-04 ya fueron resueltos según STATUS.",
      "Issues: no verificados en esta corrida.",
-     "gh no pudo ejecutarse por acceso denegado. El constructor procesa los issues al empezar su sesión."
+     "gh.exe falló por acceso denegado; el constructor procesa los issues al empezar su sesión. STATUS registra issue #13 cerrado, sin verificación independiente de GitHub."
     ]
    },
    {
-    "title": "Alcance y límites de la evidencia",
+    "title": "Alcance y límites",
     "lines": [
-     "Revisión documental: control, YAML y git de 36 h. No se abrieron servicios Microsoft. Los resultados de preview, guardado y publicación proceden de STATUS; no constituyen comprobación independiente de la app publicada. D-041 autoriza ajustar las cuatro columnas obligatorias; se conserva la tarea abierta. Hay cambios del constructor sin commit en DECISIONS, PLAN, STATUS y YAML, dentro de un intento activo; no se consideran sesión cerrada sin commit. Se preservan.",
-     "Persisten diferencias menores PLAN/worklog (E2-02 96/97, E2-04 158/159) y texto histórico en STATUS; se informan sin corregir. No se ejecutó suite antigua ni validación del producto."
+     "Revisión documental de control, decisiones, YAML y git; no se abrieron Power Apps, Power Automate ni SharePoint. Resultados de app y flow proceden del registro del constructor y de la aceptación de Oscar. La prueba de conservar una fila decidida se trasladó explícitamente a E2-09; no se da por ejecutada en E2-04. E2-05 permanece abierta y la restauración de versión está documentada; no se declara el nuevo diseño probado ni publicado. Se preserva el cambio activo de STATUS sin commit."
     ]
    },
    {
     "title": "Publicación",
     "lines": [
-     "El publicador se ejecutó una vez: regeneró dashboard/data.js con 128 registros y 65 tareas, pero falló por acceso denegado a C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. Publicación remota no confirmada. No se reintentó; Windows lo publicará en máximo 15 minutos según la instrucción de esta corrida."
+     "Publicador ejecutado una vez: dashboard/data.js regenerado (137 registros, 67 tareas). Falló por acceso denegado a C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. Publicación remota no confirmada. No se reintentó; Windows lo publicará en máximo 15 minutos según la instrucción de esta corrida."
     ]
    }
   ]
