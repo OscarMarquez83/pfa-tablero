@@ -1,15 +1,19 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:11:05.456403Z",
+ "generatedUtc": "2026-10-02T04:17:14.608457Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:06 UTC",
+  "updated": "2026-10-02 04:14 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "completar T-22: columna Cierre, hallazgos HZ-01 a HZ-13 y build del tablero. T-23 queda Por validar; E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
+  "nextAction": "esperar las pruebas visuales T-22 y T-23; después seguir con T-24. E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
   "needsOscar": [
+   {
+    "ref": "T-22",
+    "text": "revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
+   },
    {
     "ref": "T-23",
     "text": "revisa Listo para Codex a 1366 px y 390 px; comprueba que el mensaje copiado empieza por $cerrar-pendientes y que cerrar y seguir termina con la frase prevista. Responde T-23 OK o indica el cambio. Al responder: actualizo T-23 según el resultado y sigo con T-24."
@@ -17,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-22, intento 1 iniciado 2026-10-02 04:06 UTC: completar cierres de HZ-01..13 basados en registros, corregir HZ-12 y T-21 y comprobar el build.",
+   "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
    "T-23, intento 2: iniciado 2026-10-02 03:59 UTC y cerrado 2026-10-02 04:04 como AVANCE. Pages muestra Listo para Codex con dos puntos en Entorno; ambos botones muestran Copiado. PFA Despertador figura PAUSED. Vista comprobada a 1265 px; faltan 1366/390 px y el ciclo completo en el chat.",
    "T-23, intento 1: iniciado 2026-10-02 03:52 UTC y cerrado 2026-10-02 03:54 como AVANCE. Skill copiada con hash idéntico al origen; parche aprobado aplicado (hash CRLF esperado); AGENTS.md actualizado y T-11 cancelada como reemplazada. python tools/build_dashboard.py terminó correctamente. Publisher falló al escribir publish.log (acceso denegado); consulta directa a Pages falló por SSL. No se verificaron interacciones ni tamaños 1366/390 px.",
    "E2-04, intento 11 iniciado 2026-10-02 03:42 UTC y cerrado 03:45 como ESPERA/NAVEGADOR. Studio integrado muestra la app en solo lectura porque otra sesión tiene el control; Edge no respondió en dos intentos. No usé Invalidar ni cambié la app. Reanudar cuando Studio permita editar.",
@@ -28,12 +32,12 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:06:42.981449Z",
+  "fileUtc": "2026-10-02T04:15:24.779816Z",
   "ruleFootprints": {
    "current": "AB72D313",
    "lines": {
-    "Desarrollo": "A4E37120",
-    "Entorno": "A4E37120"
+    "Desarrollo": "AB72D313",
+    "Entorno": "AB72D313"
    }
   }
  },
@@ -388,10 +392,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 243,
+    "prod": 251,
     "unprod": 2,
     "wait": 8,
-    "total": 253
+    "total": 261
    }
   }
  ],
@@ -1315,12 +1319,12 @@ window.PFA_DATA = {
     "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
     "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
     "limit": 30,
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-02T04:14:00Z",
     "ready": true
    },
    {
@@ -2246,22 +2250,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 623,
+   "prod": 631,
    "unprod": 82,
    "wait": 326,
-   "total": 1031
+   "total": 1039
   },
   "last24h": {
-   "prod": 362,
+   "prod": 370,
    "unprod": 80,
    "wait": 320,
-   "total": 762
+   "total": 770
   },
   "last7d": {
-   "prod": 623,
+   "prod": 631,
    "unprod": 82,
    "wait": 326,
-   "total": 1031
+   "total": 1039
   },
   "product": {
    "prod": 380,
@@ -2270,10 +2274,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 243,
+   "prod": 251,
    "unprod": 2,
    "wait": 8,
-   "total": 253
+   "total": 261
   }
  },
  "days": [
@@ -2357,7 +2361,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 51,
+   "prod": 59,
    "unprod": 54,
    "wait": 307
   }
@@ -2473,7 +2477,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 689
+   "minutes": 697
   },
   {
    "account": "empresa",
@@ -2481,6 +2485,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T04:06:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-22",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Agregué Cierre a HZ-01..13, corregí estados y referencia de T-21",
+   "evidence": "Build correcto; data.js en GitHub actualizado 04:11; Pages muestra una copia anterior en caché; falta revisión visual a 1366/390 px"
+  },
   {
    "start": "2026-10-02T03:52:00Z",
    "minutes": 2,
@@ -2597,22 +2614,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Learn indica actualizar el vínculo desde Refresh; Power Apps siguió sin reconocer foldersJson.",
    "evidence": "Auditoría 0/3 OK: el run devuelve 25 elementos; botón sin ejecutar ni filas escritas. Copilot recomendó quitar flow, guardar, cerrar y reabrir antes de agregarlo. Learn: https://learn.microsoft.com/fil-ph/power-apps/maker/canvas-apps/working-with-flows. Guardar al recrear Respond falló por referencia de conexión; Undo restauró la acción publicada."
-  },
-  {
-   "start": "2026-10-02T01:38:00Z",
-   "minutes": 6,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Ruta A: agregué Parse JSON y definí el esquema; el diseñador no lo registra al guardar",
-   "evidence": "Auditoría: el esquema aparece en pantalla; al guardar informa Schema is required. Sin Flow Checker válido ni run. Captura del estado en esta conversación"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T04:06:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-22",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Agregué Cierre a HZ-01..13, corregí estados y referencia de T-21",
+   "evidence": "Build correcto; data.js en GitHub actualizado 04:11; Pages muestra una copia anterior en caché; falta revisión visual a 1366/390 px"
+  },
   {
    "start": "2026-10-02T03:52:00Z",
    "minutes": 2,
@@ -3852,7 +3869,7 @@ window.PFA_DATA = {
    "text": "El flujo antiguo PFA_InventoryMailFolders no lee Outlook: solo cuenta filas de PFA_MailFolders",
    "found": "Revisión de Claude",
    "target": "E2",
-   "status": "Incorporado en E2-02 (flujo nuevo)",
+   "status": "Incorporado en E2-02",
    "closure": "2026-10-01 · DECISIONS D-033 (issue #6) · Oscar confirma escaneo manual: el flow lee Outlook y devuelve JSON; la app guarda las carpetas nuevas."
   },
   {
