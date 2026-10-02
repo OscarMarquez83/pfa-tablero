@@ -1,18 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T11:49:24.861319Z",
+ "generatedUtc": "2026-10-02T11:56:32.471292Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 11:45 UTC",
+  "updated": "2026-10-02 11:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "En E2-04, aislar el disparo del flow con fórmula temporal sin ParseJSON; comprobar en Live Monitor si se ejecuta o devuelve FirstError. No guardar la fórmula de prueba.",
-  "needsOscar": [],
+  "nextAction": "Esperar el inicio de sesión de Oscar en la pestaña Claude abierta; enviar el informe para segunda opinión y aplicar el plan resultante.",
+  "needsOscar": [
+   {
+    "ref": "E2-04",
+    "text": "informe listo en Drive para revisarlo con Claude; inicia sesión en la pestaña de Claude abierta. Al responder: envío el informe y aplico el plan que salga de esa revisión."
+   }
+  ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T11:45:18.760963Z",
+  "fileUtc": "2026-10-02T11:54:45.221482Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -240,10 +245,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 159,
-    "unprod": 87,
+    "prod": 152,
+    "unprod": 98,
     "wait": 14,
-    "total": 260
+    "total": 264
    }
   },
   {
@@ -735,12 +740,12 @@ window.PFA_DATA = {
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
     "limit": 150,
-    "status": "Reabierta",
+    "status": "Bloqueada",
     "attempts": 17,
-    "minutes": 143,
+    "minutes": 147,
     "entrega": "E2",
-    "fails": 6,
-    "lastActivity": "2026-10-02T11:45:00Z",
+    "fails": 7,
+    "lastActivity": "2026-10-02T11:49:00Z",
     "ready": true
    },
    {
@@ -1394,22 +1399,7 @@ window.PFA_DATA = {
    }
   ]
  },
- "nextTask": {
-  "id": "E2-04",
-  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
-  "owner": "Agente",
-  "depends": "E2-03",
-  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
-  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-  "limit": 150,
-  "status": "Reabierta",
-  "attempts": 17,
-  "minutes": 143,
-  "entrega": "E2",
-  "fails": 6,
-  "lastActivity": "2026-10-02T11:45:00Z",
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E2-04",
@@ -1419,12 +1409,12 @@ window.PFA_DATA = {
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
    "limit": 150,
-   "status": "Reabierta",
+   "status": "Bloqueada",
    "attempts": 17,
-   "minutes": 143,
+   "minutes": 147,
    "entrega": "E2",
-   "fails": 6,
-   "lastActivity": "2026-10-02T11:45:00Z",
+   "fails": 7,
+   "lastActivity": "2026-10-02T11:49:00Z",
    "ready": true
   },
   {
@@ -2377,8 +2367,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (17 intentos previos)",
-   "level": "serious"
+   "reason": "Bloqueada: espera decisión de Oscar",
+   "level": "critical"
   }
  ],
  "kpi": {
@@ -2387,28 +2377,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 719,
-   "unprod": 89,
+   "prod": 712,
+   "unprod": 100,
    "wait": 26,
-   "total": 834
+   "total": 838
   },
   "last24h": {
-   "prod": 308,
-   "unprod": 71,
+   "prod": 301,
+   "unprod": 82,
    "wait": 9,
-   "total": 388
+   "total": 392
   },
   "last7d": {
-   "prod": 719,
-   "unprod": 89,
+   "prod": 712,
+   "unprod": 100,
    "wait": 26,
-   "total": 834
+   "total": 838
   },
   "product": {
-   "prod": 432,
-   "unprod": 87,
+   "prod": 425,
+   "unprod": 98,
    "wait": 18,
-   "total": 537
+   "total": 541
   },
   "support": {
    "prod": 287,
@@ -2498,8 +2488,8 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 147,
-   "unprod": 61,
+   "prod": 140,
+   "unprod": 72,
    "wait": 7
   }
  ],
@@ -2511,8 +2501,8 @@ window.PFA_DATA = {
   },
   {
    "category": "FORMULA_PA",
-   "minutes": 7,
-   "attempts": 2
+   "minutes": 18,
+   "attempts": 3
   },
   {
    "category": "DOCUMENTACION",
@@ -2547,10 +2537,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 86,
-   "unprod": 57,
+   "prod": 79,
+   "unprod": 68,
    "wait": 7,
-   "total": 150
+   "total": 154
   },
   {
    "task": "E1-05",
@@ -2619,7 +2609,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 792
+   "minutes": 796
   },
   {
    "account": "empresa",
@@ -2629,16 +2619,16 @@ window.PFA_DATA = {
  "recent": [
   {
    "start": "2026-10-02T11:38:00Z",
-   "minutes": 7,
+   "minutes": 11,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
    "attempt": 17,
-   "result": "AVANCE",
-   "kind": "prod",
+   "result": "BLOQUEADA",
+   "kind": "unprod",
    "category": "FORMULA_PA",
-   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow",
-   "evidence": "Auditoría 1/7; My flows 1/21, Solutions 1/13; In your app; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
+   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow al agotarse 60 min de diagnóstico",
+   "evidence": "Auditoría 1/7; My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado ID 9537076d-e215-4f09-8490-fd292a7d9d7b; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
   },
   {
    "start": "2026-10-02T10:54:00Z",
@@ -2761,16 +2751,16 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-02T11:38:00Z",
-   "minutes": 7,
+   "minutes": 11,
    "account": "personal",
    "entrega": "E2",
    "task": "E2-04",
    "attempt": 17,
-   "result": "AVANCE",
-   "kind": "prod",
+   "result": "BLOQUEADA",
+   "kind": "unprod",
    "category": "FORMULA_PA",
-   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow",
-   "evidence": "Auditoría 1/7; My flows 1/21, Solutions 1/13; In your app; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
+   "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow al agotarse 60 min de diagnóstico",
+   "evidence": "Auditoría 1/7; My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado ID 9537076d-e215-4f09-8490-fd292a7d9d7b; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
   },
   {
    "start": "2026-10-02T10:54:00Z",
