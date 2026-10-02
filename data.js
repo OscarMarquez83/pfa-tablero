@@ -1,21 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T12:10:18.524674Z",
+ "generatedUtc": "2026-10-02T12:19:17.897954Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 12:09 UTC",
+  "updated": "2026-10-02 12:18 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar E2-04 y después continuar E2–E4 en orden; validar cada criterio en la app publicada.",
+  "nextAction": "Retomar las comprobaciones en la pestaña existente de Studio en Edge cuando vuelva a permitir inspección; identificar una corrección demostrable, medirla y completar la evidencia publicada de E2-04. Después seguir E2, E3 y E4 por dependencias.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "E2-04, intento 18; inicio 2026-10-02 12:09 UTC. Comprobar solo lectura los errores, el retorno de .Run() y el flow referenciado; aplicar únicamente la corrección demostrada, luego medir en la app publicada. Oscar pidió completar E2–E4, incluido este diagnóstico.",
-   "Avance 12:09 UTC: AGENTS, STATUS, PLAN activo, KNOWN-FIXES y skills revisados; hash Desarrollo 31977571; no hay issues abiertos de Oscar."
-  ],
-  "fileUtc": "2026-10-02T12:09:38.776070Z",
+  "current": [],
+  "fileUtc": "2026-10-02T12:18:34.461739Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
@@ -243,10 +240,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 152,
+    "prod": 161,
     "unprod": 98,
     "wait": 14,
-    "total": 264
+    "total": 273
    }
   },
   {
@@ -737,13 +734,13 @@ window.PFA_DATA = {
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-    "limit": 150,
+    "limit": 170,
     "status": "Bloqueada",
-    "attempts": 17,
-    "minutes": 147,
+    "attempts": 18,
+    "minutes": 156,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T11:49:00Z",
+    "lastActivity": "2026-10-02T12:18:00Z",
     "ready": true
    },
    {
@@ -1406,13 +1403,13 @@ window.PFA_DATA = {
    "depends": "E2-03",
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-   "limit": 150,
+   "limit": 170,
    "status": "Bloqueada",
-   "attempts": 17,
-   "minutes": 147,
+   "attempts": 18,
+   "minutes": 156,
    "entrega": "E2",
    "fails": 7,
-   "lastActivity": "2026-10-02T11:49:00Z",
+   "lastActivity": "2026-10-02T12:18:00Z",
    "ready": true
   },
   {
@@ -2375,28 +2372,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 712,
+   "prod": 721,
    "unprod": 100,
    "wait": 26,
-   "total": 838
+   "total": 847
   },
   "last24h": {
-   "prod": 301,
+   "prod": 310,
    "unprod": 82,
    "wait": 9,
-   "total": 392
+   "total": 401
   },
   "last7d": {
-   "prod": 712,
+   "prod": 721,
    "unprod": 100,
    "wait": 26,
-   "total": 838
+   "total": 847
   },
   "product": {
-   "prod": 425,
+   "prod": 434,
    "unprod": 98,
    "wait": 18,
-   "total": 541
+   "total": 550
   },
   "support": {
    "prod": 287,
@@ -2486,7 +2483,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 140,
+   "prod": 149,
    "unprod": 72,
    "wait": 7
   }
@@ -2535,10 +2532,10 @@ window.PFA_DATA = {
  "topTasks": [
   {
    "task": "E2-04",
-   "prod": 79,
+   "prod": 88,
    "unprod": 68,
    "wait": 7,
-   "total": 154
+   "total": 163
   },
   {
    "task": "E1-05",
@@ -2607,7 +2604,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 796
+   "minutes": 805
   },
   {
    "account": "empresa",
@@ -2615,6 +2612,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T12:09:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 18,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
+   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub conserva último commit del tablero a las 12:10 UTC; app sin cambios"
+  },
   {
    "start": "2026-10-02T11:38:00Z",
    "minutes": 11,
@@ -2731,22 +2741,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Oscar confirmó que completó la validación visual",
    "evidence": "Issue #11: Oscar confirmó la validación visual de la app."
-  },
-  {
-   "start": "2026-10-02T05:02:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 13,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "FORMULA_PA",
-   "summary": "En preview, Scan folders no disparó el flow",
-   "evidence": "Studio editable; app Saved (Unpublished); btnScanFolders.OnSelect contiene PFA_E2_LeerCarpetas.Run(); tras pulsar en preview, historial sin ejecución nueva, última 1 oct 21:04. Sin cambios ni publicación."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T12:09:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 18,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Extensión autorizada; informe operativo actualizado; Edge no permitió inspeccionar Studio",
+   "evidence": "Auditoría 1/7; informe local y Drive: 8612 bytes y operaciones verificadas por lectura; pestaña Studio listada pero el enlace CDP agotó tiempo; GitHub conserva último commit del tablero a las 12:10 UTC; app sin cambios"
+  },
   {
    "start": "2026-10-02T11:38:00Z",
    "minutes": 11,
