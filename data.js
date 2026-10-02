@@ -1,29 +1,24 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T19:07:15.614683Z",
+ "generatedUtc": "2026-10-02T19:13:25.826232Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 18:49 UTC",
+  "updated": "2026-10-02 19:11 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [
-   {
-    "ref": "",
-    "text": "KF-P11 (Claude): aprobar que se agregue a AGENTS.md, sección 5 (regla anti-bucle), esta línea: \"Antes del intento 2 de cualquier falla, aplica el método de KNOWN-FIXES KF-P11: seguir la evidencia, leer el contrato real en los dos extremos, reducir al mínimo y medir.\" Al responder: edito AGENTS.md, actualizo la huella y publico."
-   }
-  ],
+  "needsOscar": [],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-02T18:48:34.917059Z",
+  "fileUtc": "2026-10-02T19:11:15.487219Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
-    "hash": "2A22684D",
+    "hash": "FE84A01D",
     "agent": "Claude",
-    "utc": "2026-10-02T18:40:00Z"
+    "utc": "2026-10-02T19:07:00Z"
    }
   }
  },
@@ -397,15 +392,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 27,
-   "total": 28,
+   "done": 28,
+   "total": 29,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 296,
+    "prod": 306,
     "unprod": 2,
     "wait": 8,
-    "total": 306
+    "total": 316
    }
   }
  ],
@@ -419,12 +414,26 @@ window.PFA_DATA = {
     "expected": "Los cambios pendientes desde el 19-sep quedan guardados en git",
     "evidence": "Hash del commit anotado en worklog",
     "limit": 15,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": "2026-09-30T06:21:00Z"
+    "lastActivity": "2026-09-30T06:21:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 15,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-02",
@@ -434,12 +443,26 @@ window.PFA_DATA = {
     "expected": "Archivos instalados",
     "evidence": "git status limpio después del commit E0-02",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": "2026-09-30T06:22:00Z"
+    "lastActivity": "2026-09-30T06:22:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-03",
@@ -449,12 +472,26 @@ window.PFA_DATA = {
     "expected": "Nadie usa esos archivos como fuente vigente",
     "evidence": "Los 4 archivos empiezan con el aviso",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": "2026-09-30T06:23:00Z"
+    "lastActivity": "2026-09-30T06:23:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 1,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-04",
@@ -464,12 +501,28 @@ window.PFA_DATA = {
     "expected": "El registro de tiempo funciona",
     "evidence": "Import-Csv lee 3 filas sin error; resultado anotado en worklog. No requiere Excel ni validación de Oscar",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 2,
     "minutes": 1,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": "2026-09-30T06:40:00Z"
+    "lastActivity": "2026-09-30T06:40:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 2,
+      "minutes": 1,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-P05"
+    ]
    },
    {
     "id": "E0-05",
@@ -479,12 +532,26 @@ window.PFA_DATA = {
     "expected": "El revisor corre solo 2 veces al día",
     "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": ""
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-06",
@@ -494,12 +561,26 @@ window.PFA_DATA = {
     "expected": "El computador puede publicar en GitHub sin depender de la cuenta de ChatGPT",
     "evidence": "gh auth status muestra la cuenta de Oscar y gh auth setup-git termina correctamente",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 4,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": ""
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 4,
+      "minutes": 0,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-07",
@@ -509,12 +590,26 @@ window.PFA_DATA = {
     "expected": "Sitio del tablero creado",
     "evidence": "La URL de Pages responde (aunque esté vacía)",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": ""
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-08",
@@ -524,12 +619,26 @@ window.PFA_DATA = {
     "expected": "El tablero se publica solo cada hora",
     "evidence": "La URL muestra E0 con los datos actuales; Get-ScheduledTask -TaskName \"PFA Tablero\" existe y su última ejecución fue correcta",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": ""
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E0-09",
@@ -539,12 +648,26 @@ window.PFA_DATA = {
     "expected": "Oscar ve el tablero y responde desde él",
     "evidence": "El agente procesa el issue en la sesión siguiente; Oscar escribe \"E0 aceptada\"",
     "limit": 0,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
     "fails": 0,
-    "lastActivity": "2026-09-30T10:57:00Z"
+    "lastActivity": "2026-09-30T10:57:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 1,
+      "limit": 0,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    }
   ],
   "E1": [
@@ -556,12 +679,26 @@ window.PFA_DATA = {
     "expected": "Referencia visual guardada como código",
     "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 10,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T11:28:00Z"
+    "lastActivity": "2026-09-30T11:28:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 10,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-02",
@@ -571,12 +708,26 @@ window.PFA_DATA = {
     "expected": "Tema alineado con la referencia",
     "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 6,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T11:34:00Z"
+    "lastActivity": "2026-09-30T11:34:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 6,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-03",
@@ -586,12 +737,26 @@ window.PFA_DATA = {
     "expected": "Tema y menú disponibles en toda la app",
     "evidence": "\"No formula errors\"; app guardada",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 2,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T11:42:00Z"
+    "lastActivity": "2026-09-30T11:42:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-04",
@@ -601,12 +766,26 @@ window.PFA_DATA = {
     "expected": "Plantilla funcionando",
     "evidence": "Vista previa de scrPlantilla igual al estándar, en escritorio y teléfono",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 13,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T11:55:00Z"
+    "lastActivity": "2026-09-30T11:55:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 13,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-05",
@@ -616,12 +795,30 @@ window.PFA_DATA = {
     "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
     "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 7,
     "minutes": 143,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-10-01T06:29:00Z"
+    "lastActivity": "2026-10-01T06:29:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 7,
+      "minutes": 143,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-P03",
+     "KF-P07",
+     "KF-P10"
+    ]
    },
    {
     "id": "E1-06",
@@ -631,12 +828,28 @@ window.PFA_DATA = {
     "expected": "5 pantallas con el estándar",
     "evidence": "Vista previa correcta",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 24,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T12:52:00Z"
+    "lastActivity": "2026-09-30T12:52:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 24,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-09"
+    ]
    },
    {
     "id": "E1-07",
@@ -646,12 +859,29 @@ window.PFA_DATA = {
     "expected": "7 pantallas con el estándar",
     "evidence": "Vista previa correcta; scrPlantilla eliminada",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 2,
     "minutes": 29,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-09-30T13:21:00Z"
+    "lastActivity": "2026-09-30T13:21:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 2,
+      "minutes": 29,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-09",
+     "KF-P07"
+    ]
    },
    {
     "id": "E1-08",
@@ -661,12 +891,26 @@ window.PFA_DATA = {
     "expected": "Versión publicada y pantallas adaptadas",
     "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
     "limit": 45,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 3,
     "minutes": 29,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-10-01T01:24:00Z"
+    "lastActivity": "2026-10-01T01:24:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 3,
+      "minutes": 29,
+      "limit": 45,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-09",
@@ -676,12 +920,26 @@ window.PFA_DATA = {
     "expected": "Oscar acepta el estándar visual y la navegación vertical",
     "evidence": "Oscar confirma que revisó las 7 pantallas y acepta E1",
     "limit": 0,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-10-01T11:07:00Z"
+    "lastActivity": "2026-10-01T11:07:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 0,
+      "limit": 0,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E1-10",
@@ -691,12 +949,26 @@ window.PFA_DATA = {
     "expected": "Navegación usable sin barra horizontal en formato vertical",
     "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 14,
     "entrega": "E1",
     "fails": 0,
-    "lastActivity": "2026-10-01T01:39:00Z"
+    "lastActivity": "2026-10-01T01:39:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 14,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    }
   ],
   "E2": [
@@ -708,12 +980,28 @@ window.PFA_DATA = {
     "expected": "Listas listas para carpetas y proyectos",
     "evidence": "Tabla de columnas y cambios en worklog",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 3,
     "minutes": 2,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "2026-10-01T11:25:00Z"
+    "lastActivity": "2026-10-01T11:25:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 3,
+      "minutes": 2,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-17"
+    ]
    },
    {
     "id": "E2-02",
@@ -723,12 +1011,30 @@ window.PFA_DATA = {
     "expected": "La app puede pedir al flow las carpetas",
     "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {
+      "Codex": 30
+     },
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 12,
     "minutes": 97,
     "entrega": "E2",
     "fails": 5,
-    "lastActivity": "2026-10-02T00:44:00Z"
+    "lastActivity": "2026-10-02T00:44:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 12,
+      "minutes": 97,
+      "limit": 90,
+      "extra": 30
+     }
+    ],
+    "lessons": [
+     "KF-H06"
+    ]
    },
    {
     "id": "E2-03",
@@ -738,42 +1044,102 @@ window.PFA_DATA = {
     "expected": "JSON visible con una entrada por carpeta de nivel 1",
     "evidence": "Run Succeeded; JSON y conteo de carpetas visibles en el historial del run",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 2,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "2026-10-02T00:46:00Z"
+    "lastActivity": "2026-10-02T00:46:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "E2-04",
-    "action": "(Claude, intento 19) Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+    "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
     "owner": "Agente",
     "depends": "E2-03",
     "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
     "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-    "limit": 230,
+    "limit": 90,
+    "limitAlloc": {
+     "ext": {
+      "Codex": 80
+     },
+     "own": {
+      "Claude": 60
+     }
+    },
     "status": "Hecha",
     "attempts": 19,
     "minutes": 202,
     "entrega": "E2",
     "fails": 7,
-    "lastActivity": "2026-10-02T18:25:00Z"
+    "lastActivity": "2026-10-02T18:25:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 18,
+      "minutes": 159,
+      "limit": 90,
+      "extra": 80
+     },
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 43,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-13",
+     "KF-15",
+     "KF-16",
+     "KF-14",
+     "KF-P09",
+     "KF-P11"
+    ]
    },
    {
     "id": "E2-05",
     "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
     "owner": "Agente",
     "depends": "E2-04",
-    "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
+    "expected": "Oscar decide sus carpetas desde la app",
     "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": true
    },
    {
@@ -784,12 +1150,26 @@ window.PFA_DATA = {
     "expected": "Oscar ve y ajusta sus proyectos",
     "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -800,12 +1180,26 @@ window.PFA_DATA = {
     "expected": "Oscar se entera de carpetas nuevas",
     "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -813,15 +1207,29 @@ window.PFA_DATA = {
     "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
     "owner": "Agente",
     "depends": "E2-04",
-    "expected": "(Claude, intento 19) Detección bajo demanda con conectores estándar",
+    "expected": "Detección bajo demanda con conectores estándar",
     "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": true
    },
    {
@@ -832,12 +1240,26 @@ window.PFA_DATA = {
     "expected": "Versión publicada y controles probados",
     "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -848,12 +1270,26 @@ window.PFA_DATA = {
     "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
     "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 1,
     "minutes": 2,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "2026-10-02T00:26:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -864,12 +1300,26 @@ window.PFA_DATA = {
     "expected": "Proyectos reales definidos y navegación horizontal evaluada",
     "evidence": "Oscar escribe \"E2 aceptada\"",
     "limit": 0,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 0,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    }
   ],
@@ -882,12 +1332,26 @@ window.PFA_DATA = {
     "expected": "Carpeta de prueba lista",
     "evidence": "Oscar confirma",
     "limit": 0,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 0,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -898,12 +1362,26 @@ window.PFA_DATA = {
     "expected": "La lista acepta un correo con 6 campos",
     "evidence": "Columnas cambiadas anotadas en worklog",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -914,12 +1392,26 @@ window.PFA_DATA = {
     "expected": "Flujo guardado",
     "evidence": "Flujo guardado; Flow Checker 0 errores",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -930,12 +1422,26 @@ window.PFA_DATA = {
     "expected": "5 correos sin duplicados",
     "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -946,12 +1452,26 @@ window.PFA_DATA = {
     "expected": "Oscar ve los correos de cada proyecto",
     "evidence": "Los 5 correos visibles en PFA-Prueba",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -962,12 +1482,26 @@ window.PFA_DATA = {
     "expected": "Correos reales cargados",
     "evidence": "Run Succeeded; conteo de correos por carpeta en worklog, con carpetas numeradas y sin nombres",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -978,12 +1512,26 @@ window.PFA_DATA = {
     "expected": "Versión publicada y controles probados",
     "evidence": "Número de versión en worklog; el correo abre en Outlook",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    },
    {
@@ -994,12 +1542,26 @@ window.PFA_DATA = {
     "expected": "Oscar usa la entrega",
     "evidence": "Oscar escribe \"E3 aceptada\"",
     "limit": 0,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Pendiente",
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
     "fails": 0,
     "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 0,
+      "extra": 0
+     }
+    ],
+    "lessons": [],
     "ready": false
    }
   ],
@@ -1012,12 +1574,26 @@ window.PFA_DATA = {
     "expected": "El trabajo previo queda atribuido a T sin duplicar horas históricas",
     "evidence": "7 filas del worklog reatribuidas desde E0-05–E0-08 a T-01; se conservan horas, resultados y resúmenes",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 7,
     "minutes": 41,
     "entrega": "T",
     "fails": 1,
-    "lastActivity": "2026-09-30T07:38:00Z"
+    "lastActivity": "2026-09-30T07:38:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 7,
+      "minutes": 41,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-02",
@@ -1027,12 +1603,28 @@ window.PFA_DATA = {
     "expected": "El registro de publicaciones concuerda con los commits del tablero",
     "evidence": "Publicaciones 12:39 y 13:39 Central verificadas contra el clon y el sitio; causa documentada en KNOWN-FIXES.md",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 7,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-09-30T19:23:00Z"
+    "lastActivity": "2026-09-30T19:23:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 7,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-H01"
+    ]
    },
    {
     "id": "T-03",
@@ -1042,12 +1634,26 @@ window.PFA_DATA = {
     "expected": "Los cinco incidentes quedan registrados y el tablero muestra el pendiente de E1-08",
     "evidence": "Archivos de control actualizados, automatizaciones alineadas, preview comprobado o bloqueo de login registrado, y tablero publicado",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 11,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-09-30T19:36:00Z"
+    "lastActivity": "2026-09-30T19:36:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 11,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-04",
@@ -1057,12 +1663,26 @@ window.PFA_DATA = {
     "expected": "Reglas coherentes, tablero genera solo pendientes de Oscar y E1 continúa en el orden pedido",
     "evidence": "Skill y configuración presentes; reglas, incidentes y hallazgos actualizados; $heartbeatMinutes = 15; E1-08 Pendiente depende de E1-05; decisión de E1-10 registrada; tablero y commit actualizados",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 19,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T00:56:00Z"
+    "lastActivity": "2026-10-01T00:56:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 19,
+      "limit": 90,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-05",
@@ -1072,12 +1692,26 @@ window.PFA_DATA = {
     "expected": "Revisor cada 4 horas y publicador cada 15 minutos",
     "evidence": "Dos automatizaciones Codex y REVISOR.md coinciden con D-015; Get-ScheduledTaskInfo muestra intervalo PT15M, IgnoreNew, límite PT5M y LastTaskResult 0",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 5,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T01:03:00Z"
+    "lastActivity": "2026-10-01T01:03:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 5,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-06",
@@ -1087,12 +1721,26 @@ window.PFA_DATA = {
     "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
     "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 4,
     "minutes": 5,
     "entrega": "T",
     "fails": 3,
-    "lastActivity": "2026-10-01T01:48:00Z"
+    "lastActivity": "2026-10-01T01:48:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 4,
+      "minutes": 5,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-07",
@@ -1102,12 +1750,26 @@ window.PFA_DATA = {
     "expected": "STATUS solo presenta solicitudes de Oscar que sigan pendientes",
     "evidence": "Aprobaciones registradas en DECISIONS.md; tablero publicado y needsOscar coincide con STATUS",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 3,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T01:47:00Z"
+    "lastActivity": "2026-10-01T01:47:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 3,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-08",
@@ -1117,12 +1779,26 @@ window.PFA_DATA = {
     "expected": "La raíz sigue AGENTS.md y el revisor trabaja desde el repositorio correcto",
     "evidence": "Commit 9d294bd; carpetas verificadas; build del tablero con código 0; automatización activa con proyecto y carpeta PFA; data.js publicado",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 10,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T04:32:00Z"
+    "lastActivity": "2026-10-01T04:32:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 10,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-09",
@@ -1132,12 +1808,26 @@ window.PFA_DATA = {
     "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
     "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 2,
     "minutes": 4,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T11:19:00Z"
+    "lastActivity": "2026-10-01T11:19:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 2,
+      "minutes": 4,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-10",
@@ -1147,12 +1837,26 @@ window.PFA_DATA = {
     "expected": "El tablero muestra la antigüedad del último reporte del agente",
     "evidence": "status.fileUtc; tarea con repetición PT3M; tablero publicado muestra “Último reporte del agente hace X min”",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 3,
     "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T11:27:00Z"
+    "lastActivity": "2026-10-01T11:27:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 3,
+      "minutes": 8,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-11",
@@ -1162,12 +1866,26 @@ window.PFA_DATA = {
     "expected": "Las respuestas de Oscar quedan registradas y cerradas sin esperar otra sesión",
     "evidence": "T-08 registrado en D-022; issue #4 comentado y cerrado; tablero muestra respuesta antes de archivar issue",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Cancelada",
     "attempts": 1,
     "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T05:47:00Z"
+    "lastActivity": "2026-10-01T05:47:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-12",
@@ -1177,12 +1895,26 @@ window.PFA_DATA = {
     "expected": "Toda reapertura parte del análisis de fallos previos",
     "evidence": "Skill disponible; AGENTS/REVISOR actualizados; análisis publicado en STATUS; cierre visual de E1-05 exigirá auditoría 7x2",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 2,
     "minutes": 20,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:57:00Z"
+    "lastActivity": "2026-10-02T04:57:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 2,
+      "minutes": 20,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-13",
@@ -1192,12 +1924,26 @@ window.PFA_DATA = {
     "expected": "Cada uso de skill queda anunciado al principio de la respuesta",
     "evidence": "Regla exacta en AGENTS.md, sección 10; D-026 registrada; tablero actualizado",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T11:51:00Z"
+    "lastActivity": "2026-10-01T11:51:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 6,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-14",
@@ -1207,12 +1953,26 @@ window.PFA_DATA = {
     "expected": "Codex consulta documentación actualizada de librerías al trabajar en dashboard/ y tools/",
     "evidence": "codex mcp list muestra context7; una consulta de prueba sobre una librería que use el tablero devuelve documentación; nota en KNOWN-FIXES, \"Herramientas\"",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T15:04:00Z"
+    "lastActivity": "2026-10-01T15:04:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 8,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-15",
@@ -1222,12 +1982,26 @@ window.PFA_DATA = {
     "expected": "La huella y la regla de navegador quedan verificables por línea de trabajo",
     "evidence": "Regla de huella y regla de navegador en AGENTS.md; KF-11 actualizado; incumplimiento agregado a REVISOR.md; STATUS muestra ambas huellas",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 23,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T15:27:00Z"
+    "lastActivity": "2026-10-01T15:27:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 23,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-16",
@@ -1237,12 +2011,26 @@ window.PFA_DATA = {
     "expected": "El tablero presenta el universo de tareas de cada entrega y línea T, y avisa si las huellas de reglas no coinciden",
     "evidence": "Pages muestra abiertas sin límite ordenadas por estado e ID, hechas/canceladas en desplegable cerrado por defecto, contadores por sección, huellas verdes 4FD52CD8 para ambas líneas y capturas desktop/390 px sin desbordamiento horizontal ni texto cortado",
     "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 46,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T16:44:00Z"
+    "lastActivity": "2026-10-01T16:44:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 46,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-17",
@@ -1252,12 +2040,26 @@ window.PFA_DATA = {
     "expected": "Todas las tareas E0–E10 se ven sin expandir entregas; T conserva su presentación actual",
     "evidence": "Pages muestra las tareas de E0–E10 desplegadas y T sin cambios, en escritorio y teléfono vertical",
     "limit": 45,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 11,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T17:18:00Z"
+    "lastActivity": "2026-10-01T17:18:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 11,
+      "limit": 45,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-19",
@@ -1267,12 +2069,26 @@ window.PFA_DATA = {
     "expected": "E0 y E3 expanden sus tareas al tocarse; T muestra abiertas arriba y Ver hechas abajo",
     "evidence": "Pages prueba E0 (9 tareas), E3 (8 tareas) y T en escritorio y teléfono vertical",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 9,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T18:03:00Z"
+    "lastActivity": "2026-10-01T18:03:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 9,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-20",
@@ -1282,12 +2098,26 @@ window.PFA_DATA = {
     "expected": "Copia Markdown actual disponible en la carpeta compartida",
     "evidence": "Drive lista DECISIONS.md en la carpeta indicada con el tamaño del archivo local",
     "limit": 10,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 1,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T18:59:00Z"
+    "lastActivity": "2026-10-01T18:59:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 1,
+      "limit": 10,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-21",
@@ -1297,12 +2127,26 @@ window.PFA_DATA = {
     "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
     "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E2-11",
     "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T19:20:00Z"
+    "lastActivity": "2026-10-01T19:20:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 8,
+      "limit": 20,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-22",
@@ -1312,12 +2156,28 @@ window.PFA_DATA = {
     "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
     "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 2,
     "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T05:05:00Z"
+    "lastActivity": "2026-10-02T05:05:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 2,
+      "minutes": 8,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-P09"
+    ]
    },
    {
     "id": "T-23",
@@ -1327,12 +2187,28 @@ window.PFA_DATA = {
     "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
     "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 3,
     "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T05:16:00Z"
+    "lastActivity": "2026-10-02T05:16:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 3,
+      "minutes": 6,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-P09"
+    ]
    },
    {
     "id": "T-24",
@@ -1342,12 +2218,26 @@ window.PFA_DATA = {
     "expected": "Las fallas de flows consultan Learn y al Copilot adecuado según el intento",
     "evidence": "- [ ] En la 2.ª falla de un flujo, el worklog muestra primero la consulta a Microsoft Learn (resumen y URL) y después la pregunta al Copilot del diseñador, armada con lo que dijo Learn.<br>- [ ] Cada consulta al Copilot del diseñador tiene su línea en worklog: pregunta resumida y si cambió el flujo o solo respondió.<br>- [ ] Si Copilot cambió el flujo, Codex lo revisa en Code view antes de guardar; si no sirve o agrega acciones Premium o que requieran permisos (D-027), lo deshace sin guardar.<br>- [ ] Si Copilot responde que no puede (por ejemplo \"Failed to add actions…\"), cuenta como intento fallido y Codex no se lo vuelve a pedir más de una vez.",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:20:00Z"
+    "lastActivity": "2026-10-02T04:20:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-25",
@@ -1357,12 +2247,26 @@ window.PFA_DATA = {
     "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
     "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 7,
     "minutes": 11,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T04:45:00Z"
+    "lastActivity": "2026-10-02T04:45:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 7,
+      "minutes": 11,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-26",
@@ -1372,12 +2276,26 @@ window.PFA_DATA = {
     "expected": "Oscar tiene un informe de texto detallado en la carpeta compartida de PFA",
     "evidence": "El archivo local existe y el conector de Drive confirma el archivo en “PFA - Compartido con Codex” con el mismo tamaño",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 2,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T05:24:00Z"
+    "lastActivity": "2026-10-02T05:24:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 2,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-27",
@@ -1387,12 +2305,26 @@ window.PFA_DATA = {
     "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
     "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 10,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T06:18:00Z"
+    "lastActivity": "2026-10-02T06:18:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 10,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-28",
@@ -1402,12 +2334,26 @@ window.PFA_DATA = {
     "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
     "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
     "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 5,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T06:32:00Z"
+    "lastActivity": "2026-10-02T06:32:00Z",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 5,
+      "limit": 30,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-29",
@@ -1417,12 +2363,57 @@ window.PFA_DATA = {
     "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
     "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
     "limit": 45,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
     "status": "Hecha",
     "attempts": 1,
     "minutes": 9,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-02T18:48:00Z"
+    "lastActivity": "2026-10-02T18:48:00Z",
+    "byAgent": [
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 9,
+      "limit": 45,
+      "extra": 0
+     }
+    ],
+    "lessons": [
+     "KF-H08"
+    ]
+   },
+   {
+    "id": "T-30",
+    "action": "Tablero: intentos y tiempo por agente (Codex o Claude) en cada tarea, retroactivo desde E0, con la barra contra el límite inicial; botón de lecciones de KNOWN-FIXES por tarea; KF-P11 reescrita como enfoque; línea KF-P11 en AGENTS.md sección 5; fin de línea de AGENTS.md normalizado",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar ve quién hizo cada tarea, con cuántos intentos y cuánto tiempo frente a lo asignado, y puede leer las lecciones y soluciones",
+    "evidence": "Criterios 3 de control/specs/T-30.md; tablero publicado a 1366 px y 390 px",
+    "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 10,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-02T19:10:00Z",
+    "byAgent": [
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 10,
+      "limit": 60,
+      "extra": 0
+     }
+    ],
+    "lessons": []
    }
   ]
  },
@@ -1431,15 +2422,29 @@ window.PFA_DATA = {
   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
   "owner": "Agente",
   "depends": "E2-04",
-  "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
+  "expected": "Oscar decide sus carpetas desde la app",
   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
   "limit": 90,
+  "limitAlloc": {
+   "ext": {},
+   "own": {}
+  },
   "status": "Pendiente",
   "attempts": 0,
   "minutes": 0,
   "entrega": "E2",
   "fails": 0,
   "lastActivity": "",
+  "byAgent": [
+   {
+    "agent": "Codex",
+    "attempts": 0,
+    "minutes": 0,
+    "limit": 90,
+    "extra": 0
+   }
+  ],
+  "lessons": [],
   "ready": true
  },
  "upcoming": [
@@ -1448,15 +2453,29 @@ window.PFA_DATA = {
    "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
    "owner": "Agente",
    "depends": "E2-04",
-   "expected": "(Claude, intento 19) Oscar decide sus carpetas desde la app",
+   "expected": "Oscar decide sus carpetas desde la app",
    "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": true
   },
   {
@@ -1467,12 +2486,26 @@ window.PFA_DATA = {
    "expected": "Oscar ve y ajusta sus proyectos",
    "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1483,12 +2516,26 @@ window.PFA_DATA = {
    "expected": "Oscar se entera de carpetas nuevas",
    "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1496,15 +2543,29 @@ window.PFA_DATA = {
    "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
    "owner": "Agente",
    "depends": "E2-04",
-   "expected": "(Claude, intento 19) Detección bajo demanda con conectores estándar",
+   "expected": "Detección bajo demanda con conectores estándar",
    "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": true
   },
   {
@@ -1515,12 +2576,26 @@ window.PFA_DATA = {
    "expected": "Versión publicada y controles probados",
    "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1531,12 +2606,26 @@ window.PFA_DATA = {
    "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
    "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 1,
    "minutes": 2,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "2026-10-02T00:26:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 2,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1547,12 +2636,26 @@ window.PFA_DATA = {
    "expected": "Proyectos reales definidos y navegación horizontal evaluada",
    "evidence": "Oscar escribe \"E2 aceptada\"",
    "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 0,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1563,12 +2666,26 @@ window.PFA_DATA = {
    "expected": "Carpeta de prueba lista",
    "evidence": "Oscar confirma",
    "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 0,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1579,12 +2696,26 @@ window.PFA_DATA = {
    "expected": "La lista acepta un correo con 6 campos",
    "evidence": "Columnas cambiadas anotadas en worklog",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1595,12 +2726,26 @@ window.PFA_DATA = {
    "expected": "Flujo guardado",
    "evidence": "Flujo guardado; Flow Checker 0 errores",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1611,12 +2756,26 @@ window.PFA_DATA = {
    "expected": "5 correos sin duplicados",
    "evidence": "Las 2 corridas Succeeded; 5 filas de PFA-Prueba después de cada una",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1627,12 +2786,26 @@ window.PFA_DATA = {
    "expected": "Oscar ve los correos de cada proyecto",
    "evidence": "Los 5 correos visibles en PFA-Prueba",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1643,12 +2816,26 @@ window.PFA_DATA = {
    "expected": "Correos reales cargados",
    "evidence": "Run Succeeded; conteo de correos por carpeta en worklog, con carpetas numeradas y sin nombres",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1659,12 +2846,26 @@ window.PFA_DATA = {
    "expected": "Versión publicada y controles probados",
    "evidence": "Número de versión en worklog; el correo abre en Outlook",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   },
   {
@@ -1675,15 +2876,183 @@ window.PFA_DATA = {
    "expected": "Oscar usa la entrega",
    "evidence": "Oscar escribe \"E3 aceptada\"",
    "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Pendiente",
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
    "fails": 0,
    "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 0,
+     "extra": 0
+    }
+   ],
+   "lessons": [],
    "ready": false
   }
  ],
+ "lessons": {
+  "KF-13": {
+   "title": "CONECTOR · Graph omite una expansión anidada de childFolders",
+   "note": "",
+   "lines": [
+    "- Prueba: una consulta GET a childFolders con $filter por la raíz y dos niveles de $expand respondió HTTP 200 e incluyó carpetas hijas, pero no las nietas, aunque algunas hijas indican childFolderCount mayor que cero.",
+    "- Microsoft documenta que el soporte de $expand depende de la operación y que algunas combinaciones no compatibles pueden ignorarse silenciosamente: https://learn.microsoft.com/en-us/graph/query-parameters.",
+    "- Corrección en curso: hacer una consulta separada de childFolders por cada carpeta padre, con el conector Office 365 Outlook estándar. La corrección queda pendiente de prueba.",
+    "- Actualización 2026-10-02 (Claude, E2-04): un solo nivel de `$expand` sí funciona si se parte de la carpeta Projects: `GET /me/mailFolders/{idProjects}/childFolders?$top=250&$select=id,displayName,parentFolderId,childFolderCount&$expand=childFolders($select=id,displayName,parentFolderId,childFolderCount)` devuelve nivel 2 con su nivel 3 anidado (14/14, cada childFolderCount coincide). No usar una consulta por carpeta padre: ver KF-15."
+   ]
+  },
+  "KF-15": {
+   "title": "CONECTOR · Flow llamado desde Power Apps excede 120 s (ActionResponseTimedOut)",
+   "note": "",
+   "lines": [
+    "- Síntoma: la app publicada inicia el flow, el botón vuelve a activarse sin aviso y el run termina `Failed`: \"didn't return a response within 120 seconds\". Las corridas previas tardaban 9 s, 11 s, 23 s y 60 s; una tardó 3 min 20 s.",
+    "- Causa: 12 llamadas HTTP secuenciales a Graph dentro de bucles anidados con variables; la duración varía con la carga de Outlook y supera el límite de respuesta de Power Apps.",
+    "- Solución: una sola llamada con `$expand` (KF-13) y sin bucles anidados. El run bajó a 865 ms.",
+    "- Fuente: mensaje del run en Power Automate; prueba en el tenant (E2-04, intento 19, Claude)."
+   ]
+  },
+  "KF-16": {
+   "title": "EXPRESION · El diseñador nuevo descarta expresiones escritas a mano con ?[...]",
+   "note": "",
+   "lines": [
+    "- Síntoma: en el editor `fx`, `first(body('Parse_JSON')?['value'])?['id']` muestra \"This expression has a problem\" y, al pulsar Add, el token no queda en el campo (Code view no lo incluye). Es el mismo mensaje de E2-04, intentos 2 y 3.",
+    "- Solución: insertar el valor con contenido dinámico. Escribir `/`, elegir \"Insert dynamic content\" y luego el campo (por ejemplo, Parse JSON → Body id). El diseñador crea el `For each` y escribe `items('For_each')?['id']`. Para conservar un `/` literal, escribirlo y pulsar Escape.",
+    "- Verificación: Code view de la acción después de salir del campo."
+   ]
+  },
+  "KF-09": {
+   "title": "YAML_PA · Fórmula de texto con dos puntos al pegar YAML",
+   "note": "",
+   "lines": [
+    "- Síntoma: Power Apps muestra `PA1001` / `YamlInvalidSyntax: found invalid mapping` al pegar YAML con fórmulas que contienen `:`.",
+    "- Causa: el `:` seguido de un espacio se interpreta como separador de un mapa cuando la fórmula se pega como escalar simple.",
+    "- Solución: usar un bloque literal con la sintaxis que genera Studio, por ejemplo `Text: |` y la fórmula en la línea indentada siguiente. `|+` provocó `PA1001` en E1-07.",
+    "- Fuente: validación en Power Apps Studio durante E1-06 y E1-07; formato de código YAML descrito en KF-07."
+   ]
+  },
+  "KF-14": {
+   "title": "FORMULA_PA · Nombre de la salida del flow en minúsculas: OnSelect no se ejecuta",
+   "note": "",
+   "lines": [
+    "- Síntoma: al pulsar el botón, Live Monitor registra `Select`, pero no aparece ni el primer `Notify` ni una ejecución del flow. Studio muestra errores Power Fx (por ejemplo, `ParseJSON` con argumentos no válidos).",
+    "- Causa: el Respond del flow expone la salida como `foldersjson` (la clave en el esquema está en minúsculas; `title` = foldersJson). Power Fx distingue mayúsculas y `.foldersJson` no compila. Una fórmula con errores no se ejecuta completa, ni sus primeras líneas.",
+    "- Solución: leer la clave real del Respond en Code view (`inputs.schema.properties`) y usarla tal cual (`varScan.foldersjson`). Comprobar con una fórmula mínima (`Notify` + `.Run()` + `Len(...)`) antes de agregar lógica.",
+    "- Lección: si el primer `Notify` no aparece, el problema es de compilación de la fórmula, no del flow ni del vínculo. Fuente: E2-04, intento 19 (Claude)."
+   ]
+  },
+  "KF-17": {
+   "title": "ESQUEMA_LISTA · Las columnas obligatorias reales difieren de lo anotado",
+   "note": "",
+   "lines": [
+    "- Síntoma: `Patch` falla con \"Field 'MailboxKey' is required\" aunque el registro de E2-01 decía que solo había 2 obligatorias.",
+    "- Comprobación de solo lectura: `GET {sitio}/_api/web/lists/getbytitle('PFA_MailFolders')/fields?$filter=Required eq true and Hidden eq false`. El sitio es el personal de OneDrive de Oscar.",
+    "- Solución: D-005/D-041. Quitar Required a las columnas que la entrega no llena; no borrarlas."
+   ]
+  },
+  "KF-P03": {
+   "title": "INC-02 · Justificar cada archivo de diseño respecto de su tarea.",
+   "note": "",
+   "lines": [
+    "- Revisión: `design/yaml/e1-05-diagnostics-flow-history.pa.yaml` mueve el historial existente bajo el título compartido; solo cambia Y y conserva bindings y controles. La recolocación forma parte de aplicar encabezado y título en E1-05.",
+    "- Cambio: documentar la relación con E1-05 en el incidente; no requiere hallazgo separado."
+   ]
+  },
+  "KF-P05": {
+   "title": "INC-05 · Seguir la evidencia pedida, sin pasos ajenos.",
+   "note": "",
+   "lines": [
+    "- Desvío: el primer intento de E0-04 abrió Excel, aunque la evidencia pedía `Import-Csv`.",
+    "- Cambio: el segundo intento validó con `Import-Csv` las columnas y filas requeridas; ejecutar directamente el comando indicado por la evidencia."
+   ]
+  },
+  "KF-P07": {
+   "title": "INC-07 · Auditar visualmente las 7 pantallas tras cambiar elementos compartidos.",
+   "note": "",
+   "lines": [
+    "- Desvío: E1-05 y E1-07 se dieron por terminadas sin detectar el doble encabezado de My Day; Oscar lo encontró al probar.",
+    "- Cambio: comparar capturas de las 7 pantallas a 1366 px y 390 px en la app publicada cuando cambie encabezado, menú, título o tema."
+   ]
+  },
+  "KF-P09": {
+   "title": "INC-12 · Validar filas CSV después de editar worklog.",
+   "note": "",
+   "lines": [
+    "- Síntoma: una comilla sin pareja en `evidencia` hace que `Import-Csv` junte la línea siguiente con la fila actual; una duración no coincide con el intervalo real.",
+    "- Corrección: mantener cada intento como una fila CSV con comillas balanceadas; comprobar con `Import-Csv` las filas afectadas y comparar `minutos` con la diferencia entre horas. Las esperas se registran, pero no cuentan como minutos efectivos de tarea.",
+    "- Prueba: `Import-Csv` devuelve 126 filas; E2-04 intento 6 = 3 minutos; T-22 intento 2 y T-23 intento 3 se importan por separado."
+   ]
+  },
+  "KF-P10": {
+   "title": "INC-11 · Detener una tarea al alcanzar su límite efectivo.",
+   "note": "",
+   "lines": [
+    "- Síntoma: E1-05 quedó cerrada con 143 minutos frente al límite de 60.",
+    "- Corrección: antes de cada cambio, comprobar minutos efectivos acumulados y restantes; al alcanzar el límite, seguir AGENTS.md, sección 5. No inferir que la aceptación posterior elimina el exceso histórico.",
+    "- Prueba: PLAN.md registra el exceso como incidente sin revertir la entrega E1 que Oscar ya aceptó."
+   ]
+  },
+  "KF-P11": {
+   "title": "E2-04 · Cómo abordar un problema que no cede: razonar desde la evidencia, no desde las hipótesis.",
+   "note": "(Claude, 2026-10-02; lección central pedida por Oscar)",
+   "lines": [
+    "- Contexto: E2-04 acumuló 18 intentos y 158 min de Codex sin encontrar la causa. Claude la encontró en el intento 19, en unos 12 min, y cerró la tarea en unos 43 min efectivos. Los pasos concretos sirven para este caso; lo que vale para cualquier problema es el enfoque.",
+    "- **El enfoque (lo que aplica siempre):**",
+    "  1. **Separar hechos de interpretaciones.** Al retomar un problema, no heredar el diagnóstico de nadie, incluido el propio. Se relee la evidencia cruda y se queda solo con lo observado (\"el clic se registra\", \"no aparece el primer aviso\"), no con las conclusiones de otros (\"el vínculo está viejo\").",
+    "  2. **Dejar que el síntoma acote el espacio de causas.** Cada observación descarta zonas enteras. Hay que preguntarse qué causas son compatibles con lo que se ve y cuáles no. Si la primera instrucción no corre, no tiene sentido investigar lo que pasa después.",
+    "  3. **Buscar el punto de contacto entre las piezas.** La mayoría de las fallas está en la frontera entre dos componentes: lo que uno entrega frente a lo que el otro espera. Se lee el contrato real en ambos lados, no la descripción ni la memoria de cómo debería ser.",
+    "  4. **Medir antes de cambiar.** Cada cambio debe responder una pregunta concreta. Si no hay una observación que lo justifique, el siguiente paso es medir (reducir al mínimo, hacer visible el error, consultar la fuente), no cambiar.",
+    "  5. **Confiar solo en la fuente de verdad.** Las notas, los checklists en verde y \"debería funcionar\" no prueban nada. Lo que prueba es el dato leído ahora: la definición real, la fila real, la ejecución real, en el lugar donde lo usa el usuario.",
+    "  6. **Si el método no avanza, cambiar de método.** Repetir variantes de lo mismo, o seguir insistiendo con una herramienta que falla, solo consume tiempo. Hay que cambiar el ángulo.",
+    "- **Por qué el enfoque anterior no llegó a la solución:** se razonó hacia adelante desde hipótesis del entorno (vínculo, conexión, copias del flow, IDs) y cada intento cambiaba algo alrededor del problema, sin una observación que lo justificara. Se ignoró la señal que ya estaba registrada (Monitor: `Select` sí, primer `Notify` no) y que descartaba todas esas hipótesis a la vez. Se tomaron como prueba señales que no prueban nada (Flow Checker 0/0, \"la conexión aparece\", \"la fórmula contiene .Run()\") y se confió en una nota antigua (2 columnas obligatorias; había 6). Antes de leer el dato que separaba las causas, se escaló a Copilot y a Oscar.",
+    "- **Cómo se vio en E2-04 (ejemplo, no receta):**",
+    "  - Señal: el clic llega, pero no corre ni la primera línea. Conclusión: la fórmula no compila.",
+    "  - Contrato: el Respond del flow expone `foldersjson` y la fórmula leía `.foldersJson` (KF-14).",
+    "  - Medición mínima: `Notify` + `.Run()` + `Len(...)`; el flow corrió.",
+    "  - Error visible: `IfError` + `FirstError.Message` mostró \"MailboxKey is required\" (KF-17).",
+    "  - Fuente de verdad: REST de SharePoint para columnas y filas, y Code view del flow.",
+    "  - Lugar real: la app publicada reveló el límite de 120 s (KF-15).",
+    "  - Cambio de método: el editor de expresiones descartaba lo escrito y se usó contenido dinámico (KF-16).",
+    "- **Regla práctica:** antes de cada cambio, escribe en una línea qué observación lo justifica y qué resultado esperas. Si no puedes escribirla, mide primero."
+   ]
+  },
+  "KF-H08": {
+   "title": "TABLERO · Comprobar un cambio del tablero en local y en Pages (T-29, Claude)",
+   "note": "",
+   "lines": [
+    "- En local, abrir `dashboard/index.html` como archivo no carga `data.js`. Servirlo con `python -m http.server 8765 --bind 127.0.0.1 --directory dashboard`, abrir `http://127.0.0.1:8765/index.html` y apagar el servidor al terminar.",
+    "- El publicador espera un intervalo mínimo entre publicaciones (`minGapMinutes`): un cambio reciente sale en la siguiente ejecución, unos 3 minutos después. Pages tarda 1 o 2 minutos más en desplegar.",
+    "- El navegador puede seguir usando un `data.js` viejo. Comparar `PFA_DATA.generatedUtc` con `fetch('data.js', {cache: 'no-store'})`; para refrescar, `fetch('data.js', {cache: 'reload'})` y recargar la página."
+   ]
+  },
+  "KF-H06": {
+   "title": "CONECTOR · El Copilot del diseñador no admite connection references en flujos cloud de solución.",
+   "note": "",
+   "lines": [
+    "- Limitación: no admite flujos de solución que usan connections en lugar de connection references.",
+    "- Causa probable del mensaje \"connector reference\": el flujo de E2-02 usa una connection en lugar de una connection reference.",
+    "- Fuente: https://learn.microsoft.com/en-us/power-automate/faq-copilot-cloud-flows"
+   ]
+  },
+  "KF-H01": {
+   "title": "T-02 · Publicación del tablero y log.",
+   "note": "",
+   "lines": [
+    "- Causa de la pausa tras las 11:52 a. m. Central: una instrucción anterior del revisor le impedía ejecutar el publicador; la tarea de Windows seguía habilitada con ruta absoluta de `pwsh.exe` y `LastTaskResult = 0`.",
+    "- Evidencia: los commits `ef94990` y `7f3c40b` están en `origin/main`; la página devuelve HTTP 200. Las publicaciones de 12:39 y 13:39 p. m. Central faltaban en `publish.log`, cuyo último registro era 11:16 a. m.",
+    "- Corrección: se conciliaron las dos líneas en `publish.log` con horas UTC y commits verificados. El script escribe después de cada push exitoso; los errores de red o permisos van al mismo log.",
+    "- Prevención: `REVISOR.md` permite ejecutar el publicador y pide anotar y no reintentar un fallo."
+   ]
+  }
+ },
  "doneTasks": [
   {
    "id": "E0-01",
@@ -1693,12 +3062,26 @@ window.PFA_DATA = {
    "expected": "Los cambios pendientes desde el 19-sep quedan guardados en git",
    "evidence": "Hash del commit anotado en worklog",
    "limit": 15,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": "2026-09-30T06:21:00Z"
+   "lastActivity": "2026-09-30T06:21:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 15,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-02",
@@ -1708,12 +3091,26 @@ window.PFA_DATA = {
    "expected": "Archivos instalados",
    "evidence": "git status limpio después del commit E0-02",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": "2026-09-30T06:22:00Z"
+   "lastActivity": "2026-09-30T06:22:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-03",
@@ -1723,12 +3120,26 @@ window.PFA_DATA = {
    "expected": "Nadie usa esos archivos como fuente vigente",
    "evidence": "Los 4 archivos empiezan con el aviso",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": "2026-09-30T06:23:00Z"
+   "lastActivity": "2026-09-30T06:23:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 1,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-04",
@@ -1738,12 +3149,28 @@ window.PFA_DATA = {
    "expected": "El registro de tiempo funciona",
    "evidence": "Import-Csv lee 3 filas sin error; resultado anotado en worklog. No requiere Excel ni validación de Oscar",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 2,
    "minutes": 1,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": "2026-09-30T06:40:00Z"
+   "lastActivity": "2026-09-30T06:40:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 1,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-P05"
+   ]
   },
   {
    "id": "E0-05",
@@ -1753,12 +3180,26 @@ window.PFA_DATA = {
    "expected": "El revisor corre solo 2 veces al día",
    "evidence": "control/REVISION.md generado; Oscar ve las 2 tareas programadas en Codex",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": ""
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-06",
@@ -1768,12 +3209,26 @@ window.PFA_DATA = {
    "expected": "El computador puede publicar en GitHub sin depender de la cuenta de ChatGPT",
    "evidence": "gh auth status muestra la cuenta de Oscar y gh auth setup-git termina correctamente",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 4,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": ""
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 4,
+     "minutes": 0,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-07",
@@ -1783,12 +3238,26 @@ window.PFA_DATA = {
    "expected": "Sitio del tablero creado",
    "evidence": "La URL de Pages responde (aunque esté vacía)",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": ""
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-08",
@@ -1798,12 +3267,26 @@ window.PFA_DATA = {
    "expected": "El tablero se publica solo cada hora",
    "evidence": "La URL muestra E0 con los datos actuales; Get-ScheduledTask -TaskName \"PFA Tablero\" existe y su última ejecución fue correcta",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": ""
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E0-09",
@@ -1813,12 +3296,26 @@ window.PFA_DATA = {
    "expected": "Oscar ve el tablero y responde desde él",
    "evidence": "El agente procesa el issue en la sesión siguiente; Oscar escribe \"E0 aceptada\"",
    "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
    "fails": 0,
-   "lastActivity": "2026-09-30T10:57:00Z"
+   "lastActivity": "2026-09-30T10:57:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 1,
+     "limit": 0,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-01",
@@ -1828,12 +3325,26 @@ window.PFA_DATA = {
    "expected": "Referencia visual guardada como código",
    "evidence": "2 archivos en design/referencia/ con las versiones de control anotadas",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 10,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T11:28:00Z"
+   "lastActivity": "2026-09-30T11:28:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 10,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-02",
@@ -1843,12 +3354,26 @@ window.PFA_DATA = {
    "expected": "Tema alineado con la referencia",
    "evidence": "Diferencias anotadas en worklog; tema.fx actualizado",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 6,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T11:34:00Z"
+   "lastActivity": "2026-09-30T11:34:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 6,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-03",
@@ -1858,12 +3383,26 @@ window.PFA_DATA = {
    "expected": "Tema y menú disponibles en toda la app",
    "evidence": "\"No formula errors\"; app guardada",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 2,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T11:42:00Z"
+   "lastActivity": "2026-09-30T11:42:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 2,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-04",
@@ -1873,12 +3412,26 @@ window.PFA_DATA = {
    "expected": "Plantilla funcionando",
    "evidence": "Vista previa de scrPlantilla igual al estándar, en escritorio y teléfono",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 13,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T11:55:00Z"
+   "lastActivity": "2026-09-30T11:55:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 13,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-05",
@@ -1888,12 +3441,30 @@ window.PFA_DATA = {
    "expected": "2 pantallas con un solo encabezado estándar y selector vertical legible en las 7",
    "evidence": "Vista previa y app publicada: encabezado de My Day igual al común; opciones abiertas y selección legibles; menú navega a las 7 pantallas; Refresh funciona; auditoría visual comparada de las 7 pantallas a 1366 px y 390 px",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 7,
    "minutes": 143,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-10-01T06:29:00Z"
+   "lastActivity": "2026-10-01T06:29:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 7,
+     "minutes": 143,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-P03",
+    "KF-P07",
+    "KF-P10"
+   ]
   },
   {
    "id": "E1-06",
@@ -1903,12 +3474,28 @@ window.PFA_DATA = {
    "expected": "5 pantallas con el estándar",
    "evidence": "Vista previa correcta",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 24,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T12:52:00Z"
+   "lastActivity": "2026-09-30T12:52:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 24,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-09"
+   ]
   },
   {
    "id": "E1-07",
@@ -1918,12 +3505,29 @@ window.PFA_DATA = {
    "expected": "7 pantallas con el estándar",
    "evidence": "Vista previa correcta; scrPlantilla eliminada",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 2,
    "minutes": 29,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-09-30T13:21:00Z"
+   "lastActivity": "2026-09-30T13:21:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 29,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-09",
+    "KF-P07"
+   ]
   },
   {
    "id": "E1-08",
@@ -1933,12 +3537,26 @@ window.PFA_DATA = {
    "expected": "Versión publicada y pantallas adaptadas",
    "evidence": "Número de versión en worklog; las 7 pantallas se adaptan a cada formato y las 7 opciones navegan y marcan el activo correcto en horizontal",
    "limit": 45,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 3,
    "minutes": 29,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-10-01T01:24:00Z"
+   "lastActivity": "2026-10-01T01:24:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 3,
+     "minutes": 29,
+     "limit": 45,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-09",
@@ -1948,12 +3566,26 @@ window.PFA_DATA = {
    "expected": "Oscar acepta el estándar visual y la navegación vertical",
    "evidence": "Oscar confirma que revisó las 7 pantallas y acepta E1",
    "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 0,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-10-01T11:07:00Z"
+   "lastActivity": "2026-10-01T11:07:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 0,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E1-10",
@@ -1963,12 +3595,26 @@ window.PFA_DATA = {
    "expected": "Navegación usable sin barra horizontal en formato vertical",
    "evidence": "YAML común aplicado en las 7 pantallas; vista previa y app publicada confirman selector en vertical y botones en horizontal; las 7 opciones navegan",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 14,
    "entrega": "E1",
    "fails": 0,
-   "lastActivity": "2026-10-01T01:39:00Z"
+   "lastActivity": "2026-10-01T01:39:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 14,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E2-01",
@@ -1978,12 +3624,28 @@ window.PFA_DATA = {
    "expected": "Listas listas para carpetas y proyectos",
    "evidence": "Tabla de columnas y cambios en worklog",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 3,
    "minutes": 2,
    "entrega": "E2",
    "fails": 0,
-   "lastActivity": "2026-10-01T11:25:00Z"
+   "lastActivity": "2026-10-01T11:25:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 3,
+     "minutes": 2,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-17"
+   ]
   },
   {
    "id": "E2-02",
@@ -1993,12 +3655,30 @@ window.PFA_DATA = {
    "expected": "La app puede pedir al flow las carpetas",
    "evidence": "Flow guardado; Flow Checker 0; ejecución de prueba Succeeded con las carpetas de nivel 1 en la respuesta JSON. Fuente: https://learn.microsoft.com/power-apps/maker/canvas-apps/how-to/trigger-flow",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {
+     "Codex": 30
+    },
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 12,
    "minutes": 97,
    "entrega": "E2",
    "fails": 5,
-   "lastActivity": "2026-10-02T00:44:00Z"
+   "lastActivity": "2026-10-02T00:44:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 12,
+     "minutes": 97,
+     "limit": 90,
+     "extra": 30
+    }
+   ],
+   "lessons": [
+    "KF-H06"
+   ]
   },
   {
    "id": "E2-03",
@@ -2008,27 +3688,73 @@ window.PFA_DATA = {
    "expected": "JSON visible con una entrada por carpeta de nivel 1",
    "evidence": "Run Succeeded; JSON y conteo de carpetas visibles en el historial del run",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 2,
    "entrega": "E2",
    "fails": 0,
-   "lastActivity": "2026-10-02T00:46:00Z"
+   "lastActivity": "2026-10-02T00:46:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 2,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "E2-04",
-   "action": "(Claude, intento 19) Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
+   "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
    "owner": "Agente",
    "depends": "E2-03",
    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
-   "limit": 230,
+   "limit": 90,
+   "limitAlloc": {
+    "ext": {
+     "Codex": 80
+    },
+    "own": {
+     "Claude": 60
+    }
+   },
    "status": "Hecha",
    "attempts": 19,
    "minutes": 202,
    "entrega": "E2",
    "fails": 7,
-   "lastActivity": "2026-10-02T18:25:00Z"
+   "lastActivity": "2026-10-02T18:25:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 18,
+     "minutes": 159,
+     "limit": 90,
+     "extra": 80
+    },
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 43,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-13",
+    "KF-15",
+    "KF-16",
+    "KF-14",
+    "KF-P09",
+    "KF-P11"
+   ]
   },
   {
    "id": "T-01",
@@ -2038,12 +3764,26 @@ window.PFA_DATA = {
    "expected": "El trabajo previo queda atribuido a T sin duplicar horas históricas",
    "evidence": "7 filas del worklog reatribuidas desde E0-05–E0-08 a T-01; se conservan horas, resultados y resúmenes",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 7,
    "minutes": 41,
    "entrega": "T",
    "fails": 1,
-   "lastActivity": "2026-09-30T07:38:00Z"
+   "lastActivity": "2026-09-30T07:38:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 7,
+     "minutes": 41,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-02",
@@ -2053,12 +3793,28 @@ window.PFA_DATA = {
    "expected": "El registro de publicaciones concuerda con los commits del tablero",
    "evidence": "Publicaciones 12:39 y 13:39 Central verificadas contra el clon y el sitio; causa documentada en KNOWN-FIXES.md",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 7,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-09-30T19:23:00Z"
+   "lastActivity": "2026-09-30T19:23:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 7,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-H01"
+   ]
   },
   {
    "id": "T-03",
@@ -2068,12 +3824,26 @@ window.PFA_DATA = {
    "expected": "Los cinco incidentes quedan registrados y el tablero muestra el pendiente de E1-08",
    "evidence": "Archivos de control actualizados, automatizaciones alineadas, preview comprobado o bloqueo de login registrado, y tablero publicado",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 11,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-09-30T19:36:00Z"
+   "lastActivity": "2026-09-30T19:36:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 11,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-04",
@@ -2083,12 +3853,26 @@ window.PFA_DATA = {
    "expected": "Reglas coherentes, tablero genera solo pendientes de Oscar y E1 continúa en el orden pedido",
    "evidence": "Skill y configuración presentes; reglas, incidentes y hallazgos actualizados; $heartbeatMinutes = 15; E1-08 Pendiente depende de E1-05; decisión de E1-10 registrada; tablero y commit actualizados",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 19,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T00:56:00Z"
+   "lastActivity": "2026-10-01T00:56:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 19,
+     "limit": 90,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-05",
@@ -2098,12 +3882,26 @@ window.PFA_DATA = {
    "expected": "Revisor cada 4 horas y publicador cada 15 minutos",
    "evidence": "Dos automatizaciones Codex y REVISOR.md coinciden con D-015; Get-ScheduledTaskInfo muestra intervalo PT15M, IgnoreNew, límite PT5M y LastTaskResult 0",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 5,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T01:03:00Z"
+   "lastActivity": "2026-10-01T01:03:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 5,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-06",
@@ -2113,12 +3911,26 @@ window.PFA_DATA = {
    "expected": "La publicación condicional llega al clon remoto y a GitHub Pages",
    "evidence": "El clon recibe el estado actual y GitHub Pages sirve el data.js actualizado",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 4,
    "minutes": 5,
    "entrega": "T",
    "fails": 3,
-   "lastActivity": "2026-10-01T01:48:00Z"
+   "lastActivity": "2026-10-01T01:48:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 4,
+     "minutes": 5,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-07",
@@ -2128,12 +3940,26 @@ window.PFA_DATA = {
    "expected": "STATUS solo presenta solicitudes de Oscar que sigan pendientes",
    "evidence": "Aprobaciones registradas en DECISIONS.md; tablero publicado y needsOscar coincide con STATUS",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 3,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T01:47:00Z"
+   "lastActivity": "2026-10-01T01:47:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 3,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-08",
@@ -2143,12 +3969,26 @@ window.PFA_DATA = {
    "expected": "La raíz sigue AGENTS.md y el revisor trabaja desde el repositorio correcto",
    "evidence": "Commit 9d294bd; carpetas verificadas; build del tablero con código 0; automatización activa con proyecto y carpeta PFA; data.js publicado",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 10,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T04:32:00Z"
+   "lastActivity": "2026-10-01T04:32:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 10,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-09",
@@ -2158,12 +3998,26 @@ window.PFA_DATA = {
    "expected": "El cierre exige autoauditoría y los cambios visibles de Power Apps incluyen auditoría visual",
    "evidence": "Skills/configuración presentes; cinco cambios en AGENTS.md; incidente y lección registrados; Microsoft Learn devuelve el resultado solicitado",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 2,
    "minutes": 4,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T11:19:00Z"
+   "lastActivity": "2026-10-01T11:19:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 4,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-10",
@@ -2173,12 +4027,26 @@ window.PFA_DATA = {
    "expected": "El tablero muestra la antigüedad del último reporte del agente",
    "evidence": "status.fileUtc; tarea con repetición PT3M; tablero publicado muestra “Último reporte del agente hace X min”",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 3,
    "minutes": 8,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T11:27:00Z"
+   "lastActivity": "2026-10-01T11:27:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 3,
+     "minutes": 8,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-12",
@@ -2188,12 +4056,26 @@ window.PFA_DATA = {
    "expected": "Toda reapertura parte del análisis de fallos previos",
    "evidence": "Skill disponible; AGENTS/REVISOR actualizados; análisis publicado en STATUS; cierre visual de E1-05 exigirá auditoría 7x2",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 2,
    "minutes": 20,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T04:57:00Z"
+   "lastActivity": "2026-10-02T04:57:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 20,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-13",
@@ -2203,12 +4085,26 @@ window.PFA_DATA = {
    "expected": "Cada uso de skill queda anunciado al principio de la respuesta",
    "evidence": "Regla exacta en AGENTS.md, sección 10; D-026 registrada; tablero actualizado",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 6,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T11:51:00Z"
+   "lastActivity": "2026-10-01T11:51:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 6,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-14",
@@ -2218,12 +4114,26 @@ window.PFA_DATA = {
    "expected": "Codex consulta documentación actualizada de librerías al trabajar en dashboard/ y tools/",
    "evidence": "codex mcp list muestra context7; una consulta de prueba sobre una librería que use el tablero devuelve documentación; nota en KNOWN-FIXES, \"Herramientas\"",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 8,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T15:04:00Z"
+   "lastActivity": "2026-10-01T15:04:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 8,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-15",
@@ -2233,12 +4143,26 @@ window.PFA_DATA = {
    "expected": "La huella y la regla de navegador quedan verificables por línea de trabajo",
    "evidence": "Regla de huella y regla de navegador en AGENTS.md; KF-11 actualizado; incumplimiento agregado a REVISOR.md; STATUS muestra ambas huellas",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 23,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T15:27:00Z"
+   "lastActivity": "2026-10-01T15:27:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 23,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-16",
@@ -2248,12 +4172,26 @@ window.PFA_DATA = {
    "expected": "El tablero presenta el universo de tareas de cada entrega y línea T, y avisa si las huellas de reglas no coinciden",
    "evidence": "Pages muestra abiertas sin límite ordenadas por estado e ID, hechas/canceladas en desplegable cerrado por defecto, contadores por sección, huellas verdes 4FD52CD8 para ambas líneas y capturas desktop/390 px sin desbordamiento horizontal ni texto cortado",
    "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 46,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T16:44:00Z"
+   "lastActivity": "2026-10-01T16:44:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 46,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-17",
@@ -2263,12 +4201,26 @@ window.PFA_DATA = {
    "expected": "Todas las tareas E0–E10 se ven sin expandir entregas; T conserva su presentación actual",
    "evidence": "Pages muestra las tareas de E0–E10 desplegadas y T sin cambios, en escritorio y teléfono vertical",
    "limit": 45,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 11,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T17:18:00Z"
+   "lastActivity": "2026-10-01T17:18:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 11,
+     "limit": 45,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-19",
@@ -2278,12 +4230,26 @@ window.PFA_DATA = {
    "expected": "E0 y E3 expanden sus tareas al tocarse; T muestra abiertas arriba y Ver hechas abajo",
    "evidence": "Pages prueba E0 (9 tareas), E3 (8 tareas) y T en escritorio y teléfono vertical",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 9,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T18:03:00Z"
+   "lastActivity": "2026-10-01T18:03:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 9,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-20",
@@ -2293,12 +4259,26 @@ window.PFA_DATA = {
    "expected": "Copia Markdown actual disponible en la carpeta compartida",
    "evidence": "Drive lista DECISIONS.md en la carpeta indicada con el tamaño del archivo local",
    "limit": 10,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 1,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T18:59:00Z"
+   "lastActivity": "2026-10-01T18:59:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 1,
+     "limit": 10,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-21",
@@ -2308,12 +4288,26 @@ window.PFA_DATA = {
    "expected": "Skill instalada idéntica a Drive; regla idea en AGENTS y reabrir-tarea; mini-spec y HZ-11 del menú registrados",
    "evidence": "Archivo idéntico a Drive (SHA-256); .gitkeep; 3 reglas verificadas; HZ-11 asignado a E2-11",
    "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 8,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-01T19:20:00Z"
+   "lastActivity": "2026-10-01T19:20:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 8,
+     "limit": 20,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-22",
@@ -2323,12 +4317,28 @@ window.PFA_DATA = {
    "expected": "Oscar ve las ideas asignadas y cerradas con la respuesta registrada",
    "evidence": "- [ ] Abro el tablero → en \"Ideas y hallazgos\" veo arriba las \"Por decidir\" y debajo \"Ver asignadas y cerradas (N)\".<br>- [ ] Abro \"Ver asignadas y cerradas\" → cada una muestra estado, destino y una línea \"Cierre: fecha · issue #N o chat · mi respuesta en una línea\", de la más reciente a la más antigua.<br>- [ ] Busco HZ-11 → su cierre dice que fue al issue #8 y quedó como E2-11.<br>- [ ] Una idea sin cierre registrado aparece marcada \"Sin cierre registrado\" y entra en la sección \"Listo para Codex\".<br>- [ ] Ninguna idea tiene un estado fuera de: Por decidir, Asignado, Incorporado en EX-NN, Descartado (hoy HZ-12 dice \"Resuelto\").<br>- [ ] Teléfono (390 px) y computador (1366 px): sin barra horizontal ni texto cortado.",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 2,
    "minutes": 8,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T05:05:00Z"
+   "lastActivity": "2026-10-02T05:05:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 8,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-P09"
+   ]
   },
   {
    "id": "T-23",
@@ -2338,12 +4348,28 @@ window.PFA_DATA = {
    "expected": "Oscar copia un solo mensaje en el chat correcto y Codex cierra lo que ya está listo",
    "evidence": "- [ ] Respondo un pendiente desde el tablero → al recargar el tablero aparece en \"Listo para Codex\", en el chat correcto (E = Desarrollo; T, HZ y lo demás = Entorno), con su acción.<br>- [ ] Hay 2 o más elementos para un chat → toco \"Copiar: solo cerrar\" en el teléfono → al pegarlo en ese chat de Codex recibe un solo mensaje que empieza por $cerrar-pendientes con todos los puntos.<br>- [ ] \"Copiar: cerrar y seguir\" agrega al final: \"Después, sigue con la siguiente tarea disponible según AGENTS.md.\"<br>- [ ] Codex termina → en menos de 10 minutos ese grupo queda en 0, y cada punto trabajado tiene su línea en worklog.<br>- [ ] El primer día aparecen T-11 y T-12 (En curso sin actividad por más de 12 horas). Es la prueba inicial.<br>- [ ] Una tarea en la que Codex está trabajando ahora (primera línea de \"Tarea en curso\" con menos de 30 minutos) no aparece.<br>- [ ] Una noche sin que yo pegue nada → Codex no se ejecuta ni una vez.<br>- [ ] Si GitHub no responde, la sección lo dice y muestra igual las tareas quietas y los hallazgos.",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 3,
    "minutes": 6,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T05:16:00Z"
+   "lastActivity": "2026-10-02T05:16:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 3,
+     "minutes": 6,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-P09"
+   ]
   },
   {
    "id": "T-24",
@@ -2353,12 +4379,26 @@ window.PFA_DATA = {
    "expected": "Las fallas de flows consultan Learn y al Copilot adecuado según el intento",
    "evidence": "- [ ] En la 2.ª falla de un flujo, el worklog muestra primero la consulta a Microsoft Learn (resumen y URL) y después la pregunta al Copilot del diseñador, armada con lo que dijo Learn.<br>- [ ] Cada consulta al Copilot del diseñador tiene su línea en worklog: pregunta resumida y si cambió el flujo o solo respondió.<br>- [ ] Si Copilot cambió el flujo, Codex lo revisa en Code view antes de guardar; si no sirve o agrega acciones Premium o que requieran permisos (D-027), lo deshace sin guardar.<br>- [ ] Si Copilot responde que no puede (por ejemplo \"Failed to add actions…\"), cuenta como intento fallido y Codex no se lo vuelve a pedir más de una vez.",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 2,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T04:20:00Z"
+   "lastActivity": "2026-10-02T04:20:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 2,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-25",
@@ -2368,12 +4408,26 @@ window.PFA_DATA = {
    "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
    "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 7,
    "minutes": 11,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T04:45:00Z"
+   "lastActivity": "2026-10-02T04:45:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 7,
+     "minutes": 11,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-26",
@@ -2383,12 +4437,26 @@ window.PFA_DATA = {
    "expected": "Oscar tiene un informe de texto detallado en la carpeta compartida de PFA",
    "evidence": "El archivo local existe y el conector de Drive confirma el archivo en “PFA - Compartido con Codex” con el mismo tamaño",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 2,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T05:24:00Z"
+   "lastActivity": "2026-10-02T05:24:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 2,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-27",
@@ -2398,12 +4466,26 @@ window.PFA_DATA = {
    "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
    "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 10,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T06:18:00Z"
+   "lastActivity": "2026-10-02T06:18:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 10,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-28",
@@ -2413,12 +4495,26 @@ window.PFA_DATA = {
    "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
    "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
    "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 5,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T06:32:00Z"
+   "lastActivity": "2026-10-02T06:32:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 5,
+     "limit": 30,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   },
   {
    "id": "T-29",
@@ -2428,37 +4524,82 @@ window.PFA_DATA = {
    "expected": "Oscar ve en el tablero si el agente activo trabaja con el AGENTS.md vigente",
    "evidence": "Criterios 3 de control/specs/T-29.md; tablero publicado a 1366 px y 390 px",
    "limit": 45,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
    "status": "Hecha",
    "attempts": 1,
    "minutes": 9,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-02T18:48:00Z"
+   "lastActivity": "2026-10-02T18:48:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 9,
+     "limit": 45,
+     "extra": 0
+    }
+   ],
+   "lessons": [
+    "KF-H08"
+   ]
+  },
+  {
+   "id": "T-30",
+   "action": "Tablero: intentos y tiempo por agente (Codex o Claude) en cada tarea, retroactivo desde E0, con la barra contra el límite inicial; botón de lecciones de KNOWN-FIXES por tarea; KF-P11 reescrita como enfoque; línea KF-P11 en AGENTS.md sección 5; fin de línea de AGENTS.md normalizado",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar ve quién hizo cada tarea, con cuántos intentos y cuánto tiempo frente a lo asignado, y puede leer las lecciones y soluciones",
+   "evidence": "Criterios 3 de control/specs/T-30.md; tablero publicado a 1366 px y 390 px",
+   "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 10,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T19:10:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 10,
+     "limit": 60,
+     "extra": 0
+    }
+   ],
+   "lessons": []
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 50,
-  "tasksTotal": 66,
+  "tasksDone": 51,
+  "tasksTotal": 67,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 776,
+   "prod": 786,
    "unprod": 100,
    "wait": 66,
-   "total": 942
+   "total": 952
   },
   "last24h": {
-   "prod": 256,
+   "prod": 258,
    "unprod": 72,
    "wait": 49,
-   "total": 377
+   "total": 379
   },
   "last7d": {
-   "prod": 776,
+   "prod": 786,
    "unprod": 100,
    "wait": 66,
-   "total": 942
+   "total": 952
   },
   "product": {
    "prod": 480,
@@ -2467,10 +4608,10 @@ window.PFA_DATA = {
    "total": 636
   },
   "support": {
-   "prod": 296,
+   "prod": 306,
    "unprod": 2,
    "wait": 8,
-   "total": 306
+   "total": 316
   }
  },
  "days": [
@@ -2554,7 +4695,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 204,
+   "prod": 214,
    "unprod": 72,
    "wait": 47
   }
@@ -2679,7 +4820,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 92
+   "minutes": 102
   },
   {
    "account": "empresa",
@@ -2687,6 +4828,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T19:00:00Z",
+   "minutes": 10,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-30",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tablero: línea por agente (intentos, min usados y asignados) retroactiva desde worklog.cuenta; barra contra límite inicial; botón Lecciones con KNOWN-FIXES; KF-P11 reescrita como enfoque; AGENTS.md sección 5 (KF-P11) y sección 6 (cuenta claude); AGENTS.md en CRLF para huella estable",
+   "evidence": "Auditoría local 5/5: E2-04 202/90 en rojo, Codex 18 int. 159/90+80, Claude 1 int. 43/60, Lecciones (6) con KF-P11 primero; E1-05 Codex 7 int. 143/60; sin desborde a 390 y 1366 px. Pages pendiente de verificar tras publicar"
+  },
   {
    "start": "2026-10-02T18:39:00Z",
    "minutes": 9,
@@ -2803,22 +4957,22 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "Studio editable; Monitor registró Select sin Notify ni llamada al flow al agotarse 60 min de diagnóstico",
    "evidence": "Auditoría 1/7; My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado ID 9537076d-e215-4f09-8490-fd292a7d9d7b; Refresh no quitó 12 errores ParseJSON. Learn: https://learn.microsoft.com/en-us/power-apps/maker/monitor-canvasapps; https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-iferror"
-  },
-  {
-   "start": "2026-10-02T10:54:00Z",
-   "minutes": 37,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 16,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "FORMULA_PA",
-   "summary": "Studio externo editable; corrección del output del flow publicada y referencia reconectada",
-   "evidence": "Auditoría 1/7: My flows 1/21 ID b236f6d8-4010-468f-a84f-6db74f0f52c7; Solutions 1/13 ID ffe081fa-06be-f111-aaaf-000d3a312931; In your app ID cff571b8-65e0-4ed9-96b1-28c5ce4b88e5; flow publicado desde ID 9537076d-e215-4f09-8490-fd292a7d9d7b. Monitor: Select, sin Notify ni llamada; siguen 12 errores ParseJSON en Studio. Corrección del Respond como string no resolvió el esquema de Power Apps."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T19:00:00Z",
+   "minutes": 10,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-30",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tablero: línea por agente (intentos, min usados y asignados) retroactiva desde worklog.cuenta; barra contra límite inicial; botón Lecciones con KNOWN-FIXES; KF-P11 reescrita como enfoque; AGENTS.md sección 5 (KF-P11) y sección 6 (cuenta claude); AGENTS.md en CRLF para huella estable",
+   "evidence": "Auditoría local 5/5: E2-04 202/90 en rojo, Codex 18 int. 159/90+80, Claude 1 int. 43/60, Lecciones (6) con KF-P11 primero; E1-05 Codex 7 int. 143/60; sin desborde a 390 y 1366 px. Pages pendiente de verificar tras publicar"
+  },
   {
    "start": "2026-10-02T18:39:00Z",
    "minutes": 9,

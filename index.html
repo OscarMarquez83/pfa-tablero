@@ -141,6 +141,24 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .tasks .act { color: var(--ink); }
 .tasks .more { color: var(--ink-2); font-size: 12.5px; margin-top: 6px; }
 .tasks .more b { color: var(--ink); font-weight: 600; }
+/* D-044: intentos y tiempo por agente, y lecciones de la tarea */
+.tasks tr.has-agents td { border-bottom: 0; padding-bottom: 4px; }
+.tasks tr.agents td { padding-top: 0; font-size: 11.5px; color: var(--ink-2); }
+.agentline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
+.ag { font-variant-numeric: tabular-nums; }
+.ag b { color: var(--ink); font-weight: 600; }
+.ag .adot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; background: var(--muted); }
+.ag.Codex .adot { background: var(--accent); } .ag.Claude .adot { background: #d97757; }
+.ag.ext .lim { color: var(--warning-ink); font-weight: 600; }
+.ag.over .lim { color: var(--critical-ink); font-weight: 600; }
+.lessbtn { margin-left: auto; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
+.lessbtn:hover { background: var(--surface-2); }
+.lesson { margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--grid); overflow-wrap: anywhere; font-size: 13.5px; line-height: 1.5; }
+.lesson:last-child { border-bottom: 0; }
+.lesson h4, .dlg-body .lesson h4 { margin: 0 0 4px; font-size: 14.5px; text-transform: none; letter-spacing: 0; color: var(--ink); font-weight: 650; }
+.lesson .lnote { color: var(--muted); font-size: 12px; margin: 0 0 6px; }
+.lesson ul { margin: 6px 0 0; padding-left: 18px; } .lesson ol { margin: 4px 0 6px; padding-left: 20px; }
+.lesson li { margin: 0 0 5px; } .lesson code { font-size: 12px; background: var(--surface-2); border-radius: 4px; padding: 0 4px; }
 .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .who { font-size: 11px; font-weight: 600; border-radius: 6px; padding: 2px 7px; background: var(--surface-2); color: var(--ink-2); white-space: nowrap; }
 .who.Oscar { background: var(--warning-soft); color: var(--warning-ink); }
@@ -555,10 +573,24 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       var over = t.limit && t.minutes > t.limit;
       var w = t.limit ? Math.min(100, pct(t.minutes, t.limit)) : 0;
       var tm = t.limit ? '<div class="tmeter' + (over ? " over" : "") + '"><span class="num">' + t.minutes + " / " + t.limit + ' min</span><div class="meter"><i style="width:' + w + '%"></i></div></div>' : '<span class="num" style="color:var(--muted)">' + (t.minutes ? t.minutes + " min" : "—") + "</span>";
-      return "<tr><td>" + chip(t.status) + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
+      var sub = agentRow(t);
+      return '<tr' + (sub ? ' class="has-agents"' : "") + "><td>" + chip(t.status) + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
         '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + "</div></details></td>" +
-        '<td><span class="who ' + esc(t.owner) + '">' + esc(t.owner) + '</span></td><td class="num hide-sm">' + t.attempts + "</td><td>" + tm + "</td></tr>";
+        '<td><span class="who ' + esc(t.owner) + '">' + esc(t.owner) + '</span></td><td class="num hide-sm">' + t.attempts + "</td><td>" + tm + "</td></tr>" + sub;
     }).join(""); }
+    // D-044: una línea por agente (intentos · minutos usados / asignados) y botón de lecciones.
+    function agentRow(t) {
+      var ags = (t.byAgent || []).filter(function (a) { return a.attempts || a.minutes; });
+      var nl = (t.lessons || []).length;
+      if (!ags.length && !nl) return "";
+      var parts = ags.map(function (a) {
+        var cap = (a.limit || 0) + (a.extra || 0), cls = a.minutes > cap && cap ? " over" : (a.extra && a.minutes > a.limit ? " ext" : "");
+        var lim = a.limit ? " / " + a.limit + (a.extra ? " +" + a.extra : "") + " min" : " min";
+        return '<span class="ag ' + esc(a.agent) + cls + '" title="' + esc(a.agent + ": " + a.attempts + " intentos, " + a.minutes + " min usados" + (a.limit ? " de " + a.limit + " asignados" + (a.extra ? " + " + a.extra + " de ampliación" : "") : "")) + '"><span class="adot"></span><b>' + esc(a.agent) + "</b> · " + a.attempts + " int. · " + a.minutes + '<span class="lim">' + esc(lim) + "</span></span>";
+      }).join("");
+      var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '">Lecciones (' + nl + ")</button>" : "";
+      return '<tr class="agents"><td colspan="6"><div class="agentline">' + parts + btn + "</div></td></tr>";
+    }
     function taskTable(list) {
       return '<div class="task-scroll"><table class="tasks"><thead><tr><th>Estado</th><th>ID</th><th>Acción</th><th>Resp.</th><th class="hide-sm">Intentos</th><th>Tiempo</th></tr></thead><tbody>' + taskRows(list) + "</tbody></table></div>";
     }
@@ -639,6 +671,45 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     openDlg("Revisión del agente revisor", html);
   }
   $("light").onclick = openRevision;
+  // D-044: lecciones de KNOWN-FIXES citadas por la tarea.
+  function inlineMd(s) {
+    return esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  }
+  function lessonBlock(lines) {
+    // "- texto" = punto principal; "  1. texto" o "  - texto" = subpunto.
+    var html = "", open = false, subOpen = false;
+    lines.forEach(function (l) {
+      var top = l.match(/^-\s+(.*)$/), sub = l.match(/^\s{2,}(?:\d+\.|-)\s+(.*)$/);
+      if (top) {
+        if (subOpen) { html += "</ol>"; subOpen = false; }
+        if (open) html += "</li>"; else { html += "<ul>"; open = true; }
+        html += "<li>" + inlineMd(top[1]);
+      } else if (sub && open) {
+        if (!subOpen) { html += "<ol>"; subOpen = true; }
+        html += "<li>" + inlineMd(sub[1]) + "</li>";
+      } else {
+        html += "<p>" + inlineMd(l.trim()) + "</p>";
+      }
+    });
+    if (subOpen) html += "</ol>";
+    if (open) html += "</li></ul>";
+    return html;
+  }
+  document.addEventListener("click", function (ev) {
+    var b = ev.target.closest && ev.target.closest(".lessbtn");
+    if (!b) return;
+    var L = D.lessons || {}, ids = String(b.getAttribute("data-lessons") || "").split(",").filter(Boolean);
+    // Primero las lecciones de proceso (cómo se abordó), después las técnicas.
+    var tk = b.getAttribute("data-task");
+    function rank(id) { var l = L[id] || {}; return String(l.title || "").indexOf(tk) >= 0 ? 0 : (/^KF-P/.test(id) ? 1 : 2); }
+    ids.sort(function (a, c) { return rank(a) - rank(c) || a.localeCompare(c, undefined, { numeric: true }); });
+    var html = '<p class="sub">Lo que se aprendió en ' + esc(b.getAttribute("data-task")) + ': problema, causa y solución, tal como quedó registrado para los agentes en KNOWN-FIXES.</p>' +
+      ids.map(function (id) {
+        var l = L[id]; if (!l) return "";
+        return '<div class="lesson"><h4>' + esc(id) + " · " + esc(l.title) + "</h4>" + (l.note ? '<p class="lnote">' + esc(l.note) + "</p>" : "") + lessonBlock(l.lines || []) + "</div>";
+      }).join("");
+    openDlg("Lecciones de " + b.getAttribute("data-task"), html);
+  });
   // D-043: ¿el agente que trabaja leyó el AGENTS.md vigente?
   (function () {
     var fp = D.status.ruleFootprints || {}, rd = fp.read || {}, el = $("rules"), cur = String(fp.current || "").toUpperCase();
