@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T13:49:16.258790Z",
+ "generatedUtc": "2026-10-02T13:55:16.094979Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -21,9 +21,10 @@ window.PFA_DATA = {
    "Avance 12:58 UTC (Claude): causa raíz encontrada. El Respond del flow expone la salida como foldersjson (minúsculas; title = foldersJson); OnSelect leía .foldersJson → error de compilación → OnSelect no se ejecutaba (ni el primer Notify). Run de prueba del flow Succeeded: 25 carpetas (raíz nivel 1, 10 nivel 2, 14 nivel 3).",
    "Avance 13:00 UTC (Claude): OnSelect mínimo (Notify + Run + Len(.foldersjson)) sin errores; en preview el botón ejecutó el flow y mostró \"Flow returned 8461 characters\". Studio guardó la app sin publicar (versión de prueba). Siguiente: OnSelect completo desde YAML.",
    "Avance 13:12 UTC (Claude): OnSelect completo (design/yaml/configuracion.pa.yaml) pegado; App checker sin errores en Configuration. Primer escaneo en preview: el flow corrió y el IfError mostró \"Field 'MailboxKey' is required\"; no se creó ninguna fila. REST (solo lectura) de PFA_MailFolders: obligatorias reales = OutlookFolderId, FolderName, MailboxKey, ReviewStatus (def. NeedsReview), ConsecutiveFailureCount (def. 0), LastAttemptedWatermarkUtc (DateTime, sin default). E2-01 había anotado solo 2. Lista hoy: 1 fila sintética (Id 1). El cambio de esquema necesita la aprobación de Oscar.",
-   "Avance 13:06 UTC (Claude): D-041 aprobado y aplicado (REST: 4 columnas Required=false; obligatorias ahora solo OutlookFolderId y FolderName). Preview: escaneo 1 \"25 folders found, 25 new\" (lista 1→26; 0 duplicados; todas Decision=Nueva; rutas Inbox/Projects/... completas); escaneo 2 \"25 folders found, 0 new\" (26 filas; Id/Modified/Decision/Included/ProjectId idénticos antes y después). App guardada y publicada 13:05 UTC. Falta: prueba en la app publicada (pide a Oscar permitir conexiones) y revisión visual desktop/teléfono."
+   "Avance 13:06 UTC (Claude): D-041 aprobado y aplicado (REST: 4 columnas Required=false; obligatorias ahora solo OutlookFolderId y FolderName). Preview: escaneo 1 \"25 folders found, 25 new\" (lista 1→26; 0 duplicados; todas Decision=Nueva; rutas Inbox/Projects/... completas); escaneo 2 \"25 folders found, 0 new\" (26 filas; Id/Modified/Decision/Included/ProjectId idénticos antes y después). App guardada y publicada 13:05 UTC. Falta: prueba en la app publicada (pide a Oscar permitir conexiones) y revisión visual desktop/teléfono.",
+   "Avance 13:50 UTC (Claude): Oscar autorizó el permiso de conexiones; la app publicada inició el flow (run 08:45 CT), pero el bucle tardó 3m20s y el Respond falló con ActionResponseTimedOut (límite de 120 s de Power Apps). Duraciones previas: 9 s, 11 s, 23 s, 60 s. Causa: 12 llamadas HTTP secuenciales en bucles anidados. Cambio: 1 llamada con $expand=childFolders desde Projects, sin bucles; salida igual (texto foldersjson) con forma {root, children[].childFolders}; la app aplana."
   ],
-  "fileUtc": "2026-10-02T13:05:40.314406Z",
+  "fileUtc": "2026-10-02T13:49:29.512314Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
