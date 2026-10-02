@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T13:01:15.356006Z",
+ "generatedUtc": "2026-10-02T13:07:15.368566Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -12,7 +12,7 @@ window.PFA_DATA = {
   "needsOscar": [
    {
     "ref": "",
-    "text": "E2-04 (Claude): aprobar que quite la marca de \"obligatoria\" a 4 columnas de PFA_MailFolders que E2 no usa (MailboxKey, ReviewStatus, ConsecutiveFailureCount, LastAttemptedWatermarkUtc), como prevé D-005. No se borran columnas ni datos y se puede revertir. Sin esto, Scan folders no puede guardar carpetas. Al responder: aplico el cambio, lo anoto en worklog y hago los dos escaneos de prueba."
+    "text": "E2-04 (Claude): la app publicada pide \"Allow PFA_Pilot_App to access your data?\" (Office 365 Outlook y SharePoint, tus propias conexiones). Confirma si lo acepto o lo pulsas tú. Al responder: acepto el permiso y repito el escaneo en la app publicada."
    }
   ],
   "blockers": [],
@@ -20,9 +20,10 @@ window.PFA_DATA = {
    "E2-04 (Claude), intento 19, inicio 2026-10-02 12:45 UTC. Enfoque nuevo: la fórmula OnSelect tiene 12 errores, y una fórmula con errores no se ejecuta (por eso no aparece ni el primer Notify). Haré: 1) leer la salida real del último run del flow (campos y niveles); 2) leer columnas y filas de PFA_MailFolders; 3) reescribir OnSelect por pasos medibles (Notify + Run solo → run nuevo en historial; luego ParseJSON; luego Patch). Comprobación: run nuevo Succeeded desde la app; primer scan agrega niveles 1-3; segundo scan 0 nuevas; fila decidida intacta; app publicada. Navegador integrado de Claude Code con sesión de Oscar. Cierre de Studio: GUARDAR.",
    "Avance 12:58 UTC (Claude): causa raíz encontrada. El Respond del flow expone la salida como foldersjson (minúsculas; title = foldersJson); OnSelect leía .foldersJson → error de compilación → OnSelect no se ejecutaba (ni el primer Notify). Run de prueba del flow Succeeded: 25 carpetas (raíz nivel 1, 10 nivel 2, 14 nivel 3).",
    "Avance 13:00 UTC (Claude): OnSelect mínimo (Notify + Run + Len(.foldersjson)) sin errores; en preview el botón ejecutó el flow y mostró \"Flow returned 8461 characters\". Studio guardó la app sin publicar (versión de prueba). Siguiente: OnSelect completo desde YAML.",
-   "Avance 13:12 UTC (Claude): OnSelect completo (design/yaml/configuracion.pa.yaml) pegado; App checker sin errores en Configuration. Primer escaneo en preview: el flow corrió y el IfError mostró \"Field 'MailboxKey' is required\"; no se creó ninguna fila. REST (solo lectura) de PFA_MailFolders: obligatorias reales = OutlookFolderId, FolderName, MailboxKey, ReviewStatus (def. NeedsReview), ConsecutiveFailureCount (def. 0), LastAttemptedWatermarkUtc (DateTime, sin default). E2-01 había anotado solo 2. Lista hoy: 1 fila sintética (Id 1). El cambio de esquema necesita la aprobación de Oscar."
+   "Avance 13:12 UTC (Claude): OnSelect completo (design/yaml/configuracion.pa.yaml) pegado; App checker sin errores en Configuration. Primer escaneo en preview: el flow corrió y el IfError mostró \"Field 'MailboxKey' is required\"; no se creó ninguna fila. REST (solo lectura) de PFA_MailFolders: obligatorias reales = OutlookFolderId, FolderName, MailboxKey, ReviewStatus (def. NeedsReview), ConsecutiveFailureCount (def. 0), LastAttemptedWatermarkUtc (DateTime, sin default). E2-01 había anotado solo 2. Lista hoy: 1 fila sintética (Id 1). El cambio de esquema necesita la aprobación de Oscar.",
+   "Avance 13:06 UTC (Claude): D-041 aprobado y aplicado (REST: 4 columnas Required=false; obligatorias ahora solo OutlookFolderId y FolderName). Preview: escaneo 1 \"25 folders found, 25 new\" (lista 1→26; 0 duplicados; todas Decision=Nueva; rutas Inbox/Projects/... completas); escaneo 2 \"25 folders found, 0 new\" (26 filas; Id/Modified/Decision/Included/ProjectId idénticos antes y después). App guardada y publicada 13:05 UTC. Falta: prueba en la app publicada (pide a Oscar permitir conexiones) y revisión visual desktop/teléfono."
   ],
-  "fileUtc": "2026-10-02T12:58:06.759860Z",
+  "fileUtc": "2026-10-02T13:05:40.314406Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
