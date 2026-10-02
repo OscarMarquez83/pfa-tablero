@@ -1,18 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:52:15.122830Z",
+ "generatedUtc": "2026-10-02T05:01:14.029008Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:46 UTC",
+  "updated": "2026-10-02 05:00 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "T-25 cerrada; T-22 y T-23 esperan pruebas visuales de Oscar. E2-04 conserva 6 minutos efectivos y se reanuda cuando Studio permita editar.",
+  "nextAction": "T-12 cerrada tras auditoría; 11 cierres HZ registrados. Siguiente: reanudar E2-04 cuando la otra sesión libere Studio; quedan 6 minutos efectivos.",
   "needsOscar": [
    {
-    "ref": "T-22",
-    "text": "revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
+    "ref": "E2-04",
+    "text": "la pestaña de Studio está asignada a otra sesión; para evitar cambios concurrentes, espero a que quede libre. Avísame aquí cuando termine. Al responder: reanudo E2-04 y compruebo Scan folders.rn- T-22: revisa Ideas y hallazgos en computadora a 1366 px y teléfono a 390 px; confirma que no hay barra horizontal ni texto cortado y que HZ-11 indica issue #8 y E2-11. Responde T-22 OK o describe el defecto. Al responder: registraré la prueba visual y cerraré o corregiré T-22."
    },
    {
     "ref": "T-23",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-25, intento 2: HECHA; GUARDAR, DESCARTAR e inesperado probados en los dos navegadores; el script de captura ya había guardado pantalla completa en tmp/evidencia/T-25. Publicación: el tablero se regeneró; el log local sigue dando acceso denegado (KF-H04).",
+   "T-12, intento 2: HECHA (20 minutos acumulados). Skill/reglas instaladas; análisis histórico en ba2d73a; E1-05 cumple auditoría visual 7x2 (14/14). Los 11 hallazgos solicitados tienen Cierre actualizado.",
    "T-25, intento 2 iniciado 2026-10-02 04:42 UTC y cerrado 2026-10-02 04:46 como HECHA (3 min): los casos GUARDAR, DESCARTAR e inesperado pasaron en Edge y navegador integrado. Cierre de Studio: GUARDAR — tras Cancel inesperado, conservar el borrador y guardarlo antes de cerrar. No cerré Studio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
@@ -36,7 +36,7 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:46:25.937049Z",
+  "fileUtc": "2026-10-02T05:01:02.092832Z",
   "ruleFootprints": {
    "current": "C938B2D9",
    "lines": {
@@ -391,15 +391,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 20,
+   "done": 21,
    "total": 25,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 268,
+    "prod": 270,
     "unprod": 2,
     "wait": 8,
-    "total": 278
+    "total": 280
    }
   }
  ],
@@ -748,11 +748,11 @@ window.PFA_DATA = {
     "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
     "limit": 90,
     "status": "En curso",
-    "attempts": 11,
+    "attempts": 12,
     "minutes": 84,
     "entrega": "E2",
     "fails": 4,
-    "lastActivity": "2026-10-02T03:45:00Z",
+    "lastActivity": "2026-10-02T05:00:00Z",
     "ready": true
    },
    {
@@ -1172,13 +1172,12 @@ window.PFA_DATA = {
     "expected": "Toda reapertura parte del análisis de fallos previos",
     "evidence": "Skill disponible; AGENTS/REVISOR actualizados; análisis publicado en STATUS; cierre visual de E1-05 exigirá auditoría 7x2",
     "limit": 30,
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 18,
+    "status": "Hecha",
+    "attempts": 2,
+    "minutes": 20,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-01T06:05:00Z",
-    "ready": true
+    "lastActivity": "2026-10-02T04:57:00Z"
    },
    {
     "id": "T-13",
@@ -1388,11 +1387,11 @@ window.PFA_DATA = {
   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
   "limit": 90,
   "status": "En curso",
-  "attempts": 11,
+  "attempts": 12,
   "minutes": 84,
   "entrega": "E2",
   "fails": 4,
-  "lastActivity": "2026-10-02T03:45:00Z",
+  "lastActivity": "2026-10-02T05:00:00Z",
   "ready": true
  },
  "upcoming": [
@@ -1405,11 +1404,11 @@ window.PFA_DATA = {
    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
    "limit": 90,
    "status": "En curso",
-   "attempts": 11,
+   "attempts": 12,
    "minutes": 84,
    "entrega": "E2",
    "fails": 4,
-   "lastActivity": "2026-10-02T03:45:00Z",
+   "lastActivity": "2026-10-02T05:00:00Z",
    "ready": true
   },
   {
@@ -2119,6 +2118,21 @@ window.PFA_DATA = {
    "lastActivity": "2026-10-01T11:27:00Z"
   },
   {
+   "id": "T-12",
+   "action": "Instalar skill reabrir-tarea y aplicarla a E1-05 tras reconstruir sus intentos previos",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Toda reapertura parte del análisis de fallos previos",
+   "evidence": "Skill disponible; AGENTS/REVISOR actualizados; análisis publicado en STATUS; cierre visual de E1-05 exigirá auditoría 7x2",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 20,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T04:57:00Z"
+  },
+  {
    "id": "T-13",
    "action": "Anunciar en la primera línea cada skill usada y registrar la regla pedida por Oscar",
    "owner": "Agente",
@@ -2277,27 +2291,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 42,
+  "tasksDone": 43,
   "tasksTotal": 63,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 648,
+   "prod": 650,
    "unprod": 82,
    "wait": 326,
-   "total": 1056
+   "total": 1058
   },
   "last24h": {
-   "prod": 277,
+   "prod": 279,
    "unprod": 80,
    "wait": 320,
-   "total": 677
+   "total": 679
   },
   "last7d": {
-   "prod": 648,
+   "prod": 650,
    "unprod": 82,
    "wait": 326,
-   "total": 1056
+   "total": 1058
   },
   "product": {
    "prod": 380,
@@ -2306,10 +2320,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 268,
+   "prod": 270,
    "unprod": 2,
    "wait": 8,
-   "total": 278
+   "total": 280
   }
  },
  "days": [
@@ -2393,7 +2407,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 76,
+   "prod": 78,
    "unprod": 54,
    "wait": 307
   }
@@ -2499,17 +2513,17 @@ window.PFA_DATA = {
    "total": 23
   },
   {
-   "task": "T-04",
-   "prod": 19,
+   "task": "T-12",
+   "prod": 20,
    "unprod": 0,
    "wait": 0,
-   "total": 19
+   "total": 20
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 714
+   "minutes": 716
   },
   {
    "account": "empresa",
@@ -2518,137 +2532,306 @@ window.PFA_DATA = {
  ],
  "recent": [
   {
-   "start": "2026-10-02T04:45:00Z",
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 12,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio aparece Editing, pero su pestaña está reclamada por otra sesión",
+   "evidence": "openTabs identificó Power Apps Studio; claimTab respondió que la pestaña ya pertenece a otra sesión; no se editó la app"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
    "minutes": 0,
    "account": "personal",
    "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — inesperado — integrado",
-   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
-  },
-  {
-   "start": "2026-10-02T04:44:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — DESCARTAR — integrado",
-   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
-  },
-  {
-   "start": "2026-10-02T04:44:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — GUARDAR — integrado",
-   "evidence": "Guardé; el destino confirmó la versión guardada inicial sin mostrar confirm."
-  },
-  {
-   "start": "2026-10-02T04:44:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — inesperado — Edge",
-   "evidence": "Escape eligió Cancel y conservó el borrador; STATUS anotó GUARDAR antes de continuar, luego guardé y cerré."
-  },
-  {
-   "start": "2026-10-02T04:43:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — DESCARTAR — Edge",
-   "evidence": "Confirm apareció; Enter eligió Leave y la página mostró la última versión guardada, sin el cambio de prueba."
-  },
-  {
-   "start": "2026-10-02T04:42:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo — GUARDAR — Edge",
-   "evidence": "Guardé; la página de destino confirmó la versión guardada inicial sin mostrar confirm."
-  },
-  {
-   "start": "2026-10-02T04:21:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-25",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "diálogo nativo local: guardar y confirmar en Edge",
-   "evidence": "Edge llegó a página final sin cambios; con cambios apareció confirm nativo, pero esta interfaz interrumpió el clic y no permitió aceptar o cancelar. Captura Windows verificada en tmp/evidencia/T-25; integrado no probado."
-  },
-  {
-   "start": "2026-10-02T04:18:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-24",
+   "task": "HZ-18",
    "attempt": 1,
    "result": "HECHA",
    "kind": "prod",
    "category": "DOCUMENTACION",
-   "summary": "Actualicé el anti-bucle de flows y agregué la limitación del Copilot del diseñador",
-   "evidence": "AGENTS.md filas 2.ª/3.ª y nota de fallo; KNOWN-FIXES KF-H06 con URL; consultas previas de Learn/Copilot registradas en worklog"
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador."
   },
   {
-   "start": "2026-10-02T04:06:00Z",
-   "minutes": 8,
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
    "account": "personal",
    "entrega": "T",
-   "task": "T-22",
+   "task": "HZ-17",
    "attempt": 1,
-   "result": "AVANCE",
+   "result": "HECHA",
    "kind": "prod",
-   "category": "OTRO",
-   "summary": "Agregué Cierre a HZ-01..13, corregí estados y referencia de T-21",
-   "evidence": "Build correcto; data.js en GitHub actualizado 04:11; Pages muestra una copia anterior en caché; falta revisión visual a 1366/390 px"
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador."
   },
   {
-   "start": "2026-10-02T03:59:00Z",
-   "minutes": 4,
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
    "account": "personal",
    "entrega": "T",
-   "task": "T-23",
-   "attempt": 2,
-   "result": "AVANCE",
+   "task": "HZ-16",
+   "attempt": 1,
+   "result": "HECHA",
    "kind": "prod",
-   "category": "OTRO",
-   "summary": "Verifiqué Pages tras publicar: agrupación y botones Copiar funcionan; T-11 ya no aparece.",
-   "evidence": "Pages actualizada 2026-10-02 03:57 UTC; preview muestra dos puntos en Chat Entorno; ambos botones respondieron Copiado. PFA Despertador PAUSED. Falta prueba a 1366/390 px y el ciclo completo en el chat."
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-15",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-14",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-07",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-04",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-04",
+   "attempt": 12,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio aparece Editing, pero su pestaña está reclamada por otra sesión",
+   "evidence": "openTabs identificó Power Apps Studio; claimTab respondió que la pestaña ya pertenece a otra sesión; no se editó la app"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-18",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-17",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-16",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-15",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-14",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas."
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-07",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-04",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-03",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:57:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "T",
+   "task": "HZ-01",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Cierre registrado en PLAN.md",
+   "evidence": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
+  },
+  {
+   "start": "2026-10-02T04:55:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-12",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Auditoría de cierre: T-12 cumplida",
+   "evidence": "Skill y reglas presentes; análisis publicado en commit ba2d73a; E1-05 Hecha con auditoría 14/14 en app publicada, worklog y criterio 7x2 en PLAN.md"
+  },
   {
    "start": "2026-10-02T04:45:00Z",
    "minutes": 0,
@@ -4010,7 +4193,7 @@ window.PFA_DATA = {
    "found": "Revisión de Claude",
    "target": "E5",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-02",
@@ -4028,7 +4211,7 @@ window.PFA_DATA = {
    "found": "Revisión de Claude",
    "target": "E6",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-04",
@@ -4037,7 +4220,7 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "E7",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-05",
@@ -4064,7 +4247,7 @@ window.PFA_DATA = {
    "found": "Oscar",
    "target": "T",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-08",
@@ -4073,7 +4256,7 @@ window.PFA_DATA = {
    "found": "E1-08",
    "target": "E5",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-09",
@@ -4082,7 +4265,7 @@ window.PFA_DATA = {
    "found": "Incidente INC-01",
    "target": "E2",
    "status": "Asignado",
-   "closure": ""
+   "closure": "2026-10-02 · sin issue o chat de respuesta en los registros consultados · sin registro de respuesta"
   },
   {
    "id": "HZ-10",
@@ -4126,7 +4309,7 @@ window.PFA_DATA = {
    "text": "Power Apps no reconoce la respuesta del escaneo; requiere elegir un camino de reparación (mini-spec en control/specs/HZ-14.md)",
    "found": "Codex en E2-04",
    "target": "E2",
-   "status": "Incorporado en E2-04",
+   "status": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas.",
    "closure": ""
   },
   {
@@ -4135,7 +4318,7 @@ window.PFA_DATA = {
    "text": "Ver el cierre de cada idea o hallazgo asignado (mini-spec en control/specs/HZ-15.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado",
+   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas.",
    "closure": ""
   },
   {
@@ -4144,7 +4327,7 @@ window.PFA_DATA = {
    "text": "Detectar pendientes listos para que Oscar los envíe a Codex con un mensaje (mini-spec en control/specs/HZ-16.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado",
+   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador.",
    "closure": ""
   },
   {
@@ -4153,7 +4336,7 @@ window.PFA_DATA = {
    "text": "Consultar primero Learn y después al Copilot del diseñador de flows desde la segunda falla (mini-spec en control/specs/HZ-17.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado",
+   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec del Copilot del diseñador.",
    "closure": ""
   },
   {
@@ -4162,7 +4345,7 @@ window.PFA_DATA = {
    "text": "Detectar y resolver diálogos nativos del navegador antes de declarar que no responde (mini-spec en control/specs/HZ-18.md)",
    "found": "Oscar en Claude",
    "target": "T",
-   "status": "Asignado",
+   "status": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec para resolver diálogos nativos del navegador.",
    "closure": ""
   }
  ]
