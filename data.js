@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T23:27:17.335807Z",
+ "generatedUtc": "2026-10-02T23:34:17.455155Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,7 +9,12 @@ window.PFA_DATA = {
   "updated": "2026-10-02 19:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [],
+  "needsOscar": [
+   {
+    "ref": "",
+    "text": "E2-05 (Claude): el disco C: tiene 0 GB libres y git no pudo guardar el commit del intento 1. Necesito tu permiso para buscar las carpetas más grandes y proponerte qué borrar (no borro nada sin tu visto bueno). Al responder: busco qué ocupa el disco, te muestro la lista y, cuando apruebes, libero espacio y hago el commit."
+   }
+  ],
   "blockers": [],
   "current": [
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
@@ -18,7 +23,7 @@ window.PFA_DATA = {
    "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial.",
    "Avance (Claude, D-045): Configuration.OnVisible carga colFolders y colProjects. La galería de carpetas nuevas tiene Items, TemplateSize, X, Y, Width y Height. Ya se cambiaron la etiqueta de ruta (Text, Tooltip, Width, X, Y, Height), el botón Project (OnSelect, Text, posición) y el botón Part of parent project (OnSelect, DisplayMode, Text, posición, colores). App checker: 0 errores en Configuration. Lección: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo; para borrar usar Ctrl+End, Ctrl+Shift+Home y Delete, y revisar cada propiedad con View code antes de guardar. Falta: botón Not a project (insertarlo en la galería), títulos, estados vacíos, OnSelect de Scan con D-042, sección Reviewed folders, quitar controles viejos, revisar con View code, pruebas, publicar y cerrar. Cierre de Studio: GUARDAR (Studio autoguarda; la versión 161 publicada sigue Live)."
   ],
-  "fileUtc": "2026-10-02T21:30:39.522699Z",
+  "fileUtc": "2026-10-02T23:27:45.747958Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
