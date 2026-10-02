@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T04:23:18.890157Z",
+ "generatedUtc": "2026-10-02T04:31:15.797075Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 04:21 UTC",
+  "updated": "2026-10-02 04:29 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "crear la página local y probar los tres resultados del diálogo en Edge y el navegador integrado. T-22 y T-23 esperan pruebas visuales de Oscar. E2-04 conserva 6 minutos efectivos y espera a que Studio permita editar.",
+  "nextAction": "continuar T-25 en un intento distinto; la prueba local abrió confirm en Edge, pero esta interfaz automatizada interrumpió el clic y no permitió elegir Leave o Cancel. No se probó aún el navegador integrado. T-22/T-23 esperan pruebas visuales de Oscar; E2-04 conserva 6 minutos y espera a que Studio permita editar.",
   "needsOscar": [
    {
     "ref": "T-22",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-25, intento 1 iniciado 2026-10-02 04:21 UTC: añadir captura de pantalla completa, reglas de cierre para Studio/flow designer y probar guardar, descartar e inesperado en la página local.",
+   "T-25, intento 1 iniciado 2026-10-02 04:21 UTC y cerrado 04:29 como AVANCE (8 min): reglas y script de captura añadidos; en Edge la página local guardó y navegó sin confirmación cuando no había cambios. Con cambios, mostró el confirm, pero la automatización interrumpió el clic y no permitió elegir; integrado sin probar. Publicador al cierre: dashboard/data.js regenerado; acceso denegado en C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log (KF-H04), publicación remota no confirmada.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): regla anti-bucle y KF-H06 actualizadas. Publicación falló: git pull --rebase --quiet devolvió \"Cannot rebase onto multiple branches\"; clon limpio.",
    "T-24, intento 1 iniciado 2026-10-02 04:18 UTC y cerrado 04:20 como HECHA (2 min): actualicé la regla anti-bucle, añadí KF-H06 con URL y comprobé las entradas de worklog de Learn/Copilot. El publicador fuera del sandbox falló en git pull --rebase --quiet: “Cannot rebase onto multiple branches”; el clon quedó limpio.",
    "T-22, intento 1 iniciado 2026-10-02 04:06 UTC y cerrado 04:14 como Por validar (8 min): agregué Cierre, completé HZ-01..13, normalicé HZ-02/05/06/12 y corregí T-21. Build correcto; Pages muestra Cierre, HZ-11 y los 11 sin registro en Listo para Codex. Falta prueba exacta a 1366/390 px.",
@@ -35,12 +35,12 @@ window.PFA_DATA = {
    "Avance 03:41 UTC: en preview, Scan folders no mostró resultado; historial actualizado sin corrida nueva.",
    "Avance 03:45 UTC: intenté retomar el diagnóstico en Studio integrado, pero otra sesión lo mantiene en solo lectura. No interrumpí esa sesión."
   ],
-  "fileUtc": "2026-10-02T04:23:07.763813Z",
+  "fileUtc": "2026-10-02T04:30:21.895025Z",
   "ruleFootprints": {
-   "current": "3BCBA813",
+   "current": "C938B2D9",
    "lines": {
     "Desarrollo": "AB72D313",
-    "Entorno": "3BCBA813"
+    "Entorno": "C938B2D9"
    }
   }
  },
@@ -395,10 +395,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 253,
+    "prod": 261,
     "unprod": 2,
     "wait": 8,
-    "total": 263
+    "total": 271
    }
   }
  ],
@@ -1369,12 +1369,12 @@ window.PFA_DATA = {
     "expected": "Codex detecta y resuelve el diálogo nativo antes de declarar que el navegador no responde",
     "evidence": "- [ ] Antes de cerrar, recargar o salir de Studio o del diseñador de un flujo, \"Tarea en curso\" (STATUS) dice \"Cierre de Studio: GUARDAR\" o \"Cierre de Studio: DESCARTAR — motivo\".<br>- [ ] GUARDAR → Codex guarda, comprueba que quedó guardado y cierra. No debería aparecer el diálogo.<br>- [ ] DESCARTAR → Codex cierra y, cuando aparece el diálogo, elige \"Leave\" a propósito. El worklog dice qué cambios se descartaron y que la app quedó en su última versión guardada.<br>- [ ] Diálogo inesperado (no había decisión anotada) → Codex elige \"Cancel\", no pierde nada, anota la decisión y vuelve a cerrar según ella.<br>- [ ] Si una acción del navegador no responde, lo primero es una captura de la pantalla completa de Windows (no de la pestaña) en tmp/evidencia/. Si muestra un diálogo del navegador, se aplica lo anterior. Nunca se marca \"Prevent this page from creating additional dialogs\".<br>- [ ] Prueba controlada (sin tocar la app): una página local en tmp/ que pide confirmación al salir. Codex prueba los 3 casos (guardar, descartar, inesperado) en Edge y en el navegador integrado, y cada uno se resuelve solo en menos de 3 minutos.<br>- [ ] Cada caso queda en worklog con categoría NAVEGADOR y resumen \"diálogo nativo\". \"Necesito de Oscar\" no recibe ningún pedido por esto.",
     "limit": 30,
-    "status": "En curso",
+    "status": "AVANCE",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 8,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-02T04:29:00Z",
     "ready": true
    }
   ]
@@ -2267,22 +2267,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 633,
+   "prod": 641,
    "unprod": 82,
    "wait": 326,
-   "total": 1041
+   "total": 1049
   },
   "last24h": {
-   "prod": 362,
+   "prod": 370,
    "unprod": 80,
    "wait": 320,
-   "total": 762
+   "total": 770
   },
   "last7d": {
-   "prod": 633,
+   "prod": 641,
    "unprod": 82,
    "wait": 326,
-   "total": 1041
+   "total": 1049
   },
   "product": {
    "prod": 380,
@@ -2291,10 +2291,10 @@ window.PFA_DATA = {
    "total": 778
   },
   "support": {
-   "prod": 253,
+   "prod": 261,
    "unprod": 2,
    "wait": 8,
-   "total": 263
+   "total": 271
   }
  },
  "days": [
@@ -2378,7 +2378,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 61,
+   "prod": 69,
    "unprod": 54,
    "wait": 307
   }
@@ -2494,7 +2494,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 699
+   "minutes": 707
   },
   {
    "account": "empresa",
@@ -2502,6 +2502,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T04:21:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo local: guardar y confirmar en Edge",
+   "evidence": "Edge llegó a página final sin cambios; con cambios apareció confirm nativo, pero esta interfaz interrumpió el clic y no permitió aceptar o cancelar. Captura Windows verificada en tmp/evidencia/T-25; integrado no probado."
+  },
   {
    "start": "2026-10-02T04:18:00Z",
    "minutes": 2,
@@ -2618,22 +2631,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Studio abrió en solo lectura por otra sesión; pausé para atender el pedido T de Oscar",
    "evidence": "No se modificó ni guardó la app o el flow; queda para retomar Camino 1"
-  },
-  {
-   "start": "2026-10-02T02:33:00Z",
-   "minutes": 303,
-   "account": "empresa",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 6,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Reapertura: Camino 1 elegido; no pude abrir el navegador integrado ni Edge para operar Studio",
-   "evidence": "Ambas consultas de estado agotaron el tiempo; no se modificó la app ni el flow"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T04:21:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-25",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "diálogo nativo local: guardar y confirmar en Edge",
+   "evidence": "Edge llegó a página final sin cambios; con cambios apareció confirm nativo, pero esta interfaz interrumpió el clic y no permitió aceptar o cancelar. Captura Windows verificada en tmp/evidencia/T-25; integrado no probado."
+  },
   {
    "start": "2026-10-02T04:18:00Z",
    "minutes": 2,
