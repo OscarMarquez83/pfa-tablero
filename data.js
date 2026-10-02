@@ -1,24 +1,32 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:31:14.254250Z",
+ "generatedUtc": "2026-10-02T06:37:15.976010Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:27 UTC",
+  "updated": "2026-10-02 06:36 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar T-28 y publicar sus cambios; luego medir E2-04 con un solo Edge externo.",
+  "nextAction": "Ejecutar el diagnóstico de E2-04 en Studio desde Edge externo; medir, corregir solo el caso observado y comprobar en la app publicada.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-28, intento 1 iniciado 2026-10-02 06:27 UTC: aplicar la mini-spec aprobada a AGENTS.md, idea y los informes; comprobar cada criterio en los archivos."
+   "E2-04, intento 15 iniciado 2026-10-02 06:35 UTC: medir el clic de Scan folders en Monitor y corregir solo la causa observada.",
+   "Defecto: 14 intentos previos no produjeron una corrida nueva desde Preview; el historial visto seguía en 1-oct.",
+   "Intentos previos: expresiones y Parse JSON; re-vincular el flow; revisar conexión y Flow Checker; clics sin instrumentación.",
+   "Por qué no cerró: ningún Monitor correlacionó el clic con la llamada; causa desconocida.",
+   "Enfoque nuevo: Monitor + Notify(\"Scan started\") + IfError(…FirstError.Message), un clic y captura.",
+   "Criterio nuevo: criterios de tmp/mini-spec-5-E2-04-diagnostico.md, sección 3; probar los cuatro casos y la app publicada.",
+   "Reapertura aprobada por Oscar: mini-spec 5 concede 60 minutos efectivos nuevos; historial previo 87 min.",
+   "Cierre de Studio: DESCARTAR — no recuperar la copia local del flow; conservar el publicado antes de abrir Power Apps Studio.",
+   "Avance 2026-10-02 06:36 UTC: historial de 14 intentos y mini-spec revisados; preparando inventario e instrumentación."
   ],
-  "fileUtc": "2026-10-02T06:29:51.357824Z",
+  "fileUtc": "2026-10-02T06:36:14.336136Z",
   "ruleFootprints": {
    "current": "31977571",
    "lines": {
-    "Desarrollo": "C938B2D9",
+    "Desarrollo": "31977571",
     "Entorno": "31977571"
    }
   }
@@ -381,15 +389,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 25,
+   "done": 26,
    "total": 27,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 282,
+    "prod": 287,
     "unprod": 2,
     "wait": 8,
-    "total": 292
+    "total": 297
    }
   }
  ],
@@ -731,14 +739,14 @@ window.PFA_DATA = {
    },
    {
     "id": "E2-04",
-    "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+    "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
     "owner": "Agente",
     "depends": "E2-03",
-    "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-    "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
-    "limit": 90,
-    "status": "Bloqueada",
-    "attempts": 14,
+    "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+    "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+    "limit": 60,
+    "status": "Reabierta",
+    "attempts": 15,
     "minutes": 87,
     "entrega": "E2",
     "fails": 6,
@@ -1059,7 +1067,7 @@ window.PFA_DATA = {
     "limit": 30,
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 4,
+    "minutes": 5,
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-01T01:03:00Z"
@@ -1387,43 +1395,42 @@ window.PFA_DATA = {
     "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
     "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
     "limit": 30,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 5,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-02T06:32:00Z"
    }
   ]
  },
  "nextTask": {
-  "id": "T-28",
-  "action": "No escalar decisiones técnicas: hipótesis, límite de diagnóstico, informe y chat diario",
+  "id": "E2-04",
+  "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
   "owner": "Agente",
-  "depends": "—",
-  "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
-  "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
-  "limit": 30,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 0,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "",
+  "depends": "E2-03",
+  "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+  "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+  "limit": 60,
+  "status": "Reabierta",
+  "attempts": 15,
+  "minutes": 87,
+  "entrega": "E2",
+  "fails": 6,
+  "lastActivity": "2026-10-02T05:10:00Z",
   "ready": true
  },
  "upcoming": [
   {
    "id": "E2-04",
-   "action": "Tomar como raíz la carpeta Projects localizada entre las carpetas directas de Inbox y extender PFA_E2_LeerCarpetas a niveles 2 y 3; excluir las demás carpetas directas de Inbox y, en design/yaml/configuracion.pa.yaml, agregar el botón “Scan folders”. El botón ejecuta el flow, lee el JSON y crea con Patch solo las filas nuevas en PFA_MailFolders (comparación por OutlookFolderId); nunca modifica filas existentes. Las carpetas aparecen al escanear Configuration; no hay ejecución diaria",
+   "action": "Tomar como raíz la carpeta Projects localizada entre carpetas directas de Inbox y extender PFA_E2_LeerCarpetas hasta nivel 3; excluir las demás carpetas directas; botón Scan folders en Configuration que guarda solo filas nuevas por OutlookFolderId",
    "owner": "Agente",
    "depends": "E2-03",
-   "expected": "Oscar escanea desde Configuration y ve las carpetas nuevas para decidir",
-   "evidence": "En preview, Camino 1 se completa: guardar app sin flow, cerrar y reabrir Studio, volver a agregar flow; Power Apps reconoce foldersJson y el botón ejecuta el flow. Primer escaneo crea carpetas de niveles 1–3; segundo no duplica; una fila existente conserva Decision/Included/ProjectId",
-   "limit": 90,
-   "status": "Bloqueada",
-   "attempts": 14,
+   "expected": "Oscar escanea desde Configuration y revisa las carpetas nuevas",
+   "evidence": "Worklog: Edge externo único; conteos e IDs de My flows y Solutions y flow marcado In your app; captura de Monitor en un clic instrumentado, caso 1-4 identificado; aplicar solo la corrección del caso y volver a medir; en app publicada, primer scan muestra N carpetas niveles 1-3, segundo muestra 0 nuevas sin duplicados, fila decidida intacta; botón sin superposición en desktop y teléfono.",
+   "limit": 60,
+   "status": "Reabierta",
+   "attempts": 15,
    "minutes": 87,
    "entrega": "E2",
    "fails": 6,
@@ -2056,7 +2063,7 @@ window.PFA_DATA = {
    "limit": 30,
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 4,
+   "minutes": 5,
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-01T01:03:00Z"
@@ -2360,37 +2367,52 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-02T06:18:00Z"
+  },
+  {
+   "id": "T-28",
+   "action": "No escalar decisiones técnicas: hipótesis, límite de diagnóstico, informe y chat diario",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar recibe solo decisiones personales y los problemas técnicos llegan medidos",
+   "evidence": "Criterios 3 de control/specs/T-28.md; reglas actualizadas, plantilla de informe creada y T-18 retirada",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 5,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T06:32:00Z"
   }
  ],
  "alerts": [
   {
    "task": "E2-04",
-   "reason": "Bloqueada: espera decisión de Oscar",
-   "level": "critical"
+   "reason": "Reabierta: se dio por terminada y no lo estaba (15 intentos previos)",
+   "level": "serious"
   }
  ],
  "kpi": {
-  "tasksDone": 47,
+  "tasksDone": 48,
   "tasksTotal": 65,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 658,
+   "prod": 663,
    "unprod": 89,
    "wait": 326,
-   "total": 1073
+   "total": 1078
   },
   "last24h": {
-   "prod": 260,
+   "prod": 265,
    "unprod": 87,
    "wait": 320,
-   "total": 667
+   "total": 672
   },
   "last7d": {
-   "prod": 658,
+   "prod": 663,
    "unprod": 89,
    "wait": 326,
-   "total": 1073
+   "total": 1078
   },
   "product": {
    "prod": 376,
@@ -2399,10 +2421,10 @@ window.PFA_DATA = {
    "total": 781
   },
   "support": {
-   "prod": 282,
+   "prod": 287,
    "unprod": 2,
    "wait": 8,
-   "total": 292
+   "total": 297
   }
  },
  "days": [
@@ -2486,7 +2508,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 86,
+   "prod": 91,
    "unprod": 61,
    "wait": 307
   }
@@ -2607,7 +2629,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 731
+   "minutes": 736
   },
   {
    "account": "empresa",
@@ -2615,6 +2637,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T06:27:00Z",
+   "minutes": 5,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-28",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Reglas técnicas y chat diario actualizados",
+   "evidence": "Auditoría 8/8 OK; AGENTS.md, skill idea, plantilla e informe revisados"
+  },
   {
    "start": "2026-10-02T06:08:00Z",
    "minutes": 10,
@@ -2731,22 +2766,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó Listo para Codex en lugar de T-11 y canceló el despertador."
-  },
+  }
+ ],
+ "history": [
   {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
+   "start": "2026-10-02T06:27:00Z",
+   "minutes": 5,
    "account": "personal",
    "entrega": "T",
-   "task": "HZ-15",
+   "task": "T-28",
    "attempt": 1,
    "result": "HECHA",
    "kind": "prod",
    "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas."
-  }
- ],
- "history": [
+   "summary": "Reglas técnicas y chat diario actualizados",
+   "evidence": "Auditoría 8/8 OK; AGENTS.md, skill idea, plantilla e informe revisados"
+  },
   {
    "start": "2026-10-02T06:08:00Z",
    "minutes": 10,
