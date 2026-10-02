@@ -1,20 +1,18 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T06:16:14.158128Z",
+ "generatedUtc": "2026-10-02T06:22:14.813064Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 06:14 UTC",
+  "updated": "2026-10-02 06:18 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar T-27 y comprobar el tablero; luego medir E2-04 según la mini-spec aprobada.",
+  "nextAction": "Registrar T-28 con la mini-spec 6; actualizar la regla anti-bucle, la comunicación y la regla de chat diario.",
   "needsOscar": [],
   "blockers": [],
-  "current": [
-   "T-27, intento 1 iniciado 2026-10-02 06:08 UTC: registrar la mini-spec aprobada y limpiar la tabla de hallazgos, aplicar el patch verificado y comprobar el tablero a 1366 px y 390 px."
-  ],
-  "fileUtc": "2026-10-02T06:16:02.323011Z",
+  "current": [],
+  "fileUtc": "2026-10-02T06:18:51.416332Z",
   "ruleFootprints": {
    "current": "6BC7F7B5",
    "lines": {
@@ -381,15 +379,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 24,
+   "done": 25,
    "total": 27,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 272,
+    "prod": 282,
     "unprod": 2,
     "wait": 8,
-    "total": 282
+    "total": 292
    }
   }
  ],
@@ -1387,32 +1385,16 @@ window.PFA_DATA = {
     "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
     "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
     "limit": 30,
-    "status": "En curso",
+    "status": "Hecha",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 10,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
-    "ready": true
+    "lastActivity": "2026-10-02T06:18:00Z"
    }
   ]
  },
- "nextTask": {
-  "id": "T-27",
-  "action": "Ideas y hallazgos solo de producto; reglas de tipo, cierre del intento y presentación plegada de En curso",
-  "owner": "Agente",
-  "depends": "—",
-  "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
-  "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
-  "limit": 30,
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 0,
-  "entrega": "T",
-  "fails": 0,
-  "lastActivity": "",
-  "ready": true
- },
+ "nextTask": null,
  "upcoming": [
   {
    "id": "E2-04",
@@ -2345,6 +2327,21 @@ window.PFA_DATA = {
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-02T05:24:00Z"
+  },
+  {
+   "id": "T-27",
+   "action": "Ideas y hallazgos solo de producto; reglas de tipo, cierre del intento y presentación plegada de En curso",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "El tablero muestra hallazgos válidos y la tarea activa sin historial desplegado",
+   "evidence": "Criterios 3 de control/specs/T-27.md; patch verificado y tablero publicado a 1366 px y 390 px",
+   "limit": 30,
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 10,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-02T06:18:00Z"
   }
  ],
  "alerts": [
@@ -2355,27 +2352,27 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 46,
+  "tasksDone": 47,
   "tasksTotal": 65,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 648,
+   "prod": 658,
    "unprod": 89,
    "wait": 326,
-   "total": 1063
+   "total": 1073
   },
   "last24h": {
-   "prod": 250,
+   "prod": 260,
    "unprod": 87,
    "wait": 320,
-   "total": 657
+   "total": 667
   },
   "last7d": {
-   "prod": 648,
+   "prod": 658,
    "unprod": 89,
    "wait": 326,
-   "total": 1063
+   "total": 1073
   },
   "product": {
    "prod": 376,
@@ -2384,10 +2381,10 @@ window.PFA_DATA = {
    "total": 781
   },
   "support": {
-   "prod": 272,
+   "prod": 282,
    "unprod": 2,
    "wait": 8,
-   "total": 282
+   "total": 292
   }
  },
  "days": [
@@ -2471,7 +2468,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-02",
-   "prod": 76,
+   "prod": 86,
    "unprod": 61,
    "wait": 307
   }
@@ -2592,7 +2589,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 721
+   "minutes": 731
   },
   {
    "account": "empresa",
@@ -2600,6 +2597,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-02T06:08:00Z",
+   "minutes": 10,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-27",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Hallazgos tipados; HZ-15 a HZ-18 retirados; tablero plegado",
+   "evidence": "Auditoría 8/8: D-037 y T-27 registrados; tabla validada; Pages sin estado inválido a 1366/390 px, sin overflow y detalle cerrado; SHA dashboard/index.html 0515a84d…374348"
+  },
   {
    "start": "2026-10-02T05:22:00Z",
    "minutes": 2,
@@ -2716,22 +2726,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Cierre registrado en PLAN.md",
    "evidence": "2026-10-02 · chat de Claude, DECISIONS D-036 · Oscar aprobó la mini-spec de ideas cerradas."
-  },
-  {
-   "start": "2026-10-02T04:57:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "T",
-   "task": "HZ-14",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Cierre registrado en PLAN.md",
-   "evidence": "2026-10-02 · chat Entorno, DECISIONS D-035 · Oscar eligió ruta A: el flow prepara JSON hasta nivel 3 y la app guarda solo filas nuevas."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-02T06:08:00Z",
+   "minutes": 10,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-27",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Hallazgos tipados; HZ-15 a HZ-18 retirados; tablero plegado",
+   "evidence": "Auditoría 8/8: D-037 y T-27 registrados; tabla validada; Pages sin estado inválido a 1366/390 px, sin overflow y detalle cerrado; SHA dashboard/index.html 0515a84d…374348"
+  },
   {
    "start": "2026-10-02T05:22:00Z",
    "minutes": 2,
