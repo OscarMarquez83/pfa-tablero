@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T02:10:17.322333Z",
+ "generatedUtc": "2026-10-02T02:19:16.999026Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 01:45 UTC",
+  "updated": "2026-10-02 02:13 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Continuar E2-04, intento 5: generar el esquema de Parse JSON usando la herramienta de muestra del diseñador, guardar y comprobar el Flow Checker.",
   "needsOscar": [],
@@ -48,7 +48,7 @@ window.PFA_DATA = {
    "T-05 actualizó la referencia horaria de AGENTS.md. Las dos automatizaciones Codex, REVISOR.md y D-015 ya muestran los seis horarios cada 4 horas; no hizo falta cambiar las automatizaciones.",
    "La tarea PFA Tablero quedó registrada y corrió: PT15M, IgnoreNew, PT5M, LastTaskResult = 0."
   ],
-  "fileUtc": "2026-10-02T02:07:30.747613Z",
+  "fileUtc": "2026-10-02T02:13:18.075761Z",
   "ruleFootprints": {
    "current": "A4E37120",
    "lines": {
