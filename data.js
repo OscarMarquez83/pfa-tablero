@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T16:13:13.942619Z",
+ "generatedUtc": "2026-10-03T16:22:14.095386Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 15:48 UTC",
+  "updated": "2026-10-03 16:20 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Publicar y probar E2-09 con PFA-Prueba en la app publicada; después E2-11. E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T15:50:11.983791Z",
+  "fileUtc": "2026-10-03T16:21:00.317971Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
