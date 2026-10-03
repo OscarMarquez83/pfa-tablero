@@ -1,15 +1,19 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:31:14.413948Z",
+ "generatedUtc": "2026-10-03T08:37:14.346615Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:27 UTC",
+  "updated": "2026-10-03 08:35 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Diagnosticar por la salida y el contrato oficial de sync_canvas por qué no devuelve archivos. La extensión Edge sigue conectada, pero listar pestañas y vincular la URL exacta agotaron 30 y 60 segundos; no repetir esas llamadas. Antes de aplicar E2-07, confirmar Editing y Coauthoring y bajar YAML a tmp.",
+  "nextAction": "Esperar aprobación para agregar una consulta MCP de solo lectura al puente; después medir estado de fuentes y reanudar E2-07. No repetir las llamadas Edge que agotaron 30 y 60 segundos.",
   "needsOscar": [
+   {
+    "ref": "T-34",
+    "text": "¿autorizas agregar al puente una consulta MCP de solo lectura list_data_sources para comprobar que el servidor puede leer el estado de la app antes de sincronizar? Al responder: la implemento, compruebo que no cambie la app y retomo E2-07."
+   },
    {
     "ref": "E2-06",
     "text": "después de publicar E2-09, revisa Projects en escritorio y teléfono vertical: confirma que nombre, conteo y botón Deactivate se leen completos y sin superposición. Responde E2-06 OK o describe el defecto. Al responder: registro tu validación o corrijo el defecto."
@@ -17,10 +21,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:27:50.058835Z",
+  "fileUtc": "2026-10-03T08:35:16.018718Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T07:44:08.680625Z"
+   "codex": "2026-10-03T08:35:55.319992Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +32,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:27:00Z"
+    "utc": "2026-10-03T08:35:00Z"
    }
   }
  },
@@ -221,10 +225,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 437,
+    "prod": 445,
     "unprod": 2,
     "wait": 8,
-    "total": 447
+    "total": 455
    }
   }
  ],
@@ -2630,11 +2634,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 7,
-    "minutes": 58,
+    "attempts": 8,
+    "minutes": 66,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:26:00Z",
+    "lastActivity": "2026-10-03T08:35:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2647,8 +2651,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 4,
-      "minutes": 27,
+      "attempts": 5,
+      "minutes": 35,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -5248,22 +5252,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1134,
+   "prod": 1142,
    "unprod": 106,
    "wait": 97,
-   "total": 1337
+   "total": 1345
   },
   "last24h": {
-   "prod": 459,
+   "prod": 467,
    "unprod": 17,
    "wait": 71,
-   "total": 547
+   "total": 555
   },
   "last7d": {
-   "prod": 1134,
+   "prod": 1142,
    "unprod": 106,
    "wait": 97,
-   "total": 1337
+   "total": 1345
   },
   "product": {
    "prod": 697,
@@ -5272,10 +5276,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 437,
+   "prod": 445,
    "unprod": 2,
    "wait": 8,
-   "total": 447
+   "total": 455
   }
  },
  "days": [
@@ -5359,7 +5363,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 231,
+   "prod": 239,
    "unprod": 6,
    "wait": 31
   }
@@ -5448,10 +5452,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-34",
-   "prod": 58,
+   "prod": 66,
    "unprod": 0,
    "wait": 0,
-   "total": 58
+   "total": 66
   },
   {
    "task": "T-30",
@@ -5485,7 +5489,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 960
+   "minutes": 968
   },
   {
    "account": "claude",
@@ -5497,6 +5501,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T08:27:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 7,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Guía oficial confirma que sync depende de Studio abierto y Coauthoring; cero archivos no distingue causa",
+   "evidence": "README oficial indica que list_data_sources consulta fuentes de la app; aprobación para exponerlo en puente pendiente; sin cambios en Studio"
+  },
   {
    "start": "2026-10-03T08:18:00Z",
    "minutes": 8,
@@ -5613,22 +5630,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Studio conservó el modo Read-only durante la espera",
    "evidence": "Al volver a medir, el aviso confirma que el control de edición sigue en otra sesión"
-  },
-  {
-   "start": "2026-10-03T07:26:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "Confirmé el bloqueo de edición en Studio",
-   "evidence": "Pestaña PFA_Pilot_App en Edge; edición deshabilitada; no se aplicó ningún cambio"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T08:27:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 7,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Guía oficial confirma que sync depende de Studio abierto y Coauthoring; cero archivos no distingue causa",
+   "evidence": "README oficial indica que list_data_sources consulta fuentes de la app; aprobación para exponerlo en puente pendiente; sin cambios en Studio"
+  },
   {
    "start": "2026-10-03T08:18:00Z",
    "minutes": 8,
