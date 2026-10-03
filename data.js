@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T07:55:14.190923Z",
+ "generatedUtc": "2026-10-03T08:01:14.167875Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 07:52 UTC",
+  "updated": "2026-10-03 08:00 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar T-34 intento 3: derivar environment_category desde el hostname y probar connect/sync en una carpeta temporal; después restaurar el YAML real de E2-07 y validar sus dos estados.",
+  "nextAction": "Reanudar T-34 cuando pueda inspeccionarse el editor externo de Edge: verificar Editing, repetir sync solo con contexto de sesión confirmado y obtener los YAML; luego restaurar la fórmula real de E2-07 y validar sus dos estados.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T07:54:14.823011Z",
+  "fileUtc": "2026-10-03T08:00:48.626393Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T07:44:08.680625Z"
@@ -221,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 410,
+    "prod": 418,
     "unprod": 2,
     "wait": 8,
-    "total": 420
+    "total": 428
    }
   }
  ],
@@ -2629,18 +2629,27 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Reabierta",
-    "attempts": 3,
-    "minutes": 31,
+    "status": "En curso",
+    "attempts": 4,
+    "minutes": 39,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T05:29:00Z",
+    "lastActivity": "2026-10-03T08:00:00Z",
     "byAgent": [
      {
       "agent": "Claude",
       "attempts": 3,
       "minutes": 31,
       "limit": 90,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     },
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 8,
+      "limit": 0,
       "extra": 0,
       "finished": false,
       "tone": "ok"
@@ -3268,6 +3277,7 @@ window.PFA_DATA = {
     "- **Trampa 3 (E2-05):** lo que llega por `push` queda en la sesión, pero Studio no lo marca como pendiente de guardar (\"lo cambió otro autor\"). Ctrl+S no lo guarda y Publish publica la última versión guardada, sin esos cambios: la app publicada mostró una versión intermedia. Solución: después del push, hacer en Studio un cambio real mínimo (por ejemplo, una propiedad de la pantalla tocada que ya debía usar `Tema`) y Ctrl+S. Antes de publicar, comprobar: recargar Studio, `sync` a `tmp/` y buscar un texto nuevo del cambio. Solo entonces publicar.",
     "- **Trampa 4 (E2-06, Codex):** los agentes corren aislados de Windows. Codex usa otro usuario (`CodexSandboxOnline`, con otro `%LOCALAPPDATA%`, sin la sesión de Microsoft de Oscar y con descargas que fallan con \"Authentication failed\"). La terminal de Claude virtualiza lo que escribe fuera del repositorio: el .NET instalado en `%LOCALAPPDATA%` solo existía para Claude (una tarea de Windows con el usuario real no lo veía). Solución: .NET 10 SDK en `tools/.dotnet` (dentro del repositorio, ignorado por git) y puente `tools/canvas_bridge.py` con el usuario real de Oscar (tarea \"PFA Canvas Bridge\", al iniciar sesión, oculta, solo 127.0.0.1:8765, solo `canvas.py` y solo carpetas del repositorio). `canvas.py` siempre pasa por el puente. Probado con el usuario real: sync y push en 6 s; la sesión de Microsoft queda guardada para ese usuario.",
     "- E2-06, Codex, 2026-10-03: el puente respondió sync código 0 con \"No files returned from server. Nothing written.\"; diff de design/app vacío. Studio seguía visible en edición, pero la ventana de Microsoft pedía contraseña por política de sesión expirada. No tomar OK sync como descarga comprobada; autenticar y comprobar archivos antes de construir. Comprobación posterior: autenticar solo no bastó; guardar y recargar Studio autenticado (Coauthoring On) permitió sync real: Synced 9 file(s), código 0. La sesión de edición debía renovarse.",
+    "- 2026-10-03, Codex: el contrato actual del MCP requiere `environment_category` además de `environment_id` y `app_id`; se deriva del hostname según la guía oficial de Microsoft. Al añadirla, `connect` dejó de devolver HTTP 422; el siguiente `sync` terminó con código 0 pero sin archivos, por lo que no prueba descarga correcta. No continuar hasta confirmar que Studio tiene una sesión activa y que el sync escribe los YAML.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
     "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
@@ -5220,11 +5230,6 @@ window.PFA_DATA = {
    "task": "E2-07",
    "reason": "79 min efectivos de 30 permitidos",
    "level": "serious"
-  },
-  {
-   "task": "T-34",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (3 intentos previos)",
-   "level": "serious"
   }
  ],
  "kpi": {
@@ -5233,22 +5238,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1107,
+   "prod": 1115,
    "unprod": 106,
    "wait": 97,
-   "total": 1310
+   "total": 1318
   },
   "last24h": {
-   "prod": 432,
+   "prod": 440,
    "unprod": 17,
    "wait": 71,
-   "total": 520
+   "total": 528
   },
   "last7d": {
-   "prod": 1107,
+   "prod": 1115,
    "unprod": 106,
    "wait": 97,
-   "total": 1310
+   "total": 1318
   },
   "product": {
    "prod": 697,
@@ -5257,10 +5262,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 410,
+   "prod": 418,
    "unprod": 2,
    "wait": 8,
-   "total": 420
+   "total": 428
   }
  },
  "days": [
@@ -5344,7 +5349,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 204,
+   "prod": 212,
    "unprod": 6,
    "wait": 31
   }
@@ -5453,24 +5458,24 @@ window.PFA_DATA = {
    "total": 41
   },
   {
+   "task": "T-34",
+   "prod": 39,
+   "unprod": 0,
+   "wait": 0,
+   "total": 39
+  },
+  {
    "task": "E2-06",
    "prod": 30,
    "unprod": 6,
    "wait": 2,
    "total": 38
-  },
-  {
-   "task": "E1-08",
-   "prod": 29,
-   "unprod": 0,
-   "wait": 4,
-   "total": 33
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 933
+   "minutes": 941
   },
   {
    "account": "claude",
@@ -5482,6 +5487,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T07:52:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 3,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reapertura: derivé environment_category del hostname en tools/canvas.py",
+   "evidence": "Prueba unitaria RED→GREEN para ocho hosts; py_compile y git diff --check OK. connect dejó de devolver HTTP 422; sync devolvió No files returned, carpeta temporal vacía. No push ni cambios en Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
+  },
   {
    "start": "2026-10-03T07:43:00Z",
    "minutes": 9,
@@ -5598,22 +5616,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Aviso de carpetas nuevas visible y navegación a Configuration probada; segundo push no aplicado",
    "evidence": "Push inicial 0 errores/73 avisos; preview mostró 20 pendientes; botón abrió Configuration; fórmula Visible actual confirmada en Studio; estado con 0 pendiente sin probar"
-  },
-  {
-   "start": "2026-10-03T06:19:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Proyección ajustada para separar contador y galería; cambio guardado",
-   "evidence": "push 0 errores; preview: no hay solapamiento; sync 9 archivos con Y=200"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T07:52:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 3,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reapertura: derivé environment_category del hostname en tools/canvas.py",
+   "evidence": "Prueba unitaria RED→GREEN para ocho hosts; py_compile y git diff --check OK. connect dejó de devolver HTTP 422; sync devolvió No files returned, carpeta temporal vacía. No push ni cambios en Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
+  },
   {
    "start": "2026-10-03T07:43:00Z",
    "minutes": 9,
