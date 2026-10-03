@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T15:07:13.750173Z",
+ "generatedUtc": "2026-10-03T15:13:13.849681Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 15:02 UTC",
+  "updated": "2026-10-03 15:09 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Completar E2-07 y las demás tareas de E2 por dependencias; E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
@@ -17,10 +17,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T15:07:03.373205Z",
+  "fileUtc": "2026-10-03T15:11:21.624719Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
-   "codex": "2026-10-03T14:18:36.749702Z"
+   "codex": "2026-10-03T15:11:37.567791Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T15:02:00Z"
+    "utc": "2026-10-03T15:09:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 439,
+    "prod": 468,
     "unprod": 104,
     "wait": 85,
-    "total": 628
+    "total": 657
    }
   },
   {
@@ -1055,22 +1055,22 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Reabierta",
-    "attempts": 13,
-    "minutes": 51,
+    "status": "Por validar",
+    "attempts": 14,
+    "minutes": 80,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 3,
-    "lastActivity": "2026-10-03T14:35:00Z",
+    "lastActivity": "2026-10-03T15:09:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 13,
-      "minutes": 51,
+      "attempts": 14,
+      "minutes": 80,
       "limit": 60,
       "extra": 0,
       "finished": false,
-      "tone": "ok"
+      "tone": "over"
      }
     ],
     "lessons": [
@@ -2676,22 +2676,22 @@ window.PFA_DATA = {
    "ext": {},
    "own": {}
   },
-  "status": "Reabierta",
-  "attempts": 13,
-  "minutes": 51,
+  "status": "Por validar",
+  "attempts": 14,
+  "minutes": 80,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 3,
-  "lastActivity": "2026-10-03T14:35:00Z",
+  "lastActivity": "2026-10-03T15:09:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 13,
-    "minutes": 51,
+    "attempts": 14,
+    "minutes": 80,
     "limit": 60,
     "extra": 0,
     "finished": false,
-    "tone": "ok"
+    "tone": "over"
    }
   ],
   "lessons": [
@@ -2712,22 +2712,22 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Reabierta",
-   "attempts": 13,
-   "minutes": 51,
+   "status": "Por validar",
+   "attempts": 14,
+   "minutes": 80,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 3,
-   "lastActivity": "2026-10-03T14:35:00Z",
+   "lastActivity": "2026-10-03T15:09:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 13,
-     "minutes": 51,
+     "attempts": 14,
+     "minutes": 80,
      "limit": 60,
      "extra": 0,
      "finished": false,
-     "tone": "ok"
+     "tone": "over"
     }
    ],
    "lessons": [
@@ -5246,7 +5246,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-06",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (13 intentos previos)",
+   "reason": "80 min efectivos de 60 permitidos",
    "level": "serious"
   },
   {
@@ -5261,28 +5261,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1165,
+   "prod": 1194,
    "unprod": 106,
    "wait": 97,
-   "total": 1368
+   "total": 1397
   },
   "last24h": {
-   "prod": 401,
+   "prod": 430,
    "unprod": 6,
    "wait": 31,
-   "total": 438
+   "total": 467
   },
   "last7d": {
-   "prod": 1165,
+   "prod": 1194,
    "unprod": 106,
    "wait": 97,
-   "total": 1368
+   "total": 1397
   },
   "product": {
-   "prod": 712,
+   "prod": 741,
    "unprod": 104,
    "wait": 89,
-   "total": 905
+   "total": 934
   },
   "support": {
    "prod": 453,
@@ -5372,7 +5372,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 262,
+   "prod": 291,
    "unprod": 6,
    "wait": 31
   }
@@ -5460,18 +5460,18 @@ window.PFA_DATA = {
    "total": 84
   },
   {
+   "task": "E2-06",
+   "prod": 74,
+   "unprod": 6,
+   "wait": 2,
+   "total": 82
+  },
+  {
    "task": "T-34",
    "prod": 74,
    "unprod": 0,
    "wait": 0,
    "total": 74
-  },
-  {
-   "task": "E2-06",
-   "prod": 45,
-   "unprod": 6,
-   "wait": 2,
-   "total": 53
   },
   {
    "task": "T-30",
@@ -5498,7 +5498,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 991
+   "minutes": 1020
   },
   {
    "account": "claude",
@@ -5510,6 +5510,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T14:40:00Z",
+   "minutes": 29,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Publicación final de Projects; vista vertical y de escritorio auditadas; datos ficticios restaurados",
+   "evidence": "Canvas publicado: 1455/1455 px escritorio y 375/375 px vertical; 4 proyectos activos. SharePoint: proyecto con OfficialName original e Inactive, carpeta de prueba Included y ProjectId vacíos. My Day publicada muestra 20 carpetas nuevas. Capturas en tmp/evidencia/E2-06; pendiente aceptación de Oscar."
+  },
   {
    "start": "2026-10-03T14:20:00Z",
    "minutes": 15,
@@ -5626,22 +5639,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "E2-07: confirmé que el wrapper omite el campo del contrato actual del MCP",
    "evidence": "Guía oficial y paquete 1.1.5 piden environment_category; canvas.py no lo deriva del hostname. T-34 seguía Por validar; reabierta para corregirlo. Sin cambios de código ni Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
-  },
-  {
-   "start": "2026-10-03T07:39:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 5,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Detecté diferencia entre el contrato MCP local y el connect de canvas.py",
-   "evidence": "server.json del paquete oficial 1.1.5 exige environment_category; tools/canvas.py envía environment_id y app_id. HTTP 422 no reproducido con el parámetro faltante corregido; Studio conserva override 0, fórmula real intacta en design/app."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T14:40:00Z",
+   "minutes": 29,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Publicación final de Projects; vista vertical y de escritorio auditadas; datos ficticios restaurados",
+   "evidence": "Canvas publicado: 1455/1455 px escritorio y 375/375 px vertical; 4 proyectos activos. SharePoint: proyecto con OfficialName original e Inactive, carpeta de prueba Included y ProjectId vacíos. My Day publicada muestra 20 carpetas nuevas. Capturas en tmp/evidencia/E2-06; pendiente aceptación de Oscar."
+  },
   {
    "start": "2026-10-03T14:20:00Z",
    "minutes": 15,
