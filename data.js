@@ -1,22 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T05:25:15.394488Z",
+ "generatedUtc": "2026-10-03T05:34:14.044484Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 05:17 UTC",
+  "updated": "2026-10-03 05:29 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06, resolver la descarga local del SDK .NET 10 y continuar por tools/canvas.py.",
+  "nextAction": "E2-06 (Codex) desde su línea de relevo: python tools/canvas.py \"<URL de Studio>\" sync design/app ya funciona por el puente (KF-19, trampa 4); no instalar .NET.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-06 (Codex), relevo 2026-10-03 05:17 UTC: hecho comprobación de Studio (sesión activa), repo sin cambios de app e issues de Oscar abiertos = 0 · falta pantalla Projects y pruebas funcionales · herramienta: sin guardar (sync no inició: falta dnx.cmd; instalador oficial devolvió Authentication failed; publicación del tablero no confirmada por KF-H04) · siguiente: resolver instalación de .NET 10 por la vía oficial y ejecutar sync."
+   "E2-06 (Codex), relevo 2026-10-03 05:29 UTC (actualizado por Claude): hecho: comprobación de Studio; la falta de .NET quedó resuelta con el puente local (T-34, KF-19 trampa 4; probado sync y push con el usuario real de Oscar) · falta: pantalla Projects y pruebas funcionales · herramienta: Studio sin cambios · siguiente: abrir Studio en edición, python tools/canvas.py \"<URL>\" sync design/app y seguir la skill powerapps-yaml (controles nuevos se crean en Studio; por código solo propiedades; guardar con un cambio mínimo en Studio antes de publicar)."
   ],
-  "fileUtc": "2026-10-03T05:17:09.612651Z",
+  "fileUtc": "2026-10-03T05:29:32.116136Z",
   "heartbeat": {
-   "claude": "2026-10-03T05:25:02.700188Z",
+   "claude": "2026-10-03T05:29:44.473327Z",
    "codex": "2026-10-03T05:17:36.718381Z"
   },
   "live": null,
@@ -218,10 +218,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 396,
+    "prod": 405,
     "unprod": 2,
     "wait": 8,
-    "total": 406
+    "total": 415
    }
   }
  ],
@@ -1045,7 +1045,9 @@ window.PFA_DATA = {
       "tone": "ok"
      }
     ],
-    "lessons": [],
+    "lessons": [
+     "KF-19"
+    ],
     "ready": true
    },
    {
@@ -2587,16 +2589,16 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "Por validar",
-    "attempts": 2,
-    "minutes": 22,
+    "attempts": 3,
+    "minutes": 31,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T03:18:00Z",
+    "lastActivity": "2026-10-03T05:29:00Z",
     "byAgent": [
      {
       "agent": "Claude",
-      "attempts": 2,
-      "minutes": 22,
+      "attempts": 3,
+      "minutes": 31,
       "limit": 90,
       "extra": 0,
       "finished": false,
@@ -2639,7 +2641,9 @@ window.PFA_DATA = {
     "tone": "ok"
    }
   ],
-  "lessons": [],
+  "lessons": [
+   "KF-19"
+  ],
   "ready": true
  },
  "upcoming": [
@@ -2672,7 +2676,9 @@ window.PFA_DATA = {
      "tone": "ok"
     }
    ],
-   "lessons": [],
+   "lessons": [
+    "KF-19"
+   ],
    "ready": true
   },
   {
@@ -3204,6 +3210,7 @@ window.PFA_DATA = {
     "- Trampa: `compile_canvas` aplica la carpeta a Studio **aunque tenga errores** (una fórmula rota quedó en la app). `push` guarda antes el estado actual en `tmp/canvas-ultimo-bueno` y, si hay errores, lo reaplica y responde `REVERTIDO` con el control y la propiedad del error.",
     "- **Trampa 2 (E2-05):** un `push` que **crea controles nuevos** deja Studio en blanco (error interno \"Cannot read properties of undefined (reading 'get')\"). Al recargar Studio, la sesión vuelve a la última versión guardada y el cambio se pierde. Medido en 6 pruebas: un cambio vacío y un cambio de texto no lo tumban; agregar hasta un solo contenedor con una etiqueta sí, con o sin versión de control (`Label@2.5.1`). Método que funciona: (1) crear en Studio solo los controles que faltan (Insert con un control hermano seleccionado, para que quede dentro del mismo contenedor o galería) y ponerles el nombre final en el panel de propiedades; borrar en Studio los que sobran; guardar (Ctrl+S); (2) `sync` a `design/app`; (3) editar solo propiedades y aplicar con `push`; Studio sigue vivo; (4) Ctrl+S. Después de cada push, comprobar con una captura reducida que Studio no quedó en blanco antes de guardar.",
     "- **Trampa 3 (E2-05):** lo que llega por `push` queda en la sesión, pero Studio no lo marca como pendiente de guardar (\"lo cambió otro autor\"). Ctrl+S no lo guarda y Publish publica la última versión guardada, sin esos cambios: la app publicada mostró una versión intermedia. Solución: después del push, hacer en Studio un cambio real mínimo (por ejemplo, una propiedad de la pantalla tocada que ya debía usar `Tema`) y Ctrl+S. Antes de publicar, comprobar: recargar Studio, `sync` a `tmp/` y buscar un texto nuevo del cambio. Solo entonces publicar.",
+    "- **Trampa 4 (E2-06, Codex):** los agentes corren aislados de Windows. Codex usa otro usuario (`CodexSandboxOnline`, con otro `%LOCALAPPDATA%`, sin la sesión de Microsoft de Oscar y con descargas que fallan con \"Authentication failed\"). La terminal de Claude virtualiza lo que escribe fuera del repositorio: el .NET instalado en `%LOCALAPPDATA%` solo existía para Claude (una tarea de Windows con el usuario real no lo veía). Solución: .NET 10 SDK en `tools/.dotnet` (dentro del repositorio, ignorado por git) y puente `tools/canvas_bridge.py` con el usuario real de Oscar (tarea \"PFA Canvas Bridge\", al iniciar sesión, oculta, solo 127.0.0.1:8765, solo `canvas.py` y solo carpetas del repositorio). `canvas.py` siempre pasa por el puente. Probado con el usuario real: sync y push en 6 s; la sesión de Microsoft queda guardada para ese usuario.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
     "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
@@ -5129,22 +5136,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 984,
+   "prod": 993,
    "unprod": 103,
    "wait": 90,
-   "total": 1177
+   "total": 1186
   },
   "last24h": {
-   "prod": 336,
+   "prod": 345,
    "unprod": 14,
    "wait": 64,
-   "total": 414
+   "total": 423
   },
   "last7d": {
-   "prod": 984,
+   "prod": 993,
    "unprod": 103,
    "wait": 90,
-   "total": 1177
+   "total": 1186
   },
   "product": {
    "prod": 588,
@@ -5153,10 +5160,10 @@ window.PFA_DATA = {
    "total": 771
   },
   "support": {
-   "prod": 396,
+   "prod": 405,
    "unprod": 2,
    "wait": 8,
-   "total": 406
+   "total": 415
   }
  },
  "days": [
@@ -5240,7 +5247,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 81,
+   "prod": 90,
    "unprod": 3,
    "wait": 24
   }
@@ -5344,18 +5351,18 @@ window.PFA_DATA = {
    "total": 33
   },
   {
+   "task": "T-34",
+   "prod": 31,
+   "unprod": 0,
+   "wait": 0,
+   "total": 31
+  },
+  {
    "task": "E1-07",
    "prod": 29,
    "unprod": 0,
    "wait": 0,
    "total": 29
-  },
-  {
-   "task": "E1-06",
-   "prod": 24,
-   "unprod": 0,
-   "wait": 0,
-   "total": 24
   }
  ],
  "byAccount": [
@@ -5365,7 +5372,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 321
+   "minutes": 330
   },
   {
    "account": "empresa",
@@ -5373,6 +5380,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T05:20:00Z",
+   "minutes": 9,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Causa del fallo de Codex: usuario aislado de Windows y archivos virtualizados de Claude; .NET 10 en tools/.dotnet y puente local con el usuario real (tarea PFA Canvas Bridge); incluye inicio de sesión de Oscar en Windows",
+   "evidence": "sync y push por el puente con el usuario real: OK (push 6 s); puente rechaza carpetas fuera del repo; KF-19 trampa 4; skill actualizada"
+  },
   {
    "start": "2026-10-03T05:14:00Z",
    "minutes": 3,
@@ -5489,22 +5509,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Línea de relevo y esperas en AGENTS.md sección 3 (texto escrito en el intento de T-34) y plantilla en cerrar-intento; relevo de E2-05 escrito en STATUS",
    "evidence": "Falta la prueba: Codex retoma desde la línea de relevo"
-  },
-  {
-   "start": "2026-10-03T03:18:00Z",
-   "minutes": 1,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-32",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Regla 12 de ahorro de tokens en AGENTS.md (texto escrito en el intento de T-34) y STATUS limpio",
-   "evidence": "STATUS 11.131 a 2.989 caracteres (unos 2.300 tokens menos por lectura); AGENTS.md 26.889 a 29.333; huella CA8D23A4"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T05:20:00Z",
+   "minutes": 9,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Causa del fallo de Codex: usuario aislado de Windows y archivos virtualizados de Claude; .NET 10 en tools/.dotnet y puente local con el usuario real (tarea PFA Canvas Bridge); incluye inicio de sesión de Oscar en Windows",
+   "evidence": "sync y push por el puente con el usuario real: OK (push 6 s); puente rechaza carpetas fuera del repo; KF-19 trampa 4; skill actualizada"
+  },
   {
    "start": "2026-10-03T05:14:00Z",
    "minutes": 3,
