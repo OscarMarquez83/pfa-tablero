@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T15:49:13.960266Z",
+ "generatedUtc": "2026-10-03T15:55:14.606900Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 15:41 UTC",
+  "updated": "2026-10-03 15:48 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Cerrar E2-08 con Flow Checker, trigger y run verificados; después continuar E2-09 y E2-11. E2-06 queda pendiente de validación de Oscar.",
+  "nextAction": "Publicar y probar E2-09 con PFA-Prueba en la app publicada; después E2-11. E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T15:44:20.822982Z",
+  "fileUtc": "2026-10-03T15:50:11.983791Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T15:32:00Z"
+    "utc": "2026-10-03T15:48:00Z"
    }
   }
  },
@@ -72,15 +72,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 6,
+   "done": 7,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 489,
+    "prod": 505,
     "unprod": 104,
     "wait": 85,
-    "total": 678
+    "total": 694
    }
   },
   {
@@ -1124,26 +1124,25 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 16,
     "entrega": "E2",
     "user": "Dejar el flujo de carpetas listo para que solo corra cuando tocas \"Scan folders\".",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T15:48:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "attempts": 1,
+      "minutes": 16,
       "limit": 30,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    },
    {
     "id": "E2-09",
@@ -1176,7 +1175,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-11",
@@ -2737,39 +2736,6 @@ window.PFA_DATA = {
    "ready": true
   },
   {
-   "id": "E2-08",
-   "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
-   "owner": "Agente",
-   "depends": "E2-04",
-   "expected": "Detección bajo demanda con conectores estándar",
-   "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
-   "limit": 30,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "user": "Dejar el flujo de carpetas listo para que solo corra cuando tocas \"Scan folders\".",
-   "fails": 0,
-   "lastActivity": "",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
-     "limit": 30,
-     "extra": 0,
-     "finished": false,
-     "tone": "ok"
-    }
-   ],
-   "lessons": [],
-   "ready": true
-  },
-  {
    "id": "E2-09",
    "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
    "owner": "Agente",
@@ -2800,7 +2766,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-11",
@@ -3194,6 +3160,51 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
+   "ready": true
+  },
+  {
+   "id": "T-34",
+   "action": "Construir Power Apps como código con el servidor oficial Canvas Authoring MCP de Microsoft (prueba de concepto, control/specs/T-34.md)",
+   "owner": "Agente",
+   "depends": "Decisión de Oscar",
+   "expected": "El agente escribe y valida pantallas como archivos y las envía a Studio en un paso; sin escribir propiedad por propiedad",
+   "evidence": "Criterios 3 de control/specs/T-34.md; contrato actual de connect (incluye environment_category derivado del host); primera corrida de Codex sync y push sin errores",
+   "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "En curso",
+   "attempts": 10,
+   "minutes": 74,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T14:20:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 3,
+     "minutes": 31,
+     "limit": 90,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    },
+    {
+     "agent": "Codex",
+     "attempts": 7,
+     "minutes": 43,
+     "limit": 0,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [
+    "KF-19",
+    "KF-P13",
+    "KF-H04"
+   ],
    "ready": true
   }
  ],
@@ -4274,6 +4285,38 @@ window.PFA_DATA = {
    ]
   },
   {
+   "id": "E2-08",
+   "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Detección bajo demanda con conectores estándar",
+   "evidence": "Flow Checker 0; trigger Power Apps (V2) habilitado; el botón de Configuration ejecuta el flow y muestra las carpetas nuevas",
+   "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 16,
+   "entrega": "E2",
+   "user": "Dejar el flujo de carpetas listo para que solo corra cuando tocas \"Scan folders\".",
+   "fails": 0,
+   "lastActivity": "2026-10-03T15:48:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 16,
+     "limit": 30,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -5293,33 +5336,33 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 57,
+  "tasksDone": 58,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1215,
+   "prod": 1231,
    "unprod": 106,
    "wait": 97,
-   "total": 1418
+   "total": 1434
   },
   "last24h": {
-   "prod": 451,
+   "prod": 467,
    "unprod": 6,
    "wait": 31,
-   "total": 488
+   "total": 504
   },
   "last7d": {
-   "prod": 1215,
+   "prod": 1231,
    "unprod": 106,
    "wait": 97,
-   "total": 1418
+   "total": 1434
   },
   "product": {
-   "prod": 762,
+   "prod": 778,
    "unprod": 104,
    "wait": 89,
-   "total": 955
+   "total": 971
   },
   "support": {
    "prod": 453,
@@ -5409,7 +5452,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 312,
+   "prod": 328,
    "unprod": 6,
    "wait": 31
   }
@@ -5535,7 +5578,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 1041
+   "minutes": 1057
   },
   {
    "account": "claude",
@@ -5547,6 +5590,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T15:32:00Z",
+   "minutes": 16,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Scan folders publicó un run exitoso y mantiene las 20 carpetas en revisión",
+   "evidence": "Flow details: Status On, Type Instant; editor: trigger When Power Apps calls a flow (V2), Flow checker Errors 0/Warnings 0; app publicada Configuration con 20 en New folders to review; al pulsar Scan folders, run más reciente Succeeded en 00:00:03."
+  },
   {
    "start": "2026-10-03T15:09:00Z",
    "minutes": 21,
@@ -5663,22 +5719,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Reapertura: App Checker por Canvas MCP para separar acceso a app de sync vacío",
    "evidence": "Connect/check completan, App Checker 0 errores y 0 avisos; sync anterior sigue sin YAML. Issue Microsoft #219 describe el mismo síntoma en v1.0.7 y una solución por connect, ya aplicada aquí sin resolver sync. CUA expiró dos veces; no se inspeccionó Studio. https://github.com/microsoft/power-platform-skills/issues/219"
-  },
-  {
-   "start": "2026-10-03T07:52:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 3,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Reapertura: derivé environment_category del hostname en tools/canvas.py",
-   "evidence": "Prueba unitaria RED→GREEN para ocho hosts; py_compile y git diff --check OK. connect dejó de devolver HTTP 422; sync devolvió No files returned, carpeta temporal vacía. No push ni cambios en Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T15:32:00Z",
+   "minutes": 16,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-08",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Scan folders publicó un run exitoso y mantiene las 20 carpetas en revisión",
+   "evidence": "Flow details: Status On, Type Instant; editor: trigger When Power Apps calls a flow (V2), Flow checker Errors 0/Warnings 0; app publicada Configuration con 20 en New folders to review; al pulsar Scan folders, run más reciente Succeeded en 00:00:03."
+  },
   {
    "start": "2026-10-03T15:09:00Z",
    "minutes": 21,
