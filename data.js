@@ -1,27 +1,38 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:19:14.938222Z",
+ "generatedUtc": "2026-10-03T03:25:15.239167Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 03:20 UTC",
+  "updated": "2026-10-03 03:22 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "terminar T-31 (latido y tiempo en vivo en el tablero) y T-33 (plantilla de relevo en cerrar-intento). Después, retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049): editar design/app/Configuration.pa.yaml y aplicarlo con tools/canvas.py.",
   "needsOscar": [],
   "blockers": [],
   "current": [
    "T-31 (Claude), intento 1, inicio 2026-10-03 03:20 UTC. El tablero muestra el tiempo en vivo de la tarea en curso, el agente que la tiene y el estado por latido (Trabajando, Sin reporte, Detenida), sin contar la sesión del revisor. Comprobación: prueba local y en Pages a 1366 y 390 px.",
+   "Avance 03:21 UTC: hecho: build_dashboard.py calcula el latido (Claude y Codex, sin la sesión del revisor) y la tarea en vivo; index.html muestra el estado y los minutos y se actualiza cada 30 s · falta: verificar en Pages a 1366 y 390 px · herramienta: archivos guardados, sin commit · siguiente: publicar y revisar en Pages.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:19:03.026815Z",
+  "fileUtc": "2026-10-03T03:22:17.733070Z",
+  "heartbeat": {
+   "claude": "2026-10-03T03:22:22.571408Z",
+   "codex": "2026-10-02T12:14:08.849320Z"
+  },
+  "live": {
+   "id": "T-31",
+   "agent": "Claude",
+   "startUtc": "2026-10-03T03:20:00Z",
+   "waits": []
+  },
   "ruleFootprints": {
    "current": "CA8D23A4",
    "read": {
     "hash": "CA8D23A4",
     "agent": "Claude",
-    "utc": "2026-10-03T03:25:00Z"
+    "utc": "2026-10-03T03:17:00Z"
    }
   }
  },
@@ -400,15 +411,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 28,
+   "done": 29,
    "total": 33,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 365,
+    "prod": 367,
     "unprod": 2,
     "wait": 8,
-    "total": 375
+    "total": 377
    }
   }
  ],
@@ -2574,7 +2585,7 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
+    "status": "En curso",
     "attempts": 0,
     "minutes": 0,
     "entrega": "T",
@@ -2606,25 +2617,24 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 1,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T03:19:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 1,
       "limit": 45,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": false
+    "lessons": []
    },
    {
     "id": "T-33",
@@ -2632,23 +2642,23 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "Decisión de Oscar, T-32",
     "expected": "Otro agente (o el mismo) retoma desde la última línea, sin perder trabajo ni repetir pasos",
-    "evidence": "Prueba: un agente nuevo lee solo STATUS y nombra el siguiente paso exacto de una tarea interrumpida; regla y plantilla en AGENTS.md y en la skill cerrar-intento",
+    "evidence": "Prueba: un agente nuevo lee solo STATUS y nombra el siguiente paso exacto de una tarea interrumpida; regla y plantilla en AGENTS.md y en la skill cerrar-intento; la prueba la hace Codex en su primera retoma",
     "limit": 30,
     "limitAlloc": {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 1,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T03:20:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 1,
       "limit": 30,
       "extra": 0,
       "finished": false,
@@ -2656,7 +2666,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "T-34",
@@ -5026,31 +5036,62 @@ window.PFA_DATA = {
     }
    ],
    "lessons": []
+  },
+  {
+   "id": "T-32",
+   "action": "Reglas de ahorro de tokens para cualquier agente: capturas solo para decisiones visuales de Oscar o cuando la pantalla no se puede leer como texto, y reducidas; avance por hito en vez de cada 3 min (lo cubre el latido de T-31); reportes de chat en 3 partes cortas; lectura mínima al empezar; limpiar lo viejo de STATUS. Cambia AGENTS.md (pedido expreso de Oscar)",
+   "owner": "Agente",
+   "depends": "Decisión de Oscar, T-31",
+   "expected": "Menos tokens por tarea sin recortar el razonamiento",
+   "evidence": "Texto aprobado por Oscar en AGENTS.md; huella actualizada; STATUS sin bloques viejos; tamaño de los archivos de inicio antes y después",
+   "limit": 45,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 1,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T03:19:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 1,
+     "limit": 45,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 51,
+  "tasksDone": 52,
   "tasksTotal": 71,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 925,
+   "prod": 927,
    "unprod": 100,
    "wait": 66,
-   "total": 1091
+   "total": 1093
   },
   "last24h": {
-   "prod": 320,
+   "prod": 322,
    "unprod": 19,
    "wait": 44,
-   "total": 383
+   "total": 385
   },
   "last7d": {
-   "prod": 925,
+   "prod": 927,
    "unprod": 100,
    "wait": 66,
-   "total": 1091
+   "total": 1093
   },
   "product": {
    "prod": 560,
@@ -5059,10 +5100,10 @@ window.PFA_DATA = {
    "total": 716
   },
   "support": {
-   "prod": 365,
+   "prod": 367,
    "unprod": 2,
    "wait": 8,
-   "total": 375
+   "total": 377
   }
  },
  "days": [
@@ -5146,7 +5187,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 22,
+   "prod": 24,
    "unprod": 0,
    "wait": 0
   }
@@ -5271,7 +5312,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 241
+   "minutes": 243
   },
   {
    "account": "empresa",
@@ -5279,6 +5320,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T03:19:00Z",
+   "minutes": 1,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-33",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Línea de relevo y esperas en AGENTS.md sección 3 (texto escrito en el intento de T-34) y plantilla en cerrar-intento; relevo de E2-05 escrito en STATUS",
+   "evidence": "Falta la prueba: Codex retoma desde la línea de relevo"
+  },
+  {
+   "start": "2026-10-03T03:18:00Z",
+   "minutes": 1,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-32",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Regla 12 de ahorro de tokens en AGENTS.md (texto escrito en el intento de T-34) y STATUS limpio",
+   "evidence": "STATUS 11.131 a 2.989 caracteres (unos 2.300 tokens menos por lectura); AGENTS.md 26.889 a 29.333; huella CA8D23A4"
+  },
   {
    "start": "2026-10-03T03:03:00Z",
    "minutes": 16,
@@ -5382,35 +5449,35 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "App publicada: run 13:45 UTC falló por ActionResponseTimedOut (bucle 3m20s > 120 s). Flow rehecho: 1 llamada childFolders con $top=250 y $expand=childFolders desde Projects, sin bucles anidados; OnSelect lee la nueva forma y carga ids existentes una vez",
    "evidence": "Test run 865 ms (10 nivel 2 + 14 nivel 3, childFolderCount coincide); flow y app publicados 14:00 UTC; app publicada: 24 folders found, 0 new; REST 26 filas sin cambios; botón sin superposición a 1366 px y vista angosta. Pendiente: creación con la fórmula final y fila decidida"
-  },
-  {
-   "start": "2026-10-02T13:07:00Z",
-   "minutes": 37,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "PERMISOS",
-   "summary": "Espera autorización de Oscar para aceptar el permiso de conexiones de la app publicada",
-   "evidence": "Diálogo Allow PFA_Pilot_App to access your data (Office 365 Outlook y SharePoint del propio Oscar)"
-  },
-  {
-   "start": "2026-10-02T13:00:00Z",
-   "minutes": 7,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "ESQUEMA_LISTA",
-   "summary": "D-041 aplicado; preview escaneo 1: 25 folders found, 25 new; escaneo 2: 25 found, 0 new; app publicada 13:05 UTC",
-   "evidence": "REST: 26 filas, 0 duplicados, Decision=Nueva, Id/Modified/Decision/Included/ProjectId idénticos antes y después del escaneo 2"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T03:19:00Z",
+   "minutes": 1,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-33",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Línea de relevo y esperas en AGENTS.md sección 3 (texto escrito en el intento de T-34) y plantilla en cerrar-intento; relevo de E2-05 escrito en STATUS",
+   "evidence": "Falta la prueba: Codex retoma desde la línea de relevo"
+  },
+  {
+   "start": "2026-10-03T03:18:00Z",
+   "minutes": 1,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-32",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Regla 12 de ahorro de tokens en AGENTS.md (texto escrito en el intento de T-34) y STATUS limpio",
+   "evidence": "STATUS 11.131 a 2.989 caracteres (unos 2.300 tokens menos por lectura); AGENTS.md 26.889 a 29.333; huella CA8D23A4"
+  },
   {
    "start": "2026-10-03T03:03:00Z",
    "minutes": 16,

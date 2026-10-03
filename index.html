@@ -745,15 +745,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       html += '<ul class="revsum">' + rv.summary.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>";
       html += '<button type="button" class="revlink" id="revmore">Ver revisión completa y motivo del semáforo →</button>';
     } else html += '<div class="empty">Todavía no hay revisión. El revisor corre cada 4 horas.</div>';
-    html += '<div class="livehead">Ahora mismo · agente constructor</div>';
-    if (D.status.fileUtc) {
-      var mins = Math.max(0, Math.round((Date.now() - new Date(D.status.fileUtc).getTime()) / 60000));
-      var ago = mins < 60 ? mins + " min" : Math.floor(mins / 60) + " h " + (mins % 60) + " min";
-      var stale = mins >= 30;
-      html += '<div class="sub" style="margin:0 0 8px;' + (stale ? 'color:var(--warn,#f59e0b)' : '') + '">' +
-        (stale ? "⚠ El agente no reporta avance hace " + ago + ". Si está trabajando, revisa en el chat del agente (Codex o Claude) si espera una aprobación."
-               : "Último reporte del agente hace " + ago + ".") + "</div>";
-    }
+    html += '<div class="livehead">Ahora mismo · agente constructor</div><div id="livestate"></div>';
     if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
     else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
     // En curso: solo la primera nota (la vigente), recortada; el resto queda plegado.
@@ -765,7 +757,43 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     }
     $("rev").innerHTML = html;
     if ($("revmore")) $("revmore").onclick = openRevision;
+    renderLive();
+    setInterval(renderLive, 30000);
   })();
+
+  // Estado en vivo (D-046): latido del agente = última escritura de su registro de sesión en el equipo de Oscar.
+  // Trabajando: latido < 30 min y STATUS < 30 min. Sin reporte: latido < 30 min, STATUS >= 30 min.
+  // Detenida: latido >= 30 min. En espera: hay una "Espera desde" sin "Fin de espera".
+  function renderLive() {
+    var el = $("livestate"); if (!el) return;
+    var lv = D.status.live, hb = D.status.heartbeat || {}, now = Date.now();
+    function minsSince(iso) { var t = Date.parse(iso || ""); return t ? Math.max(0, Math.round((now - t) / 60000)) : null; }
+    function dur(m) { return m == null ? "—" : (m < 60 ? m + " min" : Math.floor(m / 60) + " h " + (m % 60) + " min"); }
+    if (!lv) {
+      var rep = minsSince(D.status.fileUtc);
+      el.innerHTML = '<div class="sub" style="margin:0 0 8px">Sin tarea en curso.' + (rep != null ? " Último cambio de STATUS hace " + dur(rep) + "." : "") + "</div>";
+      return;
+    }
+    var agent = lv.agent, beat = minsSince(hb[agent.toLowerCase()]), rep2 = minsSince(D.status.fileUtc);
+    var waitMs = 0, openWait = null;
+    (lv.waits || []).forEach(function (w) {
+      var a = Date.parse(w.from), b = w.to ? Date.parse(w.to) : null;
+      if (b) waitMs += Math.max(0, b - a); else openWait = w;
+    });
+    var endMs = openWait ? Date.parse(openWait.from) : now;
+    var run = Math.max(0, Math.round((endMs - Date.parse(lv.startUtc) - waitMs) / 60000));
+    var t = null;
+    Object.keys(D.tasksByEntrega || {}).forEach(function (k) { (D.tasksByEntrega[k] || []).forEach(function (x) { if (x.id === lv.id) t = x; }); });
+    var total = (t ? (t.minutes || 0) : 0) + run, lim = t ? t.limit : 0;
+    var st, color;
+    if (openWait) { st = "En espera desde hace " + dur(minsSince(openWait.from)) + " (el tiempo no corre)"; color = "var(--warn,#f59e0b)"; }
+    else if (beat == null || beat >= 30) { st = "⛔ Detenida: sin actividad de " + agent + " hace " + dur(beat); color = "var(--bad,#ef4444)"; }
+    else if (rep2 != null && rep2 >= 30) { st = "⚠ Sin reporte: " + agent + " trabaja (actividad hace " + dur(beat) + "), pero no actualiza STATUS hace " + dur(rep2); color = "var(--warn,#f59e0b)"; }
+    else { st = "● Trabajando: actividad de " + agent + " hace " + dur(beat); color = "var(--ok,#22c55e)"; }
+    el.innerHTML = '<div class="sub" style="margin:0 0 4px;color:' + color + '">' + esc(st) + "</div>" +
+      '<div class="sub" style="margin:0 0 8px"><b>' + esc(lv.id) + "</b> · " + esc(agent) + " · intento en curso " + dur(run) +
+      " · total " + total + (lim ? " de " + lim : "") + " min</div>";
+  }
 
   // ---------- Oscar ----------
   $("oscar-n").textContent = D.status.needsOscar.length ? D.status.needsOscar.length + " pendientes" : "";
