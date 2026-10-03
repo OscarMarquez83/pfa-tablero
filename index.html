@@ -173,6 +173,9 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .st-porvalidar { background: var(--warning-soft); color: var(--warning-ink); } .st-porvalidar .ic { background: var(--warning); color: #3d2a00; }
 .st-bloqueada { background: var(--critical-soft); color: var(--critical-ink); } .st-bloqueada .ic { background: var(--critical); }
 .st-reabierta { background: var(--warning-soft); color: var(--warning-ink); } .st-reabierta .ic { background: var(--critical); }
+.st-pausada { background: var(--serious-soft); color: var(--serious-ink); } .st-pausada .ic { background: var(--serious); }
+.steps { margin: 6px 0 2px; padding: 0; list-style: none; } .steps li { display: flex; gap: 6px; padding: 2px 0; font-size: 12.5px; } .steps .si { width: 16px; flex: none; text-align: center; font-weight: 700; } .steps .s-ok { color: var(--good-ink); } .steps .s-cur { color: var(--accent); } .steps .s-bad { color: var(--critical-ink); } .steps .s-pen { color: var(--muted); }
+.stepn { color: var(--muted); font-size: 11.5px; font-weight: 500; white-space: nowrap; }
 .st-pendiente, .st-cancelada { background: var(--surface-2); color: var(--ink-2); } .st-pendiente .ic, .st-cancelada .ic { background: transparent; border: 1.5px solid var(--muted); color: var(--muted); }
 .tmeter { width: 110px; }
 .tmeter .meter { margin-top: 5px; height: 5px; }
@@ -439,7 +442,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
   function dur(min) { return min >= 60 ? hours(min) + " h" : min + " min"; }
   function pct(a, b) { return b ? Math.round(a * 100 / b) : 0; }
   function stateKey(s) { return (s || "").toLowerCase().replace(/\s+/g, "").normalize("NFD").replace(/[̀-ͯ]/g, ""); }
-  var ICON = { hecha: "✓", encurso: "●", porvalidar: "…", bloqueada: "✕", reabierta: "↺", pendiente: "", cancelada: "–" };
+  var ICON = { hecha: "✓", encurso: "●", porvalidar: "…", bloqueada: "✕", pausada: "Ⅱ", reabierta: "↺", pendiente: "", cancelada: "–" };
   function chip(s) { var k = stateKey(s); return '<span class="chip st-' + k + '"><span class="ic">' + (ICON[k] || "") + "</span>" + esc(s) + "</span>"; }
   function firstSentence(s) { var m = String(s || "").match(/^(.+?\.)(\s|$)/); return m ? m[1] : s; }
 
@@ -580,6 +583,10 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       var w = Math.min(100, pct(minutes, limit));
       return '<div class="tmeter' + cls + '">' + (label || "") + '<span class="num">' + minutes + " / " + limit + (extra ? ' <span class="plus">+' + extra + "</span>" : "") + ' min</span><div class="meter"><i style="width:' + w + '%"></i></div></div>';
     }
+    // D-054: pasos de la tarea (control/pasos/<ID>.md).
+    function stepKind(s) { s = String(s || ""); return /^hecho/.test(s) ? ["s-ok", "✓"] : /^pausado/.test(s) ? ["s-bad", "Ⅱ"] : /^falla/.test(s) ? ["s-bad", "✗"] : /^en curso/.test(s) ? ["s-cur", "●"] : ["s-pen", "○"]; }
+    function stepCount(t) { var s = t.steps || []; if (!s.length) return ""; var d = s.filter(function (x) { return /^hecho/.test(x.state); }).length; return ' <span class="stepn">· ' + d + "/" + s.length + " pasos</span>"; }
+    function stepList(t) { var s = t.steps || []; if (!s.length) return ""; return '<ul class="steps">' + s.map(function (x) { var k = stepKind(x.state); return '<li title="' + esc(x.state) + '"><span class="si ' + k[0] + '">' + k[1] + "</span><span>" + esc(x.id.replace(/^.*\./, "")) + ". " + esc(x.title) + "</span></li>"; }).join("") + "</ul>"; }
     function taskRows(list) { return list.map(function (t) {
       var first = firstSentence(t.action), ags = agentsOf(t), nl = (t.lessons || []).length;
       var resp, tries, time;
@@ -597,7 +604,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       }
       var total = ags.length > 1 ? "Total de la tarea: " + t.minutes + " min · asignado al inicio: " + t.limit + " min" : "";
       var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '" title="Ver lecciones y soluciones de esta tarea"><span class="lb-l">Lecciones (' + nl + ')</span><span class="lb-s">📖' + nl + "</span></button>" : "";
-      return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act" title="' + esc(first) + '">' + esc(t.user || first) + "</summary>" +
+      return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act" title="' + esc(first) + '">' + esc(t.user || first) + stepCount(t) + "</summary>" + stepList(t) +
         '<div class="more">' + (t.user ? "<b>Para el agente:</b> " + esc(t.action) + "<br>" : (first !== t.action ? esc(t.action) + "<br>" : "")) + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + (total ? "<br><b>" + esc(total) + "</b>" : "") + "</div></details></td>" +
         "<td>" + resp + '</td><td class="num hide-sm">' + tries + '</td><td' + (total ? ' title="' + esc(total) + '"' : "") + ">" + time + "</td></tr>";
     }).join(""); }

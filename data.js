@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T23:16:14.214531Z",
+ "generatedUtc": "2026-10-03T23:25:13.841799Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 23:12 UTC",
+  "updated": "2026-10-03 23:23 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Claude: T-37, T-38 y T-39 (proceso nuevo, D-054) y replaneo de E3 en pasos. Codex no ejecuta tareas hasta que esto termine. Oscar valida E2-06 y E2-10 en paralelo.",
+  "nextAction": "Claude: replanear E3 en pasos (piloto, D-057). Codex no ejecuta tareas hasta que E3 esté planeada y aprobada.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,13 +17,19 @@ window.PFA_DATA = {
    {
     "ref": "E2-10",
     "text": "decide en la app las carpetas de Projects, incluidas las subcarpetas, y revisa la lista de proyectos. Al terminar, escribe “E2 aceptada”. Al responder: registro tus decisiones y la aceptación de E2."
+   },
+   {
+    "ref": "T-39",
+    "text": "la próxima vez que abras Codex en este proyecto, si te pide revisar o aprobar los ganchos (hooks) de PFA, apruébalos. Al responder: compruebo en su registro que la tarjeta de la tarea aparece."
    }
   ],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-03T23:13:28.997396Z",
+  "current": [
+   "E3-PLAN (Claude), relevo 2026-10-03 23:23 UTC: replaneo de E3 en pasos (D-057), piloto del proceso nuevo · siguiente: leer E3 en PLAN, esquemas y flujos, y escribir control/pasos/E3-NN.md"
+  ],
+  "fileUtc": "2026-10-03T23:23:08.480124Z",
   "heartbeat": {
-   "claude": "2026-10-03T23:14:36.044832Z",
+   "claude": "2026-10-03T23:25:09.326877Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
@@ -226,10 +232,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 457,
+    "prod": 467,
     "unprod": 2,
     "wait": 8,
-    "total": 467
+    "total": 477
    }
   }
  ],
@@ -2632,24 +2638,26 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T23:19:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 6,
       "limit": 120,
       "extra": 0,
       "finished": false,
       "tone": "ok"
      }
     ],
-    "lessons": [],
+    "lessons": [
+     "KF-H10"
+    ],
     "ready": false
    },
    {
@@ -2664,24 +2672,26 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 4,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T23:23:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 4,
       "limit": 60,
       "extra": 0,
       "finished": false,
       "tone": "ok"
      }
     ],
-    "lessons": [],
+    "lessons": [
+     "KF-H10"
+    ],
     "ready": false
    },
    {
@@ -3175,24 +3185,26 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
+   "status": "Por validar",
+   "attempts": 1,
+   "minutes": 6,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "",
+   "lastActivity": "2026-10-03T23:19:00Z",
    "byAgent": [
     {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 6,
      "limit": 120,
      "extra": 0,
      "finished": false,
      "tone": "ok"
     }
    ],
-   "lessons": [],
+   "lessons": [
+    "KF-H10"
+   ],
    "ready": false
   },
   {
@@ -3207,24 +3219,26 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
+   "status": "Por validar",
+   "attempts": 1,
+   "minutes": 4,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "",
+   "lastActivity": "2026-10-03T23:23:00Z",
    "byAgent": [
     {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 4,
      "limit": 60,
      "extra": 0,
      "finished": false,
      "tone": "ok"
     }
    ],
-   "lessons": [],
+   "lessons": [
+    "KF-H10"
+   ],
    "ready": false
   },
   {
@@ -3452,6 +3466,17 @@ window.PFA_DATA = {
    "lines": [
     "- Desvío (E2-07, intento 7): la tarea llevaba 79 min; el intento añadió 21 min y superó por 10 min el máximo de 30 min más 60 min adicionales.",
     "- Regla: antes de continuar, suma los minutos previos y el tiempo actual. Al llegar a 90 min totales, detente y aplica la sección 5 sin otra prueba."
+   ]
+  },
+  "KF-H10": {
+   "title": "HERRAMIENTA · pfa.py y ganchos: cómo funcionan y cómo probarlos (T-38, T-39, Claude)",
+   "note": "",
+   "lines": [
+    "- `tools/pfa.py` guarda el estado en los archivos de siempre (STATUS \"Tarea en curso\", PLAN, worklog y la línea \"Estado\" de cada paso). Para probarlo sin tocar el proyecto: copia de ensayo en `tmp/` y variable `PFA_ROOT` apuntando a ella; usa `cerrar ... --sin-commit` (si no, el commit cae en el repositorio real, porque `tmp/` está dentro).",
+    "- La URL de Studio vive en `tools/.local.json` (ignorado por git, tiene IDs del tenant); se guarda con `pfa.py url \"<URL>\"`. Los pasos la usan como `{STUDIO_URL}`.",
+    "- Ganchos: `.codex/hooks.json` (Codex: tarjeta, bloqueos, presupuesto y cierre) y `.claude/settings.json` (Claude: solo la tarjeta). Ejecutan `tools/pfa_hook.py` con el Python de Codex por ruta completa (sin espacios, sirve en cmd, PowerShell y bash). Codex pide revisar y aprobar los ganchos la primera vez (`/hooks`). Claude los toma al abrir una sesión nueva.",
+    "- Probar un gancho: pasar el JSON del evento por stdin (`cmd /c \"python tools\\pfa_hook.py < evento.json\"`). Desde PowerShell, el pipe `'...' | python` no entrega el texto: usar un archivo. Un bloqueo sale con código 2 y el motivo en stderr; el contexto, como JSON en stdout.",
+    "- Si `pfa_hook.py` falla por dentro, termina sin decir nada para no frenar al agente: si un gancho \"no hace nada\", probarlo a mano con un evento."
    ]
   },
   "KF-H09": {
@@ -5470,22 +5495,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1293,
+   "prod": 1303,
    "unprod": 106,
    "wait": 97,
-   "total": 1496
+   "total": 1506
   },
   "last24h": {
-   "prod": 390,
+   "prod": 400,
    "unprod": 6,
    "wait": 31,
-   "total": 427
+   "total": 437
   },
   "last7d": {
-   "prod": 1293,
+   "prod": 1303,
    "unprod": 106,
    "wait": 97,
-   "total": 1496
+   "total": 1506
   },
   "product": {
    "prod": 836,
@@ -5494,10 +5519,10 @@ window.PFA_DATA = {
    "total": 1029
   },
   "support": {
-   "prod": 457,
+   "prod": 467,
    "unprod": 2,
    "wait": 8,
-   "total": 467
+   "total": 477
   }
  },
  "days": [
@@ -5581,7 +5606,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 390,
+   "prod": 400,
    "unprod": 6,
    "wait": 31
   }
@@ -5711,7 +5736,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 339
+   "minutes": 349
   },
   {
    "account": "empresa",
@@ -5719,6 +5744,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T23:19:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-39",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "tools/pfa_hook.py y ganchos en .codex/hooks.json (Codex: tarjeta, bloqueos, presupuesto, cierre) y .claude/settings.json (Claude: tarjeta); Codex fijado en Luna xhigh en .codex/config.toml",
+   "evidence": "17 eventos simulados con el resultado esperado; falta la primera sesión real de cada agente"
+  },
+  {
+   "start": "2026-10-03T23:13:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-38",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "tools/pfa.py, formato de pasos y plantilla, pasos y estado Pausada en el tablero, PLANIFICACION y planear piden pasos",
+   "evidence": "Copia aislada: comprobación real con canvas.py, 2 fallas → Pausada, siguiente, espera, cierre y reporte; falta ver pasos en Pages con E3"
+  },
   {
    "start": "2026-10-03T23:09:00Z",
    "minutes": 4,
@@ -5822,35 +5873,35 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "KF-19: guardar y recargar Studio; sync real y push de restauracion comprobados",
    "evidence": "9 YAML descargados; diferencia unica override cero de My Day; push 0 errores/70 avisos; Saved y sync posterior con formula real. Criterios de costo y texto reversible de T-34 no reejecutados; no se afirma cierre completo."
-  },
-  {
-   "start": "2026-10-03T08:42:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 8,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Sync a tmp con ruta absoluta siguió sin devolver archivos; ruta relativa descartada",
-   "evidence": "python tools/canvas.py [Studio URL] sync tmp/E2-07-sync-attempt8: exit 0, No files returned, 0 YAML; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-canvas-external-tools; sin cambios en Studio"
-  },
-  {
-   "start": "2026-10-03T08:27:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 7,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Guía oficial confirma que sync depende de Studio abierto y Coauthoring; cero archivos no distingue causa",
-   "evidence": "README oficial indica que list_data_sources consulta fuentes de la app; aprobación para exponerlo en puente pendiente; sin cambios en Studio"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T23:19:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-39",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "tools/pfa_hook.py y ganchos en .codex/hooks.json (Codex: tarjeta, bloqueos, presupuesto, cierre) y .claude/settings.json (Claude: tarjeta); Codex fijado en Luna xhigh en .codex/config.toml",
+   "evidence": "17 eventos simulados con el resultado esperado; falta la primera sesión real de cada agente"
+  },
+  {
+   "start": "2026-10-03T23:13:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-38",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "tools/pfa.py, formato de pasos y plantilla, pasos y estado Pausada en el tablero, PLANIFICACION y planear piden pasos",
+   "evidence": "Copia aislada: comprobación real con canvas.py, 2 fallas → Pausada, siguiente, espera, cierre y reporte; falta ver pasos en Pages con E3"
+  },
   {
    "start": "2026-10-03T23:09:00Z",
    "minutes": 4,
