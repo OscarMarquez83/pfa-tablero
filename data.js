@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:52:14.265869Z",
+ "generatedUtc": "2026-10-03T04:01:14.788460Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -17,14 +17,20 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
+   "E2-05 (Claude), intento 2, inicio 2026-10-03 03:58 UTC, método nuevo (D-049): reescribir Configuration en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push. Comprobación: evidencia de E2-05 (3 carpetas, una por opción; Change; sin proyectos duplicados; D-042) en vista previa y app publicada a 1366 y 390 px.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:48:46.226364Z",
+  "fileUtc": "2026-10-03T03:59:07.015302Z",
   "heartbeat": {
-   "claude": "2026-10-03T03:49:01.611129Z",
+   "claude": "2026-10-03T04:01:14.184564Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
-  "live": null,
+  "live": {
+   "id": "E2-05",
+   "agent": "Claude",
+   "startUtc": "2026-10-03T03:58:00Z",
+   "waits": []
+  },
   "ruleFootprints": {
    "current": "4314E2C3",
    "read": {
@@ -5060,10 +5066,10 @@ window.PFA_DATA = {
    "total": 1119
   },
   "last24h": {
-   "prod": 334,
+   "prod": 330,
    "unprod": 18,
    "wait": 40,
-   "total": 392
+   "total": 388
   },
   "last7d": {
    "prod": 953,
