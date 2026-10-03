@@ -1,24 +1,24 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:16:14.179041Z",
+ "generatedUtc": "2026-10-03T06:22:14.836369Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 06:12 UTC",
+  "updated": "2026-10-03 06:19 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06: revisar los datos de prueba disponibles con lectura; antes del siguiente push, aplicar KF-P11 al archivo completo y medir antes de cambiar.",
+  "nextAction": "E2-06: corregir el solapamiento medido en Projects; después repetir prueba visual y sync.",
   "needsOscar": [],
   "blockers": [],
   "current": [
    "E2-06 (Codex), intento 4, inicio 2026-10-03 05:54 UTC: implementar Projects sobre 9 YAML sincronizados; comprobar controles, expresiones y efecto sobre SharePoint en preview/publicada.",
    "Avance 06:11 UTC: push con 0 errores; Studio muestra 4 proyectos activos con nombre y conteo de carpetas; sync a tmp/canvas-verify confirma el YAML aplicado; herramienta guardada (Saved, Unpublished). Siguiente: localizar proyecto de prueba existente y validar sin tocar proyectos reales.",
-   "Avance 06:12 UTC: revisión de KF-P11, informe completo de E2-04 e intentos 1–19; INC-16 registra que no apliqué la revisión completa antes del segundo push. Siguiente cambio detenido hasta verificar datos de prueba y revisar todo el YAML."
+   "Avance 06:19 UTC: proyecto de prueba renombrado, desactivado y restaurado; activo volvió de 5 a 4; Configuration volvió a 20 nuevas y 5 revisadas. Screenshot mide solapamiento: galProjects Y=152 / altura 592 y lblProjectsCount Y=160. Hecho en preview, herramienta Saved Unpublished. Siguiente: corregir solo el solapamiento tras revisión completa y validar con push."
   ],
-  "fileUtc": "2026-10-03T06:12:36.666371Z",
+  "fileUtc": "2026-10-03T06:19:34.243958Z",
   "heartbeat": {
-   "claude": "2026-10-03T06:05:18.941541Z",
+   "claude": "2026-10-03T06:17:46.737686Z",
    "codex": "2026-10-03T05:45:51.240173Z"
   },
   "live": {
@@ -81,10 +81,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 328,
+    "prod": 335,
     "unprod": 104,
     "wait": 80,
-    "total": 512
+    "total": 519
    }
   },
   {
@@ -1060,17 +1060,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 8,
-    "minutes": 19,
+    "attempts": 10,
+    "minutes": 26,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 3,
-    "lastActivity": "2026-10-03T06:12:00Z",
+    "lastActivity": "2026-10-03T06:19:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 8,
-      "minutes": 19,
+      "attempts": 10,
+      "minutes": 26,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2670,17 +2670,17 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "En curso",
-  "attempts": 8,
-  "minutes": 19,
+  "attempts": 10,
+  "minutes": 26,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 3,
-  "lastActivity": "2026-10-03T06:12:00Z",
+  "lastActivity": "2026-10-03T06:19:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 8,
-    "minutes": 19,
+    "attempts": 10,
+    "minutes": 26,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2706,17 +2706,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 8,
-   "minutes": 19,
+   "attempts": 10,
+   "minutes": 26,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 3,
-   "lastActivity": "2026-10-03T06:12:00Z",
+   "lastActivity": "2026-10-03T06:19:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 8,
-     "minutes": 19,
+     "attempts": 10,
+     "minutes": 26,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -5227,28 +5227,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1011,
+   "prod": 1018,
    "unprod": 106,
    "wait": 92,
-   "total": 1209
+   "total": 1216
   },
   "last24h": {
-   "prod": 353,
+   "prod": 360,
    "unprod": 17,
    "wait": 66,
-   "total": 436
+   "total": 443
   },
   "last7d": {
-   "prod": 1011,
+   "prod": 1018,
    "unprod": 106,
    "wait": 92,
-   "total": 1209
+   "total": 1216
   },
   "product": {
-   "prod": 601,
+   "prod": 608,
    "unprod": 104,
    "wait": 84,
-   "total": 789
+   "total": 796
   },
   "support": {
    "prod": 410,
@@ -5338,7 +5338,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 108,
+   "prod": 115,
    "unprod": 6,
    "wait": 26
   }
@@ -5464,7 +5464,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 832
+   "minutes": 839
   },
   {
    "account": "claude",
@@ -5476,6 +5476,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T06:19:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Auditoría KF-P11: Projects count label overlaps first gallery row",
+   "evidence": "Screenshot de preview: galProjects Y=152 Height=592; lblProjectsCount Y=160; revisar y corregir layout"
+  },
+  {
+   "start": "2026-10-03T06:12:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Renombre comprobado; Deactivate redujo activos a 4; Change restauró carpeta de prueba",
+   "evidence": "Preview: nombre volvió al original; nueva 20/revisadas 5, activos 4"
+  },
   {
    "start": "2026-10-03T06:11:00Z",
    "minutes": 1,
@@ -5579,35 +5605,35 @@ window.PFA_DATA = {
    "category": "AUTH",
    "summary": "sync por puente responde sin archivos; sesión expirada confirmada en Microsoft; app sin cambios",
    "evidence": "sync código 0: No files returned from server. Nothing written.; 9 YAML intactos; git diff design/app vacío; Projects sin probar"
-  },
-  {
-   "start": "2026-10-03T05:36:00Z",
-   "minutes": 5,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-32",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "D-052: los agentes ya no ejecutan el publicador; AGENTS.md sección 3 y 4 skills",
-   "evidence": "AGENTS.md sin pasos del publicador (huella 38E3DE9A); KF-H04 anotada como resuelta"
-  },
-  {
-   "start": "2026-10-03T05:20:00Z",
-   "minutes": 9,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Causa del fallo de Codex: usuario aislado de Windows y archivos virtualizados de Claude; .NET 10 en tools/.dotnet y puente local con el usuario real (tarea PFA Canvas Bridge); incluye inicio de sesión de Oscar en Windows",
-   "evidence": "sync y push por el puente con el usuario real: OK (push 6 s); puente rechaza carpetas fuera del repo; KF-19 trampa 4; skill actualizada"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T06:19:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Auditoría KF-P11: Projects count label overlaps first gallery row",
+   "evidence": "Screenshot de preview: galProjects Y=152 Height=592; lblProjectsCount Y=160; revisar y corregir layout"
+  },
+  {
+   "start": "2026-10-03T06:12:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "FORMULA_PA",
+   "summary": "Renombre comprobado; Deactivate redujo activos a 4; Change restauró carpeta de prueba",
+   "evidence": "Preview: nombre volvió al original; nueva 20/revisadas 5, activos 4"
+  },
   {
    "start": "2026-10-03T06:11:00Z",
    "minutes": 1,
