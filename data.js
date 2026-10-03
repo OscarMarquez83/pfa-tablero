@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:01:14.167875Z",
+ "generatedUtc": "2026-10-03T08:07:27.944388Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:00 UTC",
+  "updated": "2026-10-03 08:05 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Reanudar T-34 cuando pueda inspeccionarse el editor externo de Edge: verificar Editing, repetir sync solo con contexto de sesión confirmado y obtener los YAML; luego restaurar la fórmula real de E2-07 y validar sus dos estados.",
+  "nextAction": "Reanudar cuando el tab de Power Apps Studio en Edge sea inspeccionable; confirmar Editing y Coauthoring, luego sincronizar y comprobar que bajó YAML. No repetir sync a ciegas.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:00:48.626393Z",
+  "fileUtc": "2026-10-03T08:06:09.767318Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T07:44:08.680625Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T07:52:00Z"
+    "utc": "2026-10-03T08:02:00Z"
    }
   }
  },
@@ -221,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 418,
+    "prod": 421,
     "unprod": 2,
     "wait": 8,
-    "total": 428
+    "total": 431
    }
   }
  ],
@@ -2630,11 +2630,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 4,
-    "minutes": 39,
+    "attempts": 5,
+    "minutes": 42,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:00:00Z",
+    "lastActivity": "2026-10-03T08:05:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2647,8 +2647,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 1,
-      "minutes": 8,
+      "attempts": 2,
+      "minutes": 11,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -5238,22 +5238,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1115,
+   "prod": 1118,
    "unprod": 106,
    "wait": 97,
-   "total": 1318
+   "total": 1321
   },
   "last24h": {
-   "prod": 440,
+   "prod": 443,
    "unprod": 17,
    "wait": 71,
-   "total": 528
+   "total": 531
   },
   "last7d": {
-   "prod": 1115,
+   "prod": 1118,
    "unprod": 106,
    "wait": 97,
-   "total": 1318
+   "total": 1321
   },
   "product": {
    "prod": 697,
@@ -5262,10 +5262,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 418,
+   "prod": 421,
    "unprod": 2,
    "wait": 8,
-   "total": 428
+   "total": 431
   }
  },
  "days": [
@@ -5349,7 +5349,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 212,
+   "prod": 215,
    "unprod": 6,
    "wait": 31
   }
@@ -5451,18 +5451,18 @@ window.PFA_DATA = {
    "total": 46
   },
   {
+   "task": "T-34",
+   "prod": 42,
+   "unprod": 0,
+   "wait": 0,
+   "total": 42
+  },
+  {
    "task": "T-01",
    "prod": 41,
    "unprod": 0,
    "wait": 0,
    "total": 41
-  },
-  {
-   "task": "T-34",
-   "prod": 39,
-   "unprod": 0,
-   "wait": 0,
-   "total": 39
   },
   {
    "task": "E2-06",
@@ -5475,7 +5475,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 941
+   "minutes": 944
   },
   {
    "account": "claude",
@@ -5487,6 +5487,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T08:02:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reapertura: App Checker por Canvas MCP para separar acceso a app de sync vacío",
+   "evidence": "Connect/check completan, App Checker 0 errores y 0 avisos; sync anterior sigue sin YAML. Issue Microsoft #219 describe el mismo síntoma en v1.0.7 y una solución por connect, ya aplicada aquí sin resolver sync. CUA expiró dos veces; no se inspeccionó Studio. https://github.com/microsoft/power-platform-skills/issues/219"
+  },
   {
    "start": "2026-10-03T07:52:00Z",
    "minutes": 8,
@@ -5603,22 +5616,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Prueba temporal del estado 0; aviso y botón ocultos",
    "evidence": "Preview correcto; 0 filas de SharePoint modificadas. M365 Copilot recomendó renovar URL/sesión y mantener cambios locales respaldados; restauración aún pendiente"
-  },
-  {
-   "start": "2026-10-03T06:26:00Z",
-   "minutes": 21,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Aviso de carpetas nuevas visible y navegación a Configuration probada; segundo push no aplicado",
-   "evidence": "Push inicial 0 errores/73 avisos; preview mostró 20 pendientes; botón abrió Configuration; fórmula Visible actual confirmada en Studio; estado con 0 pendiente sin probar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T08:02:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reapertura: App Checker por Canvas MCP para separar acceso a app de sync vacío",
+   "evidence": "Connect/check completan, App Checker 0 errores y 0 avisos; sync anterior sigue sin YAML. Issue Microsoft #219 describe el mismo síntoma en v1.0.7 y una solución por connect, ya aplicada aquí sin resolver sync. CUA expiró dos veces; no se inspeccionó Studio. https://github.com/microsoft/power-platform-skills/issues/219"
+  },
   {
    "start": "2026-10-03T07:52:00Z",
    "minutes": 8,
