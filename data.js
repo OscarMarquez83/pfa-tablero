@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:34:02.002860Z",
+ "generatedUtc": "2026-10-03T03:40:14.308246Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,25 +8,18 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-10-03 03:22 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "terminar T-31 (latido y tiempo en vivo en el tablero) y T-33 (plantilla de relevo en cerrar-intento). Después, retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049): editar design/app/Configuration.pa.yaml y aplicarlo con tools/canvas.py.",
+  "nextAction": "retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049), desde su línea de relevo. T-33 y T-34 quedan Por validar hasta la primera retoma y la primera corrida de tools/canvas.py por Codex.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-31 (Claude), intento 1, inicio 2026-10-03 03:20 UTC. El tablero muestra el tiempo en vivo de la tarea en curso, el agente que la tiene y el estado por latido (Trabajando, Sin reporte, Detenida), sin contar la sesión del revisor. Comprobación: prueba local y en Pages a 1366 y 390 px.",
-   "Avance 03:21 UTC: hecho: build_dashboard.py calcula el latido (Claude y Codex, sin la sesión del revisor) y la tarea en vivo; index.html muestra el estado y los minutos y se actualiza cada 30 s · falta: verificar en Pages a 1366 y 390 px · herramienta: archivos guardados, sin commit · siguiente: publicar y revisar en Pages.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:22:17.733070Z",
+  "fileUtc": "2026-10-03T03:35:51.031759Z",
   "heartbeat": {
-   "claude": "2026-10-03T03:34:01.326957Z",
+   "claude": "2026-10-03T03:36:21.734895Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
-  "live": {
-   "id": "T-31",
-   "agent": "Claude",
-   "startUtc": "2026-10-03T03:20:00Z",
-   "waits": []
-  },
+  "live": null,
   "ruleFootprints": {
    "current": "CA8D23A4",
    "read": {
@@ -411,15 +404,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 29,
+   "done": 30,
    "total": 33,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 367,
+    "prod": 382,
     "unprod": 2,
     "wait": 8,
-    "total": 377
+    "total": 392
    }
   }
  ],
@@ -2585,25 +2578,26 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "En curso",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 15,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T03:35:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 15,
       "limit": 60,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": [
+     "KF-H09"
+    ]
    },
    {
     "id": "T-32",
@@ -3378,6 +3372,16 @@ window.PFA_DATA = {
     "- Desvío (E2-04, intento 18): Codex pidió una ampliación de 20 min. Sin respuesta, la dio por aprobada porque Oscar había dicho que siguiera con el objetivo E2–E4 (D-039), y la usó.",
     "- Regla: un pedido de \"Necesito de Oscar\" solo se aprueba con un issue suyo que lo responda o con un mensaje suyo que lo nombre. Un objetivo general (\"sigue con E2–E4\") no aprueba pedidos pendientes, ampliaciones de tiempo ni excepciones. Sin respuesta, la tarea sigue `Bloqueada` y el agente pasa a otra.",
     "- Al registrar una aprobación en DECISIONS, cita la frase o el issue exactos de Oscar."
+   ]
+  },
+  "KF-H09": {
+   "title": "TABLERO · Latido del agente y caché de data.js (T-31, Claude)",
+   "note": "",
+   "lines": [
+    "- Latido (D-046): `build_dashboard.py` toma la hora de la última escritura del registro de sesión de cada agente en el equipo: Claude en `~/.claude/projects/<carpeta del repo>/*.jsonl`; Codex en `~/.codex/sessions/**/*.jsonl`, solo sesiones de este repositorio y sin las del revisor (texto \"como revisor de avance del proyecto\"). No lee contenido de Claude y no cuesta tokens.",
+    "- Como el latido cambia en cada corrida, `data.js` se publica en cada ventana de 6 min (unas 10 publicaciones por hora como máximo). El retraso del estado en Pages es de hasta unos 8 min, menos que el umbral de 30.",
+    "- Trampa: GitHub Pages guarda `data.js` en caché hasta 10 min y el navegador mostraba datos viejos. Solución: `index.html` carga `data.js?t=<hora>`.",
+    "- Comprobación de estados sin esperar: en la página publicada, cambiar `window.PFA_DATA.status` (live, heartbeat, fileUtc) y leer `#livestate` 30 s después."
    ]
   },
   "KF-H08": {
@@ -5038,6 +5042,39 @@ window.PFA_DATA = {
    "lessons": []
   },
   {
+   "id": "T-31",
+   "action": "Tablero: tiempo de la tarea en curso que avanza en vivo (pausado durante una espera), agente que la tiene y estado por latido: \"Trabajando\", \"Sin reporte\" (hay latido pero STATUS lleva 30 min sin avance) o \"Detenida\" (30 min sin latido). Latido = última escritura del registro de sesión del agente en este equipo; no cuesta tokens",
+   "owner": "Agente",
+   "depends": "Decisión de Oscar",
+   "expected": "Oscar ve si el agente trabaja, espera o se detuvo, sin depender de que el agente reporte",
+   "evidence": "Prueba local y en Pages a 1366 y 390 px: tarea en curso con agente y minutos que suben; latido viejo → \"Detenida\"; latido reciente y STATUS sin cambios → \"Sin reporte\"; la sesión del revisor no cuenta como latido",
+   "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 15,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T03:35:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 15,
+     "limit": 60,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [
+    "KF-H09"
+   ]
+  },
+  {
    "id": "T-32",
    "action": "Reglas de ahorro de tokens para cualquier agente: capturas solo para decisiones visuales de Oscar o cuando la pantalla no se puede leer como texto, y reducidas; avance por hito en vez de cada 3 min (lo cubre el latido de T-31); reportes de chat en 3 partes cortas; lectura mínima al empezar; limpiar lo viejo de STATUS. Cambia AGENTS.md (pedido expreso de Oscar)",
    "owner": "Agente",
@@ -5071,27 +5108,27 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 52,
+  "tasksDone": 53,
   "tasksTotal": 71,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 927,
+   "prod": 942,
    "unprod": 100,
    "wait": 66,
-   "total": 1093
+   "total": 1108
   },
   "last24h": {
-   "prod": 311,
-   "unprod": 19,
+   "prod": 325,
+   "unprod": 18,
    "wait": 43,
-   "total": 373
+   "total": 386
   },
   "last7d": {
-   "prod": 927,
+   "prod": 942,
    "unprod": 100,
    "wait": 66,
-   "total": 1093
+   "total": 1108
   },
   "product": {
    "prod": 560,
@@ -5100,10 +5137,10 @@ window.PFA_DATA = {
    "total": 716
   },
   "support": {
-   "prod": 367,
+   "prod": 382,
    "unprod": 2,
    "wait": 8,
-   "total": 377
+   "total": 392
   }
  },
  "days": [
@@ -5187,7 +5224,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 24,
+   "prod": 39,
    "unprod": 0,
    "wait": 0
   }
@@ -5312,7 +5349,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 243
+   "minutes": 258
   },
   {
    "account": "empresa",
@@ -5320,6 +5357,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T03:20:00Z",
+   "minutes": 15,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-31",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tablero: latido por agente (sin sesión del revisor), tiempo en vivo con esperas descontadas y estado Trabajando / Sin reporte / Detenida / En espera; data.js sin caché",
+   "evidence": "Pages: livestate con datos reales a 1366 y 390 px sin desplazamiento horizontal; 4 estados comprobados con datos simulados en la página; KF-H09"
+  },
   {
    "start": "2026-10-03T03:19:00Z",
    "minutes": 1,
@@ -5436,22 +5486,22 @@ window.PFA_DATA = {
    "category": "CONECTOR",
    "summary": "Oscar validó en la app publicada: primer escaneo 24 encontradas; con 3 carpetas de prueba nuevas 27 encontradas y 3 nuevas; carpetas fuera de Projects no se leen; tras borrarlas, 24 encontradas y 0 nuevas. E2-04 Hecha (Claude)",
    "evidence": "REST: 29 filas, 0 duplicados; filas 27-29 de las carpetas borradas siguen con Decision=Nueva (HZ-20)"
-  },
-  {
-   "start": "2026-10-02T13:44:00Z",
-   "minutes": 21,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "App publicada: run 13:45 UTC falló por ActionResponseTimedOut (bucle 3m20s > 120 s). Flow rehecho: 1 llamada childFolders con $top=250 y $expand=childFolders desde Projects, sin bucles anidados; OnSelect lee la nueva forma y carga ids existentes una vez",
-   "evidence": "Test run 865 ms (10 nivel 2 + 14 nivel 3, childFolderCount coincide); flow y app publicados 14:00 UTC; app publicada: 24 folders found, 0 new; REST 26 filas sin cambios; botón sin superposición a 1366 px y vista angosta. Pendiente: creación con la fórmula final y fila decidida"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T03:20:00Z",
+   "minutes": 15,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-31",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Tablero: latido por agente (sin sesión del revisor), tiempo en vivo con esperas descontadas y estado Trabajando / Sin reporte / Detenida / En espera; data.js sin caché",
+   "evidence": "Pages: livestate con datos reales a 1366 y 390 px sin desplazamiento horizontal; 4 estados comprobados con datos simulados en la página; KF-H09"
+  },
   {
    "start": "2026-10-03T03:19:00Z",
    "minutes": 1,
