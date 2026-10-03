@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T14:28:14.199528Z",
+ "generatedUtc": "2026-10-03T14:34:14.472335Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T14:25:50.793725Z",
+  "fileUtc": "2026-10-03T14:29:17.008908Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T14:18:36.749702Z"
@@ -1055,7 +1055,7 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Por validar",
+    "status": "Reabierta",
     "attempts": 12,
     "minutes": 36,
     "entrega": "E2",
@@ -2676,7 +2676,7 @@ window.PFA_DATA = {
    "ext": {},
    "own": {}
   },
-  "status": "Por validar",
+  "status": "Reabierta",
   "attempts": 12,
   "minutes": 36,
   "entrega": "E2",
@@ -2712,7 +2712,7 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Por validar",
+   "status": "Reabierta",
    "attempts": 12,
    "minutes": 36,
    "entrega": "E2",
@@ -5246,7 +5246,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-06",
-   "reason": "3 intentos sin avance",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (12 intentos previos)",
    "level": "serious"
   },
   {
