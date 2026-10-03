@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:46:14.283914Z",
+ "generatedUtc": "2026-10-03T08:52:14.282943Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:44 UTC",
+  "updated": "2026-10-03 08:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Esperar aprobación para agregar una consulta MCP de solo lectura al puente; después medir estado de fuentes y reanudar E2-07. No repetir las llamadas Edge que agotaron 30 y 60 segundos.",
+  "nextAction": "Antes del tercer intento, ejecutar la prueba diferencial registrada en worklog: leer fuentes de la app o comprobar la sesión Editing/Coauthoring. No repetir el mismo sync hasta medir esa diferencia.",
   "needsOscar": [
    {
     "ref": "T-34",
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:45:25.348533Z",
+  "fileUtc": "2026-10-03T08:47:21.420577Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T08:35:55.319992Z"
@@ -225,10 +225,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 445,
+    "prod": 449,
     "unprod": 2,
     "wait": 8,
-    "total": 455
+    "total": 459
    }
   }
  ],
@@ -2634,11 +2634,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 8,
-    "minutes": 66,
+    "attempts": 9,
+    "minutes": 70,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:35:00Z",
+    "lastActivity": "2026-10-03T08:46:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2651,8 +2651,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 5,
-      "minutes": 35,
+      "attempts": 6,
+      "minutes": 39,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -5252,22 +5252,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1142,
+   "prod": 1146,
    "unprod": 106,
    "wait": 97,
-   "total": 1345
+   "total": 1349
   },
   "last24h": {
-   "prod": 467,
+   "prod": 471,
    "unprod": 17,
    "wait": 71,
-   "total": 555
+   "total": 559
   },
   "last7d": {
-   "prod": 1142,
+   "prod": 1146,
    "unprod": 106,
    "wait": 97,
-   "total": 1345
+   "total": 1349
   },
   "product": {
    "prod": 697,
@@ -5276,10 +5276,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 445,
+   "prod": 449,
    "unprod": 2,
    "wait": 8,
-   "total": 455
+   "total": 459
   }
  },
  "days": [
@@ -5363,7 +5363,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 239,
+   "prod": 243,
    "unprod": 6,
    "wait": 31
   }
@@ -5452,10 +5452,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-34",
-   "prod": 66,
+   "prod": 70,
    "unprod": 0,
    "wait": 0,
-   "total": 66
+   "total": 70
   },
   {
    "task": "T-30",
@@ -5489,7 +5489,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 968
+   "minutes": 972
   },
   {
    "account": "claude",
@@ -5501,6 +5501,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T08:42:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Sync a tmp con ruta absoluta siguió sin devolver archivos; ruta relativa descartada",
+   "evidence": "python tools/canvas.py [Studio URL] sync tmp/E2-07-sync-attempt8: exit 0, No files returned, 0 YAML; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-canvas-external-tools; sin cambios en Studio"
+  },
   {
    "start": "2026-10-03T08:27:00Z",
    "minutes": 8,
@@ -5617,22 +5630,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Medí el MCP tras recargar Studio; connect devolvió HTTP 422",
    "evidence": "Sync solo a tmp; Studio Read-only; Copilot recomienda cerrar la pestaña propia y reabrir desde Home; sin Override ni cambios a SharePoint"
-  },
-  {
-   "start": "2026-10-03T07:27:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Studio conservó el modo Read-only durante la espera",
-   "evidence": "Al volver a medir, el aviso confirma que el control de edición sigue en otra sesión"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T08:42:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 8,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Sync a tmp con ruta absoluta siguió sin devolver archivos; ruta relativa descartada",
+   "evidence": "python tools/canvas.py [Studio URL] sync tmp/E2-07-sync-attempt8: exit 0, No files returned, 0 YAML; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-canvas-external-tools; sin cambios en Studio"
+  },
   {
    "start": "2026-10-03T08:27:00Z",
    "minutes": 8,
