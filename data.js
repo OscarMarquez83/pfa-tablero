@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T07:25:15.646442Z",
+ "generatedUtc": "2026-10-03T07:34:15.514664Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 07:19 UTC",
+  "updated": "2026-10-03 07:31 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-07: aviso de nuevas carpetas en My Day; después E2-08 y E2-09 para publicar y hacer la validación pendiente de E2-06.",
   "needsOscar": [
@@ -17,10 +17,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T07:19:50.267926Z",
+  "fileUtc": "2026-10-03T07:32:14.660179Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T06:48:02.048528Z"
+   "codex": "2026-10-03T07:28:45.199585Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T07:19:00Z"
+    "utc": "2026-10-03T07:31:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 366,
+    "prod": 403,
     "unprod": 104,
-    "wait": 80,
-    "total": 550
+    "wait": 85,
+    "total": 592
    }
   },
   {
@@ -1091,21 +1091,21 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 1,
-    "minutes": 21,
+    "attempts": 4,
+    "minutes": 58,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "2026-10-03T06:47:00Z",
+    "lastActivity": "2026-10-03T07:31:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 1,
-      "minutes": 21,
+      "attempts": 4,
+      "minutes": 58,
       "limit": 30,
       "extra": 0,
       "finished": false,
-      "tone": "ok"
+      "tone": "over"
      }
     ],
     "lessons": [],
@@ -2737,21 +2737,21 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 1,
-   "minutes": 21,
+   "attempts": 4,
+   "minutes": 58,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
-   "lastActivity": "2026-10-03T06:47:00Z",
+   "lastActivity": "2026-10-03T07:31:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 1,
-     "minutes": 21,
+     "attempts": 4,
+     "minutes": 58,
      "limit": 30,
      "extra": 0,
      "finished": false,
-     "tone": "ok"
+     "tone": "over"
     }
    ],
    "lessons": [],
@@ -5215,6 +5215,11 @@ window.PFA_DATA = {
    "task": "E2-06",
    "reason": "3 intentos sin avance",
    "level": "serious"
+  },
+  {
+   "task": "E2-07",
+   "reason": "58 min efectivos de 30 permitidos",
+   "level": "serious"
   }
  ],
  "kpi": {
@@ -5223,28 +5228,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1049,
+   "prod": 1086,
    "unprod": 106,
-   "wait": 92,
-   "total": 1247
+   "wait": 97,
+   "total": 1289
   },
   "last24h": {
-   "prod": 374,
+   "prod": 411,
    "unprod": 17,
-   "wait": 66,
-   "total": 457
+   "wait": 71,
+   "total": 499
   },
   "last7d": {
-   "prod": 1049,
+   "prod": 1086,
    "unprod": 106,
-   "wait": 92,
-   "total": 1247
+   "wait": 97,
+   "total": 1289
   },
   "product": {
-   "prod": 639,
+   "prod": 676,
    "unprod": 104,
-   "wait": 84,
-   "total": 827
+   "wait": 89,
+   "total": 869
   },
   "support": {
    "prod": 410,
@@ -5334,9 +5339,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 146,
+   "prod": 183,
    "unprod": 6,
-   "wait": 26
+   "wait": 31
   }
  ],
  "categories": [
@@ -5382,7 +5387,7 @@ window.PFA_DATA = {
   },
   {
    "category": "NAVEGADOR",
-   "minutes": 9
+   "minutes": 14
   }
  ],
  "topTasks": [
@@ -5413,6 +5418,13 @@ window.PFA_DATA = {
    "unprod": 30,
    "wait": 2,
    "total": 99
+  },
+  {
+   "task": "E2-07",
+   "prod": 58,
+   "unprod": 0,
+   "wait": 5,
+   "total": 63
   },
   {
    "task": "T-30",
@@ -5448,19 +5460,12 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 4,
    "total": 33
-  },
-  {
-   "task": "T-34",
-   "prod": 31,
-   "unprod": 0,
-   "wait": 0,
-   "total": 31
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 870
+   "minutes": 912
   },
   {
    "account": "claude",
@@ -5472,6 +5477,71 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T07:29:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 3,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Medí el MCP tras recargar Studio; connect devolvió HTTP 422",
+   "evidence": "Sync solo a tmp; Studio Read-only; Copilot recomienda cerrar la pestaña propia y reabrir desde Home; sin Override ni cambios a SharePoint"
+  },
+  {
+   "start": "2026-10-03T07:27:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio conservó el modo Read-only durante la espera",
+   "evidence": "Al volver a medir, el aviso confirma que el control de edición sigue en otra sesión"
+  },
+  {
+   "start": "2026-10-03T07:26:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Confirmé el bloqueo de edición en Studio",
+   "evidence": "Pestaña PFA_Pilot_App en Edge; edición deshabilitada; no se aplicó ningún cambio"
+  },
+  {
+   "start": "2026-10-03T07:23:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio recargando tras renovar la sesión",
+   "evidence": "Edge muestra Read-only porque otra sesión conserva el control; no se pulsó Override"
+  },
+  {
+   "start": "2026-10-03T06:49:00Z",
+   "minutes": 34,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Prueba temporal del estado 0; aviso y botón ocultos",
+   "evidence": "Preview correcto; 0 filas de SharePoint modificadas. M365 Copilot recomendó renovar URL/sesión y mantener cambios locales respaldados; restauración aún pendiente"
+  },
   {
    "start": "2026-10-03T06:26:00Z",
    "minutes": 21,
@@ -5536,74 +5606,74 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Revisé KF-P11, el informe E2-04 y los intentos 1–19; añadí INC-16 por no aplicar la revisión antes del segundo push",
    "evidence": "Informe y worklog de E2-04 contrastados; incidente registrado; siguiente cambio detenido hasta revisar datos de prueba y archivo completo"
-  },
+  }
+ ],
+ "history": [
   {
-   "start": "2026-10-03T06:02:00Z",
-   "minutes": 9,
+   "start": "2026-10-03T07:29:00Z",
+   "minutes": 2,
    "account": "personal",
    "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Alias As proj y UpdateIf según error de compilación observado; push aceptado",
-   "evidence": "0 errores, 67 avisos; Studio: 4 activos visibles; sync 9 YAML a tmp/canvas-verify, fórmula confirmada; pruebas de cambio de datos pendientes"
-  },
-  {
-   "start": "2026-10-03T06:01:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "YAML_PA",
-   "summary": "Tras corregir indentación de BorderColor, push detectó segundo mapeo YAML mal indentado en btnGoTasks.Font",
-   "evidence": "Projects.pa.yaml(153,23): YamlInvalidSyntax invalid mapping; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-yaml"
-  },
-  {
-   "start": "2026-10-03T06:01:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Push revirtió Studio al guardar 1 error PaYaml; línea 14 de Projects mal indentada",
-   "evidence": "Projects.pa.yaml(15,13): YamlInvalidSyntax, se esperaba clave; hipótesis: BorderColor alineado fuera del mapeo Properties; comprobar corrigiendo indentación únicamente"
-  },
-  {
-   "start": "2026-10-03T05:54:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Construcción inicial de la pantalla Projects como YAML",
-   "evidence": "design/app/Projects.pa.yaml; primer push revertido en la fila siguiente"
-  },
-  {
-   "start": "2026-10-03T05:47:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
+   "task": "E2-07",
    "attempt": 3,
    "result": "AVANCE",
    "kind": "prod",
    "category": "YAML_PA",
-   "summary": "Sync funcionó tras guardar y recargar Studio autenticado; Coauthoring On; sin push",
-   "evidence": "Auditoría sync OK: Synced 9 file(s), código 0; diff: 3 propiedades omitidas en Configuration; evidencia funcional de Projects pendiente"
-  }
- ],
- "history": [
+   "summary": "Medí el MCP tras recargar Studio; connect devolvió HTTP 422",
+   "evidence": "Sync solo a tmp; Studio Read-only; Copilot recomienda cerrar la pestaña propia y reabrir desde Home; sin Override ni cambios a SharePoint"
+  },
+  {
+   "start": "2026-10-03T07:27:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio conservó el modo Read-only durante la espera",
+   "evidence": "Al volver a medir, el aviso confirma que el control de edición sigue en otra sesión"
+  },
+  {
+   "start": "2026-10-03T07:26:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Confirmé el bloqueo de edición en Studio",
+   "evidence": "Pestaña PFA_Pilot_App en Edge; edición deshabilitada; no se aplicó ningún cambio"
+  },
+  {
+   "start": "2026-10-03T07:23:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "NAVEGADOR",
+   "summary": "Studio recargando tras renovar la sesión",
+   "evidence": "Edge muestra Read-only porque otra sesión conserva el control; no se pulsó Override"
+  },
+  {
+   "start": "2026-10-03T06:49:00Z",
+   "minutes": 34,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Prueba temporal del estado 0; aviso y botón ocultos",
+   "evidence": "Preview correcto; 0 filas de SharePoint modificadas. M365 Copilot recomendó renovar URL/sesión y mantener cambios locales respaldados; restauración aún pendiente"
+  },
   {
    "start": "2026-10-03T06:26:00Z",
    "minutes": 21,
