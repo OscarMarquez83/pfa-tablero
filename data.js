@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:16:14.348381Z",
+ "generatedUtc": "2026-10-03T08:22:15.408205Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:14 UTC",
+  "updated": "2026-10-03 08:18 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Reanudar E2-07 cuando la pestaña existente de Studio sea inspeccionable; confirmar Editing y Coauthoring, después sincronizar y comprobar que bajó YAML. La extensión Edge está conectada, pero enumerar o vincular su pestaña agota tiempo; no repetir esas llamadas ahora.",
   "needsOscar": [
@@ -17,10 +17,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:14:45.096726Z",
+  "fileUtc": "2026-10-03T08:18:17.751260Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T08:09:04.966450Z"
+   "codex": "2026-10-03T07:44:08.680625Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:09:00Z"
+    "utc": "2026-10-03T08:18:00Z"
    }
   }
  },
@@ -221,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 426,
+    "prod": 429,
     "unprod": 2,
     "wait": 8,
-    "total": 436
+    "total": 439
    }
   }
  ],
@@ -2631,10 +2631,10 @@ window.PFA_DATA = {
     },
     "status": "En curso",
     "attempts": 6,
-    "minutes": 47,
+    "minutes": 50,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:14:00Z",
+    "lastActivity": "2026-10-03T08:17:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2648,7 +2648,7 @@ window.PFA_DATA = {
      {
       "agent": "Codex",
       "attempts": 3,
-      "minutes": 16,
+      "minutes": 19,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -2656,7 +2656,8 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [
-     "KF-19"
+     "KF-19",
+     "KF-P13"
     ],
     "ready": true
    }
@@ -3357,6 +3358,15 @@ window.PFA_DATA = {
     "- Desvío (E2-04, intento 18): Codex pidió una ampliación de 20 min. Sin respuesta, la dio por aprobada porque Oscar había dicho que siguiera con el objetivo E2–E4 (D-039), y la usó.",
     "- Regla: un pedido de \"Necesito de Oscar\" solo se aprueba con un issue suyo que lo responda o con un mensaje suyo que lo nombre. Un objetivo general (\"sigue con E2–E4\") no aprueba pedidos pendientes, ampliaciones de tiempo ni excepciones. Sin respuesta, la tarea sigue `Bloqueada` y el agente pasa a otra.",
     "- Al registrar una aprobación en DECISIONS, cita la frase o el issue exactos de Oscar."
+   ]
+  },
+  "KF-P13": {
+   "title": "INC-18 · Registrar el inicio en STATUS antes de ejecutar herramientas.",
+   "note": "",
+   "lines": [
+    "- Desvío (T-34, intento 5): se anunció el intento en el chat, pero las consultas de Edge comenzaron antes de registrar STATUS.",
+    "- Regla: al inicio de cada intento, toma la hora real y anota en STATUS el ID, número, objetivo y comprobación antes de ejecutar comandos o usar el navegador. El comentario del chat no sustituye ese registro.",
+    "- Comprobación: STATUS tiene la línea de inicio del intento y la huella AGENTS vigente antes de la primera acción."
    ]
   },
   "KF-H09": {
@@ -5238,22 +5248,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1123,
+   "prod": 1126,
    "unprod": 106,
    "wait": 97,
-   "total": 1326
+   "total": 1329
   },
   "last24h": {
-   "prod": 448,
+   "prod": 451,
    "unprod": 17,
    "wait": 71,
-   "total": 536
+   "total": 539
   },
   "last7d": {
-   "prod": 1123,
+   "prod": 1126,
    "unprod": 106,
    "wait": 97,
-   "total": 1326
+   "total": 1329
   },
   "product": {
    "prod": 697,
@@ -5262,10 +5272,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 426,
+   "prod": 429,
    "unprod": 2,
    "wait": 8,
-   "total": 436
+   "total": 439
   }
  },
  "days": [
@@ -5349,7 +5359,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 220,
+   "prod": 223,
    "unprod": 6,
    "wait": 31
   }
@@ -5437,14 +5447,14 @@ window.PFA_DATA = {
    "total": 84
   },
   {
-   "task": "T-30",
-   "prod": 47,
+   "task": "T-34",
+   "prod": 50,
    "unprod": 0,
    "wait": 0,
-   "total": 47
+   "total": 50
   },
   {
-   "task": "T-34",
+   "task": "T-30",
    "prod": 47,
    "unprod": 0,
    "wait": 0,
@@ -5475,7 +5485,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 949
+   "minutes": 952
   },
   {
    "account": "claude",
@@ -5489,7 +5499,7 @@ window.PFA_DATA = {
  "recent": [
   {
    "start": "2026-10-03T08:09:00Z",
-   "minutes": 5,
+   "minutes": 8,
    "account": "personal",
    "entrega": "T",
    "task": "T-34",
@@ -5497,8 +5507,8 @@ window.PFA_DATA = {
    "result": "AVANCE",
    "kind": "prod",
    "category": "NAVEGADOR",
-   "summary": "Confirmé que la extensión Edge sigue conectada y probé dos vías de acceso a la pestaña",
-   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push."
+   "summary": "Confirmé que la extensión Edge sigue conectada; no pude inspeccionar la pestaña existente",
+   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push. INC-18: faltó registrar el inicio en STATUS antes de las consultas."
   },
   {
    "start": "2026-10-03T08:02:00Z",
@@ -5621,7 +5631,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-03T08:09:00Z",
-   "minutes": 5,
+   "minutes": 8,
    "account": "personal",
    "entrega": "T",
    "task": "T-34",
@@ -5629,8 +5639,8 @@ window.PFA_DATA = {
    "result": "AVANCE",
    "kind": "prod",
    "category": "NAVEGADOR",
-   "summary": "Confirmé que la extensión Edge sigue conectada y probé dos vías de acceso a la pestaña",
-   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push."
+   "summary": "Confirmé que la extensión Edge sigue conectada; no pude inspeccionar la pestaña existente",
+   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push. INC-18: faltó registrar el inicio en STATUS antes de las consultas."
   },
   {
    "start": "2026-10-03T08:02:00Z",
