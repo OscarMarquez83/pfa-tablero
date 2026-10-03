@@ -1,23 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T14:34:14.472335Z",
+ "generatedUtc": "2026-10-03T14:43:14.176095Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:46 UTC",
+  "updated": "2026-10-03 14:40 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "publicar y comprobar E2-06; dejar guion para Oscar y detener la sesión.",
+  "nextAction": "Completar E2-06; después continuar las tareas restantes de E2 por dependencias.",
   "needsOscar": [
    {
     "ref": "E2-06",
-    "text": "cuando quede publicada y comprobada E2-06, revisa Projects en escritorio y teléfono vertical: confirma que nombre, conteo y botón Deactivate se leen completos y sin superposición. Responde E2-06 OK o describe el defecto. Al responder: registro tu validación o corrijo el defecto."
+    "text": "guion previsto cuando Codex complete la auditoría final: en la app publicada, entra en Projects en escritorio y teléfono vertical; confirma que nombre, conteo y Deactivate se leen completos, sin superposición ni desplazamiento horizontal. Responde E2-06 OK o describe el defecto. La tarea todavía no está lista para esa validación. Al responder: registro tu aceptación cuando esté comprobada o corrijo el defecto."
    }
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T14:29:17.008908Z",
+  "fileUtc": "2026-10-03T14:41:09.794123Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T14:18:36.749702Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T14:19:00Z"
+    "utc": "2026-10-03T14:40:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 424,
+    "prod": 439,
     "unprod": 104,
     "wait": 85,
-    "total": 613
+    "total": 628
    }
   },
   {
@@ -1056,17 +1056,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "Reabierta",
-    "attempts": 12,
-    "minutes": 36,
+    "attempts": 13,
+    "minutes": 51,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 3,
-    "lastActivity": "2026-10-03T06:22:00Z",
+    "lastActivity": "2026-10-03T14:35:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 12,
-      "minutes": 36,
+      "attempts": 13,
+      "minutes": 51,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2677,17 +2677,17 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "Reabierta",
-  "attempts": 12,
-  "minutes": 36,
+  "attempts": 13,
+  "minutes": 51,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 3,
-  "lastActivity": "2026-10-03T06:22:00Z",
+  "lastActivity": "2026-10-03T14:35:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 12,
-    "minutes": 36,
+    "attempts": 13,
+    "minutes": 51,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2713,17 +2713,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "Reabierta",
-   "attempts": 12,
-   "minutes": 36,
+   "attempts": 13,
+   "minutes": 51,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 3,
-   "lastActivity": "2026-10-03T06:22:00Z",
+   "lastActivity": "2026-10-03T14:35:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 12,
-     "minutes": 36,
+     "attempts": 13,
+     "minutes": 51,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -5246,7 +5246,7 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-06",
-   "reason": "Reabierta: se dio por terminada y no lo estaba (12 intentos previos)",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (13 intentos previos)",
    "level": "serious"
   },
   {
@@ -5261,28 +5261,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1150,
+   "prod": 1165,
    "unprod": 106,
    "wait": 97,
-   "total": 1353
+   "total": 1368
   },
   "last24h": {
-   "prod": 386,
+   "prod": 401,
    "unprod": 6,
    "wait": 31,
-   "total": 423
+   "total": 438
   },
   "last7d": {
-   "prod": 1150,
+   "prod": 1165,
    "unprod": 106,
    "wait": 97,
-   "total": 1353
+   "total": 1368
   },
   "product": {
-   "prod": 697,
+   "prod": 712,
    "unprod": 104,
    "wait": 89,
-   "total": 890
+   "total": 905
   },
   "support": {
    "prod": 453,
@@ -5372,7 +5372,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 247,
+   "prod": 262,
    "unprod": 6,
    "wait": 31
   }
@@ -5467,6 +5467,13 @@ window.PFA_DATA = {
    "total": 74
   },
   {
+   "task": "E2-06",
+   "prod": 45,
+   "unprod": 6,
+   "wait": 2,
+   "total": 53
+  },
+  {
    "task": "T-30",
    "prod": 47,
    "unprod": 0,
@@ -5486,19 +5493,12 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 41
-  },
-  {
-   "task": "E2-06",
-   "prod": 30,
-   "unprod": 6,
-   "wait": 2,
-   "total": 38
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 976
+   "minutes": 991
   },
   {
    "account": "claude",
@@ -5510,6 +5510,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T14:20:00Z",
+   "minutes": 15,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Cierre urgente por creditos: My Day restaurada; E2-06 publicada, prueba funcional y correccion vertical",
+   "evidence": "Sync tras recarga 9 YAML coincide design/app; push 0 errores/70 avisos; Publish successful; primera version: renombre nativo persistio, Active 5 a 4, Inactive e Included No comprobados y restaurados. Segunda version publicada: auditoria final pendiente; segunda preparacion ficticia aun Active y carpeta incluida/asociada. Capturas tmp/evidencia/E2-06. Auditoria final NO completa."
+  },
   {
    "start": "2026-10-03T14:16:00Z",
    "minutes": 4,
@@ -5626,22 +5639,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Detecté diferencia entre el contrato MCP local y el connect de canvas.py",
    "evidence": "server.json del paquete oficial 1.1.5 exige environment_category; tools/canvas.py envía environment_id y app_id. HTTP 422 no reproducido con el parámetro faltante corregido; Studio conserva override 0, fórmula real intacta en design/app."
-  },
-  {
-   "start": "2026-10-03T07:31:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Reabrí Studio desde Home y recuperé Editing, pero sync MCP devolvió HTTP 422",
-   "evidence": "Coauthoring On; ids de environment/app correctos; OnVisible remoto aún usa el override 0; sin push ni cambios a SharePoint"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T14:20:00Z",
+   "minutes": 15,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Cierre urgente por creditos: My Day restaurada; E2-06 publicada, prueba funcional y correccion vertical",
+   "evidence": "Sync tras recarga 9 YAML coincide design/app; push 0 errores/70 avisos; Publish successful; primera version: renombre nativo persistio, Active 5 a 4, Inactive e Included No comprobados y restaurados. Segunda version publicada: auditoria final pendiente; segunda preparacion ficticia aun Active y carpeta incluida/asociada. Capturas tmp/evidencia/E2-06. Auditoria final NO completa."
+  },
   {
    "start": "2026-10-03T14:16:00Z",
    "minutes": 4,
