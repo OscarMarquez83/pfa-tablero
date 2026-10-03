@@ -739,12 +739,14 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     if (!rd.hash) return;
     var mins = rd.utc ? Math.max(0, Math.round((Date.now() - new Date(rd.utc).getTime()) / 60000)) : null;
     var ago = mins == null ? "" : " hace " + (mins < 60 ? mins + " min" : mins < 1440 ? Math.floor(mins / 60) + " h" : Math.floor(mins / 1440) + " d");
-    var ok = rd.hash.toUpperCase() === cur;
+    // D-055: AGENTS.md debe medir menos de 10 KB (Codex deja de leer instrucciones al pasar 32 KiB en total).
+    var kb = fp.sizeBytes ? Math.round(fp.sizeBytes / 102.4) / 10 : null, big = kb != null && kb >= 10;
+    var ok = rd.hash.toUpperCase() === cur && !big, size = kb != null ? " · " + String(kb).replace(".", ",") + " KB" + (big ? " (límite 10)" : "") : "";
     el.className = "rules " + (ok ? "ok" : "bad");
-    el.title = "AGENTS.md vigente: " + cur + " · leído por " + (rd.agent || "?") + ": " + rd.hash + (rd.utc ? " (" + rd.utc.replace("T", " ").replace(":00Z", " UTC") + ")" : "");
-    el.innerHTML = '<span class="dot">' + (ok ? "✓" : "!") + '</span><span class="txt">' + (ok
+    el.title = "AGENTS.md vigente: " + cur + " · leído por " + (rd.agent || "?") + ": " + rd.hash + (rd.utc ? " (" + rd.utc.replace("T", " ").replace(":00Z", " UTC") + ")" : "") + (kb != null ? " · tamaño " + kb + " KB de 10 permitidos" : "");
+    el.innerHTML = '<span class="dot">' + (ok ? "✓" : "!") + '</span><span class="txt">' + (rd.hash.toUpperCase() === cur
       ? "Reglas al día · " + esc(rd.agent || "Agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)
-      : "AGENTS.md cambió (<b>" + esc(cur) + "</b>) · " + esc(rd.agent || "el agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)) + "</span>";
+      : "AGENTS.md cambió (<b>" + esc(cur) + "</b>) · " + esc(rd.agent || "el agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)) + esc(size) + "</span>";
   })();
   (function () {
     var html = '<div id="livestate"></div>';

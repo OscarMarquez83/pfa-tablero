@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T23:07:13.853942Z",
+ "generatedUtc": "2026-10-03T23:16:14.214531Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 16:48 UTC",
+  "updated": "2026-10-03 23:12 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Esperar la validación de E2-06 y las decisiones de Oscar en E2-10; no iniciar E3 antes de aceptar E2.",
+  "nextAction": "Claude: T-37, T-38 y T-39 (proceso nuevo, D-054) y replaneo de E3 en pasos. Codex no ejecuta tareas hasta que esto termine. Oscar valida E2-06 y E2-10 en paralelo.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -21,14 +21,15 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T16:49:19.458476Z",
+  "fileUtc": "2026-10-03T23:13:28.997396Z",
   "heartbeat": {
-   "claude": "2026-10-03T22:58:55.396447Z",
+   "claude": "2026-10-03T23:14:36.044832Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
   "ruleFootprints": {
-   "current": "38E3DE9A",
+   "current": "50198F5D",
+   "sizeBytes": 9976,
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
@@ -221,14 +222,14 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 32,
-   "total": 36,
+   "total": 38,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 453,
+    "prod": 457,
     "unprod": 2,
     "wait": 8,
-    "total": 463
+    "total": 467
    }
   }
  ],
@@ -2589,12 +2590,44 @@ window.PFA_DATA = {
    },
    {
     "id": "T-37",
-    "action": "Barrido de la documentación de control (AGENTS.md, STATUS, PLAN, KNOWN-FIXES, DECISIONS, skills): más corta y clara, sin perder reglas; lo viejo a un archivo de consulta",
+    "action": "AGENTS.md como constitución corta (D-055): menos de 10 KB, sin perder reglas; lo procedimental a skills (anti-bucle, cerrar-intento, powerapps-yaml) y a tools/pfa.py; referencias actualizadas; versión larga en git",
     "owner": "Agente",
-    "depends": "T-31 a T-36 y E2-05",
-    "expected": "Menos tokens al empezar cada sesión y reglas sin contradicciones",
-    "evidence": "Tamaños antes y después; ninguna regla vigente perdida (lista de control); huella actualizada; Oscar aprueba el resultado",
+    "depends": "—",
+    "expected": "Codex lee todas las reglas sin pasar su límite de 32 KiB",
+    "evidence": "Tamaño de AGENTS.md menor de 10 KB; lista de control de reglas movidas sin pérdidas; huella actualizada; tablero muestra el tamaño",
     "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 4,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-03T23:13:00Z",
+    "byAgent": [
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 4,
+      "limit": 90,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": true
+   },
+   {
+    "id": "T-38",
+    "action": "Pasos por tarea y motor tools/pfa.py (D-054, control/specs/T-38.md): formato control/pasos/<tarea>.md, comandos estado, empezar, paso, comprobar, ok, falla, pausar, siguiente, espera, cerrar, reporte y validar; pasos visibles en el tablero; skill planear y PLANIFICACION.md piden los pasos",
+    "owner": "Agente",
+    "depends": "T-37",
+    "expected": "Codex ejecuta pasos sin decidir y el registro sale siempre bien",
+    "evidence": "Prueba con un archivo de pasos de ensayo: empezar, comprobar OK, falla 2 veces → Pausada, siguiente, cerrar y reporte; worklog sin filas rotas; tablero en Pages con los pasos",
+    "limit": 120,
     "limitAlloc": {
      "ext": {},
      "own": {}
@@ -2610,14 +2643,46 @@ window.PFA_DATA = {
       "agent": "Codex",
       "attempts": 0,
       "minutes": 0,
-      "limit": 90,
+      "limit": 120,
       "extra": 0,
       "finished": false,
       "tone": "ok"
      }
     ],
     "lessons": [],
-    "ready": true
+    "ready": false
+   },
+   {
+    "id": "T-39",
+    "action": "Ganchos iguales en Codex (.codex/hooks.json) y Claude Code (.claude/settings.json) con tools/pfa_hook.py: tarjeta del paso, aviso de tarea equivocada, bloqueo de archivos fuera del paso y de pasos pausados, cierre registrado antes de terminar",
+    "owner": "Agente",
+    "depends": "T-38",
+    "expected": "Las reglas clave se cumplen solas en el momento",
+    "evidence": "Pruebas del script con eventos simulados de Codex y Claude; Oscar aprueba los ganchos en Codex; primera sesión real de cada agente muestra la tarjeta",
+    "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 60,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": false
    },
    {
     "id": "T-34",
@@ -3068,12 +3133,44 @@ window.PFA_DATA = {
   },
   {
    "id": "T-37",
-   "action": "Barrido de la documentación de control (AGENTS.md, STATUS, PLAN, KNOWN-FIXES, DECISIONS, skills): más corta y clara, sin perder reglas; lo viejo a un archivo de consulta",
+   "action": "AGENTS.md como constitución corta (D-055): menos de 10 KB, sin perder reglas; lo procedimental a skills (anti-bucle, cerrar-intento, powerapps-yaml) y a tools/pfa.py; referencias actualizadas; versión larga en git",
    "owner": "Agente",
-   "depends": "T-31 a T-36 y E2-05",
-   "expected": "Menos tokens al empezar cada sesión y reglas sin contradicciones",
-   "evidence": "Tamaños antes y después; ninguna regla vigente perdida (lista de control); huella actualizada; Oscar aprueba el resultado",
+   "depends": "—",
+   "expected": "Codex lee todas las reglas sin pasar su límite de 32 KiB",
+   "evidence": "Tamaño de AGENTS.md menor de 10 KB; lista de control de reglas movidas sin pérdidas; huella actualizada; tablero muestra el tamaño",
    "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Por validar",
+   "attempts": 1,
+   "minutes": 4,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T23:13:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 4,
+     "limit": 90,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [],
+   "ready": true
+  },
+  {
+   "id": "T-38",
+   "action": "Pasos por tarea y motor tools/pfa.py (D-054, control/specs/T-38.md): formato control/pasos/<tarea>.md, comandos estado, empezar, paso, comprobar, ok, falla, pausar, siguiente, espera, cerrar, reporte y validar; pasos visibles en el tablero; skill planear y PLANIFICACION.md piden los pasos",
+   "owner": "Agente",
+   "depends": "T-37",
+   "expected": "Codex ejecuta pasos sin decidir y el registro sale siempre bien",
+   "evidence": "Prueba con un archivo de pasos de ensayo: empezar, comprobar OK, falla 2 veces → Pausada, siguiente, cerrar y reporte; worklog sin filas rotas; tablero en Pages con los pasos",
+   "limit": 120,
    "limitAlloc": {
     "ext": {},
     "own": {}
@@ -3089,14 +3186,46 @@ window.PFA_DATA = {
      "agent": "Codex",
      "attempts": 0,
      "minutes": 0,
-     "limit": 90,
+     "limit": 120,
      "extra": 0,
      "finished": false,
      "tone": "ok"
     }
    ],
    "lessons": [],
-   "ready": true
+   "ready": false
+  },
+  {
+   "id": "T-39",
+   "action": "Ganchos iguales en Codex (.codex/hooks.json) y Claude Code (.claude/settings.json) con tools/pfa_hook.py: tarjeta del paso, aviso de tarea equivocada, bloqueo de archivos fuera del paso y de pasos pausados, cierre registrado antes de terminar",
+   "owner": "Agente",
+   "depends": "T-38",
+   "expected": "Las reglas clave se cumplen solas en el momento",
+   "evidence": "Pruebas del script con eventos simulados de Codex y Claude; Oscar aprueba los ganchos en Codex; primera sesión real de cada agente muestra la tarjeta",
+   "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 60,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [],
+   "ready": false
   },
   {
    "id": "T-34",
@@ -5337,26 +5466,26 @@ window.PFA_DATA = {
  ],
  "kpi": {
   "tasksDone": 60,
-  "tasksTotal": 74,
+  "tasksTotal": 76,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1289,
+   "prod": 1293,
    "unprod": 106,
    "wait": 97,
-   "total": 1492
+   "total": 1496
   },
   "last24h": {
-   "prod": 386,
+   "prod": 390,
    "unprod": 6,
    "wait": 31,
-   "total": 423
+   "total": 427
   },
   "last7d": {
-   "prod": 1289,
+   "prod": 1293,
    "unprod": 106,
    "wait": 97,
-   "total": 1492
+   "total": 1496
   },
   "product": {
    "prod": 836,
@@ -5365,10 +5494,10 @@ window.PFA_DATA = {
    "total": 1029
   },
   "support": {
-   "prod": 453,
+   "prod": 457,
    "unprod": 2,
    "wait": 8,
-   "total": 463
+   "total": 467
   }
  },
  "days": [
@@ -5452,7 +5581,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 386,
+   "prod": 390,
    "unprod": 6,
    "wait": 31
   }
@@ -5582,7 +5711,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 335
+   "minutes": 339
   },
   {
    "account": "empresa",
@@ -5590,6 +5719,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T23:09:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-37",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "AGENTS.md como constitución corta: 29.339 a 9976 bytes; skill anti-bucle nueva; cerrar-intento y powerapps-yaml reciben lo procedimental; tamaño en el tablero",
+   "evidence": "Lista de control control/specs/T-37.md; huella 50198F5D; Codex lee 11,9 de 32 KiB"
+  },
   {
    "start": "2026-10-03T16:24:00Z",
    "minutes": 24,
@@ -5706,22 +5848,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Guía oficial confirma que sync depende de Studio abierto y Coauthoring; cero archivos no distingue causa",
    "evidence": "README oficial indica que list_data_sources consulta fuentes de la app; aprobación para exponerlo en puente pendiente; sin cambios en Studio"
-  },
-  {
-   "start": "2026-10-03T08:18:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 6,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "Revalidé el acceso a la pestaña de Studio por ID de Edge y URL exacta",
-   "evidence": "La extensión sigue conectada (ID 3), pero listar pestañas agotó 60 s y vincular la URL exacta agotó 30 s. No se inspeccionó Studio ni se hizo sync o push. Se analizará el contrato de sync sin repetir las llamadas de Edge."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T23:09:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-37",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "AGENTS.md como constitución corta: 29.339 a 9976 bytes; skill anti-bucle nueva; cerrar-intento y powerapps-yaml reciben lo procedimental; tamaño en el tablero",
+   "evidence": "Lista de control control/specs/T-37.md; huella 50198F5D; Codex lee 11,9 de 32 KiB"
+  },
   {
    "start": "2026-10-03T16:24:00Z",
    "minutes": 24,
