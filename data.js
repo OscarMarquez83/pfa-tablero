@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T04:16:14.785661Z",
+ "generatedUtc": "2026-10-03T04:22:15.353402Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -11,6 +11,10 @@ window.PFA_DATA = {
   "nextAction": "retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049), desde su línea de relevo. T-33 y T-34 quedan Por validar hasta la primera retoma y la primera corrida de tools/canvas.py por Codex.",
   "needsOscar": [
    {
+    "ref": "E2-05",
+    "text": "la app publicada pide otra vez \"Allow PFA_Pilot_App to access your data?\" (Office 365 Outlook y SharePoint, las mismas conexiones de E2-04). Autorizar que yo la acepte. Al responder: acepto, repito en la app publicada las pruebas de Configuration a 1366 y 390 px y cierro E2-05."
+   },
+   {
     "ref": "T-35",
     "text": "en la app de Codex, borrar (o pausar) la automatización del revisor que corre cada 4 horas (\"Actúa como revisor de avance…\"). Yo no tengo acceso a las automatizaciones de Codex; mientras exista, solo responde \"desactivado\" y gasta pocos tokens. Al responder: marco T-35 como Hecha."
    }
@@ -18,11 +22,12 @@ window.PFA_DATA = {
   "blockers": [],
   "current": [
    "E2-05 (Claude), intento 2, inicio 2026-10-03 03:58 UTC, método nuevo (D-049): reescribir Configuration en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push. Comprobación: evidencia de E2-05 (3 carpetas, una por opción; Change; sin proyectos duplicados; D-042) en vista previa y app publicada a 1366 y 390 px.",
+   "Avance 04:19 UTC: hecho: Configuration rehecha por código (push solo de propiedades; los 3 controles nuevos se crearon en Studio porque crear controles por push tumba Studio). Vista previa OK: Project, Part of parent, Not a project, Change (3), sin proyecto duplicado, Scan \"24 found, 0 new, 3 no longer in Outlook\" (filas de prueba 27-29 marcadas, ninguna borrada). Guardado y publicado · falta: prueba en la app publicada a 1366 y 390 px y cierre · herramienta: Studio guardado y publicado · siguiente: abrir la app publicada y repetir las pruebas.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:59:07.015302Z",
+  "fileUtc": "2026-10-03T04:20:18.450920Z",
   "heartbeat": {
-   "claude": "2026-10-03T04:16:13.468832Z",
+   "claude": "2026-10-03T04:20:49.464840Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
   "live": {
@@ -1023,7 +1028,8 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [
-     "KF-18"
+     "KF-18",
+     "KF-19"
     ],
     "ready": true
    },
@@ -2643,7 +2649,8 @@ window.PFA_DATA = {
    }
   ],
   "lessons": [
-   "KF-18"
+   "KF-18",
+   "KF-19"
   ],
   "ready": true
  },
@@ -2678,7 +2685,8 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [
-    "KF-18"
+    "KF-18",
+    "KF-19"
    ],
    "ready": true
   },
@@ -3209,6 +3217,7 @@ window.PFA_DATA = {
     "- Requisitos comprobados: Coauthoring activado en la app (Settings > Updates; Studio guarda y recarga), la pestaña de Studio abierta en modo edición y la URL de edición. La primera conexión abre una ventana de Windows para elegir la cuenta (inicio de sesión de Oscar); después es silenciosa. No pidió consentimiento de administrador, licencias ni Premium.",
     "- Si esa ventana pregunta **\"Allow your organization to manage your device?\"**, la respuesta es **No**. \"Yes\" intenta inscribir el computador personal en la administración de Puffer (Intune). El 2026-10-03 Oscar eligió Yes, la inscripción falló por requisitos de la empresa y el equipo quedó sin registrar (`dsregcmd /status`: WorkplaceJoined NO; sin inscripciones MDM). La conexión funciona igual con No. Si vuelve a molestar, usar `CANVAS_AUTH_FLOW=browser` (inicio de sesión en el navegador, sin registrar el equipo).",
     "- Trampa: `compile_canvas` aplica la carpeta a Studio **aunque tenga errores** (una fórmula rota quedó en la app). `push` guarda antes el estado actual en `tmp/canvas-ultimo-bueno` y, si hay errores, lo reaplica y responde `REVERTIDO` con el control y la propiedad del error.",
+    "- **Trampa 2 (E2-05):** un `push` que **crea controles nuevos** deja Studio en blanco (error interno \"Cannot read properties of undefined (reading 'get')\"). Al recargar Studio, la sesión vuelve a la última versión guardada y el cambio se pierde. Medido en 6 pruebas: un cambio vacío y un cambio de texto no lo tumban; agregar hasta un solo contenedor con una etiqueta sí, con o sin versión de control (`Label@2.5.1`). Método que funciona: (1) crear en Studio solo los controles que faltan (Insert con un control hermano seleccionado, para que quede dentro del mismo contenedor o galería) y ponerles el nombre final en el panel de propiedades; borrar en Studio los que sobran; guardar (Ctrl+S); (2) `sync` a `design/app`; (3) editar solo propiedades y aplicar con `push`; Studio sigue vivo; (4) Ctrl+S. Después de cada push, comprobar con una captura reducida que Studio no quedó en blanco antes de guardar.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
     "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
@@ -5066,10 +5075,10 @@ window.PFA_DATA = {
    "total": 1119
   },
   "last24h": {
-   "prod": 322,
+   "prod": 312,
    "unprod": 18,
    "wait": 40,
-   "total": 380
+   "total": 370
   },
   "last7d": {
    "prod": 953,
