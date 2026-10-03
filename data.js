@@ -1,23 +1,27 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T16:34:14.833754Z",
+ "generatedUtc": "2026-10-03T16:49:14.156755Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 16:24 UTC",
+  "updated": "2026-10-03 16:48 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Terminar E2-11 con la app publicada en teléfono y tableta horizontal; no cambiar el menú. E2-06 espera validación de Oscar; E2-10 requiere sus decisiones sobre las carpetas reales y la aceptación de E2.",
+  "nextAction": "Esperar la validación de E2-06 y las decisiones de Oscar en E2-10; no iniciar E3 antes de aceptar E2.",
   "needsOscar": [
    {
     "ref": "E2-06",
     "text": "en la app publicada abre Projects en escritorio y teléfono vertical. Comprueba que nombres, conteos y Deactivate se ven completos y sin superposición; dime si el contenido de Projects se recorta o si la barra horizontal afecta la pantalla. Al responder: registro tu aceptación cuando esté comprobada o corrijo el defecto."
+   },
+   {
+    "ref": "E2-10",
+    "text": "decide en la app las carpetas de Projects, incluidas las subcarpetas, y revisa la lista de proyectos. Al terminar, escribe “E2 aceptada”. Al responder: registro tus decisiones y la aceptación de E2."
    }
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T16:30:23.717175Z",
+  "fileUtc": "2026-10-03T16:48:08.038318Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
@@ -28,7 +32,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T16:24:00Z"
+    "utc": "2026-10-03T16:29:00Z"
    }
   }
  },
@@ -72,15 +76,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 8,
+   "done": 9,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 539,
+    "prod": 563,
     "unprod": 104,
     "wait": 85,
-    "total": 728
+    "total": 752
    }
   },
   {
@@ -1188,26 +1192,25 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 1,
-    "minutes": 2,
+    "status": "Hecha",
+    "attempts": 2,
+    "minutes": 26,
     "entrega": "E2",
     "user": "Revisar si el menú se usa bien en teléfono o tableta acostados; solo se cambia si tú lo decides.",
     "fails": 0,
-    "lastActivity": "2026-10-02T00:26:00Z",
+    "lastActivity": "2026-10-03T16:48:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 1,
-      "minutes": 2,
+      "attempts": 2,
+      "minutes": 26,
       "limit": 30,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    },
    {
     "id": "E2-10",
@@ -1240,7 +1243,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    }
   ],
   "E3": [
@@ -2735,39 +2738,6 @@ window.PFA_DATA = {
    "ready": true
   },
   {
-   "id": "E2-11",
-   "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
-   "owner": "Agente",
-   "depends": "E2-09",
-   "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
-   "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
-   "limit": 30,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "Pendiente",
-   "attempts": 1,
-   "minutes": 2,
-   "entrega": "E2",
-   "user": "Revisar si el menú se usa bien en teléfono o tableta acostados; solo se cambia si tú lo decides.",
-   "fails": 0,
-   "lastActivity": "2026-10-02T00:26:00Z",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 1,
-     "minutes": 2,
-     "limit": 30,
-     "extra": 0,
-     "finished": false,
-     "tone": "ok"
-    }
-   ],
-   "lessons": [],
-   "ready": true
-  },
-  {
    "id": "E2-10",
    "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
    "owner": "Oscar",
@@ -2798,7 +2768,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E3-01",
@@ -4315,6 +4285,38 @@ window.PFA_DATA = {
    "lessons": []
   },
   {
+   "id": "E2-11",
+   "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
+   "owner": "Agente",
+   "depends": "E2-09",
+   "expected": "Usabilidad del menú definida para pantallas horizontales pequeñas",
+   "evidence": "Capturas de la app publicada en teléfono y tableta horizontal; hallazgos y recomendación registrados en STATUS; no se cambia el menú sin decisión de Oscar",
+   "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 26,
+   "entrega": "E2",
+   "user": "Revisar si el menú se usa bien en teléfono o tableta acostados; solo se cambia si tú lo decides.",
+   "fails": 0,
+   "lastActivity": "2026-10-03T16:48:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 2,
+     "minutes": 26,
+     "limit": 30,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -5334,33 +5336,33 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 59,
+  "tasksDone": 60,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1265,
+   "prod": 1289,
    "unprod": 106,
    "wait": 97,
-   "total": 1468
+   "total": 1492
   },
   "last24h": {
-   "prod": 501,
+   "prod": 525,
    "unprod": 6,
    "wait": 31,
-   "total": 538
+   "total": 562
   },
   "last7d": {
-   "prod": 1265,
+   "prod": 1289,
    "unprod": 106,
    "wait": 97,
-   "total": 1468
+   "total": 1492
   },
   "product": {
-   "prod": 812,
+   "prod": 836,
    "unprod": 104,
    "wait": 89,
-   "total": 1005
+   "total": 1029
   },
   "support": {
    "prod": 453,
@@ -5450,7 +5452,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 362,
+   "prod": 386,
    "unprod": 6,
    "wait": 31
   }
@@ -5576,7 +5578,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 1091
+   "minutes": 1115
   },
   {
    "account": "claude",
@@ -5588,6 +5590,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T16:24:00Z",
+   "minutes": 24,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-11",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Navegacion horizontal evaluada en app publicada; opciones accesibles mediante desplazamiento",
+   "evidence": "CUA: capturas 844x390 telefono y 1024x768 tableta; inicio y extremo probados; imagenes visibles en el registro de sesion; menu sin cambios."
+  },
   {
    "start": "2026-10-03T15:48:00Z",
    "minutes": 34,
@@ -5704,22 +5719,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Revalidé el acceso a la pestaña de Studio por ID de Edge y URL exacta",
    "evidence": "La extensión sigue conectada (ID 3), pero listar pestañas agotó 60 s y vincular la URL exacta agotó 30 s. No se inspeccionó Studio ni se hizo sync o push. Se analizará el contrato de sync sin repetir las llamadas de Edge."
-  },
-  {
-   "start": "2026-10-03T08:09:00Z",
-   "minutes": 8,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 5,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "NAVEGADOR",
-   "summary": "Confirmé que la extensión Edge sigue conectada; no pude inspeccionar la pestaña existente",
-   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push. INC-18: faltó registrar el inicio en STATUS antes de las consultas."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T16:24:00Z",
+   "minutes": 24,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-11",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Navegacion horizontal evaluada en app publicada; opciones accesibles mediante desplazamiento",
+   "evidence": "CUA: capturas 844x390 telefono y 1024x768 tableta; inicio y extremo probados; imagenes visibles en el registro de sesion; menu sin cambios."
+  },
   {
    "start": "2026-10-03T15:48:00Z",
    "minutes": 34,
