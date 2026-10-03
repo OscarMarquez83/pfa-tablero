@@ -337,7 +337,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     </div>
     <div class="top-right">
       <span id="rules" class="rules none" role="status"><span class="dot">?</span><span class="txt">Reglas: sin registro</span></span>
-      <button type="button" id="light" class="light NONE" title="Ver la revisión completa"><span class="dot">?</span><span>Sin revisión</span></button>
+      <button type="button" id="stats" class="btn" title="Tiempos y resultados de todo el proyecto">Estadísticas</button>
       <a class="btn" id="instr" href="#" target="_blank" rel="noopener" style="display:none;text-decoration:none">Enviar instrucción</a>
       <button class="btn" id="theme" type="button" aria-label="Cambiar tema">Tema</button>
     </div>
@@ -359,7 +359,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     </div>
     <div class="col">
       <section class="card">
-        <h2>Revisión del agente revisor <span class="hint" id="rev-date"></span></h2>
+        <h2>Ahora mismo <span class="hint">agente constructor · se actualiza solo</span></h2>
         <div id="rev"></div>
       </section>
       <section class="card">
@@ -461,13 +461,6 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
 
   $("gen").textContent = "Actualizado " + fmtDate(D.generatedUtc, { dateStyle: "medium", timeStyle: "short" }) + " (hora Central)";
 
-  var rv = D.revision;
-  if (rv && rv.light) {
-    var ico = { VERDE: "✓", AMARILLO: "!", ROJO: "✕" }[rv.light];
-    var txt = { VERDE: "En verde", AMARILLO: "Atención", ROJO: "En rojo" }[rv.light];
-    $("light").className = "light " + rv.light;
-    $("light").innerHTML = '<span class="dot">' + ico + "</span><span>Revisor: " + txt + "</span>";
-  }
 
   // ---------- Diálogo de detalle ----------
   var dlg = $("dlg");
@@ -645,15 +638,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     $("tasks").innerHTML = e.id === "T" ? supportDelivery(e) : staticDelivery(e);
   }
 
-  // ---------- Revisión ----------
-  function revWhen() {
-    if (!rv) return "";
-    if (rv.dateIso) {
-      var h = Math.floor((Date.now() - new Date(rv.dateIso).getTime()) / 3600000);
-      return fmtDate(rv.dateIso, { dateStyle: "medium", timeStyle: "short" }) + " (hora Central) · " + (h >= 1 ? "hace " + h + " h" : "hace menos de 1 h");
-    }
-    return rv.date || "";
-  }
+  // ---------- Estadísticas (D-050: reemplazan al revisor; se calculan con los datos de data.js, sin tokens) ----------
   function mdBlock(lines) {
     var out = "", i = 0;
     while (i < lines.length) {
@@ -677,16 +662,37 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     }
     return out;
   }
-  function openRevision() {
-    if (!rv) { openDlg("Revisión del agente revisor", '<div class="empty">Todavía no hay revisión.</div>'); return; }
-    var txt = { VERDE: "En verde", AMARILLO: "Atención", ROJO: "En rojo" }[rv.light] || "Sin semáforo";
-    var html = '<p class="sub">' + esc(revWhen()) + "</p>";
-    html += '<div class="reason ' + esc(rv.light) + '"><b>' + txt + ".</b> " + esc(rv.reason || "Esta revisión no indica el motivo del semáforo. Las próximas lo incluyen en la línea «Motivo del semáforo».") + "</div>";
-    html += '<div class="revbody">' + (rv.sections || []).map(function (s) { return "<h4>" + esc(s.title) + "</h4>" + mdBlock(s.lines); }).join("") + "</div>";
-    html += '<p class="sub" style="margin-top:14px">El semáforo se mantiene hasta la siguiente revisión (cada 4 horas). Si el agente avanzó después, puede estar desactualizado.</p>';
-    openDlg("Revisión del agente revisor", html);
+  function openStats() {
+    function hrs(m) { return (Math.round((m || 0) / 6) / 10).toLocaleString("es") + " h"; }
+    function pct(a, b) { return b ? Math.round(a * 100 / b) + "%" : "—"; }
+    function table(head, rows) {
+      return "<table class='mini'><tr>" + head.map(function (h) { return "<th>" + esc(h) + "</th>"; }).join("") + "</tr>" +
+        rows.map(function (r) { return "<tr>" + r.map(function (c) { return "<td>" + esc(String(c)) + "</td>"; }).join("") + "</tr>"; }).join("") + "</table>";
+    }
+    var all = [], k = D.kpi || {}, tt = k.time || {};
+    Object.keys(D.tasksByEntrega || {}).forEach(function (id) { (D.tasksByEntrega[id] || []).forEach(function (t) { all.push(t); }); });
+    var html = '<p class="sub">Calculado con los registros del proyecto en cada actualización del tablero. Sirve para el análisis del proyecto; el estado del día está en «Ahora mismo».</p>';
+    html += "<h4>Resumen</h4>" + table(["Tiempo total", "Con avance", "Sin avance", "Espera", "Tareas hechas"],
+      [[hrs(tt.total), hrs(tt.prod) + " (" + pct(tt.prod, tt.total) + ")", hrs(tt.unprod), hrs(tt.wait), (k.tasksDone || 0) + " de " + (k.tasksTotal || 0)]]);
+    html += "<h4>Por entrega</h4>" + table(["Entrega", "Tareas", "Horas", "Con avance"],
+      (D.entregas || []).filter(function (e) { return e.time && e.time.total; }).map(function (e) {
+        return [e.id + " · " + e.title, e.done + " de " + e.total, hrs(e.time.total), pct(e.time.prod, e.time.total)];
+      }));
+    var ag = {};
+    all.forEach(function (t) { (t.byAgent || []).forEach(function (a) {
+      var x = ag[a.agent] = ag[a.agent] || { attempts: 0, minutes: 0, tasks: 0, finished: 0 };
+      x.attempts += a.attempts || 0; x.minutes += a.minutes || 0; x.tasks++; if (a.finished) x.finished++;
+    }); });
+    html += "<h4>Por agente</h4>" + table(["Agente", "Tareas", "Terminó", "Intentos", "Horas"],
+      Object.keys(ag).map(function (n) { var x = ag[n]; return [n, x.tasks, x.finished, x.attempts, hrs(x.minutes)]; }));
+    html += "<h4>Dónde se perdió el tiempo</h4>" + table(["Tipo de problema", "Minutos sin avance", "Intentos"],
+      (D.categories || []).map(function (c) { return [c.category, c.minutes, c.attempts]; }));
+    var over = all.filter(function (t) { return t.limit && t.minutes > t.limit; }).sort(function (a, b) { return (b.minutes / b.limit) - (a.minutes / a.limit); });
+    html += "<h4>Tareas que pasaron su límite</h4>" + (over.length ? table(["Tarea", "Minutos / límite", "Intentos", "Estado"],
+      over.map(function (t) { return [t.id, t.minutes + " / " + t.limit, t.attempts, t.status]; })) : '<p class="sub">Ninguna.</p>');
+    openDlg("Estadísticas del proyecto", html);
   }
-  $("light").onclick = openRevision;
+  $("stats").onclick = openStats;
   // D-044: lecciones de KNOWN-FIXES citadas por la tarea.
   function inlineMd(s) {
     return esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
@@ -740,13 +746,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       : "AGENTS.md cambió (<b>" + esc(cur) + "</b>) · " + esc(rd.agent || "el agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)) + "</span>";
   })();
   (function () {
-    var html = "";
-    if (rv && rv.summary && rv.summary.length) {
-      $("rev-date").textContent = revWhen();
-      html += '<ul class="revsum">' + rv.summary.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>";
-      html += '<button type="button" class="revlink" id="revmore">Ver revisión completa y motivo del semáforo →</button>';
-    } else html += '<div class="empty">Todavía no hay revisión. El revisor corre cada 4 horas.</div>';
-    html += '<div class="livehead">Ahora mismo · agente constructor</div><div id="livestate"></div>';
+    var html = '<div id="livestate"></div>';
     if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
     else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
     // En curso: solo la primera nota (la vigente), recortada; el resto queda plegado.
@@ -757,7 +757,6 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
         cur.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ul></details></div>";
     }
     $("rev").innerHTML = html;
-    if ($("revmore")) $("revmore").onclick = openRevision;
     renderLive();
     setInterval(renderLive, 30000);
   })();

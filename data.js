@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:40:14.308246Z",
+ "generatedUtc": "2026-10-03T03:46:14.210237Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,218 +9,39 @@ window.PFA_DATA = {
   "updated": "2026-10-03 03:22 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049), desde su línea de relevo. T-33 y T-34 quedan Por validar hasta la primera retoma y la primera corrida de tools/canvas.py por Codex.",
-  "needsOscar": [],
+  "needsOscar": [
+   {
+    "ref": "T-35",
+    "text": "en la app de Codex, borrar (o pausar) la automatización del revisor que corre cada 4 horas (\"Actúa como revisor de avance…\"). Yo no tengo acceso a las automatizaciones de Codex; mientras exista, solo responde \"desactivado\" y gasta pocos tokens. Al responder: marco T-35 como Hecha."
+   }
+  ],
   "blockers": [],
   "current": [
+   "T-35 (Claude), intento 1, inicio 2026-10-03 03:37 UTC. Quitar el revisor de Codex: tarjeta \"Ahora mismo\", botón \"Estadísticas\" y AGENTS.md sin el revisor (D-050). Comprobación: tablero en Pages a 1366 y 390 px.",
+   "Avance 03:44 UTC: hecho: index.html sin semáforo ni revisión, con diálogo de estadísticas; REVISION.md borrado; REVISOR.md dice \"desactivado\"; AGENTS.md sin el revisor (huella 4314E2C3); T-36: la tarea de Windows corre con conhost --headless · falta: publicar y revisar en Pages; Oscar borra la automatización del revisor en Codex · herramienta: archivos guardados, sin commit · siguiente: publicar.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:35:51.031759Z",
+  "fileUtc": "2026-10-03T03:44:52.600019Z",
   "heartbeat": {
-   "claude": "2026-10-03T03:36:21.734895Z",
+   "claude": "2026-10-03T03:44:59.730792Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
-  "live": null,
+  "live": {
+   "id": "T-35",
+   "agent": "Claude",
+   "startUtc": "2026-10-03T03:37:00Z",
+   "waits": []
+  },
   "ruleFootprints": {
-   "current": "CA8D23A4",
+   "current": "4314E2C3",
    "read": {
-    "hash": "CA8D23A4",
+    "hash": "4314E2C3",
     "agent": "Claude",
-    "utc": "2026-10-03T03:17:00Z"
+    "utc": "2026-10-03T03:44:00Z"
    }
   }
  },
- "revision": {
-  "light": "AMARILLO",
-  "reason": "persisten alertas históricas de tiempo y T-06 con 3 SIN_AVANCE; hubo tareas Hecha en 24 h. INC-13 está atendido y no mantiene rojo.",
-  "date": "2026-10-02 21:33 UTC",
-  "dateIso": "2026-10-02T21:33:00Z",
-  "summary": [
-   "E2-04 Hecha, validada por Oscar: 24 carpetas, 3 nuevas de prueba, sin duplicados; E2 llega a 4/11.",
-   "Claude trabaja E2-05; YAML preparado, bloqueo de portapapeles y restauración registrados, excepción D-045 aprobada. No hay solicitud activa para Oscar.",
-   "INC-13 atendido: los 20 minutos de D-039 no fueron aprobados. D-040 asigna 60 minutos a Claude; no autoriza retroactivamente el tiempo de Codex."
-  ],
-  "sections": [
-   {
-    "title": "Resumen en 3 líneas",
-    "lines": [
-     "E2-04 Hecha, validada por Oscar: 24 carpetas, 3 nuevas de prueba, sin duplicados; E2 llega a 4/11.",
-     "Claude trabaja E2-05; YAML preparado, bloqueo de portapapeles y restauración registrados, excepción D-045 aprobada. No hay solicitud activa para Oscar.",
-     "INC-13 atendido: los 20 minutos de D-039 no fueron aprobados. D-040 asigna 60 minutos a Claude; no autoriza retroactivamente el tiempo de Codex."
-    ]
-   },
-   {
-    "title": "Tiempo",
-    "lines": [
-     "| Periodo | Total (h) | Productivo (%) | Sin avance (h) |",
-     "|---|---:|---:|---:|",
-     "| Últimas 24 horas | 6.166667 (370 min) | 67.837838 | 1.2 |",
-     "| Desde 2026-09-30 | 16.483333 (989 min) | 83.215369 | 1.666667 |",
-     "Total incluye ESPERA; efectivo la excluye. Productivo = HECHA + AVANCE. Sin avance = SIN_AVANCE + BLOQUEADA. Filtro por inicio sin prorrateo; redondeo a 6 decimales. E2-05 tiene intento abierto sin cierre en worklog; su tiempo actual aún no integra los totales.",
-     "### Tiempo por entrega",
-     "| ID | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
-     "|---|---:|---:|---:|---:|",
-     "| E0 | 0 | 0 | 3 | 3 |",
-     "| E1 | 0 | 0 | 274 | 270 |",
-     "| E2 | 268 | 221 | 359 | 305 |",
-     "| T | 102 | 102 | 353 | 345 |",
-     "### Tiempo por tarea",
-     "| ID | Total 24 h (min) | Efectivo 24 h | Total acumulado | Efectivo acumulado |",
-     "|---|---:|---:|---:|---:|",
-     "| E0-01 | 0 | 0 | 0 | 0 |",
-     "| E0-02 | 0 | 0 | 0 | 0 |",
-     "| E0-03 | 0 | 0 | 1 | 1 |",
-     "| E0-04 | 0 | 0 | 1 | 1 |",
-     "| E0-09 | 0 | 0 | 1 | 1 |",
-     "| E1-01 | 0 | 0 | 10 | 10 |",
-     "| E1-02 | 0 | 0 | 6 | 6 |",
-     "| E1-03 | 0 | 0 | 2 | 2 |",
-     "| E1-04 | 0 | 0 | 13 | 13 |",
-     "| E1-05 | 0 | 0 | 143 | 143 |",
-     "| E1-06 | 0 | 0 | 24 | 24 |",
-     "| E1-07 | 0 | 0 | 29 | 29 |",
-     "| E1-08 | 0 | 0 | 33 | 29 |",
-     "| E1-09 | 0 | 0 | 0 | 0 |",
-     "| E1-10 | 0 | 0 | 14 | 14 |",
-     "| E2-01 | 0 | 0 | 7 | 2 |",
-     "| E2-02 | 15 | 15 | 99 | 97 |",
-     "| E2-03 | 2 | 2 | 2 | 2 |",
-     "| E2-04 | 249 | 202 | 249 | 202 |",
-     "| E2-11 | 2 | 2 | 2 | 2 |",
-     "| HZ-01 | 0 | 0 | 0 | 0 |",
-     "| HZ-03 | 0 | 0 | 0 | 0 |",
-     "| HZ-04 | 0 | 0 | 0 | 0 |",
-     "| HZ-07 | 0 | 0 | 0 | 0 |",
-     "| HZ-08 | 0 | 0 | 0 | 0 |",
-     "| HZ-09 | 0 | 0 | 0 | 0 |",
-     "| HZ-14 | 0 | 0 | 0 | 0 |",
-     "| HZ-15 | 0 | 0 | 0 | 0 |",
-     "| HZ-16 | 0 | 0 | 0 | 0 |",
-     "| HZ-17 | 0 | 0 | 0 | 0 |",
-     "| HZ-18 | 0 | 0 | 0 | 0 |",
-     "| T-01 | 0 | 0 | 41 | 41 |",
-     "| T-02 | 0 | 0 | 7 | 7 |",
-     "| T-03 | 0 | 0 | 13 | 11 |",
-     "| T-04 | 0 | 0 | 19 | 19 |",
-     "| T-05 | 0 | 0 | 4 | 4 |",
-     "| T-06 | 0 | 0 | 5 | 5 |",
-     "| T-07 | 0 | 0 | 3 | 3 |",
-     "| T-08 | 0 | 0 | 10 | 10 |",
-     "| T-09 | 0 | 0 | 4 | 4 |",
-     "| T-10 | 0 | 0 | 14 | 8 |",
-     "| T-11 | 0 | 0 | 2 | 2 |",
-     "| T-12 | 2 | 2 | 20 | 20 |",
-     "| T-13 | 0 | 0 | 6 | 6 |",
-     "| T-14 | 0 | 0 | 6 | 6 |",
-     "| T-15 | 0 | 0 | 23 | 23 |",
-     "| T-16 | 0 | 0 | 46 | 46 |",
-     "| T-17 | 0 | 0 | 11 | 11 |",
-     "| T-18 | 0 | 0 | 1 | 1 |",
-     "| T-19 | 0 | 0 | 9 | 9 |",
-     "| T-20 | 0 | 0 | 1 | 1 |",
-     "| T-21 | 0 | 0 | 8 | 8 |",
-     "| T-22 | 8 | 8 | 8 | 8 |",
-     "| T-23 | 6 | 6 | 6 | 6 |",
-     "| T-24 | 2 | 2 | 2 | 2 |",
-     "| T-25 | 11 | 11 | 11 | 11 |",
-     "| T-26 | 2 | 2 | 2 | 2 |",
-     "| T-27 | 10 | 10 | 10 | 10 |",
-     "| T-28 | 5 | 5 | 5 | 5 |",
-     "| T-29 | 9 | 9 | 9 | 9 |",
-     "| T-30 | 47 | 47 | 47 | 47 |"
-    ]
-   },
-   {
-    "title": "Avance por entrega",
-    "lines": [
-     "| Entrega | Hechas / total |",
-     "|---|---:|",
-     "| E0 | 9 / 9 |",
-     "| E1 | 10 / 10 |",
-     "| E2 | 4 / 11 |",
-     "| E3 | 0 / 8 |",
-     "| T | 28 / 29 |",
-     "T incluye T-11 Cancelada en el denominador; STATUS muestra 28/28 sin esa tarea."
-    ]
-   },
-   {
-    "title": "Tareas en alerta",
-    "lines": [
-     "| Tarea | Motivo | Intentos | Minutos / límite |",
-     "|---|---|---:|---:|",
-     "| T-01 | Exceso histórico de tiempo | 7 | 41 / 30 |",
-     "| T-06 | 3 SIN_AVANCE históricos; actualmente Hecha | 4 | 5 / 30 |",
-     "| E2-02 | Exceso; INC-08 atendido | 12 | 97 / 90 (PLAN: 96) |",
-     "| E1-05 | Exceso; INC-11 atendido, entrega aceptada | 7 | 143 / 60 |",
-     "| E2-04 Codex | 159 efectivos frente a 90 +60 autorizados; INC-13 atendido | 18 | 159 / 150 |",
-     "E2-04 Claude registra 43 efectivos frente a 60 asignados; total 202. E2-05 comenzó a las 3:10 p. m. Central y mantiene avance en STATUS: no se cumple la alerta de 12 h sin worklog. No hay Bloqueada o Por validar de más de 24 h. E2-04 tiene 2 SIN_AVANCE literales."
-    ]
-   },
-   {
-    "title": "Problemas más frecuentes (sin avance, por categoría)",
-    "lines": [
-     "| Periodo | Categoría | Minutos | Registros |",
-     "|---|---|---:|---:|",
-     "| 24 h | CONECTOR | 49 | 4 |",
-     "| 24 h | FORMULA_PA | 18 | 3 |",
-     "| 24 h | DOCUMENTACION | 5 | 1 |",
-     "| Acumulado | CONECTOR | 74 | 7 |",
-     "| Acumulado | FORMULA_PA | 18 | 3 |",
-     "| Acumulado | DOCUMENTACION | 6 | 2 |",
-     "| Acumulado | AUTH | 2 | 2 |",
-     "| Acumulado | OTRO | 0 | 2 |"
-    ]
-   },
-   {
-    "title": "Tiempo de espera (24 h)",
-    "lines": [
-     "| Categoría | Minutos | Registros |",
-     "|---|---:|---:|",
-     "| NAVEGADOR | 7 | 5 |",
-     "| PERMISOS | 40 | 2 |"
-    ]
-   },
-   {
-    "title": "Incumplimientos de AGENTS.md",
-    "lines": [
-     "### Nuevos",
-     "Ninguno adicional identificado. INC-13 fue detectado y atendido por Oscar y Claude después del informe anterior; conserva su ID. La revisión anterior trató D-039 como aprobación: queda corregida esa interpretación conforme al registro de Oscar.",
-     "Huella vigente FE84A01D, coincide con STATUS. D-043 reemplaza las huellas por línea por una lectura con agente y hora. El revisor leyó AGENTS.md vigente y no modifica STATUS por su alcance restringido.",
-     "D-045 permite a Claude escribir propiedades desde el YAML debido al portapapeles denegado; ese procedimiento autorizado no se cuenta como incumplimiento. T-29/T-30 respaldan cambios del tablero y reglas. Git de 36 h no muestra nuevas modificaciones del archivo congelado ni nuevas rutas ajenas al trabajo aprobado.",
-     "### Atendidos",
-     "INC-12 listo para cerrar: espera de 3 minutos y T-23 independiente conservados en Import-Csv. INC-07 listo para cerrar por auditoría y aceptación de E1. INC-08/09/10 atendidos con cierre y registros previos. INC-11 atendido; aceptación preservada. INC-13 atendido: D-039 corregida, límite separado por agente y KF-P12 registrados.",
-     "INC-01 listo para cerrar en su acción original: se detuvo el cambio fuera de E1, quedó heredado a E2 y Configuration ya tiene prueba publicada aceptada. El recorte visual de HZ-09 debe comprobarse con el nuevo diseño E2-05. INC-02 a INC-06 Cerrado.",
-     "### Sin respuesta",
-     "Ninguno nuevo sin respuesta. INC-01 conserva estado Abierto en el registro; el constructor realiza su cierre."
-    ]
-   },
-   {
-    "title": "Hallazgos sin heredar",
-    "lines": [
-     "HZ-20 asignado a E2-05 con D-042: marcar carpetas ausentes de Outlook y ocultarlas de nuevas, conservando filas. HZ-09 sigue Asignado a E2 sin enlace explícito al criterio visual de E2-05. HZ-07 sigue Asignado a T sin tarea propia; corresponde migrarlo conforme a T-27. No hay Por decidir de más de 48 h."
-    ]
-   },
-   {
-    "title": "Oscar tiene que decidir o hacer",
-    "lines": [
-     "La sección Necesito de Oscar está vacía. El consentimiento y la validación pendientes de E2-04 ya fueron resueltos según STATUS.",
-     "Issues: no verificados en esta corrida.",
-     "gh.exe falló por acceso denegado; el constructor procesa los issues al empezar su sesión. STATUS registra issue #13 cerrado, sin verificación independiente de GitHub."
-    ]
-   },
-   {
-    "title": "Alcance y límites",
-    "lines": [
-     "Revisión documental de control, decisiones, YAML y git; no se abrieron Power Apps, Power Automate ni SharePoint. Resultados de app y flow proceden del registro del constructor y de la aceptación de Oscar. La prueba de conservar una fila decidida se trasladó explícitamente a E2-09; no se da por ejecutada en E2-04. E2-05 permanece abierta y la restauración de versión está documentada; no se declara el nuevo diseño probado ni publicado. Se preserva el cambio activo de STATUS sin commit."
-    ]
-   },
-   {
-    "title": "Publicación",
-    "lines": [
-     "Publicador ejecutado una vez: dashboard/data.js regenerado (137 registros, 67 tareas). Falló por acceso denegado a C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log. Publicación remota no confirmada. No se reintentó; Windows lo publicará en máximo 15 minutos según la instrucción de esta corrida."
-    ]
-   }
-  ]
- },
+ "revision": null,
  "activeEntrega": "E2",
  "entregas": [
   {
@@ -405,7 +226,7 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 30,
-   "total": 33,
+   "total": 36,
    "detailed": true,
    "active": false,
    "time": {
@@ -2663,6 +2484,102 @@ window.PFA_DATA = {
     "ready": true
    },
    {
+    "id": "T-35",
+    "action": "Quitar el revisor de Codex (cada 4 h, con tokens) y reemplazarlo por lo que ya calcula Windows: tarjeta \"Ahora mismo\" en lugar de la revisión, botón \"Estadísticas\" (tiempos por entrega, agente, tipo de problema y tareas sobre el límite) en lugar del semáforo; REVISOR.md queda como aviso de desactivado",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar ve siempre datos al día sin gastar tokens",
+    "evidence": "Tablero en Pages a 1366 y 390 px sin semáforo ni revisión vieja; diálogo de estadísticas con datos; AGENTS.md sin el revisor; la automatización de Codex desactivada",
+    "limit": 45,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "En curso",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 45,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": true
+   },
+   {
+    "id": "T-36",
+    "action": "La tarea de Windows \"PFA Tablero\" corre sin abrir ventana",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "No aparece la ventana negra cada 3 minutos",
+    "evidence": "La tarea corre con conhost --headless y el log registra una publicación después del cambio",
+    "limit": 15,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 15,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": true
+   },
+   {
+    "id": "T-37",
+    "action": "Barrido de la documentación de control (AGENTS.md, STATUS, PLAN, KNOWN-FIXES, DECISIONS, skills): más corta y clara, sin perder reglas; lo viejo a un archivo de consulta",
+    "owner": "Agente",
+    "depends": "T-31 a T-36 y E2-05",
+    "expected": "Menos tokens al empezar cada sesión y reglas sin contradicciones",
+    "evidence": "Tamaños antes y después; ninguna regla vigente perdida (lista de control); huella actualizada; Oscar aprueba el resultado",
+    "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 90,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": false
+   },
+   {
     "id": "T-34",
     "action": "Construir Power Apps como código con el servidor oficial Canvas Authoring MCP de Microsoft (prueba de concepto, control/specs/T-34.md)",
     "owner": "Agente",
@@ -3292,6 +3209,7 @@ window.PFA_DATA = {
    "lines": [
     "- Método: `tools/canvas.py` arranca el servidor de Microsoft (`dnx Microsoft.PowerApps.CanvasAuthoring.McpServer`, .NET 10 SDK en la carpeta del usuario, sin administrador). `sync` baja la app a `.pa.yaml` (7 pantallas en 4 s); `push` aplica la carpeta a la sesión de Studio. Procedimiento completo en la skill `powerapps-yaml`.",
     "- Requisitos comprobados: Coauthoring activado en la app (Settings > Updates; Studio guarda y recarga), la pestaña de Studio abierta en modo edición y la URL de edición. La primera conexión abre una ventana de Windows para elegir la cuenta (inicio de sesión de Oscar); después es silenciosa. No pidió consentimiento de administrador, licencias ni Premium.",
+    "- Si esa ventana pregunta **\"Allow your organization to manage your device?\"**, la respuesta es **No**. \"Yes\" intenta inscribir el computador personal en la administración de Puffer (Intune). El 2026-10-03 Oscar eligió Yes, la inscripción falló por requisitos de la empresa y el equipo quedó sin registrar (`dsregcmd /status`: WorkplaceJoined NO; sin inscripciones MDM). La conexión funciona igual con No. Si vuelve a molestar, usar `CANVAS_AUTH_FLOW=browser` (inicio de sesión en el navegador, sin registrar el equipo).",
     "- Trampa: `compile_canvas` aplica la carpeta a Studio **aunque tenga errores** (una fórmula rota quedó en la app). `push` guarda antes el estado actual en `tmp/canvas-ultimo-bueno` y, si hay errores, lo reaplica y responde `REVERTIDO` con el control y la propiedad del error.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
@@ -5109,7 +5027,7 @@ window.PFA_DATA = {
  "alerts": [],
  "kpi": {
   "tasksDone": 53,
-  "tasksTotal": 71,
+  "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
@@ -5121,8 +5039,8 @@ window.PFA_DATA = {
   "last24h": {
    "prod": 325,
    "unprod": 18,
-   "wait": 43,
-   "total": 386
+   "wait": 40,
+   "total": 383
   },
   "last7d": {
    "prod": 942,
