@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T14:16:13.684627Z",
+ "generatedUtc": "2026-10-03T14:22:14.234348Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,23 +8,19 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-10-03 08:46 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Antes del tercer intento, ejecutar la prueba diferencial registrada en worklog: leer fuentes de la app o comprobar la sesión Editing/Coauthoring. No repetir el mismo sync hasta medir esa diferencia.",
+  "nextAction": "publicar y comprobar E2-06; dejar guion para Oscar y detener la sesión.",
   "needsOscar": [
    {
-    "ref": "T-34",
-    "text": "¿autorizas agregar al puente una consulta MCP de solo lectura list_data_sources para comprobar que el servidor puede leer el estado de la app antes de sincronizar? Al responder: la implemento, compruebo que no cambie la app y retomo E2-07."
-   },
-   {
     "ref": "E2-06",
-    "text": "después de publicar E2-09, revisa Projects en escritorio y teléfono vertical: confirma que nombre, conteo y botón Deactivate se leen completos y sin superposición. Responde E2-06 OK o describe el defecto. Al responder: registro tu validación o corrijo el defecto."
+    "text": "cuando quede publicada y comprobada E2-06, revisa Projects en escritorio y teléfono vertical: confirma que nombre, conteo y botón Deactivate se leen completos y sin superposición. Responde E2-06 OK o describe el defecto. Al responder: registro tu validación o corrijo el defecto."
    }
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T13:49:30.820128Z",
+  "fileUtc": "2026-10-03T14:20:12.781984Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
-   "codex": "2026-10-03T14:16:04.376654Z"
+   "codex": "2026-10-03T14:18:36.749702Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -32,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:42:00Z"
+    "utc": "2026-10-03T14:16:00Z"
    }
   }
  },
@@ -225,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 449,
+    "prod": 453,
     "unprod": 2,
     "wait": 8,
-    "total": 459
+    "total": 463
    }
   }
  ],
@@ -2634,11 +2630,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 9,
-    "minutes": 70,
+    "attempts": 10,
+    "minutes": 74,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:46:00Z",
+    "lastActivity": "2026-10-03T14:20:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2651,8 +2647,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 6,
-      "minutes": 39,
+      "attempts": 7,
+      "minutes": 43,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -2661,7 +2657,8 @@ window.PFA_DATA = {
     ],
     "lessons": [
      "KF-19",
-     "KF-P13"
+     "KF-P13",
+     "KF-H04"
     ],
     "ready": true
    }
@@ -3409,6 +3406,18 @@ window.PFA_DATA = {
     "- Evidencia: los commits `ef94990` y `7f3c40b` están en `origin/main`; la página devuelve HTTP 200. Las publicaciones de 12:39 y 13:39 p. m. Central faltaban en `publish.log`, cuyo último registro era 11:16 a. m.",
     "- Corrección: se conciliaron las dos líneas en `publish.log` con horas UTC y commits verificados. El script escribe después de cada push exitoso; los errores de red o permisos van al mismo log.",
     "- Prevención: `REVISOR.md` permite ejecutar el publicador y pide anotar y no reintentar un fallo."
+   ]
+  },
+  "KF-H04": {
+   "title": "HERRAMIENTAS · El publicador no puede escribir su log y Pages no se verificó.",
+   "note": "",
+   "lines": [
+    "- Resuelto con D-052 (2026-10-03): la causa es que Codex corre con otro usuario de Windows y no puede escribir en `%LOCALAPPDATA%` de Oscar. Los agentes ya no ejecutan el publicador; lo hace la tarea de Windows.",
+    "- Síntoma: `tools/publish_dashboard.ps1` muestra `Access to the path 'C:\\Users\\oscar\\AppData\\Local\\PFA\\publish.log' is denied` al terminar.",
+    "- Causa confirmada: `Write-Log` falla al acceder al log fuera del repositorio después de que el script ya hizo `git push`. La consola reporta error aunque la subida al repositorio haya terminado.",
+    "- Evidencia: el 2026-10-02, GitHub confirmó el commit `965dd929a8b20da0699f56a4260eef359fa80658` (12:19 UTC) y `data.js` devolvió `generatedUtc` 12:19:17.897954Z. Pages no se verificó por el error SSL de PowerShell y la inaccesibilidad de la pestaña en el navegador externo.",
+    "- Acción: reparar el acceso de escritura al log en T; después comprobar `data.js` en GitHub Pages y registrar la hora remota. Un commit de GitHub confirma la subida, no la disponibilidad en Pages.",
+    "- T-34, Codex, 2026-10-03: reaplicar primero KF-19 (guardar y recargar Studio autenticado en edición) resolvió otra vez el sync vacío: 9 YAML; push 0 errores y sync posterior confirmó OnVisible real tras guardar/recargar. No fue necesario list_data_sources. Issues abiertos comprobados con conector GitHub: 0 (gh fuera de PATH)."
    ]
   }
  },
@@ -5252,22 +5261,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1146,
+   "prod": 1150,
    "unprod": 106,
    "wait": 97,
-   "total": 1349
+   "total": 1353
   },
   "last24h": {
-   "prod": 382,
+   "prod": 386,
    "unprod": 6,
    "wait": 31,
-   "total": 419
+   "total": 423
   },
   "last7d": {
-   "prod": 1146,
+   "prod": 1150,
    "unprod": 106,
    "wait": 97,
-   "total": 1349
+   "total": 1353
   },
   "product": {
    "prod": 697,
@@ -5276,10 +5285,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 449,
+   "prod": 453,
    "unprod": 2,
    "wait": 8,
-   "total": 459
+   "total": 463
   }
  },
  "days": [
@@ -5363,7 +5372,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 243,
+   "prod": 247,
    "unprod": 6,
    "wait": 31
   }
@@ -5452,10 +5461,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-34",
-   "prod": 70,
+   "prod": 74,
    "unprod": 0,
    "wait": 0,
-   "total": 70
+   "total": 74
   },
   {
    "task": "T-30",
@@ -5489,7 +5498,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 972
+   "minutes": 976
   },
   {
    "account": "claude",
@@ -5501,6 +5510,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T14:16:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "KF-19: guardar y recargar Studio; sync real y push de restauracion comprobados",
+   "evidence": "9 YAML descargados; diferencia unica override cero de My Day; push 0 errores/70 avisos; Saved y sync posterior con formula real. Criterios de costo y texto reversible de T-34 no reejecutados; no se afirma cierre completo."
+  },
   {
    "start": "2026-10-03T08:42:00Z",
    "minutes": 4,
@@ -5617,22 +5639,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Reabrí Studio desde Home y recuperé Editing, pero sync MCP devolvió HTTP 422",
    "evidence": "Coauthoring On; ids de environment/app correctos; OnVisible remoto aún usa el override 0; sin push ni cambios a SharePoint"
-  },
-  {
-   "start": "2026-10-03T07:29:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 3,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Medí el MCP tras recargar Studio; connect devolvió HTTP 422",
-   "evidence": "Sync solo a tmp; Studio Read-only; Copilot recomienda cerrar la pestaña propia y reabrir desde Home; sin Override ni cambios a SharePoint"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T14:16:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 9,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "KF-19: guardar y recargar Studio; sync real y push de restauracion comprobados",
+   "evidence": "9 YAML descargados; diferencia unica override cero de My Day; push 0 errores/70 avisos; Saved y sync posterior con formula real. Criterios de costo y texto reversible de T-34 no reejecutados; no se afirma cierre completo."
+  },
   {
    "start": "2026-10-03T08:42:00Z",
    "minutes": 4,
