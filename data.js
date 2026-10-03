@@ -1,20 +1,22 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:10:14.060776Z",
+ "generatedUtc": "2026-10-03T06:16:14.179041Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 05:50 UTC",
+  "updated": "2026-10-03 06:12 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06: construir Projects desde design/app sincronizado; crear controles faltantes en Studio y editar propiedades por código según powerapps-yaml.",
+  "nextAction": "E2-06: revisar los datos de prueba disponibles con lectura; antes del siguiente push, aplicar KF-P11 al archivo completo y medir antes de cambiar.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "E2-06 (Codex), intento 4, inicio 2026-10-03 05:54 UTC: implementar Projects sobre 9 YAML sincronizados; comprobar controles, expresiones y efecto sobre SharePoint en preview/publicada."
+   "E2-06 (Codex), intento 4, inicio 2026-10-03 05:54 UTC: implementar Projects sobre 9 YAML sincronizados; comprobar controles, expresiones y efecto sobre SharePoint en preview/publicada.",
+   "Avance 06:11 UTC: push con 0 errores; Studio muestra 4 proyectos activos con nombre y conteo de carpetas; sync a tmp/canvas-verify confirma el YAML aplicado; herramienta guardada (Saved, Unpublished). Siguiente: localizar proyecto de prueba existente y validar sin tocar proyectos reales.",
+   "Avance 06:12 UTC: revisión de KF-P11, informe completo de E2-04 e intentos 1–19; INC-16 registra que no apliqué la revisión completa antes del segundo push. Siguiente cambio detenido hasta verificar datos de prueba y revisar todo el YAML."
   ],
-  "fileUtc": "2026-10-03T05:54:03.923195Z",
+  "fileUtc": "2026-10-03T06:12:36.666371Z",
   "heartbeat": {
    "claude": "2026-10-03T06:05:18.941541Z",
    "codex": "2026-10-03T05:45:51.240173Z"
@@ -79,10 +81,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 318,
+    "prod": 328,
     "unprod": 104,
     "wait": 80,
-    "total": 502
+    "total": 512
    }
   },
   {
@@ -1058,17 +1060,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 6,
-    "minutes": 9,
+    "attempts": 8,
+    "minutes": 19,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 3,
-    "lastActivity": "2026-10-03T06:02:00Z",
+    "lastActivity": "2026-10-03T06:12:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 6,
-      "minutes": 9,
+      "attempts": 8,
+      "minutes": 19,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2668,17 +2670,17 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "En curso",
-  "attempts": 6,
-  "minutes": 9,
+  "attempts": 8,
+  "minutes": 19,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 3,
-  "lastActivity": "2026-10-03T06:02:00Z",
+  "lastActivity": "2026-10-03T06:12:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 6,
-    "minutes": 9,
+    "attempts": 8,
+    "minutes": 19,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2704,17 +2706,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 6,
-   "minutes": 9,
+   "attempts": 8,
+   "minutes": 19,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 3,
-   "lastActivity": "2026-10-03T06:02:00Z",
+   "lastActivity": "2026-10-03T06:12:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 6,
-     "minutes": 9,
+     "attempts": 8,
+     "minutes": 19,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -5225,28 +5227,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1001,
+   "prod": 1011,
    "unprod": 106,
    "wait": 92,
-   "total": 1199
+   "total": 1209
   },
   "last24h": {
-   "prod": 343,
+   "prod": 353,
    "unprod": 17,
    "wait": 66,
-   "total": 426
+   "total": 436
   },
   "last7d": {
-   "prod": 1001,
+   "prod": 1011,
    "unprod": 106,
    "wait": 92,
-   "total": 1199
+   "total": 1209
   },
   "product": {
-   "prod": 591,
+   "prod": 601,
    "unprod": 104,
    "wait": 84,
-   "total": 779
+   "total": 789
   },
   "support": {
    "prod": 410,
@@ -5336,7 +5338,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 98,
+   "prod": 108,
    "unprod": 6,
    "wait": 26
   }
@@ -5462,7 +5464,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 822
+   "minutes": 832
   },
   {
    "account": "claude",
@@ -5474,6 +5476,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T06:11:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Revisé KF-P11, el informe E2-04 y los intentos 1–19; añadí INC-16 por no aplicar la revisión antes del segundo push",
+   "evidence": "Informe y worklog de E2-04 contrastados; incidente registrado; siguiente cambio detenido hasta revisar datos de prueba y archivo completo"
+  },
+  {
+   "start": "2026-10-03T06:02:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Alias As proj y UpdateIf según error de compilación observado; push aceptado",
+   "evidence": "0 errores, 67 avisos; Studio: 4 activos visibles; sync 9 YAML a tmp/canvas-verify, fórmula confirmada; pruebas de cambio de datos pendientes"
+  },
   {
    "start": "2026-10-03T06:01:00Z",
    "minutes": 1,
@@ -5577,35 +5605,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Causa del fallo de Codex: usuario aislado de Windows y archivos virtualizados de Claude; .NET 10 en tools/.dotnet y puente local con el usuario real (tarea PFA Canvas Bridge); incluye inicio de sesión de Oscar en Windows",
    "evidence": "sync y push por el puente con el usuario real: OK (push 6 s); puente rechaza carpetas fuera del repo; KF-19 trampa 4; skill actualizada"
-  },
-  {
-   "start": "2026-10-03T05:14:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 1,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "OTRO",
-   "summary": "Preparación sin avance: falta SDK .NET 10; descarga oficial falló con autenticación",
-   "evidence": "canvas.py sync no inició: falta dnx.cmd; Studio accesible; app sin cambios"
-  },
-  {
-   "start": "2026-10-03T05:05:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-35",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Eliminé las dos automatizaciones activas del revisor PFA en Codex",
-   "evidence": "Ambos IDs ya no aparecen en el registro local; PFA Despertador sigue PAUSED y PFA Tablero intacta"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T06:11:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Revisé KF-P11, el informe E2-04 y los intentos 1–19; añadí INC-16 por no aplicar la revisión antes del segundo push",
+   "evidence": "Informe y worklog de E2-04 contrastados; incidente registrado; siguiente cambio detenido hasta revisar datos de prueba y archivo completo"
+  },
+  {
+   "start": "2026-10-03T06:02:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Alias As proj y UpdateIf según error de compilación observado; push aceptado",
+   "evidence": "0 errores, 67 avisos; Studio: 4 activos visibles; sync 9 YAML a tmp/canvas-verify, fórmula confirmada; pruebas de cambio de datos pendientes"
+  },
   {
    "start": "2026-10-03T06:01:00Z",
    "minutes": 1,
