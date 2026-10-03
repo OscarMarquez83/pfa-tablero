@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:07:27.944388Z",
+ "generatedUtc": "2026-10-03T08:16:14.348381Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:05 UTC",
+  "updated": "2026-10-03 08:14 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Reanudar cuando el tab de Power Apps Studio en Edge sea inspeccionable; confirmar Editing y Coauthoring, luego sincronizar y comprobar que bajó YAML. No repetir sync a ciegas.",
+  "nextAction": "Reanudar E2-07 cuando la pestaña existente de Studio sea inspeccionable; confirmar Editing y Coauthoring, después sincronizar y comprobar que bajó YAML. La extensión Edge está conectada, pero enumerar o vincular su pestaña agota tiempo; no repetir esas llamadas ahora.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,10 +17,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:06:09.767318Z",
+  "fileUtc": "2026-10-03T08:14:45.096726Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T07:44:08.680625Z"
+   "codex": "2026-10-03T08:09:04.966450Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:02:00Z"
+    "utc": "2026-10-03T08:09:00Z"
    }
   }
  },
@@ -221,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 421,
+    "prod": 426,
     "unprod": 2,
     "wait": 8,
-    "total": 431
+    "total": 436
    }
   }
  ],
@@ -2630,11 +2630,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 5,
-    "minutes": 42,
+    "attempts": 6,
+    "minutes": 47,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:05:00Z",
+    "lastActivity": "2026-10-03T08:14:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2647,8 +2647,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 2,
-      "minutes": 11,
+      "attempts": 3,
+      "minutes": 16,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -5238,22 +5238,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1118,
+   "prod": 1123,
    "unprod": 106,
    "wait": 97,
-   "total": 1321
+   "total": 1326
   },
   "last24h": {
-   "prod": 443,
+   "prod": 448,
    "unprod": 17,
    "wait": 71,
-   "total": 531
+   "total": 536
   },
   "last7d": {
-   "prod": 1118,
+   "prod": 1123,
    "unprod": 106,
    "wait": 97,
-   "total": 1321
+   "total": 1326
   },
   "product": {
    "prod": 697,
@@ -5262,10 +5262,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 421,
+   "prod": 426,
    "unprod": 2,
    "wait": 8,
-   "total": 431
+   "total": 436
   }
  },
  "days": [
@@ -5349,7 +5349,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 215,
+   "prod": 220,
    "unprod": 6,
    "wait": 31
   }
@@ -5444,18 +5444,18 @@ window.PFA_DATA = {
    "total": 47
   },
   {
+   "task": "T-34",
+   "prod": 47,
+   "unprod": 0,
+   "wait": 0,
+   "total": 47
+  },
+  {
    "task": "T-16",
    "prod": 46,
    "unprod": 0,
    "wait": 0,
    "total": 46
-  },
-  {
-   "task": "T-34",
-   "prod": 42,
-   "unprod": 0,
-   "wait": 0,
-   "total": 42
   },
   {
    "task": "T-01",
@@ -5475,7 +5475,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 944
+   "minutes": 949
   },
   {
    "account": "claude",
@@ -5487,6 +5487,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T08:09:00Z",
+   "minutes": 5,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Confirmé que la extensión Edge sigue conectada y probé dos vías de acceso a la pestaña",
+   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push."
+  },
   {
    "start": "2026-10-03T08:02:00Z",
    "minutes": 3,
@@ -5603,22 +5616,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Studio recargando tras renovar la sesión",
    "evidence": "Edge muestra Read-only porque otra sesión conserva el control; no se pulsó Override"
-  },
-  {
-   "start": "2026-10-03T06:49:00Z",
-   "minutes": 34,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 2,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Prueba temporal del estado 0; aviso y botón ocultos",
-   "evidence": "Preview correcto; 0 filas de SharePoint modificadas. M365 Copilot recomendó renovar URL/sesión y mantener cambios locales respaldados; restauración aún pendiente"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T08:09:00Z",
+   "minutes": 5,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Confirmé que la extensión Edge sigue conectada y probé dos vías de acceso a la pestaña",
+   "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push."
+  },
   {
    "start": "2026-10-03T08:02:00Z",
    "minutes": 3,
