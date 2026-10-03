@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:46:14.210237Z",
+ "generatedUtc": "2026-10-03T03:52:14.265869Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -17,21 +17,14 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [
-   "T-35 (Claude), intento 1, inicio 2026-10-03 03:37 UTC. Quitar el revisor de Codex: tarjeta \"Ahora mismo\", botón \"Estadísticas\" y AGENTS.md sin el revisor (D-050). Comprobación: tablero en Pages a 1366 y 390 px.",
-   "Avance 03:44 UTC: hecho: index.html sin semáforo ni revisión, con diálogo de estadísticas; REVISION.md borrado; REVISOR.md dice \"desactivado\"; AGENTS.md sin el revisor (huella 4314E2C3); T-36: la tarea de Windows corre con conhost --headless · falta: publicar y revisar en Pages; Oscar borra la automatización del revisor en Codex · herramienta: archivos guardados, sin commit · siguiente: publicar.",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:44:52.600019Z",
+  "fileUtc": "2026-10-03T03:48:46.226364Z",
   "heartbeat": {
-   "claude": "2026-10-03T03:44:59.730792Z",
+   "claude": "2026-10-03T03:49:01.611129Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
-  "live": {
-   "id": "T-35",
-   "agent": "Claude",
-   "startUtc": "2026-10-03T03:37:00Z",
-   "waits": []
-  },
+  "live": null,
   "ruleFootprints": {
    "current": "4314E2C3",
    "read": {
@@ -225,15 +218,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 30,
+   "done": 31,
    "total": 36,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 382,
+    "prod": 393,
     "unprod": 2,
     "wait": 8,
-    "total": 392
+    "total": 403
    }
   }
  ],
@@ -2495,17 +2488,17 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "En curso",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Por validar",
+    "attempts": 1,
+    "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T03:48:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 6,
       "limit": 45,
       "extra": 0,
       "finished": false,
@@ -2527,25 +2520,24 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 5,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T03:46:00Z",
     "byAgent": [
      {
-      "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 5,
       "limit": 15,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    },
    {
     "id": "T-37",
@@ -5022,31 +5014,62 @@ window.PFA_DATA = {
     }
    ],
    "lessons": []
+  },
+  {
+   "id": "T-36",
+   "action": "La tarea de Windows \"PFA Tablero\" corre sin abrir ventana",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "No aparece la ventana negra cada 3 minutos",
+   "evidence": "La tarea corre con conhost --headless y el log registra una publicación después del cambio",
+   "limit": 15,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 5,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T03:46:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 5,
+     "limit": 15,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 53,
+  "tasksDone": 54,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 942,
+   "prod": 953,
    "unprod": 100,
    "wait": 66,
-   "total": 1108
+   "total": 1119
   },
   "last24h": {
-   "prod": 325,
+   "prod": 334,
    "unprod": 18,
    "wait": 40,
-   "total": 383
+   "total": 392
   },
   "last7d": {
-   "prod": 942,
+   "prod": 953,
    "unprod": 100,
    "wait": 66,
-   "total": 1108
+   "total": 1119
   },
   "product": {
    "prod": 560,
@@ -5055,10 +5078,10 @@ window.PFA_DATA = {
    "total": 716
   },
   "support": {
-   "prod": 382,
+   "prod": 393,
    "unprod": 2,
    "wait": 8,
-   "total": 392
+   "total": 403
   }
  },
  "days": [
@@ -5142,7 +5165,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 39,
+   "prod": 50,
    "unprod": 0,
    "wait": 0
   }
@@ -5267,7 +5290,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 258
+   "minutes": 269
   },
   {
    "account": "empresa",
@@ -5275,6 +5298,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T03:41:00Z",
+   "minutes": 5,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-36",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tarea de Windows PFA Tablero con conhost --headless: ya no abre ventana",
+   "evidence": "Resultado 0 y publicación automática a las 03:46:17 UTC después del cambio"
+  },
+  {
+   "start": "2026-10-03T03:37:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-35",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisor de Codex eliminado: tarjeta Ahora mismo, botón Estadísticas (resumen, por entrega, por agente, tipos de problema, tareas sobre el límite), REVISION.md borrado, REVISOR.md desactivado, AGENTS.md sin el revisor. Incluye 5 min de T-36 descontados",
+   "evidence": "Pages a 1366 y 390 px: sin semáforo, diálogo con 5 tablas sin desbordar; falta que Oscar borre la automatización en Codex"
+  },
   {
    "start": "2026-10-03T03:20:00Z",
    "minutes": 15,
@@ -5378,35 +5427,35 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Tablero: línea por agente (intentos, min usados y asignados) retroactiva desde worklog.cuenta; barra contra límite inicial; botón Lecciones con KNOWN-FIXES; KF-P11 reescrita como enfoque; AGENTS.md sección 5 (KF-P11) y sección 6 (cuenta claude); AGENTS.md en CRLF para huella estable",
    "evidence": "Auditoría local 5/5: E2-04 202/90 en rojo, Codex 18 int. 159/90+80, Claude 1 int. 43/60, Lecciones (6) con KF-P11 primero; E1-05 Codex 7 int. 143/60; sin desborde a 390 y 1366 px. Pages pendiente de verificar tras publicar"
-  },
-  {
-   "start": "2026-10-02T18:39:00Z",
-   "minutes": 9,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-29",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Huella única por agente (D-043): AGENTS.md sección 3, línea en STATUS, build_dashboard.py y aviso en el encabezado del tablero; bloque de huellas retirado de T; REVISOR.md alineado",
-   "evidence": "Auditoría 5/5 OK: Pages muestra Reglas al día con Claude y 2A22684D; prueba en rojo con huella simulada; sin bloque en T; sin desborde a 390 y 1366 px; commit del tablero 3772888"
-  },
-  {
-   "start": "2026-10-02T18:22:00Z",
-   "minutes": 3,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "CONECTOR",
-   "summary": "Oscar validó en la app publicada: primer escaneo 24 encontradas; con 3 carpetas de prueba nuevas 27 encontradas y 3 nuevas; carpetas fuera de Projects no se leen; tras borrarlas, 24 encontradas y 0 nuevas. E2-04 Hecha (Claude)",
-   "evidence": "REST: 29 filas, 0 duplicados; filas 27-29 de las carpetas borradas siguen con Decision=Nueva (HZ-20)"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T03:41:00Z",
+   "minutes": 5,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-36",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Tarea de Windows PFA Tablero con conhost --headless: ya no abre ventana",
+   "evidence": "Resultado 0 y publicación automática a las 03:46:17 UTC después del cambio"
+  },
+  {
+   "start": "2026-10-03T03:37:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-35",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Revisor de Codex eliminado: tarjeta Ahora mismo, botón Estadísticas (resumen, por entrega, por agente, tipos de problema, tareas sobre el límite), REVISION.md borrado, REVISOR.md desactivado, AGENTS.md sin el revisor. Incluye 5 min de T-36 descontados",
+   "evidence": "Pages a 1366 y 390 px: sin semáforo, diálogo con 5 tablas sin desbordar; falta que Oscar borre la automatización en Codex"
+  },
   {
    "start": "2026-10-03T03:20:00Z",
    "minutes": 15,
