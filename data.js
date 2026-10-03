@@ -1,47 +1,28 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T04:43:15.762107Z",
+ "generatedUtc": "2026-10-03T04:50:46.757118Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 03:22 UTC",
+  "updated": "2026-10-03 04:52 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049), desde su línea de relevo. T-33 y T-34 quedan Por validar hasta la primera retoma y la primera corrida de tools/canvas.py por Codex.",
+  "nextAction": "E2-06 (pantalla Projects) con el método de la skill powerapps-yaml. La primera retoma de Codex valida T-33 y T-34.",
   "needsOscar": [
-   {
-    "ref": "E2-05",
-    "text": "la app publicada pide otra vez \"Allow PFA_Pilot_App to access your data?\" (Office 365 Outlook y SharePoint, las mismas conexiones de E2-04). Autorizar que yo la acepte. Al responder: acepto, repito en la app publicada las pruebas de Configuration a 1366 y 390 px y cierro E2-05."
-   },
    {
     "ref": "T-35",
     "text": "en la app de Codex, borrar (o pausar) la automatización del revisor que corre cada 4 horas (\"Actúa como revisor de avance…\"). Yo no tengo acceso a las automatizaciones de Codex; mientras exista, solo responde \"desactivado\" y gasta pocos tokens. Al responder: marco T-35 como Hecha."
    }
   ],
   "blockers": [],
-  "current": [
-   "E2-05 (Claude), intento 2, inicio 2026-10-03 03:58 UTC, método nuevo (D-049): reescribir Configuration en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push. Comprobación: evidencia de E2-05 (3 carpetas, una por opción; Change; sin proyectos duplicados; D-042) en vista previa y app publicada a 1366 y 390 px.",
-   "Avance 04:19 UTC: hecho: Configuration rehecha por código (push solo de propiedades; los 3 controles nuevos se crearon en Studio porque crear controles por push tumba Studio). Vista previa OK: Project, Part of parent, Not a project, Change (3), sin proyecto duplicado, Scan \"24 found, 0 new, 3 no longer in Outlook\" (filas de prueba 27-29 marcadas, ninguna borrada). Guardado y publicado · falta: prueba en la app publicada a 1366 y 390 px y cierre · herramienta: Studio guardado y publicado · siguiente: abrir la app publicada y repetir las pruebas.",
-   "Espera desde 04:20 UTC: autorización de Oscar para aceptar las conexiones de la app publicada (ESPERA · AUTH).",
-   "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
-  ],
-  "fileUtc": "2026-10-03T04:41:26.295636Z",
+  "current": [],
+  "fileUtc": "2026-10-03T04:50:45.895860Z",
   "heartbeat": {
-   "claude": "2026-10-03T04:41:38.611706Z",
+   "claude": "2026-10-03T04:50:45.687745Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
-  "live": {
-   "id": "E2-05",
-   "agent": "Claude",
-   "startUtc": "2026-10-03T03:58:00Z",
-   "waits": [
-    {
-     "from": "2026-10-03T04:20:00Z",
-     "to": ""
-    }
-   ]
-  },
+  "live": null,
   "ruleFootprints": {
    "current": "4314E2C3",
    "read": {
@@ -91,15 +72,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 4,
+   "done": 5,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 287,
+    "prod": 315,
     "unprod": 98,
-    "wait": 54,
-    "total": 439
+    "wait": 78,
+    "total": 491
    }
   },
   {
@@ -1016,28 +997,27 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "En curso",
-    "attempts": 1,
-    "minutes": 80,
+    "status": "Hecha",
+    "attempts": 3,
+    "minutes": 108,
     "entrega": "E2",
     "fails": 0,
-    "lastActivity": "2026-10-02T21:30:00Z",
+    "lastActivity": "2026-10-03T04:50:00Z",
     "byAgent": [
      {
       "agent": "Claude",
-      "attempts": 1,
-      "minutes": 80,
+      "attempts": 3,
+      "minutes": 108,
       "limit": 90,
       "extra": 0,
-      "finished": false,
-      "tone": "ok"
+      "finished": true,
+      "tone": "over"
      }
     ],
     "lessons": [
      "KF-18",
      "KF-19"
-    ],
-    "ready": true
+    ]
    },
    {
     "id": "E2-06",
@@ -1069,7 +1049,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-07",
@@ -1101,7 +1081,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-08",
@@ -2587,7 +2567,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "T-34",
@@ -2626,76 +2606,38 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-05",
-  "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+  "id": "E2-06",
+  "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
   "owner": "Agente",
-  "depends": "E2-04",
-  "expected": "Oscar decide sus carpetas desde la app",
-  "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
-  "limit": 90,
+  "depends": "E2-05",
+  "expected": "Oscar ve y ajusta sus proyectos",
+  "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
+  "limit": 60,
   "limitAlloc": {
    "ext": {},
    "own": {}
   },
-  "status": "En curso",
-  "attempts": 1,
-  "minutes": 80,
+  "status": "Pendiente",
+  "attempts": 0,
+  "minutes": 0,
   "entrega": "E2",
   "fails": 0,
-  "lastActivity": "2026-10-02T21:30:00Z",
+  "lastActivity": "",
   "byAgent": [
    {
-    "agent": "Claude",
-    "attempts": 1,
-    "minutes": 80,
-    "limit": 90,
+    "agent": "Codex",
+    "attempts": 0,
+    "minutes": 0,
+    "limit": 60,
     "extra": 0,
     "finished": false,
     "tone": "ok"
    }
   ],
-  "lessons": [
-   "KF-18",
-   "KF-19"
-  ],
+  "lessons": [],
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E2-05",
-   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
-   "owner": "Agente",
-   "depends": "E2-04",
-   "expected": "Oscar decide sus carpetas desde la app",
-   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
-   "limit": 90,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "En curso",
-   "attempts": 1,
-   "minutes": 80,
-   "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "2026-10-02T21:30:00Z",
-   "byAgent": [
-    {
-     "agent": "Claude",
-     "attempts": 1,
-     "minutes": 80,
-     "limit": 90,
-     "extra": 0,
-     "finished": false,
-     "tone": "ok"
-    }
-   ],
-   "lessons": [
-    "KF-18",
-    "KF-19"
-   ],
-   "ready": true
-  },
   {
    "id": "E2-06",
    "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
@@ -2726,7 +2668,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-07",
@@ -2758,7 +2700,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-08",
@@ -3143,6 +3085,38 @@ window.PFA_DATA = {
    ],
    "lessons": [],
    "ready": false
+  },
+  {
+   "id": "T-33",
+   "action": "Línea de relevo y recuperación tras una sesión vencida de Microsoft 365: cada avance dice qué quedó hecho, qué falta, si la herramienta quedó guardada o no y el siguiente paso; al volver a iniciar sesión, el agente compara Studio con el archivo del repositorio y reaplica desde el archivo",
+   "owner": "Agente",
+   "depends": "Decisión de Oscar, T-32",
+   "expected": "Otro agente (o el mismo) retoma desde la última línea, sin perder trabajo ni repetir pasos",
+   "evidence": "Prueba: un agente nuevo lee solo STATUS y nombra el siguiente paso exacto de una tarea interrumpida; regla y plantilla en AGENTS.md y en la skill cerrar-intento; la prueba la hace Codex en su primera retoma",
+   "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Por validar",
+   "attempts": 1,
+   "minutes": 1,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T03:20:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 1,
+     "limit": 30,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [],
+   "ready": true
   }
  ],
  "lessons": {
@@ -3224,6 +3198,7 @@ window.PFA_DATA = {
     "- Si esa ventana pregunta **\"Allow your organization to manage your device?\"**, la respuesta es **No**. \"Yes\" intenta inscribir el computador personal en la administración de Puffer (Intune). El 2026-10-03 Oscar eligió Yes, la inscripción falló por requisitos de la empresa y el equipo quedó sin registrar (`dsregcmd /status`: WorkplaceJoined NO; sin inscripciones MDM). La conexión funciona igual con No. Si vuelve a molestar, usar `CANVAS_AUTH_FLOW=browser` (inicio de sesión en el navegador, sin registrar el equipo).",
     "- Trampa: `compile_canvas` aplica la carpeta a Studio **aunque tenga errores** (una fórmula rota quedó en la app). `push` guarda antes el estado actual en `tmp/canvas-ultimo-bueno` y, si hay errores, lo reaplica y responde `REVERTIDO` con el control y la propiedad del error.",
     "- **Trampa 2 (E2-05):** un `push` que **crea controles nuevos** deja Studio en blanco (error interno \"Cannot read properties of undefined (reading 'get')\"). Al recargar Studio, la sesión vuelve a la última versión guardada y el cambio se pierde. Medido en 6 pruebas: un cambio vacío y un cambio de texto no lo tumban; agregar hasta un solo contenedor con una etiqueta sí, con o sin versión de control (`Label@2.5.1`). Método que funciona: (1) crear en Studio solo los controles que faltan (Insert con un control hermano seleccionado, para que quede dentro del mismo contenedor o galería) y ponerles el nombre final en el panel de propiedades; borrar en Studio los que sobran; guardar (Ctrl+S); (2) `sync` a `design/app`; (3) editar solo propiedades y aplicar con `push`; Studio sigue vivo; (4) Ctrl+S. Después de cada push, comprobar con una captura reducida que Studio no quedó en blanco antes de guardar.",
+    "- **Trampa 3 (E2-05):** lo que llega por `push` queda en la sesión, pero Studio no lo marca como pendiente de guardar (\"lo cambió otro autor\"). Ctrl+S no lo guarda y Publish publica la última versión guardada, sin esos cambios: la app publicada mostró una versión intermedia. Solución: después del push, hacer en Studio un cambio real mínimo (por ejemplo, una propiedad de la pantalla tocada que ya debía usar `Tema`) y Ctrl+S. Antes de publicar, comprobar: recargar Studio, `sync` a `tmp/` y buscar un texto nuevo del cambio. Solo entonces publicar.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
     "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
@@ -4094,6 +4069,40 @@ window.PFA_DATA = {
     "KF-P09",
     "KF-P11",
     "KF-P12"
+   ]
+  },
+  {
+   "id": "E2-05",
+   "action": "Pantalla Configuration (YAML en design/yaml/configuracion.pa.yaml, estándar de DISENO.md). Sección \"New folders to review (N)\": carpetas con Decision = Nueva, con su ruta y 3 botones. **Project**: crea el proyecto en PFA_Projects (ProjectId generado, OfficialName = nombre de la carpeta, Status = Active, ConfirmationStatus = Confirmed, PrimaryOutlookFolderId) o reactiva el que ya tenía, y guarda en la carpeta Decision = Proyecto, Included = Sí y ProjectId. **Part of parent project**: Decision = ParteDelSuperior, Included = Sí, ProjectId del ancestro más cercano con Decision = Proyecto (botón desactivado si no hay ninguno). **Not a project**: Decision = NoEsProyecto, Included = No. Una carpeta con subcarpetas se puede manejar de dos formas: la carpeta padre como Project y sus subcarpetas como Part of parent project (un solo proyecto), o la carpeta padre como Not a project y cada subcarpeta como Project (proyectos independientes). Las carpetas se muestran ordenadas por ruta para que las subcarpetas queden debajo de su carpeta padre. Sección \"Reviewed folders\": ruta, decisión y botón \"Change\" que la devuelve a Nueva. Nunca borrar filas",
+   "owner": "Agente",
+   "depends": "E2-04",
+   "expected": "Oscar decide sus carpetas desde la app",
+   "evidence": "Prueba con 3 carpetas, una por opción; \"Change\" funciona; no se crean proyectos duplicados",
+   "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 3,
+   "minutes": 108,
+   "entrega": "E2",
+   "fails": 0,
+   "lastActivity": "2026-10-03T04:50:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 3,
+     "minutes": 108,
+     "limit": 90,
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
+    }
+   ],
+   "lessons": [
+    "KF-18",
+    "KF-19"
    ]
   },
   {
@@ -5070,33 +5079,33 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 54,
+  "tasksDone": 55,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 953,
+   "prod": 981,
    "unprod": 100,
-   "wait": 66,
-   "total": 1119
+   "wait": 90,
+   "total": 1171
   },
   "last24h": {
-   "prod": 310,
+   "prod": 337,
    "unprod": 18,
-   "wait": 40,
-   "total": 368
+   "wait": 64,
+   "total": 419
   },
   "last7d": {
-   "prod": 953,
+   "prod": 981,
    "unprod": 100,
-   "wait": 66,
-   "total": 1119
+   "wait": 90,
+   "total": 1171
   },
   "product": {
-   "prod": 560,
+   "prod": 588,
    "unprod": 98,
-   "wait": 58,
-   "total": 716
+   "wait": 82,
+   "total": 768
   },
   "support": {
    "prod": 393,
@@ -5186,9 +5195,9 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 50,
+   "prod": 78,
    "unprod": 0,
-   "wait": 0
+   "wait": 24
   }
  ],
  "categories": [
@@ -5225,7 +5234,7 @@ window.PFA_DATA = {
   },
   {
    "category": "AUTH",
-   "minutes": 11
+   "minutes": 35
   },
   {
    "category": "NAVEGADOR",
@@ -5248,18 +5257,18 @@ window.PFA_DATA = {
    "total": 143
   },
   {
+   "task": "E2-05",
+   "prod": 108,
+   "unprod": 0,
+   "wait": 24,
+   "total": 132
+  },
+  {
    "task": "E2-02",
    "prod": 67,
    "unprod": 30,
    "wait": 2,
    "total": 99
-  },
-  {
-   "task": "E2-05",
-   "prod": 80,
-   "unprod": 0,
-   "wait": 0,
-   "total": 80
   },
   {
    "task": "T-30",
@@ -5311,7 +5320,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 269
+   "minutes": 321
   },
   {
    "account": "empresa",
@@ -5319,6 +5328,45 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T04:44:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Republicado tras guardar lo que llegó por push (KF-19 trampa 3); pruebas en la app publicada",
+   "evidence": "App publicada 1366: 3 decisiones, Change x3, sin duplicado, Scan 24/0/0; 375 px sin desplazamiento; datos devueltos a Nueva"
+  },
+  {
+   "start": "2026-10-03T04:20:00Z",
+   "minutes": 24,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Autorización de Oscar para aceptar las conexiones de la app publicada",
+   "evidence": "Oscar respondió Acepta a las 04:44 UTC"
+  },
+  {
+   "start": "2026-10-03T03:58:00Z",
+   "minutes": 22,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Configuration por código: push de propiedades; 3 controles creados en Studio porque un push que crea controles deja Studio en blanco (6 pruebas, KF-19); vista previa OK",
+   "evidence": "Push 0 errores; vista previa: 3 decisiones, Change, sin duplicado, Scan 24/0/3"
+  },
   {
    "start": "2026-10-03T03:41:00Z",
    "minutes": 5,
@@ -5409,48 +5457,48 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Análisis con skill idea: método para construir Power Apps como código (Canvas Authoring MCP de Microsoft) y propuestas T-31 a T-33; git verificado (fsck sin errores, gc) y commit pendiente hecho",
    "evidence": "control/specs/T-34.md; T-31 a T-34 en PLAN; INC-14; decisiones pedidas en STATUS"
-  },
-  {
-   "start": "2026-10-02T20:10:00Z",
-   "minutes": 80,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-05",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "FORMULA_PA",
-   "summary": "Configuration a mano (D-045): OnVisible, galería de carpetas nuevas, etiqueta de ruta, botones Project y Part of parent project; intento cortado por límite de uso de Claude. Incluye espera de login (AUTH) sin hora medida",
-   "evidence": "App checker 0 errores en Configuration; faltan Not a project, Scan D-042, Reviewed, View code, pruebas y publicar"
-  },
-  {
-   "start": "2026-10-02T19:16:00Z",
-   "minutes": 37,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-30",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Diseño de Oscar: sub-filas por agente en Resp./Intentos/Tiempo y botón Lecciones bajo el estado; color azul/amarillo/rojo según terminó o no; investigación de la ampliación de 20 min: D-039 la dio por aprobada sin respuesta de Oscar (INC-13, KF-P12); límite de Codex en E2-04 = 90 +60",
-   "evidence": "Local 1366 y 390 px: E2-04 Codex 18 · 159/90 +60 rojo, Claude 1 · 43/60 azul, 7 lecciones; E2-02 Codex 97/90 +30 amarillo; sin desborde"
-  },
-  {
-   "start": "2026-10-02T19:00:00Z",
-   "minutes": 10,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-30",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Tablero: línea por agente (intentos, min usados y asignados) retroactiva desde worklog.cuenta; barra contra límite inicial; botón Lecciones con KNOWN-FIXES; KF-P11 reescrita como enfoque; AGENTS.md sección 5 (KF-P11) y sección 6 (cuenta claude); AGENTS.md en CRLF para huella estable",
-   "evidence": "Auditoría local 5/5: E2-04 202/90 en rojo, Codex 18 int. 159/90+80, Claude 1 int. 43/60, Lecciones (6) con KF-P11 primero; E1-05 Codex 7 int. 143/60; sin desborde a 390 y 1366 px. Pages pendiente de verificar tras publicar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T04:44:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Republicado tras guardar lo que llegó por push (KF-19 trampa 3); pruebas en la app publicada",
+   "evidence": "App publicada 1366: 3 decisiones, Change x3, sin duplicado, Scan 24/0/0; 375 px sin desplazamiento; datos devueltos a Nueva"
+  },
+  {
+   "start": "2026-10-03T04:20:00Z",
+   "minutes": 24,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "ESPERA",
+   "kind": "wait",
+   "category": "AUTH",
+   "summary": "Autorización de Oscar para aceptar las conexiones de la app publicada",
+   "evidence": "Oscar respondió Acepta a las 04:44 UTC"
+  },
+  {
+   "start": "2026-10-03T03:58:00Z",
+   "minutes": 22,
+   "account": "claude",
+   "entrega": "E2",
+   "task": "E2-05",
+   "attempt": 2,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Configuration por código: push de propiedades; 3 controles creados en Studio porque un push que crea controles deja Studio en blanco (6 pruebas, KF-19); vista previa OK",
+   "evidence": "Push 0 errores; vista previa: 3 decisiones, Change, sin duplicado, Scan 24/0/3"
+  },
   {
    "start": "2026-10-03T03:41:00Z",
    "minutes": 5,
