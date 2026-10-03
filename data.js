@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T15:28:13.911035Z",
+ "generatedUtc": "2026-10-03T15:40:13.961769Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 15:09 UTC",
+  "updated": "2026-10-03 15:32 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar E2-07 y las demás tareas de E2 por dependencias; E2-06 queda pendiente de validación de Oscar.",
+  "nextAction": "Cerrar E2-08 con Flow Checker, trigger y run verificados; después continuar E2-09 y E2-11. E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T15:11:21.624719Z",
+  "fileUtc": "2026-10-03T15:37:52.407914Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T15:09:00Z"
+    "utc": "2026-10-03T15:32:00Z"
    }
   }
  },
