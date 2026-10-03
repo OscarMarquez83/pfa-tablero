@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T16:22:14.095386Z",
+ "generatedUtc": "2026-10-03T16:28:14.035804Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 16:20 UTC",
+  "updated": "2026-10-03 16:24 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Publicar y probar E2-09 con PFA-Prueba en la app publicada; después E2-11. E2-06 queda pendiente de validación de Oscar.",
+  "nextAction": "Terminar E2-11 con la app publicada en teléfono y tableta horizontal; no cambiar el menú. E2-06 espera validación de Oscar; E2-10 requiere sus decisiones sobre las carpetas reales y la aceptación de E2.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T16:21:00.317971Z",
+  "fileUtc": "2026-10-03T16:26:15.662621Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T15:48:00Z"
+    "utc": "2026-10-03T16:24:00Z"
    }
   }
  },
@@ -72,15 +72,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 7,
+   "done": 8,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 505,
+    "prod": 539,
     "unprod": 104,
     "wait": 85,
-    "total": 694
+    "total": 728
    }
   },
   {
@@ -1156,26 +1156,25 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 34,
     "entrega": "E2",
     "user": "Prueba completa en la app publicada con la carpeta de prueba: decidir, cambiar y volver a decidir.",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T16:22:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "attempts": 1,
+      "minutes": 34,
       "limit": 30,
       "extra": 0,
-      "finished": false,
-      "tone": "ok"
+      "finished": true,
+      "tone": "over"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    },
    {
     "id": "E2-11",
@@ -1208,7 +1207,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E2-10",
@@ -2736,39 +2735,6 @@ window.PFA_DATA = {
    "ready": true
   },
   {
-   "id": "E2-09",
-   "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
-   "owner": "Agente",
-   "depends": "E2-07, E2-08",
-   "expected": "Versión publicada y controles probados",
-   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
-   "limit": 30,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "user": "Prueba completa en la app publicada con la carpeta de prueba: decidir, cambiar y volver a decidir.",
-   "fails": 0,
-   "lastActivity": "",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
-     "limit": 30,
-     "extra": 0,
-     "finished": false,
-     "tone": "ok"
-    }
-   ],
-   "lessons": [],
-   "ready": true
-  },
-  {
    "id": "E2-11",
    "action": "Evaluar el selector desplegable de navegación en teléfonos y tabletas en orientación horizontal; mantener la navegación horizontal actual salvo que la evaluación revele un problema que requiera decisión",
    "owner": "Agente",
@@ -2799,7 +2765,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E2-10",
@@ -4317,6 +4283,38 @@ window.PFA_DATA = {
    "lessons": []
   },
   {
+   "id": "E2-09",
+   "action": "Guardar y publicar la app. En la app publicada, probar con la carpeta PFA-Prueba: Project, Change, Not a project, Change otra vez y Project; revisar el aviso de My Day y Deactivate en Projects. Dejar PFA-Prueba como Project al terminar",
+   "owner": "Agente",
+   "depends": "E2-07, E2-08",
+   "expected": "Versión publicada y controles probados",
+   "evidence": "Número de versión en worklog; cada botón probado con su efecto en la lista anotado; con PFA-Prueba ya decidida como Project, pulsar Scan folders y comprobar que su fila conserva Decision, Included y ProjectId (criterio heredado de E2-04)",
+   "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 34,
+   "entrega": "E2",
+   "user": "Prueba completa en la app publicada con la carpeta de prueba: decidir, cambiar y volver a decidir.",
+   "fails": 0,
+   "lastActivity": "2026-10-03T16:22:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 34,
+     "limit": 30,
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
+    }
+   ],
+   "lessons": []
+  },
+  {
    "id": "T-01",
    "action": "Registrar el soporte hecho desde 2026-09-30: GitHub CLI, tablero, publicación, tareas programadas y revisor",
    "owner": "Agente",
@@ -5336,33 +5334,33 @@ window.PFA_DATA = {
   }
  ],
  "kpi": {
-  "tasksDone": 58,
+  "tasksDone": 59,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1231,
+   "prod": 1265,
    "unprod": 106,
    "wait": 97,
-   "total": 1434
+   "total": 1468
   },
   "last24h": {
-   "prod": 467,
+   "prod": 501,
    "unprod": 6,
    "wait": 31,
-   "total": 504
+   "total": 538
   },
   "last7d": {
-   "prod": 1231,
+   "prod": 1265,
    "unprod": 106,
    "wait": 97,
-   "total": 1434
+   "total": 1468
   },
   "product": {
-   "prod": 778,
+   "prod": 812,
    "unprod": 104,
    "wait": 89,
-   "total": 971
+   "total": 1005
   },
   "support": {
    "prod": 453,
@@ -5452,7 +5450,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 328,
+   "prod": 362,
    "unprod": 6,
    "wait": 31
   }
@@ -5578,7 +5576,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 1057
+   "minutes": 1091
   },
   {
    "account": "claude",
@@ -5590,6 +5588,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T15:48:00Z",
+   "minutes": 34,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Secuencia Project/Change/Not a project/Change/Project completada; versión 173 publicada",
+   "evidence": "Power Apps Versions: v173 Live. Cada efecto persistió en SharePoint: Project reactiva el proyecto existente con el mismo ProjectId e Included Sí; Change desactiva el proyecto y devuelve Decision a Nueva; Not a project deja Decision NoEsProyecto e Included No; Change otra vez borra la decisión; Project final reutiliza el mismo ProjectId. Scan publicado Succeeded: 24 carpetas, 0 nuevas; la fila conserva Decision Proyecto, Included Sí y ProjectId; una fila de proyecto Active. My Day: 19 pendientes. Projects: 5 activos; la prueba tiene una carpeta y botón Deactivate. 34 min total, 4 min sobre base de 30 dentro de la ampliación permitida de sección 5."
+  },
   {
    "start": "2026-10-03T15:32:00Z",
    "minutes": 16,
@@ -5706,22 +5717,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Confirmé que la extensión Edge sigue conectada; no pude inspeccionar la pestaña existente",
    "evidence": "Edge aparece como extensión ID 3; listar sus pestañas y vincular la página por dominio agotó tiempo. El navegador integrado no tiene pestañas. No se inspeccionó Studio ni se hizo sync o push. INC-18: faltó registrar el inicio en STATUS antes de las consultas."
-  },
-  {
-   "start": "2026-10-03T08:02:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Reapertura: App Checker por Canvas MCP para separar acceso a app de sync vacío",
-   "evidence": "Connect/check completan, App Checker 0 errores y 0 avisos; sync anterior sigue sin YAML. Issue Microsoft #219 describe el mismo síntoma en v1.0.7 y una solución por connect, ya aplicada aquí sin resolver sync. CUA expiró dos veces; no se inspeccionó Studio. https://github.com/microsoft/power-platform-skills/issues/219"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T15:48:00Z",
+   "minutes": 34,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-09",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "CONECTOR",
+   "summary": "Secuencia Project/Change/Not a project/Change/Project completada; versión 173 publicada",
+   "evidence": "Power Apps Versions: v173 Live. Cada efecto persistió en SharePoint: Project reactiva el proyecto existente con el mismo ProjectId e Included Sí; Change desactiva el proyecto y devuelve Decision a Nueva; Not a project deja Decision NoEsProyecto e Included No; Change otra vez borra la decisión; Project final reutiliza el mismo ProjectId. Scan publicado Succeeded: 24 carpetas, 0 nuevas; la fila conserva Decision Proyecto, Included Sí y ProjectId; una fila de proyecto Active. My Day: 19 pendientes. Projects: 5 activos; la prueba tiene una carpeta y botón Deactivate. 34 min total, 4 min sobre base de 30 dentro de la ampliación permitida de sección 5."
+  },
   {
    "start": "2026-10-03T15:32:00Z",
    "minutes": 16,
