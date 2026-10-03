@@ -409,7 +409,8 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
 <div class="tip" id="tip"></div>
 <dialog id="dlg"><div class="dlg-head"><h3 id="dlg-title"></h3><button class="x" id="dlg-x" type="button" aria-label="Cerrar">✕</button></div><div class="dlg-body" id="dlg-body"></div></dialog>
 
-<script src="data.js"></script>
+<!-- data.js sin caché: GitHub Pages lo guarda hasta 10 min y el estado en vivo (D-046) quedaría viejo. -->
+<script>document.write('<script src="data.js?t=' + Date.now() + '"><\/script>');</script>
 <script>
 (function () {
   "use strict";
