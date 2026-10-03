@@ -1,32 +1,27 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:10:15.091997Z",
+ "generatedUtc": "2026-10-03T03:19:14.938222Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-02 19:54 UTC",
+  "updated": "2026-10-03 03:20 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-05 en pausa por decisión de Oscar hasta resolver T-31 a T-34 (tablero, tokens, relevo y método de Power Apps); esperan su aprobación en \"Necesito de Oscar\". Antes: E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
+  "nextAction": "terminar T-31 (latido y tiempo en vivo en el tablero) y T-33 (plantilla de relevo en cerrar-intento). Después, retomar E2-05 con el método nuevo (skill powerapps-yaml, D-049): editar design/app/Configuration.pa.yaml y aplicarlo con tools/canvas.py.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-34 (Claude), intento 1, inicio 2026-10-03 03:03 UTC (D-046 a D-049 aprobadas; E2-05 en pausa). Probar el servidor oficial Canvas Authoring MCP: instalar .NET 10 SDK, configurar el servidor, activar Coauthoring, bajar la app a .pa.yaml, hacer un cambio reversible y medir. Comprobación: criterios 3 de control/specs/T-34.md. No se publica nada.",
-   "Avance 03:10 UTC: .NET 10 SDK 10.0.401 instalado en la carpeta del usuario, sin administrador; dnx disponible. Siguiente: arrancar el servidor y listar sus herramientas.",
-   "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
-   "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página).",
-   "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC.",
-   "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial.",
-   "Avance (Claude, D-045): Configuration.OnVisible carga colFolders y colProjects. La galería de carpetas nuevas tiene Items, TemplateSize, X, Y, Width y Height. Ya se cambiaron la etiqueta de ruta (Text, Tooltip, Width, X, Y, Height), el botón Project (OnSelect, Text, posición) y el botón Part of parent project (OnSelect, DisplayMode, Text, posición, colores). App checker: 0 errores en Configuration. Lección: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo; para borrar usar Ctrl+End, Ctrl+Shift+Home y Delete, y revisar cada propiedad con View code antes de guardar. Falta: botón Not a project (insertarlo en la galería), títulos, estados vacíos, OnSelect de Scan con D-042, sección Reviewed folders, quitar controles viejos, revisar con View code, pruebas, publicar y cerrar. Cierre de Studio: GUARDAR (Studio autoguarda; la versión 161 publicada sigue Live)."
+   "T-31 (Claude), intento 1, inicio 2026-10-03 03:20 UTC. El tablero muestra el tiempo en vivo de la tarea en curso, el agente que la tiene y el estado por latido (Trabajando, Sin reporte, Detenida), sin contar la sesión del revisor. Comprobación: prueba local y en Pages a 1366 y 390 px.",
+   "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T03:04:47.372920Z",
+  "fileUtc": "2026-10-03T03:19:03.026815Z",
   "ruleFootprints": {
-   "current": "FE84A01D",
+   "current": "CA8D23A4",
    "read": {
-    "hash": "FE84A01D",
+    "hash": "CA8D23A4",
     "agent": "Claude",
-    "utc": "2026-10-03T00:57:00Z"
+    "utc": "2026-10-03T03:25:00Z"
    }
   }
  },
@@ -410,10 +405,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 349,
+    "prod": 365,
     "unprod": 2,
     "wait": 8,
-    "total": 359
+    "total": 375
    }
   }
  ],
@@ -2669,30 +2664,32 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "Decisión de Oscar",
     "expected": "El agente escribe y valida pantallas como archivos y las envía a Studio en un paso; sin escribir propiedad por propiedad",
-    "evidence": "Criterios 3 de control/specs/T-34.md",
+    "evidence": "Criterios 3 de control/specs/T-34.md; criterio de Codex: su primera corrida de tools/canvas.py sync y push sin errores",
     "limit": 90,
     "limitAlloc": {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 1,
-    "minutes": 6,
+    "status": "Por validar",
+    "attempts": 2,
+    "minutes": 22,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T01:02:00Z",
+    "lastActivity": "2026-10-03T03:18:00Z",
     "byAgent": [
      {
       "agent": "Claude",
-      "attempts": 1,
-      "minutes": 6,
+      "attempts": 2,
+      "minutes": 22,
       "limit": 90,
       "extra": 0,
       "finished": false,
       "tone": "ok"
      }
     ],
-    "lessons": [],
+    "lessons": [
+     "KF-19"
+    ],
     "ready": true
    }
   ]
@@ -3281,7 +3278,21 @@ window.PFA_DATA = {
     "- Contexto (E2-05, Claude): el navegador integrado de Claude no permite que Studio lea el portapapeles (`clipboard-read` = denied). Pegar YAML no funciona con Ctrl+V ni con el menú Paste.",
     "- Desvío: al fijar varias propiedades seguidas, la confirmación de cada una se hacía con un clic en el panel de propiedades. Studio cerró ese panel, el clic cayó en el lienzo y cambió la selección. Las fórmulas terminaron en `ContentLanguage` de 8 contenedores (24 errores). Studio ya había autoguardado (versión 162).",
     "- Recuperación: Details → Versions → seleccionar la última versión buena (la publicada, Live) → Restore. Se crea una versión nueva (163) y se conserva el historial. Para retomar la edición, Override, que solo desaloja la sesión propia anterior.",
-    "- Método seguro: confirmar cada propiedad haciendo clic en el selector de propiedades (arriba a la izquierda), nunca en el lienzo ni en paneles que se mueven. Comprobar en una captura qué control está seleccionado antes de cada serie y revisar el App checker después de cada control."
+    "- Método seguro: confirmar cada propiedad haciendo clic en el selector de propiedades (arriba a la izquierda), nunca en el lienzo ni en paneles que se mueven. Comprobar en una captura qué control está seleccionado antes de cada serie y revisar el App checker después de cada control.",
+    "- Otro desvío: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo. Borrar con Ctrl+End, Ctrl+Shift+Home y Delete. Reemplazado por KF-19 (D-049)."
+   ]
+  },
+  "KF-19": {
+   "title": "YAML_PA · Construir la app como código con el servidor oficial Canvas Authoring MCP (D-049, T-34)",
+   "note": "",
+   "lines": [
+    "- Método: `tools/canvas.py` arranca el servidor de Microsoft (`dnx Microsoft.PowerApps.CanvasAuthoring.McpServer`, .NET 10 SDK en la carpeta del usuario, sin administrador). `sync` baja la app a `.pa.yaml` (7 pantallas en 4 s); `push` aplica la carpeta a la sesión de Studio. Procedimiento completo en la skill `powerapps-yaml`.",
+    "- Requisitos comprobados: Coauthoring activado en la app (Settings > Updates; Studio guarda y recarga), la pestaña de Studio abierta en modo edición y la URL de edición. La primera conexión abre una ventana de Windows para elegir la cuenta (inicio de sesión de Oscar); después es silenciosa. No pidió consentimiento de administrador, licencias ni Premium.",
+    "- Trampa: `compile_canvas` aplica la carpeta a Studio **aunque tenga errores** (una fórmula rota quedó en la app). `push` guarda antes el estado actual en `tmp/canvas-ultimo-bueno` y, si hay errores, lo reaplica y responde `REVERTIDO` con el control y la propiedad del error.",
+    "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
+    "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
+    "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
+    "- Fuentes: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-canvas-external-tools · https://github.com/microsoft/power-platform-skills (references/EditWorkflow.md y ValidationWorkflow.md)."
    ]
   },
   "KF-P03": {
@@ -5024,22 +5035,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 909,
+   "prod": 925,
    "unprod": 100,
    "wait": 66,
-   "total": 1075
+   "total": 1091
   },
   "last24h": {
-   "prod": 304,
+   "prod": 320,
    "unprod": 19,
    "wait": 44,
-   "total": 367
+   "total": 383
   },
   "last7d": {
-   "prod": 909,
+   "prod": 925,
    "unprod": 100,
    "wait": 66,
-   "total": 1075
+   "total": 1091
   },
   "product": {
    "prod": 560,
@@ -5048,10 +5059,10 @@ window.PFA_DATA = {
    "total": 716
   },
   "support": {
-   "prod": 349,
+   "prod": 365,
    "unprod": 2,
    "wait": 8,
-   "total": 359
+   "total": 375
   }
  },
  "days": [
@@ -5135,7 +5146,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 6,
+   "prod": 22,
    "unprod": 0,
    "wait": 0
   }
@@ -5260,7 +5271,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 225
+   "minutes": 241
   },
   {
    "account": "empresa",
@@ -5268,6 +5279,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T03:03:00Z",
+   "minutes": 16,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Canvas Authoring MCP funciona: .NET 10 sin admin, Coauthoring activado, tools/canvas.py (sync/push con reversión automática), app en design/app; AGENTS sec 2, 3, 4.12 y 7, skill powerapps-yaml y KF-19. Incluye la espera del inicio de sesión de Oscar en la ventana de Windows (sin hora medida)",
+   "evidence": "sync 7 pantallas 4 s; cambio de prueba aplicado y revertido (solo formato |+ a |); fórmula rota: REVERTIDO y Studio igual; falta la primera corrida de Codex"
+  },
   {
    "start": "2026-10-03T00:57:00Z",
    "minutes": 6,
@@ -5384,22 +5408,22 @@ window.PFA_DATA = {
    "category": "ESQUEMA_LISTA",
    "summary": "D-041 aplicado; preview escaneo 1: 25 folders found, 25 new; escaneo 2: 25 found, 0 new; app publicada 13:05 UTC",
    "evidence": "REST: 26 filas, 0 duplicados, Decision=Nueva, Id/Modified/Decision/Included/ProjectId idénticos antes y después del escaneo 2"
-  },
-  {
-   "start": "2026-10-02T12:57:00Z",
-   "minutes": 3,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "PERMISOS",
-   "summary": "Espera aprobación de Oscar para quitar Required a 4 columnas de PFA_MailFolders (D-041)",
-   "evidence": "REST: obligatorias reales eran 6 (E2-01 anotó 2)"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T03:03:00Z",
+   "minutes": 16,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Canvas Authoring MCP funciona: .NET 10 sin admin, Coauthoring activado, tools/canvas.py (sync/push con reversión automática), app en design/app; AGENTS sec 2, 3, 4.12 y 7, skill powerapps-yaml y KF-19. Incluye la espera del inicio de sesión de Oscar en la ventana de Windows (sin hora medida)",
+   "evidence": "sync 7 pantallas 4 s; cambio de prueba aplicado y revertido (solo formato |+ a |); fórmula rota: REVERTIDO y Studio igual; falta la primera corrida de Codex"
+  },
   {
    "start": "2026-10-03T00:57:00Z",
    "minutes": 6,
