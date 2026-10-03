@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T04:37:14.965651Z",
+ "generatedUtc": "2026-10-03T04:43:15.762107Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -23,18 +23,24 @@ window.PFA_DATA = {
   "current": [
    "E2-05 (Claude), intento 2, inicio 2026-10-03 03:58 UTC, método nuevo (D-049): reescribir Configuration en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push. Comprobación: evidencia de E2-05 (3 carpetas, una por opción; Change; sin proyectos duplicados; D-042) en vista previa y app publicada a 1366 y 390 px.",
    "Avance 04:19 UTC: hecho: Configuration rehecha por código (push solo de propiedades; los 3 controles nuevos se crearon en Studio porque crear controles por push tumba Studio). Vista previa OK: Project, Part of parent, Not a project, Change (3), sin proyecto duplicado, Scan \"24 found, 0 new, 3 no longer in Outlook\" (filas de prueba 27-29 marcadas, ninguna borrada). Guardado y publicado · falta: prueba en la app publicada a 1366 y 390 px y cierre · herramienta: Studio guardado y publicado · siguiente: abrir la app publicada y repetir las pruebas.",
+   "Espera desde 04:20 UTC: autorización de Oscar para aceptar las conexiones de la app publicada (ESPERA · AUTH).",
    "E2-05 (Claude), relevo 2026-10-03 03:20 UTC: en pausa por decisión de Oscar. hecho: en Studio, galería de carpetas nuevas, etiqueta de ruta y botones Project y Part of parent project (método a mano, D-045, ya reemplazado) · falta: botón Not a project, títulos, estados vacíos, Scan con D-042, sección Reviewed folders, quitar controles viejos, pruebas y publicar · herramienta: Studio guardado; la versión publicada 161 sigue Live; el código actual está en design/app (sync 03:16 UTC) · siguiente: reescribir la pantalla en design/app/Configuration.pa.yaml desde design/yaml/configuracion.pa.yaml y aplicarla con push."
   ],
-  "fileUtc": "2026-10-03T04:20:18.450920Z",
+  "fileUtc": "2026-10-03T04:41:26.295636Z",
   "heartbeat": {
-   "claude": "2026-10-03T04:20:49.464840Z",
+   "claude": "2026-10-03T04:41:38.611706Z",
    "codex": "2026-10-02T12:14:08.849320Z"
   },
   "live": {
    "id": "E2-05",
    "agent": "Claude",
    "startUtc": "2026-10-03T03:58:00Z",
-   "waits": []
+   "waits": [
+    {
+     "from": "2026-10-03T04:20:00Z",
+     "to": ""
+    }
+   ]
   },
   "ruleFootprints": {
    "current": "4314E2C3",
@@ -5075,10 +5081,10 @@ window.PFA_DATA = {
    "total": 1119
   },
   "last24h": {
-   "prod": 312,
+   "prod": 310,
    "unprod": 18,
    "wait": 40,
-   "total": 370
+   "total": 368
   },
   "last7d": {
    "prod": 953,
