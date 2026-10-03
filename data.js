@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:01:15.541928Z",
+ "generatedUtc": "2026-10-03T06:10:14.060776Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -16,7 +16,7 @@ window.PFA_DATA = {
   ],
   "fileUtc": "2026-10-03T05:54:03.923195Z",
   "heartbeat": {
-   "claude": "2026-10-03T05:59:51.436986Z",
+   "claude": "2026-10-03T06:05:18.941541Z",
    "codex": "2026-10-03T05:45:51.240173Z"
   },
   "live": {
@@ -80,9 +80,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 318,
-    "unprod": 103,
+    "unprod": 104,
     "wait": 80,
-    "total": 501
+    "total": 502
    }
   },
   {
@@ -1058,17 +1058,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 4,
-    "minutes": 8,
+    "attempts": 6,
+    "minutes": 9,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
-    "fails": 2,
-    "lastActivity": "2026-10-03T05:50:00Z",
+    "fails": 3,
+    "lastActivity": "2026-10-03T06:02:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 4,
-      "minutes": 8,
+      "attempts": 6,
+      "minutes": 9,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2668,17 +2668,17 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "En curso",
-  "attempts": 4,
-  "minutes": 8,
+  "attempts": 6,
+  "minutes": 9,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
-  "fails": 2,
-  "lastActivity": "2026-10-03T05:50:00Z",
+  "fails": 3,
+  "lastActivity": "2026-10-03T06:02:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 4,
-    "minutes": 8,
+    "attempts": 6,
+    "minutes": 9,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2704,17 +2704,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 4,
-   "minutes": 8,
+   "attempts": 6,
+   "minutes": 9,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
-   "fails": 2,
-   "lastActivity": "2026-10-03T05:50:00Z",
+   "fails": 3,
+   "lastActivity": "2026-10-03T06:02:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 4,
-     "minutes": 8,
+     "attempts": 6,
+     "minutes": 9,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -5215,8 +5215,8 @@ window.PFA_DATA = {
  "alerts": [
   {
    "task": "E2-06",
-   "reason": "2 intentos sin avance: toca revisar documentación",
-   "level": "warning"
+   "reason": "3 intentos sin avance",
+   "level": "serious"
   }
  ],
  "kpi": {
@@ -5226,27 +5226,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 1001,
-   "unprod": 105,
+   "unprod": 106,
    "wait": 92,
-   "total": 1198
+   "total": 1199
   },
   "last24h": {
-   "prod": 353,
-   "unprod": 16,
+   "prod": 343,
+   "unprod": 17,
    "wait": 66,
-   "total": 435
+   "total": 426
   },
   "last7d": {
    "prod": 1001,
-   "unprod": 105,
+   "unprod": 106,
    "wait": 92,
-   "total": 1198
+   "total": 1199
   },
   "product": {
    "prod": 591,
-   "unprod": 103,
+   "unprod": 104,
    "wait": 84,
-   "total": 778
+   "total": 779
   },
   "support": {
    "prod": 410,
@@ -5337,7 +5337,7 @@ window.PFA_DATA = {
   {
    "date": "2026-10-03",
    "prod": 98,
-   "unprod": 5,
+   "unprod": 6,
    "wait": 26
   }
  ],
@@ -5366,6 +5366,11 @@ window.PFA_DATA = {
    "category": "OTRO",
    "minutes": 3,
    "attempts": 3
+  },
+  {
+   "category": "YAML_PA",
+   "minutes": 1,
+   "attempts": 1
   }
  ],
  "waits": [
@@ -5457,7 +5462,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 821
+   "minutes": 822
   },
   {
    "account": "claude",
@@ -5469,6 +5474,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T06:01:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "YAML_PA",
+   "summary": "Tras corregir indentación de BorderColor, push detectó segundo mapeo YAML mal indentado en btnGoTasks.Font",
+   "evidence": "Projects.pa.yaml(153,23): YamlInvalidSyntax invalid mapping; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-yaml"
+  },
+  {
+   "start": "2026-10-03T06:01:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Push revirtió Studio al guardar 1 error PaYaml; línea 14 de Projects mal indentada",
+   "evidence": "Projects.pa.yaml(15,13): YamlInvalidSyntax, se esperaba clave; hipótesis: BorderColor alineado fuera del mapeo Properties; comprobar corrigiendo indentación únicamente"
+  },
   {
    "start": "2026-10-03T05:47:00Z",
    "minutes": 3,
@@ -5572,35 +5603,35 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Eliminé las dos automatizaciones activas del revisor PFA en Codex",
    "evidence": "Ambos IDs ya no aparecen en el registro local; PFA Despertador sigue PAUSED y PFA Tablero intacta"
-  },
-  {
-   "start": "2026-10-03T04:44:00Z",
-   "minutes": 6,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-05",
-   "attempt": 2,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Republicado tras guardar lo que llegó por push (KF-19 trampa 3); pruebas en la app publicada",
-   "evidence": "App publicada 1366: 3 decisiones, Change x3, sin duplicado, Scan 24/0/0; 375 px sin desplazamiento; datos devueltos a Nueva"
-  },
-  {
-   "start": "2026-10-03T04:20:00Z",
-   "minutes": 24,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-05",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Autorización de Oscar para aceptar las conexiones de la app publicada",
-   "evidence": "Oscar respondió Acepta a las 04:44 UTC"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T06:01:00Z",
+   "minutes": 1,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "YAML_PA",
+   "summary": "Tras corregir indentación de BorderColor, push detectó segundo mapeo YAML mal indentado en btnGoTasks.Font",
+   "evidence": "Projects.pa.yaml(153,23): YamlInvalidSyntax invalid mapping; Learn: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-yaml"
+  },
+  {
+   "start": "2026-10-03T06:01:00Z",
+   "minutes": 0,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Push revirtió Studio al guardar 1 error PaYaml; línea 14 de Projects mal indentada",
+   "evidence": "Projects.pa.yaml(15,13): YamlInvalidSyntax, se esperaba clave; hipótesis: BorderColor alineado fuera del mapeo Properties; comprobar corrigiendo indentación únicamente"
+  },
   {
    "start": "2026-10-03T05:47:00Z",
    "minutes": 3,
