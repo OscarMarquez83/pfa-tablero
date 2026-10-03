@@ -1,30 +1,33 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:22:14.836369Z",
+ "generatedUtc": "2026-10-03T06:28:15.019623Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 06:19 UTC",
+  "updated": "2026-10-03 06:26 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06: corregir el solapamiento medido en Projects; después repetir prueba visual y sync.",
-  "needsOscar": [],
+  "nextAction": "E2-07: aviso de nuevas carpetas en My Day; después E2-08 y E2-09 para publicar y hacer la validación pendiente de E2-06.",
+  "needsOscar": [
+   {
+    "ref": "E2-06",
+    "text": "después de publicar E2-09, revisa Projects en escritorio y teléfono vertical: confirma que nombre, conteo y botón Deactivate se leen completos y sin superposición. Responde E2-06 OK o describe el defecto. Al responder: registro tu validación o corrijo el defecto."
+   }
+  ],
   "blockers": [],
   "current": [
-   "E2-06 (Codex), intento 4, inicio 2026-10-03 05:54 UTC: implementar Projects sobre 9 YAML sincronizados; comprobar controles, expresiones y efecto sobre SharePoint en preview/publicada.",
-   "Avance 06:11 UTC: push con 0 errores; Studio muestra 4 proyectos activos con nombre y conteo de carpetas; sync a tmp/canvas-verify confirma el YAML aplicado; herramienta guardada (Saved, Unpublished). Siguiente: localizar proyecto de prueba existente y validar sin tocar proyectos reales.",
-   "Avance 06:19 UTC: proyecto de prueba renombrado, desactivado y restaurado; activo volvió de 5 a 4; Configuration volvió a 20 nuevas y 5 revisadas. Screenshot mide solapamiento: galProjects Y=152 / altura 592 y lblProjectsCount Y=160. Hecho en preview, herramienta Saved Unpublished. Siguiente: corregir solo el solapamiento tras revisión completa y validar con push."
+   "E2-07 (Codex), intento 1, inicio 2026-10-03 06:26 UTC: añadir el aviso de carpetas pendientes en My Day; comprobarlo visible con una fila nueva y oculto cuando el conteo sea 0, y probar el botón Review folders."
   ],
-  "fileUtc": "2026-10-03T06:19:34.243958Z",
+  "fileUtc": "2026-10-03T06:26:22.432234Z",
   "heartbeat": {
-   "claude": "2026-10-03T06:17:46.737686Z",
-   "codex": "2026-10-03T05:45:51.240173Z"
+   "claude": "2026-10-03T06:28:14.665209Z",
+   "codex": "2026-10-03T06:23:00.895757Z"
   },
   "live": {
-   "id": "E2-06",
+   "id": "E2-07",
    "agent": "Codex",
-   "startUtc": "2026-10-03T05:54:00Z",
+   "startUtc": "2026-10-03T06:26:00Z",
    "waits": []
   },
   "ruleFootprints": {
@@ -32,7 +35,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T05:54:00Z"
+    "utc": "2026-10-03T06:26:00Z"
    }
   }
  },
@@ -81,10 +84,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 335,
+    "prod": 345,
     "unprod": 104,
     "wait": 80,
-    "total": 519
+    "total": 529
    }
   },
   {
@@ -1059,18 +1062,18 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "En curso",
-    "attempts": 10,
-    "minutes": 26,
+    "status": "Por validar",
+    "attempts": 12,
+    "minutes": 36,
     "entrega": "E2",
     "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 3,
-    "lastActivity": "2026-10-03T06:19:00Z",
+    "lastActivity": "2026-10-03T06:22:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 10,
-      "minutes": 26,
+      "attempts": 12,
+      "minutes": 36,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -1094,8 +1097,8 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "En curso",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
@@ -1104,7 +1107,7 @@ window.PFA_DATA = {
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 0,
+      "attempts": 1,
       "minutes": 0,
       "limit": 30,
       "extra": 0,
@@ -2669,18 +2672,18 @@ window.PFA_DATA = {
    "ext": {},
    "own": {}
   },
-  "status": "En curso",
-  "attempts": 10,
-  "minutes": 26,
+  "status": "Por validar",
+  "attempts": 12,
+  "minutes": 36,
   "entrega": "E2",
   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 3,
-  "lastActivity": "2026-10-03T06:19:00Z",
+  "lastActivity": "2026-10-03T06:22:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 10,
-    "minutes": 26,
+    "attempts": 12,
+    "minutes": 36,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2705,18 +2708,18 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "En curso",
-   "attempts": 10,
-   "minutes": 26,
+   "status": "Por validar",
+   "attempts": 12,
+   "minutes": 36,
    "entrega": "E2",
    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 3,
-   "lastActivity": "2026-10-03T06:19:00Z",
+   "lastActivity": "2026-10-03T06:22:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 10,
-     "minutes": 26,
+     "attempts": 12,
+     "minutes": 36,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -2740,8 +2743,8 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Pendiente",
-   "attempts": 0,
+   "status": "En curso",
+   "attempts": 1,
    "minutes": 0,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
@@ -2750,7 +2753,7 @@ window.PFA_DATA = {
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 0,
+     "attempts": 1,
      "minutes": 0,
      "limit": 30,
      "extra": 0,
@@ -5227,28 +5230,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1018,
+   "prod": 1028,
    "unprod": 106,
    "wait": 92,
-   "total": 1216
+   "total": 1226
   },
   "last24h": {
-   "prod": 360,
+   "prod": 365,
    "unprod": 17,
    "wait": 66,
-   "total": 443
+   "total": 448
   },
   "last7d": {
-   "prod": 1018,
+   "prod": 1028,
    "unprod": 106,
    "wait": 92,
-   "total": 1216
+   "total": 1226
   },
   "product": {
-   "prod": 608,
+   "prod": 618,
    "unprod": 104,
    "wait": 84,
-   "total": 796
+   "total": 806
   },
   "support": {
    "prod": 410,
@@ -5338,7 +5341,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 115,
+   "prod": 125,
    "unprod": 6,
    "wait": 26
   }
@@ -5440,6 +5443,13 @@ window.PFA_DATA = {
    "total": 41
   },
   {
+   "task": "E2-06",
+   "prod": 30,
+   "unprod": 6,
+   "wait": 2,
+   "total": 38
+  },
+  {
    "task": "E1-08",
    "prod": 29,
    "unprod": 0,
@@ -5452,19 +5462,12 @@ window.PFA_DATA = {
    "unprod": 0,
    "wait": 0,
    "total": 31
-  },
-  {
-   "task": "E1-07",
-   "prod": 29,
-   "unprod": 0,
-   "wait": 0,
-   "total": 29
   }
  ],
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 839
+   "minutes": 849
   },
   {
    "account": "claude",
@@ -5476,6 +5479,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T06:19:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Proyección ajustada para separar contador y galería; cambio guardado",
+   "evidence": "push 0 errores; preview: no hay solapamiento; sync 9 archivos con Y=200"
+  },
   {
    "start": "2026-10-03T06:19:00Z",
    "minutes": 0,
@@ -5553,6 +5569,19 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Push revirtió Studio al guardar 1 error PaYaml; línea 14 de Projects mal indentada",
    "evidence": "Projects.pa.yaml(15,13): YamlInvalidSyntax, se esperaba clave; hipótesis: BorderColor alineado fuera del mapeo Properties; comprobar corrigiendo indentación únicamente"
+  },
+  {
+   "start": "2026-10-03T05:54:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Construcción inicial de la pantalla Projects como YAML",
+   "evidence": "design/app/Projects.pa.yaml; primer push revertido en la fila siguiente"
   },
   {
    "start": "2026-10-03T05:47:00Z",
@@ -5579,35 +5608,22 @@ window.PFA_DATA = {
    "category": "OTRO",
    "summary": "Hipótesis: sesión de edición anterior a la autenticación o sesión coauthoring no detectada; prueba: guardar y recargar Studio, revisar Coauthoring y medir sync",
    "evidence": "KF-19; Microsoft Learn: https://learn.microsoft.com/power-apps/maker/canvas-apps/create-canvas-external-tools; incidencia similar https://github.com/microsoft/power-platform-skills/issues/219"
-  },
-  {
-   "start": "2026-10-03T05:45:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "AUTH",
-   "summary": "Oscar completó autenticación",
-   "evidence": "Fin de espera comunicado por Oscar"
-  },
-  {
-   "start": "2026-10-03T05:43:00Z",
-   "minutes": 2,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 2,
-   "result": "SIN_AVANCE",
-   "kind": "unprod",
-   "category": "AUTH",
-   "summary": "sync por puente responde sin archivos; sesión expirada confirmada en Microsoft; app sin cambios",
-   "evidence": "sync código 0: No files returned from server. Nothing written.; 9 YAML intactos; git diff design/app vacío; Projects sin probar"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T06:19:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Proyección ajustada para separar contador y galería; cambio guardado",
+   "evidence": "push 0 errores; preview: no hay solapamiento; sync 9 archivos con Y=200"
+  },
   {
    "start": "2026-10-03T06:19:00Z",
    "minutes": 0,
@@ -5685,6 +5701,19 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Push revirtió Studio al guardar 1 error PaYaml; línea 14 de Projects mal indentada",
    "evidence": "Projects.pa.yaml(15,13): YamlInvalidSyntax, se esperaba clave; hipótesis: BorderColor alineado fuera del mapeo Properties; comprobar corrigiendo indentación únicamente"
+  },
+  {
+   "start": "2026-10-03T05:54:00Z",
+   "minutes": 7,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Construcción inicial de la pantalla Projects como YAML",
+   "evidence": "design/app/Projects.pa.yaml; primer push revertido en la fila siguiente"
   },
   {
    "start": "2026-10-03T05:47:00Z",
