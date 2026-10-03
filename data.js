@@ -1,34 +1,31 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T05:04:13.733990Z",
+ "generatedUtc": "2026-10-03T05:10:17.628032Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 04:52 UTC",
+  "updated": "2026-10-03 05:07 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06 (pantalla Projects) con el método de la skill powerapps-yaml. La primera retoma de Codex valida T-33 y T-34.",
-  "needsOscar": [
-   {
-    "ref": "T-35",
-    "text": "en la app de Codex, borrar (o pausar) la automatización del revisor que corre cada 4 horas (\"Actúa como revisor de avance…\"). Yo no tengo acceso a las automatizaciones de Codex; mientras exista, solo responde \"desactivado\" y gasta pocos tokens. Al responder: marco T-35 como Hecha."
-   }
-  ],
+  "nextAction": "E2-06 (pantalla Projects), siguiendo la skill powerapps-yaml; T-33 y T-34 siguen Por validar.",
+  "needsOscar": [],
   "blockers": [],
-  "current": [],
-  "fileUtc": "2026-10-03T04:50:45.895860Z",
+  "current": [
+   "T-35, intento 2 iniciado 2026-10-03 05:05 y cerrado 2026-10-03 05:08 UTC como HECHA (3 min): eliminé las automatizaciones del revisor"
+  ],
+  "fileUtc": "2026-10-03T05:08:33.755966Z",
   "heartbeat": {
    "claude": "2026-10-03T04:51:00.964237Z",
-   "codex": "2026-10-03T05:04:04.747842Z"
+   "codex": "2026-10-03T05:08:52.465892Z"
   },
   "live": null,
   "ruleFootprints": {
    "current": "4314E2C3",
    "read": {
     "hash": "4314E2C3",
-    "agent": "Claude",
-    "utc": "2026-10-03T03:44:00Z"
+    "agent": "Codex",
+    "utc": "2026-10-03T05:05:00Z"
    }
   }
  },
@@ -216,15 +213,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 31,
+   "done": 32,
    "total": 36,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 393,
+    "prod": 396,
     "unprod": 2,
     "wait": 8,
-    "total": 403
+    "total": 406
    }
   }
  ],
@@ -2480,18 +2477,18 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "—",
     "expected": "Oscar ve siempre datos al día sin gastar tokens",
-    "evidence": "Tablero en Pages a 1366 y 390 px sin semáforo ni revisión vieja; diálogo de estadísticas con datos; AGENTS.md sin el revisor; la automatización de Codex desactivada",
+    "evidence": "Tablero en Pages a 1366 y 390 px sin semáforo ni revisión vieja; diálogo de estadísticas con datos; AGENTS.md sin el revisor; todas las automatizaciones activas del revisor PFA eliminadas del registro de automatizaciones de Codex",
     "limit": 45,
     "limitAlloc": {
      "ext": {},
      "own": {}
     },
-    "status": "Por validar",
-    "attempts": 1,
-    "minutes": 6,
+    "status": "Hecha",
+    "attempts": 2,
+    "minutes": 9,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T03:48:00Z",
+    "lastActivity": "2026-10-03T05:08:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2501,10 +2498,18 @@ window.PFA_DATA = {
       "extra": 0,
       "finished": false,
       "tone": "ok"
+     },
+     {
+      "agent": "Codex",
+      "attempts": 1,
+      "minutes": 3,
+      "limit": 0,
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    },
    {
     "id": "T-36",
@@ -5046,6 +5051,46 @@ window.PFA_DATA = {
    "lessons": []
   },
   {
+   "id": "T-35",
+   "action": "Quitar el revisor de Codex (cada 4 h, con tokens) y reemplazarlo por lo que ya calcula Windows: tarjeta \"Ahora mismo\" en lugar de la revisión, botón \"Estadísticas\" (tiempos por entrega, agente, tipo de problema y tareas sobre el límite) en lugar del semáforo; REVISOR.md queda como aviso de desactivado",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar ve siempre datos al día sin gastar tokens",
+   "evidence": "Tablero en Pages a 1366 y 390 px sin semáforo ni revisión vieja; diálogo de estadísticas con datos; AGENTS.md sin el revisor; todas las automatizaciones activas del revisor PFA eliminadas del registro de automatizaciones de Codex",
+   "limit": 45,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 2,
+   "minutes": 9,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-03T05:08:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 6,
+     "limit": 45,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    },
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 3,
+     "limit": 0,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
+  },
+  {
    "id": "T-36",
    "action": "La tarea de Windows \"PFA Tablero\" corre sin abrir ventana",
    "owner": "Agente",
@@ -5079,27 +5124,27 @@ window.PFA_DATA = {
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 55,
+  "tasksDone": 56,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 981,
+   "prod": 984,
    "unprod": 100,
    "wait": 90,
-   "total": 1171
+   "total": 1174
   },
   "last24h": {
-   "prod": 335,
-   "unprod": 14,
+   "prod": 338,
+   "unprod": 11,
    "wait": 64,
    "total": 413
   },
   "last7d": {
-   "prod": 981,
+   "prod": 984,
    "unprod": 100,
    "wait": 90,
-   "total": 1171
+   "total": 1174
   },
   "product": {
    "prod": 588,
@@ -5108,10 +5153,10 @@ window.PFA_DATA = {
    "total": 768
   },
   "support": {
-   "prod": 393,
+   "prod": 396,
    "unprod": 2,
    "wait": 8,
-   "total": 403
+   "total": 406
   }
  },
  "days": [
@@ -5195,7 +5240,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 78,
+   "prod": 81,
    "unprod": 0,
    "wait": 24
   }
@@ -5316,7 +5361,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 808
+   "minutes": 811
   },
   {
    "account": "claude",
@@ -5328,6 +5373,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T05:05:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-35",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Eliminé las dos automatizaciones activas del revisor PFA en Codex",
+   "evidence": "Ambos IDs ya no aparecen en el registro local; PFA Despertador sigue PAUSED y PFA Tablero intacta"
+  },
   {
    "start": "2026-10-03T04:44:00Z",
    "minutes": 6,
@@ -5444,22 +5502,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Canvas Authoring MCP funciona: .NET 10 sin admin, Coauthoring activado, tools/canvas.py (sync/push con reversión automática), app en design/app; AGENTS sec 2, 3, 4.12 y 7, skill powerapps-yaml y KF-19. Incluye la espera del inicio de sesión de Oscar en la ventana de Windows (sin hora medida)",
    "evidence": "sync 7 pantallas 4 s; cambio de prueba aplicado y revertido (solo formato |+ a |); fórmula rota: REVERTIDO y Studio igual; falta la primera corrida de Codex"
-  },
-  {
-   "start": "2026-10-03T00:57:00Z",
-   "minutes": 6,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Análisis con skill idea: método para construir Power Apps como código (Canvas Authoring MCP de Microsoft) y propuestas T-31 a T-33; git verificado (fsck sin errores, gc) y commit pendiente hecho",
-   "evidence": "control/specs/T-34.md; T-31 a T-34 en PLAN; INC-14; decisiones pedidas en STATUS"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T05:05:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-35",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "OTRO",
+   "summary": "Eliminé las dos automatizaciones activas del revisor PFA en Codex",
+   "evidence": "Ambos IDs ya no aparecen en el registro local; PFA Despertador sigue PAUSED y PFA Tablero intacta"
+  },
   {
    "start": "2026-10-03T04:44:00Z",
    "minutes": 6,
