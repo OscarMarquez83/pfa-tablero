@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T05:55:16.308987Z",
+ "generatedUtc": "2026-10-03T06:01:15.541928Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -16,7 +16,7 @@ window.PFA_DATA = {
   ],
   "fileUtc": "2026-10-03T05:54:03.923195Z",
   "heartbeat": {
-   "claude": "2026-10-03T05:41:14.190728Z",
+   "claude": "2026-10-03T05:59:51.436986Z",
    "codex": "2026-10-03T05:45:51.240173Z"
   },
   "live": {
@@ -248,6 +248,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Guardar una copia de seguridad del proyecto antes de empezar.",
     "fails": 0,
     "lastActivity": "2026-09-30T06:21:00Z",
     "byAgent": [
@@ -279,6 +280,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Comprobar que están todos los archivos del proyecto.",
     "fails": 0,
     "lastActivity": "2026-09-30T06:22:00Z",
     "byAgent": [
@@ -310,6 +312,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
+    "user": "Marcar los documentos viejos para que nadie los use por error.",
     "fails": 0,
     "lastActivity": "2026-09-30T06:23:00Z",
     "byAgent": [
@@ -341,6 +344,7 @@ window.PFA_DATA = {
     "attempts": 2,
     "minutes": 1,
     "entrega": "E0",
+    "user": "Preparar el registro de tiempos que alimenta el tablero.",
     "fails": 0,
     "lastActivity": "2026-09-30T06:40:00Z",
     "byAgent": [
@@ -374,6 +378,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Programar un revisor automático del avance (ya eliminado, D-050).",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -405,6 +410,7 @@ window.PFA_DATA = {
     "attempts": 4,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Instalar la herramienta de GitHub que publica el tablero.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -436,6 +442,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Crear la página web pública donde vive el tablero.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -467,6 +474,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E0",
+    "user": "Hacer que el tablero se actualice solo cada pocos minutos.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -498,6 +506,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 1,
     "entrega": "E0",
+    "user": "Abrir el tablero en el celular y en el computador y responder un pendiente desde ahí.",
     "fails": 0,
     "lastActivity": "2026-09-30T10:57:00Z",
     "byAgent": [
@@ -531,6 +540,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 10,
     "entrega": "E1",
+    "user": "Copiar el diseño de la app de referencia para usarlo como modelo.",
     "fails": 0,
     "lastActivity": "2026-09-30T11:28:00Z",
     "byAgent": [
@@ -562,6 +572,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 6,
     "entrega": "E1",
+    "user": "Fijar los colores, letras y tamaños oficiales de la app.",
     "fails": 0,
     "lastActivity": "2026-09-30T11:34:00Z",
     "byAgent": [
@@ -593,6 +604,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 2,
     "entrega": "E1",
+    "user": "Cargar ese diseño en la app para que todas las pantallas lo usen.",
     "fails": 0,
     "lastActivity": "2026-09-30T11:42:00Z",
     "byAgent": [
@@ -624,6 +636,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 13,
     "entrega": "E1",
+    "user": "Diseñar el encabezado azul con el menú y el título de cada pantalla.",
     "fails": 0,
     "lastActivity": "2026-09-30T11:55:00Z",
     "byAgent": [
@@ -655,6 +668,7 @@ window.PFA_DATA = {
     "attempts": 7,
     "minutes": 143,
     "entrega": "E1",
+    "user": "My Day y Diagnostics con el encabezado y el título nuevos, sin duplicados.",
     "fails": 0,
     "lastActivity": "2026-10-01T06:29:00Z",
     "byAgent": [
@@ -690,6 +704,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 24,
     "entrega": "E1",
+    "user": "Projects, Tasks y Review con el encabezado y el título nuevos.",
     "fails": 0,
     "lastActivity": "2026-09-30T12:52:00Z",
     "byAgent": [
@@ -723,6 +738,7 @@ window.PFA_DATA = {
     "attempts": 2,
     "minutes": 29,
     "entrega": "E1",
+    "user": "Historical Search y Configuration con el encabezado y el título nuevos.",
     "fails": 0,
     "lastActivity": "2026-09-30T13:21:00Z",
     "byAgent": [
@@ -757,6 +773,7 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 29,
     "entrega": "E1",
+    "user": "Revisar las 7 pantallas en computador, teléfono y tableta, y publicar.",
     "fails": 0,
     "lastActivity": "2026-10-01T01:24:00Z",
     "byAgent": [
@@ -788,6 +805,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 0,
     "entrega": "E1",
+    "user": "Recorrer las 7 pantallas en la app publicada.",
     "fails": 0,
     "lastActivity": "2026-10-01T11:07:00Z",
     "byAgent": [
@@ -819,6 +837,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 14,
     "entrega": "E1",
+    "user": "Menú adaptado al tamaño: botones en computador; lista desplegable en teléfono.",
     "fails": 0,
     "lastActivity": "2026-10-01T01:39:00Z",
     "byAgent": [
@@ -852,6 +871,7 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 2,
     "entrega": "E2",
+    "user": "Preparar las listas donde se guardan las carpetas y los proyectos.",
     "fails": 0,
     "lastActivity": "2026-10-01T11:25:00Z",
     "byAgent": [
@@ -887,6 +907,7 @@ window.PFA_DATA = {
     "attempts": 12,
     "minutes": 97,
     "entrega": "E2",
+    "user": "Crear el flujo que lee tus carpetas de Outlook (sin tocarlas).",
     "fails": 5,
     "lastActivity": "2026-10-02T00:44:00Z",
     "byAgent": [
@@ -920,6 +941,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 2,
     "entrega": "E2",
+    "user": "Probar ese flujo una vez y ver qué carpetas encuentra.",
     "fails": 0,
     "lastActivity": "2026-10-02T00:46:00Z",
     "byAgent": [
@@ -955,6 +977,7 @@ window.PFA_DATA = {
     "attempts": 19,
     "minutes": 202,
     "entrega": "E2",
+    "user": "Botón \"Scan folders\" en Configuration: busca las carpetas nuevas dentro de Projects (hasta 3 niveles) y te dice cuántas encontró.",
     "fails": 7,
     "lastActivity": "2026-10-02T18:25:00Z",
     "byAgent": [
@@ -1003,6 +1026,7 @@ window.PFA_DATA = {
     "attempts": 3,
     "minutes": 108,
     "entrega": "E2",
+    "user": "Pantalla Configuration: cada carpeta nueva con \"Project\", \"Part of parent project\" o \"Not a project\"; abajo, las ya revisadas con \"Change\". Las carpetas borradas de Outlook se ocultan, no se borran.",
     "fails": 0,
     "lastActivity": "2026-10-03T04:50:00Z",
     "byAgent": [
@@ -1037,6 +1061,7 @@ window.PFA_DATA = {
     "attempts": 4,
     "minutes": 8,
     "entrega": "E2",
+    "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
     "fails": 2,
     "lastActivity": "2026-10-03T05:50:00Z",
     "byAgent": [
@@ -1071,6 +1096,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
+    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1103,6 +1129,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
+    "user": "Dejar el flujo de carpetas listo para que solo corra cuando tocas \"Scan folders\".",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1135,6 +1162,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
+    "user": "Prueba completa en la app publicada con la carpeta de prueba: decidir, cambiar y volver a decidir.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1167,6 +1195,7 @@ window.PFA_DATA = {
     "attempts": 1,
     "minutes": 2,
     "entrega": "E2",
+    "user": "Revisar si el menú se usa bien en teléfono o tableta acostados; solo se cambia si tú lo decides.",
     "fails": 0,
     "lastActivity": "2026-10-02T00:26:00Z",
     "byAgent": [
@@ -1199,6 +1228,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E2",
+    "user": "Tú: decidir en la app todas tus carpetas (proyecto, parte de otro o no proyecto) y revisar la lista de proyectos. Cierra con \"E2 aceptada\".",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1233,6 +1263,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Tú: confirmar que la carpeta de prueba tiene 5 correos tuyos a ti mismo y está marcada como proyecto.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1265,6 +1296,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Preparar la lista donde se guardan los correos.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1297,6 +1329,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Crear el flujo que copia a la app los correos de las carpetas de tus proyectos (sin tocar tu buzón).",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1329,6 +1362,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Probar ese flujo dos veces con la carpeta de prueba: deben quedar 5 correos, sin repetidos.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1361,6 +1395,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "En Projects, al tocar un proyecto: lista de sus correos (asunto, remitente y fecha, el más nuevo arriba); al tocar uno se abre en Outlook.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1393,6 +1428,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Cargar los correos de todos tus proyectos.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1425,6 +1461,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Publicar la app y probar: abrir la carpeta de prueba, ver sus 5 correos y abrir uno en Outlook.",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -1457,6 +1494,7 @@ window.PFA_DATA = {
     "attempts": 0,
     "minutes": 0,
     "entrega": "E3",
+    "user": "Tú: abrir 2 proyectos, revisar sus correos y abrir uno en Outlook. Cierra con \"E3 aceptada\".",
     "fails": 0,
     "lastActivity": "",
     "byAgent": [
@@ -2633,6 +2671,7 @@ window.PFA_DATA = {
   "attempts": 4,
   "minutes": 8,
   "entrega": "E2",
+  "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
   "fails": 2,
   "lastActivity": "2026-10-03T05:50:00Z",
   "byAgent": [
@@ -2668,6 +2707,7 @@ window.PFA_DATA = {
    "attempts": 4,
    "minutes": 8,
    "entrega": "E2",
+   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
    "fails": 2,
    "lastActivity": "2026-10-03T05:50:00Z",
    "byAgent": [
@@ -2702,6 +2742,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
+   "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2734,6 +2775,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
+   "user": "Dejar el flujo de carpetas listo para que solo corra cuando tocas \"Scan folders\".",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2766,6 +2808,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
+   "user": "Prueba completa en la app publicada con la carpeta de prueba: decidir, cambiar y volver a decidir.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2798,6 +2841,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 2,
    "entrega": "E2",
+   "user": "Revisar si el menú se usa bien en teléfono o tableta acostados; solo se cambia si tú lo decides.",
    "fails": 0,
    "lastActivity": "2026-10-02T00:26:00Z",
    "byAgent": [
@@ -2830,6 +2874,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E2",
+   "user": "Tú: decidir en la app todas tus carpetas (proyecto, parte de otro o no proyecto) y revisar la lista de proyectos. Cierra con \"E2 aceptada\".",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2862,6 +2907,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Tú: confirmar que la carpeta de prueba tiene 5 correos tuyos a ti mismo y está marcada como proyecto.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2894,6 +2940,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Preparar la lista donde se guardan los correos.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2926,6 +2973,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Crear el flujo que copia a la app los correos de las carpetas de tus proyectos (sin tocar tu buzón).",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2958,6 +3006,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Probar ese flujo dos veces con la carpeta de prueba: deben quedar 5 correos, sin repetidos.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -2990,6 +3039,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "En Projects, al tocar un proyecto: lista de sus correos (asunto, remitente y fecha, el más nuevo arriba); al tocar uno se abre en Outlook.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3022,6 +3072,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Cargar los correos de todos tus proyectos.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3054,6 +3105,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Publicar la app y probar: abrir la carpeta de prueba, ver sus 5 correos y abrir uno en Outlook.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3086,6 +3138,7 @@ window.PFA_DATA = {
    "attempts": 0,
    "minutes": 0,
    "entrega": "E3",
+   "user": "Tú: abrir 2 proyectos, revisar sus correos y abrir uno en Outlook. Cierra con \"E3 aceptada\".",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3354,6 +3407,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Guardar una copia de seguridad del proyecto antes de empezar.",
    "fails": 0,
    "lastActivity": "2026-09-30T06:21:00Z",
    "byAgent": [
@@ -3385,6 +3439,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Comprobar que están todos los archivos del proyecto.",
    "fails": 0,
    "lastActivity": "2026-09-30T06:22:00Z",
    "byAgent": [
@@ -3416,6 +3471,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
+   "user": "Marcar los documentos viejos para que nadie los use por error.",
    "fails": 0,
    "lastActivity": "2026-09-30T06:23:00Z",
    "byAgent": [
@@ -3447,6 +3503,7 @@ window.PFA_DATA = {
    "attempts": 2,
    "minutes": 1,
    "entrega": "E0",
+   "user": "Preparar el registro de tiempos que alimenta el tablero.",
    "fails": 0,
    "lastActivity": "2026-09-30T06:40:00Z",
    "byAgent": [
@@ -3480,6 +3537,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Programar un revisor automático del avance (ya eliminado, D-050).",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3511,6 +3569,7 @@ window.PFA_DATA = {
    "attempts": 4,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Instalar la herramienta de GitHub que publica el tablero.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3542,6 +3601,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Crear la página web pública donde vive el tablero.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3573,6 +3633,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E0",
+   "user": "Hacer que el tablero se actualice solo cada pocos minutos.",
    "fails": 0,
    "lastActivity": "",
    "byAgent": [
@@ -3604,6 +3665,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 1,
    "entrega": "E0",
+   "user": "Abrir el tablero en el celular y en el computador y responder un pendiente desde ahí.",
    "fails": 0,
    "lastActivity": "2026-09-30T10:57:00Z",
    "byAgent": [
@@ -3635,6 +3697,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 10,
    "entrega": "E1",
+   "user": "Copiar el diseño de la app de referencia para usarlo como modelo.",
    "fails": 0,
    "lastActivity": "2026-09-30T11:28:00Z",
    "byAgent": [
@@ -3666,6 +3729,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 6,
    "entrega": "E1",
+   "user": "Fijar los colores, letras y tamaños oficiales de la app.",
    "fails": 0,
    "lastActivity": "2026-09-30T11:34:00Z",
    "byAgent": [
@@ -3697,6 +3761,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 2,
    "entrega": "E1",
+   "user": "Cargar ese diseño en la app para que todas las pantallas lo usen.",
    "fails": 0,
    "lastActivity": "2026-09-30T11:42:00Z",
    "byAgent": [
@@ -3728,6 +3793,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 13,
    "entrega": "E1",
+   "user": "Diseñar el encabezado azul con el menú y el título de cada pantalla.",
    "fails": 0,
    "lastActivity": "2026-09-30T11:55:00Z",
    "byAgent": [
@@ -3759,6 +3825,7 @@ window.PFA_DATA = {
    "attempts": 7,
    "minutes": 143,
    "entrega": "E1",
+   "user": "My Day y Diagnostics con el encabezado y el título nuevos, sin duplicados.",
    "fails": 0,
    "lastActivity": "2026-10-01T06:29:00Z",
    "byAgent": [
@@ -3794,6 +3861,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 24,
    "entrega": "E1",
+   "user": "Projects, Tasks y Review con el encabezado y el título nuevos.",
    "fails": 0,
    "lastActivity": "2026-09-30T12:52:00Z",
    "byAgent": [
@@ -3827,6 +3895,7 @@ window.PFA_DATA = {
    "attempts": 2,
    "minutes": 29,
    "entrega": "E1",
+   "user": "Historical Search y Configuration con el encabezado y el título nuevos.",
    "fails": 0,
    "lastActivity": "2026-09-30T13:21:00Z",
    "byAgent": [
@@ -3861,6 +3930,7 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 29,
    "entrega": "E1",
+   "user": "Revisar las 7 pantallas en computador, teléfono y tableta, y publicar.",
    "fails": 0,
    "lastActivity": "2026-10-01T01:24:00Z",
    "byAgent": [
@@ -3892,6 +3962,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 0,
    "entrega": "E1",
+   "user": "Recorrer las 7 pantallas en la app publicada.",
    "fails": 0,
    "lastActivity": "2026-10-01T11:07:00Z",
    "byAgent": [
@@ -3923,6 +3994,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 14,
    "entrega": "E1",
+   "user": "Menú adaptado al tamaño: botones en computador; lista desplegable en teléfono.",
    "fails": 0,
    "lastActivity": "2026-10-01T01:39:00Z",
    "byAgent": [
@@ -3954,6 +4026,7 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 2,
    "entrega": "E2",
+   "user": "Preparar las listas donde se guardan las carpetas y los proyectos.",
    "fails": 0,
    "lastActivity": "2026-10-01T11:25:00Z",
    "byAgent": [
@@ -3989,6 +4062,7 @@ window.PFA_DATA = {
    "attempts": 12,
    "minutes": 97,
    "entrega": "E2",
+   "user": "Crear el flujo que lee tus carpetas de Outlook (sin tocarlas).",
    "fails": 5,
    "lastActivity": "2026-10-02T00:44:00Z",
    "byAgent": [
@@ -4022,6 +4096,7 @@ window.PFA_DATA = {
    "attempts": 1,
    "minutes": 2,
    "entrega": "E2",
+   "user": "Probar ese flujo una vez y ver qué carpetas encuentra.",
    "fails": 0,
    "lastActivity": "2026-10-02T00:46:00Z",
    "byAgent": [
@@ -4057,6 +4132,7 @@ window.PFA_DATA = {
    "attempts": 19,
    "minutes": 202,
    "entrega": "E2",
+   "user": "Botón \"Scan folders\" en Configuration: busca las carpetas nuevas dentro de Projects (hasta 3 niveles) y te dice cuántas encontró.",
    "fails": 7,
    "lastActivity": "2026-10-02T18:25:00Z",
    "byAgent": [
@@ -4105,6 +4181,7 @@ window.PFA_DATA = {
    "attempts": 3,
    "minutes": 108,
    "entrega": "E2",
+   "user": "Pantalla Configuration: cada carpeta nueva con \"Project\", \"Part of parent project\" o \"Not a project\"; abajo, las ya revisadas con \"Change\". Las carpetas borradas de Outlook se ocultan, no se borran.",
    "fails": 0,
    "lastActivity": "2026-10-03T04:50:00Z",
    "byAgent": [

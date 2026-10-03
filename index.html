@@ -475,7 +475,8 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       (t.unprod ? '<i style="width:' + pct(t.unprod, tot) + '%;background:var(--s2)"></i>' : "") +
       (t.wait ? '<i style="width:' + pct(t.wait, tot) + '%;background:var(--s3)"></i>' : "") + "</div>";
   }
-  function taskRow(t, extra) { return "<tr><td>" + chip(t.status) + '</td><td><b>' + esc(t.id) + "</b></td><td>" + esc(firstSentence(t.action)) + "</td>" + (extra || "") + "</tr>"; }
+  function userText(t) { if (!t) return ""; if (t.user) return t.user; var u = null; Object.keys(D.tasksByEntrega || {}).forEach(function (k) { (D.tasksByEntrega[k] || []).forEach(function (x) { if (x.id === t.id && x.user) u = x.user; }); }); return u || firstSentence(t.action); }
+  function taskRow(t, extra) { return "<tr><td>" + chip(t.status) + '</td><td><b>' + esc(t.id) + '</b></td><td title="' + esc(t.action) + '">' + esc(userText(t)) + "</td>" + (extra || "") + "</tr>"; }
   var ENT = {}; D.entregas.forEach(function (e) { ENT[e.id] = e; });
 
   var DETAIL = {
@@ -489,7 +490,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
     },
     tasks: function () {
       var nx = D.nextTask;
-      var html = nx ? '<div class="nextbox"><b>Sigue:</b> ' + esc(nx.id) + " · " + esc(firstSentence(nx.action)) + "</div>" : "";
+      var html = nx ? '<div class="nextbox"><b>Sigue:</b> ' + esc(nx.id) + " · " + esc(userText(nx)) + "</div>" : "";
       html += "<h4>Pendientes, en orden (" + D.upcoming.length + (D.upcoming.length >= 15 ? "+" : "") + ")</h4><table class='mini'>" +
         D.upcoming.map(function (t) { return taskRow(t, '<td class="n">' + (t.owner === "Oscar" ? '<span class="who Oscar">Oscar</span>' : (t.ready ? "Lista" : "Espera dependencia")) + "</td>"); }).join("") + "</table>";
       html += "<h4>Hechas (" + D.doneTasks.length + ")</h4>" + (D.doneTasks.length ? "<table class='mini'>" + D.doneTasks.map(function (t) { return taskRow(t, '<td class="n">' + t.minutes + " min</td>"); }).join("") + "</table>" : '<div class="empty">Todavía ninguna.</div>');
@@ -596,8 +597,8 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       }
       var total = ags.length > 1 ? "Total de la tarea: " + t.minutes + " min · asignado al inicio: " + t.limit + " min" : "";
       var btn = nl ? '<button type="button" class="lessbtn" data-lessons="' + esc((t.lessons || []).join(",")) + '" data-task="' + esc(t.id) + '" title="Ver lecciones y soluciones de esta tarea"><span class="lb-l">Lecciones (' + nl + ')</span><span class="lb-s">📖' + nl + "</span></button>" : "";
-      return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act">' + esc(first) + "</summary>" +
-        '<div class="more">' + (first !== t.action ? esc(t.action) + "<br>" : "") + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + (total ? "<br><b>" + esc(total) + "</b>" : "") + "</div></details></td>" +
+      return "<tr><td>" + chip(t.status) + btn + '</td><td class="tid">' + esc(t.id) + '</td><td><details><summary class="act" title="' + esc(first) + '">' + esc(t.user || first) + "</summary>" +
+        '<div class="more">' + (t.user ? "<b>Para el agente:</b> " + esc(t.action) + "<br>" : (first !== t.action ? esc(t.action) + "<br>" : "")) + "<b>Resultado:</b> " + esc(t.expected) + "<br><b>Evidencia de cierre:</b> " + esc(t.evidence) + (t.depends && t.depends !== "—" ? "<br><b>Depende de:</b> " + esc(t.depends) : "") + (total ? "<br><b>" + esc(total) + "</b>" : "") + "</div></details></td>" +
         "<td>" + resp + '</td><td class="num hide-sm">' + tries + '</td><td' + (total ? ' title="' + esc(total) + '"' : "") + ">" + time + "</td></tr>";
     }).join(""); }
     function taskTable(list) {
@@ -747,7 +748,7 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
   })();
   (function () {
     var html = '<div id="livestate"></div>';
-    if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(firstSentence(D.nextTask.action)) + "</div>";
+    if (D.nextTask) html += '<div class="next" style="margin-top:0"><b>Sigue:</b> ' + esc(D.nextTask.id) + " · " + esc(userText(D.nextTask)) + "</div>";
     else if (D.status.nextAction) html += '<div class="next" style="margin-top:0"><b>Siguiente acción:</b> ' + esc(D.status.nextAction) + "</div>";
     // En curso: solo la primera nota (la vigente), recortada; el resto queda plegado.
     if (D.status.current && D.status.current.length) {
