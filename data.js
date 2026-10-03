@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T23:25:13.841799Z",
+ "generatedUtc": "2026-10-03T23:31:13.860460Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 23:23 UTC",
+  "updated": "2026-10-03 23:25 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Claude: replanear E3 en pasos (piloto, D-057). Codex no ejecuta tareas hasta que E3 esté planeada y aprobada.",
   "needsOscar": [
@@ -21,15 +21,23 @@ window.PFA_DATA = {
    {
     "ref": "T-39",
     "text": "la próxima vez que abras Codex en este proyecto, si te pide revisar o aprobar los ganchos (hooks) de PFA, apruébalos. Al responder: compruebo en su registro que la tarjeta de la tarea aparece."
+   },
+   {
+    "ref": "E3",
+    "text": "iniciar sesión con tu cuenta de Puffer en el navegador de Claude (la pestaña de Microsoft que quedó abierta en el panel de Claude). Al responder: leo las columnas reales de las listas para escribir los pasos de E3."
+   },
+   {
+    "ref": "E3",
+    "text": "¿cómo se cargan los correos de un proyecto? A) Botón \"Load emails\" en Projects: carga los correos de las carpetas del proyecto seleccionado, como \"Scan folders\" en E2 (recomendada: lo usas tú desde la app, el flujo queda de 3 acciones y la lógica se escribe como código). B) Flujo que el agente ejecuta a mano desde Power Automate, como dice hoy E3. Al responder: escribo los pasos de E3 con esa opción."
    }
   ],
   "blockers": [],
   "current": [
-   "E3-PLAN (Claude), relevo 2026-10-03 23:23 UTC: replaneo de E3 en pasos (D-057), piloto del proceso nuevo · siguiente: leer E3 en PLAN, esquemas y flujos, y escribir control/pasos/E3-NN.md"
+   "E3-PLAN (Claude), relevo 2026-10-03 23:25 UTC: hecho: lectura de E3, esquemas de referencia y lecciones de flujos (KF-06, 13, 15, 16) · falta: columnas reales de PFA_Messages (el navegador de Claude perdió la sesión) y la decisión de Oscar sobre cómo se cargan los correos · herramienta: nada modificado · siguiente: leer las columnas reales y escribir control/pasos/E3-NN.md"
   ],
-  "fileUtc": "2026-10-03T23:23:08.480124Z",
+  "fileUtc": "2026-10-03T23:25:23.612612Z",
   "heartbeat": {
-   "claude": "2026-10-03T23:25:09.326877Z",
+   "claude": "2026-10-03T23:25:38.662811Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
