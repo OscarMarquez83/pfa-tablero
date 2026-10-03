@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T07:49:14.751934Z",
+ "generatedUtc": "2026-10-03T07:55:14.190923Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 07:43 UTC",
+  "updated": "2026-10-03 07:52 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Registrar como tarea T la corrección del parámetro faltante de connect en tools/canvas.py; probarla primero con sync de solo lectura a tmp/, luego restaurar y validar E2-07.",
+  "nextAction": "Completar T-34 intento 3: derivar environment_category desde el hostname y probar connect/sync en una carpeta temporal; después restaurar el YAML real de E2-07 y validar sus dos estados.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T07:43:51.764808Z",
+  "fileUtc": "2026-10-03T07:54:14.823011Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T07:44:08.680625Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T07:42:00Z"
+    "utc": "2026-10-03T07:52:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 415,
+    "prod": 424,
     "unprod": 104,
     "wait": 85,
-    "total": 604
+    "total": 613
    }
   },
   {
@@ -1091,17 +1091,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 6,
-    "minutes": 70,
+    "attempts": 7,
+    "minutes": 79,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "2026-10-03T07:43:00Z",
+    "lastActivity": "2026-10-03T07:52:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 6,
-      "minutes": 70,
+      "attempts": 7,
+      "minutes": 79,
       "limit": 30,
       "extra": 0,
       "finished": false,
@@ -2623,13 +2623,13 @@ window.PFA_DATA = {
     "owner": "Agente",
     "depends": "Decisión de Oscar",
     "expected": "El agente escribe y valida pantallas como archivos y las envía a Studio en un paso; sin escribir propiedad por propiedad",
-    "evidence": "Criterios 3 de control/specs/T-34.md; criterio de Codex: su primera corrida de tools/canvas.py sync y push sin errores",
+    "evidence": "Criterios 3 de control/specs/T-34.md; contrato actual de connect (incluye environment_category derivado del host); primera corrida de Codex sync y push sin errores",
     "limit": 90,
     "limitAlloc": {
      "ext": {},
      "own": {}
     },
-    "status": "Por validar",
+    "status": "Reabierta",
     "attempts": 3,
     "minutes": 31,
     "entrega": "T",
@@ -2737,17 +2737,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 6,
-   "minutes": 70,
+   "attempts": 7,
+   "minutes": 79,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
-   "lastActivity": "2026-10-03T07:43:00Z",
+   "lastActivity": "2026-10-03T07:52:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 6,
-     "minutes": 70,
+     "attempts": 7,
+     "minutes": 79,
      "limit": 30,
      "extra": 0,
      "finished": false,
@@ -5218,7 +5218,12 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "reason": "70 min efectivos de 30 permitidos",
+   "reason": "79 min efectivos de 30 permitidos",
+   "level": "serious"
+  },
+  {
+   "task": "T-34",
+   "reason": "Reabierta: se dio por terminada y no lo estaba (3 intentos previos)",
    "level": "serious"
   }
  ],
@@ -5228,28 +5233,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1098,
+   "prod": 1107,
    "unprod": 106,
    "wait": 97,
-   "total": 1301
+   "total": 1310
   },
   "last24h": {
-   "prod": 423,
+   "prod": 432,
    "unprod": 17,
    "wait": 71,
-   "total": 511
+   "total": 520
   },
   "last7d": {
-   "prod": 1098,
+   "prod": 1107,
    "unprod": 106,
    "wait": 97,
-   "total": 1301
+   "total": 1310
   },
   "product": {
-   "prod": 688,
+   "prod": 697,
    "unprod": 104,
    "wait": 89,
-   "total": 881
+   "total": 890
   },
   "support": {
    "prod": 410,
@@ -5339,7 +5344,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 195,
+   "prod": 204,
    "unprod": 6,
    "wait": 31
   }
@@ -5421,10 +5426,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "prod": 70,
+   "prod": 79,
    "unprod": 0,
    "wait": 5,
-   "total": 75
+   "total": 84
   },
   {
    "task": "T-30",
@@ -5465,7 +5470,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 924
+   "minutes": 933
   },
   {
    "account": "claude",
@@ -5477,6 +5482,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T07:43:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "E2-07: confirmé que el wrapper omite el campo del contrato actual del MCP",
+   "evidence": "Guía oficial y paquete 1.1.5 piden environment_category; canvas.py no lo deriva del hostname. T-34 seguía Por validar; reabierta para corregirlo. Sin cambios de código ni Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
+  },
   {
    "start": "2026-10-03T07:39:00Z",
    "minutes": 4,
@@ -5593,22 +5611,22 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Proyección ajustada para separar contador y galería; cambio guardado",
    "evidence": "push 0 errores; preview: no hay solapamiento; sync 9 archivos con Y=200"
-  },
-  {
-   "start": "2026-10-03T06:19:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Auditoría KF-P11: Projects count label overlaps first gallery row",
-   "evidence": "Screenshot de preview: galProjects Y=152 Height=592; lblProjectsCount Y=160; revisar y corregir layout"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T07:43:00Z",
+   "minutes": 9,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "E2-07: confirmé que el wrapper omite el campo del contrato actual del MCP",
+   "evidence": "Guía oficial y paquete 1.1.5 piden environment_category; canvas.py no lo deriva del hostname. T-34 seguía Por validar; reabierta para corregirlo. Sin cambios de código ni Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
+  },
   {
    "start": "2026-10-03T07:39:00Z",
    "minutes": 4,
