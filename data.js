@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:43:14.017693Z",
+ "generatedUtc": "2026-10-03T06:49:16.604848Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 06:26 UTC",
+  "updated": "2026-10-03 06:47 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-07: aviso de nuevas carpetas en My Day; después E2-08 y E2-09 para publicar y hacer la validación pendiente de E2-06.",
   "needsOscar": [
@@ -16,26 +16,19 @@ window.PFA_DATA = {
    }
   ],
   "blockers": [],
-  "current": [
-   "E2-07 (Codex), intento 1, inicio 2026-10-03 06:26 UTC: añadir el aviso de carpetas pendientes en My Day; comprobarlo visible con una fila nueva y oculto cuando el conteo sea 0, y probar el botón Review folders."
-  ],
-  "fileUtc": "2026-10-03T06:42:51.318578Z",
+  "current": [],
+  "fileUtc": "2026-10-03T06:48:31.736704Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T06:23:00.895757Z"
+   "codex": "2026-10-03T06:48:02.048528Z"
   },
-  "live": {
-   "id": "E2-07",
-   "agent": "Codex",
-   "startUtc": "2026-10-03T06:26:00Z",
-   "waits": []
-  },
+  "live": null,
   "ruleFootprints": {
    "current": "38E3DE9A",
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T06:26:00Z"
+    "utc": "2026-10-03T06:47:00Z"
    }
   }
  },
@@ -84,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 345,
+    "prod": 366,
     "unprod": 104,
     "wait": 80,
-    "total": 529
+    "total": 550
    }
   },
   {
@@ -1099,16 +1092,16 @@ window.PFA_DATA = {
     },
     "status": "En curso",
     "attempts": 1,
-    "minutes": 0,
+    "minutes": 21,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "",
+    "lastActivity": "2026-10-03T06:47:00Z",
     "byAgent": [
      {
       "agent": "Codex",
       "attempts": 1,
-      "minutes": 0,
+      "minutes": 21,
       "limit": 30,
       "extra": 0,
       "finished": false,
@@ -2745,16 +2738,16 @@ window.PFA_DATA = {
    },
    "status": "En curso",
    "attempts": 1,
-   "minutes": 0,
+   "minutes": 21,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
-   "lastActivity": "",
+   "lastActivity": "2026-10-03T06:47:00Z",
    "byAgent": [
     {
      "agent": "Codex",
      "attempts": 1,
-     "minutes": 0,
+     "minutes": 21,
      "limit": 30,
      "extra": 0,
      "finished": false,
@@ -5230,28 +5223,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1028,
+   "prod": 1049,
    "unprod": 106,
    "wait": 92,
-   "total": 1226
+   "total": 1247
   },
   "last24h": {
-   "prod": 353,
+   "prod": 374,
    "unprod": 17,
    "wait": 66,
-   "total": 436
+   "total": 457
   },
   "last7d": {
-   "prod": 1028,
+   "prod": 1049,
    "unprod": 106,
    "wait": 92,
-   "total": 1226
+   "total": 1247
   },
   "product": {
-   "prod": 618,
+   "prod": 639,
    "unprod": 104,
    "wait": 84,
-   "total": 806
+   "total": 827
   },
   "support": {
    "prod": 410,
@@ -5341,7 +5334,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 125,
+   "prod": 146,
    "unprod": 6,
    "wait": 26
   }
@@ -5467,7 +5460,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 849
+   "minutes": 870
   },
   {
    "account": "claude",
@@ -5479,6 +5472,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T06:26:00Z",
+   "minutes": 21,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Aviso de carpetas nuevas visible y navegación a Configuration probada; segundo push no aplicado",
+   "evidence": "Push inicial 0 errores/73 avisos; preview mostró 20 pendientes; botón abrió Configuration; fórmula Visible actual confirmada en Studio; estado con 0 pendiente sin probar"
+  },
   {
    "start": "2026-10-03T06:19:00Z",
    "minutes": 3,
@@ -5595,22 +5601,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Sync funcionó tras guardar y recargar Studio autenticado; Coauthoring On; sin push",
    "evidence": "Auditoría sync OK: Synced 9 file(s), código 0; diff: 3 propiedades omitidas en Configuration; evidencia funcional de Projects pendiente"
-  },
-  {
-   "start": "2026-10-03T05:47:00Z",
-   "minutes": 0,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 3,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "OTRO",
-   "summary": "Hipótesis: sesión de edición anterior a la autenticación o sesión coauthoring no detectada; prueba: guardar y recargar Studio, revisar Coauthoring y medir sync",
-   "evidence": "KF-19; Microsoft Learn: https://learn.microsoft.com/power-apps/maker/canvas-apps/create-canvas-external-tools; incidencia similar https://github.com/microsoft/power-platform-skills/issues/219"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T06:26:00Z",
+   "minutes": 21,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Aviso de carpetas nuevas visible y navegación a Configuration probada; segundo push no aplicado",
+   "evidence": "Push inicial 0 errores/73 avisos; preview mostró 20 pendientes; botón abrió Configuration; fórmula Visible actual confirmada en Studio; estado con 0 pendiente sin probar"
+  },
   {
    "start": "2026-10-03T06:19:00Z",
    "minutes": 3,
