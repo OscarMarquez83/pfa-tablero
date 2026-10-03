@@ -1,31 +1,38 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T05:40:16.524750Z",
+ "generatedUtc": "2026-10-03T05:46:13.881705Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 05:29 UTC",
+  "updated": "2026-10-03 05:45 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06 (Codex) desde su línea de relevo: python tools/canvas.py \"<URL de Studio>\" sync design/app ya funciona por el puente (KF-19, trampa 4); no instalar .NET.",
-  "needsOscar": [],
+  "nextAction": "E2-06: tras el inicio de sesión, repetir sync y comprobar que devuelve archivos antes de construir Projects.",
+  "needsOscar": [
+   {
+    "ref": "E2-06",
+    "text": "inicia sesión en Microsoft en la ventana que pide contraseña; la política de la organización exige autenticar de nuevo. Al responder: repetiré sync, comprobaré los archivos descargados y retomaré Projects."
+   }
+  ],
   "blockers": [],
   "current": [
-   "E2-06 (Codex), relevo 2026-10-03 05:29 UTC (actualizado por Claude): hecho: comprobación de Studio; la falta de .NET quedó resuelta con el puente local (T-34, KF-19 trampa 4; probado sync y push con el usuario real de Oscar) · falta: pantalla Projects y pruebas funcionales · herramienta: Studio sin cambios · siguiente: abrir Studio en edición, python tools/canvas.py \"<URL>\" sync design/app y seguir la skill powerapps-yaml (controles nuevos se crean en Studio; por código solo propiedades; guardar con un cambio mínimo en Studio antes de publicar)."
+   "E2-06 (Codex), relevo 2026-10-03 05:45 UTC: hecho sync por puente, código 0 pero sin archivos; Studio visible en edición y Microsoft pide contraseña por sesión expirada · falta: sync real, construcción y pruebas de Projects · herramienta: guardado, app sin cambios · siguiente: tras autenticación repetir sync y comprobar archivos y diff.",
+   "Espera desde 05:45 UTC: inicio de sesión de Microsoft 365 (AUTH).",
+   "Issues: no verificados en esta corrida; gh no está en PATH, conector rechazó argumentos y REST falló por SSL."
   ],
-  "fileUtc": "2026-10-03T05:29:32.116136Z",
+  "fileUtc": "2026-10-03T05:45:50.754668Z",
   "heartbeat": {
-   "claude": "2026-10-03T05:38:17.726220Z",
-   "codex": "2026-10-03T05:17:36.718381Z"
+   "claude": "2026-10-03T05:41:14.190728Z",
+   "codex": "2026-10-03T05:45:51.240173Z"
   },
   "live": null,
   "ruleFootprints": {
-   "current": "4314E2C3",
+   "current": "38E3DE9A",
    "read": {
-    "hash": "4314E2C3",
+    "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T05:14:00Z"
+    "utc": "2026-10-03T05:43:00Z"
    }
   }
  },
@@ -75,9 +82,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 315,
-    "unprod": 101,
+    "unprod": 103,
     "wait": 78,
-    "total": 494
+    "total": 496
    }
   },
   {
@@ -218,10 +225,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 405,
+    "prod": 410,
     "unprod": 2,
     "wait": 8,
-    "total": 415
+    "total": 420
    }
   }
  ],
@@ -1029,16 +1036,16 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 1,
-    "minutes": 3,
+    "attempts": 2,
+    "minutes": 5,
     "entrega": "E2",
-    "fails": 1,
-    "lastActivity": "2026-10-03T05:17:00Z",
+    "fails": 2,
+    "lastActivity": "2026-10-03T05:45:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 1,
-      "minutes": 3,
+      "attempts": 2,
+      "minutes": 5,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2423,16 +2430,16 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "Hecha",
-    "attempts": 1,
-    "minutes": 1,
+    "attempts": 2,
+    "minutes": 6,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T03:19:00Z",
+    "lastActivity": "2026-10-03T05:41:00Z",
     "byAgent": [
      {
       "agent": "Claude",
-      "attempts": 1,
-      "minutes": 1,
+      "attempts": 2,
+      "minutes": 6,
       "limit": 45,
       "extra": 0,
       "finished": true,
@@ -2625,16 +2632,16 @@ window.PFA_DATA = {
    "own": {}
   },
   "status": "En curso",
-  "attempts": 1,
-  "minutes": 3,
+  "attempts": 2,
+  "minutes": 5,
   "entrega": "E2",
-  "fails": 1,
-  "lastActivity": "2026-10-03T05:17:00Z",
+  "fails": 2,
+  "lastActivity": "2026-10-03T05:45:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 1,
-    "minutes": 3,
+    "attempts": 2,
+    "minutes": 5,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2660,16 +2667,16 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 1,
-   "minutes": 3,
+   "attempts": 2,
+   "minutes": 5,
    "entrega": "E2",
-   "fails": 1,
-   "lastActivity": "2026-10-03T05:17:00Z",
+   "fails": 2,
+   "lastActivity": "2026-10-03T05:45:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 1,
-     "minutes": 3,
+     "attempts": 2,
+     "minutes": 5,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -3211,6 +3218,7 @@ window.PFA_DATA = {
     "- **Trampa 2 (E2-05):** un `push` que **crea controles nuevos** deja Studio en blanco (error interno \"Cannot read properties of undefined (reading 'get')\"). Al recargar Studio, la sesión vuelve a la última versión guardada y el cambio se pierde. Medido en 6 pruebas: un cambio vacío y un cambio de texto no lo tumban; agregar hasta un solo contenedor con una etiqueta sí, con o sin versión de control (`Label@2.5.1`). Método que funciona: (1) crear en Studio solo los controles que faltan (Insert con un control hermano seleccionado, para que quede dentro del mismo contenedor o galería) y ponerles el nombre final en el panel de propiedades; borrar en Studio los que sobran; guardar (Ctrl+S); (2) `sync` a `design/app`; (3) editar solo propiedades y aplicar con `push`; Studio sigue vivo; (4) Ctrl+S. Después de cada push, comprobar con una captura reducida que Studio no quedó en blanco antes de guardar.",
     "- **Trampa 3 (E2-05):** lo que llega por `push` queda en la sesión, pero Studio no lo marca como pendiente de guardar (\"lo cambió otro autor\"). Ctrl+S no lo guarda y Publish publica la última versión guardada, sin esos cambios: la app publicada mostró una versión intermedia. Solución: después del push, hacer en Studio un cambio real mínimo (por ejemplo, una propiedad de la pantalla tocada que ya debía usar `Tema`) y Ctrl+S. Antes de publicar, comprobar: recargar Studio, `sync` a `tmp/` y buscar un texto nuevo del cambio. Solo entonces publicar.",
     "- **Trampa 4 (E2-06, Codex):** los agentes corren aislados de Windows. Codex usa otro usuario (`CodexSandboxOnline`, con otro `%LOCALAPPDATA%`, sin la sesión de Microsoft de Oscar y con descargas que fallan con \"Authentication failed\"). La terminal de Claude virtualiza lo que escribe fuera del repositorio: el .NET instalado en `%LOCALAPPDATA%` solo existía para Claude (una tarea de Windows con el usuario real no lo veía). Solución: .NET 10 SDK en `tools/.dotnet` (dentro del repositorio, ignorado por git) y puente `tools/canvas_bridge.py` con el usuario real de Oscar (tarea \"PFA Canvas Bridge\", al iniciar sesión, oculta, solo 127.0.0.1:8765, solo `canvas.py` y solo carpetas del repositorio). `canvas.py` siempre pasa por el puente. Probado con el usuario real: sync y push en 6 s; la sesión de Microsoft queda guardada para ese usuario.",
+    "- E2-06, Codex, 2026-10-03: el puente respondió sync código 0 con \"No files returned from server. Nothing written.\"; diff de design/app vacío. Studio seguía visible en edición, pero la ventana de Microsoft pedía contraseña por política de sesión expirada. No tomar OK sync como descarga comprobada; autenticar y comprobar archivos antes de construir. La relación causal queda por comprobar tras el login.",
     "- \"Validation FAILED\" con 0 errores = solo avisos (los 65 de delegación ya existentes); el cambio sí se aplica.",
     "- Al aplicar, el servidor normaliza los bloques `|+` a `|` (54 líneas en 7 archivos). Es solo formato; el contenido de las fórmulas no cambia.",
     "- El código de la app no contiene IDs del tenant ni correos (comprobado), por eso vive en `design/app/`. Los IDs salen de la URL en cada comando.",
@@ -5039,16 +5047,16 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "Hecha",
-   "attempts": 1,
-   "minutes": 1,
+   "attempts": 2,
+   "minutes": 6,
    "entrega": "T",
    "fails": 0,
-   "lastActivity": "2026-10-03T03:19:00Z",
+   "lastActivity": "2026-10-03T05:41:00Z",
    "byAgent": [
     {
      "agent": "Claude",
-     "attempts": 1,
-     "minutes": 1,
+     "attempts": 2,
+     "minutes": 6,
      "limit": 45,
      "extra": 0,
      "finished": true,
@@ -5129,41 +5137,47 @@ window.PFA_DATA = {
    "lessons": []
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "E2-06",
+   "reason": "2 intentos sin avance: toca revisar documentación",
+   "level": "warning"
+  }
+ ],
  "kpi": {
   "tasksDone": 56,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 993,
-   "unprod": 103,
+   "prod": 998,
+   "unprod": 105,
    "wait": 90,
-   "total": 1186
+   "total": 1193
   },
   "last24h": {
-   "prod": 345,
-   "unprod": 14,
+   "prod": 350,
+   "unprod": 16,
    "wait": 64,
-   "total": 423
+   "total": 430
   },
   "last7d": {
-   "prod": 993,
-   "unprod": 103,
+   "prod": 998,
+   "unprod": 105,
    "wait": 90,
-   "total": 1186
+   "total": 1193
   },
   "product": {
    "prod": 588,
-   "unprod": 101,
+   "unprod": 103,
    "wait": 82,
-   "total": 771
+   "total": 773
   },
   "support": {
-   "prod": 405,
+   "prod": 410,
    "unprod": 2,
    "wait": 8,
-   "total": 415
+   "total": 420
   }
  },
  "days": [
@@ -5247,8 +5261,8 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 90,
-   "unprod": 3,
+   "prod": 95,
+   "unprod": 5,
    "wait": 24
   }
  ],
@@ -5269,14 +5283,14 @@ window.PFA_DATA = {
    "attempts": 2
   },
   {
-   "category": "OTRO",
-   "minutes": 3,
+   "category": "AUTH",
+   "minutes": 4,
    "attempts": 3
   },
   {
-   "category": "AUTH",
-   "minutes": 2,
-   "attempts": 2
+   "category": "OTRO",
+   "minutes": 3,
+   "attempts": 3
   }
  ],
  "waits": [
@@ -5368,11 +5382,11 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 814
+   "minutes": 816
   },
   {
    "account": "claude",
-   "minutes": 330
+   "minutes": 335
   },
   {
    "account": "empresa",
@@ -5380,6 +5394,32 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T05:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 2,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "AUTH",
+   "summary": "sync por puente responde sin archivos; sesión expirada confirmada en Microsoft; app sin cambios",
+   "evidence": "sync código 0: No files returned from server. Nothing written.; 9 YAML intactos; git diff design/app vacío; Projects sin probar"
+  },
+  {
+   "start": "2026-10-03T05:36:00Z",
+   "minutes": 5,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-32",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "D-052: los agentes ya no ejecutan el publicador; AGENTS.md sección 3 y 4 skills",
+   "evidence": "AGENTS.md sin pasos del publicador (huella 38E3DE9A); KF-H04 anotada como resuelta"
+  },
   {
    "start": "2026-10-03T05:20:00Z",
    "minutes": 9,
@@ -5483,35 +5523,35 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Revisor de Codex eliminado: tarjeta Ahora mismo, botón Estadísticas (resumen, por entrega, por agente, tipos de problema, tareas sobre el límite), REVISION.md borrado, REVISOR.md desactivado, AGENTS.md sin el revisor. Incluye 5 min de T-36 descontados",
    "evidence": "Pages a 1366 y 390 px: sin semáforo, diálogo con 5 tablas sin desbordar; falta que Oscar borre la automatización en Codex"
-  },
-  {
-   "start": "2026-10-03T03:20:00Z",
-   "minutes": 15,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-31",
-   "attempt": 1,
-   "result": "HECHA",
-   "kind": "prod",
-   "category": "DISENO",
-   "summary": "Tablero: latido por agente (sin sesión del revisor), tiempo en vivo con esperas descontadas y estado Trabajando / Sin reporte / Detenida / En espera; data.js sin caché",
-   "evidence": "Pages: livestate con datos reales a 1366 y 390 px sin desplazamiento horizontal; 4 estados comprobados con datos simulados en la página; KF-H09"
-  },
-  {
-   "start": "2026-10-03T03:19:00Z",
-   "minutes": 1,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-33",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Línea de relevo y esperas en AGENTS.md sección 3 (texto escrito en el intento de T-34) y plantilla en cerrar-intento; relevo de E2-05 escrito en STATUS",
-   "evidence": "Falta la prueba: Codex retoma desde la línea de relevo"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T05:43:00Z",
+   "minutes": 2,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 2,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "AUTH",
+   "summary": "sync por puente responde sin archivos; sesión expirada confirmada en Microsoft; app sin cambios",
+   "evidence": "sync código 0: No files returned from server. Nothing written.; 9 YAML intactos; git diff design/app vacío; Projects sin probar"
+  },
+  {
+   "start": "2026-10-03T05:36:00Z",
+   "minutes": 5,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-32",
+   "attempt": 2,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "D-052: los agentes ya no ejecutan el publicador; AGENTS.md sección 3 y 4 skills",
+   "evidence": "AGENTS.md sin pasos del publicador (huella 38E3DE9A); KF-H04 anotada como resuelta"
+  },
   {
    "start": "2026-10-03T05:20:00Z",
    "minutes": 9,
