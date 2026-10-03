@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:22:15.408205Z",
+ "generatedUtc": "2026-10-03T08:31:14.413948Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:18 UTC",
+  "updated": "2026-10-03 08:27 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Reanudar E2-07 cuando la pestaña existente de Studio sea inspeccionable; confirmar Editing y Coauthoring, después sincronizar y comprobar que bajó YAML. La extensión Edge está conectada, pero enumerar o vincular su pestaña agota tiempo; no repetir esas llamadas ahora.",
+  "nextAction": "Diagnosticar por la salida y el contrato oficial de sync_canvas por qué no devuelve archivos. La extensión Edge sigue conectada, pero listar pestañas y vincular la URL exacta agotaron 30 y 60 segundos; no repetir esas llamadas. Antes de aplicar E2-07, confirmar Editing y Coauthoring y bajar YAML a tmp.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:18:17.751260Z",
+  "fileUtc": "2026-10-03T08:27:50.058835Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T07:44:08.680625Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:18:00Z"
+    "utc": "2026-10-03T08:27:00Z"
    }
   }
  },
@@ -221,10 +221,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 429,
+    "prod": 437,
     "unprod": 2,
     "wait": 8,
-    "total": 439
+    "total": 447
    }
   }
  ],
@@ -2630,11 +2630,11 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 6,
-    "minutes": 50,
+    "attempts": 7,
+    "minutes": 58,
     "entrega": "T",
     "fails": 0,
-    "lastActivity": "2026-10-03T08:17:00Z",
+    "lastActivity": "2026-10-03T08:26:00Z",
     "byAgent": [
      {
       "agent": "Claude",
@@ -2647,8 +2647,8 @@ window.PFA_DATA = {
      },
      {
       "agent": "Codex",
-      "attempts": 3,
-      "minutes": 19,
+      "attempts": 4,
+      "minutes": 27,
       "limit": 0,
       "extra": 0,
       "finished": false,
@@ -5248,22 +5248,22 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1126,
+   "prod": 1134,
    "unprod": 106,
    "wait": 97,
-   "total": 1329
+   "total": 1337
   },
   "last24h": {
-   "prod": 451,
+   "prod": 459,
    "unprod": 17,
    "wait": 71,
-   "total": 539
+   "total": 547
   },
   "last7d": {
-   "prod": 1126,
+   "prod": 1134,
    "unprod": 106,
    "wait": 97,
-   "total": 1329
+   "total": 1337
   },
   "product": {
    "prod": 697,
@@ -5272,10 +5272,10 @@ window.PFA_DATA = {
    "total": 890
   },
   "support": {
-   "prod": 429,
+   "prod": 437,
    "unprod": 2,
    "wait": 8,
-   "total": 439
+   "total": 447
   }
  },
  "days": [
@@ -5359,7 +5359,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 223,
+   "prod": 231,
    "unprod": 6,
    "wait": 31
   }
@@ -5448,10 +5448,10 @@ window.PFA_DATA = {
   },
   {
    "task": "T-34",
-   "prod": 50,
+   "prod": 58,
    "unprod": 0,
    "wait": 0,
-   "total": 50
+   "total": 58
   },
   {
    "task": "T-30",
@@ -5485,7 +5485,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 952
+   "minutes": 960
   },
   {
    "account": "claude",
@@ -5497,6 +5497,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T08:18:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Revalidé el acceso a la pestaña de Studio por ID de Edge y URL exacta",
+   "evidence": "La extensión sigue conectada (ID 3), pero listar pestañas agotó 60 s y vincular la URL exacta agotó 30 s. No se inspeccionó Studio ni se hizo sync o push. Se analizará el contrato de sync sin repetir las llamadas de Edge."
+  },
   {
    "start": "2026-10-03T08:09:00Z",
    "minutes": 8,
@@ -5613,22 +5626,22 @@ window.PFA_DATA = {
    "category": "NAVEGADOR",
    "summary": "Confirmé el bloqueo de edición en Studio",
    "evidence": "Pestaña PFA_Pilot_App en Edge; edición deshabilitada; no se aplicó ningún cambio"
-  },
-  {
-   "start": "2026-10-03T07:23:00Z",
-   "minutes": 3,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 2,
-   "result": "ESPERA",
-   "kind": "wait",
-   "category": "NAVEGADOR",
-   "summary": "Studio recargando tras renovar la sesión",
-   "evidence": "Edge muestra Read-only porque otra sesión conserva el control; no se pulsó Override"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T08:18:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 6,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "NAVEGADOR",
+   "summary": "Revalidé el acceso a la pestaña de Studio por ID de Edge y URL exacta",
+   "evidence": "La extensión sigue conectada (ID 3), pero listar pestañas agotó 60 s y vincular la URL exacta agotó 30 s. No se inspeccionó Studio ni se hizo sync o push. Se analizará el contrato de sync sin repetir las llamadas de Edge."
+  },
   {
    "start": "2026-10-03T08:09:00Z",
    "minutes": 8,
