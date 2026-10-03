@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T01:01:17.968796Z",
+ "generatedUtc": "2026-10-03T01:10:17.017462Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -8,8 +8,25 @@ window.PFA_DATA = {
  "status": {
   "updated": "2026-10-02 19:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [],
+  "nextAction": "E2-05 en pausa por decisión de Oscar hasta resolver T-31 a T-34 (tablero, tokens, relevo y método de Power Apps); esperan su aprobación en \"Necesito de Oscar\". Antes: E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
+  "needsOscar": [
+   {
+    "ref": "T-31",
+    "text": "aprobar el estado por latido. El tablero marca \"Detenida\" solo si el agente lleva 30 min sin actividad real (sin escrituras en su registro de sesión), no solo porque no reportó. Al responder: implemento el tiempo en vivo, el agente y el estado en el tablero."
+   },
+   {
+    "ref": "T-32",
+    "text": "aprobar las reglas de ahorro de tokens propuestas en el chat para AGENTS.md. Al responder: edito AGENTS.md con ese texto, actualizo la huella y limpio STATUS."
+   },
+   {
+    "ref": "T-33",
+    "text": "aprobar la línea de relevo y la recuperación desde el archivo tras una sesión vencida. Al responder: agrego la regla y la plantilla a AGENTS.md y a cerrar-intento."
+   },
+   {
+    "ref": "T-34",
+    "text": "autorizar la prueba de concepto de control/specs/T-34.md (descargar .NET 10 SDK y el servidor oficial de Microsoft, configurarlo en Claude Code y Codex, y activar Coauthoring en la app). Al responder: hago la prueba sin publicar nada y te traigo el resultado medido."
+   }
+  ],
   "blockers": [],
   "current": [
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
@@ -18,7 +35,7 @@ window.PFA_DATA = {
    "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial.",
    "Avance (Claude, D-045): Configuration.OnVisible carga colFolders y colProjects. La galería de carpetas nuevas tiene Items, TemplateSize, X, Y, Width y Height. Ya se cambiaron la etiqueta de ruta (Text, Tooltip, Width, X, Y, Height), el botón Project (OnSelect, Text, posición) y el botón Part of parent project (OnSelect, DisplayMode, Text, posición, colores). App checker: 0 errores en Configuration. Lección: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo; para borrar usar Ctrl+End, Ctrl+Shift+Home y Delete, y revisar cada propiedad con View code antes de guardar. Falta: botón Not a project (insertarlo en la galería), títulos, estados vacíos, OnSelect de Scan con D-042, sección Reviewed folders, quitar controles viejos, revisar con View code, pruebas, publicar y cerrar. Cierre de Studio: GUARDAR (Studio autoguarda; la versión 161 publicada sigue Live)."
   ],
-  "fileUtc": "2026-10-03T00:58:25.706954Z",
+  "fileUtc": "2026-10-03T01:02:39.830986Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
@@ -404,14 +421,14 @@ window.PFA_DATA = {
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
    "done": 28,
-   "total": 29,
+   "total": 33,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 343,
+    "prod": 349,
     "unprod": 2,
     "wait": 8,
-    "total": 353
+    "total": 359
    }
   }
  ],
@@ -2564,6 +2581,134 @@ window.PFA_DATA = {
      }
     ],
     "lessons": []
+   },
+   {
+    "id": "T-31",
+    "action": "Tablero: tiempo de la tarea en curso que avanza en vivo (pausado durante una espera), agente que la tiene y estado por latido: \"Trabajando\", \"Sin reporte\" (hay latido pero STATUS lleva 30 min sin avance) o \"Detenida\" (30 min sin latido). Latido = última escritura del registro de sesión del agente en este equipo; no cuesta tokens",
+    "owner": "Agente",
+    "depends": "Decisión de Oscar",
+    "expected": "Oscar ve si el agente trabaja, espera o se detuvo, sin depender de que el agente reporte",
+    "evidence": "Prueba local y en Pages a 1366 y 390 px: tarea en curso con agente y minutos que suben; latido viejo → \"Detenida\"; latido reciente y STATUS sin cambios → \"Sin reporte\"; la sesión del revisor no cuenta como latido",
+    "limit": 60,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 60,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": true
+   },
+   {
+    "id": "T-32",
+    "action": "Reglas de ahorro de tokens para cualquier agente: capturas solo para decisiones visuales de Oscar o cuando la pantalla no se puede leer como texto, y reducidas; avance por hito en vez de cada 3 min (lo cubre el latido de T-31); reportes de chat en 3 partes cortas; lectura mínima al empezar; limpiar lo viejo de STATUS. Cambia AGENTS.md (pedido expreso de Oscar)",
+    "owner": "Agente",
+    "depends": "Decisión de Oscar, T-31",
+    "expected": "Menos tokens por tarea sin recortar el razonamiento",
+    "evidence": "Texto aprobado por Oscar en AGENTS.md; huella actualizada; STATUS sin bloques viejos; tamaño de los archivos de inicio antes y después",
+    "limit": 45,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 45,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": false
+   },
+   {
+    "id": "T-33",
+    "action": "Línea de relevo y recuperación tras una sesión vencida de Microsoft 365: cada avance dice qué quedó hecho, qué falta, si la herramienta quedó guardada o no y el siguiente paso; al volver a iniciar sesión, el agente compara Studio con el archivo del repositorio y reaplica desde el archivo",
+    "owner": "Agente",
+    "depends": "Decisión de Oscar, T-32",
+    "expected": "Otro agente (o el mismo) retoma desde la última línea, sin perder trabajo ni repetir pasos",
+    "evidence": "Prueba: un agente nuevo lee solo STATUS y nombra el siguiente paso exacto de una tarea interrumpida; regla y plantilla en AGENTS.md y en la skill cerrar-intento",
+    "limit": 30,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 0,
+    "minutes": 0,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "",
+    "byAgent": [
+     {
+      "agent": "Codex",
+      "attempts": 0,
+      "minutes": 0,
+      "limit": 30,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": false
+   },
+   {
+    "id": "T-34",
+    "action": "Construir Power Apps como código con el servidor oficial Canvas Authoring MCP de Microsoft (prueba de concepto, control/specs/T-34.md)",
+    "owner": "Agente",
+    "depends": "Decisión de Oscar",
+    "expected": "El agente escribe y valida pantallas como archivos y las envía a Studio en un paso; sin escribir propiedad por propiedad",
+    "evidence": "Criterios 3 de control/specs/T-34.md",
+    "limit": 90,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Pendiente",
+    "attempts": 1,
+    "minutes": 6,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-03T01:02:00Z",
+    "byAgent": [
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 6,
+      "limit": 90,
+      "extra": 0,
+      "finished": false,
+      "tone": "ok"
+     }
+    ],
+    "lessons": [],
+    "ready": true
    }
   ]
  },
@@ -4890,26 +5035,26 @@ window.PFA_DATA = {
  "alerts": [],
  "kpi": {
   "tasksDone": 51,
-  "tasksTotal": 67,
+  "tasksTotal": 71,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 903,
+   "prod": 909,
    "unprod": 100,
    "wait": 66,
-   "total": 1069
+   "total": 1075
   },
   "last24h": {
-   "prod": 304,
-   "unprod": 63,
+   "prod": 310,
+   "unprod": 61,
    "wait": 47,
-   "total": 414
+   "total": 418
   },
   "last7d": {
-   "prod": 903,
+   "prod": 909,
    "unprod": 100,
    "wait": 66,
-   "total": 1069
+   "total": 1075
   },
   "product": {
    "prod": 560,
@@ -4918,10 +5063,10 @@ window.PFA_DATA = {
    "total": 716
   },
   "support": {
-   "prod": 343,
+   "prod": 349,
    "unprod": 2,
    "wait": 8,
-   "total": 353
+   "total": 359
   }
  },
  "days": [
@@ -5005,7 +5150,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 0,
+   "prod": 6,
    "unprod": 0,
    "wait": 0
   }
@@ -5130,7 +5275,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 219
+   "minutes": 225
   },
   {
    "account": "empresa",
@@ -5138,6 +5283,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T00:57:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Análisis con skill idea: método para construir Power Apps como código (Canvas Authoring MCP de Microsoft) y propuestas T-31 a T-33; git verificado (fsck sin errores, gc) y commit pendiente hecho",
+   "evidence": "control/specs/T-34.md; T-31 a T-34 en PLAN; INC-14; decisiones pedidas en STATUS"
+  },
   {
    "start": "2026-10-02T20:10:00Z",
    "minutes": 80,
@@ -5254,22 +5412,22 @@ window.PFA_DATA = {
    "category": "PERMISOS",
    "summary": "Espera aprobación de Oscar para quitar Required a 4 columnas de PFA_MailFolders (D-041)",
    "evidence": "REST: obligatorias reales eran 6 (E2-01 anotó 2)"
-  },
-  {
-   "start": "2026-10-02T12:45:00Z",
-   "minutes": 12,
-   "account": "claude",
-   "entrega": "E2",
-   "task": "E2-04",
-   "attempt": 19,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "FORMULA_PA",
-   "summary": "Reapertura (Claude): causa raíz = OnSelect leía .foldersJson y el Respond expone foldersjson (minúsculas); error de compilación impedía ejecutar OnSelect. Fórmula mínima ejecutó el flow; fórmula completa desde YAML",
-   "evidence": "Run de prueba Succeeded 25 carpetas; preview mostró Flow returned 8461 characters; App checker sin errores en Configuration; escaneo 1 falló con Field MailboxKey is required (0 filas). Límites de hora aproximados por tiempos de runs y publicación"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T00:57:00Z",
+   "minutes": 6,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-34",
+   "attempt": 1,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "DOCUMENTACION",
+   "summary": "Análisis con skill idea: método para construir Power Apps como código (Canvas Authoring MCP de Microsoft) y propuestas T-31 a T-33; git verificado (fsck sin errores, gc) y commit pendiente hecho",
+   "evidence": "control/specs/T-34.md; T-31 a T-34 en PLAN; INC-14; decisiones pedidas en STATUS"
+  },
   {
    "start": "2026-10-02T20:10:00Z",
    "minutes": 80,
