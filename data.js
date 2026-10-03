@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T07:34:15.514664Z",
+ "generatedUtc": "2026-10-03T07:43:14.271810Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 07:31 UTC",
+  "updated": "2026-10-03 07:39 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-07: aviso de nuevas carpetas en My Day; después E2-08 y E2-09 para publicar y hacer la validación pendiente de E2-06.",
   "needsOscar": [
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T07:32:14.660179Z",
+  "fileUtc": "2026-10-03T07:39:52.376731Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T07:28:45.199585Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T07:31:00Z"
+    "utc": "2026-10-03T07:39:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 403,
+    "prod": 411,
     "unprod": 104,
     "wait": 85,
-    "total": 592
+    "total": 600
    }
   },
   {
@@ -1091,17 +1091,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 4,
-    "minutes": 58,
+    "attempts": 5,
+    "minutes": 66,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "2026-10-03T07:31:00Z",
+    "lastActivity": "2026-10-03T07:39:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 4,
-      "minutes": 58,
+      "attempts": 5,
+      "minutes": 66,
       "limit": 30,
       "extra": 0,
       "finished": false,
@@ -2737,17 +2737,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 4,
-   "minutes": 58,
+   "attempts": 5,
+   "minutes": 66,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
-   "lastActivity": "2026-10-03T07:31:00Z",
+   "lastActivity": "2026-10-03T07:39:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 4,
-     "minutes": 58,
+     "attempts": 5,
+     "minutes": 66,
      "limit": 30,
      "extra": 0,
      "finished": false,
@@ -5218,7 +5218,7 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "reason": "58 min efectivos de 30 permitidos",
+   "reason": "66 min efectivos de 30 permitidos",
    "level": "serious"
   }
  ],
@@ -5228,28 +5228,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1086,
+   "prod": 1094,
    "unprod": 106,
    "wait": 97,
-   "total": 1289
+   "total": 1297
   },
   "last24h": {
-   "prod": 411,
+   "prod": 419,
    "unprod": 17,
    "wait": 71,
-   "total": 499
+   "total": 507
   },
   "last7d": {
-   "prod": 1086,
+   "prod": 1094,
    "unprod": 106,
    "wait": 97,
-   "total": 1289
+   "total": 1297
   },
   "product": {
-   "prod": 676,
+   "prod": 684,
    "unprod": 104,
    "wait": 89,
-   "total": 869
+   "total": 877
   },
   "support": {
    "prod": 410,
@@ -5339,7 +5339,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 183,
+   "prod": 191,
    "unprod": 6,
    "wait": 31
   }
@@ -5421,10 +5421,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "prod": 58,
+   "prod": 66,
    "unprod": 0,
    "wait": 5,
-   "total": 63
+   "total": 71
   },
   {
    "task": "T-30",
@@ -5465,7 +5465,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 912
+   "minutes": 920
   },
   {
    "account": "claude",
@@ -5477,6 +5477,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T07:31:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reabrí Studio desde Home y recuperé Editing, pero sync MCP devolvió HTTP 422",
+   "evidence": "Coauthoring On; ids de environment/app correctos; OnVisible remoto aún usa el override 0; sin push ni cambios a SharePoint"
+  },
   {
    "start": "2026-10-03T07:29:00Z",
    "minutes": 2,
@@ -5593,22 +5606,22 @@ window.PFA_DATA = {
    "category": "FORMULA_PA",
    "summary": "Renombre comprobado; Deactivate redujo activos a 4; Change restauró carpeta de prueba",
    "evidence": "Preview: nombre volvió al original; nueva 20/revisadas 5, activos 4"
-  },
-  {
-   "start": "2026-10-03T06:11:00Z",
-   "minutes": 1,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "Revisé KF-P11, el informe E2-04 y los intentos 1–19; añadí INC-16 por no aplicar la revisión antes del segundo push",
-   "evidence": "Informe y worklog de E2-04 contrastados; incidente registrado; siguiente cambio detenido hasta revisar datos de prueba y archivo completo"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T07:31:00Z",
+   "minutes": 8,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 4,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Reabrí Studio desde Home y recuperé Editing, pero sync MCP devolvió HTTP 422",
+   "evidence": "Coauthoring On; ids de environment/app correctos; OnVisible remoto aún usa el override 0; sin push ni cambios a SharePoint"
+  },
   {
    "start": "2026-10-03T07:29:00Z",
    "minutes": 2,
