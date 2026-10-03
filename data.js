@@ -1,23 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T05:10:17.628032Z",
+ "generatedUtc": "2026-10-03T05:19:13.700760Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 05:07 UTC",
+  "updated": "2026-10-03 05:17 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-06 (pantalla Projects), siguiendo la skill powerapps-yaml; T-33 y T-34 siguen Por validar.",
+  "nextAction": "E2-06, resolver la descarga local del SDK .NET 10 y continuar por tools/canvas.py.",
   "needsOscar": [],
   "blockers": [],
   "current": [
-   "T-35, intento 2 iniciado 2026-10-03 05:05 y cerrado 2026-10-03 05:08 UTC como HECHA (3 min): eliminé las automatizaciones del revisor"
+   "E2-06 (Codex), relevo 2026-10-03 05:17 UTC: hecho comprobación de Studio (sesión activa), repo sin cambios de app e issues de Oscar abiertos = 0 · falta pantalla Projects y pruebas funcionales · herramienta: sin guardar (sync no inició: falta dnx.cmd; instalador oficial devolvió Authentication failed; publicación del tablero no confirmada por KF-H04) · siguiente: resolver instalación de .NET 10 por la vía oficial y ejecutar sync."
   ],
-  "fileUtc": "2026-10-03T05:08:33.755966Z",
+  "fileUtc": "2026-10-03T05:17:09.612651Z",
   "heartbeat": {
    "claude": "2026-10-03T04:51:00.964237Z",
-   "codex": "2026-10-03T05:08:52.465892Z"
+   "codex": "2026-10-03T05:17:36.718381Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -25,7 +25,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "4314E2C3",
     "agent": "Codex",
-    "utc": "2026-10-03T05:05:00Z"
+    "utc": "2026-10-03T05:14:00Z"
    }
   }
  },
@@ -75,9 +75,9 @@ window.PFA_DATA = {
    "active": true,
    "time": {
     "prod": 315,
-    "unprod": 98,
+    "unprod": 101,
     "wait": 78,
-    "total": 491
+    "total": 494
    }
   },
   {
@@ -1028,17 +1028,17 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
-    "minutes": 0,
+    "status": "En curso",
+    "attempts": 1,
+    "minutes": 3,
     "entrega": "E2",
-    "fails": 0,
-    "lastActivity": "",
+    "fails": 1,
+    "lastActivity": "2026-10-03T05:17:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 0,
-      "minutes": 0,
+      "attempts": 1,
+      "minutes": 3,
       "limit": 60,
       "extra": 0,
       "finished": false,
@@ -2622,17 +2622,17 @@ window.PFA_DATA = {
    "ext": {},
    "own": {}
   },
-  "status": "Pendiente",
-  "attempts": 0,
-  "minutes": 0,
+  "status": "En curso",
+  "attempts": 1,
+  "minutes": 3,
   "entrega": "E2",
-  "fails": 0,
-  "lastActivity": "",
+  "fails": 1,
+  "lastActivity": "2026-10-03T05:17:00Z",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 0,
-    "minutes": 0,
+    "attempts": 1,
+    "minutes": 3,
     "limit": 60,
     "extra": 0,
     "finished": false,
@@ -2655,17 +2655,17 @@ window.PFA_DATA = {
     "ext": {},
     "own": {}
    },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
+   "status": "En curso",
+   "attempts": 1,
+   "minutes": 3,
    "entrega": "E2",
-   "fails": 0,
-   "lastActivity": "",
+   "fails": 1,
+   "lastActivity": "2026-10-03T05:17:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
+     "attempts": 1,
+     "minutes": 3,
      "limit": 60,
      "extra": 0,
      "finished": false,
@@ -5130,27 +5130,27 @@ window.PFA_DATA = {
   "entregasTotal": 12,
   "time": {
    "prod": 984,
-   "unprod": 100,
+   "unprod": 103,
    "wait": 90,
-   "total": 1174
+   "total": 1177
   },
   "last24h": {
    "prod": 338,
-   "unprod": 11,
+   "unprod": 14,
    "wait": 64,
-   "total": 413
+   "total": 416
   },
   "last7d": {
    "prod": 984,
-   "unprod": 100,
+   "unprod": 103,
    "wait": 90,
-   "total": 1174
+   "total": 1177
   },
   "product": {
    "prod": 588,
-   "unprod": 98,
+   "unprod": 101,
    "wait": 82,
-   "total": 768
+   "total": 771
   },
   "support": {
    "prod": 396,
@@ -5241,7 +5241,7 @@ window.PFA_DATA = {
   {
    "date": "2026-10-03",
    "prod": 81,
-   "unprod": 0,
+   "unprod": 3,
    "wait": 24
   }
  ],
@@ -5262,13 +5262,13 @@ window.PFA_DATA = {
    "attempts": 2
   },
   {
-   "category": "AUTH",
-   "minutes": 2,
-   "attempts": 2
+   "category": "OTRO",
+   "minutes": 3,
+   "attempts": 3
   },
   {
-   "category": "OTRO",
-   "minutes": 0,
+   "category": "AUTH",
+   "minutes": 2,
    "attempts": 2
   }
  ],
@@ -5361,7 +5361,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 811
+   "minutes": 814
   },
   {
    "account": "claude",
@@ -5373,6 +5373,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T05:14:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 1,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Preparación sin avance: falta SDK .NET 10; descarga oficial falló con autenticación",
+   "evidence": "canvas.py sync no inició: falta dnx.cmd; Studio accesible; app sin cambios"
+  },
   {
    "start": "2026-10-03T05:05:00Z",
    "minutes": 3,
@@ -5489,22 +5502,22 @@ window.PFA_DATA = {
    "category": "DOCUMENTACION",
    "summary": "Regla 12 de ahorro de tokens en AGENTS.md (texto escrito en el intento de T-34) y STATUS limpio",
    "evidence": "STATUS 11.131 a 2.989 caracteres (unos 2.300 tokens menos por lectura); AGENTS.md 26.889 a 29.333; huella CA8D23A4"
-  },
-  {
-   "start": "2026-10-03T03:03:00Z",
-   "minutes": 16,
-   "account": "claude",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 1,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "Canvas Authoring MCP funciona: .NET 10 sin admin, Coauthoring activado, tools/canvas.py (sync/push con reversión automática), app en design/app; AGENTS sec 2, 3, 4.12 y 7, skill powerapps-yaml y KF-19. Incluye la espera del inicio de sesión de Oscar en la ventana de Windows (sin hora medida)",
-   "evidence": "sync 7 pantallas 4 s; cambio de prueba aplicado y revertido (solo formato |+ a |); fórmula rota: REVERTIDO y Studio igual; falta la primera corrida de Codex"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T05:14:00Z",
+   "minutes": 3,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-06",
+   "attempt": 1,
+   "result": "SIN_AVANCE",
+   "kind": "unprod",
+   "category": "OTRO",
+   "summary": "Preparación sin avance: falta SDK .NET 10; descarga oficial falló con autenticación",
+   "evidence": "canvas.py sync no inició: falta dnx.cmd; Studio accesible; app sin cambios"
+  },
   {
    "start": "2026-10-03T05:05:00Z",
    "minutes": 3,
