@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T06:28:15.019623Z",
+ "generatedUtc": "2026-10-03T06:37:14.099796Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -19,9 +19,9 @@ window.PFA_DATA = {
   "current": [
    "E2-07 (Codex), intento 1, inicio 2026-10-03 06:26 UTC: añadir el aviso de carpetas pendientes en My Day; comprobarlo visible con una fila nueva y oculto cuando el conteo sea 0, y probar el botón Review folders."
   ],
-  "fileUtc": "2026-10-03T06:26:22.432234Z",
+  "fileUtc": "2026-10-03T06:35:51.520331Z",
   "heartbeat": {
-   "claude": "2026-10-03T06:28:14.665209Z",
+   "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T06:23:00.895757Z"
   },
   "live": {
@@ -5236,10 +5236,10 @@ window.PFA_DATA = {
    "total": 1226
   },
   "last24h": {
-   "prod": 365,
+   "prod": 353,
    "unprod": 17,
    "wait": 66,
-   "total": 448
+   "total": 436
   },
   "last7d": {
    "prod": 1028,
