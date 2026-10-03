@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T15:40:13.961769Z",
+ "generatedUtc": "2026-10-03T15:49:13.960266Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 15:32 UTC",
+  "updated": "2026-10-03 15:41 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Cerrar E2-08 con Flow Checker, trigger y run verificados; después continuar E2-09 y E2-11. E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
@@ -17,7 +17,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T15:37:52.407914Z",
+  "fileUtc": "2026-10-03T15:44:20.822982Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T15:11:37.567791Z"
@@ -72,15 +72,15 @@ window.PFA_DATA = {
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
    "status": "En curso",
-   "done": 5,
+   "done": 6,
    "total": 11,
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 468,
+    "prod": 489,
     "unprod": 104,
     "wait": 85,
-    "total": 657
+    "total": 678
    }
   },
   {
@@ -1090,26 +1090,27 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "En curso",
-    "attempts": 7,
-    "minutes": 79,
+    "status": "Hecha",
+    "attempts": 8,
+    "minutes": 100,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "2026-10-03T07:52:00Z",
+    "lastActivity": "2026-10-03T15:30:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 7,
-      "minutes": 79,
+      "attempts": 8,
+      "minutes": 100,
       "limit": 30,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "over"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": [
+     "KF-P14"
+    ]
    },
    {
     "id": "E2-08",
@@ -2736,39 +2737,6 @@ window.PFA_DATA = {
    "ready": true
   },
   {
-   "id": "E2-07",
-   "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
-   "owner": "Agente",
-   "depends": "E2-05",
-   "expected": "Oscar se entera de carpetas nuevas",
-   "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
-   "limit": 30,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "En curso",
-   "attempts": 7,
-   "minutes": 79,
-   "entrega": "E2",
-   "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
-   "fails": 0,
-   "lastActivity": "2026-10-03T07:52:00Z",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 7,
-     "minutes": 79,
-     "limit": 30,
-     "extra": 0,
-     "finished": false,
-     "tone": "over"
-    }
-   ],
-   "lessons": [],
-   "ready": true
-  },
-  {
    "id": "E2-08",
    "action": "Dejar PFA_E2_LeerCarpetas habilitado con trigger Power Apps (V2), sin Recurrence. La app lo ejecuta al pulsar “Scan folders” en Configuration",
    "owner": "Agente",
@@ -3195,6 +3163,38 @@ window.PFA_DATA = {
    ],
    "lessons": [],
    "ready": true
+  },
+  {
+   "id": "T-37",
+   "action": "Barrido de la documentación de control (AGENTS.md, STATUS, PLAN, KNOWN-FIXES, DECISIONS, skills): más corta y clara, sin perder reglas; lo viejo a un archivo de consulta",
+   "owner": "Agente",
+   "depends": "T-31 a T-36 y E2-05",
+   "expected": "Menos tokens al empezar cada sesión y reglas sin contradicciones",
+   "evidence": "Tamaños antes y después; ninguna regla vigente perdida (lista de control); huella actualizada; Oscar aprueba el resultado",
+   "limit": 90,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Pendiente",
+   "attempts": 0,
+   "minutes": 0,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 0,
+     "minutes": 0,
+     "limit": 90,
+     "extra": 0,
+     "finished": false,
+     "tone": "ok"
+    }
+   ],
+   "lessons": [],
+   "ready": true
   }
  ],
  "lessons": {
@@ -3368,6 +3368,14 @@ window.PFA_DATA = {
     "- Desvío (T-34, intento 5): se anunció el intento en el chat, pero las consultas de Edge comenzaron antes de registrar STATUS.",
     "- Regla: al inicio de cada intento, toma la hora real y anota en STATUS el ID, número, objetivo y comprobación antes de ejecutar comandos o usar el navegador. El comentario del chat no sustituye ese registro.",
     "- Comprobación: STATUS tiene la línea de inicio del intento y la huella AGENTS vigente antes de la primera acción."
+   ]
+  },
+  "KF-P14": {
+   "title": "INC-22 · Sumar el tiempo acumulado antes de ampliar un intento.",
+   "note": "",
+   "lines": [
+    "- Desvío (E2-07, intento 7): la tarea llevaba 79 min; el intento añadió 21 min y superó por 10 min el máximo de 30 min más 60 min adicionales.",
+    "- Regla: antes de continuar, suma los minutos previos y el tiempo actual. Al llegar a 90 min totales, detente y aplica la sección 5 sin otra prueba."
    ]
   },
   "KF-H09": {
@@ -4229,6 +4237,40 @@ window.PFA_DATA = {
    "lessons": [
     "KF-18",
     "KF-19"
+   ]
+  },
+  {
+   "id": "E2-07",
+   "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar se entera de carpetas nuevas",
+   "evidence": "Aviso visible con una carpeta en Nueva y oculto con 0",
+   "limit": 30,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 8,
+   "minutes": 100,
+   "entrega": "E2",
+   "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
+   "fails": 0,
+   "lastActivity": "2026-10-03T15:30:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 8,
+     "minutes": 100,
+     "limit": 30,
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
+    }
+   ],
+   "lessons": [
+    "KF-P14"
    ]
   },
   {
@@ -5248,41 +5290,36 @@ window.PFA_DATA = {
    "task": "E2-06",
    "reason": "80 min efectivos de 60 permitidos",
    "level": "serious"
-  },
-  {
-   "task": "E2-07",
-   "reason": "79 min efectivos de 30 permitidos",
-   "level": "serious"
   }
  ],
  "kpi": {
-  "tasksDone": 56,
+  "tasksDone": 57,
   "tasksTotal": 74,
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1194,
+   "prod": 1215,
    "unprod": 106,
    "wait": 97,
-   "total": 1397
+   "total": 1418
   },
   "last24h": {
-   "prod": 430,
+   "prod": 451,
    "unprod": 6,
    "wait": 31,
-   "total": 467
+   "total": 488
   },
   "last7d": {
-   "prod": 1194,
+   "prod": 1215,
    "unprod": 106,
    "wait": 97,
-   "total": 1397
+   "total": 1418
   },
   "product": {
-   "prod": 741,
+   "prod": 762,
    "unprod": 104,
    "wait": 89,
-   "total": 934
+   "total": 955
   },
   "support": {
    "prod": 453,
@@ -5372,7 +5409,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 291,
+   "prod": 312,
    "unprod": 6,
    "wait": 31
   }
@@ -5446,18 +5483,18 @@ window.PFA_DATA = {
    "total": 132
   },
   {
+   "task": "E2-07",
+   "prod": 100,
+   "unprod": 0,
+   "wait": 5,
+   "total": 105
+  },
+  {
    "task": "E2-02",
    "prod": 67,
    "unprod": 30,
    "wait": 2,
    "total": 99
-  },
-  {
-   "task": "E2-07",
-   "prod": 79,
-   "unprod": 0,
-   "wait": 5,
-   "total": 84
   },
   {
    "task": "E2-06",
@@ -5498,7 +5535,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 1020
+   "minutes": 1041
   },
   {
    "account": "claude",
@@ -5510,6 +5547,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T15:09:00Z",
+   "minutes": 21,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 7,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Aviso de My Day visible con 20 carpetas; navega a Configuration y se oculta con contador cero",
+   "evidence": "App publicada: aviso visible y Review folders abrió Configuration. Studio: varNewFolderCount=0 ocultó el aviso; fórmula real restaurada antes de Save; push 0 errores/70 avisos; sync tmp/E2-07-zero-check bajó 9 YAML y confirmó fórmula real. Total 100 min; excedió por10 el máximo de 30+60; INC-22/KF-P14."
+  },
   {
    "start": "2026-10-03T14:40:00Z",
    "minutes": 29,
@@ -5626,22 +5676,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Reapertura: derivé environment_category del hostname en tools/canvas.py",
    "evidence": "Prueba unitaria RED→GREEN para ocho hosts; py_compile y git diff --check OK. connect dejó de devolver HTTP 422; sync devolvió No files returned, carpeta temporal vacía. No push ni cambios en Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
-  },
-  {
-   "start": "2026-10-03T07:43:00Z",
-   "minutes": 9,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-07",
-   "attempt": 6,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "DOCUMENTACION",
-   "summary": "E2-07: confirmé que el wrapper omite el campo del contrato actual del MCP",
-   "evidence": "Guía oficial y paquete 1.1.5 piden environment_category; canvas.py no lo deriva del hostname. T-34 seguía Por validar; reabierta para corregirlo. Sin cambios de código ni Studio. https://github.com/microsoft/power-platform-skills/blob/main/plugins/canvas-apps/skills/configure-canvas-mcp/SKILL.md"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T15:09:00Z",
+   "minutes": 21,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 7,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Aviso de My Day visible con 20 carpetas; navega a Configuration y se oculta con contador cero",
+   "evidence": "App publicada: aviso visible y Review folders abrió Configuration. Studio: varNewFolderCount=0 ocultó el aviso; fórmula real restaurada antes de Save; push 0 errores/70 avisos; sync tmp/E2-07-zero-check bajó 9 YAML y confirmó fórmula real. Total 100 min; excedió por10 el máximo de 30+60; INC-22/KF-P14."
+  },
   {
    "start": "2026-10-03T14:40:00Z",
    "minutes": 29,
