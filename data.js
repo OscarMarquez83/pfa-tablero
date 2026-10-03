@@ -1,12 +1,12 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T08:37:14.346615Z",
+ "generatedUtc": "2026-10-03T08:46:14.283914Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 08:35 UTC",
+  "updated": "2026-10-03 08:44 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "Esperar aprobación para agregar una consulta MCP de solo lectura al puente; después medir estado de fuentes y reanudar E2-07. No repetir las llamadas Edge que agotaron 30 y 60 segundos.",
   "needsOscar": [
@@ -21,7 +21,7 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T08:35:16.018718Z",
+  "fileUtc": "2026-10-03T08:45:25.348533Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
    "codex": "2026-10-03T08:35:55.319992Z"
@@ -32,7 +32,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T08:35:00Z"
+    "utc": "2026-10-03T08:42:00Z"
    }
   }
  },
