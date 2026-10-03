@@ -1,23 +1,23 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T14:58:16.681454Z",
+ "generatedUtc": "2026-10-03T15:07:13.750173Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 14:40 UTC",
+  "updated": "2026-10-03 15:02 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "Completar E2-06; después continuar las tareas restantes de E2 por dependencias.",
+  "nextAction": "Completar E2-07 y las demás tareas de E2 por dependencias; E2-06 queda pendiente de validación de Oscar.",
   "needsOscar": [
    {
     "ref": "E2-06",
-    "text": "guion previsto cuando Codex complete la auditoría final: en la app publicada, entra en Projects en escritorio y teléfono vertical; confirma que nombre, conteo y Deactivate se leen completos, sin superposición ni desplazamiento horizontal. Responde E2-06 OK o describe el defecto. La tarea todavía no está lista para esa validación. Al responder: registro tu aceptación cuando esté comprobada o corrijo el defecto."
+    "text": "en la app publicada abre Projects en escritorio y teléfono vertical. Comprueba que nombres, conteos y Deactivate se ven completos y sin superposición; dime si el contenido de Projects se recorta o si la barra horizontal afecta la pantalla. Al responder: registro tu aceptación cuando esté comprobada o corrijo el defecto."
    }
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T14:41:09.794123Z",
+  "fileUtc": "2026-10-03T15:07:03.373205Z",
   "heartbeat": {
    "claude": "2026-10-03T14:12:47.592389Z",
    "codex": "2026-10-03T14:18:36.749702Z"
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T14:40:00Z"
+    "utc": "2026-10-03T15:02:00Z"
    }
   }
  },
