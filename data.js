@@ -1,14 +1,14 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T07:43:14.271810Z",
+ "generatedUtc": "2026-10-03T07:49:14.751934Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 07:39 UTC",
+  "updated": "2026-10-03 07:43 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
-  "nextAction": "E2-07: aviso de nuevas carpetas en My Day; después E2-08 y E2-09 para publicar y hacer la validación pendiente de E2-06.",
+  "nextAction": "Registrar como tarea T la corrección del parámetro faltante de connect en tools/canvas.py; probarla primero con sync de solo lectura a tmp/, luego restaurar y validar E2-07.",
   "needsOscar": [
    {
     "ref": "E2-06",
@@ -17,10 +17,10 @@ window.PFA_DATA = {
   ],
   "blockers": [],
   "current": [],
-  "fileUtc": "2026-10-03T07:39:52.376731Z",
+  "fileUtc": "2026-10-03T07:43:51.764808Z",
   "heartbeat": {
    "claude": "2026-10-03T06:29:06.843330Z",
-   "codex": "2026-10-03T07:28:45.199585Z"
+   "codex": "2026-10-03T07:44:08.680625Z"
   },
   "live": null,
   "ruleFootprints": {
@@ -28,7 +28,7 @@ window.PFA_DATA = {
    "read": {
     "hash": "38E3DE9A",
     "agent": "Codex",
-    "utc": "2026-10-03T07:39:00Z"
+    "utc": "2026-10-03T07:42:00Z"
    }
   }
  },
@@ -77,10 +77,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": true,
    "time": {
-    "prod": 411,
+    "prod": 415,
     "unprod": 104,
     "wait": 85,
-    "total": 600
+    "total": 604
    }
   },
   {
@@ -1091,17 +1091,17 @@ window.PFA_DATA = {
      "own": {}
     },
     "status": "En curso",
-    "attempts": 5,
-    "minutes": 66,
+    "attempts": 6,
+    "minutes": 70,
     "entrega": "E2",
     "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
     "fails": 0,
-    "lastActivity": "2026-10-03T07:39:00Z",
+    "lastActivity": "2026-10-03T07:43:00Z",
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 5,
-      "minutes": 66,
+      "attempts": 6,
+      "minutes": 70,
       "limit": 30,
       "extra": 0,
       "finished": false,
@@ -2737,17 +2737,17 @@ window.PFA_DATA = {
     "own": {}
    },
    "status": "En curso",
-   "attempts": 5,
-   "minutes": 66,
+   "attempts": 6,
+   "minutes": 70,
    "entrega": "E2",
    "user": "Aviso en My Day \"N new folders to review\" con un botón que te lleva a Configuration; solo aparece si hay carpetas por revisar.",
    "fails": 0,
-   "lastActivity": "2026-10-03T07:39:00Z",
+   "lastActivity": "2026-10-03T07:43:00Z",
    "byAgent": [
     {
      "agent": "Codex",
-     "attempts": 5,
-     "minutes": 66,
+     "attempts": 6,
+     "minutes": 70,
      "limit": 30,
      "extra": 0,
      "finished": false,
@@ -5218,7 +5218,7 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "reason": "66 min efectivos de 30 permitidos",
+   "reason": "70 min efectivos de 30 permitidos",
    "level": "serious"
   }
  ],
@@ -5228,28 +5228,28 @@ window.PFA_DATA = {
   "entregasAccepted": 2,
   "entregasTotal": 12,
   "time": {
-   "prod": 1094,
+   "prod": 1098,
    "unprod": 106,
    "wait": 97,
-   "total": 1297
+   "total": 1301
   },
   "last24h": {
-   "prod": 419,
+   "prod": 423,
    "unprod": 17,
    "wait": 71,
-   "total": 507
+   "total": 511
   },
   "last7d": {
-   "prod": 1094,
+   "prod": 1098,
    "unprod": 106,
    "wait": 97,
-   "total": 1297
+   "total": 1301
   },
   "product": {
-   "prod": 684,
+   "prod": 688,
    "unprod": 104,
    "wait": 89,
-   "total": 877
+   "total": 881
   },
   "support": {
    "prod": 410,
@@ -5339,7 +5339,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-03",
-   "prod": 191,
+   "prod": 195,
    "unprod": 6,
    "wait": 31
   }
@@ -5421,10 +5421,10 @@ window.PFA_DATA = {
   },
   {
    "task": "E2-07",
-   "prod": 66,
+   "prod": 70,
    "unprod": 0,
    "wait": 5,
-   "total": 71
+   "total": 75
   },
   {
    "task": "T-30",
@@ -5465,7 +5465,7 @@ window.PFA_DATA = {
  "byAccount": [
   {
    "account": "personal",
-   "minutes": 920
+   "minutes": 924
   },
   {
    "account": "claude",
@@ -5477,6 +5477,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-03T07:39:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Detecté diferencia entre el contrato MCP local y el connect de canvas.py",
+   "evidence": "server.json del paquete oficial 1.1.5 exige environment_category; tools/canvas.py envía environment_id y app_id. HTTP 422 no reproducido con el parámetro faltante corregido; Studio conserva override 0, fórmula real intacta en design/app."
+  },
   {
    "start": "2026-10-03T07:31:00Z",
    "minutes": 8,
@@ -5593,22 +5606,22 @@ window.PFA_DATA = {
    "category": "DISENO",
    "summary": "Auditoría KF-P11: Projects count label overlaps first gallery row",
    "evidence": "Screenshot de preview: galProjects Y=152 Height=592; lblProjectsCount Y=160; revisar y corregir layout"
-  },
-  {
-   "start": "2026-10-03T06:12:00Z",
-   "minutes": 7,
-   "account": "personal",
-   "entrega": "E2",
-   "task": "E2-06",
-   "attempt": 4,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "FORMULA_PA",
-   "summary": "Renombre comprobado; Deactivate redujo activos a 4; Change restauró carpeta de prueba",
-   "evidence": "Preview: nombre volvió al original; nueva 20/revisadas 5, activos 4"
   }
  ],
  "history": [
+  {
+   "start": "2026-10-03T07:39:00Z",
+   "minutes": 4,
+   "account": "personal",
+   "entrega": "E2",
+   "task": "E2-07",
+   "attempt": 5,
+   "result": "AVANCE",
+   "kind": "prod",
+   "category": "YAML_PA",
+   "summary": "Detecté diferencia entre el contrato MCP local y el connect de canvas.py",
+   "evidence": "server.json del paquete oficial 1.1.5 exige environment_category; tools/canvas.py envía environment_id y app_id. HTTP 422 no reproducido con el parámetro faltante corregido; Studio conserva override 0, fórmula real intacta en design/app."
+  },
   {
    "start": "2026-10-03T07:31:00Z",
    "minutes": 8,
