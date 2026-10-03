@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-02T23:49:50.785119Z",
+ "generatedUtc": "2026-10-03T00:01:15.412017Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -4931,12 +4931,6 @@ window.PFA_DATA = {
  },
  "days": [
   {
-   "date": "2026-09-19",
-   "prod": 0,
-   "unprod": 0,
-   "wait": 0
-  },
-  {
    "date": "2026-09-20",
    "prod": 0,
    "unprod": 0,
@@ -5013,6 +5007,12 @@ window.PFA_DATA = {
    "prod": 331,
    "unprod": 72,
    "wait": 47
+  },
+  {
+   "date": "2026-10-03",
+   "prod": 0,
+   "unprod": 0,
+   "wait": 0
   }
  ],
  "categories": [
