@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-03T03:04:15.209060Z",
+ "generatedUtc": "2026-10-03T03:10:15.091997Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -9,33 +9,18 @@ window.PFA_DATA = {
   "updated": "2026-10-02 19:54 UTC",
   "activeEntrega": "E2 — Decisión de carpetas de proyectos",
   "nextAction": "E2-05 en pausa por decisión de Oscar hasta resolver T-31 a T-34 (tablero, tokens, relevo y método de Power Apps); esperan su aprobación en \"Necesito de Oscar\". Antes: E2-04 Hecha (Claude, validada por Oscar). Sigue E2-05 (pantalla de carpetas por decidir), que debe incluir D-042 (HZ-20: carpetas borradas en Outlook se marcan \"ya no está en Outlook\", no se borran). Antes de tocar PFA_E2_LeerCarpetas o btnScanFolders, leer KF-13 a KF-17.",
-  "needsOscar": [
-   {
-    "ref": "T-31",
-    "text": "aprobar el estado por latido. El tablero marca \"Detenida\" solo si el agente lleva 30 min sin actividad real (sin escrituras en su registro de sesión), no solo porque no reportó. Al responder: implemento el tiempo en vivo, el agente y el estado en el tablero."
-   },
-   {
-    "ref": "T-32",
-    "text": "aprobar las reglas de ahorro de tokens propuestas en el chat para AGENTS.md. Al responder: edito AGENTS.md con ese texto, actualizo la huella y limpio STATUS."
-   },
-   {
-    "ref": "T-33",
-    "text": "aprobar la línea de relevo y la recuperación desde el archivo tras una sesión vencida. Al responder: agrego la regla y la plantilla a AGENTS.md y a cerrar-intento."
-   },
-   {
-    "ref": "T-34",
-    "text": "autorizar la prueba de concepto de control/specs/T-34.md (descargar .NET 10 SDK y el servidor oficial de Microsoft, configurarlo en Claude Code y Codex, y activar Coauthoring en la app). Al responder: hago la prueba sin publicar nada y te traigo el resultado medido."
-   }
-  ],
+  "needsOscar": [],
   "blockers": [],
   "current": [
+   "T-34 (Claude), intento 1, inicio 2026-10-03 03:03 UTC (D-046 a D-049 aprobadas; E2-05 en pausa). Probar el servidor oficial Canvas Authoring MCP: instalar .NET 10 SDK, configurar el servidor, activar Coauthoring, bajar la app a .pa.yaml, hacer un cambio reversible y medir. Comprobación: criterios 3 de control/specs/T-34.md. No se publica nada.",
+   "Avance 03:10 UTC: .NET 10 SDK 10.0.401 instalado en la carpeta del usuario, sin administrador; dnx disponible. Siguiente: arrancar el servidor y listar sus herramientas.",
    "E2-05 (Claude), intento 1, inicio 2026-10-02 20:10 UTC. Configuration: sección \"New folders to review (N)\" con Project, Part of parent project y Not a project; sección \"Reviewed folders\" con Change. Incluye D-042: el escaneo marca las carpetas que ya no están en Outlook (no se borran). Fuente real: PFA_Projects no tiene ConfirmationStatus, así que la confirmación usa ConfirmedUtc. Comprobación: 3 carpetas, una por opción; Change; sin proyectos duplicados; vista previa y app publicada a 1366 y 390 px. Cierre de Studio: GUARDAR.",
    "Avance 20:35 UTC (Claude): issue #13 (aprobación de KF-P11) registrado en D-044 y cerrado. YAML completo escrito en design/yaml/configuracion.pa.yaml. Bloqueo: el navegador integrado de Claude no deja que Studio lea el portapapeles (navigator.clipboard.readText: \"Read permission denied\"; Ctrl+V y el menú Paste de Studio responden \"The clipboard doesn't contain any YAML code\"). No se pegó nada y la app no cambió (se retiró un botón temporal de prueba que se había inyectado en la página).",
    "Avance 21:16 UTC (Claude): Oscar inició sesión (la sesión había vencido: AADSTS70044); el portapapeles sigue denegado, así que se aplica D-045. Al fijar propiedades de la galería, Studio cerró el panel de propiedades y varias fórmulas cayeron en ContentLanguage de otros controles (24 errores en Configuration). Cierre de Studio: DESCARTAR — se pierden solo esas ediciones sin guardar (OnVisible, galería y errores); la última versión guardada es la publicada a las 14:00 UTC.",
    "Avance 21:22 UTC (Claude): al reabrir, los 24 errores seguían: Studio había autoguardado las ediciones. Se restaura desde Versions la versión publicada el 2026-10-02 a las 9:00 CT (la validada por Oscar en E2-04); restaurar crea una versión nueva y conserva el historial.",
    "Avance (Claude, D-045): Configuration.OnVisible carga colFolders y colProjects. La galería de carpetas nuevas tiene Items, TemplateSize, X, Y, Width y Height. Ya se cambiaron la etiqueta de ruta (Text, Tooltip, Width, X, Y, Height), el botón Project (OnSelect, Text, posición) y el botón Part of parent project (OnSelect, DisplayMode, Text, posición, colores). App checker: 0 errores en Configuration. Lección: Ctrl+A en la barra de fórmulas a veces no selecciona todo y el texto nuevo queda pegado al viejo; para borrar usar Ctrl+End, Ctrl+Shift+Home y Delete, y revisar cada propiedad con View code antes de guardar. Falta: botón Not a project (insertarlo en la galería), títulos, estados vacíos, OnSelect de Scan con D-042, sección Reviewed folders, quitar controles viejos, revisar con View code, pruebas, publicar y cerrar. Cierre de Studio: GUARDAR (Studio autoguarda; la versión 161 publicada sigue Live)."
   ],
-  "fileUtc": "2026-10-03T01:02:39.830986Z",
+  "fileUtc": "2026-10-03T03:04:47.372920Z",
   "ruleFootprints": {
    "current": "FE84A01D",
    "read": {
