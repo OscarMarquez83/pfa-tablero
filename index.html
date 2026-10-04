@@ -127,6 +127,7 @@ h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -.01em; }
 .rules.ok { background: var(--good-soft); color: var(--good-ink); } .rules.ok .dot { background: var(--good); }
 .rules.bad { background: var(--critical-soft); color: var(--critical-ink); } .rules.bad .dot { background: var(--critical); }
 .rules.none { background: var(--surface-2); color: var(--ink-2); } .rules.none .dot { background: var(--muted); }
+.rules.segs { padding: 0; gap: 4px; background: none; flex-wrap: wrap; } .rules .seg { border-radius: 999px; padding: 5px 10px; } .seg.ok { background: var(--good-soft); color: var(--good-ink); } .seg.bad { background: var(--critical-soft); color: var(--critical-ink); } .seg.warn { background: var(--warning-soft); color: var(--warning-ink); } .seg.none { background: var(--surface-2); color: var(--ink-2); }
 .tasks { table-layout: fixed; }
 .tasks th:first-child, .tasks td:first-child { width: 92px; }
 .tasks th:nth-child(2), .tasks td:nth-child(2) { width: 64px; }
@@ -740,20 +741,25 @@ button.btn-s { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer
       }).join("");
     openDlg("Lecciones de " + b.getAttribute("data-task"), html);
   });
-  // D-043: ¿el agente que trabaja leyó el AGENTS.md vigente?
+  // D-043 y T-40: huella de AGENTS.md por agente; color del archivo según tamaño (D-055).
   (function () {
-    var fp = D.status.ruleFootprints || {}, rd = fp.read || {}, el = $("rules"), cur = String(fp.current || "").toUpperCase();
-    if (!rd.hash) return;
-    var mins = rd.utc ? Math.max(0, Math.round((Date.now() - new Date(rd.utc).getTime()) / 60000)) : null;
-    var ago = mins == null ? "" : " hace " + (mins < 60 ? mins + " min" : mins < 1440 ? Math.floor(mins / 60) + " h" : Math.floor(mins / 1440) + " d");
-    // D-055: AGENTS.md debe medir menos de 10 KB (Codex deja de leer instrucciones al pasar 32 KiB en total).
-    var kb = fp.sizeBytes ? Math.round(fp.sizeBytes / 102.4) / 10 : null, big = kb != null && kb >= 10;
-    var ok = rd.hash.toUpperCase() === cur && !big, size = kb != null ? " · " + String(kb).replace(".", ",") + " KB" + (big ? " (límite 10)" : "") : "";
-    el.className = "rules " + (ok ? "ok" : "bad");
-    el.title = "AGENTS.md vigente: " + cur + " · leído por " + (rd.agent || "?") + ": " + rd.hash + (rd.utc ? " (" + rd.utc.replace("T", " ").replace(":00Z", " UTC") + ")" : "") + (kb != null ? " · tamaño " + kb + " KB de 10 permitidos" : "");
-    el.innerHTML = '<span class="dot">' + (ok ? "✓" : "!") + '</span><span class="txt">' + (rd.hash.toUpperCase() === cur
-      ? "Reglas al día · " + esc(rd.agent || "Agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)
-      : "AGENTS.md cambió (<b>" + esc(cur) + "</b>) · " + esc(rd.agent || "el agente") + " leyó <b>" + esc(rd.hash) + "</b>" + esc(ago)) + esc(size) + "</span>";
+    var fp = D.status.ruleFootprints || {}, reads = fp.read || {}, el = $("rules"), cur = String(fp.current || "").toUpperCase();
+    if (!cur) return;
+    function ago(utc) { var m = utc ? Math.max(0, Math.round((Date.now() - new Date(utc).getTime()) / 60000)) : null; return m == null ? "" : "hace " + (m < 60 ? m + " min" : m < 1440 ? Math.floor(m / 60) + " h" : Math.floor(m / 1440) + " d"); }
+    var kb = fp.sizeBytes ? Math.round(fp.sizeBytes / 102.4) / 10 : null;
+    var sz = kb == null ? "ok" : kb > 20 ? "bad" : kb > 10 ? "warn" : "ok";
+    var tip = ["AGENTS.md vigente: " + cur + (kb != null ? " · " + String(kb).replace(".", ",") + " KB (verde hasta 10, amarillo hasta 20, rojo más de 20; Codex deja de leer al pasar 32)" : "")];
+    var html = '<span class="seg ' + sz + '">AGENTS.md (<b>' + esc(cur) + "</b>)</span>";
+    ["Codex", "Claude"].forEach(function (a) {
+      var r = reads[a];
+      if (!r) { html += '<span class="seg none">' + a + " —</span>"; tip.push(a + ": sin registro"); return; }
+      var ok = String(r.hash).toUpperCase() === cur;
+      html += '<span class="seg ' + (ok ? "ok" : "bad") + '">' + a + " <b>" + esc(r.hash) + "</b> " + (ok ? "✓" : "✗") + "</span>";
+      tip.push(a + " leyó " + r.hash + " " + ago(r.utc) + (ok ? "" : " (no es la vigente)"));
+    });
+    el.className = "rules segs";
+    el.title = tip.join("\n");
+    el.innerHTML = html;
   })();
   (function () {
     var html = '<div id="livestate"></div>';

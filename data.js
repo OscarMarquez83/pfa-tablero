@@ -1,5 +1,5 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-04T00:49:14.372212Z",
+ "generatedUtc": "2026-10-04T00:58:14.327026Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
@@ -33,7 +33,7 @@ window.PFA_DATA = {
   ],
   "fileUtc": "2026-10-04T00:41:50.635556Z",
   "heartbeat": {
-   "claude": "2026-10-04T00:42:17.022199Z",
+   "claude": "2026-10-04T00:58:07.994621Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
@@ -41,9 +41,16 @@ window.PFA_DATA = {
    "current": "50198F5D",
    "sizeBytes": 9976,
    "read": {
-    "hash": "38E3DE9A",
-    "agent": "Codex",
-    "utc": "2026-10-03T16:29:00Z"
+    "Codex": {
+     "hash": "38E3DE9A",
+     "agent": "Codex",
+     "utc": "2026-10-03T16:29:00Z"
+    },
+    "Claude": {
+     "hash": "50198F5D",
+     "agent": "Claude",
+     "utc": "2026-10-03T23:13:00Z"
+    }
    }
   }
  },
@@ -247,15 +254,15 @@ window.PFA_DATA = {
    "title": "Soporte, tablero y herramientas",
    "goal": "Soporte continuo: tablero, herramientas y pedidos de Oscar fuera de las entregas",
    "status": "Continuo",
-   "done": 32,
-   "total": 38,
+   "done": 33,
+   "total": 39,
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 467,
+    "prod": 471,
     "unprod": 2,
     "wait": 8,
-    "total": 477
+    "total": 481
    }
   }
  ],
@@ -2711,6 +2718,37 @@ window.PFA_DATA = {
      "KF-H10"
     ],
     "ready": false
+   },
+   {
+    "id": "T-40",
+    "action": "Tablero: huella de AGENTS.md por agente (Codex y Claude, cada uno con su última lectura, ✓ verde o ✗ rojo) y el archivo en verde hasta 10 KB, amarillo hasta 20 y rojo más de 20; tamaño solo en el detalle al pasar el mouse",
+    "owner": "Agente",
+    "depends": "—",
+    "expected": "Oscar ve de un vistazo si cada agente trabaja con las reglas vigentes",
+    "evidence": "Tablero en Pages con las tres piezas y colores correctos",
+    "limit": 20,
+    "limitAlloc": {
+     "ext": {},
+     "own": {}
+    },
+    "status": "Hecha",
+    "attempts": 1,
+    "minutes": 4,
+    "entrega": "T",
+    "fails": 0,
+    "lastActivity": "2026-10-04T00:58:00Z",
+    "byAgent": [
+     {
+      "agent": "Claude",
+      "attempts": 1,
+      "minutes": 4,
+      "limit": 20,
+      "extra": 0,
+      "finished": true,
+      "tone": "ok"
+     }
+    ],
+    "lessons": []
    },
    {
     "id": "T-34",
@@ -5494,31 +5532,62 @@ window.PFA_DATA = {
     }
    ],
    "lessons": []
+  },
+  {
+   "id": "T-40",
+   "action": "Tablero: huella de AGENTS.md por agente (Codex y Claude, cada uno con su última lectura, ✓ verde o ✗ rojo) y el archivo en verde hasta 10 KB, amarillo hasta 20 y rojo más de 20; tamaño solo en el detalle al pasar el mouse",
+   "owner": "Agente",
+   "depends": "—",
+   "expected": "Oscar ve de un vistazo si cada agente trabaja con las reglas vigentes",
+   "evidence": "Tablero en Pages con las tres piezas y colores correctos",
+   "limit": 20,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 4,
+   "entrega": "T",
+   "fails": 0,
+   "lastActivity": "2026-10-04T00:58:00Z",
+   "byAgent": [
+    {
+     "agent": "Claude",
+     "attempts": 1,
+     "minutes": 4,
+     "limit": 20,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
   }
  ],
  "alerts": [],
  "kpi": {
-  "tasksDone": 62,
-  "tasksTotal": 76,
+  "tasksDone": 63,
+  "tasksTotal": 77,
   "entregasAccepted": 3,
   "entregasTotal": 13,
   "time": {
-   "prod": 1303,
+   "prod": 1307,
    "unprod": 106,
    "wait": 97,
-   "total": 1506
+   "total": 1510
   },
   "last24h": {
-   "prod": 400,
+   "prod": 398,
    "unprod": 6,
    "wait": 31,
-   "total": 437
+   "total": 435
   },
   "last7d": {
-   "prod": 1303,
+   "prod": 1307,
    "unprod": 106,
    "wait": 97,
-   "total": 1506
+   "total": 1510
   },
   "product": {
    "prod": 836,
@@ -5527,10 +5596,10 @@ window.PFA_DATA = {
    "total": 1029
   },
   "support": {
-   "prod": 467,
+   "prod": 471,
    "unprod": 2,
    "wait": 8,
-   "total": 477
+   "total": 481
   }
  },
  "days": [
@@ -5614,7 +5683,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-04",
-   "prod": 0,
+   "prod": 4,
    "unprod": 0,
    "wait": 0
   }
@@ -5744,7 +5813,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 349
+   "minutes": 353
   },
   {
    "account": "empresa",
@@ -5752,6 +5821,19 @@ window.PFA_DATA = {
   }
  ],
  "recent": [
+  {
+   "start": "2026-10-04T00:47:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-40",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Huella por agente en el encabezado del tablero y color del archivo por tamaño",
+   "evidence": "Datos con lectura de Codex (38E3DE9A ✗) y de Claude (50198F5D ✓); verificación en Pages pendiente de publicación"
+  },
   {
    "start": "2026-10-03T23:19:00Z",
    "minutes": 4,
@@ -5868,22 +5950,22 @@ window.PFA_DATA = {
    "category": "YAML_PA",
    "summary": "Cierre urgente por creditos: My Day restaurada; E2-06 publicada, prueba funcional y correccion vertical",
    "evidence": "Sync tras recarga 9 YAML coincide design/app; push 0 errores/70 avisos; Publish successful; primera version: renombre nativo persistio, Active 5 a 4, Inactive e Included No comprobados y restaurados. Segunda version publicada: auditoria final pendiente; segunda preparacion ficticia aun Active y carpeta incluida/asociada. Capturas tmp/evidencia/E2-06. Auditoria final NO completa."
-  },
-  {
-   "start": "2026-10-03T14:16:00Z",
-   "minutes": 4,
-   "account": "personal",
-   "entrega": "T",
-   "task": "T-34",
-   "attempt": 9,
-   "result": "AVANCE",
-   "kind": "prod",
-   "category": "YAML_PA",
-   "summary": "KF-19: guardar y recargar Studio; sync real y push de restauracion comprobados",
-   "evidence": "9 YAML descargados; diferencia unica override cero de My Day; push 0 errores/70 avisos; Saved y sync posterior con formula real. Criterios de costo y texto reversible de T-34 no reejecutados; no se afirma cierre completo."
   }
  ],
  "history": [
+  {
+   "start": "2026-10-04T00:47:00Z",
+   "minutes": 4,
+   "account": "claude",
+   "entrega": "T",
+   "task": "T-40",
+   "attempt": 1,
+   "result": "HECHA",
+   "kind": "prod",
+   "category": "DISENO",
+   "summary": "Huella por agente en el encabezado del tablero y color del archivo por tamaño",
+   "evidence": "Datos con lectura de Codex (38E3DE9A ✗) y de Claude (50198F5D ✓); verificación en Pages pendiente de publicación"
+  },
   {
    "start": "2026-10-03T23:19:00Z",
    "minutes": 4,
