@@ -1,27 +1,39 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-04T00:40:14.248125Z",
+ "generatedUtc": "2026-10-04T00:49:14.372212Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-04 00:39 UTC",
+  "updated": "2026-10-04 00:41 UTC",
   "activeEntrega": "E3 — Correos de mis proyectos (en planeación por pasos, D-057)",
-  "nextAction": "Claude: replanear E3 en pasos (piloto, D-057). Codex no ejecuta tareas hasta que E3 esté planeada y aprobada.",
+  "nextAction": "Oscar responde las preguntas de E3 y aprueba su detalle; después Claude escribe los pasos (control/pasos/E3-NN.md).",
   "needsOscar": [
    {
     "ref": "T-39",
     "text": "la próxima vez que abras Codex en este proyecto, si te pide revisar o aprobar los ganchos (hooks) de PFA, apruébalos. Al responder: compruebo en su registro que la tarjeta de la tarea aparece."
+   },
+   {
+    "ref": "E3",
+    "text": "¿qué correos carga cada carpeta? A) Los 50 más recientes de cada carpeta (recomendada: el flujo no necesita fórmulas de fecha, que es donde el diseñador de flujos más falla). B) Solo los de los últimos 30 días, hasta 50. Al responder: escribo los pasos del flujo con esa opción."
+   },
+   {
+    "ref": "E3",
+    "text": "¿dónde ves los correos de un proyecto en E3? A) En computador y tableta horizontal, en el panel de detalle de Projects (recomendada: el panel ya existe; el teléfono queda como mejora en E11). B) También en el teléfono vertical (una tarea más). Al responder: escribo los pasos de la pantalla con esa opción."
+   },
+   {
+    "ref": "E3",
+    "text": "aprobar el detalle de E3 que te mostré en el chat de Claude. Al responder: escribo los archivos de pasos y Codex puede empezar."
    }
   ],
   "blockers": [],
   "current": [
-   "E3-PLAN (Claude), relevo 2026-10-03 23:25 UTC: hecho: lectura de E3, esquemas de referencia y lecciones de flujos (KF-06, 13, 15, 16) · falta: columnas reales de PFA_Messages (el navegador de Claude perdió la sesión) y la decisión de Oscar sobre cómo se cargan los correos · herramienta: nada modificado · siguiente: leer las columnas reales y escribir control/pasos/E3-NN.md"
+   "E3-PLAN (Claude), relevo 2026-10-04 00:41 UTC: hecho: columnas reales leídas (PFA_Messages vacía; obligatorias InternetMessageId, DeduplicationKey y 3 de estado; carpeta, fecha y enlace son texto), código de Projects revisado, propuesta de E3 en el chat · falta: respuestas de Oscar y su Aprobado · herramienta: nada modificado · siguiente: escribir control/pasos/E3-NN.md"
   ],
-  "fileUtc": "2026-10-04T00:39:29.877085Z",
+  "fileUtc": "2026-10-04T00:41:50.635556Z",
   "heartbeat": {
-   "claude": "2026-10-04T00:39:54.079492Z",
+   "claude": "2026-10-04T00:42:17.022199Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
