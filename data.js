@@ -1,43 +1,27 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-04T00:31:14.153797Z",
+ "generatedUtc": "2026-10-04T00:40:14.248125Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-03 23:25 UTC",
-  "activeEntrega": "E2 — Decisión de carpetas de proyectos",
+  "updated": "2026-10-04 00:39 UTC",
+  "activeEntrega": "E3 — Correos de mis proyectos (en planeación por pasos, D-057)",
   "nextAction": "Claude: replanear E3 en pasos (piloto, D-057). Codex no ejecuta tareas hasta que E3 esté planeada y aprobada.",
   "needsOscar": [
    {
-    "ref": "E2-06",
-    "text": "en la app publicada abre Projects en escritorio y teléfono vertical. Comprueba que nombres, conteos y Deactivate se ven completos y sin superposición; dime si el contenido de Projects se recorta o si la barra horizontal afecta la pantalla. Al responder: registro tu aceptación cuando esté comprobada o corrijo el defecto."
-   },
-   {
-    "ref": "E2-10",
-    "text": "decide en la app las carpetas de Projects, incluidas las subcarpetas, y revisa la lista de proyectos. Al terminar, escribe “E2 aceptada”. Al responder: registro tus decisiones y la aceptación de E2."
-   },
-   {
     "ref": "T-39",
     "text": "la próxima vez que abras Codex en este proyecto, si te pide revisar o aprobar los ganchos (hooks) de PFA, apruébalos. Al responder: compruebo en su registro que la tarjeta de la tarea aparece."
-   },
-   {
-    "ref": "E3",
-    "text": "iniciar sesión con tu cuenta de Puffer en el navegador de Claude (la pestaña de Microsoft que quedó abierta en el panel de Claude). Al responder: leo las columnas reales de las listas para escribir los pasos de E3."
-   },
-   {
-    "ref": "E3",
-    "text": "¿cómo se cargan los correos de un proyecto? A) Botón \"Load emails\" en Projects: carga los correos de las carpetas del proyecto seleccionado, como \"Scan folders\" en E2 (recomendada: lo usas tú desde la app, el flujo queda de 3 acciones y la lógica se escribe como código). B) Flujo que el agente ejecuta a mano desde Power Automate, como dice hoy E3. Al responder: escribo los pasos de E3 con esa opción."
    }
   ],
   "blockers": [],
   "current": [
    "E3-PLAN (Claude), relevo 2026-10-03 23:25 UTC: hecho: lectura de E3, esquemas de referencia y lecciones de flujos (KF-06, 13, 15, 16) · falta: columnas reales de PFA_Messages (el navegador de Claude perdió la sesión) y la decisión de Oscar sobre cómo se cargan los correos · herramienta: nada modificado · siguiente: leer las columnas reales y escribir control/pasos/E3-NN.md"
   ],
-  "fileUtc": "2026-10-03T23:25:23.612612Z",
+  "fileUtc": "2026-10-04T00:39:29.877085Z",
   "heartbeat": {
-   "claude": "2026-10-03T23:25:38.662811Z",
+   "claude": "2026-10-04T00:39:54.079492Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
@@ -52,7 +36,7 @@ window.PFA_DATA = {
   }
  },
  "revision": null,
- "activeEntrega": "E2",
+ "activeEntrega": "E3",
  "entregas": [
   {
    "id": "E0",
@@ -90,11 +74,11 @@ window.PFA_DATA = {
    "id": "E2",
    "title": "Carpetas de proyecto",
    "goal": "Escanear manualmente las carpetas de Projects desde la app, decidir cuáles son proyectos, revisar las nuevas y evaluar navegación horizontal",
-   "status": "En curso",
-   "done": 9,
+   "status": "Aceptada",
+   "done": 11,
    "total": 11,
    "detailed": true,
-   "active": true,
+   "active": false,
    "time": {
     "prod": 563,
     "unprod": 104,
@@ -106,11 +90,11 @@ window.PFA_DATA = {
    "id": "E3",
    "title": "Correos de mis proyectos",
    "goal": "Ver dentro de cada proyecto los correos de sus carpetas y abrirlos en Outlook",
-   "status": "Pendiente",
+   "status": "En planeación (pasos, D-057)",
    "done": 0,
    "total": 8,
    "detailed": true,
-   "active": false,
+   "active": true,
    "time": {
     "prod": 0,
     "unprod": 0,
@@ -137,7 +121,7 @@ window.PFA_DATA = {
   {
    "id": "E5",
    "title": "",
-   "goal": "Que los correos nuevos entren solos cada hora, sin duplicados",
+   "goal": "Que los correos nuevos entren solos cada 15 minutos de 5:00 a 19:00 (hora Central), sin duplicados (D-059)",
    "status": "Sin detallar",
    "done": 0,
    "total": 0,
@@ -218,6 +202,22 @@ window.PFA_DATA = {
    "id": "E10",
    "title": "",
    "goal": "Manejar etapas de proyecto, change orders y pre-buy",
+   "status": "Sin detallar",
+   "done": 0,
+   "total": 0,
+   "detailed": false,
+   "active": false,
+   "time": {
+    "prod": 0,
+    "unprod": 0,
+    "wait": 0,
+    "total": 0
+   }
+  },
+  {
+   "id": "E11",
+   "title": "",
+   "goal": "Mejoras pedidas por Oscar durante E0–E10 (HZ-21 a HZ-23)",
    "status": "Sin detallar",
    "done": 0,
    "total": 0,
@@ -1074,7 +1074,7 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Por validar",
+    "status": "Hecha",
     "attempts": 14,
     "minutes": 80,
     "entrega": "E2",
@@ -1088,14 +1088,13 @@ window.PFA_DATA = {
       "minutes": 80,
       "limit": 60,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "over"
      }
     ],
     "lessons": [
      "KF-19"
-    ],
-    "ready": true
+    ]
    },
    {
     "id": "E2-07",
@@ -1239,8 +1238,8 @@ window.PFA_DATA = {
      "ext": {},
      "own": {}
     },
-    "status": "Pendiente",
-    "attempts": 0,
+    "status": "Hecha",
+    "attempts": 1,
     "minutes": 0,
     "entrega": "E2",
     "user": "Tú: decidir en la app todas tus carpetas (proyecto, parte de otro o no proyecto) y revisar la lista de proyectos. Cierra con \"E2 aceptada\".",
@@ -1249,16 +1248,15 @@ window.PFA_DATA = {
     "byAgent": [
      {
       "agent": "Codex",
-      "attempts": 0,
+      "attempts": 1,
       "minutes": 0,
       "limit": 0,
       "extra": 0,
-      "finished": false,
+      "finished": true,
       "tone": "ok"
      }
     ],
-    "lessons": [],
-    "ready": true
+    "lessons": []
    }
   ],
   "E3": [
@@ -1293,7 +1291,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E3-02",
@@ -1326,7 +1324,7 @@ window.PFA_DATA = {
      }
     ],
     "lessons": [],
-    "ready": false
+    "ready": true
    },
    {
     "id": "E3-03",
@@ -2750,109 +2748,39 @@ window.PFA_DATA = {
   ]
  },
  "nextTask": {
-  "id": "E2-06",
-  "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
+  "id": "E3-02",
+  "action": "En List settings de PFA_Messages: dejar como obligatorias solo InternetMessageId, OutlookMessageId, Subject, Sender, ReceivedSentUtc y FolderId. Anotar en worklog las columnas cambiadas",
   "owner": "Agente",
-  "depends": "E2-05",
-  "expected": "Oscar ve y ajusta sus proyectos",
-  "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
-  "limit": 60,
+  "depends": "E2-10",
+  "expected": "La lista acepta un correo con 6 campos",
+  "evidence": "Columnas cambiadas anotadas en worklog",
+  "limit": 30,
   "limitAlloc": {
    "ext": {},
    "own": {}
   },
-  "status": "Por validar",
-  "attempts": 14,
-  "minutes": 80,
-  "entrega": "E2",
-  "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
-  "fails": 3,
-  "lastActivity": "2026-10-03T15:09:00Z",
+  "status": "Pendiente",
+  "attempts": 0,
+  "minutes": 0,
+  "entrega": "E3",
+  "user": "Preparar la lista donde se guardan los correos.",
+  "fails": 0,
+  "lastActivity": "",
   "byAgent": [
    {
     "agent": "Codex",
-    "attempts": 14,
-    "minutes": 80,
-    "limit": 60,
+    "attempts": 0,
+    "minutes": 0,
+    "limit": 30,
     "extra": 0,
     "finished": false,
-    "tone": "over"
+    "tone": "ok"
    }
   ],
-  "lessons": [
-   "KF-19"
-  ],
+  "lessons": [],
   "ready": true
  },
  "upcoming": [
-  {
-   "id": "E2-06",
-   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
-   "owner": "Agente",
-   "depends": "E2-05",
-   "expected": "Oscar ve y ajusta sus proyectos",
-   "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
-   "limit": 60,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "Por validar",
-   "attempts": 14,
-   "minutes": 80,
-   "entrega": "E2",
-   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
-   "fails": 3,
-   "lastActivity": "2026-10-03T15:09:00Z",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 14,
-     "minutes": 80,
-     "limit": 60,
-     "extra": 0,
-     "finished": false,
-     "tone": "over"
-    }
-   ],
-   "lessons": [
-    "KF-19"
-   ],
-   "ready": true
-  },
-  {
-   "id": "E2-10",
-   "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
-   "owner": "Oscar",
-   "depends": "E2-09, E2-11",
-   "expected": "Proyectos reales definidos y navegación horizontal evaluada",
-   "evidence": "Oscar escribe \"E2 aceptada\"",
-   "limit": 0,
-   "limitAlloc": {
-    "ext": {},
-    "own": {}
-   },
-   "status": "Pendiente",
-   "attempts": 0,
-   "minutes": 0,
-   "entrega": "E2",
-   "user": "Tú: decidir en la app todas tus carpetas (proyecto, parte de otro o no proyecto) y revisar la lista de proyectos. Cierra con \"E2 aceptada\".",
-   "fails": 0,
-   "lastActivity": "",
-   "byAgent": [
-    {
-     "agent": "Codex",
-     "attempts": 0,
-     "minutes": 0,
-     "limit": 0,
-     "extra": 0,
-     "finished": false,
-     "tone": "ok"
-    }
-   ],
-   "lessons": [],
-   "ready": true
-  },
   {
    "id": "E3-01",
    "action": "Confirmar que la carpeta Projects/PFA-Prueba tiene 5 correos enviados por Oscar a sí mismo, sin datos de clientes, y que está marcada como proyecto en la app",
@@ -2884,7 +2812,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E3-02",
@@ -2917,7 +2845,7 @@ window.PFA_DATA = {
     }
    ],
    "lessons": [],
-   "ready": false
+   "ready": true
   },
   {
    "id": "E3-03",
@@ -4349,6 +4277,40 @@ window.PFA_DATA = {
    ]
   },
   {
+   "id": "E2-06",
+   "action": "Pantalla Projects (YAML design/yaml/proyectos.pa.yaml): gallery con los proyectos Status = Active, nombre editable, número de carpetas asociadas y botón \"Deactivate\" (proyecto Inactive y sus carpetas Included = No). Los proyectos activos se muestran agrupados por su carpeta padre cuando la tienen",
+   "owner": "Agente",
+   "depends": "E2-05",
+   "expected": "Oscar ve y ajusta sus proyectos",
+   "evidence": "Proyecto de prueba renombrado y desactivado; volver a dejar los datos de prueba como estaban",
+   "limit": 60,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 14,
+   "minutes": 80,
+   "entrega": "E2",
+   "user": "Pantalla Projects: lista de tus proyectos activos; puedes cambiarles el nombre o desactivarlos con \"Deactivate\" (dejan de leerse sus carpetas).",
+   "fails": 3,
+   "lastActivity": "2026-10-03T15:09:00Z",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 14,
+     "minutes": 80,
+     "limit": 60,
+     "extra": 0,
+     "finished": true,
+     "tone": "over"
+    }
+   ],
+   "lessons": [
+    "KF-19"
+   ]
+  },
+  {
    "id": "E2-07",
    "action": "En My Day: aviso \"N new folders to review\" con botón \"Review folders\" que lleva a Configuration. Solo visible si N > 0",
    "owner": "Agente",
@@ -4471,6 +4433,38 @@ window.PFA_DATA = {
      "attempts": 2,
      "minutes": 26,
      "limit": 30,
+     "extra": 0,
+     "finished": true,
+     "tone": "ok"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "id": "E2-10",
+   "action": "Decidir en la app todas las carpetas de Projects (incluidas las subcarpetas de proyectos con varios proyectos dentro) y revisar la lista de proyectos",
+   "owner": "Oscar",
+   "depends": "E2-09, E2-11",
+   "expected": "Proyectos reales definidos y navegación horizontal evaluada",
+   "evidence": "Oscar escribe \"E2 aceptada\"",
+   "limit": 0,
+   "limitAlloc": {
+    "ext": {},
+    "own": {}
+   },
+   "status": "Hecha",
+   "attempts": 1,
+   "minutes": 0,
+   "entrega": "E2",
+   "user": "Tú: decidir en la app todas tus carpetas (proyecto, parte de otro o no proyecto) y revisar la lista de proyectos. Cierra con \"E2 aceptada\".",
+   "fails": 0,
+   "lastActivity": "",
+   "byAgent": [
+    {
+     "agent": "Codex",
+     "attempts": 1,
+     "minutes": 0,
+     "limit": 0,
      "extra": 0,
      "finished": true,
      "tone": "ok"
@@ -5490,18 +5484,12 @@ window.PFA_DATA = {
    "lessons": []
   }
  ],
- "alerts": [
-  {
-   "task": "E2-06",
-   "reason": "80 min efectivos de 60 permitidos",
-   "level": "serious"
-  }
- ],
+ "alerts": [],
  "kpi": {
-  "tasksDone": 60,
+  "tasksDone": 62,
   "tasksTotal": 76,
-  "entregasAccepted": 2,
-  "entregasTotal": 12,
+  "entregasAccepted": 3,
+  "entregasTotal": 13,
   "time": {
    "prod": 1303,
    "unprod": 106,
@@ -8484,8 +8472,35 @@ window.PFA_DATA = {
    "text": "Scan folders solo agrega filas: si una carpeta se borra en Outlook, su fila sigue en PFA_MailFolders con Decision = Nueva y aparecería como carpeta por decidir. Prueba de Oscar: 3 carpetas creadas y borradas = filas 27-29 huérfanas. Recomendación de Claude: en E2-05, marcar las filas cuyo OutlookFolderId no vino en el último escaneo (por ejemplo, Decision = \"NoEnOutlook\") y ocultarlas de \"New folders to review\", sin borrar filas",
    "found": "Oscar en prueba de E2-04 (Claude)",
    "target": "E2-05",
-   "status": "Asignado",
+   "status": "Incorporado en E2-05",
    "closure": "2026-10-02 · chat de Claude, DECISIONS D-042 · Oscar eligió A: marcar \"ya no está en Outlook\", ocultar de la revisión y no borrar la fila."
+  },
+  {
+   "id": "HZ-21",
+   "date": "2026-10-03",
+   "text": "En Projects, \"Deactivate\" debe distinguir el motivo: \"Project completed\" (cerrado formalmente) y \"Reassigned\" (sigue activo pero lo maneja otra persona: baja prioridad salvo correos que nombren a Oscar). Hoy Deactivate deja el proyecto Inactive y sus carpetas Included = No",
+   "found": "Oscar al validar E2-06 (issue #14)",
+   "target": "E11",
+   "status": "Asignado",
+   "closure": "—"
+  },
+  {
+   "id": "HZ-22",
+   "date": "2026-10-03",
+   "text": "En Configuration, una carpeta nueva también puede marcarse como proyecto completado, y \"Reviewed folders\" se agrupa por decisión (proyectos, partes de proyecto, no proyectos, cerrados)",
+   "found": "Oscar al aceptar E2 (issue #15)",
+   "target": "E11",
+   "status": "Asignado",
+   "closure": "—"
+  },
+  {
+   "id": "HZ-23",
+   "date": "2026-10-03",
+   "text": "\"Part of parent project\" parece no hacer nada: solo se activa si la carpeta padre ya es proyecto y la app no explica por qué está desactivado. Mostrar el motivo (por ejemplo \"Mark the parent folder as Project first\")",
+   "found": "Oscar al aceptar E2 (issue #15)",
+   "target": "E11",
+   "status": "Asignado",
+   "closure": "—"
   }
  ]
 };
