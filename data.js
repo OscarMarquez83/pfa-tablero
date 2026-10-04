@@ -1,39 +1,39 @@
 window.PFA_DATA = {
- "generatedUtc": "2026-10-04T00:58:14.327026Z",
+ "generatedUtc": "2026-10-04T01:07:13.751844Z",
  "config": {
   "owner": "OscarMarquez83",
   "repo": "pfa-tablero",
   "pagesUrl": "https://oscarmarquez83.github.io/pfa-tablero/"
  },
  "status": {
-  "updated": "2026-10-04 00:41 UTC",
+  "updated": "2026-10-04 00:59 UTC",
   "activeEntrega": "E3 — Correos de mis proyectos (en planeación por pasos, D-057)",
-  "nextAction": "Oscar responde las preguntas de E3 y aprueba su detalle; después Claude escribe los pasos (control/pasos/E3-NN.md).",
+  "nextAction": "Oscar aprueba HZ-24 (rediseño de E3) y responde sus 2 preguntas; después Claude escribe las tareas y los pasos de E3.",
   "needsOscar": [
    {
     "ref": "T-39",
     "text": "la próxima vez que abras Codex en este proyecto, si te pide revisar o aprobar los ganchos (hooks) de PFA, apruébalos. Al responder: compruebo en su registro que la tarjeta de la tarea aparece."
    },
    {
-    "ref": "E3",
-    "text": "¿qué correos carga cada carpeta? A) Los 50 más recientes de cada carpeta (recomendada: el flujo no necesita fórmulas de fecha, que es donde el diseñador de flujos más falla). B) Solo los de los últimos 30 días, hasta 50. Al responder: escribo los pasos del flujo con esa opción."
+    "ref": "HZ-24",
+    "text": "aprobar el rediseño de E3 (mis correos con bandera en My Day; control/specs/HZ-24.md). Al responder: reemplazo las tareas de E3 y escribo sus pasos."
    },
    {
-    "ref": "E3",
-    "text": "¿dónde ves los correos de un proyecto en E3? A) En computador y tableta horizontal, en el panel de detalle de Projects (recomendada: el panel ya existe; el teléfono queda como mejora en E11). B) También en el teléfono vertical (una tarea más). Al responder: escribo los pasos de la pantalla con esa opción."
+    "ref": "HZ-24",
+    "text": "¿dónde se ven los pendientes? A) My Day (recomendada). B) Una pantalla nueva. Al responder: lo escribo en los pasos de E3."
    },
    {
-    "ref": "E3",
-    "text": "aprobar el detalle de E3 que te mostré en el chat de Claude. Al responder: escribo los archivos de pasos y Codex puede empezar."
+    "ref": "HZ-24",
+    "text": "indicadores de My Day que no aplican todavía (Blocked, Suggested, Possible resolution): A) ocultarlos hasta su entrega (recomendada). B) dejarlos en 0. Al responder: lo escribo en los pasos de E3."
    }
   ],
   "blockers": [],
   "current": [
-   "E3-PLAN (Claude), relevo 2026-10-04 00:41 UTC: hecho: columnas reales leídas (PFA_Messages vacía; obligatorias InternetMessageId, DeduplicationKey y 3 de estado; carpeta, fecha y enlace son texto), código de Projects revisado, propuesta de E3 en el chat · falta: respuestas de Oscar y su Aprobado · herramienta: nada modificado · siguiente: escribir control/pasos/E3-NN.md"
+   "E3-PLAN (Claude), relevo 2026-10-04 00:59 UTC: hecho: Oscar aclaró que E3 debe mostrar sus pendientes (correos con bandera) y no todos los correos; mini-spec HZ-24 con el rediseño · falta: su aprobación y respuestas · herramienta: nada modificado en la app · siguiente: reemplazar las tareas de E3 y escribir control/pasos/E3-NN.md"
   ],
-  "fileUtc": "2026-10-04T00:41:50.635556Z",
+  "fileUtc": "2026-10-04T00:59:43.905154Z",
   "heartbeat": {
-   "claude": "2026-10-04T00:58:07.994621Z",
+   "claude": "2026-10-04T01:00:14.753481Z",
    "codex": "2026-10-03T16:50:18.489507Z"
   },
   "live": null,
@@ -259,10 +259,10 @@ window.PFA_DATA = {
    "detailed": true,
    "active": false,
    "time": {
-    "prod": 471,
+    "prod": 478,
     "unprod": 2,
     "wait": 8,
-    "total": 481
+    "total": 488
    }
   }
  ],
@@ -2733,7 +2733,7 @@ window.PFA_DATA = {
     },
     "status": "Hecha",
     "attempts": 1,
-    "minutes": 4,
+    "minutes": 11,
     "entrega": "T",
     "fails": 0,
     "lastActivity": "2026-10-04T00:58:00Z",
@@ -2741,7 +2741,7 @@ window.PFA_DATA = {
      {
       "agent": "Claude",
       "attempts": 1,
-      "minutes": 4,
+      "minutes": 11,
       "limit": 20,
       "extra": 0,
       "finished": true,
@@ -5547,7 +5547,7 @@ window.PFA_DATA = {
    },
    "status": "Hecha",
    "attempts": 1,
-   "minutes": 4,
+   "minutes": 11,
    "entrega": "T",
    "fails": 0,
    "lastActivity": "2026-10-04T00:58:00Z",
@@ -5555,7 +5555,7 @@ window.PFA_DATA = {
     {
      "agent": "Claude",
      "attempts": 1,
-     "minutes": 4,
+     "minutes": 11,
      "limit": 20,
      "extra": 0,
      "finished": true,
@@ -5565,29 +5565,35 @@ window.PFA_DATA = {
    "lessons": []
   }
  ],
- "alerts": [],
+ "alerts": [
+  {
+   "task": "Hallazgo",
+   "reason": "Sin entrega destino: E3 rediseñada: en My Day, mis correos con bandera de Outlook (mis pendientes) agrupados po",
+   "level": "warning"
+  }
+ ],
  "kpi": {
   "tasksDone": 63,
   "tasksTotal": 77,
   "entregasAccepted": 3,
   "entregasTotal": 13,
   "time": {
-   "prod": 1307,
+   "prod": 1314,
    "unprod": 106,
    "wait": 97,
-   "total": 1510
+   "total": 1517
   },
   "last24h": {
-   "prod": 398,
+   "prod": 405,
    "unprod": 6,
    "wait": 31,
-   "total": 435
+   "total": 442
   },
   "last7d": {
-   "prod": 1307,
+   "prod": 1314,
    "unprod": 106,
    "wait": 97,
-   "total": 1510
+   "total": 1517
   },
   "product": {
    "prod": 836,
@@ -5596,10 +5602,10 @@ window.PFA_DATA = {
    "total": 1029
   },
   "support": {
-   "prod": 471,
+   "prod": 478,
    "unprod": 2,
    "wait": 8,
-   "total": 481
+   "total": 488
   }
  },
  "days": [
@@ -5683,7 +5689,7 @@ window.PFA_DATA = {
   },
   {
    "date": "2026-10-04",
-   "prod": 4,
+   "prod": 11,
    "unprod": 0,
    "wait": 0
   }
@@ -5813,7 +5819,7 @@ window.PFA_DATA = {
   },
   {
    "account": "claude",
-   "minutes": 353
+   "minutes": 360
   },
   {
    "account": "empresa",
@@ -5823,7 +5829,7 @@ window.PFA_DATA = {
  "recent": [
   {
    "start": "2026-10-04T00:47:00Z",
-   "minutes": 4,
+   "minutes": 11,
    "account": "claude",
    "entrega": "T",
    "task": "T-40",
@@ -5955,7 +5961,7 @@ window.PFA_DATA = {
  "history": [
   {
    "start": "2026-10-04T00:47:00Z",
-   "minutes": 4,
+   "minutes": 11,
    "account": "claude",
    "entrega": "T",
    "task": "T-40",
@@ -8594,6 +8600,15 @@ window.PFA_DATA = {
    "found": "Oscar al aceptar E2 (issue #15)",
    "target": "E11",
    "status": "Asignado",
+   "closure": "—"
+  },
+  {
+   "id": "HZ-24",
+   "date": "2026-10-04",
+   "text": "E3 rediseñada: en My Day, mis correos con bandera de Outlook (mis pendientes) agrupados por conversación, con fecha de seguimiento, proyecto y si la acción es mía o espero respuesta; lectura en vivo, sin guardar correos (mini-spec en control/specs/HZ-24.md)",
+   "found": "Oscar en chat de Claude",
+   "target": "E3",
+   "status": "Por decidir",
    "closure": "—"
   }
  ]
